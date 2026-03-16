@@ -68,7 +68,10 @@
    Base styles
    ============================================================ */
 @layer base {
-  * { @apply border-border box-sizing-border; }
+  * * {
+  @apply border-border;
+  box-sizing: border-box;
+}
 
   html { @apply scroll-smooth; }
 
