@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import type { LucideIcon } from "lucide-react";
 import {
+<<<<<<< HEAD
   LayoutDashboard,
   CheckSquare,
   Search,
@@ -15,6 +17,10 @@ import {
   Zap,
   ChevronLeft,
   ChevronRight,
+=======
+  LayoutDashboard, CheckSquare, Search, Link2, CalendarDays,
+  FileText, Settings, LogOut, Zap, ChevronLeft, ChevronRight,
+>>>>>>> 8fd0c4c (apply final fixes)
 } from "lucide-react";
 
 import { createClient } from "@/lib/supabase/client";
@@ -22,6 +28,7 @@ import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui";
 import type { Profile } from "@/types";
 
+<<<<<<< HEAD
 type NavItem = {
   href: string;
   label: string;
@@ -38,6 +45,24 @@ const NAV: NavItem[] = [
   { href: "/calendar", label: "Calendar", icon: CalendarDays },
   { href: "/blog", label: "Blog / AI", icon: FileText, badge: "AI" },
   { href: "/settings", label: "Settings", icon: Settings },
+=======
+interface NavItem {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+  exact?: boolean;
+  badge?: string;
+}
+
+const NAV: NavItem[] = [
+  { href: "/dashboard", label: "Dashboard",  icon: LayoutDashboard, exact: true },
+  { href: "/tasks",     label: "Tasks",       icon: CheckSquare },
+  { href: "/seo",       label: "SEO Tracker", icon: Search },
+  { href: "/backlinks", label: "Backlinks",   icon: Link2 },
+  { href: "/calendar",  label: "Calendar",    icon: CalendarDays },
+  { href: "/blog",      label: "Blog / AI",   icon: FileText, badge: "AI" },
+  { href: "/settings",  label: "Settings",    icon: Settings },
+>>>>>>> 8fd0c4c (apply final fixes)
 ];
 
 export default function Sidebar({ profile }: { profile: Profile | null }) {
@@ -109,19 +134,30 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
       <nav className="flex-1 overflow-y-auto px-2 py-3">
         <ul className="space-y-0.5">
           {NAV.map((item) => {
+<<<<<<< HEAD
             const Icon = item.icon;
             const active = isActive(item.href, item.exact);
 
+=======
+            const active = isActive(item.href, item.exact);
+            const Icon = item.icon;
+>>>>>>> 8fd0c4c (apply final fixes)
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   title={collapsed ? item.label : undefined}
+<<<<<<< HEAD
                   style={
                     active
                       ? { background: "hsl(var(--sidebar-active-bg))" }
                       : undefined
                   }
+=======
+                  style={active
+                    ? { background: "hsl(var(--sidebar-active-bg))" }
+                    : undefined}
+>>>>>>> 8fd0c4c (apply final fixes)
                   className={cn(
                     "group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                     active
@@ -135,7 +171,10 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
                   {!collapsed && (
                     <>
                       <span className="flex-1 truncate">{item.label}</span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8fd0c4c (apply final fixes)
                       {item.badge && (
                         <span className="rounded-full bg-brand/20 px-1.5 py-0.5 text-[10px] font-semibold text-brand">
                           {item.badge}

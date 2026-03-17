@@ -8,11 +8,13 @@ const dmSans = DM_Sans({
   variable: "--font-sans",
   weight: ["300", "400", "500", "600"],
 });
+
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["600", "700", "800"],
 });
+
 const dmMono = DM_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
@@ -20,10 +22,10 @@ const dmMono = DM_Mono({
 });
 
 const APP = process.env.NEXT_PUBLIC_APP_NAME ?? "MarketingOS";
-const URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const APP_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
-  metadataBase: new globalThis.URL(URL),
+  metadataBase: new URL(APP_URL),
   title: { default: APP, template: `%s · ${APP}` },
   description: "All-in-one marketing management platform",
   robots: { index: false, follow: false },
@@ -36,10 +38,17 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" suppressHydrationWarning
-      className={`${dmSans.variable} ${syne.variable} ${dmMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${dmSans.variable} ${syne.variable} ${dmMono.variable}`}
+    >
       <body className="min-h-screen bg-surface-0 font-sans antialiased">
         {children}
         <Toaster

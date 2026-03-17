@@ -13,7 +13,6 @@ type SettingsTab = "profile" | "security" | "notifications";
 export default function SettingsPage({ profile, userEmail }: { profile: Profile | null; userEmail: string }) {
   const [tab, setTab] = useState<SettingsTab>("profile");
   const [fullName, setFullName] = useState(profile?.full_name ?? "");
-  const [currentPw, setCurrentPw] = useState("");
   const [newPw, setNewPw] = useState("");
   const [confirmPw, setConfirmPw] = useState("");
   const [pwError, setPwError] = useState("");
@@ -35,7 +34,7 @@ export default function SettingsPage({ profile, userEmail }: { profile: Profile 
       const { error } = await createClient().auth.updateUser({ password: newPw });
       if (error) { setPwError(error.message); return; }
       toast.success("Password updated");
-      setCurrentPw(""); setNewPw(""); setConfirmPw("");
+      setNewPw(""); setConfirmPw("");
     });
   }
 

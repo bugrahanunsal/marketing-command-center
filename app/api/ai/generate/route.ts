@@ -66,7 +66,8 @@ Target length: ~${wordTarget} words`;
     const result = JSON.parse(raw);
 
     return NextResponse.json(result);
-  } catch (e) {
-    return NextResponse.json({ error: "Failed to generate content" }, { status: 500 });
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : "Failed to generate content";
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }

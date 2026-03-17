@@ -2,7 +2,7 @@
 import { useState, useTransition } from "react";
 import { Plus, Trash2, Edit2, Link2, ExternalLink, Shield, ShieldOff } from "lucide-react";
 import toast from "react-hot-toast";
-import { Button, Modal, Input, Select, Textarea, FormField, EmptyState, StatCard, Badge } from "@/components/ui";
+import { Button, Modal, Input, Select, Textarea, FormField, EmptyState, StatCard } from "@/components/ui";
 import { createBacklink, updateBacklink, deleteBacklink } from "@/lib/actions";
 import { cn } from "@/lib/utils";
 import type { Backlink, BacklinkType, BacklinkStatus } from "@/types";
@@ -114,11 +114,11 @@ export default function BacklinkTracker({ initialBacklinks, userId }: { initialB
       <div className="card overflow-hidden">
         <div className="flex flex-wrap items-center gap-3 border-b border-border p-4">
           <Input placeholder="Search backlinks…" value={search} onChange={(e) => setSearch(e.target.value)} className="max-w-[220px]" />
-          <Select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as any)} className="w-[130px]">
+          <Select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as BacklinkStatus | "all")} className="w-[130px]">
             <option value="all">All statuses</option>
             {STATUSES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
           </Select>
-          <Select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value as any)} className="w-[130px]">
+          <Select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value as BacklinkType | "all")} className="w-[130px]">
             <option value="all">All types</option>
             <option value="dofollow">Dofollow</option>
             <option value="nofollow">Nofollow</option>

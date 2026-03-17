@@ -1,8 +1,8 @@
 "use client";
 import { useState, useTransition } from "react";
-import { Plus, Trash2, Edit2, CheckSquare, Calendar, Tag, AlertCircle } from "lucide-react";
+import { Plus, Trash2, Edit2, CheckSquare, Calendar } from "lucide-react";
 import toast from "react-hot-toast";
-import { Button, Modal, Input, Select, Textarea, FormField, EmptyState, Badge, Spinner } from "@/components/ui";
+import { Button, Modal, Input, Select, Textarea, FormField, EmptyState } from "@/components/ui";
 import { createTask, updateTask, deleteTask } from "@/lib/actions";
 import { cn, fmtDate } from "@/lib/utils";
 import type { Task, TaskStatus, TaskPriority } from "@/types";
@@ -110,11 +110,11 @@ export default function TaskManager({ initialTasks, userId }: { initialTasks: Ta
       {/* Filters */}
       <div className="flex flex-wrap gap-3">
         <Input placeholder="Search tasks…" value={search} onChange={(e) => setSearch(e.target.value)} className="max-w-[200px]" />
-        <Select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value as any)} className="w-[140px]">
+        <Select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value as TaskStatus | "all")} className="w-[140px]">
           <option value="all">All statuses</option>
           {STATUSES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
         </Select>
-        <Select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value as any)} className="w-[140px]">
+        <Select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value as TaskPriority | "all")} className="w-[140px]">
           <option value="all">All priorities</option>
           {PRIORITIES.map((p) => <option key={p.value} value={p.value}>{p.label}</option>)}
         </Select>

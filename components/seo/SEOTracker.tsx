@@ -1,6 +1,6 @@
 "use client";
 import { useState, useTransition } from "react";
-import { Plus, Trash2, Edit2, TrendingUp, TrendingDown, Minus, Search } from "lucide-react";
+import { Plus, Trash2, Edit2, TrendingUp, TrendingDown, Search } from "lucide-react";
 import toast from "react-hot-toast";
 import { Button, Modal, Input, Textarea, FormField, EmptyState, StatCard } from "@/components/ui";
 import { createKeyword, updateKeyword, deleteKeyword } from "@/lib/actions";

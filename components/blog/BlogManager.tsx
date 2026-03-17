@@ -1,12 +1,12 @@
 "use client";
 import { useState, useTransition } from "react";
-import { Plus, Trash2, Edit2, FileText, Sparkles, Loader2, Tag, Calendar, Eye } from "lucide-react";
+import { Plus, Trash2, Edit2, FileText, Sparkles, Loader2, Eye } from "lucide-react";
 import toast from "react-hot-toast";
 import {
-  Button, Modal, Input, Select, Textarea, FormField, EmptyState, StatCard, Badge, Spinner
+  Button, Input, Select, Textarea, FormField, EmptyState, StatCard, Spinner
 } from "@/components/ui";
 import { createBlogPost, updateBlogPost, deleteBlogPost } from "@/lib/actions";
-import { cn, fmtDate, slugify } from "@/lib/utils";
+import { cn, fmtDate } from "@/lib/utils";
 import type { BlogPost, BlogStatus } from "@/types";
 import type { AiGenerateInput } from "@/lib/validations";
 
@@ -43,7 +43,8 @@ export default function BlogManager({ initialPosts, userId }: { initialPosts: Bl
   const drafts = posts.filter((p) => p.status === "draft").length;
 
   const setP = (k: keyof typeof EMPTY_POST, v: string) => setPostForm((prev) => ({ ...prev, [k]: v }));
-  const setA = (k: keyof AiGenerateInput, v: string) => setAiForm((prev) => ({ ...prev, [k]: v as any }));
+  const setA = (k: keyof AiGenerateInput, v: string) =>
+    setAiForm((prev) => ({ ...prev, [k]: v } as AiGenerateInput));
 
   function openNew() {
     setPostForm(EMPTY_POST);
@@ -185,7 +186,7 @@ export default function BlogManager({ initialPosts, userId }: { initialPosts: Bl
           <div className="card overflow-hidden">
             <div className="flex items-center gap-3 border-b border-border p-4">
               <Input placeholder="Search posts…" value={search} onChange={(e) => setSearch(e.target.value)} className="max-w-[220px]" />
-              <Select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as any)} className="w-[130px]">
+              <Select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as BlogStatus | "all")} className="w-[130px]">
                 <option value="all">All statuses</option>
                 {STATUSES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
               </Select>
