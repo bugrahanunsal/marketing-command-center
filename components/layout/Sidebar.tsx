@@ -72,8 +72,8 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
       {/* Nav */}
       <nav className="flex-1 overflow-y-auto px-2 py-3">
         <ul className="space-y-0.5">
-          {NAV.map(({ href, label, icon: Icon, exact, badge }) => {
-            const active = isActive(href, exact as boolean | undefined);
+          {NAV.map(({ href, label, icon: Icon, badge }) => {
+            const active = isActive(href);
             return (
               <li key={href}>
                 <Link
