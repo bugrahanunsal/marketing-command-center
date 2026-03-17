@@ -23,7 +23,7 @@ const APP = process.env.NEXT_PUBLIC_APP_NAME ?? "MarketingOS";
 const URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(URL),
+  metadataBase: new globalThis.URL(URL),
   title: { default: APP, template: `%s · ${APP}` },
   description: "All-in-one marketing management platform",
   robots: { index: false, follow: false },
