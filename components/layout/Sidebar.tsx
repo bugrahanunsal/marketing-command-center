@@ -5,7 +5,7 @@ import { useState } from "react";
 import {
   LayoutDashboard, CheckSquare, Search, Link2, CalendarDays,
   FileText, Settings, LogOut, Zap, ChevronLeft, ChevronRight,
-  BarChart2, Upload, BookOpen,
+  BarChart2, Upload, BookOpen, Globe,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
@@ -19,6 +19,7 @@ interface NavItem {
   icon: LucideIcon;
   exact?: boolean;
   badge?: string;
+  section?: string;
 }
 
 const NAV: NavItem[] = [
@@ -29,6 +30,7 @@ const NAV: NavItem[] = [
   { href: "/backlink-upload", label: "Backlink Upload", icon: Upload },
   { href: "/calendar", label: "Calendar", icon: CalendarDays },
   { href: "/blog", label: "Blog / AI", icon: FileText, badge: "AI" },
+  { href: "/brands", label: "Brand Studios", icon: Globe, badge: "NEW" },
   { href: "/blog-reports", label: "Blog Reports", icon: BookOpen },
   { href: "/ads-reports", label: "Ads Reports", icon: BarChart2 },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -94,7 +96,8 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
                     <>
                       <span className="flex-1 truncate">{item.label}</span>
                       {item.badge && (
-                        <span className="rounded-full bg-brand/20 px-1.5 py-0.5 text-[10px] font-semibold text-brand">
+                        <span className={cn("rounded-full px-1.5 py-0.5 text-[10px] font-semibold",
+                          item.badge === "NEW" ? "bg-green-500/20 text-green-400" : "bg-brand/20 text-brand")}>
                           {item.badge}
                         </span>
                       )}
