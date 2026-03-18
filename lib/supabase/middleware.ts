@@ -8,12 +8,16 @@ export function createMiddlewareClient(req: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
-        getAll: () => req.cookies.getAll(),
-        setAll: (toSet) => {
-          toSet.forEach(({ name, value }) => req.cookies.set(name, value));
+        getAll() {
+          return req.cookies.getAll();
+        },
+        setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
+          cookiesToSet.forEach(({ name, value }) =>
+            req.cookies.set(name, value)
+          );
           res = NextResponse.next({ request: req });
-          toSet.forEach(({ name, value, options }) =>
-            res.cookies.set(name, value, options)
+          cookiesToSet.forEach(({ name, value, options }) =>
+            res.cookies.set(name, value, options as never)
           );
         },
       },
