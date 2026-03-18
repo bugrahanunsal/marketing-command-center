@@ -3,17 +3,9 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import {
-  LayoutDashboard,
-  CheckSquare,
-  Search,
-  Link2,
-  CalendarDays,
-  FileText,
-  Settings,
-  LogOut,
-  Zap,
-  ChevronLeft,
-  ChevronRight,
+  LayoutDashboard, CheckSquare, Search, Link2, CalendarDays,
+  FileText, Settings, LogOut, Zap, ChevronLeft, ChevronRight,
+  BarChart2, Upload, BookOpen,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
@@ -34,8 +26,11 @@ const NAV: NavItem[] = [
   { href: "/tasks", label: "Tasks", icon: CheckSquare },
   { href: "/seo", label: "SEO Tracker", icon: Search },
   { href: "/backlinks", label: "Backlinks", icon: Link2 },
+  { href: "/backlink-upload", label: "Backlink Upload", icon: Upload },
   { href: "/calendar", label: "Calendar", icon: CalendarDays },
   { href: "/blog", label: "Blog / AI", icon: FileText, badge: "AI" },
+  { href: "/blog-reports", label: "Blog Reports", icon: BookOpen },
+  { href: "/ads-reports", label: "Ads Reports", icon: BarChart2 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 
@@ -45,9 +40,7 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
   const [collapsed, setCollapsed] = useState(false);
 
   const isActive = (href: string, exact?: boolean) =>
-    exact
-      ? pathname === href
-      : pathname === href || pathname.startsWith(href + "/");
+    exact ? pathname === href : pathname === href || pathname.startsWith(href + "/");
 
   async function signOut() {
     await createClient().auth.signOut();
@@ -57,22 +50,10 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
 
   return (
     <aside
-      style={{
-        background: "hsl(var(--sidebar-bg))",
-        borderColor: "hsl(var(--sidebar-border))",
-      }}
-      className={cn(
-        "relative flex h-full flex-col border-r transition-all duration-300",
-        collapsed ? "w-[60px]" : "w-[220px]"
-      )}
+      style={{ background: "hsl(var(--sidebar-bg))", borderColor: "hsl(var(--sidebar-border))" }}
+      className={cn("relative flex h-full flex-col border-r transition-all duration-300", collapsed ? "w-[60px]" : "w-[220px]")}
     >
-      <div
-        style={{ borderColor: "hsl(var(--sidebar-border))" }}
-        className={cn(
-          "flex h-14 items-center border-b px-4",
-          collapsed ? "justify-center" : "gap-2.5"
-        )}
-      >
+      <div style={{ borderColor: "hsl(var(--sidebar-border))" }} className={cn("flex h-14 items-center border-b px-4", collapsed ? "justify-center" : "gap-2.5")}>
         <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand">
           <Zap className="h-3.5 w-3.5 text-white" />
         </div>
@@ -85,17 +66,10 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
 
       <button
         onClick={() => setCollapsed(!collapsed)}
-        style={{
-          background: "hsl(var(--sidebar-bg))",
-          borderColor: "hsl(var(--sidebar-border))",
-        }}
+        style={{ background: "hsl(var(--sidebar-bg))", borderColor: "hsl(var(--sidebar-border))" }}
         className="absolute -right-3 top-12 z-10 flex h-6 w-6 items-center justify-center rounded-full border text-white/40 transition-colors hover:text-white"
       >
-        {collapsed ? (
-          <ChevronRight className="h-3 w-3" />
-        ) : (
-          <ChevronLeft className="h-3 w-3" />
-        )}
+        {collapsed ? <ChevronRight className="h-3 w-3" /> : <ChevronLeft className="h-3 w-3" />}
       </button>
 
       <nav className="flex-1 overflow-y-auto px-2 py-3">
@@ -108,16 +82,10 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
                 <Link
                   href={item.href}
                   title={collapsed ? item.label : undefined}
-                  style={
-                    active
-                      ? { background: "hsl(var(--sidebar-active-bg))" }
-                      : undefined
-                  }
+                  style={active ? { background: "hsl(var(--sidebar-active-bg))" } : undefined}
                   className={cn(
                     "group flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
-                    active
-                      ? "text-white"
-                      : "text-white/50 hover:text-white",
+                    active ? "text-white" : "text-white/50 hover:text-white",
                     collapsed && "justify-center px-0"
                   )}
                 >
@@ -139,36 +107,19 @@ export default function Sidebar({ profile }: { profile: Profile | null }) {
         </ul>
       </nav>
 
-      <div
-        style={{ borderColor: "hsl(var(--sidebar-border))" }}
-        className="border-t p-3"
-      >
+      <div style={{ borderColor: "hsl(var(--sidebar-border))" }} className="border-t p-3">
         {collapsed ? (
-          <button
-            onClick={signOut}
-            className="flex w-full items-center justify-center rounded-lg py-2 text-white/40 hover:text-white"
-          >
+          <button onClick={signOut} className="flex w-full items-center justify-center rounded-lg py-2 text-white/40 hover:text-white">
             <LogOut className="h-4 w-4" />
           </button>
         ) : (
           <div className="flex items-center gap-2.5">
-            <Avatar
-              src={profile?.avatar_url}
-              name={profile?.full_name ?? profile?.email}
-              size="sm"
-            />
+            <Avatar src={profile?.avatar_url} name={profile?.full_name ?? profile?.email} size="sm" />
             <div className="min-w-0 flex-1">
-              <p className="truncate text-xs font-medium text-white">
-                {profile?.full_name ?? "User"}
-              </p>
-              <p className="truncate text-[11px] text-white/40">
-                {profile?.email}
-              </p>
+              <p className="truncate text-xs font-medium text-white">{profile?.full_name ?? "User"}</p>
+              <p className="truncate text-[11px] text-white/40">{profile?.email}</p>
             </div>
-            <button
-              onClick={signOut}
-              className="shrink-0 rounded p-1 text-white/30 hover:text-white"
-            >
+            <button onClick={signOut} className="shrink-0 rounded p-1 text-white/30 hover:text-white">
               <LogOut className="h-3.5 w-3.5" />
             </button>
           </div>
