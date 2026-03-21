@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { createMiddlewareClient } from "@/lib/supabase/middleware";
 
 const PUBLIC_ROUTES = ["/login", "/signup", "/reset-password"];
-const PROTECTED = ["/dashboard", "/tasks", "/seo", "/backlinks", "/backlink-upload", "/calendar", "/blog", "/blog-reports", "/ads-reports", "/settings"];
+const PROTECTED = ["/dashboard", "/tasks", "/seo", "/backlinks", "/backlink-upload", "/calendar", "/blog", "/blog-reports", "/ads-reports", "/settings", "/analytics"];
 
 export async function middleware(req: NextRequest) {
   const { supabase, res } = createMiddlewareClient(req);

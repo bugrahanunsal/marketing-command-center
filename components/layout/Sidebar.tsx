@@ -32,6 +32,7 @@ const NAV: NavItem[] = [
   { href: "/blog", label: "Blog / AI", icon: FileText, badge: "AI" },
   { href: "/brands", label: "Brand Studios", icon: Globe, badge: "NEW" },
   { href: "/blog-reports", label: "Blog Reports", icon: BookOpen },
+  { href: "/analytics", label: "Analytics", icon: BarChart2, badge: "NEW" },
   { href: "/ads-reports", label: "Ads Reports", icon: BarChart2 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
