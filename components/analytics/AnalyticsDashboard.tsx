@@ -34,7 +34,12 @@ export default function AnalyticsDashboard() {
 
   async function syncData() {
     setSyncing(true);
-    try { await fetch("/api/shopify/analytics", { method: "POST" }); await fetchData(); } finally { setSyncing(false); }
+    try {
+      const res = await fetch("/api/shopify/analytics", { method: "POST" });
+      const json = await res.json();
+      if (!res.ok) { console.error("Sync error:", json); alert("Sync failed: " + (json.error || res.status)); }
+      await fetchData();
+    } finally { setSyncing(false); }
   }
 
   const maxRevenue = data?.revenueByDay ? Math.max(...data.revenueByDay.map(d => d.revenue), 1) : 1;
