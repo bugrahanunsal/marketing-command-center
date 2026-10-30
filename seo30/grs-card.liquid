@@ -1,0 +1,187 @@
+{%- comment -%}
+  Product card (prototype .card): photo + hover photo, badge, quick view, title, Judge.me stars, price, finish swatches.
+  render 'grs-card', product: p
+  Products with Brushed Stainless and Matte Black variants show the swatches; a swatch swaps the photo (and the hover
+  photo) to that finish. Hover photo = the product page's second photo for that finish (see below).
+  render 'grs-card', product: p, bl: true  -> starts on the Matte Black photo (a collection filtered to Matte Black).
+  render 'grs-card', product: p, li: true  -> the card is an item of a product slider marked as a list (role="listitem").
+  render 'grs-card', product: p, sizes: '...', sizes_studio: '...'  -> image sizes for the slot the card sits in
+    (a product grid); sizes is used for square photos (they fill the square box exactly), sizes_studio for the
+    finish photos drawn at 74% of the box (img.studio, object-fit contain). Other photos keep the slider sizes.
+  Slider cards (li) draw finish photos at 74% of the slider box: 53vw / 31vw / 300px.
+{%- endcomment -%}
+{%- liquid
+  assign p = product
+  assign v_ss = nil
+  assign v_bl = nil
+  assign vids = ','
+  for v in p.variants
+    if v_ss == nil and v.options contains 'Brushed Stainless' or v.options contains 'Inox brossé' or v.options contains 'Acero inoxidable cepillado'
+      assign v_ss = v
+    endif
+    if v_bl == nil and v.options contains 'Matte Black' or v.options contains 'Noir mat' or v.options contains 'Negro mate'
+      assign v_bl = v
+    endif
+    if v.featured_image
+      assign vids = vids | append: v.featured_image.id | append: ','
+    endif
+  endfor
+  assign fin = false
+  if v_ss and v_bl
+    assign fin = true
+  endif
+
+  assign im1 = p.featured_image
+  assign im_bl = nil
+  if fin
+    if v_ss.featured_image
+      assign im1 = v_ss.featured_image
+    endif
+    assign im_bl = v_bl.featured_image | default: p.featured_image
+  endif
+
+  assign im_show = im1
+  assign show_bl = false
+  if bl and fin
+    assign im_show = im_bl
+    assign show_bl = true
+  endif
+
+  comment
+    Hover photo = the second photo the product page shows for the finish on the card (same rule as the gallery in
+    sections/grs-product.liquid: the variant's photo first, then the other photos in order, leaving out the other
+    finish's photos). A variant (finish) photo is drawn as a studio shot. data-ss2 / data-bl2 let a finish swatch
+    swap the hover photo too (script in layout/grs.liquid). Products without the two finishes, or with no such photo,
+    keep the old rule: the first photo that is not a variant photo.
+  endcomment
+  assign im2 = nil
+  assign st2 = false
+  assign h_ss = nil
+  assign h_bl = nil
+  assign hs_ss = false
+  assign hs_bl = false
+  if fin
+    assign fi = -1
+    for o in p.options_with_values
+      assign on = o.name | downcase
+      if on == 'finish' or on == 'color' or on == 'colour' or on == 'finition' or on == 'couleur' or on == 'acabado'
+        assign fi = forloop.index0
+      endif
+    endfor
+    if fi >= 0
+      assign vfin = '|'
+      for v in p.variants
+        assign fv = v.options[fi] | downcase
+        assign fc = ''
+        if fv contains 'black' or fv contains 'noir' or fv contains 'negro'
+          assign fc = 'bl'
+        elsif fv contains 'stainless' or fv contains 'brushed' or fv contains 'inox' or fv contains 'acero'
+          assign fc = 'ss'
+        endif
+        if v.featured_media and fc != ''
+          assign vfin = vfin | append: v.featured_media.id | append: ':' | append: fc | append: '|'
+        endif
+      endfor
+      assign fm_ss = v_ss.featured_media | default: p.featured_media
+      assign fm_bl = v_bl.featured_media | default: p.featured_media
+      for m in p.media
+        if m.preview_image == blank
+          continue
+        endif
+        assign key = '|' | append: m.id | append: ':'
+        assign mf = ''
+        assign isv = false
+        if vfin contains key
+          assign isv = true
+          assign k_ss = key | append: 'ss|'
+          assign k_bl = key | append: 'bl|'
+          if vfin contains k_ss and vfin contains k_bl
+            assign mf = ''
+          elsif vfin contains k_ss
+            assign mf = 'ss'
+          else
+            assign mf = 'bl'
+          endif
+        else
+          assign al = m.alt | downcase
+          if al contains 'black' or al contains 'noir' or al contains 'negro'
+            assign mf = 'bl'
+          elsif al contains 'brushed' or al contains 'stainless' or al contains 'inox' or al contains 'acero'
+            assign mf = 'ss'
+          endif
+        endif
+        if h_ss == nil and m.id != fm_ss.id and mf != 'bl'
+          assign h_ss = m.preview_image
+          assign hs_ss = isv
+        endif
+        if h_bl == nil and m.id != fm_bl.id and mf != 'ss'
+          assign h_bl = m.preview_image
+          assign hs_bl = isv
+        endif
+      endfor
+      if show_bl
+        assign im2 = h_bl
+        assign st2 = hs_bl
+      else
+        assign im2 = h_ss
+        assign st2 = hs_ss
+      endif
+    endif
+  endif
+  if im2 == nil
+    for img in p.images
+      assign key = ',' | append: img.id | append: ','
+      if img.id != im1.id
+        unless vids contains key
+          assign im2 = img
+          break
+        endunless
+      endif
+    endfor
+  endif
+  if im2 == nil
+    for img in p.images
+      if img.id != im1.id
+        assign im2 = img
+        break
+      endif
+    endfor
+  endif
+
+  assign badge = ''
+  case p.handle
+    when 'glass-railing-34-tempered-glass-panel', 'glass-railing-40-tempered-glass-panel', 'glass-railing-46-tempered-glass-panel'
+      assign badge = 'grs.card.widths' | t: count: p.variants.size
+    when 'custom-glass-railing', 'custom-stair-glass'
+      assign badge = 'grs.card.made_to_order' | t
+    when 'gate-panels-holed-for-the-hinges-latch-and-floor-lock'
+      assign badge = 'grs.card.pre_holed' | t
+    when 'gate-glass-panels'
+      assign badge = 'grs.card.holed_hinges' | t
+    when 'glass-railing-side-mount-spigot'
+      assign badge = 'grs.card.fascia_mount' | t
+  endcase
+
+  assign sz_def = '(max-width:749px) 70vw, (max-width:1099px) 40vw, 320px'
+  assign sz_sq = sizes | default: sz_def
+  assign sz_st = sizes_studio | default: sz_def
+  if li and sizes_studio == blank
+    assign sz_st = '(max-width:749px) 53vw, (max-width:1099px) 31vw, 300px'
+  endif
+  assign sz1 = sz_def
+  if fin
+    assign sz1 = sz_st
+  elsif im_show.aspect_ratio == 1
+    assign sz1 = sz_sq
+  endif
+  assign sz2 = sz_def
+  if st2
+    assign sz2 = sz_st
+  elsif im2.aspect_ratio == 1
+    assign sz2 = sz_sq
+  endif
+-%}
+<div class="card{% if im2 %} has2{% endif %}"{% if li %} role="listitem"{% endif %} data-h="{{ p.handle }}"{% if fin %} data-ss="{{ im1 | image_url: width: 600 }}" data-bl="{{ im_bl | image_url: width: 600 }}"{% endif %}{% if h_ss and h_bl %} data-ss2="{{ h_ss | image_url: width: 600 }}" data-bl2="{{ h_bl | image_url: width: 600 }}"{% if hs_ss %} data-ss2s="1"{% endif %}{% if hs_bl %} data-bl2s="1"{% endif %}{% endif %}><div class="card-media"><a class="im-link" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
+  {%- if im_show -%}<span class="im im1"><img class="ph{% if fin %} studio{% endif %}" src="{{ im_show | image_url: width: 600 }}" srcset="{{ im_show | image_url: width: 300 }} 300w, {{ im_show | image_url: width: 450 }} 450w, {{ im_show | image_url: width: 600 }} 600w, {{ im_show | image_url: width: 800 }} 800w" sizes="{{ sz1 }}" alt="{{ p.title | escape }}" loading="lazy" decoding="async"></span>{%- endif -%}
+  {%- if im2 -%}<span class="im im2"><img class="ph{% if st2 %} studio{% endif %}"{% if h_ss and h_bl %} data-u="{{ im2 | image_url: width: 600 }}"{% endif %} src="{{ im2 | image_url: width: 600 }}" srcset="{{ im2 | image_url: width: 300 }} 300w, {{ im2 | image_url: width: 450 }} 450w, {{ im2 | image_url: width: 600 }} 600w, {{ im2 | image_url: width: 800 }} 800w" sizes="{{ sz2 }}" alt="{{ im2.alt | default: p.title | escape }}" loading="lazy" decoding="async"></span>{%- endif -%}
+</a>{% if badge != '' %}<span class="badge soft">{{ badge }}</span>{% endif %}<button class="btn-o qv" type="button" data-quick="{{ p.handle }}">{{ 'grs.general.quick_view' | t }}</button></div><div class="card-info"><h3 class="card-h"><a class="card-title" href="{{ p.url }}">{{ p.title | escape }}</a></h3>{% render 'grs-rate', product: p %}<span class="card-price">{% render 'grs-price', product: p %}</span>{% if fin %}<span class="sw-row"><button class="sw sw-ss{% unless show_bl %} on{% endunless %}" data-swf="0" aria-label="{{ 'grs.product.brushed' | t }}"></button><button class="sw sw-bl{% if show_bl %} on{% endif %}" data-swf="1" aria-label="{{ 'grs.product.matte' | t }}"></button></span>{% endif %}</div></div>
