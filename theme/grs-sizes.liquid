@@ -1,0 +1,122 @@
+{%- comment -%}
+  Product sizes for the "Dimensions" box under the Size buttons (product page and quick view, snippets/grs-dims.liquid).
+  Edited in the theme editor: Header > Product sizes. One block per product: the product, then the size text for each
+  size button in the order the buttons appear (1st button, 2nd button, 3rd button). The size option is the product's
+  first option that is not the finish (Brushed Stainless / Matte Black). An empty size hides the box for that button.
+  Prints no visible HTML, only the data: variant ID -> size text, plus the box title.
+{%- endcomment -%}
+{%- liquid
+  assign label = section.settings.label | strip
+  assign lg = request.locale.iso_code | slice: 0, 2
+  if label == blank or label == 'Dimensions'
+    if lg == 'es'
+      assign label = 'Dimensiones'
+    else
+      assign label = 'Dimensions'
+    endif
+  endif
+  assign js = ''
+  for b in section.blocks
+    assign pr = b.settings.product
+    if pr == blank
+      continue
+    endif
+    assign si = -1
+    for o in pr.options_with_values
+      assign ov = o.values | join: '|' | downcase
+      if ov contains 'stainless' or ov contains 'black' or ov contains 'inox' or ov contains 'noir' or ov contains 'negro' or ov contains 'acero'
+        continue
+      endif
+      assign si = forloop.index0
+      break
+    endfor
+    if si < 0
+      continue
+    endif
+    assign svals = pr.options_with_values[si].values
+    for v in pr.variants
+      assign vv = v.options[si]
+      assign d = ''
+      for x in svals
+        if x == vv
+          case forloop.index
+            when 1
+              assign d = b.settings.size_1
+            when 2
+              assign d = b.settings.size_2
+            when 3
+              assign d = b.settings.size_3
+          endcase
+          break
+        endif
+      endfor
+      assign d = d | strip
+      if d != ''
+        assign jd = d | json
+        assign js = js | append: ',"' | append: v.id | append: '":' | append: jd
+      endif
+    endfor
+  endfor
+  assign js = js | remove_first: ','
+-%}
+<script type="application/json" id="grs-sizes">{"label":{{ label | json }},"v":{ {{- js -}} }}</script>
+
+{% schema %}
+{
+  "name": "Product sizes",
+  "tag": "div",
+  "class": "grs-sizes-sec",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "The \"Dimensions\" box under the Size buttons, on the product page and in quick view. Add one block per product. Write the size for each size button in the order the buttons appear on the product page. An empty size hides the box for that button."
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Box title",
+      "default": "Dimensions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name in this list",
+          "info": "Only shown here in the editor."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "size_1",
+          "label": "1st size button",
+          "info": "For example Big, or Small (25mm)."
+        },
+        {
+          "type": "text",
+          "id": "size_2",
+          "label": "2nd size button",
+          "info": "For example Small, or Large (40mm)."
+        },
+        {
+          "type": "text",
+          "id": "size_3",
+          "label": "3rd size button",
+          "info": "Only if the product has a third size."
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  }
+}
+{% endschema %}

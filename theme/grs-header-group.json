@@ -151,10 +151,65 @@
         "products_word": "products",
         "shop_now_label": "Shop now"
       }
+    },
+    "grs-sizes": {
+      "type": "grs-sizes",
+      "blocks": {
+        "size_180": {
+          "type": "product",
+          "settings": {
+            "title": "180° Glass-to-Glass Connector",
+            "product": "glass-railing-180-connector",
+            "size_1": "3.94\" × 1.97\"",
+            "size_2": "3.94\" × 1\"",
+            "size_3": ""
+          }
+        },
+        "size_90": {
+          "type": "product",
+          "settings": {
+            "title": "90° Corner Connector",
+            "product": "glass-railing-90-connector",
+            "size_1": "3.94\" × 1.97\"",
+            "size_2": "3.94\" × 1\"",
+            "size_3": ""
+          }
+        },
+        "size_adj": {
+          "type": "product",
+          "settings": {
+            "title": "Adjustable Glass-to-Glass Connector",
+            "product": "glass-railing-adjustable-connector",
+            "size_1": "3.94\" × 1.97\"",
+            "size_2": "3.94\" × 1\"",
+            "size_3": ""
+          }
+        },
+        "size_wall": {
+          "type": "product",
+          "settings": {
+            "title": "Wall-to-Glass Connector",
+            "product": "glass-railing-wall-connector",
+            "size_1": "3.94\" × 1.97\"",
+            "size_2": "3.94\" × 1\"",
+            "size_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "size_180",
+        "size_90",
+        "size_adj",
+        "size_wall"
+      ],
+      "settings": {
+        "label": "Dimensions"
+      }
     }
   },
   "order": [
     "grs-topbar",
-    "grs-header"
+    "grs-header",
+    "grs-sizes"
   ]
 }

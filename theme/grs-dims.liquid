@@ -1,72 +1,16 @@
 {%- comment -%}
-  Size box: "Dimensions" of the variant on screen, as on the live product page ("Dimensions (in)").
-  It changes with the Size choice (Big / Small).
-    render 'grs-dims', mode: 'pdp', product: p, variant: cv   -> product page, under the options
-    render 'grs-dims', mode: 'qv'                             -> quick view (needs assets/grs.js to send "grs:qv")
-  One line per variant: variant ID | dimensions | note (the note is not shown).
-  A product with no lines shows no box. The numbers are the ones the live product page shows (Oct 2026).
+  "Dimensions" box under the Size buttons. It shows the size text of the variant on screen and changes with the
+  Size choice (Big / Small ...). The texts are edited in the theme editor: Header > Product sizes
+  (sections/grs-sizes.liquid prints them as JSON, #grs-sizes, before the page content).
+    render 'grs-dims', mode: 'pdp'   -> product page, inside the product form, under the options
+    render 'grs-dims', mode: 'qv'    -> quick view (assets/grs.js sends "grs:qv" with the variant ID)
+  A variant with no size text shows no box.
 {%- endcomment -%}
-{%- capture grs_dim_rows -%}
-44316446064825|3.94" × 1.97"|180° Glass-to-Glass Connector, Brushed Stainless, Big
-44316446097593|3.94" × 1"|180° Glass-to-Glass Connector, Brushed Stainless, Small
-44316446130361|3.94" × 1.97"|180° Glass-to-Glass Connector, Matte Black, Big
-44316446163129|3.94" × 1"|180° Glass-to-Glass Connector, Matte Black, Small
-44316446195897|3.94" × 1.97"|90° Corner Connector, Brushed Stainless, Big
-44316446228665|3.94" × 1"|90° Corner Connector, Brushed Stainless, Small
-44316446261433|3.94" × 1.97"|90° Corner Connector, Matte Black, Big
-44316446294201|3.94" × 1"|90° Corner Connector, Matte Black, Small
-44316447015097|3.94" × 1.97"|Adjustable Glass-to-Glass Connector, Brushed Stainless, Big
-44316447047865|3.94" × 1"|Adjustable Glass-to-Glass Connector, Brushed Stainless, Small
-44316447080633|3.94" × 1.97"|Adjustable Glass-to-Glass Connector, Matte Black, Big
-44316447113401|3.94" × 1"|Adjustable Glass-to-Glass Connector, Matte Black, Small
-44316446818489|3.94" × 1.97"|Wall-to-Glass Connector, Brushed Stainless, Big
-44316446851257|3.94" × 1"|Wall-to-Glass Connector, Brushed Stainless, Small
-44316446884025|3.94" × 1.97"|Wall-to-Glass Connector, Matte Black, Big
-44316446916793|3.94" × 1"|Wall-to-Glass Connector, Matte Black, Small
-{%- endcapture -%}
-{%- liquid
-  assign rows = grs_dim_rows | strip | newline_to_br | split: '<br />'
-  assign lg = request.locale.iso_code | slice: 0, 2
-  if lg == 'es'
-    assign l_dim = 'Dimensiones'
-  else
-    assign l_dim = 'Dimensions'
-  endif
-  assign js = ''
-  assign d0 = ''
-  assign found = false
-  if mode == 'pdp'
-    for vv in product.variants
-      assign k = vv.id | append: ''
-      for row in rows
-        assign c = row | strip | split: '|'
-        if c[0] == k
-          assign found = true
-          assign jd = c[1] | json
-          assign js = js | append: ',' | append: c[0] | append: ':' | append: jd
-          if vv.id == variant.id
-            assign d0 = c[1]
-          endif
-          break
-        endif
-      endfor
-    endfor
-  else
-    for row in rows
-      assign c = row | strip | split: '|'
-      assign jd = c[1] | json
-      assign js = js | append: ',' | append: c[0] | append: ':' | append: jd
-    endfor
-  endif
-  assign js = js | remove_first: ','
--%}
 {%- capture ic_dim -%}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg>{%- endcapture -%}
 {%- if mode == 'pdp' -%}
-  {%- if found -%}
-<div class="pdim" id="pdim"{% if d0 == blank %} hidden{% endif %}><span class="pdim-ic">{{ ic_dim }}</span><span class="pdim-t"><em>{{ l_dim }}</em><b>{{ d0 | escape }}</b></span></div>
-<script>(function(){var M={ {{- js -}} },b=document.getElementById("pdim");if(!b||b._g)return;b._g=1;var e=b.querySelector("b");(b.closest("form")||document).addEventListener("change",function(t){t=t.target;if(!t||t.name!=="id")return;var v=M[t.value]||"";b.hidden=!v;if(v&&e.textContent!==v){e.textContent=v;e.classList.remove("in");void e.offsetWidth;e.classList.add("in")}})})();</script>
-  {%- endif -%}
+<div class="pdim" id="pdim" hidden><span class="pdim-ic">{{ ic_dim }}</span><span class="pdim-t"><em></em><b></b></span></div>
+<script>(function(){var b=document.getElementById("pdim");if(!b||b._g)return;b._g=1;var m=b.querySelector("em"),e=b.querySelector("b"),f=b.closest("form")||document,n=f.querySelector('input[name="id"]'),J=null;function L(){try{J=JSON.parse(document.getElementById("grs-sizes").textContent)}catch(x){J=null}}function S(id,a){var v=J&&J.v&&J.v[id]||"";b.hidden=!v;if(!v)return;m.textContent=J.label||"";if(e.textContent!==v){e.textContent=v;if(a){e.classList.remove("in");void e.offsetWidth;e.classList.add("in")}}}L();S(n&&n.value,0);f.addEventListener("change",function(t){t=t.target;t&&t.name==="id"&&S(t.value,1)});document.addEventListener("shopify:section:load",function(){L();S(n&&n.value,0)})})();</script>
 {%- else -%}
-<div class="pdim pdim-qv" id="qdim" hidden><span class="pdim-ic">{{ ic_dim }}</span><span class="pdim-t"><em>{{ l_dim }}</em><b></b></span></div>
-<script>(function(){var M={ {{- js -}} },b=document.getElementById("qdim");if(!b||b._g)return;b._g=1;var e=b.querySelector("b");document.addEventListener("grs:qv",function(t){var d=t.detail||{},v=M[String(d.v)]||"";b.hidden=!v;if(v&&e.textContent!==v){e.textContent=v;e.classList.remove("in");void e.offsetWidth;e.classList.add("in")}})})();</script>
+<div class="pdim pdim-qv" id="qdim" hidden><span class="pdim-ic">{{ ic_dim }}</span><span class="pdim-t"><em></em><b></b></span></div>
+<script>(function(){var b=document.getElementById("qdim");if(!b||b._g)return;b._g=1;var m=b.querySelector("em"),e=b.querySelector("b");document.addEventListener("grs:qv",function(t){var J=null;try{J=JSON.parse(document.getElementById("grs-sizes").textContent)}catch(x){}var d=t.detail||{},v=J&&J.v&&J.v[String(d.v)]||"";b.hidden=!v;if(!v)return;m.textContent=J.label||"";if(e.textContent!==v){e.textContent=v;e.classList.remove("in");void e.offsetWidth;e.classList.add("in")}})})();</script>
 {%- endif -%}
