@@ -1,0 +1,76 @@
+{%- comment -%}
+  "Download guide" card on the product page: block "guide" of sections/grs-product.liquid, printed under the product
+  note and above the quantity. It shows only on the products chosen in the block ("Show on these products"), and its
+  styles are printed with it, so nothing loads on other pages.
+  Texts: English in the block settings. French and Spanish pages use the built-in texts below while a text is left as
+  it is (the guide itself has the three languages); a changed text shows as written, or as translated in Translate &
+  Adapt. The step names are the ones printed in the guide. The link opens the PDF in a new tab at the visitor's
+  language (French / Spanish start page in the block settings).
+    render 'grs-guide', block: block, product: p
+{%- endcomment -%}
+{%- liquid
+  assign bs = block.settings
+  assign show = false
+  for x in bs.products
+    if x.id == product.id
+      assign show = true
+      break
+    endif
+  endfor
+  if bs.pdf == blank
+    assign show = false
+  endif
+-%}
+{%- if show -%}
+{%- liquid
+  assign lg = request.locale.iso_code | slice: 0, 2
+  assign d_en = 'Measurement guide§Measure your stairs in 5 steps§You measure A, B and D. We calculate C for you.§Download the guide§PDF · 21 pages' | split: '§'
+  assign d_fr = 'Guide de mesure§Mesurez votre escalier en 5 étapes§Vous mesurez A, B et D. Nous calculons C pour vous.§Télécharger le guide§PDF · 21 pages' | split: '§'
+  assign d_es = 'Guía de medición§Mida su escalera en 5 pasos§Usted mide A, B y D. Nosotros calculamos C.§Descargar la guía§PDF · 21 páginas' | split: '§'
+  assign keys = 'eyebrow,title,text,button,meta' | split: ','
+  assign tx = ''
+  for key in keys
+    assign i = forloop.index0
+    assign v = bs[key] | strip
+    if v == blank or v == d_en[i]
+      if lg == 'fr'
+        assign v = d_fr[i]
+      elsif lg == 'es'
+        assign v = d_es[i]
+      else
+        assign v = d_en[i]
+      endif
+    endif
+    assign tx = tx | append: v | append: '§'
+  endfor
+  assign tx = tx | split: '§'
+  if lg == 'fr'
+    assign steps = 'Vérifier l’escalier§Mesurer A§Confirmer B§Trouver D§Vérifier et commander' | split: '§'
+  elsif lg == 'es'
+    assign steps = 'Revisar la escalera§Medir A§Confirmar B§Encontrar D§Revisar y pedir' | split: '§'
+  else
+    assign steps = 'Check your stairs§Measure A§Confirm B§Find D§Check and order' | split: '§'
+  endif
+  assign href = bs.pdf
+  if lg == 'fr' and bs.page_fr > 1
+    assign href = href | append: '#page=' | append: bs.page_fr
+  elsif lg == 'es' and bs.page_es > 1
+    assign href = href | append: '#page=' | append: bs.page_es
+  endif
+-%}
+<style>.pguide{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;column-gap:22px;row-gap:20px;padding:22px 22px 20px;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:var(--fg)}.pguide.nocov{grid-template-columns:minmax(0,1fr)}.pguide-cov{position:relative;display:block;width:96px;margin:6px 0 6px 4px}.pguide-cov:before{content:"";position:absolute;top:3px;right:-5px;bottom:-3px;left:5px;border-radius:7px;background:var(--stage);box-shadow:0 1px 0 #0000000d;transform:rotate(5deg)}.pguide-cov img{position:relative;display:block;width:100%;height:auto;border-radius:7px;box-shadow:0 10px 22px -10px #00000080,0 0 0 1px #0000000f;transform:rotate(-2.5deg);transition:transform .45s cubic-bezier(.22,1,.36,1)}.pguide:hover .pguide-cov img{transform:rotate(0) translateY(-2px)}.pguide-eye{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--fg2)}.pguide-eye:before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 3px #ffdf5e40}.pguide-h{display:block;margin-top:8px;font-size:20px;font-weight:600;line-height:1.28;letter-spacing:-.01em}.pguide-p{margin:6px 0 0;font-size:14.5px;line-height:1.55;color:var(--fg2)}.pguide-steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:0;padding:16px 0;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.pguide-steps li{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 4px;text-align:center;font-size:12.5px;line-height:1.3;font-weight:500;color:var(--fg)}.pguide-steps li:not(:last-child):after{content:"";position:absolute;top:16px;left:calc(50% + 22px);right:calc(-50% + 22px);border-top:1.5px dashed var(--line)}.pguide-ic{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--acc);color:#1d1d1d;font-size:15px;font-weight:700;line-height:1;box-shadow:inset 0 -2px 0 #00000017}.pguide-ic svg{width:16px;height:16px}.pguide-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}.pguide-btn{display:inline-flex;align-items:center;gap:12px;height:50px;padding:0 22px 0 7px;border-radius:999px;background:var(--fg);color:var(--card);font-size:15px;font-weight:500;text-decoration:none;transition:background-color .25s ease}.pguide-btn:hover{background:#000;color:var(--card)}.pguide-btn-ic{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--acc);color:#1d1d1d;transition:transform .35s cubic-bezier(.22,1,.36,1)}.pguide-btn:hover .pguide-btn-ic{transform:translateY(2px)}.pguide-btn-ic svg{width:15px;height:15px}.pguide-meta{display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.35;color:var(--fg2)}.pguide-meta b{font-weight:500;color:var(--fg)}.grs-dark .pguide-btn{background:#EDEDEB;color:#1d1d1d}.grs-dark .pguide-btn:hover{background:#fff;color:#1d1d1d}.grs-dark .pguide-cov:before{background:#3a3a38}@media(max-width:749px){.pguide{grid-template-columns:72px minmax(0,1fr);column-gap:16px;padding:18px 16px 16px;border-radius:16px}.pguide-cov{width:72px}.pguide-h{font-size:17px}.pguide-p{font-size:14px}.pguide-steps li{font-size:11px;gap:6px;padding:0 2px}.pguide-ic{width:28px;height:28px;font-size:13px;border-radius:8px}.pguide-steps li:not(:last-child):after{top:14px;left:calc(50% + 19px);right:calc(-50% + 19px)}.pguide-btn{height:48px}}@media(prefers-reduced-motion:reduce){.pguide-cov img,.pguide-btn-ic{transition:none}}</style>
+<div class="pguide{% if bs.image == blank %} nocov{% endif %}" {{ block.shopify_attributes }}>
+  {%- if bs.image != blank -%}<a class="pguide-cov" href="{{ href }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ bs.image | image_url: width: 240 }}" srcset="{{ bs.image | image_url: width: 120 }} 120w, {{ bs.image | image_url: width: 240 }} 240w, {{ bs.image | image_url: width: 360 }} 360w" sizes="(max-width:749px) 72px, 96px" alt="" width="{{ bs.image.width }}" height="{{ bs.image.height }}" loading="lazy" decoding="async"></a>{%- endif -%}
+  <div class="pguide-body"><span class="pguide-eye">{{ tx[0] | escape }}</span><b class="pguide-h">{{ tx[1] | escape }}</b>{%- if tx[2] != blank -%}<p class="pguide-p">{{ tx[2] | escape }}</p>{%- endif -%}</div>
+  {%- if bs.show_steps -%}
+  <ol class="pguide-steps">
+    <li><span class="pguide-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h5v-5h5v-5h5V5"/></svg></span><span>{{ steps[0] }}</span></li>
+    <li><span class="pguide-ic" aria-hidden="true">A</span><span>{{ steps[1] }}</span></li>
+    <li><span class="pguide-ic" aria-hidden="true">B</span><span>{{ steps[2] }}</span></li>
+    <li><span class="pguide-ic" aria-hidden="true">D</span><span>{{ steps[3] }}</span></li>
+    <li><span class="pguide-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>{{ steps[4] }}</span></li>
+  </ol>
+  {%- endif -%}
+  <div class="pguide-foot"><a class="pguide-btn" href="{{ href }}" target="_blank" rel="noopener"><span class="pguide-btn-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></span>{{ tx[3] | escape }}</a><span class="pguide-meta"><b>{{ tx[4] | escape }}</b>English, Français, Español</span></div>
+</div>
+{%- endif -%}
