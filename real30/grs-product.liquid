@@ -1,0 +1,418 @@
+{%- comment -%}
+  Product page, top part (prototype #v-product .ptop): photos, breadcrumb, title, rating, price, options, quantity,
+  add to cart (Shopify product form, AJAX in assets/grs-product.js), shipping lines, "At a glance", description tabs, share.
+  The text under the price, the note and the Specifications tab come from the product description (same rules as the
+  prototype); the description itself is the Overview tab, unchanged.
+  Finish (Brushed Stainless / Matte Black) shows as two swatches, every other option as buttons; hidden variants made by
+  the custom price calculator app (Default_cpc_...) never show. Breadcrumb: the collection in the address, else the first
+  collection of the list in the section settings that has the product.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.product), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_in_stock = 'grs.sd.product.in_stock_html' | t
+  assign sd_in_stock = section.settings.in_stock | default: sd_in_stock
+  assign sd_sold_out = 'grs.sd.product.sold_out_html' | t
+  assign sd_sold_out = section.settings.sold_out | default: sd_sold_out
+  assign sd_qty_label = 'grs.sd.product.qty_label_html' | t
+  assign sd_qty_label = section.settings.qty_label | default: sd_qty_label
+  assign sd_add_label = 'grs.sd.product.add_label_html' | t
+  assign sd_add_label = section.settings.add_label | default: sd_add_label
+  assign sd_error_text = 'grs.sd.product.error_text_html' | t
+  assign sd_error_text = section.settings.error_text | default: sd_error_text
+  assign sd_price_unit = 'grs.sd.product.price_unit_html' | t
+  assign sd_price_unit = section.settings.price_unit | default: sd_price_unit
+  assign sd_more_label = 'grs.sd.product.more_label_html' | t
+  assign sd_more_label = section.settings.more_label | default: sd_more_label
+  assign sd_share_label = 'grs.sd.product.share_label_html' | t
+  assign sd_share_label = section.settings.share_label | default: sd_share_label
+  assign sd_copy_label = 'grs.sd.product.copy_label_html' | t
+  assign sd_copy_label = section.settings.copy_label | default: sd_copy_label
+  assign sd_copied_label = 'grs.sd.product.copied_label_html' | t
+  assign sd_copied_label = section.settings.copied_label | default: sd_copied_label
+  assign sd_facts_title = 'grs.sd.product.facts_title_html' | t
+  assign sd_facts_title = section.settings.facts_title | default: sd_facts_title
+  assign sd_tab_overview = 'grs.sd.product.tab_overview_html' | t
+  assign sd_tab_overview = section.settings.tab_overview | default: sd_tab_overview
+  assign sd_tab_specs = 'grs.sd.product.tab_specs_html' | t
+  assign sd_tab_specs = section.settings.tab_specs | default: sd_tab_specs
+-%}
+{%- liquid
+  comment
+    Labels left at their English default show the visitor's language (locale files).
+  endcomment
+  assign t_in_stock = sd_in_stock
+  if t_in_stock == blank or t_in_stock == 'In Stock'
+    assign t_in_stock = 'grs.product.in_stock' | t
+  endif
+  assign t_sold_out = sd_sold_out
+  if t_sold_out == blank or t_sold_out == 'Sold out'
+    assign t_sold_out = 'grs.product.sold_out' | t
+  endif
+  assign t_qty_label = sd_qty_label
+  if t_qty_label == blank or t_qty_label == 'Quantity'
+    assign t_qty_label = 'grs.product.quantity' | t
+  endif
+  assign t_add_label = sd_add_label
+  if t_add_label == blank or t_add_label == 'Add to cart'
+    assign t_add_label = 'grs.product.add_to_cart' | t
+  endif
+  assign t_error_text = sd_error_text
+  if t_error_text == blank or t_error_text == 'Could not add to cart. Please try again.'
+    assign t_error_text = 'grs.product.add_error' | t
+  endif
+  assign t_facts_title = sd_facts_title
+  if t_facts_title == 'At a glance'
+    assign t_facts_title = 'grs.product.at_a_glance' | t
+  endif
+  assign t_tab_overview = sd_tab_overview
+  if t_tab_overview == blank or t_tab_overview == 'Overview'
+    assign t_tab_overview = 'grs.product.overview' | t
+  endif
+  assign t_tab_specs = sd_tab_specs
+  if t_tab_specs == blank or t_tab_specs == 'Specifications'
+    assign t_tab_specs = 'grs.product.specifications' | t
+  endif
+  assign t_share_label = sd_share_label
+  if t_share_label == blank or t_share_label == 'Share'
+    assign t_share_label = 'grs.product.share' | t
+  endif
+  assign t_copy_label = sd_copy_label
+  if t_copy_label == blank or t_copy_label == 'Copy link'
+    assign t_copy_label = 'grs.product.copy_link' | t
+  endif
+  assign t_copied_label = sd_copied_label
+  if t_copied_label == blank or t_copied_label == 'Link copied'
+    assign t_copied_label = 'grs.js.link_copied' | t
+  endif
+  assign t_more_label = sd_more_label
+  if t_more_label == 'Need a size that isn’t listed? Custom glass'
+    assign t_more_label = 'grs.product.more_label' | t
+  endif
+-%}
+{%- liquid
+  assign p = product
+  assign cv = p.selected_or_first_available_variant
+
+  assign fin_i = -1
+  for o in p.options_with_values
+    assign on = o.name | downcase
+    if on == 'finish' or on == 'color' or on == 'colour' or on == 'finition' or on == 'couleur' or on == 'acabado'
+      assign fin_i = forloop.index0
+    endif
+  endfor
+
+  assign bc = collection
+  if bc == nil
+    assign pref = section.settings.crumb_order | split: ','
+    for h in pref
+      assign hh = h | strip
+      if bc == nil
+        for c in p.collections
+          if c.handle == hh
+            assign bc = c
+            break
+          endif
+        endfor
+      endif
+    endfor
+    if bc == nil
+      assign bc = p.collections.first
+    endif
+  endif
+
+  assign d = p.description | replace: '<h2', '<p' | replace: '</h2>', '</p>' | replace: '<h3', '<p' | replace: '</h3>', '</p>' | replace: '<h4', '<p' | replace: '</h4>', '</p>'
+  assign paras = d | split: '<p'
+  assign lead = ''
+  assign note = ''
+  assign skip = 'this is a final sale|spigots are sold|note:|important:|dimensions|please provide|weight:|material:' | split: '|'
+  assign notep = 'This is a final sale product|Spigots are sold separately|Note:|Important:|Please provide the angle' | split: '|'
+  assign pi = 0
+  for raw in paras
+    assign c1 = raw | slice: 0, 1
+    if c1 == '>' or c1 == ' '
+      assign t = '<p' | append: raw
+    else
+      assign t = raw
+    endif
+    assign t = t | strip_html | newline_to_br | replace: '<br />', ' ' | strip_newlines | replace: '&nbsp;', ' ' | split: ' ' | join: ' ' | strip
+    if t == ''
+      continue
+    endif
+    assign pi = pi | plus: 1
+    if pi <= 6 and section.settings.show_note
+      for np in notep
+        assign head = t | slice: 0, np.size
+        if head == np
+          if note != ''
+            assign note = note | append: ' '
+          endif
+          assign note = note | append: t
+          break
+        endif
+      endfor
+    endif
+    if lead == '' and section.settings.show_lead
+      assign tt = t
+      assign nm = p.title | append: ' '
+      assign head = tt | slice: 0, nm.size
+      if head == nm
+        assign tt = tt | slice: p.title.size, 100000 | strip
+      endif
+      assign low = tt | downcase
+      assign ok = true
+      if tt.size < 60
+        assign ok = false
+      endif
+      for sk in skip
+        assign head = low | slice: 0, sk.size
+        if head == sk
+          assign ok = false
+        endif
+      endfor
+      if ok
+        assign parts = tt | split: '. '
+        assign acc = ''
+        for s in parts
+          if acc == ''
+            assign acc = s
+          else
+            assign acc = acc | append: '. ' | append: s
+          endif
+          if acc.size >= 60
+            break
+          endif
+        endfor
+        assign last = acc | slice: -1
+        if last != '.' and last != '!' and last != '?'
+          assign acc = acc | append: '.'
+        endif
+        assign lead = acc | truncate: 281, ''
+      endif
+    endif
+  endfor
+
+  assign spec_src = p.description | replace: '<br>', '@@' | replace: '<br/>', '@@' | replace: '<br />', '@@' | replace: '</p>', '@@' | replace: '</h2>', '@@' | replace: '</h3>', '@@' | replace: '</h4>', '@@' | replace: '</li>', '@@' | replace: '</div>', '@@' | strip_html | split: '@@'
+  assign spec_labels = '|Dimensions|Weight|Material|Finish|Angle|Size|Length|Height|Glass|Note|'
+  assign specs = ''
+  assign li = 0
+  for line in spec_src
+    assign l = line | replace: '&nbsp;', ' ' | strip_newlines | strip
+    if l == ''
+      continue
+    endif
+    assign li = li | plus: 1
+    if li > 14
+      break
+    endif
+    if l contains ':'
+      assign lab = l | split: ':' | first | strip
+      assign key = '|' | append: lab | append: '|'
+      if spec_labels contains key
+        assign val = l | remove_first: lab | remove_first: ':' | strip
+        if val != '' and val.size < 140
+          assign specs = specs | append: '<div><dt>' | append: lab | append: '</dt><dd>' | append: val | append: '</dd></div>'
+        endif
+      endif
+    endif
+  endfor
+
+  assign rt = p.metafields.reviews.rating.value
+  assign rc = p.metafields.reviews.rating_count.value | plus: 0
+
+  comment
+    Finish of every variant photo ("|media id:ss|" or "|media id:bl|"), the finish of the variant on screen, and the photo
+    shown first (the variant's own photo, as in the live theme).
+  endcomment
+  assign cfc = ''
+  assign vfin = '|'
+  if fin_i >= 0
+    for v in p.variants
+      assign fv = v.options[fin_i] | downcase
+      assign fc = ''
+      if fv contains 'black' or fv contains 'noir' or fv contains 'negro'
+        assign fc = 'bl'
+      elsif fv contains 'stainless' or fv contains 'brushed' or fv contains 'inox' or fv contains 'acero'
+        assign fc = 'ss'
+      endif
+      if v.id == cv.id
+        assign cfc = fc
+      endif
+      if v.featured_media and fc != ''
+        assign vfin = vfin | append: v.featured_media.id | append: ':' | append: fc | append: '|'
+      endif
+    endfor
+  endif
+  assign fm = cv.featured_media | default: p.featured_media
+
+  comment
+    Starting quantity and the text after the price ("/ screw"): section settings, one "handle, handle = value" rule per line.
+  endcomment
+  assign q0 = 1
+  assign rl = section.settings.start_qty | newline_to_br | split: '<br />'
+  for line in rl
+    assign ln = line | strip_newlines | strip
+    if ln contains '='
+      assign lhs = ln | split: '=' | first | split: ','
+      assign rhs = ln | split: '=' | last | strip | plus: 0
+      for h in lhs
+        assign hh = h | strip
+        if hh == p.handle and rhs > 0
+          assign q0 = rhs
+        endif
+      endfor
+    endif
+  endfor
+  assign unit = ''
+  assign rl = sd_price_unit | newline_to_br | split: '<br />'
+  for line in rl
+    assign ln = line | strip_newlines | strip
+    if ln contains '='
+      assign lhs = ln | split: '=' | first | split: ','
+      assign rhs = ln | split: '=' | last | strip
+      for h in lhs
+        assign hh = h | strip
+        if hh == p.handle
+          if rhs == '/ screw'
+            assign rhs = 'grs.product.per_screw' | t
+          endif
+          assign unit = ' ' | append: rhs
+        endif
+      endfor
+    endif
+  endfor
+  assign more_on = false
+  if sd_more_label != blank
+    if section.settings.more_products == blank or section.settings.more_products.size == 0
+      assign more_on = true
+    endif
+    for x in section.settings.more_products
+      if x.handle == p.handle
+        assign more_on = true
+        break
+      endif
+    endfor
+  endif
+-%}
+{%- comment -%} Photos: thumbnails, slides and dots in one pass. Studio photos (the variants' own photos) of the other finish are hidden until it is picked; real photos show with every finish, as on the live site (owner, 30 Oct). {%- endcomment -%}
+{%- assign g_th = '' -%}{%- assign g_sl = '' -%}{%- assign g_dt = '' -%}{%- assign n_vis = 0 -%}{%- assign n_all = 0 -%}
+{%- for pass in (1..2) -%}{%- for m in p.media -%}{%- liquid
+    assign use = true
+    if pass == 1 and m.id != fm.id
+      assign use = false
+    endif
+    if pass == 2 and m.id == fm.id
+      assign use = false
+    endif
+    assign im = m.preview_image
+    if im == blank
+      assign use = false
+    endif
+    if use
+      assign n_all = n_all | plus: 1
+      assign key = '|' | append: m.id | append: ':'
+      assign mf = ''
+      assign studio = false
+      if vfin contains key
+        assign studio = true
+        assign k_ss = key | append: 'ss|'
+        assign k_bl = key | append: 'bl|'
+        if vfin contains k_ss and vfin contains k_bl
+          assign mf = ''
+        elsif vfin contains k_ss
+          assign mf = 'ss'
+        else
+          assign mf = 'bl'
+        endif
+      endif
+      assign hide = false
+      if mf != '' and cfc != '' and mf != cfc
+        assign hide = true
+      endif
+      assign is1 = false
+      unless hide
+        assign n_vis = n_vis | plus: 1
+        if n_vis == 1
+          assign is1 = true
+        endif
+      endunless
+    endif
+  -%}{%- if use -%}
+{%- capture one -%}<button type="button" class="{% if is1 %}on{% endif %}" data-mid="{{ m.id }}" data-fin="{{ mf }}" aria-label="{{ 'grs.a11y.image_n' | t: n: n_vis }}"{% if hide %} hidden{% endif %}><img class="ph{% if studio %} studio{% endif %}" src="{{ im | image_url: width: 220 }}" alt="" width="110" height="{{ 110 | divided_by: im.aspect_ratio | round }}" loading="lazy" decoding="async"></button>{%- endcapture -%}{%- assign g_th = g_th | append: one -%}
+{%- capture one -%}<div class="gal-slide" data-mid="{{ m.id }}" data-fin="{{ mf }}"{% if hide %} hidden{% endif %}><img class="ph{% if studio %} studio{% endif %}" src="{{ im | image_url: width: 1100 }}" srcset="{{ im | image_url: width: 550 }} 550w, {{ im | image_url: width: 800 }} 800w, {{ im | image_url: width: 1100 }} 1100w, {{ im | image_url: width: 1500 }} 1500w" sizes="(max-width:1099px) 92vw, 46vw" alt="{{ m.alt | default: p.title | escape }}" width="{{ im.width }}" height="{{ im.height }}"{% if is1 %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async"></div>{%- endcapture -%}{%- assign g_sl = g_sl | append: one -%}
+{%- capture one -%}<button type="button" class="{% if is1 %}on{% endif %}" data-mid="{{ m.id }}" aria-label="{{ 'grs.a11y.image_n' | t: n: n_vis }}"{% if hide %} hidden{% endif %}></button>{%- endcapture -%}{%- assign g_dt = g_dt | append: one -%}
+{%- endif -%}{%- endfor -%}{%- endfor -%}
+{%- if n_all == 0 -%}{%- capture g_sl -%}<div class="gal-slide gal-none">{{ 'product-1' | placeholder_svg_tag: 'ph' }}</div>{%- endcapture -%}{%- endif -%}
+<div class="wrap ptop"{% render 'grs-vars', s: section.settings %}>
+<div class="pp" data-pp data-section="{{ section.id }}"><div class="gal"><div class="gtw" id="gtw"><button type="button" class="gt-btn gt-up" id="gtup" aria-label="{{ 'grs.a11y.prev_thumbs' | t }}" hidden><svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 7l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="gal-thumbs" id="gthumbs">{{ g_th }}</div><button type="button" class="gt-btn gt-dn" id="gtdn" aria-label="{{ 'grs.a11y.more_thumbs' | t }}" hidden><svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div><div class="gal-main"><div class="gal-track" id="gtrack">{{ g_sl }}</div><div class="gal-dots" id="gdots"{% if n_vis < 2 %} hidden{% endif %}>{{ g_dt }}</div><div class="gal-arrows"{% if n_vis < 2 %} hidden{% endif %}><button type="button" id="gprev" aria-label="{{ 'grs.a11y.prev_image' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button type="button" id="gnext" aria-label="{{ 'grs.a11y.next_image' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div></div>
+<div class="buy">{%- if section.settings.show_crumb -%}<nav class="crumb2" aria-label="{{ 'grs.a11y.breadcrumb' | t }}"><a href="{{ routes.root_url }}">{{ 'grs.general.home' | t }}</a><svg width="6" height="10" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>{%- if bc -%}<a id="pcol" href="{{ bc.url }}">{{ bc.title | escape }}</a><svg width="6" height="10" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>{%- endif -%}<span id="pcrumb">{{ p.title | escape }}</span></nav>{%- endif -%}
+<h1 class="h1" id="pname">{{ p.title | escape }}</h1>{%- if rt != blank and rc > 0 -%}<div class="prate" id="prate">{% render 'grs-rate', product: p, large: true %}</div>{%- endif -%}<div class="pprow"><span class="pprice" id="pprice">{{ cv.price | money }}{{ unit }}</span>{%- if cv.compare_at_price > cv.price -%}<s class="pcmp" id="pcmp">{{ cv.compare_at_price | money }}</s>{%- endif -%}<span class="pcad" id="pcur">{{ cart.currency.iso_code }}</span><span class="instock{% unless cv.available %} out{% endunless %}" id="pstock">{% if cv.available %}{{ t_in_stock }}{% else %}{{ t_sold_out }}{% endif %}</span></div>{%- if lead != '' -%}<p class="lead" id="pdesc">{{ lead }}</p>{%- endif -%}
+{%- form 'product', p, id: 'grs-pform', class: 'pform', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+<input type="hidden" name="id" value="{{ cv.id }}" class="product-variant-id">
+{%- assign fin_html = '' -%}{%- assign opt_html = '' -%}
+{%- for o in p.options_with_values -%}{%- liquid
+    assign vis = 0
+    for val in o.values
+      assign v6 = val | slice: 0, 12
+      unless val == 'Default Title' or v6 == 'Default_cpc_'
+        assign vis = vis | plus: 1
+      endunless
+    endfor
+    assign oi = forloop.index0
+    assign oname = o.name | strip | append: '@@' | replace: ':@@', '' | remove: '@@'
+  -%}{%- if vis > 1 -%}
+  {%- if oi == fin_i -%}
+{%- capture fin_html -%}<div class="opt product-form__input" id="pfinw" data-oi="{{ oi }}"><span class="olab">{{ oname | escape }}: <b id="pfinname">{{ o.selected_value | escape }}</b></span><div class="sws" id="pfin" role="radiogroup" aria-label="{{ oname | escape }}">{%- for val in o.values -%}{%- liquid
+      assign sc = ''
+      assign vl = val | downcase
+      if vl contains 'black' or vl contains 'noir' or vl contains 'negro'
+        assign sc = 'sw-bl'
+      elsif vl contains 'stainless' or vl contains 'brushed' or vl contains 'inox' or vl contains 'acero'
+        assign sc = 'sw-ss'
+      endif
+      assign oid = section.id | append: '-o' | append: oi | append: '-' | append: forloop.index0
+    -%}<input class="sr" type="radio" id="{{ oid }}" name="grs-opt-{{ oi }}" value="{{ val | escape }}"{% if o.selected_value == val %} checked{% endif %}><label class="sw {{ sc }}{% if o.selected_value == val %} on{% endif %}" for="{{ oid }}" title="{{ val | escape }}"><span class="sr">{{ val | escape }}</span></label>{%- endfor -%}</div></div>{%- endcapture -%}
+  {%- else -%}
+{%- capture og -%}<div class="vp-g product-form__input" data-oi="{{ oi }}"><span class="olab">{{ oname | escape }}: <b>{{ o.selected_value | escape }}</b></span><div class="vp{% if vis > 8 %} vp-dense{% endif %}" role="radiogroup" aria-label="{{ oname | escape }}">{%- for val in o.values -%}{%- assign v6 = val | slice: 0, 12 -%}{%- unless val == 'Default Title' or v6 == 'Default_cpc_' -%}{%- assign oid = section.id | append: '-o' | append: oi | append: '-' | append: forloop.index0 -%}<input class="sr" type="radio" id="{{ oid }}" name="grs-opt-{{ oi }}" value="{{ val | escape }}"{% if o.selected_value == val %} checked{% endif %}><label class="vp-c{% if o.selected_value == val %} on{% endif %}" for="{{ oid }}">{{ val | escape }}</label>{%- endunless -%}{%- endfor -%}</div>{%- if vis > 8 and more_on -%}<a class="vp-more" href="{% render 'grs-url', url: section.settings.more_link %}">{{ t_more_label }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</div>{%- endcapture -%}
+{%- assign opt_html = opt_html | append: og -%}
+  {%- endif -%}
+{%- endif -%}{%- endfor -%}
+{{ fin_html }}{%- if opt_html != blank -%}<div class="opt" id="poptw">{{ opt_html }}</div>{%- endif -%}
+{%- render 'grs-dims', mode: 'pdp', product: p, variant: cv -%}
+{%- for block in section.blocks -%}{%- case block.type -%}{%- when 'custom_liquid' -%}<div class="pcl" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>{%- when '@app' -%}<div class="papp" {{ block.shopify_attributes }}>{% render block %}</div>{%- endcase -%}{%- endfor -%}
+{%- if note != '' -%}<p class="note" id="pnote">{{ note }}</p>{%- endif -%}{%- for block in section.blocks -%}{%- if block.type == 'guide' -%}{%- render 'grs-guide', block: block, product: p -%}{%- endif -%}{%- endfor -%}
+<span class="olab">{{ t_qty_label }}</span><div class="qtyrow product-form__buttons"><div class="qty"><button type="button" data-qd="-1" aria-label="{{ 'grs.a11y.decrease_qty' | t }}">−</button><span id="qn">{{ q0 }}</span><button type="button" data-qd="1" aria-label="{{ 'grs.a11y.increase_qty' | t }}">+</button></div><input type="hidden" name="quantity" value="{{ q0 }}" id="pqty"><button type="submit" name="add" class="btn dark cart-btn product-form__submit" id="padd"{% unless cv.available %} disabled{% endunless %}><span class="dot"></span><span><span class="padd-l">{% if cv.available %}{{ t_add_label }}{% else %}{{ t_sold_out }}{% endif %}</span> · <span id="ptot">{{ cv.price | times: q0 | money }}</span></span></button></div><p class="perr" id="perr" role="alert" hidden></p>
+{%- endform -%}
+{%- if section.settings.quote_label != blank -%}<a class="arrow-link" href="{% render 'grs-url', url: section.settings.quote_link %}" style="align-self:center">{{ section.settings.quote_label }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+<div class="trust2 ptrust">{%- if section.settings.trust_1 != blank -%}<span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>{{ section.settings.trust_1 }}</span>{%- endif -%}{%- if section.settings.trust_2 != blank -%}<span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>{{ section.settings.trust_2 }}</span>{%- endif -%}{%- if section.settings.trust_3 != blank -%}<span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg>{{ section.settings.trust_3 }}</span>{%- endif -%}</div>
+{%- assign facts = section.blocks | where: 'type', 'fact' -%}{%- if facts.size > 0 -%}<div class="pfacts">{%- if sd_facts_title != blank -%}<p class="pfacts-h">{{ t_facts_title }}</p>{%- endif -%}<ul class="pf-grid" role="list">{%- for block in facts -%}<li {{ block.shopify_attributes }}><a class="pf" href="{% render 'grs-url', url: block.settings.link %}" aria-label="{{ block.settings.title | escape }}: {{ block.settings.text | escape }}"><span class="pf-n">{{ block.settings.value }}<small>{{ block.settings.unit }}</small></span><span class="pf-t">{{ block.settings.title }}</span><span class="pf-d">{{ block.settings.text }}</span><svg class="pf-ar" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>{%- endfor -%}</ul></div>{%- endif -%}
+<div><div class="tabs" role="tablist"><button class="on" type="button" data-tab="ov" role="tab" aria-selected="true">{{ t_tab_overview }}</button>{%- if specs != '' -%}<button type="button" id="tab-sp" data-tab="sp" role="tab" aria-selected="false">{{ t_tab_specs }}</button>{%- endif -%}</div><div class="tabpane" data-pane="ov"><div class="rte pov" id="pov">{% render 'grs-rte', html: p.description %}</div></div>{%- if specs != '' -%}<div class="tabpane" data-pane="sp" hidden><dl class="specs" id="pspec">{{ specs }}</dl></div>{%- endif -%}</div>
+{%- if section.settings.show_share -%}{%- liquid
+    assign share_url = request.origin | append: p.url
+    assign su = share_url | url_encode
+    assign stt = p.title | url_encode
+  -%}<div id="pshare"><div class="share2"><span class="share2-l">{{ t_share_label }}</span><div class="share2-b"><a class="share2-i" href="https://www.facebook.com/sharer/sharer.php?u={{ su }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.share_facebook' | t }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a class="share2-i" href="https://x.com/intent/post?url={{ su }}&amp;text={{ stt }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.share_x' | t }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a class="share2-i" href="https://pinterest.com/pin/create/button/?url={{ su }}&amp;description={{ stt }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.save_pinterest' | t }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.7-.3 1.1.6 2 1.7 2 2 0 3.5-2.1 3.5-5.2 0-2.7-2-4.6-4.8-4.6-3.3 0-5.2 2.5-5.2 5 0 1 .4 2.1.9 2.7l.1.4-.3 1.3c0 .2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.8-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.3-.6-2.7-1.4l-.7 2.8c-.3 1-1 2.3-1.5 3.1A10 10 0 1 0 12 2z"></path></svg></a><button type="button" class="share2-c" data-copy="{{ share_url | escape }}" data-done="{{ t_copied_label | escape }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><span>{{ t_copy_label }}</span></button></div></div></div>{%- endif -%}
+</div></div></div>
+<div class="mbar" id="mbar"><div class="qty" style="flex:0 0 auto"><button type="button" data-qd="-1" aria-label="{{ 'grs.a11y.decrease_qty' | t }}">−</button><span id="mqn">{{ q0 }}</span><button type="button" data-qd="1" aria-label="{{ 'grs.a11y.increase_qty' | t }}">+</button></div><button type="button" class="btn" id="madd"{% unless cv.available %} disabled{% endunless %}><span class="dot"></span><span><span class="padd-l">{% if cv.available %}{{ t_add_label }}{% else %}{{ t_sold_out }}{% endif %}</span> · <span id="mtot">{{ cv.price | times: q0 | money }}</span></span></button></div>
+<script type="application/json" id="grs-pdata">{"handle":{{ p.handle | json }},"fin":{{ fin_i }},"url":{{ p.url | json }},"unit":{{ unit | json }},"in":{{ t_in_stock | json }},"out":{{ t_sold_out | json }},"add":{{ t_add_label | json }},"err":{{ t_error_text | json }},"v":[
+{%- assign sep = '' -%}
+{%- for v in p.variants -%}{%- assign t6 = v.title | slice: 0, 12 -%}{%- unless t6 == 'Default_cpc_' -%}{{ sep }}{"id":{{ v.id }},"o":{{ v.options | json }},"p":{{ v.price }},"c":{{ v.compare_at_price | default: 0 }},"a":{{ v.available | json }},"m":{{ v.featured_media.id | default: 0 }}}{%- assign sep = ',' -%}{%- endunless -%}{%- endfor -%}
+]}</script>
+{%- comment -%}
+  Structured data: Shopify's product data, the product's rating (the review metafields Judge.me keeps up to date, the
+  numbers shown under the title) added to that same product (same @id and type, so Google reads one product with its
+  stars), and the breadcrumb.
+{%- endcomment -%}
+{%- if rt != blank and rc > 0 -%}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":{% if p.has_only_default_variant %}"Product"{% else %}"ProductGroup"{% endif %},"@id":{{ p.url | append: '#product' | json }},"name":{{ p.title | json }},"aggregateRating":{"@type":"AggregateRating","ratingValue":{{ rt.rating | json }},"bestRating":{{ rt.scale_max | default: 5 | json }},"worstRating":{{ rt.scale_min | default: 1 | json }},"reviewCount":{{ rc }}}}</script>
+{%- endif -%}
+    <script type="application/ld+json">
+      {{ p | structured_data }}
+    </script>
+{%- if bc and section.settings.show_crumb -%}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":{{ request.origin | append: routes.root_url | json }}},{"@type":"ListItem","position":2,"name":{{ bc.title | json }},"item":{{ request.origin | append: bc.url | json }}},{"@type":"ListItem","position":3,"name":{{ p.title | json }}}]}</script>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS product","tag":"section","class":"grs-product-sec","settings":[{"type":"paragraph","content":"Photos, title, price, options and the description come from the product. The text under the price, the note above the quantity and the Specifications tab are taken from the description."},{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"text","id":"crumb_order","label":"Breadcrumb collection","default":"glass-panel-railing, glass-railing-hardware, glass-railing-gate-hardware, glass-railing-caprail, glass-deck-railing, glass-railing","info":"Collection handles in order; the first one that has the product is shown."},{"type":"checkbox","id":"show_lead","label":"Show the first sentence of the description under the price","default":true},{"type":"checkbox","id":"show_note","label":"Show the note from the description above the quantity","default":true,"info":"Paragraphs of the description that start with Important:, Note: or the final sale text."},{"type":"text","id":"in_stock","label":"In stock label","placeholder":"In Stock","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"sold_out","label":"Sold out label","placeholder":"Sold out","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"qty_label","label":"Quantity label","placeholder":"Quantity","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"add_label","label":"Add to cart label","placeholder":"Add to cart","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"error_text","label":"Message when adding to cart fails","placeholder":"Could not add to cart. Please try again.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"quote_label","label":"Link under the button"},{"type":"url","id":"quote_link","label":"Link under the button: link"},{"type":"header","content":"Quantity and price"},{"type":"textarea","id":"start_qty","label":"Starting quantity","default":"glass-railing-spigot, glass-railing-side-mount-spigot = 4\nglass-railing-screws = 16","info":"One rule per line: product handles = quantity. Other products start at 1."},{"type":"textarea","id":"price_unit","label":"Text after the price","info":"One rule per line: product handles = text, for prices of one piece.","placeholder":"glass-railing-screws = / screw"},{"type":"header","content":"Link under long size lists"},{"type":"text","id":"more_label","label":"Link text","placeholder":"Need a size that isn’t listed? Custom glass","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"more_link","label":"Link"},{"type":"product_list","id":"more_products","label":"Show on these products","limit":50,"info":"Shown under option lists with more than 8 sizes. Leave empty for every product."},{"type":"header","content":"Share"},{"type":"checkbox","id":"show_share","label":"Show the share links","default":true},{"type":"text","id":"share_label","label":"Label","placeholder":"Share","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"copy_label","label":"Copy link button","placeholder":"Copy link","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"copied_label","label":"Message after copying","placeholder":"Link copied","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Shipping and promise lines"},{"type":"text","id":"trust_1","label":"Line 1 (truck)"},{"type":"text","id":"trust_2","label":"Line 2 (heart)"},{"type":"text","id":"trust_3","label":"Line 3 (weather)"},{"type":"header","content":"At a glance"},{"type":"text","id":"facts_title","label":"Title","placeholder":"At a glance","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Description tabs"},{"type":"text","id":"tab_overview","label":"First tab","placeholder":"Overview","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"tab_specs","label":"Second tab","placeholder":"Specifications","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"\"At a glance\" number and title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"\"At a glance\" number and title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"fact","name":"Number box","limit":4,"settings":[{"type":"text","id":"value","label":"Number"},{"type":"text","id":"unit","label":"Unit (after the number)"},{"type":"text","id":"title","label":"Title"},{"type":"textarea","id":"text","label":"Text"},{"type":"url","id":"link","label":"Link"}]},{"type":"custom_liquid","name":"Custom Liquid","settings":[{"type":"liquid","id":"custom_liquid","label":"Custom Liquid","info":"Shown under the options, inside the add to cart form."}]},{"type":"guide","name":"Download guide","limit":1,"settings":[{"type":"paragraph","content":"A card with a PDF guide, under the product note. It shows only on the products chosen here. French and Spanish pages use built-in texts while a text is left as it is."},{"type":"product_list","id":"products","label":"Show on these products","limit":10},{"type":"url","id":"pdf","label":"Guide PDF link","info":"Copy the PDF's link from Content > Files."},{"type":"number","id":"page_fr","label":"French section starts on page","default":8,"info":"French pages open the PDF here."},{"type":"number","id":"page_es","label":"Spanish section starts on page","default":15,"info":"Spanish pages open the PDF here."},{"type":"image_picker","id":"image","label":"Cover image"},{"type":"text","id":"eyebrow","label":"Small title","default":"Measurement guide"},{"type":"text","id":"title","label":"Title","default":"Measure your stairs in 5 steps"},{"type":"text","id":"text","label":"Text","default":"You measure A, B and D. We calculate C for you."},{"type":"checkbox","id":"show_steps","label":"Show the 5 steps","default":true},{"type":"text","id":"button","label":"Button","default":"Download the guide"},{"type":"text","id":"meta","label":"Details under the button","default":"PDF · 21 pages"}]},{"type":"@app"}],"max_blocks":10}
+{% endschema %}
