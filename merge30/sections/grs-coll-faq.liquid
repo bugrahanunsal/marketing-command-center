@@ -1,0 +1,88 @@
+{%- comment -%}
+  Collection FAQ (prototype .pg-faqsec, the home FAQ look without the photo). Each question shows on the collections
+  picked in its "Show on these collections" setting (and on All products, /collections/all, when its checkbox is on),
+  or on every collection when neither is set. [title] in the heading
+  is the collection's title. An optional U.S. answer replaces the answer in the U.S. market. Hidden when no question fits.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.coll_faq), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.coll_faq.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading = 'grs.sd.coll_faq.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+-%}
+{%- liquid
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+  assign n = 0
+-%}
+{%- capture items -%}{%- for block in section.blocks -%}{%- liquid
+    assign show = true
+    if block.settings.collections.size > 0 or block.settings.on_all
+      assign show = false
+      if block.settings.on_all and collection.handle == 'all'
+        assign show = true
+      endif
+      for x in block.settings.collections
+        if x.handle == collection.handle
+          assign show = true
+          break
+        endif
+      endfor
+    endif
+    assign ans = block.settings.answer
+    if grs_us and block.settings.answer_us != blank
+      assign ans = block.settings.answer_us
+    endif
+  -%}{%- if show -%}{%- assign n = n | plus: 1 -%}<div class="acc{% if block.settings.open %} open{% endif %}" {{ block.shopify_attributes }}><h3 class="acc-h"><button type="button" class="acc-q" aria-expanded="{% if block.settings.open %}true{% else %}false{% endif %}"><span>{{ block.settings.question }}</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 7h12"></path><path class="v" d="M7 1v12"></path></svg></span></button></h3><div class="acc-a"><div>{% render 'grs-rte', html: ans %}</div></div></div>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- if n > 0 -%}
+<section class="sec faqsec pg-faqsec"{% render 'grs-vars', s: section.settings %}><div class="wrap faq2"><div class="faq2-l">{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}<h2 class="mh2">{{ sd_heading | replace: '[title]', collection.title }}</h2>{%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}<div class="faq2-btns">{%- if section.settings.button_label != blank -%}<a class="btn " href="{% render 'grs-url', url: section.settings.button_link %}"><span class="dot"></span>{{ section.settings.button_label }}</a>{%- endif -%}{%- if section.settings.button2_label != blank -%}<a class="btn btn-o" href="{% render 'grs-url', url: section.settings.button2_link %}"><span class="dot"></span>{{ section.settings.button2_label }}</a>{%- endif -%}</div></div><div><div class="list">{{ items }}</div></div></div></section>
+{%- endif -%}
+{%- if section.settings.faq_schema -%}
+{%- liquid
+  assign dq = ''
+  if section.settings.desc_faq
+    capture dq
+      render 'grs-rte-faq', html: collection.description
+    endcapture
+    assign dq = dq | strip
+  endif
+-%}
+{%- if n > 0 or dq != '' -%}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ dq }}
+{%- if dq != '' %}{% assign sep = ',' %}{% else %}{% assign sep = '' %}{% endif -%}
+{%- for block in section.blocks -%}{%- liquid
+    assign show = true
+    if block.settings.collections.size > 0 or block.settings.on_all
+      assign show = false
+      if block.settings.on_all and collection.handle == 'all'
+        assign show = true
+      endif
+      for x in block.settings.collections
+        if x.handle == collection.handle
+          assign show = true
+          break
+        endif
+      endfor
+    endif
+    assign ans = block.settings.answer
+    if grs_us and block.settings.answer_us != blank
+      assign ans = block.settings.answer_us
+    endif
+    if show and dq != ''
+      assign qj = block.settings.question | json
+      if dq contains qj
+        assign show = false
+      endif
+    endif
+  -%}{%- if show -%}{{ sep }}{"@type":"Question","name":{{ block.settings.question | json }},"acceptedAnswer":{"@type":"Answer","text":{{ ans | strip_html | strip | json }}}}{%- assign sep = ',' -%}{%- endif -%}{%- endfor -%}
+]}</script>
+{%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS collection FAQ","tag":"div","settings":[{"type":"paragraph","content":"Each question shows on the collections picked in it, or on every collection when none are picked."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"FAQ","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading","label":"Heading","info":"[title] is the collection's title.","placeholder":"[title]: common questions"},{"type":"textarea","id":"text","label":"Text"},{"type":"text","id":"button_label","label":"First button label"},{"type":"url","id":"button_link","label":"First button link"},{"type":"text","id":"button2_label","label":"Second button label"},{"type":"url","id":"button2_link","label":"Second button link"},{"type":"checkbox","id":"faq_schema","label":"Add the questions to the page's structured data (FAQ)","default":true},{"type":"checkbox","id":"desc_faq","label":"Also add the FAQ written in the collection description","default":true,"info":"Questions under a \"FAQs\" heading in the description. They show there as an accordion."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Question size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Question size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_width","label":"Text width"}],"blocks":[{"type":"question","name":"Question","settings":[{"type":"text","id":"question","label":"Question"},{"type":"richtext","id":"answer","label":"Answer"},{"type":"richtext","id":"answer_us","label":"Answer in the U.S. (optional)"},{"type":"collection_list","id":"collections","label":"Show on these collections","limit":50,"info":"Leave empty to show on every collection."},{"type":"checkbox","id":"on_all","label":"Also show on All products (/collections/all)","default":false,"info":"That page is not in the collection list above."},{"type":"checkbox","id":"open","label":"Open at start","default":false}]}],"max_blocks":50}
+{% endschema %}

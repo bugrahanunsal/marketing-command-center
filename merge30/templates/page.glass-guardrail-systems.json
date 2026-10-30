@@ -1,0 +1,627 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero2": {
+      "type": "grs-pg-hero2",
+      "settings": {
+        "badge": "Engineered Safety Systems",
+        "heading": "Glass Guardrail Systems",
+        "text": "<p>Engineered guardrail systems built for Canadian and US building codes with safety, strength, and unobstructed views. Our glass guardrail systems are designed for rooftops, balconies, decks, mezzanines, and commercial buildings — providing premium protection without compromising aesthetics.</p>",
+        "button_label": "Get Free Quote",
+        "button_link": "shopify://pages/contact",
+        "button2_label": "Shop Products",
+        "button2_link": "shopify://collections/glass-railing",
+        "image": "shopify://shop_images/frameless-glass-pool-fence-backyard.webp"
+      },
+      "blocks": {
+        "feature_BTLxqi": {
+          "type": "feature",
+          "settings": {
+            "title": "Code-Compliant Systems"
+          }
+        },
+        "feature_NwdQnt": {
+          "type": "feature",
+          "settings": {
+            "title": "Wind-Rated Performance"
+          }
+        },
+        "feature_CArmGy": {
+          "type": "feature",
+          "settings": {
+            "title": "Engineered Safety Glass"
+          }
+        },
+        "feature_kHBJke": {
+          "type": "feature",
+          "settings": {
+            "title": "24-Hour Quote Response"
+          }
+        }
+      },
+      "block_order": [
+        "feature_BTLxqi",
+        "feature_NwdQnt",
+        "feature_CArmGy",
+        "feature_kHBJke"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "settings": {},
+      "blocks": {
+        "icon_L3WXHd": {
+          "type": "item",
+          "settings": {
+            "title": "Wholesale Pricing",
+            "text": "Direct-to-consumer savings on every order"
+          }
+        },
+        "icon_44JYAD": {
+          "type": "item",
+          "settings": {
+            "title": "Free Shipping $3,000+",
+            "text": "Fast delivery across Canada & the US"
+          }
+        },
+        "icon_EQt6eb": {
+          "type": "item",
+          "settings": {
+            "title": "Expert Support",
+            "text": "Mon–Fri 8 AM – 5 PM ET | +1-855-452-7715"
+          }
+        },
+        "icon_WYi3CA": {
+          "type": "item",
+          "settings": {
+            "title": "Hardware Exchanges",
+            "text": "Unused hardware in original packaging: store credit within 30 days"
+          }
+        }
+      },
+      "block_order": [
+        "icon_L3WXHd",
+        "icon_44JYAD",
+        "icon_EQt6eb",
+        "icon_WYi3CA"
+      ]
+    },
+    "cards": {
+      "type": "grs-pg-cards",
+      "settings": {
+        "heading": "Types of Glass Guardrail Railings",
+        "text": "Choose the perfect glass railing system for your balcony"
+      },
+      "blocks": {
+        "railing_card_QyT4Bg": {
+          "type": "card",
+          "settings": {
+            "title": "Frameless Glass Guardrail Systems",
+            "text": "Post-free design with 12mm tempered glass and spigot mounting. Maximum views with structural integrity for rooftops and terraces.",
+            "button_label": "View System Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false,
+            "badge": "Premium"
+          }
+        },
+        "railing_card_FHNXC7": {
+          "type": "card",
+          "settings": {
+            "title": "Framed Glass Guardrail Systems",
+            "text": "Aluminum top rail and posts with glass infill panels. Code-compliant and cost-effective for commercial and residential use.",
+            "button_label": "View System Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_YjXiBG": {
+          "type": "card",
+          "settings": {
+            "title": "Spigot-Mounted Glass Guardrails",
+            "text": "Engineered spigot hardware for surface or core-mounted installation. Ideal for decks, balconies, and mezzanines.",
+            "button_label": "View System Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_CLnYcR": {
+          "type": "card",
+          "settings": {
+            "title": "Pool & Deck Glass Guardrails",
+            "text": "Pool-code compliant systems with non-climbable design. Corrosion-resistant hardware for wet environments.",
+            "button_label": "View System Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "railing_card_QyT4Bg",
+        "railing_card_FHNXC7",
+        "railing_card_YjXiBG",
+        "railing_card_CLnYcR"
+      ]
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "settings": {
+        "heading": "Why Choose Glass Guardrail Systems",
+        "text": "<p>Engineered for safety, strength, and superior performance</p>"
+      },
+      "blocks": {
+        "column_AdjPJt": {
+          "type": "column",
+          "settings": {
+            "title": "Code Compliance",
+            "text": "<p>All guardrail systems meet NBC, IBC, and local building code requirements. Engineered to pass inspection on the first try.</p>"
+          }
+        },
+        "column_t4HjF9": {
+          "type": "column",
+          "settings": {
+            "title": "Engineered Strength",
+            "text": "<p>Structural calculations for load-bearing capacity, wind resistance, and impact protection. Engineer-stamped drawings available.</p>"
+          }
+        },
+        "column_aMmQya": {
+          "type": "column",
+          "settings": {
+            "title": "Wind & Impact Resistance",
+            "text": "<p>Tested for high wind zones and lateral loads. Tempered safety glass withstands impacts and extreme weather conditions.</p>"
+          }
+        },
+        "column_M4y4MB": {
+          "type": "column",
+          "settings": {
+            "title": "Unobstructed Views",
+            "text": "<p>Crystal-clear glass panels provide maximum visibility without compromising safety. Perfect for scenic locations and rooftops.</p>"
+          }
+        },
+        "column_mETXkm": {
+          "type": "column",
+          "settings": {
+            "title": "Safety First Design",
+            "text": "<p>42\" height standard, non-climbable design, and tempered safety glass that meets ASTM standards for guardrail applications.</p>"
+          }
+        },
+        "column_eRUWLG": {
+          "type": "column",
+          "settings": {
+            "title": "Low Maintenance",
+            "text": "<p>Corrosion-resistant stainless steel hardware and easy-clean glass surfaces. No painting or refinishing required.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_AdjPJt",
+        "column_t4HjF9",
+        "column_aMmQya",
+        "column_M4y4MB",
+        "column_mETXkm",
+        "column_eRUWLG"
+      ]
+    },
+    "compare": {
+      "type": "grs-pg-compare",
+      "settings": {
+        "heading": "Compare Guardrail Systems"
+      },
+      "blocks": {
+        "comparison_card_8JGRTi": {
+          "type": "column",
+          "settings": {
+            "title": "Frameless Systems",
+            "row1_label": "Installation",
+            "row1_text": "Spigot-mounted to surface",
+            "row2_label": "Glass Thickness",
+            "row2_text": "12mm tempered safety glass",
+            "row3_label": "Height Options",
+            "row3_text": "42\" standard (custom available)",
+            "row4_label": "Wind Rating",
+            "row4_text": "Up to 150 mph certified",
+            "row5_label": "Best Applications",
+            "row5_text": "Rooftops, luxury decks, terraces"
+          }
+        },
+        "comparison_card_ApR4AR": {
+          "type": "column",
+          "settings": {
+            "title": "Framed Systems",
+            "row1_label": "Installation",
+            "row1_text": "Post-mounted with top rail",
+            "row2_label": "Glass Thickness",
+            "row2_text": "6-10mm tempered glass",
+            "row3_label": "Height Options",
+            "row3_text": "36\" or 42\" standard",
+            "row4_label": "Wind Rating",
+            "row4_text": "Up to 130 mph certified",
+            "row5_label": "Best Applications",
+            "row5_text": "Commercial buildings, mezzanines"
+          }
+        },
+        "comparison_card_DxBCmM": {
+          "type": "column",
+          "settings": {
+            "title": "Pool & Deck Systems",
+            "row1_label": "Installation",
+            "row1_text": "Core or surface mount",
+            "row2_label": "Glass Thickness",
+            "row2_text": "10-12mm tempered glass",
+            "row3_label": "Height Options",
+            "row3_text": "48\" pool code compliant",
+            "row4_label": "Wind Rating",
+            "row4_text": "Up to 140 mph certified",
+            "row5_label": "Best Applications",
+            "row5_text": "Pool fences, waterfront decks"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_card_8JGRTi",
+        "comparison_card_ApR4AR",
+        "comparison_card_DxBCmM"
+      ]
+    },
+    "gallery": {
+      "type": "grs-pg-gallery",
+      "settings": {
+        "heading": "Real Guardrail Installations",
+        "text": "See our engineered systems in action across North America"
+      },
+      "blocks": {
+        "image_Ke4x3K": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_11.png"
+          }
+        },
+        "image_me76XN": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_12.png"
+          }
+        },
+        "image_zGkWPQ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_13.png"
+          }
+        },
+        "image_ED9TC7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_14.png"
+          }
+        },
+        "image_WTxC6A": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_15.png"
+          }
+        },
+        "image_rb4hWK": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_16.png"
+          }
+        },
+        "image_EeYzER": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_17.png"
+          }
+        },
+        "image_97qCpp": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_18.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ke4x3K",
+        "image_me76XN",
+        "image_zGkWPQ",
+        "image_ED9TC7",
+        "image_WTxC6A",
+        "image_rb4hWK",
+        "image_EeYzER",
+        "image_97qCpp"
+      ]
+    },
+    "stats": {
+      "type": "grs-pg-stats",
+      "settings": {
+        "heading": "Why Canadians Trust Us"
+      },
+      "blocks": {
+        "stat_Rnq7yC": {
+          "type": "stat",
+          "settings": {
+            "number": "14+",
+            "text": "Years Experience"
+          }
+        },
+        "stat_iUCNyY": {
+          "type": "stat",
+          "settings": {
+            "number": "120+",
+            "text": "Projects Delivered"
+          }
+        },
+        "stat_NFcejD": {
+          "type": "stat",
+          "settings": {
+            "number": "10K+",
+            "text": "Happy Customers"
+          }
+        },
+        "stat_MqTpaj": {
+          "type": "stat",
+          "settings": {
+            "number": "100%",
+            "text": "Canada Wide Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "stat_Rnq7yC",
+        "stat_iUCNyY",
+        "stat_NFcejD",
+        "stat_MqTpaj"
+      ]
+    },
+    "options": {
+      "type": "grs-pg-options",
+      "settings": {
+        "heading": "Customize Your Guardrail System",
+        "text": "Choose from premium glass options and hardware finishes"
+      },
+      "blocks": {
+        "option_column_9WPGCD": {
+          "type": "column",
+          "settings": {
+            "title": "Glass Options",
+            "option_1_title": "Tempered Glass",
+            "option_1_text": "Safety standard - 12mm",
+            "option_2_title": "Laminated Glass",
+            "option_2_text": "Extra security layer",
+            "option_3_title": "Clear Glass",
+            "option_3_text": "Maximum transparency",
+            "option_4_title": "Frosted Glass",
+            "option_4_text": "Privacy option"
+          }
+        },
+        "option_column_xyJpNA": {
+          "type": "column",
+          "settings": {
+            "title": "Hardware Finishes",
+            "option_1_title": "Matte Black",
+            "option_1_text": "Modern contemporary",
+            "option_2_title": "Stainless Steel",
+            "option_2_text": "Corrosion resistant",
+            "option_3_title": "Polished Chrome",
+            "option_3_text": "Premium shine",
+            "option_4_title": "Brushed Nickel",
+            "option_4_text": "Soft metallic"
+          }
+        }
+      },
+      "block_order": [
+        "option_column_9WPGCD",
+        "option_column_xyJpNA"
+      ]
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {
+        "variant": "balcony",
+        "heading": "Get Your Custom Guardrail Quote",
+        "text": "Every project is unique. Share your specifications and receive an engineered quote with structural calculations within 24 hours. We ship complete guardrail systems across Canada and the USA.",
+        "types_label": "Project Type",
+        "types": "Standard\nJuliet\nCorner\nWrap-around\nRooftop",
+        "systems_label": "Project System",
+        "systems": "Frameless Glass\nSemi-Frameless\nAluminum Framed\nTempered Glass Panels",
+        "details_label": "Project Details",
+        "details_placeholder": "Tell us about your guardrail requirements, building codes, wind loads, and timeline...",
+        "button_label": "Get a Free Quote"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Glass Guardrail System FAQs"
+      },
+      "blocks": {
+        "faq_E4mGCB": {
+          "type": "question",
+          "settings": {
+            "question": "What building codes do glass guardrail systems need to meet?",
+            "answer": "<p>Glass guardrail systems must comply with the National Building Code of Canada (NBCC) and all applicable provincial or municipal building codes. They must also meet requirements for guard height, structural loads, and the use of approved safety glass.</p>"
+          }
+        },
+        "faq_fBKAcR": {
+          "type": "question",
+          "settings": {
+            "question": "How are frameless glass guardrails attached?",
+            "answer": "<p>Frameless glass guardrails are typically secured using base shoe channels, glass spigots, or side-mounted brackets. These mounting systems provide excellent strength while maintaining a clean, modern appearance with minimal visible hardware.</p>"
+          }
+        },
+        "faq_rVrymQ": {
+          "type": "question",
+          "settings": {
+            "question": "What is the difference between a guardrail and a handrail?",
+            "answer": "<p>A guardrail is designed to prevent falls from elevated surfaces such as decks, balconies, and stair landings. A handrail provides support and stability when using stairs or ramps, and both may be required depending on the application and local building codes.</p>"
+          }
+        },
+        "faq_WLCTJk": {
+          "type": "question",
+          "settings": {
+            "question": "Can glass guardrails withstand high winds?",
+            "answer": "<p>Yes. Properly engineered glass guardrails are designed to withstand high wind loads when installed according to Canadian building codes. Tempered or laminated safety glass and heavy-duty hardware ensure long-term structural performance.</p>"
+          }
+        },
+        "faq_VPce4K": {
+          "type": "question",
+          "settings": {
+            "question": "Are glass guardrails safe for commercial buildings?",
+            "answer": "<p>Yes. Glass guardrails are widely used in commercial buildings, including offices, hotels, shopping centres, and public spaces. When designed and installed to code, they provide a safe, durable, and low-maintenance railing solution.</p>"
+          }
+        },
+        "faq_TKKG43": {
+          "type": "question",
+          "settings": {
+            "question": "How thick should guardrail glass be?",
+            "answer": "<p>Most glass guardrail systems use 10 mm to 12 mm tempered glass, while some commercial or structural applications require laminated tempered glass for additional strength. The required thickness depends on the system design, building code, and project specifications.</p>"
+          }
+        },
+        "faq_3DVwjA": {
+          "type": "question",
+          "settings": {
+            "question": "Do you provide engineering for guardrail systems?",
+            "answer": "<p>Yes. We can provide engineered glass guardrail solutions, including stamped drawings and structural calculations when required for residential and commercial projects. Our team ensures every system meets applicable building codes and engineering standards.</p>"
+          }
+        },
+        "faq_JUQPkN": {
+          "type": "question",
+          "settings": {
+            "question": "Can I install a glass guardrail system myself?",
+            "answer": "<p>Yes. Many glass guardrail systems are available as DIY kits with pre-engineered components and installation instructions. However, larger or commercial projects should be installed by experienced professionals to ensure safety and code compliance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_E4mGCB",
+        "faq_fBKAcR",
+        "faq_rVrymQ",
+        "faq_WLCTJk",
+        "faq_VPce4K",
+        "faq_TKKG43",
+        "faq_3DVwjA",
+        "faq_JUQPkN"
+      ]
+    },
+    "blog": {
+      "type": "grs-pg-blog",
+      "settings": {
+        "heading": "Guardrail System Resources",
+        "blog": "news",
+        "posts": 12
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Serving Major Canadian Cities",
+        "text": "Expanding our presence in these locations. Physical offices coming soon."
+      },
+      "blocks": {
+        "city_qMRfg4": {
+          "type": "location",
+          "settings": {
+            "title": "Toronto",
+            "link": "shopify://pages/ontario-glass-railing-toronto"
+          }
+        },
+        "city_V7wgw4": {
+          "type": "location",
+          "settings": {
+            "title": "Montreal",
+            "link": "shopify://pages/quebec-glass-railings-montreal"
+          }
+        },
+        "city_VeyUjP": {
+          "type": "location",
+          "settings": {
+            "title": "Edmonton",
+            "link": "shopify://pages/alberta-glass-railings-edmonton"
+          }
+        },
+        "city_iDp8UN": {
+          "type": "location",
+          "settings": {
+            "title": "Winnipeg",
+            "link": "shopify://pages/manitoba-glass-railings-winnipeg"
+          }
+        },
+        "city_iwTGe7": {
+          "type": "location",
+          "settings": {
+            "title": "Columbia",
+            "link": "shopify://pages/glass-railings-british-columbia"
+          }
+        },
+        "city_NVk7kp": {
+          "type": "location",
+          "settings": {
+            "title": "Saskatchewan",
+            "link": "shopify://pages/glass-railings-saskatchewan"
+          }
+        },
+        "city_dE6dM3": {
+          "type": "location",
+          "settings": {
+            "title": "Vancouver",
+            "link": "shopify://pages/british-columbia-glass-railings-vancouver"
+          }
+        },
+        "city_hT3NTX": {
+          "type": "location",
+          "settings": {
+            "title": "Calgary",
+            "link": "shopify://pages/alberta-glass-railings-calgary"
+          }
+        },
+        "city_pLUdpe": {
+          "type": "location",
+          "settings": {
+            "title": "Ottawa",
+            "link": "shopify://pages/ontario-glass-railing-ottawa"
+          }
+        },
+        "city_AApEaC": {
+          "type": "location",
+          "settings": {
+            "title": "Quebec City",
+            "link": "shopify://pages/glass-railings-quebec"
+          }
+        }
+      },
+      "block_order": [
+        "city_qMRfg4",
+        "city_V7wgw4",
+        "city_VeyUjP",
+        "city_iDp8UN",
+        "city_iwTGe7",
+        "city_NVk7kp",
+        "city_dE6dM3",
+        "city_hT3NTX",
+        "city_pLUdpe",
+        "city_AApEaC"
+      ]
+    }
+  },
+  "order": [
+    "hero2",
+    "icons",
+    "cards",
+    "cols",
+    "compare",
+    "gallery",
+    "stats",
+    "options",
+    "form",
+    "faq",
+    "blog",
+    "links"
+  ]
+}

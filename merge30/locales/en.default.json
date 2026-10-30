@@ -1,0 +1,1337 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Enter store using password:",
+      "login_password_button": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_error": "Wrong password!",
+      "login_form_submit": "Enter",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Share on X",
+        "share_on_pinterest": "Pin on Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continue shopping",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Next page",
+      "previous": "Previous page"
+    },
+    "search": {
+      "search": "Search",
+      "reset": "Clear search term"
+    },
+    "cart": {
+      "view": "View cart ({{ count }})",
+      "view_empty_cart": "View cart",
+      "item_added": "Item added to your cart"
+    },
+    "share": {
+      "close": "Close share",
+      "copy_to_clipboard": "Copy link",
+      "share_url": "Link",
+      "success_message": "Link copied to clipboard"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left",
+      "name": "Slider"
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button_label": "Subscribe"
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content",
+    "complementary_products": "Complementary products"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Read more: {{ title }}",
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      },
+      "moderated": "Please note, comments need to be approved before they are published.",
+      "comment_form_title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Comment",
+      "post": "Post comment",
+      "back_to_blog": "Back to blog",
+      "share": "Share this article",
+      "success": "Your comment was posted successfully! Thank you!",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+    }
+  },
+  "onboarding": {
+    "product_title": "Example product title",
+    "collection_title": "Your collection's name"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "choose_options": "Choose options",
+      "choose_product_options": "Choose options for {{ product_name }}",
+      "description": "Description",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "sku": "SKU",
+      "on_sale": "Sale",
+      "product_variants": "Product variants",
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "load_image": "Load image {{ index }} in gallery view",
+        "load_model": "Load 3D Model {{ index }} in gallery view",
+        "load_video": "Play video {{ index }} in gallery view",
+        "image_available": "Image {{ index }} is now available in gallery view",
+        "open_media": "Open media {{ index }} in modal",
+        "play_model": "Play 3D Viewer",
+        "play_video": "Play video"
+      },
+      "quantity": {
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Increments of {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
+        "note": "View quantity rules"
+      },
+      "volume_pricing": {
+        "title": "Volume Pricing",
+        "note": "Volume pricing available",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "at {{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "View store information",
+        "check_other_stores": "Check availability at other stores",
+        "pick_up_available": "Pickup available",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Couldn't load pickup availability",
+        "refresh": "Refresh"
+      },
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
+      },
+      "share": "Share this product",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "vendor": "Vendor",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
+      "video_exit_message": "{{ title }} opens full screen video in same window.",
+      "view_full_details": "View full details",
+      "xr_button": "View in your space",
+      "xr_button_label": "View in your space, loads item in augmented reality window",
+      "taxes_included": "Taxes included.",
+      "duties_included": "Duties included.",
+      "duties_and_taxes_included": "Duties and taxes included.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+    },
+    "modal": {
+      "label": "Media gallery"
+    },
+    "facets": {
+      "filter_and_operator_subtitle": "Match all",
+      "apply": "Apply",
+      "clear": "Clear",
+      "clear_all": "Remove all",
+      "from": "From",
+      "filter_and_sort": "Filter and sort",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} selected",
+        "other": "{{ count }} selected"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "max_price": "The highest price is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} of {{ count }} product",
+        "other": "{{ product_count }} of {{ count }} products"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "sort_by_label": "Sort by:",
+      "to": "To",
+      "clear_filter": "Remove filter"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Page not found",
+      "subtext": "404"
+    },
+    "search": {
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
+      "results_pages_with_count": {
+        "one": "{{ count }} page",
+        "other": "{{ count }} pages"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestion",
+        "other": "{{ count }} suggestions"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "results_with_count": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} results"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} result found for “{{ terms }}”",
+        "other": "{{ count }} results found for “{{ terms }}”"
+      },
+      "title": "Search results",
+      "search_for": "Search for “{{ terms }}”",
+      "suggestions": "Suggestions",
+      "pages": "Pages"
+    },
+    "cart": {
+      "cart": "Cart"
+    },
+    "contact": {
+      "form": {
+        "title": "Contact form",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number",
+        "comment": "Comment",
+        "send": "Send",
+        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "error_heading": "Please adjust the following:"
+      }
+    }
+  },
+  "sections": {
+    "announcements": {
+      "previous_announcement": "Previous announcement",
+      "next_announcement": "Next announcement",
+      "carousel": "Carousel",
+      "announcement": "Announcement",
+      "announcement_bar": "Announcement bar"
+    },
+    "header": {
+      "announcement": "Announcement",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "cart": {
+      "title": "Your cart",
+      "caption": "Cart items",
+      "remove_title": "Remove {{ title }}",
+      "estimated_total": "Estimated total",
+      "new_estimated_total": "New estimated total",
+      "note": "Order special instructions",
+      "checkout": "Check out",
+      "empty": "Your cart is empty",
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Duties included. Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Duties included. Taxes, discounts and shipping calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
+      "headings": {
+        "product": "Product",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity",
+        "image": "Product image"
+      },
+      "update": "Update",
+      "login": {
+        "title": "Have an account?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+      }
+    },
+    "footer": {
+      "payment": "Payment methods"
+    },
+    "featured_blog": {
+      "view_all": "View all",
+      "onboarding_title": "Blog post",
+      "onboarding_content": "Give your customers a summary of your blog post"
+    },
+    "featured_collection": {
+      "view_all": "View all",
+      "view_all_label": "View all products in the {{ collection_name }} collection"
+    },
+    "collection_list": {
+      "view_all": "View all"
+    },
+    "collection_template": {
+      "empty": "No products found",
+      "title": "Collection",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+    },
+    "video": {
+      "load_video": "Load video: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Load slide",
+      "previous_slideshow": "Previous slide",
+      "next_slideshow": "Next slide",
+      "pause_slideshow": "Pause slideshow",
+      "play_slideshow": "Play slideshow",
+      "carousel": "Carousel",
+      "slide": "Slide"
+    },
+    "page": {
+      "title": "Page title"
+    },
+    "quick_order_list": {
+      "product_total": "Product subtotal",
+      "view_cart": "View cart",
+      "each": "{{ money }}/ea",
+      "product": "Product",
+      "variant": "Variant",
+      "variant_total": "Variant total",
+      "items_added": {
+        "one": "{{ quantity }} item added",
+        "other": "{{ quantity }} items added"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} item removed",
+        "other": "{{ quantity }} items removed"
+      },
+      "product_variants": "Product variants",
+      "total_items": "Total items",
+      "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
+      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
+      "remove_all": "Remove all",
+      "cancel": "Cancel",
+      "min_error": "This item has a minimum of {{ min }}",
+      "max_error": "This item has a maximum of {{ max }}",
+      "step_error": "You can only add this item in increments of {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Country/region",
+    "language_label": "Language",
+    "update_language": "Update language",
+    "update_country": "Update country/region",
+    "search": "Search",
+    "popular_countries_regions": "Popular countries/regions",
+    "country_results_count": "{{ count }} countries/regions found"
+  },
+  "customer": {
+    "account": {
+      "title": "Account",
+      "details": "Account details",
+      "view_addresses": "View addresses",
+      "return": "Return to Account details"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "Activate account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Activate account",
+      "cancel": "Decline invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add a new address",
+      "edit_address": "Edit address",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country/region",
+      "province": "Province",
+      "zip": "Postal/ZIP code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add address",
+      "update": "Update address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "log_in": "Log in",
+    "log_out": "Log out",
+    "login_page": {
+      "cancel": "Cancel",
+      "create_account": "Create account",
+      "email": "Email",
+      "forgot_password": "Forgot your password?",
+      "guest_continue": "Continue",
+      "guest_title": "Continue as a guest",
+      "password": "Password",
+      "title": "Login",
+      "sign_in": "Sign in",
+      "submit": "Submit",
+      "alternate_provider_separator": "or"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date_html": "Placed on {{ date }}",
+      "cancelled_html": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "total_refunded": "Refunded",
+      "fulfilled_at_html": "Fulfilled {{ date }}",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal",
+      "total_duties": "Duties"
+    },
+    "orders": {
+      "title": "Order history",
+      "order_number": "Order",
+      "order_number_link": "Order number {{ number }}",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "subtext": "We will send you an email to reset your password",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create"
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Reset password"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "Use the gift card code online or QR code in-store",
+      "title": "Here's your {{ value }} gift card balance for {{ shop }}!",
+      "subtext": "Your gift card",
+      "gift_card_code": "Gift card code",
+      "shop_link": "Visit online store",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "qr_image_alt": "QR code — scan to redeem gift card",
+      "copy_code": "Copy gift card code",
+      "expiration_date": "Expires {{ expires_on }}",
+      "copy_code_success": "Code copied successfully",
+      "expired": "Expired"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "expanded": "Gift card recipient form expanded",
+      "collapsed": "Gift card recipient form collapsed",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient name (optional)",
+      "name": "Name",
+      "message_label": "Message (optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "marketing": {
+        "accept_marketing_checkbox_label": "I accept to Terms & Conditions "
+      }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "marketing_checkbox_label": "I accept to Terms & Conditions"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  },
+  "grs": {
+    "a11y": {
+      "back_to_top": "Back to top",
+      "skip": "Skip to content",
+      "menu": "Menu",
+      "main": "Main",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu",
+      "close": "Close",
+      "search": "Search",
+      "account": "Account",
+      "open_cart": "Open cart",
+      "cart": "Cart",
+      "close_cart": "Close cart",
+      "breadcrumb": "Breadcrumb",
+      "country": "Country/region",
+      "language": "Language",
+      "policies": "Policies",
+      "payments": "Payment methods",
+      "home_link": "{{ shop }}, home",
+      "numbers": "{{ shop }} in numbers",
+      "prev_posts": "Previous posts",
+      "next_posts": "Next posts",
+      "prev_products": "Previous products",
+      "next_products": "Next products",
+      "prev_reviews": "Previous reviews",
+      "next_reviews": "Next reviews",
+      "prev_review": "Previous review",
+      "next_review": "Next review",
+      "prev_photo": "Previous photo",
+      "next_photo": "Next photo",
+      "prev_image": "Previous image",
+      "next_image": "Next image",
+      "prev_thumbs": "Previous thumbnails",
+      "more_thumbs": "More thumbnails",
+      "prev_message": "Previous message",
+      "next_message": "Next message",
+      "decrease_qty": "Decrease quantity",
+      "increase_qty": "Increase quantity",
+      "decrease": "Decrease",
+      "increase": "Increase",
+      "quick_view": "Quick view",
+      "products_list": "Glass railing products",
+      "shop_by_category": "Shop by category",
+      "close_filters": "Close filters",
+      "remove_filter": "Remove filter {{ label }}",
+      "page_n": "Page {{ n }}",
+      "image_n": "Image {{ n }}",
+      "ig_post": "Instagram post {{ n }}",
+      "rated": "Rated {{ avg }} out of 5",
+      "stars": "{{ n }} out of 5 stars",
+      "rated_from": "Rated {{ avg }} out of 5 from {{ count }} reviews",
+      "watch_video": "Watch the video on YouTube",
+      "comparison": "Comparison",
+      "pagination": "Pagination",
+      "prev_page": "Previous page",
+      "next_page": "Next page",
+      "watch": "Watch {{ title }} on YouTube ({{ duration }})",
+      "compare": "Compare finishes: slide left for {{ b }}, right for {{ a }}",
+      "one_finish": "Show one finish",
+      "show_part": "Show part {{ n }} in this photo",
+      "part_in_photo": "Part in this photo",
+      "share_facebook": "Share on Facebook",
+      "share_x": "Share on X",
+      "save_pinterest": "Save to Pinterest"
+    },
+    "general": {
+      "home": "Home",
+      "search": "Search",
+      "clear": "Clear",
+      "close": "Close",
+      "quick_view": "Quick view",
+      "shop_now": "Shop Now",
+      "from": "From",
+      "read_more": "Read more",
+      "tagged": "tagged \"{{ tags }}\"",
+      "price": "Price",
+      "watch": "Watch",
+      "watch_youtube": "Watch on YouTube"
+    },
+    "reviews": {
+      "from_count": "from {{ count }} reviews",
+      "see_all": "See all {{ count }} reviews",
+      "word": "reviews",
+      "this_product": "This product",
+      "our_customers": "Our customers",
+      "heading": "Customer reviews",
+      "based_on": "Based on",
+      "see_all_label": "See all",
+      "all_or_write": "All reviews of this product, or write one"
+    },
+    "blog": {
+      "min_read": "{{ count }} min read"
+    },
+    "country": {
+      "ca": "Canada",
+      "us": "United States"
+    },
+    "cart": {
+      "title": "Cart",
+      "ship_over": "Free shipping on glass railing orders over $3,000.",
+      "ship_left": "You are {{ amount }} away from free shipping.",
+      "ship_ok": "Your order qualifies for free shipping.",
+      "remove": "Remove",
+      "empty": "Your cart is empty.",
+      "subtotal": "Subtotal",
+      "taxes": "Taxes and shipping calculated at checkout.",
+      "checkout": "Check out",
+      "view_cart": "View cart",
+      "quote": "Not sure? Get a free quote"
+    },
+    "product": {
+      "in_stock": "In Stock",
+      "sold_out": "Sold out",
+      "finish": "Finish:",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to cart",
+      "choose_options": "Choose options",
+      "view_details": "View full details",
+      "brushed": "Brushed Stainless",
+      "matte": "Matte Black",
+      "at_a_glance": "At a glance",
+      "overview": "Overview",
+      "specifications": "Specifications",
+      "share": "Share",
+      "copy_link": "Copy link",
+      "add_error": "Could not add to cart. Please try again.",
+      "more_label": "Need a size that isn’t listed? Custom glass",
+      "per_screw": "/ screw",
+      "you_may_like": "You may also like",
+      "shop_collection": "Shop the collection"
+    },
+    "nav": {
+      "cta": "Get a free quote",
+      "shop_all": "Shop all products"
+    },
+    "drawer": {
+      "my_account": "My account",
+      "account_text": "Track your order, follow the install checklist and keep your warranty handy.",
+      "sign_in": "Sign in",
+      "create_account": "Create account",
+      "language": "Language",
+      "appearance": "Appearance",
+      "dark_mode": "Dark mode",
+      "call": "Call or text us"
+    },
+    "footer": {
+      "privacy": "Privacy policy",
+      "refund": "Refund policy",
+      "shipping": "Shipping",
+      "terms": "Terms of service",
+      "contact": "Contact",
+      "contact_title": "Contact Us",
+      "follow_us": "Follow us",
+      "fast_shipping": "Fast shipping across Canada and the U.S."
+    },
+    "aside": {
+      "products": "Products",
+      "building_code": "Building Code",
+      "resources": "Resources",
+      "guides": "Guides",
+      "contact": "Contact",
+      "about": "About Us",
+      "install_guide": "Glass Railing Installation Guide",
+      "blog": "Blog",
+      "faq": "FAQ's",
+      "loc_ca": "Locations: Canada",
+      "loc_us": "Locations: USA",
+      "spigot": "6\" Engineered Spigot",
+      "spigot_alt": "Matte black glass railing spigot on a deck",
+      "panels": "Glass Railing Panels",
+      "panels_alt": "Frameless glass railing on a beach deck"
+    },
+    "js": {
+      "read_more": "Read more",
+      "show_less": "Show less",
+      "quick_view": "Quick view",
+      "ship_over": "Free shipping on glass railing orders over $3,000.",
+      "ship_left": "You are {amount} away from free shipping.",
+      "ship_ok": "Your order qualifies for free shipping.",
+      "cart_error": "The cart could not be updated",
+      "add_error": "Could not add to cart",
+      "in_stock": "In Stock",
+      "sold_out": "Sold out",
+      "image_n": "Image {n}",
+      "link_copied": "Link copied",
+      "reviews_n": "{n} reviews",
+      "from_reviews": "from {n} reviews",
+      "rated": "Rated {avg} out of 5",
+      "stars": "{n} out of 5 stars",
+      "verified": "Verified buyer",
+      "rv_title": "Customer reviews",
+      "rv_close": "Close reviews",
+      "rv_filters": "Filters",
+      "rv_by_star": "Filter by star rating",
+      "rv_product": "Product",
+      "rv_sort": "Sort by",
+      "rv_recent": "Most recent",
+      "rv_high": "Highest rating",
+      "rv_low": "Lowest rating",
+      "rv_view_product": "View product",
+      "rv_all_products": "All products ({n})",
+      "rv_show_star": "Show {n} star reviews ({c})",
+      "rv_none": "None of the latest reviews have {n} stars.",
+      "rv_none_product": "None of the latest reviews for this product have {n} stars.",
+      "rv_latest_of": "The latest {a} of {b} reviews",
+      "rv_latest_all": "The latest reviews of every product",
+      "rv_stars_only": "{n} stars only",
+      "rv_more": "Show more reviews",
+      "rv_end_product": "Every review of this product is on its page.",
+      "rv_end_all": "Pick a product to see its own reviews and rating.",
+      "rv_loading": "Loading reviews…",
+      "rv_error": "Reviews could not load. Please try again.",
+      "np_chip": "<b>Free shipping</b> on all products",
+      "np_title": "Sign Up to get Free Shipping on All Products!!",
+      "np_text": "Take this opportunity to get your free delivery Nationwide! (Minimum Order Quantity Applies)",
+      "np_first_name": "First name",
+      "np_email": "Email",
+      "np_country": "Country",
+      "np_phone": "Phone",
+      "np_error": "Please enter your first name and a valid email.",
+      "np_submit": "Submit",
+      "np_legal": "By signing up, you agree to receive marketing messages at the phone number or email provided. Msg and data rates may apply. View our <a href=\"{privacy}\">privacy policy</a> and <a href=\"{terms}\">terms of service</a> for more info.",
+      "np_note": "Kindly be advised that additional shipping charges may apply due to the rural delivery location.",
+      "np_thanks": "Thank you!",
+      "np_done": "You are signed up.",
+      "np_continue": "Continue shopping",
+      "np_failed": "Something went wrong. Please try again.",
+      "np_close": "Close",
+      "remove": "Remove",
+      "cart_empty": "Your cart is empty.",
+      "decrease": "Decrease",
+      "increase": "Increase",
+      "prev_image": "Previous image",
+      "next_image": "Next image",
+      "brushed": "Brushed Stainless",
+      "matte": "Matte Black"
+    },
+    "policy": {
+      "eyebrow": "Policies",
+      "toc": "On this page",
+      "help_title": "Questions about this policy?",
+      "help_text": "Contact our customer support team.",
+      "contact": "Contact us"
+    },
+    "account": {
+      "tab_overview": "Overview",
+      "tab_orders": "Orders",
+      "tab_install": "Installation",
+      "tab_profile": "Profile & addresses",
+      "sign_out": "Sign out",
+      "signed_in_as": "Signed in as {{ email }}",
+      "welcome": "Welcome back, {{ name }}",
+      "welcome_anon": "Welcome back",
+      "lead_preparing": "Order {{ order }} is being prepared. We'll email you tracking as soon as it ships, and in the meantime your install checklist is ready below.",
+      "lead_awaiting": "Order {{ order }} is awaiting payment. As soon as it's paid we'll start preparing it.",
+      "lead_partial": "Part of order {{ order }} is on its way. The rest will follow soon.",
+      "lead_shipped": "Order {{ order }} is on its way. Time to get ready for install day!",
+      "lead_shipped_with": "Order {{ order }} is on its way with {{ carrier }}. Time to get ready for install day!",
+      "lead_cancelled": "Order {{ order }} was cancelled. Need a hand planning your railing? We're here to help.",
+      "lead_none": "Plan your glass railing with our install guide, your local building code and a step-by-step checklist, all in one place.",
+      "track_package": "Track package",
+      "shop_railings": "Shop railings",
+      "quote": "Get a free quote",
+      "st_shipped": "Shipped",
+      "st_partial": "Partly shipped",
+      "st_preparing": "Preparing",
+      "st_awaiting": "Awaiting payment",
+      "st_cancelled": "Cancelled",
+      "st_paid": "Paid",
+      "st_refunded": "Refunded",
+      "st_part_refunded": "Partly refunded",
+      "st_authorized": "Payment authorized",
+      "tracker": "Order tracker",
+      "order_n": "Order {{ order }}",
+      "step_ordered": "Ordered",
+      "step_installed": "Installed",
+      "packed": "Packed",
+      "after_payment": "After payment",
+      "packing": "Packing your order",
+      "email_tracking": "We'll email tracking",
+      "big_day": "Your big day",
+      "qty": "Qty {{ n }}",
+      "more": "+ {{ n }} more",
+      "view_order": "View order",
+      "mark_installed": "Mark as installed",
+      "congrats": "Congratulations on your new railing!",
+      "congrats_text": "We'd love to see it. Send us a photo of your finished project and it could be featured in our",
+      "gallery": "gallery",
+      "share_photos": "Share your photos",
+      "photo_subject": "My finished glass railing",
+      "start": "Start your project",
+      "three_steps": "3 steps",
+      "s1": "Measure your space",
+      "s1t": "How we lay out panels and gaps",
+      "s2": "Check your building code",
+      "s2t": "Rules for your province or state",
+      "s3t": "We'll size the glass and hardware",
+      "checklist_k": "Install checklist",
+      "progress": "Your installation progress",
+      "open_checklist": "Open checklist",
+      "of_steps": "of {{ total }} steps done",
+      "of_done": "of {{ total }} done",
+      "next_step": "Next step",
+      "all_done_next": "All done. Enjoy your new railing!",
+      "all_steps_done": "All {{ total }} steps done. Your railing is finished!",
+      "send_photo": "Send us a photo of your project, we'd love to see it.",
+      "saved_note": "Your progress is saved on this device. Full details, photos and diagrams are in the",
+      "guide": "installation guide",
+      "ideas": "Ideas & guides",
+      "all_articles": "All articles",
+      "no_rust": "No Rust Promise",
+      "no_rust_text": "Marine-grade 2205 stainless hardware, guaranteed not to rust.",
+      "years": "years",
+      "covered_until": "Order {{ order }} is covered until {{ date }}",
+      "every_order": "Every order is covered for {{ years }} years.",
+      "claim": "Questions or a claim? Email",
+      "warranty_details": "Warranty details",
+      "local_code": "Your local building code",
+      "code_text": "Heights, loads and gate rules for glass railings where you live.",
+      "code_text2": "Heights, loads and gate rules for glass railings.",
+      "read_guide_for": "Read the {{ region }} guide",
+      "read_guide": "Read the guide",
+      "find_code": "Find your building code",
+      "find_code_text": "Add your address and we'll show the guide for your province or state.",
+      "browse_codes": "Browse building codes",
+      "need_hand": "Need a hand?",
+      "need_hand_text": "Our team helps homeowners every day with sizing, installs and orders.",
+      "installer": "Find a certified installer",
+      "videos": "Video guides",
+      "channel": "Our YouTube channel",
+      "other_videos": "Watch the other installation videos",
+      "on_channel": "on our YouTube channel",
+      "on_youtube": "{{ shop }} on YouTube",
+      "latest_videos": "Latest videos",
+      "latest_auto": "Updates on its own when we post a new video",
+      "latest_title": "Latest videos from our YouTube channel",
+      "play": "Play video: {{ title }}",
+      "shop_title": "Shop {{ title }}",
+      "orders_empty": "No orders yet",
+      "orders_empty_text": "When you place an order, you'll be able to track it here step by step.",
+      "placed": "Placed {{ date }}",
+      "buy_again": "Buy again",
+      "newer": "Newer orders",
+      "older": "Older orders",
+      "tools": "Tools you'll need",
+      "care": "Care for your railing",
+      "documents": "Documents",
+      "doc_guide": "Installation guide",
+      "doc_eng": "Engineering documents",
+      "doc_code": "Building code",
+      "doc_warranty": "Warranty / No Rust Promise",
+      "personal": "Personal details",
+      "edit": "Edit",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "not_added": "Not added",
+      "email_updates": "Email updates",
+      "subscribed": "Subscribed",
+      "not_subscribed": "Not subscribed",
+      "addresses": "Saved addresses",
+      "add_edit": "Add or edit",
+      "default": "Default",
+      "no_addresses": "No saved addresses yet. Add one to check out faster and see your local building code.",
+      "signin_card": "Sign-in"
+    },
+    "stl": {
+      "n_products": "{{ count }} products"
+    },
+    "card": {
+      "widths": "{{ count }} widths",
+      "made_to_order": "Made to order",
+      "pre_holed": "Pre-holed",
+      "holed_hinges": "Holed for hinges",
+      "fascia_mount": "Fascia mount"
+    },
+    "sd": {
+      "account": {
+        "eyebrow_html": "My glass railing project",
+        "recommend_heading_html": "Complete your railing"
+      },
+      "coll_faq": {
+        "eyebrow_html": "FAQ",
+        "heading_html": "[title]: common questions"
+      },
+      "coll_grid": {
+        "panel_title_html": "Filter and sort",
+        "sort_label_html": "Sort by",
+        "sort_featured_label_html": "Featured",
+        "sort_reviews_label_html": "Most reviewed",
+        "filter_title_html": "Filter by",
+        "clear_label_html": "Clear all",
+        "show_label_html": "Show [count] products",
+        "count_one_html": "[count] product",
+        "count_other_html": "[count] products",
+        "price_from_html": "From",
+        "price_to_html": "To",
+        "pages_label_html": "Pages",
+        "empty_title_html": "No products found",
+        "empty_text_html": "This collection has no products yet.",
+        "empty_filtered_html": "No products match these filters.",
+        "empty_filtered_text_html": "Try removing a filter, or ask us for a free quote."
+      },
+      "coll_reviews": {
+        "eyebrow_html": "Customer reviews",
+        "heading_html": "Rated [rating] out of 5",
+        "count_text_html": "from [count] reviews of [title]",
+        "all_label_html": "See all",
+        "verified_html": "Verified buyer"
+      },
+      "footer": {
+        "follow_label_html": "Follow us",
+        "contact_title_html": "Contact Us",
+        "contact_ca_html": "Fast shipping across Canada and the U.S.",
+        "contact_us_html": "Fast shipping across Canada and the U.S.",
+        "country_title_html": "Country/region",
+        "language_title_html": "Language",
+        "dark_label_html": "Dark mode"
+      },
+      "header": {
+        "search_placeholder_html": "Search panels, spigots, guides, cities...",
+        "support_label_html": "Call or text us",
+        "dark_label_html": "Dark mode",
+        "rail_title_html": "Shop by category",
+        "shop_all_label_html": "Shop all products",
+        "view_all_label_html": "View all",
+        "products_word_html": "products",
+        "shop_now_label_html": "Shop now",
+        "feature_label_html": "Featured",
+        "read_more_html": "Read more"
+      },
+      "how": {
+        "step_word_html": "Step"
+      },
+      "pg_404": {
+        "heading_html": "Page not found",
+        "text_html": "The page you were looking for does not exist.",
+        "button_label_html": "Continue shopping"
+      },
+      "pg_account": {
+        "eyebrow_html": "My glass railing project",
+        "heading_html": "Your glass railing project, all in one place",
+        "text_html": "Sign in to track your order, follow the step-by-step install checklist, find your local building code and keep your warranty handy.",
+        "signin_label_html": "Sign in",
+        "steps_eyebrow_html": "Step by step",
+        "steps_heading_html": "Installation checklist",
+        "tools_html": "Measuring tape\nLevel (magnetic)\nPencil and chalk line\nPower drill with 1/8\" and 5/16\" bits\nAllen key\nWrench",
+        "care_html": "Glass: a soft cloth and a non-abrasive glass cleaner. Skip scouring pads and razor blades.\nHardware: rinse with fresh water a few times a year, more often near pools or salt water.\nEach spring: check the clamps and cap rail and re-tighten anything loose.\nWinter: use a plastic shovel near the glass and rinse off de-icing salt.",
+        "refer_title_html": "Love your railing?",
+        "refer_text_html": "Refer friends and neighbours through our affiliate program and earn on every order they place.",
+        "refer_button_html": "Join the program",
+        "videos_heading_html": "Video guides",
+        "recommend_heading_html": "Complete your railing",
+        "steps1_html": "Mark the glass line | Snap a chalk line where the glass will stand.\nLay out panels and gaps | Mark each panel with a 1\" gap between panels (3/4\" to 2\" works).\nMark the spigot positions | About 25% of the glass length in from each edge.\nDrill the anchor holes | Use the spigot as a template and stay on the chalk line.\nFasten the spigots | Screw them down, keeping each one on the line.\nLevel the spigots | Check each spigot is straight with a magnetic level.\nSet the glass | A two-person job: lower each panel into its spigots.",
+        "steps2_html": "Match the panel heights | Bring every panel level with the tallest one.\nSquare up the angles | Start from the corners and align each panel.\nFit the clamps | Usually about 6\" below the top of the glass.\nInstall the cap rail | Clean the edge, seat the gasket and press the rail on.\nHang the gate | Mount the hinges and latch.\nAdd the gate lock | Fit it on the outside with the recommended spacing."
+      },
+      "pg_app": {
+        "refer_title_html": "Love your railing?",
+        "refer_text_html": "Refer friends and neighbours through our affiliate program and earn on every order they place.",
+        "refer_button_html": "Join the program",
+        "help_title_html": "Questions about your project?",
+        "help_text_html": "Call or text a railing specialist, or send your measurements for a detailed quote.",
+        "button_label_html": "Get a free quote"
+      },
+      "pg_article": {
+        "toc_label_html": "On this page",
+        "share_label_html": "Share",
+        "copy_label_html": "Copy link",
+        "copied_label_html": "Link copied",
+        "cta_title_html": "Planning a glass railing?",
+        "cta_text_html": "Send your measurements and we will send you a detailed quote on the materials your project needs.",
+        "cta_button_html": "Get a free quote",
+        "help_title_html": "Questions about your project?",
+        "help_text_html": "Call or text a railing specialist, or send your measurements for a detailed quote.",
+        "help_button_html": "Get a free quote",
+        "parts_heading_html": "Shop the parts",
+        "parts_link_label_html": "All products",
+        "more_heading_html": "Keep reading",
+        "more_button_html": "All posts"
+      },
+      "pg_blog": {
+        "eyebrow_html": "Blog",
+        "heading_html": "Blog posts",
+        "button_label_html": "View all"
+      },
+      "pg_bloglist": {
+        "lead_html": "Guides, building code checklists and project ideas for glass railings, from the team at The Glass Railing Store.",
+        "page_of_html": "Page [page] of [pages]."
+      },
+      "pg_cart": {
+        "heading_html": "Your cart",
+        "col_product_html": "Product",
+        "col_quantity_html": "Quantity",
+        "col_total_html": "Total",
+        "continue_label_html": "Continue shopping",
+        "empty_title_html": "Your cart is empty",
+        "empty_text_html": "Browse glass panels, spigots, connectors, gate hardware and caprail.",
+        "cats_heading_html": "Shop by category",
+        "count_one_html": "[count] product",
+        "count_other_html": "[count] products",
+        "help_title_html": "Questions about your project?",
+        "help_text_html": "Call or text a railing specialist, or send your measurements for a detailed quote.",
+        "help_button_html": "Get a free quote"
+      },
+      "pg_codes": {
+        "eyebrow_html": "Building codes",
+        "heading_us_html": "Building codes in other states",
+        "heading_ca_html": "Building codes in other provinces"
+      },
+      "pg_collist": {
+        "heading_html": "Collections",
+        "count_one_html": "[count] product",
+        "count_other_html": "[count] products",
+        "count_zero_html": "View collection"
+      },
+      "pg_dir": {
+        "eyebrow_html": "Directory",
+        "heading_us_html": "Glass railings by state",
+        "heading_ca_html": "Glass railings by province",
+        "code_label_html": "[region] building code"
+      },
+      "pg_est": {
+        "feet_label_html": "Linear Feet",
+        "field1_html": "Glass Type",
+        "field2_html": "Glass Style",
+        "field3_html": "Installation Type",
+        "result_heading_html": "Estimated Project Cost",
+        "based_text_html": "Based on [feet] linear feet"
+      },
+      "pg_faq": {
+        "heading_html": "Frequently asked questions",
+        "eyebrow_html": "FAQ",
+        "text_html": "Can’t find your answer? Send us your question and a glass railing specialist replies.",
+        "button_label_html": "Ask a question",
+        "button2_label_html": "All FAQs"
+      },
+      "pg_faqhub": {
+        "intro_html": "Answers about our glass panels and hardware, installation, shipping, warranty and returns. [count] questions.",
+        "search_label_html": "Search the questions",
+        "search_placeholder_html": "Search the questions…",
+        "topics_label_html": "Topics",
+        "no_results_html": "No question matches your search.",
+        "no_results_link_html": "Ask us your question",
+        "help_title_html": "Questions about your project?",
+        "help_text_html": "Call or text a railing specialist, or send your measurements for a detailed quote.",
+        "button_label_html": "Get a free quote"
+      },
+      "pg_feat": {
+        "view_all_label_html": "View all"
+      },
+      "pg_form": {
+        "contact_eyebrow_html": "Contact us",
+        "eyebrow_html": "Free quote",
+        "heading_html": "Request a free quote",
+        "text_html": "Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project.",
+        "point1_html": "A detailed list of the materials your project needs",
+        "point2_html": "Prices in [currency]",
+        "point3_html": "Expert guidance, measurements and installation support",
+        "phone_label_html": "Call or text",
+        "email_label_html": "Email",
+        "hours_label_html": "Hours",
+        "hours_html": "Mon–Fri, 8 AM – 5 PM ET",
+        "name_label_html": "Name",
+        "email_field_html": "Email",
+        "phone_field_html": "Phone",
+        "optional_html": "(optional)",
+        "zip_label_ca_html": "Postal code",
+        "zip_label_us_html": "ZIP code",
+        "types_label_html": "Balcony type",
+        "types_html": "Residential balcony\nCondo or apartment balcony\nCommercial balcony\nOther",
+        "systems_label_html": "Preferred system",
+        "systems_html": "Frameless\nSemi-frameless\nNot sure yet",
+        "details_label_html": "Project details",
+        "details_placeholder_html": "Length of each run, railing height, corners, gates, stairs",
+        "button_label_html": "Send my project",
+        "note_html": "Free, with no obligation.",
+        "error_text_html": "Add your name and a valid email so we can send the quote.",
+        "ok_title_html": "Thanks, your project details were sent.",
+        "ok_text_html": "We will get back to you as soon as possible."
+      },
+      "pg_hero": {
+        "loc_label_html": "Locations"
+      },
+      "pg_main": {
+        "toc_label_html": "On this page",
+        "help_title_html": "Questions about your project?",
+        "help_text_html": "Call or text a railing specialist, or send your measurements for a detailed quote.",
+        "button_label_html": "Get a free quote",
+        "codes_eyebrow_html": "Building codes",
+        "codes_heading_us_html": "Select your state",
+        "codes_heading_ca_html": "Select your province or territory"
+      },
+      "pg_map": {
+        "eyebrow_html": "Service area",
+        "text_html": "Glass railing systems delivered right to your door.",
+        "link_label_html": "Open in Google Maps"
+      },
+      "pg_near": {
+        "cta_eyebrow_html": "Free quote",
+        "cta_heading_html": "Free quote for your glass railing project in [place]",
+        "cta_text_html": "Submit a plan request and we will send you a detailed quote on the materials your project needs.",
+        "cta_button_html": "Get a free quote",
+        "cta_phone_label_html": "Call or text us",
+        "eyebrow_html": "Locations",
+        "h_city_html": "More cities we serve in [region]",
+        "h_hub_us_html": "Other states we serve",
+        "h_hub_ca_html": "Other provinces we serve",
+        "h_code_html": "Glass railings in [region]",
+        "cities_h_html": "Cities we serve in [region]",
+        "hub_link_text_html": "Glass railings in [region]",
+        "res_eyebrow_html": "Resources",
+        "res_heading_html": "Helpful resources"
+      },
+      "pg_search": {
+        "title_html": "Search",
+        "results_title_html": "Search results",
+        "placeholder_html": "Search panels, spigots, guides, cities",
+        "button_label_html": "Search",
+        "count_one_html": "[count] result for “[terms]”",
+        "count_other_html": "[count] results for “[terms]”",
+        "none_text_html": "No results found for “[terms]”. Check the spelling or use a different word or phrase.",
+        "products_heading_html": "Products",
+        "collections_heading_html": "Collections",
+        "pages_heading_html": "Pages",
+        "articles_heading_html": "Articles",
+        "res_eyebrow_html": "Resources",
+        "res_heading_html": "Helpful resources"
+      },
+      "pg_video": {
+        "label_html": "Watch on YouTube"
+      },
+      "product_related": {
+        "heading_html": "You may also like",
+        "link_label_html": "Shop the collection"
+      },
+      "product_reviews": {
+        "eyebrow_html": "This product",
+        "eyebrow_store_html": "Our customers",
+        "heading_html": "Customer reviews",
+        "based_on_html": "Based on",
+        "all_label_html": "See all",
+        "verified_html": "Verified buyer",
+        "apps_label_html": "All reviews of this product, or write one"
+      },
+      "product": {
+        "in_stock_html": "In Stock",
+        "sold_out_html": "Sold out",
+        "qty_label_html": "Quantity",
+        "add_label_html": "Add to cart",
+        "error_text_html": "Could not add to cart. Please try again.",
+        "price_unit_html": "glass-railing-screws = / screw",
+        "more_label_html": "Need a size that isn’t listed? Custom glass",
+        "share_label_html": "Share",
+        "copy_label_html": "Copy link",
+        "copied_label_html": "Link copied",
+        "facts_title_html": "At a glance",
+        "tab_overview_html": "Overview",
+        "tab_specs_html": "Specifications"
+      },
+      "quote_band": {
+        "phone_label_html": "Call or text us"
+      },
+      "svc": {
+        "label_html": "Support, free quote and shipping"
+      },
+      "videos": {
+        "watch_label_html": "Watch",
+        "link_label_html": "Watch on YouTube"
+      },
+      "s": {
+        "grs_ship_ca_html": "Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days.",
+        "grs_ship_us_html": "U.S. orders are processed in 2–3 business days, then delivered in 5–10 business days.",
+        "grs_name_ca_html": "Canada",
+        "grs_name_us_html": "the United States",
+        "grs_hub_link_text_html": "glass railings in [region]",
+        "grs_faq_city_h_html": "Glass railings in [city]: common questions",
+        "grs_faq_city_q1_html": "Do you ship glass railings to [city]?",
+        "grs_faq_city_a1_html": "<p>Yes. We ship glass railing systems to [city] and across [country]. [shipping] The price displayed at checkout is the final price with no hidden fees, tariffs, or duties, even if the order crosses borders between the US and Canada.</p>",
+        "grs_faq_city_q2_html": "What building code applies to glass railings in [city]?",
+        "grs_faq_city_a2_html": "<p>Glass railings in [city] have to meet the building code in force in [region], along with any local requirements from your city or county. Our [code_link] guide covers the rules for guards and railings. Ensure compliance with local building codes before you order and install.</p>",
+        "grs_faq_city_a2_ca_html": "<p>Glass railings in [city] have to meet the building code that [region] adopts from the National Building Code of Canada, plus any municipal requirements. Our [code_link] guide covers the rules for guards and railings. Ensure compliance with local building codes before you order and install.</p>",
+        "grs_faq_city_q3_html": "Which glass railing heights are available in [city]?",
+        "grs_faq_city_a3_html": "<p>Our 12mm tempered glass panels come in four heights: 33.6\", 39.6\", 46\" and 57.7\", for a total railing height of 36\", 42\", 48\" or 60\" once the panel sits in the spigot. The 33.6\", 39.6\" and 46\" panels come in 36 widths starting at 7.9\". The 57.7\" panels come in 33.6\", 39.6\" and 46\" widths.</p>",
+        "grs_faq_city_q4_html": "Can I install the glass railing myself?",
+        "grs_faq_city_a4_html": "<p>Yes. Installation is easy and customer friendly: the spigots fix to wood or concrete and the 12mm tempered glass panels set into them. Follow our <a href=\"/pages/glass-railing-installation-guide\">glass railing installation guide</a> and installation video before you start.</p>",
+        "grs_faq_city_q5_html": "How do I get a quote for a glass railing in [city]?",
+        "grs_faq_city_a5_html": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_hub_h_html": "Glass railings in [region]: common questions",
+        "grs_faq_hub_q1_html": "Do you deliver glass railings across [region]?",
+        "grs_faq_hub_a1_html": "<p>Yes. We ship glass railing systems to homes and businesses across [region]. [shipping] Free shipping for glass railing orders over $3,000.</p>",
+        "grs_faq_hub_q2_html": "Where can I find the [region] building code for glass railings?",
+        "grs_faq_hub_a2_html": "<p>Our [code_link] guide explains the requirements for guards and railings in [region]. Ensure compliance with local building codes before you order and install.</p>",
+        "grs_faq_hub_q3_html": "What is included in a frameless glass railing system?",
+        "grs_faq_hub_a3_html": "<p>A frameless system uses 12mm tempered glass panels held by 2205 marine grade stainless steel spigots, with connectors between panels, optional caprail, and gate hardware for gates. <a href=\"/collections/glass-railing\">Browse all products</a>.</p>",
+        "grs_faq_hub_q4_html": "Can the glass railing withstand strong winds?",
+        "grs_faq_hub_a4_html": "<p>Yes. The glass guardrails are engineered to withstand very strong winds and weather conditions, with proven performance even in extreme environments.</p>",
+        "grs_faq_hub_q5_html": "How do I get a quote for my project in [region]?",
+        "grs_faq_hub_a5_html": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_code_h_html": "[region] glass railing code: common questions",
+        "grs_faq_code_q1_html": "Do I need a permit for a glass railing in [region]?",
+        "grs_faq_code_a1_html": "<p>Permit requirements depend on your municipality and the scope of the project. Check with your local building department before you order. Ensure compliance with local building codes before you order and install.</p>",
+        "grs_faq_code_q2_html": "Do you have engineering documents for inspectors?",
+        "grs_faq_code_a2_html": "<p>Yes. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering documents</a> cover top mount and side mount spigots on concrete and wood, with drawings, load applications and blocking details.</p>",
+        "grs_faq_code_q3_html": "Which glass railing heights do you sell?",
+        "grs_faq_code_a3_html": "<p>Our 12mm tempered glass panels come in four heights: 33.6\", 39.6\", 46\" and 57.7\", for a total railing height of 36\", 42\", 48\" or 60\" once the panel sits in the spigot.</p>",
+        "grs_faq_code_q4_html": "Do you ship glass railings to [region]?",
+        "grs_faq_code_a4_html": "<p>Yes. [shipping] See our [hub_link] page for the cities we serve.</p>",
+        "grs_faq_us_h_html": "Common questions",
+        "grs_faq_us_q1_html": "Do you ship glass railings anywhere in the United States?",
+        "grs_faq_us_a1_html": "<p>Yes. We ship glass railing systems across [country]. [shipping] The price displayed at checkout is the final price with no hidden fees, tariffs, or duties, even if the order crosses borders between the US and Canada.</p>",
+        "grs_faq_us_q2_html": "Are there hidden fees, tariffs, or duties on U.S. orders?",
+        "grs_faq_us_a2_html": "<p>No. The price displayed at checkout is the final price with no hidden fees, tariffs, or duties, even if the order crosses borders between the US and Canada.</p>",
+        "grs_faq_us_q3_html": "What should I do if my glass arrives damaged?",
+        "grs_faq_us_a3_html": "<p>If a product arrives damaged, it must be reported within 3 days of delivery and before installation. Once damage is confirmed, The Glass Railing Store will either replace or reimburse the damaged item at no additional cost.</p>",
+        "grs_faq_us_q4_html": "How do I get a quote?",
+        "grs_faq_us_a4_html": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_ca_h_html": "Common questions",
+        "grs_faq_ca_q1_html": "Do you ship glass railings across Canada?",
+        "grs_faq_ca_a1_html": "<p>Yes. [shipping] Free shipping for glass railing orders over $3,000.</p>",
+        "grs_faq_ca_q2_html": "Do you offer installation?",
+        "grs_faq_ca_a2_html": "<p>We currently offer installation services exclusively in Ontario. Everywhere else, our systems are designed for DIY installation with our <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos.</p>",
+        "grs_faq_ca_q3_html": "What should I do if my glass arrives damaged?",
+        "grs_faq_ca_a3_html": "<p>If a product arrives damaged, it must be reported within 3 days of delivery and before installation. Once damage is confirmed, The Glass Railing Store will either replace or reimburse the damaged item at no additional cost.</p>",
+        "grs_faq_ca_q4_html": "How do I get a quote?",
+        "grs_faq_ca_a4_html": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_res1_title_html": "FAQ",
+        "grs_res1_text_html": "Answers about products, installation, delivery, warranty and payment.",
+        "grs_res2_title_html": "Glass Railing Installation Guide",
+        "grs_res2_text_html": "Step-by-step instructions, expert tips and best practices.",
+        "grs_res3_title_html": "Building Codes for Glass Railing",
+        "grs_res3_text_html": "Key building codes and compliance tips.",
+        "grs_res4_title_html": "Shipping Information",
+        "grs_res4_text_html": "Our shipping process, straight to your door.",
+        "grs_res5_title_html": "Warranty / No Rust Promise",
+        "grs_res5_text_html": "A 10-year no-rust promise on our hardware.",
+        "grs_res6_title_html": "Engineering Documents",
+        "grs_res6_text_html": "Specs, load performance and installation guidelines.",
+        "grs_res7_title_html": "Shop all products",
+        "grs_res7_text_html": "Glass panels, spigots, connectors, gate hardware and caprail."
+      }
+    }
+  }
+}

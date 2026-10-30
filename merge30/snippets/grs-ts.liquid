@@ -1,0 +1,18 @@
+{%- comment -%}
+  A text of Theme settings (GRS location pages, GRS helpful resources, GRS store info) in the visitor's language: the
+  setting's value or, when it is empty, its standard text from locales/*.json (grs.sd.s.<id>_html). Empty for a
+  setting without a standard text.
+  capture x / render 'grs-ts', k: 'grs_faq_city_q1' / endcapture
+{%- endcomment -%}
+{%- liquid
+  assign v = settings[k]
+  if v == blank
+    assign ids = '␟grs_faq_ca_a1␟grs_faq_ca_a2␟grs_faq_ca_a3␟grs_faq_ca_a4␟grs_faq_ca_h␟grs_faq_ca_q1␟grs_faq_ca_q2␟grs_faq_ca_q3␟grs_faq_ca_q4␟grs_faq_city_a1␟grs_faq_city_a2␟grs_faq_city_a2_ca␟grs_faq_city_a3␟grs_faq_city_a4␟grs_faq_city_a5␟grs_faq_city_h␟grs_faq_city_q1␟grs_faq_city_q2␟grs_faq_city_q3␟grs_faq_city_q4␟grs_faq_city_q5␟grs_faq_code_a1␟grs_faq_code_a2␟grs_faq_code_a3␟grs_faq_code_a4␟grs_faq_code_h␟grs_faq_code_q1␟grs_faq_code_q2␟grs_faq_code_q3␟grs_faq_code_q4␟grs_faq_hub_a1␟grs_faq_hub_a2␟grs_faq_hub_a3␟grs_faq_hub_a4␟grs_faq_hub_a5␟grs_faq_hub_h␟grs_faq_hub_q1␟grs_faq_hub_q2␟grs_faq_hub_q3␟grs_faq_hub_q4␟grs_faq_hub_q5␟grs_faq_us_a1␟grs_faq_us_a2␟grs_faq_us_a3␟grs_faq_us_a4␟grs_faq_us_h␟grs_faq_us_q1␟grs_faq_us_q2␟grs_faq_us_q3␟grs_faq_us_q4␟grs_hub_link_text␟grs_name_ca␟grs_name_us␟grs_res1_text␟grs_res1_title␟grs_res2_text␟grs_res2_title␟grs_res3_text␟grs_res3_title␟grs_res4_text␟grs_res4_title␟grs_res5_text␟grs_res5_title␟grs_res6_text␟grs_res6_title␟grs_res7_text␟grs_res7_title␟grs_ship_ca␟grs_ship_us␟'
+    assign kk = '␟' | append: k | append: '␟'
+    if ids contains kk
+      assign tk = 'grs.sd.s.' | append: k | append: '_html'
+      assign v = tk | t
+    endif
+  endif
+  echo v
+-%}

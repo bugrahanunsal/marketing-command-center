@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "banner": {
+      "type": "grs-pg-banner",
+      "settings": {
+        "image": "shopify://shop_images/Ste-julie_25be39f3-f8ae-4075-8038-3f50c3aa2a41.jpg",
+        "heading": "About The Glass Railing Store"
+      }
+    },
+    "main": {
+      "type": "grs-pg-main",
+      "settings": {
+        "show_crumb": false
+      }
+    },
+    "rows": {
+      "type": "grs-pg-rows",
+      "settings": {},
+      "blocks": {
+        "row1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/spigot_drawing.jpg",
+            "caption": "Engineered for Performance",
+            "heading": "Designed for Simplicity.",
+            "text": "<p>Our product line is built around one principle: form and function should go hand-in-hand. Every spigot, glass railing panel, and component is designed for clean lines, fast installation, and long-term durability. No visual clutter. No compromise on quality.</p><p>We focus on systems that are simple to install, code-compliant, and aesthetically sleek.</p>",
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact"
+          }
+        },
+        "row2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/glass-railing-store_a96dbca7-9da8-449a-a1f4-685113fa1e77.jpg",
+            "caption": "A Guarantee That Goes",
+            "heading": "Beyond the Standard",
+            "text": "<p>We don’t just promise quality we back it with one of the strongest warranties in the industry.</p><p>Our railing systems are designed to last, and our guarantee reflects that. We offer extended coverage on both our hardware and glass components because we believe peace of mind should come standard.</p><p>Whether it's corrosion-resistant stainless steel or tempered safety glass engineered to withstand the elements, you can count on our products to hold up and if something goes wrong, we’re here to make it right.</p><p>When you choose The Glass Railing Store, you're not just investing in your space you're investing in long-term security and dependable support.</p>",
+            "button_label": "Warranty Info",
+            "button_link": "shopify://pages/glass-railing-warranty"
+          }
+        },
+        "row3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/clean_warehouse.jpg",
+            "caption": "Reliable Inventory",
+            "heading": "Fast Turnaround.",
+            "text": "<p>We keep what we sell in stock and ready to ship so you can avoid long delays, backorders, or unpredictable lead times. Our streamlined logistics ensure orders go out fast, whether you're purchasing one <a href=\"/products/glass-railing-spigot\"><strong>spigot</strong></a><strong> </strong>or glass panels for an entire project.</p><p>We’re proud to support builders, designers, and property owners who want to move quickly, stay on budget, and avoid unnecessary hassle.</p>",
+            "button_label": "See products",
+            "button_link": "shopify://collections/glass-railing"
+          }
+        },
+        "row4": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/C1688.00_00_00_00.Still013_Medium_36e180db-c7a1-4e2f-aaa2-86847fec837c.jpg",
+            "caption": "High",
+            "heading": "Quality You Can See and Feel",
+            "text": "<p>We design every component with performance, simplicity, and longevity in mind. Our systems are engineered in-house and built to meet the highest industry standards for structural integrity and safety.</p><p>Each product goes through rigorous quality control to ensure precision, consistency, and lasting durability. Whether you're working on a residential balcony or a high-traffic commercial space, our glass railing systems are made to perform day after day, year after year.</p>",
+            "button_label": "Get a Quote",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "row1",
+        "row2",
+        "row3",
+        "row4"
+      ]
+    },
+    "reviews": {
+      "type": "grs-reviews",
+      "blocks": {
+        "rv1": {
+          "type": "review",
+          "settings": {
+            "text": "The glass arrived in perfect condition. The hardest part was moving the glass from my driveway to my back deck. I used masking tape to create a line and then did all my markings on the tape. Excellent product, straight forward installation. Thank you",
+            "name": "Steven King",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv2": {
+          "type": "review",
+          "settings": {
+            "text": "We are so pleased with the service of this company! We live 3 provinces away and the ordering and delivery both went smoothly. Everything came in a crate delivered right to our door with free shipping! All intact. Thank you so much. The quality appears great but I guess we will see when the rails are up and in place.🙂",
+            "name": "Robyn Rozee",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "text": "I'm so happy I found you guys because I was getting quotes for like $180 per linear foot which is crazy! I was able to install it with my son for half of that because of glass railing store. Thank you so much for all the help in crafting the project, I will be recommending you guys from now on",
+            "name": "Nathalie Wagner",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "text": "I really like these spigots, very heavy I was a little skeptical at the beginning as I was worried that they may be cheap, but Marine in customer service assured me that they were good. They arrived last week and WOW they weight like 5 pounds each (of stainless steel!!) and come with adjustable screws (didn't even know) The quality is amazing and I highly recommend them for hardware, this is really heavy duty stuff. I also like that they have a 10 year warranty on the rust, that we will have to wait 10 years to comment on but pretty good. Once again, thank you marine for assisting me",
+            "name": "Martine Marchand",
+            "product": "glass-railing-spigot",
+            "product_label": "6\" Engineered Spigot"
+          }
+        },
+        "rv5": {
+          "type": "review",
+          "settings": {
+            "text": "Very satisfied with my order, glass is thick and strong. I love how the corners are a little rounded, I didn't even know that was going to be the case",
+            "name": "Anthony",
+            "product": "glass-railing-46-tempered-glass-panel",
+            "product_label": "46\" glass panels"
+          }
+        },
+        "rv6": {
+          "type": "review",
+          "settings": {
+            "text": "Installation was a breeze. These hinges work perfectly. Just don't forget to follow the instruction thing for the closing speed!",
+            "name": "Lucy Yang",
+            "product": "glass-railing-hinge",
+            "product_label": "Hinge Kit"
+          }
+        },
+        "rv7": {
+          "type": "review",
+          "settings": {
+            "text": "I had some doubts at the beginning as I have no clue how they ship glass, but everything arrives in a crate in great shape! I mean look at that, definitely one of the most affordable options online too, especially compared with invisarail or like the home depot alternative. Got the coupons too for an extra discount",
+            "name": "Audrey Lane",
+            "product": "glass-railing-34-tempered-glass-panel",
+            "product_label": "33.6\" glass panels"
+          }
+        },
+        "rv8": {
+          "type": "review",
+          "settings": {
+            "text": "I was hesitating between the glass railing store and invisirail but ultimately landed here because of better quality. Beautiful product, will buy again for other projects",
+            "name": "Simon Bern",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv9": {
+          "type": "review",
+          "settings": {
+            "text": "Thank you so much to the team for delivering my glass railing! I am super grateful that I found you guys it just looks great! My husband installed it last night so I have a beautiful sunset picture for you guys to enjoy! All my neighbours are going to order too, can I have a discount for referring",
+            "name": "Susan Walsh",
+            "product": "glass-railing-side-mount-spigot",
+            "product_label": "Side Mount / Fascia Spigot"
+          }
+        },
+        "rv10": {
+          "type": "review",
+          "settings": {
+            "text": "Just beautiful, will be ordering again for my son's house",
+            "name": "Robert Gignac",
+            "product": "glass-railing-spigot",
+            "product_label": "6\" Engineered Spigot"
+          }
+        }
+      },
+      "block_order": [
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4",
+        "rv5",
+        "rv6",
+        "rv7",
+        "rv8",
+        "rv9",
+        "rv10"
+      ],
+      "settings": {
+        "heading": "What our customers say"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Common questions"
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days across Canada and the U.S.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What warranty do you offer?",
+            "answer": "<p>Glass panels are guaranteed to be free of manufacturing defects with a lifetime warranty, and hardware comes with a 10-year no-rust promise, utilizing marine-grade stainless steel.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How do I get a quote?",
+            "answer": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "rows",
+    "reviews",
+    "form",
+    "faq"
+  ]
+}

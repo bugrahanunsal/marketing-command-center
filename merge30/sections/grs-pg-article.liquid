@@ -1,0 +1,163 @@
+{%- comment -%}
+  Blog post (prototype post view): breadcrumb (Home > blog > post), the title (H1), date and reading time, the post
+  photo, the text with "On this page" (its H2 headings, from 3 up; a heading without an id gets one from its words)
+  and its FAQ opening and closing, share buttons, a quote call-out and the help card; then "Shop the parts" (the
+  products of the first "Parts for posts" block whose words are in the post title or tags) and three more posts (the
+  older and newer posts next to this one, then the latest). BlogPosting, BreadcrumbList and FAQPage data.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_article), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_toc_label = 'grs.sd.pg_article.toc_label_html' | t
+  assign sd_toc_label = section.settings.toc_label | default: sd_toc_label
+  assign sd_share_label = 'grs.sd.pg_article.share_label_html' | t
+  assign sd_share_label = section.settings.share_label | default: sd_share_label
+  assign sd_copy_label = 'grs.sd.pg_article.copy_label_html' | t
+  assign sd_copy_label = section.settings.copy_label | default: sd_copy_label
+  assign sd_copied_label = 'grs.sd.pg_article.copied_label_html' | t
+  assign sd_copied_label = section.settings.copied_label | default: sd_copied_label
+  assign sd_cta_title = 'grs.sd.pg_article.cta_title_html' | t
+  assign sd_cta_title = section.settings.cta_title | default: sd_cta_title
+  assign sd_cta_text = 'grs.sd.pg_article.cta_text_html' | t
+  assign sd_cta_text = section.settings.cta_text | default: sd_cta_text
+  assign sd_cta_button = 'grs.sd.pg_article.cta_button_html' | t
+  assign sd_cta_button = section.settings.cta_button | default: sd_cta_button
+  assign sd_help_title = 'grs.sd.pg_article.help_title_html' | t
+  assign sd_help_title = section.settings.help_title | default: sd_help_title
+  assign sd_help_text = 'grs.sd.pg_article.help_text_html' | t
+  assign sd_help_text = section.settings.help_text | default: sd_help_text
+  assign sd_help_button = 'grs.sd.pg_article.help_button_html' | t
+  assign sd_help_button = section.settings.help_button | default: sd_help_button
+  assign sd_parts_heading = 'grs.sd.pg_article.parts_heading_html' | t
+  assign sd_parts_heading = section.settings.parts_heading | default: sd_parts_heading
+  assign sd_parts_link_label = 'grs.sd.pg_article.parts_link_label_html' | t
+  assign sd_parts_link_label = section.settings.parts_link_label | default: sd_parts_link_label
+  assign sd_more_heading = 'grs.sd.pg_article.more_heading_html' | t
+  assign sd_more_heading = section.settings.more_heading | default: sd_more_heading
+  assign sd_more_button = 'grs.sd.pg_article.more_button_html' | t
+  assign sd_more_button = section.settings.more_button | default: sd_more_button
+-%}
+{%- liquid
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+  assign src = article.content | append: ''
+  assign words = src | strip_html | split: ' ' | size
+  assign mins = words | divided_by: 220.0 | round | at_least: 1
+  assign toc_ids = ''
+  assign toc_tx = ''
+  assign n = 0
+  assign parts = src | split: '<h2'
+  assign body = parts.first | default: ''
+  for part in parts
+    if forloop.first
+      continue
+    endif
+    assign head = part | split: '</h2>' | first
+    assign attrs = head | split: '>' | first
+    assign htx = head | remove_first: attrs | remove_first: '>' | strip_html | replace: '&nbsp;', ' ' | strip
+    assign hid = ''
+    if attrs contains 'id="'
+      assign hid = attrs | split: 'id="' | last | split: '"' | first | strip
+      assign body = body | append: '<h2' | append: part
+    elsif htx != ''
+      assign hid = htx | handleize
+      assign body = body | append: '<h2 id="' | append: hid | append: '"' | append: part
+    else
+      assign body = body | append: '<h2' | append: part
+    endif
+    assign hd = htx | downcase
+    assign s1 = hd | slice: 0, 17
+    assign s2 = hd | slice: 0, 8
+    assign s3 = hd | slice: 0, 15
+    if s1 == 'table of contents' or s2 == 'contents' or s3 == 'in this article'
+      assign htx = ''
+    endif
+    if hid != '' and htx != ''
+      assign toc_ids = toc_ids | append: hid | append: '␟'
+      assign toc_tx = toc_tx | append: htx | append: '␟'
+      assign n = n | plus: 1
+    endif
+  endfor
+  assign body = body | replace: '<table', '<div class="tbl"><table' | replace: '</table>', '</table></div>'
+  comment
+    Pictures in the post text load when the visitor comes near them, not all together with the page. With a post
+    photo (it is the first-screen picture) every text picture waits; without one the first text picture still loads
+    with the page (it can be on the first screen). A picture whose tag already says how to load is left as it is.
+  endcomment
+  if body contains '<img'
+    assign ip = body | split: '<img'
+    assign body = ip.first | default: ''
+    for part in ip
+      if forloop.first
+        continue
+      endif
+      assign itag = part | split: '>' | first
+      if itag contains 'loading='
+        assign body = body | append: '<img' | append: part
+      elsif forloop.index == 2 and article.image == blank
+        assign body = body | append: '<img' | append: part
+      else
+        assign body = body | append: '<img loading="lazy"' | append: part
+      endif
+    endfor
+  endif
+  assign ids = toc_ids | split: '␟'
+  assign txs = toc_tx | split: '␟'
+  assign show_toc = false
+  if section.settings.show_toc and n >= 3
+    assign show_toc = true
+  endif
+  assign blog_path = '/blogs/' | append: blog.handle
+  assign can = request.origin | append: article.url
+  assign tag_s = article.tags | join: ' '
+  assign hay = article.title | append: ' ' | append: tag_s | downcase
+  assign parts_list = nil
+  for block in section.blocks
+    if parts_list == nil
+      assign kws = block.settings.keywords | downcase | split: ','
+      assign hit = false
+      if block.settings.keywords == blank
+        assign hit = true
+      endif
+      for k in kws
+        assign k2 = k | strip
+        if k2 != '' and hay contains k2
+          assign hit = true
+        endif
+      endfor
+      if hit and block.settings.products.size > 0
+        assign parts_list = block.settings.products
+      endif
+    endif
+  endfor
+-%}
+{%- capture toc_li -%}{%- for hid in ids -%}<li><a href="#{{ hid | escape }}" data-anchor="{{ hid | escape }}">{{ txs[forloop.index0] | escape }}</a></li>{%- endfor -%}{%- endcapture -%}
+<div class="grs-art-w"{% render 'grs-vars', s: section.settings %}><article class="post2"><header class="wrap post2-head">{% render 'grs-pg-crumb', cur: article.title, mid_n: blog.title, mid_u: blog_path %}<h1 class="post2-t">{{ article.title | escape }}</h1>
+<div class="post2-meta"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'date' }}</time></span><span>{{ 'grs.blog.min_read' | t: count: mins }}</span></div></header>
+{%- if article.image -%}<div class="wrap"><figure class="post2-hero">{% render 'grs-img', image: article.image, class: 'ph', sizes: '(min-width: 1440px) 1360px, 100vw', widths: '600,900,1200,1600,2000', eager: true, alt: article.image.alt %}</figure></div>{%- endif -%}
+<div class="wrap pg-grid post2-grid"><div class="pg-main">{%- if show_toc -%}<details class="pg-toc-m"><summary>{{ sd_toc_label | escape }}</summary><ol>{{ toc_li }}</ol></details>{%- endif -%}<div class="rte post2-body"{% unless section.settings.faq_open_close %} data-fq="0"{% endunless %}>{% render 'grs-rte', html: body %}</div>
+{%- if section.settings.show_share -%}{%- assign u = can | url_encode -%}{%- assign t = article.title | url_encode -%}<div class="share2"><span class="share2-l">{{ sd_share_label | escape }}</span><div class="share2-b"><a class="share2-i" href="https://www.facebook.com/sharer/sharer.php?u={{ u }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.share_facebook' | t }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a class="share2-i" href="https://x.com/intent/post?url={{ u }}&amp;text={{ t }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.share_x' | t }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a class="share2-i" href="https://pinterest.com/pin/create/button/?url={{ u }}&amp;description={{ t }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.save_pinterest' | t }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.7-.3 1.1.6 2 1.7 2 2 0 3.5-2.1 3.5-5.2 0-2.7-2-4.6-4.8-4.6-3.3 0-5.2 2.5-5.2 5 0 1 .4 2.1.9 2.7l.1.4-.3 1.3c0 .2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.7 2.7-7.2 7.8-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.3-.6-2.7-1.4l-.7 2.8c-.3 1-1 2.3-1.5 3.1A10 10 0 1 0 12 2z"></path></svg></a><button type="button" class="share2-c" data-copy="{{ can | escape }}" data-done="{{ sd_copied_label | escape }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><span>{{ sd_copy_label | escape }}</span></button></div></div>{%- endif -%}
+{%- if sd_cta_title != blank -%}<div class="post-cta"><b>{{ sd_cta_title | escape }}</b>{%- if sd_cta_text != blank -%}<span>{{ sd_cta_text | escape }}</span>{%- endif -%}{%- if sd_cta_button != blank -%}<a class="btn" href="{%- if section.settings.cta_link != blank -%}{% render 'grs-url', url: section.settings.cta_link %}{%- else -%}{{ pages['contact'].url | default: '/pages/contact' }}{%- endif -%}"><span class="dot"></span>{{ sd_cta_button | escape }}</a>{%- endif -%}</div>{%- endif -%}
+</div><aside class="pg-aside">{%- if show_toc -%}<nav class="ip-card pg-toc" aria-label="{{ sd_toc_label | escape }}"><span class="mono">{{ sd_toc_label | escape }}</span><ol>{{ toc_li }}</ol></nav>{%- endif -%}{%- if sd_help_title != blank -%}<div class="ip-card ip-help"><b>{{ sd_help_title | escape }}</b>{%- if sd_help_text != blank -%}<p>{{ sd_help_text | escape }}</p>{%- endif -%}<a class="ip-phone" href="tel:{{ grs_phone_tel }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{{ grs_phone }}</a>{%- if sd_help_button != blank -%}<a class="btn" href="{%- if section.settings.cta_link != blank -%}{% render 'grs-url', url: section.settings.cta_link %}{%- else -%}{{ pages['contact'].url | default: '/pages/contact' }}{%- endif -%}"><span class="dot"></span>{{ sd_help_button | escape }}</a>{%- endif -%}</div>{%- endif -%}</aside></div></article>
+{%- if parts_list != nil and sd_parts_heading != blank -%}<section class="sec light"><div class="wrap"><div class="ps-head"><h2 class="h2">{{ sd_parts_heading | escape }}</h2>{%- if sd_parts_link_label != blank -%}<a class="arrow-link" href="{{ routes.all_products_collection_url }}">{{ sd_parts_link_label | escape }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</div><div class="ps"><div class="ps-track" role="list" aria-label="{{ sd_parts_heading | escape }}">{%- for p in parts_list -%}{% render 'grs-card', product: p, li: true %}{%- endfor -%}</div><button class="ps-btn prev" type="button" aria-label="{{ 'grs.a11y.prev_products' | t }}" disabled=""><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button class="ps-btn next" type="button" aria-label="{{ 'grs.a11y.next_products' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div></section>{%- endif -%}
+{%- if sd_more_heading != blank -%}{%- liquid
+  assign shown = ''
+  assign k = 0
+-%}<section class="sec"><div class="wrap"><div class="sh2"><div><span class="dot-eyebrow">{{ blog.title | escape }}</span><h2 class="mh2">{{ sd_more_heading | escape }}</h2></div>{%- if sd_more_button != blank -%}<a class="btn btn-o" href="{{ blog.url }}"><span class="dot"></span>{{ sd_more_button | escape }}</a>{%- endif -%}</div><div class="bgrid2">
+{%- if blog.next_article -%}{% render 'grs-post-card', a: blog.next_article %}{%- assign k = k | plus: 1 -%}{%- assign shown = shown | append: blog.next_article.handle | append: '|' -%}{%- endif -%}
+{%- if blog.previous_article -%}{% render 'grs-post-card', a: blog.previous_article %}{%- assign k = k | plus: 1 -%}{%- assign shown = shown | append: blog.previous_article.handle | append: '|' -%}{%- endif -%}
+{%- for a in blog.articles limit: 6 -%}{%- if k < 3 -%}{%- assign key = a.handle | append: '|' -%}{%- unless a.handle == article.handle or shown contains key -%}{% render 'grs-post-card', a: a %}{%- assign k = k | plus: 1 -%}{%- endunless -%}{%- endif -%}{%- endfor -%}
+</div></div></section>{%- endif -%}</div>
+{%- liquid
+  assign img_u = ''
+  if article.image
+    assign img_u = article.image | image_url: width: 1600 | prepend: 'https:'
+  endif
+  assign desc = article.excerpt | default: article.content | strip_html | strip_newlines | truncate: 300
+-%}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ article.title | truncate: 110, '' | json }},"description":{{ desc | json }},"datePublished":{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json }},"dateModified":{{ article.updated_at | default: article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json }},"author":{"@type":"Person","name":{{ article.author | json }}},"publisher":{"@type":"Organization","name":{{ shop.name | json }}{%- assign logo_u = 'glass-railing-store-logo-white.png' | file_url | prepend: 'https:' -%},"logo":{"@type":"ImageObject","url":{{ logo_u | json }}}},"mainEntityOfPage":{{ can | json }}{%- if img_u != '' -%},"image":[{{ img_u | json }}]{%- endif -%}}</script>
+{%- if section.settings.faq_schema -%}{%- unless src contains 'FAQPage' -%}{%- capture fq -%}{% render 'grs-rte-faq', html: body %}{%- endcapture -%}{%- assign fq = fq | strip -%}{%- if fq != '' -%}<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ fq }}]}</script>{%- endif -%}{%- endunless -%}{%- endif -%}
+
+{% schema %}
+{"name":"GRS blog post","tag":"div","settings":[{"type":"paragraph","content":"The post title (H1), date, photo and text come from the post (Online Store > Blog posts)."},{"type":"checkbox","id":"show_toc","label":"Show \"On this page\"","default":true,"info":"Made from the H2 headings of the post; shown from 3 headings up."},{"type":"text","id":"toc_label","label":"\"On this page\" title","placeholder":"On this page","info":"Empty: the standard text, in the visitor's language."},{"type":"checkbox","id":"faq_open_close","label":"Questions in the post open and close","default":true},{"type":"checkbox","id":"faq_schema","label":"Give Google the questions of the post (FAQ data)","default":true},{"type":"checkbox","id":"show_share","label":"Show the share buttons","default":true},{"type":"text","id":"share_label","label":"Share label","placeholder":"Share","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"copy_label","label":"Copy link button","placeholder":"Copy link","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"copied_label","label":"Copied message","placeholder":"Link copied","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Quote call-out and help card"},{"type":"text","id":"cta_title","label":"Call-out title","info":"Empty: no call-out.","placeholder":"Planning a glass railing?"},{"type":"textarea","id":"cta_text","label":"Call-out text","placeholder":"Send your measurements and we will send you a detailed quote on the materials your project needs.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"cta_button","label":"Call-out button","placeholder":"Get a free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"cta_link","label":"Button link","info":"Empty: the contact page."},{"type":"text","id":"help_title","label":"Help card: title","info":"Empty: no help card.","placeholder":"Questions about your project?"},{"type":"textarea","id":"help_text","label":"Help card: text","placeholder":"Call or text a railing specialist, or send your measurements for a detailed quote.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"help_button","label":"Help card: button","placeholder":"Get a free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Below the post"},{"type":"text","id":"parts_heading","label":"\"Shop the parts\" heading","info":"Products: the \"Parts for posts\" blocks. Empty: hidden.","placeholder":"Shop the parts"},{"type":"text","id":"parts_link_label","label":"All products link","placeholder":"All products","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"more_heading","label":"More posts heading","info":"Empty: hidden.","placeholder":"Keep reading"},{"type":"text","id":"more_button","label":"More posts button","placeholder":"All posts","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"parts","name":"Parts for posts","settings":[{"type":"text","id":"keywords","label":"Words in the post title or tags","info":"Separated by commas. The first block that matches is used; empty matches every post."},{"type":"product_list","id":"products","label":"Products","limit":8}]}],"max_blocks":12,"presets":[{"name":"GRS blog post"}]}
+{% endschema %}

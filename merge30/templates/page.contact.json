@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {
+        "layout": "contact"
+      },
+      "blocks": {
+        "powerful_form_builder_app_block_fzrUkV": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"NDYzMjM=\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_fzrUkV"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Common questions"
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How can I contact The Glass Railing Store?",
+            "answer": "<p>Call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>, email <a href=\"mailto:info@glassrailingstore.com\">info@glassrailingstore.com</a>, or use the form on this page.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "How do I get a quote?",
+            "answer": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days across Canada and the U.S.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    }
+  },
+  "order": [
+    "form",
+    "faq",
+    "near"
+  ]
+}

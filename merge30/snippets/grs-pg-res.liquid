@@ -1,0 +1,46 @@
+{%- comment -%}
+  "Helpful resources" cards (prototype .mr-grid): Theme settings > GRS helpful resources, slots 1 to 7; the first six
+  that have a title and are not the page itself. A slot with an empty link uses its usual page (1 FAQ, 2 installation
+  guide, 3 building codes, 4 shipping, 5 warranty, 6 engineering documents, 7 all products).
+  render 'grs-pg-res', cur: page.handle
+{%- endcomment -%}
+{%- assign shown = 0 -%}
+{%- for i in (1..7) -%}{%- liquid
+    assign kt = 'grs_res' | append: i | append: '_title'
+    assign kl = 'grs_res' | append: i | append: '_link'
+    assign kx = 'grs_res' | append: i | append: '_text'
+    assign ki = 'grs_res' | append: i | append: '_icon'
+    capture t
+      render 'grs-ts', k: kt
+    endcapture
+    capture tx
+      render 'grs-ts', k: kx
+    endcapture
+    assign l = settings[kl]
+    if l == blank
+      case i
+        when 1
+          assign l = pages['faq'].url
+        when 2
+          assign l = pages['glass-railing-installation-guide'].url
+        when 3
+          assign l = pages['building-codes-glass-railing'].url
+        when 4
+          assign l = pages['free-shipping-information'].url
+        when 5
+          assign l = pages['glass-railing-warranty'].url
+        when 6
+          assign l = pages['glass-railing-engineering-testing'].url
+        when 7
+          assign l = routes.all_products_collection_url
+      endcase
+    endif
+    assign lh = l | append: '' | split: '?' | first | split: '#' | first | split: '/' | last
+    assign skip = false
+    if t == blank or l == blank or shown >= 6
+      assign skip = true
+    endif
+    if cur != blank and lh == cur
+      assign skip = true
+    endif
+  -%}{%- unless skip -%}{%- assign shown = shown | plus: 1 -%}<li class="mr-card"><span class="mr-ic">{%- case settings[ki] -%}{%- when 'guide' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5h6a3.5 3.5 0 0 1 3.5 3.5v12a2.6 2.6 0 0 0-2.6-2.6H2.5z"></path><path d="M21.5 4.5h-6A3.5 3.5 0 0 0 12 8v12a2.6 2.6 0 0 1 2.6-2.6h6.9z"></path></svg>{%- when 'code' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5.5 17.5v-7M10 17.5v-7M14 17.5v-7M18.5 17.5v-7"></path><path d="m12 3 8.5 5h-17z"></path></svg>{%- when 'shipping' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 17.5V6a1.5 1.5 0 0 0-1.5-1.5h-9A1.5 1.5 0 0 0 2 6v10a1.5 1.5 0 0 0 1.5 1.5H5"></path><path d="M15 17.5H9.5"></path><path d="M19 17.5h1.5A1.5 1.5 0 0 0 22 16v-3.4a1 1 0 0 0-.2-.6l-3.2-4.2a1 1 0 0 0-.8-.4H14"></path><circle cx="17" cy="17.5" r="2"></circle><circle cx="7.2" cy="17.5" r="2"></circle></svg>{%- when 'warranty' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.5c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20 4 17.5 4 12.5v-6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 4.3 17 5.5 19 5.5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>{%- when 'engineering' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"></path><path d="M14 2.5V8h5.5"></path><path d="m9 14.5 2 2 4-4"></path></svg>{%- when 'catalog' -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"></rect></svg>{%- else -%}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.5-2.7 4"></path><path d="M12 17.5h.01"></path></svg>{%- endcase -%}</span><span class="mr-t"><a href="{% render 'grs-url', url: l %}">{{ t | escape }}</a>{%- if tx != blank -%}<em>{{ tx | escape }}</em>{%- endif -%}</span><svg width="13" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>{%- endunless -%}{%- endfor -%}

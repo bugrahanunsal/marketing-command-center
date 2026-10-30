@@ -1,0 +1,115 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-article",
+      "settings": {},
+      "blocks": {
+        "parts1": {
+          "type": "parts",
+          "settings": {
+            "keywords": "spigot, base plate, post, mount",
+            "products": [
+              "glass-railing-spigot",
+              "glass-railing-side-mount-spigot",
+              "glass-railing-screws",
+              "glass-railing-40-tempered-glass-panel"
+            ]
+          }
+        },
+        "parts2": {
+          "type": "parts",
+          "settings": {
+            "keywords": "connector, clamp, glass-to-glass, corner",
+            "products": [
+              "glass-railing-180-connector",
+              "glass-railing-90-connector",
+              "glass-railing-adjustable-connector",
+              "glass-railing-wall-connector"
+            ]
+          }
+        },
+        "parts3": {
+          "type": "parts",
+          "settings": {
+            "keywords": "gate, pool, fence, latch, hinge",
+            "products": [
+              "glass-railing-hinge",
+              "glass-railing-gate-latch",
+              "gate-panels-holed-for-the-hinges-latch-and-floor-lock",
+              "glass-railing-46-tempered-glass-panel"
+            ]
+          }
+        },
+        "parts4": {
+          "type": "parts",
+          "settings": {
+            "keywords": "caprail, cap rail, handrail, top rail",
+            "products": [
+              "6ft-square-caprail",
+              "19ft-square-caprail",
+              "square-caprail-corner-connector",
+              "square-caprail-end-cap"
+            ]
+          }
+        },
+        "parts5": {
+          "type": "parts",
+          "settings": {
+            "keywords": "stair",
+            "products": [
+              "custom-stair-glass",
+              "glass-railing-side-mount-spigot",
+              "glass-railing-spigot",
+              "glass-railing-40-tempered-glass-panel"
+            ]
+          }
+        },
+        "parts6": {
+          "type": "parts",
+          "settings": {
+            "keywords": "custom, measure, size",
+            "products": [
+              "custom-glass-railing",
+              "custom-stair-glass",
+              "glass-hardware-sample-kit",
+              "glass-railing-40-tempered-glass-panel"
+            ]
+          }
+        },
+        "parts7": {
+          "type": "parts",
+          "settings": {
+            "products": [
+              "glass-railing-spigot",
+              "glass-railing-40-tempered-glass-panel",
+              "glass-railing-180-connector",
+              "6ft-square-caprail"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "parts1",
+        "parts2",
+        "parts3",
+        "parts4",
+        "parts5",
+        "parts6",
+        "parts7"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

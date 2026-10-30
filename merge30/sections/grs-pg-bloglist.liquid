@@ -1,0 +1,25 @@
+{%- comment -%}
+  Blog page (prototype News view): breadcrumb, the blog title (H1), a line about the blog, the posts as cards and the
+  page numbers. [page] and [pages] in "Page number line" are filled in from page 2 on.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_bloglist), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_lead = 'grs.sd.pg_bloglist.lead_html' | t
+  assign sd_lead = section.settings.lead | default: sd_lead
+  assign sd_page_of = 'grs.sd.pg_bloglist.page_of_html' | t
+  assign sd_page_of = section.settings.page_of | default: sd_page_of
+-%}
+{%- paginate blog.articles by section.settings.per_page, window_size: 1 -%}
+<section class="pg-top"{% render 'grs-vars', s: section.settings %}><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: blog.title %}{%- endif -%}<h1 class="pg-title">{{ blog.title | escape }}{% if current_tags %} – {{ current_tags | join: ', ' | escape }}{% endif %}</h1>{%- if sd_lead != blank -%}<p class="pg-lead">{{ sd_lead | escape }}{%- if paginate.current_page > 1 and sd_page_of != blank -%}{{ ' ' }}{{ sd_page_of | replace: '[page]', paginate.current_page | replace: '[pages]', paginate.pages | escape }}{%- endif -%}</p>{%- endif -%}</div></section>
+<section class="sec blog-list"><div class="wrap"><div class="bgrid2">{%- for a in blog.articles -%}{% render 'grs-post-card', a: a %}{%- endfor -%}</div>
+{%- if paginate.pages > 1 -%}<nav class="pager pg-pager" aria-label="{{ 'grs.a11y.pagination' | t }}">
+{%- if paginate.previous -%}<a class="pg-pp" href="{{ paginate.previous.url }}" aria-label="{{ 'grs.a11y.prev_page' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+{%- for part in paginate.parts -%}{%- if part.is_link -%}<a href="{{ part.url }}" aria-label="{{ 'grs.a11y.page_n' | t: n: part.title }}">{{ part.title }}</a>{%- elsif part.title == paginate.current_page -%}<span class="on" aria-current="page">{{ part.title }}</span>{%- else -%}<span class="gap">{{ part.title }}</span>{%- endif -%}{%- endfor -%}
+{%- if paginate.next -%}<a class="pg-pp" href="{{ paginate.next.url }}" aria-label="{{ 'grs.a11y.next_page' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+</nav>{%- endif -%}</div></section>
+{%- endpaginate -%}
+
+{% schema %}
+{"name":"GRS blog page","tag":"div","settings":[{"type":"paragraph","content":"The blog title (H1) and its posts, with page numbers."},{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"textarea","id":"lead","label":"Text under the title","placeholder":"Guides, building code checklists and project ideas for glass railings, from the team at The Glass Railing Store.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"page_of","label":"Page number line","info":"Added to the text from page 2 on.","placeholder":"Page [page] of [pages]."},{"type":"range","id":"per_page","label":"Posts per page","min":3,"max":24,"step":3,"default":6},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Post title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Post title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS blog page"}]}
+{% endschema %}

@@ -1,0 +1,1509 @@
+{%- comment -%}
+  The Glass Railing Store · My Account (homeowner dashboard)
+  One page with four tabs: Overview, Orders (#orders), Installation (#install)
+  and Profile & addresses (#profile). Reads live data for the signed-in
+  customer: orders and tracking, saved addresses and store credit.
+  The installation checklist, tools list and "Mark as installed" are saved
+  in the customer's browser. Changes to profile and addresses are saved on
+  Shopify's secure account page, which the Edit buttons open.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.account), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.account.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_recommend_heading = 'grs.sd.account.recommend_heading_html' | t
+  assign sd_recommend_heading = section.settings.recommend_heading | default: sd_recommend_heading
+-%}
+
+{%- liquid
+  if routes.root_url == '/'
+    assign root = ''
+  else
+    assign root = routes.root_url
+  endif
+
+  assign shop_url = section.settings.shop_url
+  if shop_url == blank
+    assign shop_url = root | append: '/collections/glass-railing'
+  endif
+  assign quote_url = section.settings.quote_url
+  if quote_url == blank
+    assign quote_url = root | append: '/pages/glass-railing-quote'
+  endif
+  assign guide_url = section.settings.guide_url
+  if guide_url == blank
+    assign guide_url = root | append: '/pages/glass-railing-installation-guide'
+  endif
+  assign docs_url = section.settings.docs_url
+  if docs_url == blank
+    assign docs_url = root | append: '/pages/glass-railing-engineering-testing'
+  endif
+  assign warranty_url = section.settings.warranty_url
+  if warranty_url == blank
+    assign warranty_url = root | append: '/pages/glass-railing-warranty'
+  endif
+  assign code_hub_url = section.settings.code_hub_url
+  if code_hub_url == blank
+    assign code_hub_url = root | append: '/pages/building-codes-glass-railing'
+  endif
+  assign installers_url = section.settings.installers_url
+  if installers_url == blank
+    assign installers_url = root | append: '/pages/glass-railing-installers'
+  endif
+  assign gallery_url = section.settings.gallery_url
+  if gallery_url == blank
+    assign gallery_url = root | append: '/pages/gallery'
+  endif
+  assign affiliate_url = section.settings.affiliate_url | default: 'https://glassrailingstore.goaffpro.com'
+  assign phone = section.settings.phone | default: '(855) 452-7715'
+  assign email = section.settings.email | default: 'info@glassrailingstore.com'
+  assign claims_email = section.settings.claims_email | default: 'claims@glassrailingstore.com'
+  assign warranty_years = section.settings.warranty_years | default: 10
+  assign phone_digits = phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.'
+
+  assign rec_collection = section.settings.recommend_collection
+  if rec_collection == blank
+    assign rec_collection = collections['glass-railing-hardware']
+  endif
+  assign blog = section.settings.blog
+  if blog == blank
+    assign blog = blogs['news']
+  endif
+
+  comment
+    Video guides: "Video guide" blocks added in the theme editor, or the default list below.
+    Each row is youtube_id|title|length.
+  endcomment
+  capture video_rows
+    for block in section.blocks
+      if block.type == 'video' and block.settings.video.id != blank
+        echo block.settings.video.id
+        echo '|'
+        echo block.settings.title | default: 'Video guide' | replace: '|', '-' | replace: '~', '-'
+        echo '|'
+        echo block.settings.duration | remove: '|' | remove: '~'
+        echo '~'
+      endif
+    endfor
+  endcapture
+  if video_rows == blank
+    assign video_rows = '9Gz9k9ePXfc|How to Install Frameless Glass Railing (Full DIY Guide)|5:19~Oy_Ce2gctBI|How to Measure for Glass Railing (Before You Order)|1:55~tobK6oXzdC8|How to Install a Glass Gate Panel (Hinges, Latch & Closing Speed)|3:33~7U2m1_agaoM|Gate Latch for Glass Gates (Open, Close, Lock)|0:32'
+  endif
+  assign videos = video_rows | split: '~'
+  assign channel_url = section.settings.channel_url | default: 'https://www.youtube.com/@GlassRailingStore/videos'
+
+  comment
+    Latest videos: YouTube keeps a list of each channel's landscape videos (no Shorts),
+    newest first. Its id is the channel id with UC replaced by UULF, so new uploads show up on their own.
+  endcomment
+  assign yt_channel = section.settings.youtube_channel_id | default: 'UCCZBekKEU_CNWp0nK7ZNDvA' | strip
+  assign yt_latest = yt_channel | replace_first: 'UC', 'UULF'
+
+  assign account_parts = routes.account_url | split: '?'
+  assign profile_url = account_parts | first | append: '/profile'
+  if account_parts.size > 1
+    assign profile_url = profile_url | append: '?' | append: account_parts.last
+  endif
+-%}
+
+{%- capture icon_check -%}<svg class="grs-i" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{%- endcapture -%}
+{%- capture icon_arrow -%}<svg class="grs-i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>{%- endcapture -%}
+{%- capture icon_truck -%}<svg class="grs-i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.75"/><circle cx="17" cy="18" r="1.75"/></svg>{%- endcapture -%}
+{%- capture icon_book -%}<svg class="grs-i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M9 8h6"/></svg>{%- endcapture -%}
+{%- capture icon_pin -%}<svg class="grs-i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>{%- endcapture -%}
+{%- capture icon_phone -%}<svg class="grs-i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>{%- endcapture -%}
+{%- capture icon_mail -%}<svg class="grs-i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>{%- endcapture -%}
+{%- capture icon_users -%}<svg class="grs-i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>{%- endcapture -%}
+{%- capture icon_gift -%}<svg class="grs-i" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8"/><path d="M12 8v12"/><path d="M12 8c-2-3-5.5-3.5-5.5-1S9 8 12 8c3 0 5.5 1.5 5.5-1S14 5 12 8z"/></svg>{%- endcapture -%}
+{%- capture icon_play -%}<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>{%- endcapture -%}
+{%- capture icon_user -%}<svg class="grs-i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>{%- endcapture -%}
+{%- capture icon_logout -%}<svg class="grs-i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>{%- endcapture -%}
+{%- capture icon_edit -%}<svg class="grs-i" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>{%- endcapture -%}
+{%- capture placeholder -%}<svg class="grs-ph" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><rect width="80" height="80" rx="12" fill="#E6E9F2"/><path d="M18 58V26h20v32M42 58V26h20v32" fill="none" stroke="#A9B2CC" stroke-width="2.5"/><path d="M14 60h52" stroke="#A9B2CC" stroke-width="2.5" stroke-linecap="round"/></svg>{%- endcapture -%}
+
+<style>
+  #grs-{{ section.id }} {
+    --grs-navy: #0E1B4D;
+    --grs-blue: #4770DB;
+    --grs-bg: #EFF0F5;
+    --grs-line: #DFE3EE;
+    --grs-soft: #F6F7FB;
+    --grs-muted: #5B6488;
+    --grs-yellow: #FFD84D;
+    background: var(--grs-bg);
+    color: var(--grs-navy);
+    line-height: 1.5;
+    font-family: inherit;
+  }
+  #grs-{{ section.id }} *, #grs-{{ section.id }} *::before, #grs-{{ section.id }} *::after { box-sizing: border-box; }
+  #grs-{{ section.id }} [hidden] { display: none !important; }
+  #grs-{{ section.id }} h1, #grs-{{ section.id }} h2, #grs-{{ section.id }} h3, #grs-{{ section.id }} p, #grs-{{ section.id }} ol, #grs-{{ section.id }} ul, #grs-{{ section.id }} dl, #grs-{{ section.id }} dd { margin: 0; }
+  #grs-{{ section.id }} ol, #grs-{{ section.id }} ul { padding: 0; list-style: none; }
+  #grs-{{ section.id }} h1, #grs-{{ section.id }} h2, #grs-{{ section.id }} h3 { font-family: var(--font-heading-family, inherit); font-weight: var(--font-heading-weight, 700); letter-spacing: normal; text-transform: none; color: inherit; }
+  #grs-{{ section.id }} a { color: var(--grs-navy); }
+  #grs-{{ section.id }} button { font-family: inherit; margin: 0; box-shadow: none; letter-spacing: normal; text-transform: none; }
+  #grs-{{ section.id }} img { display: block; max-width: 100%; }
+  #grs-{{ section.id }} .grs-i { flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-ph { width: 100%; height: 100%; display: block; }
+  #grs-{{ section.id }} .grs-wrap { max-width: 1200px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+  #grs-{{ section.id }} .grs-num { font-variant-numeric: tabular-nums; }
+
+  /* Hero */
+  #grs-{{ section.id }} .grs-hero { background: var(--grs-navy); color: #FFFFFF; position: relative; overflow: hidden; }
+  #grs-{{ section.id }} .grs-hero::after { content: ""; position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(closest-side, rgba(71, 112, 219, 0.45), rgba(71, 112, 219, 0)); pointer-events: none; }
+  #grs-{{ section.id }} .grs-hero__inner { position: relative; z-index: 1; padding-top: 48px; }
+  #grs-{{ section.id }} .grs-hero__row { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 40px; align-items: center; }
+  #grs-{{ section.id }} .grs-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--grs-yellow); }
+  #grs-{{ section.id }} .grs-hero h1 { margin-top: 12px; font-size: 40px; line-height: 1.1; color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-hero__lead { margin-top: 14px; font-size: 16px; line-height: 1.6; color: #C8D0EA; max-width: 560px; }
+  #grs-{{ section.id }} .grs-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  #grs-{{ section.id }} .grs-tabbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 40px; }
+  #grs-{{ section.id }} .grs-tabs { display: flex; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  #grs-{{ section.id }} .grs-session { display: flex; align-items: center; gap: 14px; flex-shrink: 0; min-width: 0; font-size: 14px; color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-session__who { display: inline-flex; align-items: center; gap: 8px; min-width: 0; max-width: 280px; }
+  #grs-{{ section.id }} .grs-session__who span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #grs-{{ section.id }} .grs-session__out { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 40px; border: 1px solid rgba(255, 255, 255, 0.32); color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600; white-space: nowrap; transition: background 0.2s ease, border-color 0.2s ease; }
+  #grs-{{ section.id }} .grs-session__out:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.7); }
+  #grs-{{ section.id }} .grs-tabs::-webkit-scrollbar { display: none; }
+  #grs-{{ section.id }} .grs-tabs a { flex-shrink: 0; padding: 12px 18px; border-radius: 14px 14px 0 0; text-decoration: none; font-size: 15px; font-weight: 600; color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-tabs a:hover { color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-tabs a[aria-current="page"] { background: var(--grs-bg); color: var(--grs-navy); }
+
+  /* Buttons */
+  #grs-{{ section.id }} .grs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 40px; font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent; line-height: 1.2; }
+  #grs-{{ section.id }} .grs-btn--primary { background: var(--grs-blue); color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-btn--primary:hover { color: #FFFFFF; filter: brightness(1.06); }
+  #grs-{{ section.id }} .grs-btn--white { background: #FFFFFF; color: var(--grs-navy); }
+  #grs-{{ section.id }} .grs-btn--ghost { border-color: rgba(255, 255, 255, 0.55); color: #FFFFFF; background: transparent; }
+  #grs-{{ section.id }} .grs-btn--ghost:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.08); }
+  #grs-{{ section.id }} .grs-btn--outline { border-color: var(--grs-navy); color: var(--grs-navy); background: transparent; min-height: 40px; padding: 0 18px; font-size: 14px; }
+  #grs-{{ section.id }} .grs-btn--small { min-height: 36px; padding: 0 16px; font-size: 13px; }
+  #grs-{{ section.id }} .grs-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--grs-blue); text-decoration: none; }
+  #grs-{{ section.id }} .grs-link:hover { text-decoration: underline; }
+
+  /* Project card in the hero */
+  #grs-{{ section.id }} .grs-proj { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 18px; padding: 20px; margin-bottom: 28px; backdrop-filter: blur(6px); }
+  #grs-{{ section.id }} .grs-proj__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-proj__item { display: flex; align-items: center; gap: 14px; margin-top: 14px; }
+  #grs-{{ section.id }} .grs-proj__thumb { width: 64px; height: 64px; border-radius: 12px; overflow: hidden; background: #FFFFFF; flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-proj__thumb img { width: 100%; height: 100%; object-fit: cover; }
+  #grs-{{ section.id }} .grs-proj__title { font-size: 15px; font-weight: 600; color: #FFFFFF; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-proj__meta { font-size: 13px; color: #C8D0EA; margin-top: 2px; }
+  #grs-{{ section.id }} .grs-proj__bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 18px; }
+  #grs-{{ section.id }} .grs-proj__bar span { height: 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.18); }
+  #grs-{{ section.id }} .grs-proj__bar span.is-on { background: var(--grs-yellow); }
+  #grs-{{ section.id }} .grs-proj__steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; font-size: 11px; color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-proj__list { margin-top: 12px; display: grid; gap: 10px; }
+  #grs-{{ section.id }} .grs-proj__list a { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.08); color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600; }
+  #grs-{{ section.id }} .grs-proj__list a:hover { background: rgba(255, 255, 255, 0.14); }
+  #grs-{{ section.id }} .grs-proj__list small { display: block; font-size: 12px; font-weight: 400; color: #C8D0EA; }
+
+  /* Pills */
+  #grs-{{ section.id }} .grs-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 40px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  #grs-{{ section.id }} .grs-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  #grs-{{ section.id }} .grs-pill--success { background: #E2F4EA; color: #17663A; }
+  #grs-{{ section.id }} .grs-pill--info { background: #E4EBFB; color: #2D4FA8; }
+  #grs-{{ section.id }} .grs-pill--warning { background: #FFF1D6; color: #8A4B00; }
+  #grs-{{ section.id }} .grs-pill--neutral { background: #ECEEF4; color: #4A5272; }
+  #grs-{{ section.id }} .grs-pill--hero { background: var(--grs-yellow); color: var(--grs-navy); }
+
+  /* Panes */
+  #grs-{{ section.id }} .grs-main { padding-top: 32px; padding-bottom: 72px; }
+  #grs-{{ section.id }} .grs-pane { display: none; }
+  #grs-{{ section.id }}.grs--overview .grs-pane--overview,
+  #grs-{{ section.id }}.grs--orders .grs-pane--orders,
+  #grs-{{ section.id }}.grs--install .grs-pane--install,
+  #grs-{{ section.id }}.grs--profile .grs-pane--profile { display: block; }
+  #grs-{{ section.id }} .grs-cols { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start; }
+  #grs-{{ section.id }} .grs-col { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+  #grs-{{ section.id }} .grs-card { background: #FFFFFF; border: 1px solid var(--grs-line); border-radius: 18px; padding: 24px; }
+  #grs-{{ section.id }} .grs-card--flush { padding: 0; overflow: hidden; }
+  #grs-{{ section.id }} .grs-card__head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 18px; }
+  #grs-{{ section.id }} .grs-card__title { font-size: 20px; line-height: 1.25; }
+  #grs-{{ section.id }} .grs-card__kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grs-blue); margin-bottom: 8px; }
+  #grs-{{ section.id }} .grs-note { font-size: 14px; line-height: 1.6; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-section-title { font-size: 22px; margin: 40px 0 18px; }
+
+  /* Order tracker */
+  #grs-{{ section.id }} .grs-track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 6px 0 22px; }
+  #grs-{{ section.id }} .grs-track li { position: relative; padding-top: 40px; padding-right: 10px; }
+  #grs-{{ section.id }} .grs-track li::before { content: ""; position: absolute; top: 15px; left: 32px; right: -2px; height: 3px; border-radius: 3px; background: var(--grs-line); }
+  #grs-{{ section.id }} .grs-track li:last-child::before { display: none; }
+  #grs-{{ section.id }} .grs-track li.is-done::before { background: var(--grs-blue); }
+  #grs-{{ section.id }} .grs-track__dot { position: absolute; top: 0; left: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--grs-soft); border: 2px solid var(--grs-line); color: var(--grs-muted); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  #grs-{{ section.id }} .grs-track li.is-done .grs-track__dot { background: var(--grs-blue); border-color: var(--grs-blue); color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-track li.is-current .grs-track__dot { background: #FFFFFF; border-color: var(--grs-blue); color: var(--grs-blue); box-shadow: 0 0 0 5px rgba(71, 112, 219, 0.15); }
+  #grs-{{ section.id }} .grs-track strong { display: block; font-size: 14px; }
+  #grs-{{ section.id }} .grs-track span:not(.grs-track__dot) { display: block; font-size: 13px; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-items { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--grs-line); }
+  #grs-{{ section.id }} .grs-items li { display: flex; align-items: center; gap: 14px; }
+  #grs-{{ section.id }} .grs-items__thumb { width: 56px; height: 56px; border-radius: 12px; overflow: hidden; background: var(--grs-soft); border: 1px solid var(--grs-line); flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-items__thumb img { width: 100%; height: 100%; object-fit: cover; }
+  #grs-{{ section.id }} .grs-items__name { font-size: 14px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-items__qty { font-size: 13px; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  #grs-{{ section.id }} .grs-installed-msg { display: none; margin-top: 18px; padding: 16px 18px; border-radius: 14px; background: #FFF8DB; border: 1px solid #F5DE8A; }
+  #grs-{{ section.id }} .grs-tracker.is-installed .grs-installed-msg { display: block; }
+  #grs-{{ section.id }} .grs-tracker.is-installed [data-grs-mark] { display: none; }
+
+  /* Progress */
+  #grs-{{ section.id }} .grs-progress { height: 10px; border-radius: 10px; background: var(--grs-soft); border: 1px solid var(--grs-line); overflow: hidden; }
+  #grs-{{ section.id }} .grs-progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--grs-blue), #6E8FE6); border-radius: 10px; transition: width 0.4s ease; }
+  #grs-{{ section.id }} .grs-progress-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+  #grs-{{ section.id }} .grs-progress-row strong { font-size: 28px; line-height: 1; }
+  #grs-{{ section.id }} .grs-next { margin-top: 14px; display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 14px; background: var(--grs-soft); }
+  #grs-{{ section.id }} .grs-next__num { width: 32px; height: 32px; border-radius: 50%; background: var(--grs-navy); color: #FFFFFF; font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+  /* Side cards */
+  #grs-{{ section.id }} .grs-badge-card { background: var(--grs-navy); color: #FFFFFF; border-color: var(--grs-navy); position: relative; overflow: hidden; }
+  #grs-{{ section.id }} .grs-badge-card .grs-note { color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-badge-card a.grs-link { color: var(--grs-yellow); }
+  #grs-{{ section.id }} .grs-badge { display: flex; align-items: center; gap: 14px; }
+  #grs-{{ section.id }} .grs-badge__seal { width: 64px; height: 64px; border-radius: 50%; background: var(--grs-yellow); color: var(--grs-navy); display: inline-flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-badge__seal b { font-size: 22px; }
+  #grs-{{ section.id }} .grs-badge__seal small { font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  #grs-{{ section.id }} .grs-badge h2 { font-size: 19px; color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-badge-card .grs-until { margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.08); font-size: 14px; color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-iconrow { display: flex; gap: 12px; align-items: flex-start; }
+  #grs-{{ section.id }} .grs-iconrow__icon { width: 42px; height: 42px; border-radius: 12px; background: #E4EBFB; color: var(--grs-blue); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-contact { display: grid; gap: 4px; margin-top: 8px; }
+  #grs-{{ section.id }} .grs-contact a { display: flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+  #grs-{{ section.id }} .grs-contact__icon { width: 34px; height: 34px; border-radius: 10px; background: var(--grs-soft); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--grs-blue); }
+  #grs-{{ section.id }} .grs-refer { background: var(--grs-yellow); border-color: #F2C933; }
+  #grs-{{ section.id }} .grs-refer .grs-note { color: #3B3F55; }
+
+  /* Product and article cards */
+  #grs-{{ section.id }} .grs-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  #grs-{{ section.id }} .grs-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #grs-{{ section.id }} .grs-tile { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--grs-line); border-radius: 18px; overflow: hidden; text-decoration: none; color: var(--grs-navy); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  #grs-{{ section.id }} .grs-tile:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(14, 27, 77, 0.1); color: var(--grs-navy); }
+  #grs-{{ section.id }} .grs-tile__media { aspect-ratio: 1 / 1; background: var(--grs-soft); overflow: hidden; }
+  #grs-{{ section.id }} .grs-grid--3 .grs-tile__media { aspect-ratio: 16 / 10; }
+  #grs-{{ section.id }} .grs-tile__media img { width: 100%; height: 100%; object-fit: cover; }
+  #grs-{{ section.id }} .grs-tile__body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  #grs-{{ section.id }} .grs-tile__title { font-size: 15px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-tile__meta { font-size: 13px; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-tile__price { font-size: 15px; font-weight: 700; margin-top: auto; }
+
+  /* Orders */
+  #grs-{{ section.id }} .grs-orders { display: grid; gap: 18px; }
+  #grs-{{ section.id }} .grs-order__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 18px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--grs-line); }
+  #grs-{{ section.id }} .grs-order__name { font-size: 18px; font-weight: 700; }
+  #grs-{{ section.id }} .grs-order__meta { font-size: 14px; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-order__pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  #grs-{{ section.id }} .grs-order__foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-top: 18px; }
+  #grs-{{ section.id }} .grs-order__total { font-size: 18px; font-weight: 700; }
+  #grs-{{ section.id }} .grs-empty { text-align: center; padding: 48px 24px; }
+  #grs-{{ section.id }} .grs-empty h2 { font-size: 22px; margin-bottom: 8px; }
+  #grs-{{ section.id }} .grs-empty .grs-actions { justify-content: center; }
+
+  /* Installation */
+  #grs-{{ section.id }} .grs-video { position: relative; aspect-ratio: 16 / 9; background: var(--grs-navy) center / cover no-repeat; border-radius: 18px; overflow: hidden; }
+  #grs-{{ section.id }} .grs-video button { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: linear-gradient(180deg, rgba(14, 27, 77, 0.05), rgba(14, 27, 77, 0.55)); color: #FFFFFF; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; font-size: 16px; font-weight: 600; }
+  #grs-{{ section.id }} .grs-video__play { width: 72px; height: 72px; border-radius: 50%; background: var(--grs-yellow); color: var(--grs-navy); display: inline-flex; align-items: center; justify-content: center; padding-left: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+  #grs-{{ section.id }} .grs-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  #grs-{{ section.id }} .grs-vlist { display: grid; gap: 8px; margin-top: 12px; }
+  #grs-{{ section.id }} .grs-vlist__item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 8px; border: 1px solid var(--grs-line); border-radius: 14px; background: #FFFFFF; color: var(--grs-navy); text-align: left; cursor: pointer; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+  #grs-{{ section.id }} .grs-vlist__item:hover { border-color: #C3CBE4; }
+  #grs-{{ section.id }} .grs-vlist__item.is-active { border-color: var(--grs-blue); box-shadow: 0 0 0 3px rgba(71, 112, 219, 0.15); }
+  #grs-{{ section.id }} .grs-vlist__thumb { position: relative; width: 112px; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; flex-shrink: 0; background: var(--grs-navy) center / cover no-repeat; }
+  #grs-{{ section.id }} .grs-vlist__title { font-size: 14px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-vlist__thumb--live { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--grs-yellow); background: linear-gradient(135deg, #0E1B4D, #2A3F8F); }
+  #grs-{{ section.id }} .grs-vlist__thumb--live small { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-vlist__title small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-ytlink { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: var(--grs-navy); color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-ytlink:hover { color: #FFFFFF; filter: brightness(1.12); }
+  #grs-{{ section.id }} .grs-ytlink__icon { width: 34px; height: 34px; border-radius: 50%; background: var(--grs-yellow); color: var(--grs-navy); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; padding-left: 2px; }
+  #grs-{{ section.id }} .grs-ytlink__icon svg { width: 16px; height: 16px; }
+  #grs-{{ section.id }} .grs-ytlink > span:nth-child(2) { flex: 1; }
+  #grs-{{ section.id }} .grs-shelf { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 60px) / 4); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
+  #grs-{{ section.id }} .grs-shelf::-webkit-scrollbar { display: none; }
+  #grs-{{ section.id }} .grs-shelf > * { scroll-snap-align: start; }
+  #grs-{{ section.id }} .grs-shelf__nav { display: flex; align-items: center; gap: 10px; }
+  #grs-{{ section.id }} .grs-shelf__btn { width: 36px; height: 36px; padding: 0; border-radius: 50%; border: 1px solid var(--grs-line); background: #FFFFFF; color: var(--grs-navy); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+  #grs-{{ section.id }} .grs-shelf__btn[data-grs-shelf="-1"] svg { transform: rotate(180deg); }
+  #grs-{{ section.id }} .grs-shelf__btn:disabled { opacity: 0.35; cursor: default; }
+  #grs-{{ section.id }} .grs-vcard__media.grs-vcard__media--live { cursor: default; }
+  #grs-{{ section.id }} .grs-vcard__auto { display: inline-block; margin-left: 4px; padding: 2px 8px; border-radius: 40px; background: #E2F4EA; color: #17663A; font-size: 11px; font-weight: 700; vertical-align: 2px; white-space: nowrap; }
+  #grs-{{ section.id }} .grs-vcard--channel { text-decoration: none; color: var(--grs-navy); }
+  #grs-{{ section.id }} .grs-vcard--channel:hover { color: var(--grs-navy); }
+  #grs-{{ section.id }} .grs-vcard__media.grs-vcard__channel { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 16px; text-align: center; color: #FFFFFF; background: linear-gradient(135deg, #0E1B4D, #2A3F8F); }
+  #grs-{{ section.id }} .grs-vcard__channel .grs-vcard__play { position: static; width: 44px; height: 44px; margin: 0 0 4px; flex-shrink: 0; }
+  #grs-{{ section.id }} .grs-vcard__channel strong { font-size: 16px; line-height: 1.3; }
+  #grs-{{ section.id }} .grs-vcard__channel small { font-size: 13px; color: #C8D0EA; }
+  #grs-{{ section.id }} .grs-vcard--channel:hover .grs-vcard__play { transform: scale(1.08); }
+  #grs-{{ section.id }} .grs-vcard { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  #grs-{{ section.id }} .grs-vcard__media { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: var(--grs-navy) center / cover no-repeat; cursor: pointer; }
+  #grs-{{ section.id }} .grs-vcard__media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  #grs-{{ section.id }} .grs-vcard__play { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; background: var(--grs-yellow); color: var(--grs-navy); display: inline-flex; align-items: center; justify-content: center; padding-left: 3px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.2s ease; }
+  #grs-{{ section.id }} .grs-vcard__play svg { width: 22px; height: 22px; }
+  #grs-{{ section.id }} .grs-vcard__media:hover .grs-vcard__play { transform: scale(1.08); }
+  #grs-{{ section.id }} .grs-vcard__dur { position: absolute; right: 8px; bottom: 8px; padding: 2px 6px; border-radius: 6px; background: rgba(0, 0, 0, 0.78); color: #FFFFFF; font-size: 12px; font-weight: 600; line-height: 1.4; }
+  #grs-{{ section.id }} .grs-vcard__title { font-size: 15px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-checklist { display: grid; gap: 10px; }
+  #grs-{{ section.id }} .grs-check { position: relative; display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--grs-line); background: #FFFFFF; cursor: pointer; transition: background 0.2s ease, border-color 0.2s ease; }
+  #grs-{{ section.id }} .grs-check:hover { border-color: #C3CBE4; }
+  #grs-{{ section.id }} .grs-check input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  #grs-{{ section.id }} .grs-check__box { width: 28px; height: 28px; border-radius: 8px; border: 2px solid #C3CBE4; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: transparent; background: #FFFFFF; font-size: 12px; font-weight: 700; }
+  #grs-{{ section.id }} .grs-check__box em { font-style: normal; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-check__box svg { display: none; }
+  #grs-{{ section.id }} .grs-check input:checked + .grs-check__box { background: var(--grs-blue); border-color: var(--grs-blue); color: #FFFFFF; }
+  #grs-{{ section.id }} .grs-check input:checked + .grs-check__box em { display: none; }
+  #grs-{{ section.id }} .grs-check input:checked + .grs-check__box svg { display: block; }
+  #grs-{{ section.id }} .grs-check input:focus-visible + .grs-check__box { outline: 2px solid var(--grs-blue); outline-offset: 2px; }
+  #grs-{{ section.id }} .grs-check:has(input:checked) { background: var(--grs-soft); }
+  #grs-{{ section.id }} .grs-check:has(input:checked) .grs-check__title { text-decoration: line-through; text-decoration-color: rgba(14, 27, 77, 0.35); }
+  #grs-{{ section.id }} .grs-check__title { display: block; font-size: 15px; font-weight: 600; line-height: 1.35; }
+  #grs-{{ section.id }} .grs-check__tip { display: block; font-size: 13px; color: var(--grs-muted); margin-top: 2px; }
+  #grs-{{ section.id }} .grs-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  #grs-{{ section.id }} .grs-tools .grs-check { padding: 12px 14px; align-items: center; }
+  #grs-{{ section.id }} .grs-done { display: none; margin-bottom: 18px; padding: 18px 20px; border-radius: 18px; background: var(--grs-yellow); }
+  #grs-{{ section.id }} .grs-done.is-on { display: block; }
+  #grs-{{ section.id }} .grs-tips { display: grid; gap: 14px; }
+  #grs-{{ section.id }} .grs-tips li { display: flex; gap: 12px; font-size: 14px; line-height: 1.55; color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-tips b { color: var(--grs-navy); }
+  #grs-{{ section.id }} .grs-tips__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--grs-yellow); margin-top: 8px; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(255, 216, 77, 0.3); }
+  #grs-{{ section.id }} .grs-res { display: grid; gap: 4px; }
+  #grs-{{ section.id }} .grs-res a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 48px; text-decoration: none; font-size: 15px; font-weight: 600; border-top: 1px solid var(--grs-line); }
+  #grs-{{ section.id }} .grs-res li:first-child a { border-top: 0; }
+
+  /* Profile */
+  #grs-{{ section.id }} .grs-dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 32px; font-size: 14px; }
+  #grs-{{ section.id }} .grs-dl div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  #grs-{{ section.id }} .grs-dl dt { color: var(--grs-muted); }
+  #grs-{{ section.id }} .grs-dl dd { font-weight: 600; overflow-wrap: anywhere; }
+  #grs-{{ section.id }} .grs-muted { color: var(--grs-muted); font-weight: 400; }
+  #grs-{{ section.id }} .grs-addrs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #grs-{{ section.id }} .grs-addr { border: 1px solid var(--grs-line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  #grs-{{ section.id }} .grs-addr address { font-style: normal; font-size: 14px; line-height: 1.6; color: var(--grs-muted); overflow-wrap: anywhere; }
+  #grs-{{ section.id }} .grs-addr strong { color: var(--grs-navy); }
+
+  /* Signed out */
+  #grs-{{ section.id }} .grs-signin { padding-top: 64px; padding-bottom: 72px; max-width: 640px; }
+  #grs-{{ section.id }} .grs-signin .grs-hero__lead { margin-bottom: 26px; }
+
+  @media (max-width: 1060px) {
+    #grs-{{ section.id }} .grs-hero__row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    #grs-{{ section.id }} .grs-proj { max-width: 520px; }
+    #grs-{{ section.id }} .grs-cols { grid-template-columns: minmax(0, 1fr); }
+    #grs-{{ section.id }} .grs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #grs-{{ section.id }} .grs-session__who { display: none; }
+    #grs-{{ section.id }} .grs-shelf { grid-auto-columns: calc((100% - 40px) / 2.4); }
+  }
+  @media (max-width: 720px) {
+    #grs-{{ section.id }} .grs-wrap { padding-left: 16px; padding-right: 16px; }
+    #grs-{{ section.id }} .grs-hero__inner { padding-top: 32px; }
+    #grs-{{ section.id }} .grs-hero h1 { font-size: 30px; }
+    #grs-{{ section.id }} .grs-hero__lead { font-size: 15px; }
+    #grs-{{ section.id }} .grs-hero__actions .grs-btn { flex: 1 1 auto; }
+    #grs-{{ section.id }} .grs-proj { margin-top: 20px; margin-bottom: 4px; }
+    #grs-{{ section.id }} .grs-tabbar { flex-direction: column-reverse; align-items: stretch; gap: 14px; margin-top: 24px; }
+    #grs-{{ section.id }} .grs-session { justify-content: space-between; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+    #grs-{{ section.id }} .grs-session__who { display: inline-flex; max-width: none; }
+    #grs-{{ section.id }} .grs-session__out { padding: 7px 14px; font-size: 13px; }
+    #grs-{{ section.id }} .grs-tabs a { padding: 11px 14px; font-size: 14px; }
+    #grs-{{ section.id }} .grs-main { padding-top: 20px; }
+    #grs-{{ section.id }} .grs-col, #grs-{{ section.id }} .grs-cols { gap: 16px; }
+    #grs-{{ section.id }} .grs-card { padding: 20px 18px; }
+    #grs-{{ section.id }} .grs-track { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    #grs-{{ section.id }} .grs-track li { padding: 0 0 18px 46px; min-height: 50px; }
+    #grs-{{ section.id }} .grs-track li::before { top: 34px; bottom: 2px; left: 15px; right: auto; width: 3px; height: auto; }
+    #grs-{{ section.id }} .grs-grid, #grs-{{ section.id }} .grs-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    #grs-{{ section.id }} .grs-grid--3 { display: grid; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; margin-right: -16px; padding-right: 16px; scrollbar-width: none; }
+    #grs-{{ section.id }} .grs-grid--3::-webkit-scrollbar { display: none; }
+    #grs-{{ section.id }} .grs-grid--3 > * { scroll-snap-align: start; }
+    #grs-{{ section.id }} .grs-shelf { grid-auto-columns: 78%; gap: 12px; margin-right: -16px; padding-right: 16px; }
+    #grs-{{ section.id }} .grs-shelf__btn { display: none; }
+    #grs-{{ section.id }} .grs-tools, #grs-{{ section.id }} .grs-addrs, #grs-{{ section.id }} .grs-dl { grid-template-columns: minmax(0, 1fr); }
+    #grs-{{ section.id }} .grs-section-title { margin-top: 32px; font-size: 20px; }
+  }
+</style>
+
+<div id="grs-{{ section.id }}" class="grs grs--overview" data-grs-root>
+  <script>
+    (function (root) {
+      var tab = (location.hash || '').replace('#', '');
+      if (['orders', 'install', 'profile'].indexOf(tab) !== -1) {
+        root.classList.remove('grs--overview');
+        root.classList.add('grs--' + tab);
+      }
+    })(document.getElementById('grs-{{ section.id }}'));
+  </script>
+
+  {%- if customer == blank -%}
+    <section class="grs-hero">
+      <div class="grs-wrap grs-hero__inner grs-signin">
+        <span class="grs-eyebrow">{{ sd_eyebrow | escape }}</span>
+        <h1>Your glass railing project, all in one place</h1>
+        <p class="grs-hero__lead">Sign in to track your order, follow the step-by-step install checklist, find your local building code and keep your warranty handy.</p>
+        <a class="grs-btn grs-btn--white" href="{{ routes.storefront_login_url }}">Sign in</a>
+      </div>
+    </section>
+  {%- else -%}
+    {%- paginate customer.orders by 20 -%}
+      {%- liquid
+        assign latest = customer.orders.first
+        assign greet_name = customer.first_name | default: customer.name
+
+        assign ship_state = 'none'
+        assign track_url = ''
+        assign track_company = ''
+        assign shipped_at = ''
+        if latest
+          if latest.cancelled
+            assign ship_state = 'cancelled'
+          elsif latest.fulfillment_status == 'fulfilled'
+            assign ship_state = 'shipped'
+          elsif latest.fulfillment_status == 'partial'
+            assign ship_state = 'partial'
+          elsif latest.financial_status == 'pending' or latest.financial_status == 'unpaid' or latest.financial_status == 'partially_paid'
+            assign ship_state = 'awaiting'
+          else
+            assign ship_state = 'preparing'
+          endif
+          for li in latest.line_items
+            if li.fulfillment
+              if shipped_at == blank
+                assign shipped_at = li.fulfillment.created_at
+              endif
+              if track_url == blank and li.fulfillment.tracking_url != blank
+                assign track_url = li.fulfillment.tracking_url
+                assign track_company = li.fulfillment.tracking_company
+              endif
+            endif
+          endfor
+        endif
+
+        case ship_state
+          when 'shipped'
+            assign status_label = 'Shipped'
+            assign status_tone = 'success'
+            assign bar_on = 3
+          when 'partial'
+            assign status_label = 'Partly shipped'
+            assign status_tone = 'info'
+            assign bar_on = 2
+          when 'preparing'
+            assign status_label = 'Preparing'
+            assign status_tone = 'info'
+            assign bar_on = 1
+          when 'awaiting'
+            assign status_label = 'Awaiting payment'
+            assign status_tone = 'warning'
+            assign bar_on = 1
+          when 'cancelled'
+            assign status_label = 'Cancelled'
+            assign status_tone = 'neutral'
+            assign bar_on = 0
+          else
+            assign status_label = ''
+            assign status_tone = 'neutral'
+            assign bar_on = 0
+        endcase
+
+        assign addr = customer.default_address
+        if addr == blank and latest
+          assign addr = latest.shipping_address
+        endif
+        assign code_handle = ''
+        assign region_name = ''
+        if addr
+          assign region_key = addr.country_code | append: '-' | append: addr.province_code
+          assign region_name = addr.province
+          capture code_map
+            echo 'CA-ON:ontario-building-code-for-glass-railings,CA-QC:quebec-construction-code-for-glass-railings,CA-AB:alberta-building-code-for-glass-railings,CA-BC:british-columbia-building-code-for-glass-railings,CA-MB:manitoba-building-code-for-glass-railings,CA-NB:new-brunswick-building-code-for-glass-railings,CA-NS:nova-scotia-building-code-for-glass-railings,CA-NL:newfoundland-labrador-building-code-for-glass-railings,CA-PE:pei-building-code-for-glass-railings,CA-SK:saskatchewan-building-code-for-glass-railings,CA-YT:yukon-building-code-for-glass-railings,'
+            echo 'US-AL:alabama-building-code-for-glass-railings,US-AK:alaska-building-code-for-glass-railing,US-AZ:arizona-building-code-for-glass-railings,US-AR:arkansas-building-code-for-glass-railing,US-CA:california-building-standards-code-for-glass-railings,US-CO:colorado-building-code-for-glass-railing,US-CT:connecticut-building-code-for-glass-railing,US-DE:delaware-building-code-for-glass-railing,US-FL:florida-building-code-for-glass-railings,US-GA:georgia-building-code-for-glass-railing,US-HI:hawaii-building-code-for-glass-railing,US-ID:idaho-building-code-for-glass-railing,US-IL:illinois-building-code-for-glass-railing,US-IN:indiana-building-code-for-glass-railing,US-IA:iowa-building-code-for-glass-railing,US-KS:kansas-building-code-for-glass-railing,US-KY:kentucky-building-code-for-glass-railing,US-LA:louisiana-building-code-for-glass-railing,US-ME:maine-building-code-for-glass-railing,US-MD:maryland-building-code-for-glass-railing,US-MA:massachusetts-building-code-for-glass-railing,US-MI:michigan-building-code-for-glass-railing,US-MN:minnesota-building-code-for-glass-railing,US-MS:mississippi-building-code-for-glass-railing,US-MO:missouri-building-code-for-glass-railings,US-MT:montana-building-code-for-glass-railings,'
+            echo 'US-NE:nebraska-glass-railing-codes,US-NV:nevada-glass-railing-building-codes,US-NH:new-hampshire-glass-railing-building-codes,US-NJ:new-jersey-glass-railing-codes,US-NM:new-mexico-glass-railing-building-codes,US-NY:new-york-building-code-for-glass-railings,US-NC:north-carolina-building-code-for-glass-railings,US-ND:north-dakota-glass-railing-code,US-OH:ohio-glass-railing-code,US-OK:oklahoma-glass-railing-code,US-OR:oregon-glass-railing-building-codes-guide,US-PA:pennsylvania-glass-railing-building-code-guide,US-RI:rhode-island-building-code-for-glass-railing,US-SC:south-carolina-building-code-for-glass-railings,US-SD:south-dakota-building-code-for-glass-railings,US-TN:tennessee-building-code-for-glass-railings,US-TX:texas-building-code-for-glass-railings,US-UT:utah-building-code-for-glass-railings,US-VT:vermont-building-code-for-glass-railings,US-VA:virginia-glass-railing-building-code,US-WA:washington-building-code-for-glass-railings,US-WV:west-virginia-building-code-for-glass-railings,US-WI:wisconsin-building-code-for-glass-railings,US-WY:wyoming-building-code-for-glass-railings'
+          endcapture
+          assign pairs = code_map | split: ','
+          for pair in pairs
+            assign kv = pair | split: ':'
+            if kv[0] == region_key
+              assign code_handle = kv[1]
+              break
+            endif
+          endfor
+        endif
+        assign code_page = nil
+        assign region_found = false
+        if code_handle != blank
+          assign region_page = pages[code_handle]
+          if region_page.title != blank
+            assign code_page = region_page
+            assign region_found = true
+          endif
+        endif
+        if region_found == false and addr
+          if addr.country_code == 'CA'
+            assign code_page = pages['canadian-building-code-glass-railing']
+          elsif addr.country_code == 'US'
+            assign code_page = pages['american-building-code-glass-railing']
+          endif
+          if code_page.title == blank
+            assign code_page = nil
+          endif
+        endif
+      -%}
+
+      <section class="grs-hero">
+        <div class="grs-wrap grs-hero__inner">
+          <div class="grs-hero__row">
+            <div>
+              <span class="grs-eyebrow">{{ sd_eyebrow | escape }}</span>
+              <h1>{% if greet_name != blank %}Welcome back, {{ greet_name | escape }}{% else %}Welcome back{% endif %}</h1>
+              <p class="grs-hero__lead">
+                {%- case ship_state -%}
+                  {%- when 'preparing' -%}Order {{ latest.name }} is being prepared. We'll email you tracking as soon as it ships, and in the meantime your install checklist is ready below.
+                  {%- when 'awaiting' -%}Order {{ latest.name }} is awaiting payment. As soon as it's paid we'll start preparing it.
+                  {%- when 'partial' -%}Part of order {{ latest.name }} is on its way. The rest will follow soon.
+                  {%- when 'shipped' -%}Order {{ latest.name }} is on its way{% if track_company != blank %} with {{ track_company }}{% endif %}. Time to get ready for install day!
+                  {%- when 'cancelled' -%}Order {{ latest.name }} was cancelled. Need a hand planning your railing? We're here to help.
+                  {%- else -%}Plan your glass railing with our install guide, your local building code and a step-by-step checklist, all in one place.
+                {%- endcase -%}
+              </p>
+              <div class="grs-hero__actions">
+                {%- if track_url != blank -%}
+                  <a class="grs-btn grs-btn--white" href="{{ track_url }}" target="_blank" rel="noopener">{{ icon_truck }}Track package</a>
+                {%- else -%}
+                  <a class="grs-btn grs-btn--white" href="{{ shop_url }}">Shop railings</a>
+                {%- endif -%}
+                <a class="grs-btn grs-btn--ghost" href="{{ quote_url }}">Get a free quote</a>
+              </div>
+            </div>
+
+            <div class="grs-proj">
+              {%- if latest -%}
+                {%- assign first_item = latest.line_items.first -%}
+                <div class="grs-proj__head">
+                  <span>Latest order · {{ latest.created_at | date: '%b %-d, %Y' }}</span>
+                  <span class="grs-pill grs-pill--hero">{{ status_label }}</span>
+                </div>
+                <div class="grs-proj__item">
+                  <div class="grs-proj__thumb">
+                    {%- if first_item.image -%}
+                      <img src="{{ first_item.image | image_url: width: 160 }}" alt="" width="64" height="64" loading="lazy">
+                    {%- else -%}{{ placeholder }}{%- endif -%}
+                  </div>
+                  <div>
+                    <div class="grs-proj__title">{{ first_item.title | escape }}</div>
+                    <div class="grs-proj__meta">{{ latest.name }} · {{ latest.item_count }} {% if latest.item_count == 1 %}item{% else %}items{% endif %} · {{ latest.total_price | money }}</div>
+                  </div>
+                </div>
+                <div class="grs-proj__bar" aria-hidden="true">
+                  {%- for i in (1..4) -%}<span{% if i <= bar_on %} class="is-on"{% endif %}></span>{%- endfor -%}
+                </div>
+                <div class="grs-proj__steps" aria-hidden="true"><span>Ordered</span><span>Preparing</span><span>Shipped</span><span>Installed</span></div>
+              {%- else -%}
+                <div class="grs-proj__head"><span>Start your project</span><span class="grs-pill grs-pill--hero">3 steps</span></div>
+                <div class="grs-proj__list">
+                  <a href="{{ guide_url }}"><span>1. Measure your space<small>How we lay out panels and gaps</small></span>{{ icon_arrow }}</a>
+                  <a href="{% if code_page %}{{ code_page.url }}{% else %}{{ code_hub_url }}{% endif %}"><span>2. Check your building code<small>Rules for your province or state</small></span>{{ icon_arrow }}</a>
+                  <a href="{{ quote_url }}"><span>3. Get a free quote<small>We'll size the glass and hardware</small></span>{{ icon_arrow }}</a>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+
+          <div class="grs-tabbar">
+            <nav class="grs-tabs" aria-label="Account">
+              <a href="#overview" data-grs-tab="overview" aria-current="page">Overview</a>
+              <a href="#orders" data-grs-tab="orders">Orders{% if customer.orders_count > 0 %} ({{ customer.orders_count }}){% endif %}</a>
+              <a href="#install" data-grs-tab="install">Installation</a>
+              <a href="#profile" data-grs-tab="profile">Profile &amp; addresses</a>
+            </nav>
+            <div class="grs-session">
+              <span class="grs-session__who" title="Signed in as {{ customer.email | escape }}">{{ icon_user }}<span>{{ customer.email | escape }}</span></span>
+              <a class="grs-session__out" href="{{ routes.account_logout_url }}">{{ icon_logout }}Sign out</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grs-wrap grs-main">
+
+        <div class="grs-pane grs-pane--overview">
+          <div class="grs-cols">
+            <div class="grs-col">
+              {%- if latest -%}
+                <section class="grs-card grs-tracker" data-grs-tracker data-grs-order="{{ latest.id }}" aria-labelledby="grs-tr-{{ section.id }}">
+                  <div class="grs-card__head">
+                    <div>
+                      <div class="grs-card__kicker">{{ icon_truck }}Order tracker</div>
+                      <h2 id="grs-tr-{{ section.id }}" class="grs-card__title">Order {{ latest.name }}</h2>
+                    </div>
+                    <span class="grs-pill grs-pill--{{ status_tone }}">{{ status_label }}</span>
+                  </div>
+                  {%- if ship_state != 'cancelled' -%}
+                    <ol class="grs-track">
+                      <li class="is-done">
+                        <span class="grs-track__dot">{{ icon_check }}</span>
+                        <strong>Ordered</strong>
+                        <span>{{ latest.created_at | date: '%b %-d' }}</span>
+                      </li>
+                      <li class="{% if bar_on >= 2 %}is-done{% else %}is-current{% endif %}">
+                        <span class="grs-track__dot">{% if bar_on >= 2 %}{{ icon_check }}{% else %}2{% endif %}</span>
+                        <strong>Preparing</strong>
+                        <span>{% if bar_on >= 2 %}Packed{% elsif ship_state == 'awaiting' %}After payment{% else %}Packing your order{% endif %}</span>
+                      </li>
+                      <li class="{% if bar_on >= 3 %}is-done{% elsif bar_on == 2 %}is-current{% endif %}">
+                        <span class="grs-track__dot">{% if bar_on >= 3 %}{{ icon_check }}{% else %}3{% endif %}</span>
+                        <strong>Shipped</strong>
+                        <span>{% if shipped_at != blank %}{{ shipped_at | date: '%b %-d' }}{% if track_company != blank %} · {{ track_company }}{% endif %}{% else %}We'll email tracking{% endif %}</span>
+                      </li>
+                      <li class="{% if bar_on >= 3 %}is-current{% endif %}" data-grs-install-step>
+                        <span class="grs-track__dot" data-grs-install-dot>4</span>
+                        <strong>Installed</strong>
+                        <span data-grs-install-label>Your big day</span>
+                      </li>
+                    </ol>
+                  {%- endif -%}
+                  <ul class="grs-items">
+                    {%- for li in latest.line_items limit: 4 -%}
+                      <li>
+                        <div class="grs-items__thumb">
+                          {%- if li.image -%}<img src="{{ li.image | image_url: width: 120 }}" alt="" width="56" height="56" loading="lazy">{%- else -%}{{ placeholder }}{%- endif -%}
+                        </div>
+                        <div>
+                          <div class="grs-items__name">{{ li.title | escape }}</div>
+                          <div class="grs-items__qty">Qty {{ li.quantity }}</div>
+                        </div>
+                      </li>
+                    {%- endfor -%}
+                    {%- if latest.line_items.size > 4 -%}
+                      {%- assign more = latest.line_items.size | minus: 4 -%}
+                      <li class="grs-items__qty">+ {{ more }} more {% if more == 1 %}item{% else %}items{% endif %}</li>
+                    {%- endif -%}
+                  </ul>
+                  <div class="grs-actions">
+                    {%- if track_url != blank -%}
+                      <a class="grs-btn grs-btn--primary grs-btn--small" href="{{ track_url }}" target="_blank" rel="noopener">Track package</a>
+                    {%- endif -%}
+                    <a class="grs-btn grs-btn--outline grs-btn--small" href="{{ latest.customer_order_url | default: latest.customer_url }}">View order</a>
+                    {%- if bar_on >= 3 -%}
+                      <button type="button" class="grs-btn grs-btn--outline grs-btn--small" data-grs-mark>Mark as installed</button>
+                    {%- endif -%}
+                  </div>
+                  <div class="grs-installed-msg">
+                    <strong>Congratulations on your new railing!</strong>
+                    <p class="grs-note">We'd love to see it. Send us a photo of your finished project and it could be featured in our <a href="{{ gallery_url }}">gallery</a>.</p>
+                    <div class="grs-actions" style="margin-top:12px;">
+                      <a class="grs-btn grs-btn--primary grs-btn--small" href="mailto:{{ email }}?subject=My%20finished%20glass%20railing">Share your photos</a>
+                    </div>
+                  </div>
+                </section>
+              {%- endif -%}
+
+              <section class="grs-card" aria-labelledby="grs-pr-{{ section.id }}">
+                <div class="grs-card__head">
+                  <div>
+                    <div class="grs-card__kicker">{{ icon_book }}Install checklist</div>
+                    <h2 id="grs-pr-{{ section.id }}" class="grs-card__title">Your installation progress</h2>
+                  </div>
+                  <a class="grs-link" href="#install" data-grs-show="install">Open checklist {{ icon_arrow }}</a>
+                </div>
+                <div class="grs-progress-row">
+                  <span><strong class="grs-num" data-grs-count>0</strong> <span class="grs-note">of 13 steps done</span></span>
+                  <span class="grs-note grs-num" data-grs-percent>0%</span>
+                </div>
+                <div class="grs-progress" aria-hidden="true"><span data-grs-bar></span></div>
+                <div class="grs-next">
+                  <span class="grs-next__num" data-grs-next-num>1</span>
+                  <div>
+                    <div class="grs-note">Next step</div>
+                    <strong data-grs-next-title>Mark the glass line</strong>
+                  </div>
+                </div>
+              </section>
+
+              {%- if blog and blog.articles.size > 0 -%}
+                <section aria-labelledby="grs-bl-{{ section.id }}">
+                  <div class="grs-card__head" style="margin-bottom:14px;">
+                    <h2 id="grs-bl-{{ section.id }}" class="grs-card__title">Ideas &amp; guides</h2>
+                    <a class="grs-link" href="{{ blog.url }}">All articles {{ icon_arrow }}</a>
+                  </div>
+                  <div class="grs-grid grs-grid--3">
+                    {%- for article in blog.articles limit: 3 -%}
+                      <a class="grs-tile" href="{{ article.url }}">
+                        <div class="grs-tile__media">
+                          {%- if article.image -%}<img src="{{ article.image | image_url: width: 600 }}" alt="" loading="lazy" width="600" height="375">{%- else -%}{{ placeholder }}{%- endif -%}
+                        </div>
+                        <div class="grs-tile__body">
+                          <span class="grs-tile__meta">{{ article.published_at | date: '%b %-d, %Y' }}</span>
+                          <span class="grs-tile__title">{{ article.title | escape }}</span>
+                        </div>
+                      </a>
+                    {%- endfor -%}
+                  </div>
+                </section>
+              {%- endif -%}
+            </div>
+
+            <div class="grs-col">
+              <section class="grs-card grs-badge-card" aria-labelledby="grs-wr-{{ section.id }}">
+                <div class="grs-badge">
+                  <span class="grs-badge__seal"><b>{{ warranty_years }}</b><small>years</small></span>
+                  <div>
+                    <h2 id="grs-wr-{{ section.id }}">No Rust Promise</h2>
+                    <p class="grs-note">Marine-grade 2205 stainless hardware, guaranteed not to rust.</p>
+                  </div>
+                </div>
+                {%- if latest and ship_state != 'cancelled' -%}
+                  {%- assign until_year = latest.created_at | date: '%Y' | plus: warranty_years -%}
+                  <div class="grs-until">Order {{ latest.name }} is covered until <strong>{{ latest.created_at | date: '%B' }} {{ until_year }}</strong></div>
+                {%- else -%}
+                  <div class="grs-until">Every order is covered for {{ warranty_years }} years.</div>
+                {%- endif -%}
+                <p class="grs-note" style="margin-top:14px;">Questions or a claim? Email <a class="grs-link" href="mailto:{{ claims_email }}">{{ claims_email }}</a></p>
+                <p style="margin-top:6px;"><a class="grs-link" href="{{ warranty_url }}">Warranty details {{ icon_arrow }}</a></p>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-cd-{{ section.id }}">
+                <div class="grs-iconrow">
+                  <span class="grs-iconrow__icon">{{ icon_pin }}</span>
+                  <div>
+                    <div class="grs-card__kicker" style="margin-bottom:4px;">Your local building code</div>
+                    {%- if region_found -%}
+                      <h2 id="grs-cd-{{ section.id }}" class="grs-card__title">{{ region_name | escape }}</h2>
+                      <p class="grs-note" style="margin-top:6px;">Heights, loads and gate rules for glass railings where you live.</p>
+                      <p style="margin-top:10px;"><a class="grs-link" href="{{ code_page.url }}">Read the {{ region_name | escape }} guide {{ icon_arrow }}</a></p>
+                    {%- elsif code_page -%}
+                      <h2 id="grs-cd-{{ section.id }}" class="grs-card__title">{{ code_page.title | escape }}</h2>
+                      <p class="grs-note" style="margin-top:6px;">Heights, loads and gate rules for glass railings.</p>
+                      <p style="margin-top:10px;"><a class="grs-link" href="{{ code_page.url }}">Read the guide {{ icon_arrow }}</a></p>
+                    {%- else -%}
+                      <h2 id="grs-cd-{{ section.id }}" class="grs-card__title">Find your building code</h2>
+                      <p class="grs-note" style="margin-top:6px;">Add your address and we'll show the guide for your province or state.</p>
+                      <p style="margin-top:10px;"><a class="grs-link" href="{{ code_hub_url }}">Browse building codes {{ icon_arrow }}</a></p>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-hp-{{ section.id }}">
+                <h2 id="grs-hp-{{ section.id }}" class="grs-card__title">Need a hand?</h2>
+                <p class="grs-note" style="margin-top:6px;">Our team helps homeowners every day with sizing, installs and orders.</p>
+                <div class="grs-contact">
+                  <a href="tel:{{ phone_digits }}"><span class="grs-contact__icon">{{ icon_phone }}</span>{{ phone | escape }}</a>
+                  <a href="mailto:{{ email }}"><span class="grs-contact__icon">{{ icon_mail }}</span>{{ email | escape }}</a>
+                  <a href="{{ installers_url }}"><span class="grs-contact__icon">{{ icon_users }}</span>Find a certified installer</a>
+                </div>
+              </section>
+
+              <section class="grs-card grs-refer" aria-labelledby="grs-rf-{{ section.id }}">
+                <div class="grs-iconrow">
+                  <span class="grs-iconrow__icon" style="background:#FFFFFF;color:var(--grs-navy);">{{ icon_gift }}</span>
+                  <div>
+                    <h2 id="grs-rf-{{ section.id }}" class="grs-card__title">Love your railing?</h2>
+                    <p class="grs-note" style="margin-top:6px;">Refer friends and neighbours through our affiliate program and earn on every order they place.</p>
+                    <p style="margin-top:10px;"><a class="grs-link" style="color:var(--grs-navy);" href="{{ affiliate_url }}" target="_blank" rel="noopener">Join the program {{ icon_arrow }}</a></p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="grs-card__head" style="margin:40px 0 18px;">
+            <h2 class="grs-card__title" style="font-size:22px;">Video guides</h2>
+            <div class="grs-shelf__nav">
+              <a class="grs-link" href="{{ channel_url }}" target="_blank" rel="noopener">Our YouTube channel {{ icon_arrow }}</a>
+              <button type="button" class="grs-shelf__btn" data-grs-shelf="-1" aria-label="Scroll videos left" disabled>{{ icon_arrow }}</button>
+              <button type="button" class="grs-shelf__btn" data-grs-shelf="1" aria-label="Scroll videos right">{{ icon_arrow }}</button>
+            </div>
+          </div>
+          <div class="grs-shelf" data-grs-shelf-track>
+            <div class="grs-vcard">
+              <div class="grs-vcard__media grs-vcard__media--live">
+                <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list={{ yt_latest | escape }}&rel=0" title="Latest videos from our YouTube channel" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="grs-vcard__title">Latest videos <span class="grs-vcard__auto">Always up to date</span></div>
+            </div>
+            {%- for row in videos -%}
+              {%- assign v = row | split: '|' -%}
+              <div class="grs-vcard">
+                <button type="button" class="grs-vcard__media" data-grs-play="{{ v[0] | escape }}" data-grs-title="{{ v[1] | escape }}" style="background-image:url('https://i.ytimg.com/vi/{{ v[0] | escape }}/hqdefault.jpg');" aria-label="Play video: {{ v[1] | escape }}">
+                  <span class="grs-vcard__play">{{ icon_play }}</span>
+                  {%- if v[2] != blank -%}<span class="grs-vcard__dur">{{ v[2] | escape }}</span>{%- endif -%}
+                </button>
+                <div class="grs-vcard__title">{{ v[1] | escape }}</div>
+              </div>
+            {%- endfor -%}
+            <a class="grs-vcard grs-vcard--channel" href="{{ channel_url }}" target="_blank" rel="noopener">
+              <span class="grs-vcard__media grs-vcard__channel">
+                <span class="grs-vcard__play">{{ icon_play }}</span>
+                <strong>Watch the other installation videos</strong>
+                <small>on our YouTube channel</small>
+              </span>
+              <span class="grs-vcard__title">{{ shop.name | escape }} on YouTube</span>
+            </a>
+          </div>
+
+          {%- if rec_collection and rec_collection.products.size > 0 -%}
+            <div class="grs-card__head" style="margin:40px 0 18px;">
+              <h2 class="grs-card__title" style="font-size:22px;">{{ sd_recommend_heading | default: 'Complete your railing' | escape }}</h2>
+              <a class="grs-link" href="{{ rec_collection.url }}">Shop {{ rec_collection.title | escape }} {{ icon_arrow }}</a>
+            </div>
+            <div class="grs-grid">
+              {%- for product in rec_collection.products limit: 4 -%}
+                <a class="grs-tile" href="{{ product.url }}">
+                  <div class="grs-tile__media">
+                    {%- if product.featured_image -%}<img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy" width="500" height="500">{%- else -%}{{ placeholder }}{%- endif -%}
+                  </div>
+                  <div class="grs-tile__body">
+                    <span class="grs-tile__title">{{ product.title | escape }}</span>
+                    <span class="grs-tile__price">{% if product.price_varies %}From {% endif %}{{ product.price | money }}</span>
+                  </div>
+                </a>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+
+        <div class="grs-pane grs-pane--orders">
+          {%- if customer.orders.size == 0 -%}
+            <div class="grs-card grs-empty">
+              <h2>No orders yet</h2>
+              <p class="grs-note">When you place an order, you'll be able to track it here step by step.</p>
+              <div class="grs-actions">
+                <a class="grs-btn grs-btn--primary" href="{{ shop_url }}">Shop railings</a>
+                <a class="grs-btn grs-btn--outline" href="{{ quote_url }}">Get a free quote</a>
+              </div>
+            </div>
+          {%- else -%}
+            <div class="grs-orders">
+              {%- for order in customer.orders -%}
+                {%- liquid
+                  case order.financial_status
+                    when 'paid'
+                      assign pay_label = 'Paid'
+                      assign pay_tone = 'success'
+                    when 'pending', 'unpaid', 'partially_paid', 'expired'
+                      assign pay_label = 'Awaiting payment'
+                      assign pay_tone = 'warning'
+                    when 'refunded'
+                      assign pay_label = 'Refunded'
+                      assign pay_tone = 'neutral'
+                    when 'partially_refunded'
+                      assign pay_label = 'Partly refunded'
+                      assign pay_tone = 'neutral'
+                    when 'authorized'
+                      assign pay_label = 'Payment authorized'
+                      assign pay_tone = 'info'
+                    else
+                      assign pay_label = order.financial_status_label
+                      assign pay_tone = 'neutral'
+                  endcase
+                  if order.cancelled
+                    assign ful_label = 'Cancelled'
+                    assign ful_tone = 'neutral'
+                  elsif order.fulfillment_status == 'fulfilled'
+                    assign ful_label = 'Shipped'
+                    assign ful_tone = 'success'
+                  elsif order.fulfillment_status == 'partial'
+                    assign ful_label = 'Partly shipped'
+                    assign ful_tone = 'info'
+                  else
+                    assign ful_label = 'Preparing'
+                    assign ful_tone = 'info'
+                  endif
+                  assign o_track = ''
+                  for li in order.line_items
+                    if o_track == blank and li.fulfillment and li.fulfillment.tracking_url != blank
+                      assign o_track = li.fulfillment.tracking_url
+                    endif
+                  endfor
+                  assign reorder_ok = true
+                  assign reorder_parts = ''
+                  for li in order.line_items
+                    if li.variant_id
+                      assign reorder_parts = reorder_parts | append: li.variant_id | append: ':' | append: li.quantity | append: ','
+                    else
+                      assign reorder_ok = false
+                    endif
+                  endfor
+                  if reorder_parts == blank
+                    assign reorder_ok = false
+                  endif
+                  assign reorder_parts = reorder_parts | remove_last: ','
+                -%}
+                <article class="grs-card" aria-label="Order {{ order.name }}">
+                  <div class="grs-order__head">
+                    <div>
+                      <div class="grs-order__name">Order {{ order.name }}</div>
+                      <div class="grs-order__meta">Placed {{ order.created_at | date: '%B %-d, %Y' }}</div>
+                    </div>
+                    <div class="grs-order__pills">
+                      <span class="grs-pill grs-pill--{{ pay_tone }}">{{ pay_label | escape }}</span>
+                      <span class="grs-pill grs-pill--{{ ful_tone }}">{{ ful_label }}</span>
+                    </div>
+                  </div>
+                  <ul class="grs-items" style="border-top:0;padding-top:0;">
+                    {%- for li in order.line_items limit: 6 -%}
+                      <li>
+                        <div class="grs-items__thumb">
+                          {%- if li.image -%}<img src="{{ li.image | image_url: width: 120 }}" alt="" width="56" height="56" loading="lazy">{%- else -%}{{ placeholder }}{%- endif -%}
+                        </div>
+                        <div>
+                          <div class="grs-items__name">{{ li.title | escape }}</div>
+                          <div class="grs-items__qty">Qty {{ li.quantity }}</div>
+                        </div>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  <div class="grs-order__foot">
+                    <span class="grs-order__total grs-num">{{ order.total_price | money }}</span>
+                    <div class="grs-actions" style="margin-top:0;">
+                      {%- if o_track != blank -%}
+                        <a class="grs-btn grs-btn--primary grs-btn--small" href="{{ o_track }}" target="_blank" rel="noopener">Track package</a>
+                      {%- endif -%}
+                      <a class="grs-btn grs-btn--outline grs-btn--small" href="{{ order.customer_order_url | default: order.customer_url }}">View order</a>
+                      {%- if reorder_ok -%}
+                        <a class="grs-btn grs-btn--outline grs-btn--small" href="{{ routes.cart_url }}/{{ reorder_parts }}">Buy again</a>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </article>
+              {%- endfor -%}
+            </div>
+            {%- if paginate.pages > 1 -%}
+              <div class="grs-actions" style="justify-content:center;margin-top:24px;">
+                {%- if paginate.previous -%}<a class="grs-btn grs-btn--outline grs-btn--small" href="{{ paginate.previous.url }}#orders">Newer orders</a>{%- endif -%}
+                {%- if paginate.next -%}<a class="grs-btn grs-btn--outline grs-btn--small" href="{{ paginate.next.url }}#orders">Older orders</a>{%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        <div class="grs-pane grs-pane--install">
+          <div class="grs-cols">
+            <div class="grs-col">
+              <div class="grs-done" data-grs-done>
+                <strong>All 13 steps done. Your railing is finished!</strong>
+                <p style="margin-top:4px;">Send us a photo of your project, we'd love to see it. <a href="mailto:{{ email }}?subject=My%20finished%20glass%20railing" style="font-weight:700;">Share your photos</a></p>
+              </div>
+              <section class="grs-card" aria-labelledby="grs-cl-{{ section.id }}">
+                <div class="grs-card__head">
+                  <div>
+                    <div class="grs-card__kicker">{{ icon_book }}Step by step</div>
+                    <h2 id="grs-cl-{{ section.id }}" class="grs-card__title">Installation checklist</h2>
+                  </div>
+                  <span class="grs-note grs-num"><strong data-grs-count>0</strong> of 13 done</span>
+                </div>
+                <div class="grs-progress" style="margin-bottom:18px;" aria-hidden="true"><span data-grs-bar></span></div>
+                {%- capture steps -%}Mark the glass line|Snap a chalk line where the glass will stand.~Lay out panels and gaps|Mark each panel with a 1" gap between panels (3/4" to 2" works).~Mark the spigot positions|About 25% of the glass length in from each edge.~Drill the anchor holes|Use the spigot as a template and stay on the chalk line.~Fasten the spigots|Screw them down, keeping each one on the line.~Level the spigots|Check each spigot is straight with a magnetic level.~Set the glass|A two-person job: lower each panel into its spigots.~Match the panel heights|Bring every panel level with the tallest one.~Square up the angles|Start from the corners and align each panel.~Fit the clamps|Usually about 6" below the top of the glass.~Install the cap rail|Clean the edge, seat the gasket and press the rail on.~Hang the gate|Mount the hinges and latch.~Add the gate lock|Fit it on the outside with the recommended spacing.{%- endcapture -%}
+                {%- assign step_rows = steps | split: '~' -%}
+                <div class="grs-checklist" data-grs-steps>
+                  {%- for row in step_rows -%}
+                    {%- assign parts = row | split: '|' -%}
+                    <label class="grs-check">
+                      <input type="checkbox" value="{{ forloop.index }}" data-grs-step="{{ forloop.index }}" data-grs-title="{{ parts[0] | escape }}">
+                      <span class="grs-check__box"><em>{{ forloop.index }}</em>{{ icon_check }}</span>
+                      <span>
+                        <span class="grs-check__title">{{ parts[0] }}</span>
+                        <span class="grs-check__tip">{{ parts[1] }}</span>
+                      </span>
+                    </label>
+                  {%- endfor -%}
+                </div>
+                <p class="grs-note" style="margin-top:16px;">Your progress is saved on this device. Full details, photos and diagrams are in the <a class="grs-link" href="{{ guide_url }}">installation guide</a>.</p>
+              </section>
+            </div>
+
+            <div class="grs-col">
+              <section aria-labelledby="grs-vd-{{ section.id }}">
+                <h2 id="grs-vd-{{ section.id }}" class="grs-card__title" style="margin-bottom:12px;">Video guides</h2>
+                {%- if videos.size > 0 -%}
+                  {%- assign v = videos.first | split: '|' -%}
+                  <div class="grs-video" data-grs-player style="background-image:url('https://i.ytimg.com/vi/{{ v[0] | escape }}/hqdefault.jpg');">
+                    <button type="button" data-grs-play="{{ v[0] | escape }}" data-grs-title="{{ v[1] | escape }}" aria-label="Play video: {{ v[1] | escape }}"><span class="grs-video__play">{{ icon_play }}</span></button>
+                  </div>
+                {%- else -%}
+                  <div class="grs-video" data-grs-player>
+                    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list={{ yt_latest | escape }}&rel=0" title="Latest videos from our YouTube channel" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                {%- endif -%}
+                <ul class="grs-vlist">
+                  {%- for row in videos -%}
+                    {%- assign v = row | split: '|' -%}
+                    <li>
+                      <button type="button" class="grs-vlist__item{% if forloop.first %} is-active{% endif %}" data-grs-pick="{{ v[0] | escape }}" data-grs-title="{{ v[1] | escape }}"{% if forloop.first %} aria-current="true"{% endif %}>
+                        <span class="grs-vlist__thumb" style="background-image:url('https://i.ytimg.com/vi/{{ v[0] | escape }}/mqdefault.jpg');">
+                          {%- if v[2] != blank -%}<span class="grs-vcard__dur">{{ v[2] | escape }}</span>{%- endif -%}
+                        </span>
+                        <span class="grs-vlist__title">{{ v[1] | escape }}</span>
+                      </button>
+                    </li>
+                  {%- endfor -%}
+                  <li>
+                    <button type="button" class="grs-vlist__item{% if videos.size == 0 %} is-active{% endif %}" data-grs-pick="list:{{ yt_latest | escape }}" data-grs-title="Latest videos from our YouTube channel"{% if videos.size == 0 %} aria-current="true"{% endif %}>
+                      <span class="grs-vlist__thumb grs-vlist__thumb--live">{{ icon_play }}<small>Latest</small></span>
+                      <span class="grs-vlist__title">Latest videos<small>Updates on its own when we post a new video</small></span>
+                    </button>
+                  </li>
+                </ul>
+                <a class="grs-ytlink" href="{{ channel_url }}" target="_blank" rel="noopener"><span class="grs-ytlink__icon">{{ icon_play }}</span><span>Watch the other installation videos on our YouTube channel</span>{{ icon_arrow }}</a>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-tl-{{ section.id }}">
+                <h2 id="grs-tl-{{ section.id }}" class="grs-card__title" style="margin-bottom:14px;">Tools you'll need</h2>
+                {%- assign tools = 'Measuring tape|Level (magnetic)|Pencil and chalk line|Power drill with 1/8" and 5/16" bits|Allen key|Wrench' | split: '|' -%}
+                <div class="grs-tools" style="grid-template-columns:minmax(0,1fr);" data-grs-tools>
+                  {%- for tool in tools -%}
+                    <label class="grs-check">
+                      <input type="checkbox" value="{{ forloop.index }}" data-grs-tool="{{ forloop.index }}">
+                      <span class="grs-check__box">{{ icon_check }}</span>
+                      <span class="grs-check__title" style="font-weight:500;">{{ tool }}</span>
+                    </label>
+                  {%- endfor -%}
+                </div>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-ct-{{ section.id }}">
+                <h2 id="grs-ct-{{ section.id }}" class="grs-card__title" style="margin-bottom:14px;">Care for your railing</h2>
+                <ul class="grs-tips">
+                  <li><span class="grs-tips__dot"></span><span><b>Glass:</b> a soft cloth and a non-abrasive glass cleaner. Skip scouring pads and razor blades.</span></li>
+                  <li><span class="grs-tips__dot"></span><span><b>Hardware:</b> rinse with fresh water a few times a year, more often near pools or salt water.</span></li>
+                  <li><span class="grs-tips__dot"></span><span><b>Each spring:</b> check the clamps and cap rail and re-tighten anything loose.</span></li>
+                  <li><span class="grs-tips__dot"></span><span><b>Winter:</b> use a plastic shovel near the glass and rinse off de-icing salt.</span></li>
+                </ul>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-rs-{{ section.id }}">
+                <h2 id="grs-rs-{{ section.id }}" class="grs-card__title" style="margin-bottom:6px;">Documents</h2>
+                <ul class="grs-res">
+                  <li><a href="{{ guide_url }}">Installation guide {{ icon_arrow }}</a></li>
+                  <li><a href="{{ docs_url }}">Engineering documents {{ icon_arrow }}</a></li>
+                  <li><a href="{% if code_page %}{{ code_page.url }}{% else %}{{ code_hub_url }}{% endif %}">Building code {{ icon_arrow }}</a></li>
+                  <li><a href="{{ warranty_url }}">Warranty / No Rust Promise {{ icon_arrow }}</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="grs-pane grs-pane--profile">
+          <div class="grs-cols">
+            <div class="grs-col">
+              <section class="grs-card" aria-labelledby="grs-pd-{{ section.id }}">
+                <div class="grs-card__head">
+                  <h2 id="grs-pd-{{ section.id }}" class="grs-card__title">Personal details</h2>
+                  <a class="grs-btn grs-btn--outline grs-btn--small" href="{{ profile_url }}">{{ icon_edit }}Edit</a>
+                </div>
+                <dl class="grs-dl">
+                  <div><dt>Name</dt><dd>{% if customer.name != blank %}{{ customer.name | escape }}{% else %}<span class="grs-muted">Not added</span>{% endif %}</dd></div>
+                  <div><dt>Email</dt><dd>{{ customer.email | escape }}</dd></div>
+                  <div><dt>Phone</dt><dd>{% if customer.phone != blank %}{{ customer.phone | escape }}{% else %}<span class="grs-muted">Not added</span>{% endif %}</dd></div>
+                  <div><dt>Email updates</dt><dd>{% if customer.accepts_marketing %}Subscribed{% else %}Not subscribed{% endif %}</dd></div>
+                </dl>
+              </section>
+
+              <section class="grs-card" aria-labelledby="grs-pa-{{ section.id }}">
+                <div class="grs-card__head">
+                  <h2 id="grs-pa-{{ section.id }}" class="grs-card__title">Saved addresses</h2>
+                  <a class="grs-btn grs-btn--outline grs-btn--small" href="{{ profile_url }}">{{ icon_edit }}Add or edit</a>
+                </div>
+                {%- if customer.addresses_count > 0 -%}
+                  <ul class="grs-addrs">
+                    {%- for address in customer.addresses limit: 20 -%}
+                      {%- liquid
+                        assign is_default = false
+                        if customer.default_address and address.id == customer.default_address.id
+                          assign is_default = true
+                        endif
+                        assign addr_city = address.city | default: ''
+                        if address.province_code != blank
+                          assign addr_city = addr_city | append: ' ' | append: address.province_code
+                        endif
+                        if address.zip != blank
+                          assign addr_city = addr_city | append: ' ' | append: address.zip
+                        endif
+                        assign addr_city = addr_city | strip
+                      -%}
+                      <li class="grs-addr">
+                        {%- if is_default -%}<span class="grs-pill grs-pill--info">Default</span>{%- endif -%}
+                        <address>
+                          {%- if address.name != blank -%}<strong>{{ address.name | escape }}</strong><br>{%- endif -%}
+                          {%- if address.address1 != blank -%}{{ address.address1 | escape }}<br>{%- endif -%}
+                          {%- if address.address2 != blank -%}{{ address.address2 | escape }}<br>{%- endif -%}
+                          {%- if addr_city != blank -%}{{ addr_city | escape }}<br>{%- endif -%}
+                          {{- address.country.name | default: address.country_code | escape -}}
+                          {%- if address.phone != blank -%}<br>{{ address.phone | escape }}{%- endif -%}
+                        </address>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- else -%}
+                  <p class="grs-note">No saved addresses yet. Add one to check out faster and see your local building code.</p>
+                {%- endif -%}
+              </section>
+            </div>
+
+            <div class="grs-col">
+              <section class="grs-card" aria-labelledby="grs-so-{{ section.id }}">
+                <h2 id="grs-so-{{ section.id }}" class="grs-card__title">Sign-in</h2>
+                <p class="grs-note" style="margin-top:6px;">Signed in as <strong style="color:var(--grs-navy);">{{ customer.email | escape }}</strong></p>
+                <div class="grs-actions"><a class="grs-btn grs-btn--outline grs-btn--small" href="{{ routes.account_logout_url }}">Sign out</a></div>
+              </section>
+              <section class="grs-card" aria-labelledby="grs-hp2-{{ section.id }}">
+                <h2 id="grs-hp2-{{ section.id }}" class="grs-card__title">Need a hand?</h2>
+                <div class="grs-contact">
+                  <a href="tel:{{ phone_digits }}"><span class="grs-contact__icon">{{ icon_phone }}</span>{{ phone | escape }}</a>
+                  <a href="mailto:{{ email }}"><span class="grs-contact__icon">{{ icon_mail }}</span>{{ email | escape }}</a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    {%- endpaginate -%}
+  {%- endif -%}
+</div>
+
+{%- if customer -%}
+  <script>
+    (function () {
+      var root = document.getElementById('grs-{{ section.id }}');
+      if (!root) return;
+      var TABS = ['overview', 'orders', 'install', 'profile'];
+      var tabs = root.querySelectorAll('[data-grs-tab]');
+
+      function show(name, scroll) {
+        if (TABS.indexOf(name) === -1) name = 'overview';
+        TABS.forEach(function (t) { root.classList.toggle('grs--' + t, t === name); });
+        shelfState();
+        tabs.forEach(function (tab) {
+          if (tab.getAttribute('data-grs-tab') === name) tab.setAttribute('aria-current', 'page');
+          else tab.removeAttribute('aria-current');
+        });
+        if (scroll) {
+          var nav = root.querySelector('.grs-tabs');
+          var top = nav.getBoundingClientRect().top + window.pageYOffset - 16;
+          if (window.pageYOffset > top) window.scrollTo(0, top);
+        }
+      }
+      function fromUrl() { show((location.hash || '#overview').slice(1), false); }
+      root.addEventListener('click', function (event) {
+        var link = event.target.closest ? event.target.closest('[data-grs-tab], [data-grs-show]') : null;
+        if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.button > 0) return;
+        event.preventDefault();
+        var name = link.getAttribute('data-grs-tab') || link.getAttribute('data-grs-show');
+        history.pushState(null, '', location.pathname + location.search + (name === 'overview' ? '' : '#' + name));
+        show(name, true);
+      });
+      window.addEventListener('popstate', fromUrl);
+      window.addEventListener('hashchange', fromUrl);
+      fromUrl();
+
+      function load(key) { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { return []; } }
+      function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+
+      var stepKey = 'grs-install-{{ customer.id }}';
+      var toolKey = 'grs-tools-{{ customer.id }}';
+      var stepInputs = root.querySelectorAll('[data-grs-step]');
+      var toolInputs = root.querySelectorAll('[data-grs-tool]');
+      var total = stepInputs.length;
+
+      function refresh() {
+        var done = 0, next = null;
+        stepInputs.forEach(function (input) {
+          if (input.checked) done += 1;
+          else if (!next) next = input;
+        });
+        var pct = total ? Math.round((done / total) * 100) : 0;
+        root.querySelectorAll('[data-grs-count]').forEach(function (el) { el.textContent = done; });
+        root.querySelectorAll('[data-grs-percent]').forEach(function (el) { el.textContent = pct + '%'; });
+        root.querySelectorAll('[data-grs-bar]').forEach(function (el) { el.style.width = pct + '%'; });
+        var num = root.querySelector('[data-grs-next-num]');
+        var title = root.querySelector('[data-grs-next-title]');
+        if (num && title) {
+          if (next) { num.textContent = next.value; title.textContent = next.getAttribute('data-grs-title'); }
+          else { num.textContent = '✓'; title.textContent = 'All done. Enjoy your new railing!'; }
+        }
+        var doneBox = root.querySelector('[data-grs-done]');
+        if (doneBox) doneBox.classList.toggle('is-on', done === total && total > 0);
+      }
+      function bind(inputs, key) {
+        var saved = load(key);
+        inputs.forEach(function (input) {
+          input.checked = saved.indexOf(input.value) !== -1;
+          input.addEventListener('change', function () {
+            var values = [];
+            inputs.forEach(function (i) { if (i.checked) values.push(i.value); });
+            save(key, values);
+            refresh();
+          });
+        });
+      }
+      bind(stepInputs, stepKey);
+      bind(toolInputs, toolKey);
+      refresh();
+
+      var tracker = root.querySelector('[data-grs-tracker]');
+      if (tracker) {
+        var installKey = 'grs-installed-' + tracker.getAttribute('data-grs-order');
+        function markInstalled(date) {
+          tracker.classList.add('is-installed');
+          var step = tracker.querySelector('[data-grs-install-step]');
+          if (step) { step.classList.remove('is-current'); step.classList.add('is-done'); }
+          var dot = tracker.querySelector('[data-grs-install-dot]');
+          if (dot) dot.innerHTML = '{{ icon_check | strip_newlines }}';
+          var label = tracker.querySelector('[data-grs-install-label]');
+          if (label) label.textContent = date ? 'Installed ' + date : 'Installed';
+        }
+        try {
+          var stored = localStorage.getItem(installKey);
+          if (stored) markInstalled(stored);
+        } catch (e) {}
+        var markBtn = tracker.querySelector('[data-grs-mark]');
+        if (markBtn) markBtn.addEventListener('click', function () {
+          var date = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+          try { localStorage.setItem(installKey, date); } catch (e) {}
+          markInstalled(date);
+        });
+      }
+
+      function embed(id, title) {
+        var frame = document.createElement('iframe');
+        frame.src = id.indexOf('list:') === 0
+          ? 'https://www.youtube-nocookie.com/embed/videoseries?list=' + encodeURIComponent(id.slice(5)) + '&autoplay=1&rel=0'
+          : 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+        frame.title = title || 'Video';
+        frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+        frame.setAttribute('allowfullscreen', '');
+        return frame;
+      }
+      root.addEventListener('click', function (event) {
+        var target = event.target.closest ? event.target.closest('[data-grs-play], [data-grs-pick]') : null;
+        if (!target) return;
+        var title = target.getAttribute('data-grs-title');
+        var player = root.querySelector('[data-grs-player]');
+        if (target.hasAttribute('data-grs-pick')) {
+          if (!player) return;
+          root.querySelectorAll('[data-grs-pick]').forEach(function (item) {
+            var on = item === target;
+            item.classList.toggle('is-active', on);
+            if (on) item.setAttribute('aria-current', 'true');
+            else item.removeAttribute('aria-current');
+          });
+          player.innerHTML = '';
+          player.appendChild(embed(target.getAttribute('data-grs-pick'), title));
+          if (player.getBoundingClientRect().top < 0) player.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        var id = target.getAttribute('data-grs-play');
+        if (player && player.contains(target)) {
+          player.innerHTML = '';
+          player.appendChild(embed(id, title));
+        } else {
+          var box = document.createElement('div');
+          box.className = 'grs-vcard__media';
+          box.appendChild(embed(id, title));
+          target.parentNode.replaceChild(box, target);
+        }
+      });
+
+      var track = root.querySelector('[data-grs-shelf-track]');
+      var shelfButtons = root.querySelectorAll('[data-grs-shelf]');
+      function shelfState() {
+        if (!track) return;
+        shelfButtons.forEach(function (button) {
+          var dir = Number(button.getAttribute('data-grs-shelf'));
+          button.disabled = dir < 0 ? track.scrollLeft < 4 : track.scrollLeft + track.clientWidth > track.scrollWidth - 4;
+        });
+      }
+      if (track) {
+        shelfButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            track.scrollBy({ left: Number(button.getAttribute('data-grs-shelf')) * track.clientWidth * 0.9, behavior: 'smooth' });
+          });
+        });
+        track.addEventListener('scroll', shelfState, { passive: true });
+        window.addEventListener('resize', shelfState);
+        shelfState();
+      }
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "GRS My Account",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Label above the greeting",
+      "placeholder": "My glass railing project",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "header",
+      "content": "Links"
+    },
+    {
+      "type": "url",
+      "id": "shop_url",
+      "label": "Shop button",
+      "info": "Leave empty to use /collections/glass-railing"
+    },
+    {
+      "type": "url",
+      "id": "quote_url",
+      "label": "Quote button",
+      "info": "Leave empty to use /pages/glass-railing-quote"
+    },
+    {
+      "type": "url",
+      "id": "guide_url",
+      "label": "Installation guide",
+      "info": "Leave empty to use /pages/glass-railing-installation-guide"
+    },
+    {
+      "type": "url",
+      "id": "docs_url",
+      "label": "Engineering documents",
+      "info": "Leave empty to use /pages/glass-railing-engineering-testing"
+    },
+    {
+      "type": "url",
+      "id": "warranty_url",
+      "label": "Warranty page",
+      "info": "Leave empty to use /pages/glass-railing-warranty"
+    },
+    {
+      "type": "url",
+      "id": "code_hub_url",
+      "label": "Building codes page",
+      "info": "Leave empty to use /pages/building-codes-glass-railing"
+    },
+    {
+      "type": "url",
+      "id": "installers_url",
+      "label": "Installer network",
+      "info": "Leave empty to use /pages/glass-railing-installers"
+    },
+    {
+      "type": "url",
+      "id": "gallery_url",
+      "label": "Gallery",
+      "info": "Leave empty to use /pages/gallery"
+    },
+    {
+      "type": "url",
+      "id": "affiliate_url",
+      "label": "Affiliate program",
+      "info": "Leave empty to use https://glassrailingstore.goaffpro.com"
+    },
+    {
+      "type": "header",
+      "content": "Video guides"
+    },
+    {
+      "type": "paragraph",
+      "content": "The Latest videos player updates on its own from your channel (landscape videos only, no Shorts). Add Video guide blocks to choose the guide videos and their order; without blocks the default guides are shown."
+    },
+    {
+      "type": "text",
+      "id": "youtube_channel_id",
+      "label": "YouTube channel ID",
+      "default": "UCCZBekKEU_CNWp0nK7ZNDvA",
+      "info": "Starts with UC. Used for the Latest videos player."
+    },
+    {
+      "type": "text",
+      "id": "channel_url",
+      "label": "YouTube channel link",
+      "default": "https://www.youtube.com/@GlassRailingStore/videos"
+    },
+    {
+      "type": "header",
+      "content": "Warranty"
+    },
+    {
+      "type": "number",
+      "id": "warranty_years",
+      "label": "Years of No Rust Promise",
+      "default": 10
+    },
+    {
+      "type": "text",
+      "id": "claims_email",
+      "label": "Claims email",
+      "default": "claims@glassrailingstore.com"
+    },
+    {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone",
+      "default": "(855) 452-7715"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "info@glassrailingstore.com"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog for Ideas & guides",
+      "info": "Leave empty to use News"
+    },
+    {
+      "type": "collection",
+      "id": "recommend_collection",
+      "label": "Products to recommend",
+      "info": "Leave empty to use Glass Railing Hardware"
+    },
+    {
+      "type": "text",
+      "id": "recommend_heading",
+      "label": "Recommendations heading",
+      "placeholder": "Complete your railing",
+      "info": "Empty: the standard text, in the visitor's language."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video guide",
+      "settings": [
+        {
+          "type": "video_url",
+          "id": "video",
+          "label": "YouTube link",
+          "accept": [
+            "youtube"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "duration",
+          "label": "Length",
+          "info": "For example 5:19"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "GRS My Account"
+    }
+  ]
+}
+{% endschema %}

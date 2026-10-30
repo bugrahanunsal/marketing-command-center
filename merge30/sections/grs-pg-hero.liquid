@@ -1,0 +1,36 @@
+{%- comment -%}
+  Page header with a photo (prototype .pg-hero): breadcrumb, heading (the page's H1), text and up to two buttons.
+  Used by the location pages (the live "Slideshow" sections) and other pages that open with a photo.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_hero), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_loc_label = 'grs.sd.pg_hero.loc_label_html' | t
+  assign sd_loc_label = section.settings.loc_label | default: sd_loc_label
+-%}
+{%- liquid
+  assign tag = 'h2'
+  assign heading = section.settings.heading
+  if section.settings.is_h1
+    assign tag = 'h1'
+    comment
+      On French and Spanish pages the H1 is the page's SEO title (page_title: the title Google shows, translated with
+      the page in Translate & Adapt). The heading typed here stays the English H1.
+    endcomment
+    if request.locale.primary == false and page != blank and heading != blank
+      assign heading = page_title | escape
+    endif
+  endif
+-%}
+<section class="pg-hero"{% render 'grs-vars', s: section.settings %}>{% render 'grs-img', image: section.settings.image, class: 'ph', sizes: '100vw', widths: '600,900,1200,1600,2000', eager: true %}<div class="wrap pg-hero-in">
+{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: heading, lt: true, loc_label: sd_loc_label %}{%- endif -%}
+{%- if heading != blank -%}<{{ tag }} class="pg-hero-h">{{ heading }}</{{ tag }}>{%- endif -%}
+{%- if section.settings.text != blank -%}<p class="pg-hero-s">{% render 'grs-rte', html: section.settings.text %}</p>{%- endif -%}
+{%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}<div class="pg-btns">
+{%- if section.settings.button_label != blank -%}<a class="btn" href="{% render 'grs-url', url: section.settings.button_link %}"><span class="dot"></span>{{ section.settings.button_label }}</a>{%- endif -%}
+{%- if section.settings.button2_label != blank -%}<a class="btn white-o" href="{% render 'grs-url', url: section.settings.button2_link %}"><span class="dot"></span>{{ section.settings.button2_label }}</a>{%- endif -%}
+</div>{%- endif -%}</div></section>
+
+{% schema %}
+{"name":"GRS page header","tag":"div","class":"grs-pg-hero-sec","settings":[{"type":"image_picker","id":"image","label":"Photo"},{"type":"inline_richtext","id":"heading","label":"Heading"},{"type":"inline_richtext","id":"text","label":"Text"},{"type":"text","id":"button_label","label":"First button"},{"type":"url","id":"button_link","label":"First button link"},{"type":"text","id":"button2_label","label":"Second button"},{"type":"url","id":"button2_link","label":"Second button link"},{"type":"checkbox","id":"is_h1","label":"The heading is the page title (H1)","default":true,"info":"Keep one H1 per page."},{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"text","id":"loc_label","label":"Breadcrumb: name of the locations page","info":"City and state pages: Home > Locations > state. The trail comes from the location menus (Theme settings > GRS location pages).","placeholder":"Locations"},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"image_height","label":"Photo height (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"image_height_mobile","label":"Photo height (phone and tablet)"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS page header"}]}
+{% endschema %}

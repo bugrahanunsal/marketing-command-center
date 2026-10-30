@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "app": {
+      "type": "grs-pg-app",
+      "blocks": {
+        "main-block": {
+          "type": "shopify://apps/simple-affiliate/blocks/affiliate-dashboard/da6b7ee2-2e27-43e4-9184-0df8dc5be07a",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "main-block"
+      ],
+      "settings": {
+        "layout": "page",
+        "eyebrow": "Affiliate program",
+        "refer_link": "https://glassrailingstore.goaffpro.com"
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    }
+  },
+  "order": [
+    "app",
+    "near"
+  ]
+}

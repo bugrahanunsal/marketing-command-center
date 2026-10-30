@@ -1,0 +1,501 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/DSC00862-pre.jpg",
+        "heading": "Service Locations In USA",
+        "text": "Quality glass railings shipped anywhere in the US.We sell glass panels and hardware for decks, balconies, and stairs. Safe, strong, and looks great. Perfect for homes and businesses.Get your free quote today.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/Ste-julie_25be39f3-f8ae-4075-8038-3f50c3aa2a41.jpg"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Serving the U.S. From Our North American Facility"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We manage our North American operations across Quebec and Ontario, shipping glass railing systems to homes and businesses throughout the United States.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Other Locations We serve"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling California",
+            "link": "shopify://pages/glass-railing-california"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Florida",
+            "link": "shopify://pages/glass-railing-florida"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Texas",
+            "link": "shopify://pages/glass-railing-texas"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling New York",
+            "link": "shopify://pages/glass-railing-new-york"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Colorado",
+            "link": "shopify://pages/glass-railing-colorado"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Washington",
+            "link": "shopify://pages/glass-railing-washington"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Alaska",
+            "link": "shopify://pages/texas-glass-railing-san-antonio"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Oregon",
+            "link": "shopify://pages/glass-railing-oregon"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Nevada",
+            "link": "shopify://pages/glass-railing-nevada"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Arizona",
+            "link": "shopify://pages/glass-railing-arizona"
+          }
+        },
+        "place11": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Utah",
+            "link": "shopify://pages/glass-railing-utah"
+          }
+        },
+        "place12": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Montana",
+            "link": "shopify://pages/glass-railing-montana"
+          }
+        },
+        "place13": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Michigan",
+            "link": "shopify://pages/glass-railing-michigan"
+          }
+        },
+        "place14": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Minnesota",
+            "link": "shopify://pages/glass-railing-minnesota"
+          }
+        },
+        "place15": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Wisconsin",
+            "link": "shopify://pages/glass-railing-wisconsin"
+          }
+        },
+        "place16": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Illinois",
+            "link": "shopify://pages/glass-railing-illinois"
+          }
+        },
+        "place17": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Indiana",
+            "link": "shopify://pages/glass-railing-indiana"
+          }
+        },
+        "place18": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Ohio",
+            "link": "shopify://pages/glass-railing-ohio"
+          }
+        },
+        "place19": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling West Virginia",
+            "link": "shopify://pages/glass-railing-west-virginia"
+          }
+        },
+        "place20": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Tennessee",
+            "link": "shopify://pages/glass-railing-tennessee"
+          }
+        },
+        "place21": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling South Carolina",
+            "link": "shopify://pages/glass-railing-south-carolina"
+          }
+        },
+        "place22": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling North Carolina",
+            "link": "shopify://pages/glass-railing-north-carolina"
+          }
+        },
+        "place23": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Maryland",
+            "link": "shopify://pages/glass-railing-maryland"
+          }
+        },
+        "place24": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Delaware",
+            "link": "shopify://pages/glass-railing-delaware"
+          }
+        },
+        "place25": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Pennsylvania",
+            "link": "shopify://pages/glass-railing-pennsylvania"
+          }
+        },
+        "place26": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling New Jersey",
+            "link": "shopify://pages/glass-railing-new-jersey"
+          }
+        },
+        "place27": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Connecticut",
+            "link": "shopify://pages/glass-railing-connecticut"
+          }
+        },
+        "place28": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Massachusetts",
+            "link": "shopify://pages/glass-railing-massachusetts"
+          }
+        },
+        "place29": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Maine",
+            "link": "shopify://pages/glass-railing-maine"
+          }
+        },
+        "place30": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Virginia",
+            "link": "shopify://pages/glass-railing-virginia"
+          }
+        },
+        "place31": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Missouri",
+            "link": "shopify://pages/glass-railing-missouri"
+          }
+        },
+        "place32": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Kentucky",
+            "link": "shopify://pages/glass-railing-kentucky"
+          }
+        },
+        "place33": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Arkansas",
+            "link": "shopify://pages/glass-railing-arkansas"
+          }
+        },
+        "place34": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Georgia",
+            "link": "shopify://pages/glass-railing-georgia"
+          }
+        },
+        "place35": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Rhode Island",
+            "link": "shopify://pages/glass-railing-rhode-island"
+          }
+        },
+        "place36": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling New Hampshire",
+            "link": "shopify://pages/glass-railing-new-hampshire"
+          }
+        },
+        "place37": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Vermont",
+            "link": "shopify://pages/glass-railing-vermont"
+          }
+        },
+        "place38": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Iowa",
+            "link": "shopify://pages/glass-railing-iowa"
+          }
+        },
+        "place39": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling South Dakota",
+            "link": "shopify://pages/glass-railing-south-dakota"
+          }
+        },
+        "place40": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Kansas",
+            "link": "shopify://pages/glass-railing-kansas"
+          }
+        },
+        "place41": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Nebraska",
+            "link": "shopify://pages/glass-railing-nebraska"
+          }
+        },
+        "place42": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Oklahoma",
+            "link": "shopify://pages/glass-railing-oklahoma"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place7",
+        "place8",
+        "place9",
+        "place10",
+        "place11",
+        "place12",
+        "place13",
+        "place14",
+        "place15",
+        "place16",
+        "place17",
+        "place18",
+        "place19",
+        "place20",
+        "place21",
+        "place22",
+        "place23",
+        "place24",
+        "place25",
+        "place26",
+        "place27",
+        "place28",
+        "place29",
+        "place30",
+        "place31",
+        "place32",
+        "place33",
+        "place34",
+        "place35",
+        "place36",
+        "place37",
+        "place38",
+        "place39",
+        "place40",
+        "place41",
+        "place42"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "United States"
+      }
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "settings": {
+        "heading": "<strong>How It Works</strong>"
+      },
+      "blocks": {
+        "col1": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Select Your Location</strong>",
+            "text": "<p>Choose your state or region to view available options.</p>"
+          }
+        },
+        "col2": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Browse Products</strong>",
+            "text": "<p>Explore tempered and laminated glass panels, spigots, clamps, and cap rails.</p>"
+          }
+        },
+        "col3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Pick Up or Delivery</strong>",
+            "text": "<p> Collect your order from a nearby location or have it shipped safely to your door.</p>"
+          }
+        },
+        "col4": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Install with Ease</strong>",
+            "text": "<p>Follow our step-by-step guides or watch our instructional videos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col1",
+        "col2",
+        "col3",
+        "col4"
+      ]
+    },
+    "dir": {
+      "type": "grs-pg-dir",
+      "settings": {}
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "split2": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/C1688.00_00_01_49.Still011.png"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to upgrade your space with sleek, modern glass railings? Browse our collection of tempered and laminated glass panels, spigots, clamps, and cap rails. Whether you’re designing a deck, staircase, or balcony, our products make it easy to add style and safety to your home.</p><p>Explore Our Collection and get started with your project today!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "split",
+    "links",
+    "map",
+    "cols",
+    "dir",
+    "faq",
+    "form",
+    "split2"
+  ]
+}

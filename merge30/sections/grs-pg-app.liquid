@@ -1,0 +1,51 @@
+{%- comment -%}
+  An app's part of a page (gallery, affiliate dashboard ...): app blocks added to this section, or app code in "Custom
+  code" (e.g. <div class="robin-pro" id="..."></div>). Layout "Page": breadcrumb, small title and the page title above
+  the app, the refer card and the help card beside it (prototype affiliate page).
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_app), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_refer_title = 'grs.sd.pg_app.refer_title_html' | t
+  assign sd_refer_title = section.settings.refer_title | default: sd_refer_title
+  assign sd_refer_text = 'grs.sd.pg_app.refer_text_html' | t
+  assign sd_refer_text = section.settings.refer_text | default: sd_refer_text
+  assign sd_refer_button = 'grs.sd.pg_app.refer_button_html' | t
+  assign sd_refer_button = section.settings.refer_button | default: sd_refer_button
+  assign sd_help_title = 'grs.sd.pg_app.help_title_html' | t
+  assign sd_help_title = section.settings.help_title | default: sd_help_title
+  assign sd_help_text = 'grs.sd.pg_app.help_text_html' | t
+  assign sd_help_text = section.settings.help_text | default: sd_help_text
+  assign sd_button_label = 'grs.sd.pg_app.button_label_html' | t
+  assign sd_button_label = section.settings.button_label | default: sd_button_label
+-%}
+{%- capture app -%}
+{%- if section.settings.custom_liquid != blank -%}{{ section.settings.custom_liquid }}{%- endif -%}
+{%- for block in section.blocks -%}{% render block %}{%- endfor -%}
+{%- endcapture -%}
+{%- if section.settings.layout == 'page' -%}
+{%- liquid
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+-%}
+<div class="pg-app-w"{% render 'grs-vars', s: section.settings %}><section class="pg-top"><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: page.title %}{%- endif -%}{%- if section.settings.eyebrow != blank -%}<span class="dot-eyebrow">{{ section.settings.eyebrow | escape }}</span>{%- endif -%}{%- if app contains '<h1' -%}<p class="pg-title">{{ page.title | escape }}</p>{%- else -%}<h1 class="pg-title">{{ page.title | escape }}</h1>{%- endif -%}</div></section>
+<section class="pg-body"><div class="wrap pg-grid"><div class="pg-main aff-main"><div class="aff-app">{{ app }}</div></div><aside class="pg-aside">
+{%- if sd_refer_title != blank -%}<div class="ip-card acct-refer"><b>{{ sd_refer_title | escape }}</b>{%- if sd_refer_text != blank -%}<p>{{ sd_refer_text | escape }}</p>{%- endif -%}{%- if sd_refer_button != blank and section.settings.refer_link != blank -%}{%- liquid
+  assign lk = section.settings.refer_link | append: ''
+  assign l4 = lk | slice: 0, 4
+  assign ext = false
+  if l4 == 'http'
+    unless lk contains shop.domain
+      assign ext = true
+    endunless
+  endif
+-%}<a class="btn sm dark" href="{% render 'grs-url', url: section.settings.refer_link %}"{% if ext %} target="_blank" rel="noopener"{% endif %}><span class="dot"></span>{{ sd_refer_button | escape }}</a>{%- endif -%}</div>{%- endif -%}
+{%- if sd_help_title != blank -%}<div class="ip-card ip-help"><b>{{ sd_help_title | escape }}</b>{%- if sd_help_text != blank -%}<p>{{ sd_help_text | escape }}</p>{%- endif -%}<a class="ip-phone" href="tel:{{ grs_phone_tel }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{{ grs_phone }}</a>{%- if sd_button_label != blank -%}<a class="btn" href="{%- if section.settings.button_link != blank -%}{% render 'grs-url', url: section.settings.button_link %}{%- else -%}{{ pages['contact'].url | default: '/pages/contact' }}{%- endif -%}"><span class="dot"></span>{{ sd_button_label | escape }}</a>{%- endif -%}</div>{%- endif -%}
+</aside></div></section></div>
+{%- elsif app != blank -%}
+<section class="sec pg-app-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap">{%- if section.settings.heading != blank -%}<div class="pg-sh"><h2 class="mh2">{{ section.settings.heading }}</h2></div>{%- endif -%}<div class="pg-app-in">{{ app }}</div></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS app","tag":"div","settings":[{"type":"paragraph","content":"Add the app's block to this section (Apps), or paste the app's code in \"Custom code\"."},{"type":"select","id":"layout","label":"Layout","default":"plain","options":[{"value":"plain","label":"App only (with an optional heading)"},{"value":"page","label":"Page: title, refer and help cards"}]},{"type":"inline_richtext","id":"heading","label":"Heading (app only)"},{"type":"liquid","id":"custom_liquid","label":"Custom code"},{"type":"header","content":"Page layout"},{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"text","id":"eyebrow","label":"Small title above the page title"},{"type":"text","id":"refer_title","label":"Refer card: title","info":"Empty: no refer card.","placeholder":"Love your railing?"},{"type":"textarea","id":"refer_text","label":"Refer card: text","placeholder":"Refer friends and neighbours through our affiliate program and earn on every order they place.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"refer_button","label":"Refer card: button","placeholder":"Join the program","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"refer_link","label":"Refer card: button link"},{"type":"text","id":"help_title","label":"Help card: title","info":"Empty: no help card.","placeholder":"Questions about your project?"},{"type":"textarea","id":"help_text","label":"Help card: text","placeholder":"Call or text a railing specialist, or send your measurements for a detailed quote.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"button_label","label":"Help card: button","placeholder":"Get a free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"button_link","label":"Help card: button link","info":"Empty: the contact page."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]}],"blocks":[{"type":"@app"}],"presets":[{"name":"GRS app"}]}
+{% endschema %}

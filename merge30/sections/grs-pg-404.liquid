@@ -1,0 +1,18 @@
+{%- comment -%}
+  Page not found (prototype #v-404): a small "404", the title, a line of text and a button.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_404), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_heading = 'grs.sd.pg_404.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_text = 'grs.sd.pg_404.text_html' | t
+  assign sd_text = section.settings.text | default: sd_text
+  assign sd_button_label = 'grs.sd.pg_404.button_label_html' | t
+  assign sd_button_label = section.settings.button_label | default: sd_button_label
+-%}
+<section class="pg-top pg-404"{% render 'grs-vars', s: section.settings %}><div class="wrap"><p class="mono">404</p><h1 class="pg-title">{{ sd_heading | escape }}</h1>{%- if sd_text != blank -%}<p class="pg-lead">{{ sd_text | escape }}</p>{%- endif -%}{%- if sd_button_label != blank -%}<a class="btn" href="{%- if section.settings.button_link != blank -%}{% render 'grs-url', url: section.settings.button_link %}{%- else -%}{{ routes.all_products_collection_url }}{%- endif -%}"><span class="dot"></span>{{ sd_button_label | escape }}</a>{%- endif -%}</div></section>
+
+{% schema %}
+{"name":"GRS page not found","tag":"div","settings":[{"type":"text","id":"heading","label":"Title","placeholder":"Page not found","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"text","label":"Text","placeholder":"The page you were looking for does not exist.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"button_label","label":"Button","placeholder":"Continue shopping","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"button_link","label":"Button link","info":"Empty: all products."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS page not found"}]}
+{% endschema %}

@@ -1,0 +1,107 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-account",
+      "settings": {
+        "channel_url": "https://www.youtube.com/@GlassRailingStore/videos",
+        "youtube_channel_id": "UCCZBekKEU_CNWp0nK7ZNDvA",
+        "claims_email": "claims@glassrailingstore.com"
+      },
+      "blocks": {
+        "f1": {
+          "type": "feature",
+          "settings": {
+            "kicker": "Ordered · Preparing · Shipped · Installed",
+            "title": "Order tracker",
+            "text": "When you place an order, you’ll be able to track it here step by step."
+          }
+        },
+        "f2": {
+          "type": "feature",
+          "settings": {
+            "kicker": "13 steps",
+            "title": "Install checklist",
+            "text": "Your progress is saved on this device. Full details, photos and diagrams are in the installation guide.",
+            "link_label": "Installation guide",
+            "link": "shopify://pages/glass-railing-installation-guide"
+          }
+        },
+        "f3": {
+          "type": "feature",
+          "settings": {
+            "kicker": "Province or state",
+            "title": "Your local building code",
+            "text": "Heights, loads and gate rules for glass railings where you live.",
+            "link_label": "Browse building codes",
+            "link": "shopify://pages/building-codes-glass-railing"
+          }
+        },
+        "f4": {
+          "type": "feature",
+          "settings": {
+            "kicker": "Every order is covered for 10 years.",
+            "title": "No Rust Promise",
+            "text": "Marine-grade 2205 stainless hardware, guaranteed not to rust.",
+            "link_label": "Warranty details",
+            "link": "shopify://pages/glass-railing-warranty"
+          }
+        },
+        "v1": {
+          "type": "video",
+          "settings": {
+            "video": "https://www.youtube.com/watch?v=9Gz9k9ePXfc",
+            "title": "How to Install Frameless Glass Railing (Full DIY Guide)",
+            "duration": "5:19"
+          }
+        },
+        "v2": {
+          "type": "video",
+          "settings": {
+            "video": "https://www.youtube.com/watch?v=Oy_Ce2gctBI",
+            "title": "How to Measure for Glass Railing (Before You Order)",
+            "duration": "1:55"
+          }
+        },
+        "v3": {
+          "type": "video",
+          "settings": {
+            "video": "https://www.youtube.com/watch?v=tobK6oXzdC8",
+            "title": "How to Install a Glass Gate Panel (Hinges, Latch & Closing Speed)",
+            "duration": "3:33"
+          }
+        },
+        "v4": {
+          "type": "video",
+          "settings": {
+            "video": "https://www.youtube.com/watch?v=7U2m1_agaoM",
+            "title": "Gate Latch for Glass Gates (Open, Close, Lock)",
+            "duration": "0:32"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

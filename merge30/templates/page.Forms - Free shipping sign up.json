@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-main",
+      "settings": {}
+    },
+    "video": {
+      "type": "grs-pg-video",
+      "settings": {
+        "video_url": "https://www.youtube.com/watch?v=3wdodijFThs",
+        "image": "shopify://shop_images/IMG_6857.jpg"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {
+        "layout": "solo"
+      },
+      "blocks": {
+        "21cfd87b-3baf-4a6e-915f-d6c5ecdea4c8": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "131481",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "21cfd87b-3baf-4a6e-915f-d6c5ecdea4c8"
+      ]
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/glass-railing.jpg"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "12 mm Glass"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out out wide variety of standard glass railing panels</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Glass Panels",
+            "button_link": "shopify://collections/glass-panel-railing"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Common questions"
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days across Canada and the U.S.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Is shipping free?",
+            "answer": "<p>Free shipping for glass railing orders over $3,000.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Are there hidden fees, tariffs, or duties?",
+            "answer": "<p>No. The price displayed at checkout is the final price with no hidden fees, tariffs, or duties, even if the order crosses borders between the US and Canada.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What should you do if a product you received is damaged?",
+            "answer": "<p>If a product arrives damaged, it must be reported within 3 days of delivery and before installation. Once damage is confirmed, The Glass Railing Store will either replace or reimburse the damaged item at no additional cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "video",
+    "form",
+    "split",
+    "faq",
+    "near"
+  ]
+}

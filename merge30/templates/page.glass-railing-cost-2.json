@@ -1,0 +1,640 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero2": {
+      "type": "grs-pg-hero2",
+      "settings": {
+        "badge": "GLASS RAILING PRICING GUIDE",
+        "heading": "Glass Railing Cost Guide — Canada",
+        "text": "<p>Glass railing cost in Canada ranges from $100 to $400 per linear foot, depending on the system you choose. At The Glass Railing Store, we make premium glass railings affordable with DIY-ready kits, complete hardware, and free quotes — so you get a clean, modern look without overpaying.</p>",
+        "button_label": "Get Free Quote",
+        "button_link": "shopify://pages/contact",
+        "button2_label": "Shop Products",
+        "button2_link": "shopify://collections/glass-railing",
+        "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+      },
+      "blocks": {
+        "feature_NwdQnt": {
+          "type": "feature",
+          "settings": {
+            "title": "Canada Wide Shipping"
+          }
+        },
+        "feature_BTLxqi": {
+          "type": "feature",
+          "settings": {
+            "title": "24hr Quote Response"
+          }
+        },
+        "feature_kHBJke": {
+          "type": "feature",
+          "settings": {
+            "title": "DIY Friendly"
+          }
+        },
+        "feature_CArmGy": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Tempered Glass"
+          }
+        }
+      },
+      "block_order": [
+        "feature_NwdQnt",
+        "feature_BTLxqi",
+        "feature_kHBJke",
+        "feature_CArmGy"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "settings": {},
+      "blocks": {
+        "icon_L3WXHd": {
+          "type": "item",
+          "settings": {
+            "title": "Wholesale Pricing",
+            "text": "Direct-to-consumer savings on every order"
+          }
+        },
+        "icon_44JYAD": {
+          "type": "item",
+          "settings": {
+            "title": "Free Shipping $3,000+",
+            "text": "Fast delivery across Canada & the US"
+          }
+        },
+        "icon_EQt6eb": {
+          "type": "item",
+          "settings": {
+            "title": "Expert Support",
+            "text": "Mon–Fri 8 AM – 5 PM ET | +1-855-452-7715"
+          }
+        },
+        "icon_WYi3CA": {
+          "type": "item",
+          "settings": {
+            "title": "Hardware Exchanges",
+            "text": "Unused hardware in original packaging: store credit within 30 days"
+          }
+        }
+      },
+      "block_order": [
+        "icon_L3WXHd",
+        "icon_44JYAD",
+        "icon_EQt6eb",
+        "icon_WYi3CA"
+      ]
+    },
+    "cards": {
+      "type": "grs-pg-cards",
+      "settings": {
+        "heading": "Types of Glass Railings & Cost Per Linear Foot",
+        "text": "Choose the right glass railing system for your project and budget"
+      },
+      "blocks": {
+        "railing_card_QyT4Bg": {
+          "type": "card",
+          "settings": {
+            "title": "Framed Glass Railings",
+            "price": "$100–$130",
+            "text": "Aluminum frame with glass panels. Most economical option.",
+            "button_label": "View Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_FHNXC7": {
+          "type": "card",
+          "settings": {
+            "title": "Semi-Frameless Glass Railings",
+            "price": "$165–$250",
+            "text": "Minimal posts with channel system. Great balance of style and cost.",
+            "button_label": "View Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_YjXiBG": {
+          "type": "card",
+          "settings": {
+            "title": "Frameless Glass Railings",
+            "price": "$200–$400+",
+            "text": "Spigot-mounted glass panels. Premium modern aesthetic.",
+            "button_label": "View Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false,
+            "badge": "Most Popular"
+          }
+        },
+        "railing_card_CLnYcR": {
+          "type": "card",
+          "settings": {
+            "title": "DIY Glass Panel Kits",
+            "price": "$60–$130",
+            "text": "Pre-cut panels and hardware. Easy self-installation.",
+            "button_label": "View Details",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "railing_card_QyT4Bg",
+        "railing_card_FHNXC7",
+        "railing_card_YjXiBG",
+        "railing_card_CLnYcR"
+      ]
+    },
+    "compare": {
+      "type": "grs-pg-compare",
+      "settings": {
+        "heading": "Glass Railing System Comparison"
+      },
+      "blocks": {
+        "comparison_card_8JGRTi": {
+          "type": "column",
+          "settings": {
+            "title": "Framed System",
+            "price": "$100-$130",
+            "unit": "per linear foot",
+            "row1_label": "Style",
+            "row1_text": "Traditional with visible frames",
+            "row2_label": "Installation",
+            "row2_text": "Moderate difficulty",
+            "row3_label": "Maintenance",
+            "row3_text": "Low - easy to clean",
+            "row4_label": "Durability",
+            "row4_text": "Excellent with aluminum frame",
+            "row5_label": "Best For",
+            "row5_text": "Budget-conscious projects"
+          }
+        },
+        "comparison_card_L6KLBk": {
+          "type": "column",
+          "settings": {
+            "title": "Semi-Frameless",
+            "price": "$165-$250",
+            "unit": "per linear foot",
+            "row1_label": "Style",
+            "row1_text": "Modern with minimal hardware",
+            "row2_label": "Installation",
+            "row2_text": "Moderate to advanced",
+            "row3_label": "Maintenance",
+            "row3_text": "Low - simple cleaning",
+            "row4_label": "Durability",
+            "row4_text": "Excellent structural integrity",
+            "row5_label": "Best For",
+            "row5_text": "Balanced style and budget"
+          }
+        },
+        "comparison_card_jitmPx": {
+          "type": "column",
+          "settings": {
+            "title": "Frameless System",
+            "price": "$200-$400+",
+            "unit": "per linear foot",
+            "row1_label": "Style",
+            "row1_text": "Premium unobstructed views",
+            "row2_label": "Installation",
+            "row2_text": "Advanced - precision required",
+            "row3_label": "Maintenance",
+            "row3_text": "Low - minimal hardware",
+            "row4_label": "Durability",
+            "row4_text": "Superior with thick glass",
+            "row5_label": "Best For",
+            "row5_text": "Luxury modern homes"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_card_8JGRTi",
+        "comparison_card_L6KLBk",
+        "comparison_card_jitmPx"
+      ]
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "settings": {
+        "heading": "What Affects Your Glass Railing Cost",
+        "text": "<p>Understanding these factors helps you plan your budget accurately</p>"
+      },
+      "blocks": {
+        "column_AdjPJt": {
+          "type": "column",
+          "settings": {
+            "title": "Glass Thickness",
+            "text": "<p>6mm, 8mm, 10mm, or 12mm options. Thicker glass costs more but offers superior durability and safety.</p>"
+          }
+        },
+        "column_t4HjF9": {
+          "type": "column",
+          "settings": {
+            "title": "Hardware Type",
+            "text": "<p>Spigots, clamps, channels, and posts. Premium stainless steel hardware increases cost.</p>"
+          }
+        },
+        "column_aMmQya": {
+          "type": "column",
+          "settings": {
+            "title": "Glass Style",
+            "text": "<p>Clear, frosted, tinted, or low-iron glass. Specialty finishes add 15-30% to material costs.</p>"
+          }
+        },
+        "column_M4y4MB": {
+          "type": "column",
+          "settings": {
+            "title": "Custom Shapes",
+            "text": "<p>Curved panels, angled cuts, and custom sizes require specialized fabrication and increase price.</p>"
+          }
+        },
+        "column_mETXkm": {
+          "type": "column",
+          "settings": {
+            "title": "Installation Method",
+            "text": "<p>DIY saves 40-60% vs professional installation. Consider skill level and project complexity.</p>"
+          }
+        },
+        "column_eRUWLG": {
+          "type": "column",
+          "settings": {
+            "title": "Project Size",
+            "text": "<p>Larger orders qualify for volume discounts. Projects over 100 linear feet get better pricing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_AdjPJt",
+        "column_t4HjF9",
+        "column_aMmQya",
+        "column_M4y4MB",
+        "column_mETXkm",
+        "column_eRUWLG"
+      ]
+    },
+    "est": {
+      "type": "grs-pg-est",
+      "settings": {
+        "heading": "Glass Railing Cost Estimator",
+        "text": "Get an instant estimate for your project",
+        "default_feet": 50,
+        "min_price": 300,
+        "max_price": 400,
+        "button_label": "Get Exact Quote",
+        "note": "Free quote response within 24 hours"
+      }
+    },
+    "stats": {
+      "type": "grs-pg-stats",
+      "settings": {
+        "heading": "Why Choose The Glass Railing Store"
+      },
+      "blocks": {
+        "stat_Rnq7yC": {
+          "type": "stat",
+          "settings": {
+            "number": "14+",
+            "text": "Years Experience"
+          }
+        },
+        "stat_iUCNyY": {
+          "type": "stat",
+          "settings": {
+            "number": "120+",
+            "text": "Projects Delivered"
+          }
+        },
+        "stat_NFcejD": {
+          "type": "stat",
+          "settings": {
+            "number": "10K+",
+            "text": "Happy Customers"
+          }
+        },
+        "stat_MqTpaj": {
+          "type": "stat",
+          "settings": {
+            "number": "100%",
+            "text": "Canada Wide Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "stat_Rnq7yC",
+        "stat_iUCNyY",
+        "stat_NFcejD",
+        "stat_MqTpaj"
+      ]
+    },
+    "cards2": {
+      "type": "grs-pg-cards",
+      "settings": {
+        "style": "cost",
+        "heading": "Glass Railing Cost by Project Type"
+      },
+      "blocks": {
+        "project_card_enPMWV": {
+          "type": "card",
+          "settings": {
+            "title": "Deck Glass Railings",
+            "price": "$3,500-$8,000"
+          }
+        },
+        "project_card_itpCU3": {
+          "type": "card",
+          "settings": {
+            "title": "Balcony Railings",
+            "price": "$2,000-$5,000"
+          }
+        },
+        "project_card_gYagga": {
+          "type": "card",
+          "settings": {
+            "title": "Stair Railings",
+            "price": "$1,500-$4,500"
+          }
+        },
+        "project_card_6cEJXJ": {
+          "type": "card",
+          "settings": {
+            "title": "Pool Fence Glass",
+            "price": "$4,000-$10,000"
+          }
+        },
+        "project_card_4n9ime": {
+          "type": "card",
+          "settings": {
+            "title": "Indoor Railings",
+            "price": "$1,200-$3,500"
+          }
+        }
+      },
+      "block_order": [
+        "project_card_enPMWV",
+        "project_card_itpCU3",
+        "project_card_gYagga",
+        "project_card_6cEJXJ",
+        "project_card_4n9ime"
+      ]
+    },
+    "gallery": {
+      "type": "grs-pg-gallery",
+      "settings": {
+        "heading": "Recent Glass Railing Projects",
+        "text": "See our premium installations across Canada"
+      },
+      "blocks": {
+        "image_Ke4x3K": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/2dbffef2cbab04bccbc1ba930bb7965d61b9c253.jpg"
+          }
+        },
+        "image_me76XN": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/bc3d27cf951b50ed4095586981c8b69325d76fa7.jpg"
+          }
+        },
+        "image_zGkWPQ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/97cf39f2d3e6d697a139641f4663a6ac3ec363eb.jpg"
+          }
+        },
+        "image_ED9TC7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/0971303512bf629cbd06d4010a78266200689db6.jpg"
+          }
+        },
+        "image_WTxC6A": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/a5930494e149be9e1da1acd0022826b21c7b0237.jpg"
+          }
+        },
+        "image_rb4hWK": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/9bcefa020025d9b4dc1da09519a7e0f447b8f8b2.jpg"
+          }
+        },
+        "image_EeYzER": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/3efe3f13077a6f93b62812a5bdf88ba7a2f1dfa1.jpg"
+          }
+        },
+        "image_97qCpp": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/a933cb243a272382f51d8ebdbd885d4f63d5b73a.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ke4x3K",
+        "image_me76XN",
+        "image_zGkWPQ",
+        "image_ED9TC7",
+        "image_WTxC6A",
+        "image_rb4hWK",
+        "image_EeYzER",
+        "image_97qCpp"
+      ]
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "GET YOUR FREE QUOTE",
+        "text": "<p>Every project is different. Share your measurements and we'll send back a clear, no-obligation quote within 24 hours.</p>",
+        "button_label": "Get Quotes",
+        "button_link": "shopify://pages/contact"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Frequently Asked Questions"
+      },
+      "blocks": {
+        "faq_E4mGCB": {
+          "type": "question",
+          "settings": {
+            "question": "How much does glass railing cost in Canada?",
+            "answer": "<p>Glass railing costs between $100 and $400 per linear foot installed in Canada, depending on the system, glass thickness, and hardware. DIY glass railing kits start at $60–$130 per linear foot, making them a more budget-friendly option.</p>"
+          }
+        },
+        "faq_fBKAcR": {
+          "type": "question",
+          "settings": {
+            "question": "What is the cost per linear foot for glass railing?",
+            "answer": "<p>The average cost is $100–$400 per linear foot for professionally installed glass railings. Frameless systems are typically at the higher end, while framed aluminum options are more affordable.</p>"
+          }
+        },
+        "faq_rVrymQ": {
+          "type": "question",
+          "settings": {
+            "question": "Is frameless glass railing more expensive?",
+            "answer": "<p>Yes. Frameless glass railings cost more because they use thicker tempered glass, premium stainless steel hardware, and require precise installation. However, they provide uninterrupted views, a modern appearance, and can increase your home's value.</p>"
+          }
+        },
+        "faq_WLCTJk": {
+          "type": "question",
+          "settings": {
+            "question": "What factors affect glass railing cost?",
+            "answer": "<p>Glass railing costs depend on several factors, including the railing style (framed or frameless), glass thickness, panel size, hardware quality, and installation requirements. Custom layouts, stair installations, and tinted or frosted glass can also increase the overall price.</p>"
+          }
+        },
+        "faq_VPce4K": {
+          "type": "question",
+          "settings": {
+            "question": "Is glass railing cheaper than metal or wood railing?",
+            "answer": "<p>Glass railings usually have a higher upfront cost than wood or standard metal railings. However, they require less maintenance, last for decades, and offer a premium look that can increase property value. Over time, they can provide better long-term value.</p>"
+          }
+        },
+        "faq_TKKG43": {
+          "type": "question",
+          "settings": {
+            "question": "Does installation cost extra for glass railings?",
+            "answer": "<p>Yes. Professional installation is typically priced separately and depends on the project's size, location, and complexity. Choosing a DIY glass railing kit can reduce installation costs by 40–60% while still delivering a professional-looking result.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_E4mGCB",
+        "faq_fBKAcR",
+        "faq_rVrymQ",
+        "faq_WLCTJk",
+        "faq_VPce4K",
+        "faq_TKKG43"
+      ]
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {
+        "heading": "Get Your Free Glass Railing Quote",
+        "text": "Expert guidance and accurate pricing for your project — response within 24 hours",
+        "button_label": "Get Free Quote",
+        "details_placeholder": "Tell us about your project, timeline, and any specific requirements..."
+      }
+    },
+    "blog": {
+      "type": "grs-pg-blog",
+      "settings": {
+        "heading": "Glass Railing Guides & Tips",
+        "blog": "news",
+        "posts": 12
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Serving Major Canadian Cities",
+        "text": "Expanding our presence in these locations. Physical offices coming soon."
+      },
+      "blocks": {
+        "city_qMRfg4": {
+          "type": "location",
+          "settings": {
+            "title": "Toronto"
+          }
+        },
+        "city_V7wgw4": {
+          "type": "location",
+          "settings": {
+            "title": "Montreal"
+          }
+        },
+        "city_VeyUjP": {
+          "type": "location",
+          "settings": {
+            "title": "Edmonton"
+          }
+        },
+        "city_iDp8UN": {
+          "type": "location",
+          "settings": {
+            "title": "Winnipeg"
+          }
+        },
+        "city_NVk7kp": {
+          "type": "location",
+          "settings": {
+            "title": "Columbia",
+            "link": "shopify://pages/glass-railings-british-columbia"
+          }
+        },
+        "city_iwTGe7": {
+          "type": "location",
+          "settings": {
+            "title": "Saskatchewan",
+            "link": "shopify://pages/glass-railings-saskatchewan"
+          }
+        },
+        "city_dE6dM3": {
+          "type": "location",
+          "settings": {
+            "title": "Vancouver"
+          }
+        },
+        "city_hT3NTX": {
+          "type": "location",
+          "settings": {
+            "title": "Calgary"
+          }
+        },
+        "city_pLUdpe": {
+          "type": "location",
+          "settings": {
+            "title": "Ottawa"
+          }
+        },
+        "city_AApEaC": {
+          "type": "location",
+          "settings": {
+            "title": "Quebec City"
+          }
+        }
+      },
+      "block_order": [
+        "city_qMRfg4",
+        "city_V7wgw4",
+        "city_VeyUjP",
+        "city_iDp8UN",
+        "city_NVk7kp",
+        "city_iwTGe7",
+        "city_dE6dM3",
+        "city_hT3NTX",
+        "city_pLUdpe",
+        "city_AApEaC"
+      ]
+    }
+  },
+  "order": [
+    "hero2",
+    "icons",
+    "cards",
+    "compare",
+    "cols",
+    "est",
+    "stats",
+    "cards2",
+    "gallery",
+    "cta",
+    "faq",
+    "form",
+    "blog",
+    "links"
+  ]
+}

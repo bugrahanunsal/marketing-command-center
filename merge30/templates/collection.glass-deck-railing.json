@@ -1,0 +1,264 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-coll-hero",
+      "blocks": {
+        "photo1": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing",
+            "image": "shopify://shop_images/frameless-glass-pool-fence-backyard.webp"
+          }
+        },
+        "photo2": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-panel-railing",
+            "image": "shopify://shop_images/glass-pool-fence-brushed-stainless-spigots.webp"
+          }
+        },
+        "photo3": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-hardware",
+            "image": "shopify://shop_images/matte-black-180-glass-connector-pool-fence.webp"
+          }
+        },
+        "photo4": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-gate-hardware",
+            "image": "shopify://shop_images/glass-pool-gate-hinge-brushed-stainless.webp"
+          }
+        },
+        "photo5": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-caprail",
+            "image": "shopify://shop_images/frameless-glass-railing-garden-wall.webp"
+          }
+        },
+        "photo6": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-deck-railing",
+            "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+          }
+        },
+        "photo7": {
+          "type": "photo",
+          "settings": {
+            "collection": "interior-glass-railing-systems",
+            "image": "shopify://shop_images/glass-stair-railing-deck-black-spigots.webp"
+          }
+        },
+        "photo8": {
+          "type": "photo",
+          "settings": {
+            "collection": "exterior-glass-railings",
+            "image": "shopify://shop_images/glass-pool-fence-black-spigots-aerial.webp"
+          }
+        },
+        "photo9": {
+          "type": "photo",
+          "settings": {
+            "collection": "frameless-glass-railing",
+            "image": "shopify://shop_images/frameless-glass-railing-curved-balcony.webp"
+          }
+        },
+        "photo10": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-kits",
+            "image": "shopify://shop_images/glass-railing-spigot-installation-kit.webp"
+          }
+        }
+      },
+      "block_order": [
+        "photo1",
+        "photo2",
+        "photo3",
+        "photo4",
+        "photo5",
+        "photo6",
+        "photo7",
+        "photo8",
+        "photo9",
+        "photo10"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/frameless-glass-pool-fence-backyard.webp"
+      }
+    },
+    "pre": {
+      "type": "grs-coll-pre",
+      "settings": {
+        "text": "<p>Glass deck railing turns an ordinary deck into an unobstructed viewing platform, pairing tempered glass panels with a low-profile frame so sightlines to your yard, pool, or landscape stay open. Built for outdoor use, it suits modern homes, renovations, and new builds alike.</p>"
+      }
+    },
+    "grid": {
+      "type": "grs-coll-grid",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "grs-coll-reviews",
+      "settings": {}
+    },
+    "svc": {
+      "type": "grs-svc",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "icon": "support",
+            "title": "Customer support",
+            "text": "Have questions about glass railings? Contact us for product guidance, installation support and project assistance.",
+            "link_label": "Contact us",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "icon": "quote",
+            "title": "Free quote",
+            "text": "Submit a plan request and we will send you a detailed quote on the materials your project needs, priced in [currency].",
+            "link_label": "Get a quote",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "icon": "shipping",
+            "title": "Free shipping over $3,000",
+            "text": "Orders are processed in 2–3 business days, then delivered in 5–10 business days. The price at checkout is final, with no hidden fees, tariffs or duties.",
+            "text_us": "U.S. orders are processed in 2–3 business days, then delivered in 5–10 business days. The price at checkout is final, with no hidden fees, tariffs or duties.",
+            "link_label": "Shipping details",
+            "link": "shopify://pages/free-shipping-information"
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+      }
+    },
+    "desc": {
+      "type": "grs-coll-desc",
+      "settings": {}
+    },
+    "faq": {
+      "type": "grs-coll-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What is a glass deck railing?",
+            "answer": "<p>It's an outdoor railing system that uses glass panels in place of traditional balusters or pickets, typically paired with metal posts, spigots, or a frame. The panels provide a barrier along the edge of a deck while keeping the view open.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Are deck glass railings suitable for outdoor decks?",
+            "answer": "<p>Yes, deck glass railings are designed for outdoor use and typically use tempered glass panels for exterior conditions. Requirements can vary by location, so check local building codes before finalizing your project.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How do you clean glass deck railings?",
+            "answer": "<p>Most owners clean glass panels with a standard glass cleaner and a soft cloth or squeegee, wiping down both sides periodically to keep them clear. Regular cleaning also makes it easier to spot any hardware that needs attention.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What components are needed for a glass railing system?",
+            "answer": "<p>A complete system generally includes glass panels, mounting hardware such as spigots or a base shoe, and often a caprail for added stability. The exact components depend on whether you choose a framed or frameless configuration.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "heading": "FAQs",
+        "text": "Can’t find your answer? Send us your question and a glass railing specialist replies.",
+        "button_label": "Ask a question",
+        "button_link": "shopify://pages/contact",
+        "button2_label": "All FAQs",
+        "button2_link": "shopify://pages/faq"
+      }
+    },
+    "info3": {
+      "type": "grs-info3",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "icon": "list",
+            "title": "Not sure what you need?",
+            "text": "Send your measurements and we build the parts list.",
+            "link_label": "Get a free quote",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "icon": "ruler",
+            "title": "Custom sizes",
+            "text": "Glass cut to your measurements, processed in 2–3 business days and shipped in 2–3 weeks.",
+            "link_label": "Custom glass",
+            "link": "shopify://products/custom-glass-railing"
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "icon": "layers",
+            "title": "Try it first",
+            "text": "See the glass and both hardware finishes before you order.",
+            "link_label": "Sample kit",
+            "link": "shopify://products/glass-hardware-sample-kit"
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "pre",
+    "grid",
+    "reviews",
+    "svc",
+    "desc",
+    "faq",
+    "info3"
+  ]
+}

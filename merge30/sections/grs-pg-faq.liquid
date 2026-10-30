@@ -1,0 +1,233 @@
+{%- comment -%}
+  Questions that open and close (prototype .pg-faqsec, the home FAQ look without the photo), and the page's FAQPage data.
+  Questions come from:
+  - the location questions in Theme settings > GRS location pages, when "Location questions" is on: city, state or
+    province page, building code page or the country page, found from the location menus (snippets/grs-pg-loc). [city],
+    [region], [country], [shipping], [code_link] and [hub_link] are filled in for the page;
+  - the blocks of this section; a block can be limited to some pages (their handles), and a "Heading for some pages"
+    block gives those pages their own heading.
+  "Hide when the page text has its own FAQ": nothing shows when the page's own text already has a FAQ (its data is
+  still added). The FAQPage data holds the page text's FAQ and the questions shown here, once each, unless the page
+  text has its own FAQPage script.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_faq), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_heading = 'grs.sd.pg_faq.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_eyebrow = 'grs.sd.pg_faq.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_text = 'grs.sd.pg_faq.text_html' | t
+  assign sd_text = section.settings.text | default: sd_text
+  assign sd_button_label = 'grs.sd.pg_faq.button_label_html' | t
+  assign sd_button_label = section.settings.button_label | default: sd_button_label
+  assign sd_button2_label = 'grs.sd.pg_faq.button2_label_html' | t
+  assign sd_button2_label = section.settings.button2_label | default: sd_button2_label
+-%}
+{%- capture loc -%}{% render 'grs-pg-loc' %}{%- endcapture -%}
+{%- liquid
+  assign L = loc | split: '␟'
+  assign kind = L[0]
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+  assign body = ''
+  if page
+    assign body = page.content | append: ''
+  endif
+  assign dq = ''
+  assign want = section.settings.desc_faq
+  if section.settings.hide_if_faq
+    assign want = true
+  endif
+  if body != '' and want
+    capture dq
+      render 'grs-rte-faq', html: body
+    endcapture
+    assign dq = dq | strip
+  endif
+  assign hide = false
+  if section.settings.hide_if_faq and dq != ''
+    assign hide = true
+  endif
+  unless section.settings.desc_faq
+    assign dq = ''
+  endunless
+  assign heading = sd_heading
+  assign pre = ''
+  assign nq = 0
+  if section.settings.loc and hide == false
+    case kind
+      when 'city'
+        assign pre = 'grs_faq_city_'
+        assign nq = 5
+      when 'hub'
+        assign pre = 'grs_faq_hub_'
+        assign nq = 5
+      when 'code'
+        assign pre = 'grs_faq_code_'
+        assign nq = 4
+      when 'lochub'
+        if L[1] == 'CA'
+          assign pre = 'grs_faq_ca_'
+        else
+          assign pre = 'grs_faq_us_'
+        endif
+        assign nq = 4
+    endcase
+  endif
+  if L[1] == 'CA'
+    capture country_name
+      render 'grs-ts', k: 'grs_name_ca'
+    endcapture
+    capture ship
+      render 'grs-ts', k: 'grs_ship_ca'
+    endcapture
+  else
+    capture country_name
+      render 'grs-ts', k: 'grs_name_us'
+    endcapture
+    capture ship
+      render 'grs-ts', k: 'grs_ship_us'
+    endcapture
+  endif
+  assign ct = L[7] | default: L[3]
+  capture code_link
+    if L[6] != blank
+      echo '<a href="'
+      render 'grs-url', url: L[6]
+      echo '">' | append: ct | append: '</a>'
+    endif
+  endcapture
+  capture ht
+    render 'grs-ts', k: 'grs_hub_link_text'
+  endcapture
+  capture hub_link
+    if L[4] != blank
+      echo '<a href="'
+      render 'grs-url', url: L[4]
+      echo '">' | append: ht | append: '</a>'
+    endif
+  endcapture
+  assign hub_link = hub_link | replace: '[region]', L[3]
+  if pre != ''
+    assign hk = pre | append: 'h'
+    capture hv
+      render 'grs-ts', k: hk
+    endcapture
+    if hv != blank
+      assign heading = hv
+    endif
+  endif
+  for block in section.blocks
+    if block.type == 'heading' and block.settings.heading != blank and block.settings.pages != blank
+      assign hs = block.settings.pages | split: ','
+      for x in hs
+        assign xh = x | strip
+        if xh == page.handle
+          assign heading = block.settings.heading
+        endif
+      endfor
+    endif
+  endfor
+  assign heading = heading | replace: '[city]', L[2] | replace: '[region]', L[3]
+  assign n = 0
+  assign qs = ''
+-%}
+{%- capture items -%}
+{%- if pre != '' -%}{%- for i in (1..nq) -%}{%- liquid
+    assign qk = pre | append: 'q' | append: i
+    assign ak = pre | append: 'a' | append: i
+    assign akc = ak | append: '_ca'
+    capture q
+      render 'grs-ts', k: qk
+    endcapture
+    capture a
+      render 'grs-ts', k: ak
+    endcapture
+    if L[1] == 'CA'
+      capture ac
+        render 'grs-ts', k: akc
+      endcapture
+      if ac != blank
+        assign a = ac
+      endif
+    endif
+    assign skip = false
+    if q == blank or a == blank
+      assign skip = true
+    endif
+    if a contains '[code_link]' and code_link == ''
+      assign skip = true
+    endif
+    if a contains '[hub_link]' and hub_link == ''
+      assign skip = true
+    endif
+  -%}{%- unless skip -%}{%- liquid
+    assign q = q | replace: '[city]', L[2] | replace: '[region]', L[3] | replace: '[country]', country_name
+    assign a = a | replace: '[city]', L[2] | replace: '[region]', L[3] | replace: '[country]', country_name | replace: '[shipping]', ship | replace: '[code_link]', code_link | replace: '[hub_link]', hub_link
+    assign n = n | plus: 1
+    assign qs = qs | append: q | append: '␞' | append: a | append: '␝'
+  -%}<div class="acc"><h3 class="acc-h"><button type="button" class="acc-q" aria-expanded="false"><span>{{ q }}</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 7h12"></path><path class="v" d="M7 1v12"></path></svg></span></button></h3><div class="acc-a"><div>{% render 'grs-rte', html: a %}</div></div></div>{%- endunless -%}{%- endfor -%}{%- endif -%}
+{%- unless hide -%}{%- for block in section.blocks -%}{%- if block.type == 'heading' -%}{%- continue -%}{%- endif -%}{%- liquid
+    assign show = true
+    if block.settings.pages != blank
+      assign show = false
+      assign hs = block.settings.pages | split: ','
+      for x in hs
+        assign xh = x | strip
+        if xh == page.handle
+          assign show = true
+        endif
+      endfor
+    endif
+    assign a = block.settings.answer
+    if grs_us and block.settings.answer_us != blank
+      assign a = block.settings.answer_us
+    endif
+    if block.settings.question == blank or a == blank
+      assign show = false
+    endif
+  -%}{%- if show -%}{%- liquid
+    assign n = n | plus: 1
+    assign qs = qs | append: block.settings.question | append: '␞' | append: a | append: '␝'
+  -%}<div class="acc" {{ block.shopify_attributes }}><h3 class="acc-h"><button type="button" class="acc-q" aria-expanded="false"><span>{{ block.settings.question | escape }}</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 7h12"></path><path class="v" d="M7 1v12"></path></svg></span></button></h3><div class="acc-a"><div>{% render 'grs-rte', html: a %}</div></div></div>{%- endif -%}{%- endfor -%}{%- endunless -%}
+{%- endcapture -%}
+{%- if n > 0 -%}
+{%- liquid
+  assign b1 = section.settings.button_link
+  if b1 == blank
+    assign b1 = pages['contact'].url | default: '/pages/contact'
+  endif
+  assign b2 = section.settings.button2_link
+  if b2 == blank
+    assign b2 = pages['faq'].url | default: '/pages/faq'
+  endif
+-%}
+<section class="sec faqsec pg-faqsec"{% render 'grs-vars', s: section.settings %}><div class="wrap faq2"><div class="faq2-l">
+{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}
+<h2 class="mh2">{{ heading }}</h2>
+{%- if sd_text != blank -%}<p>{{ sd_text }}</p>{%- endif -%}
+<div class="faq2-btns">{%- if sd_button_label != blank -%}<a class="btn" href="{% render 'grs-url', url: b1 %}"><span class="dot"></span>{{ sd_button_label }}</a>{%- endif -%}{%- if sd_button2_label != blank -%}<a class="btn btn-o" href="{% render 'grs-url', url: b2 %}"><span class="dot"></span>{{ sd_button2_label }}</a>{%- endif -%}</div></div><div><div class="list">{{ items }}</div></div></div></section>
+{%- endif -%}
+{%- if section.settings.faq_schema and body contains 'FAQPage' -%}{%- else -%}{%- if section.settings.faq_schema -%}
+{%- assign rows = qs | split: '␝' -%}
+{%- if dq != '' or n > 0 -%}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ dq }}
+{%- if dq != '' %}{% assign sep = ',' %}{% else %}{% assign sep = '' %}{% endif -%}
+{%- for r in rows -%}{%- liquid
+    assign qa = r | split: '␞'
+    assign qj = qa[0] | strip_html | strip | json
+    assign show = true
+    if dq contains qj
+      assign show = false
+    endif
+  -%}{%- if show and qa[0] != blank -%}{{ sep }}{"@type":"Question","name":{{ qj }},"acceptedAnswer":{"@type":"Answer","text":{{ qa[1] | strip_html | strip | json }}}}{%- assign sep = ',' -%}{%- endif -%}{%- endfor -%}
+]}</script>
+{%- endif -%}
+{%- endif -%}{%- endif -%}
+
+{% schema %}
+{"name":"GRS questions","tag":"div","settings":[{"type":"paragraph","content":"Questions written in the page text are added to the FAQ data too."},{"type":"checkbox","id":"loc","label":"Location questions","default":false,"info":"City, state, building code and country pages: the questions of Theme settings > GRS location pages, for this page."},{"type":"checkbox","id":"hide_if_faq","label":"Hide when the page text has its own FAQ","default":false},{"type":"text","id":"heading","label":"Heading","info":"Location questions use the heading set with them.","placeholder":"Frequently asked questions"},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"FAQ","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"text","label":"Text","placeholder":"Can’t find your answer? Send us your question and a glass railing specialist replies.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"button_label","label":"First button","placeholder":"Ask a question","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"button_link","label":"First button link"},{"type":"text","id":"button2_label","label":"Second button","placeholder":"All FAQs","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"button2_link","label":"Second button link"},{"type":"paragraph","content":"Empty links: the contact page and the FAQ page."},{"type":"checkbox","id":"faq_schema","label":"Add the FAQ data (FAQPage) for search engines","default":true},{"type":"checkbox","id":"desc_faq","label":"Also add the FAQ written in the page text","default":true},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Question size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Question size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"question","name":"Question","settings":[{"type":"text","id":"question","label":"Question"},{"type":"richtext","id":"answer","label":"Answer"},{"type":"richtext","id":"answer_us","label":"Answer in the U.S. (optional)"},{"type":"text","id":"pages","label":"Only on these pages","info":"Page handles separated by commas, e.g. faq, contact. Empty: every page using this template."}]},{"type":"heading","name":"Heading for some pages","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"text","id":"pages","label":"Pages","info":"Page handles separated by commas. On these pages this heading replaces the heading of the section."}]}],"max_blocks":50,"presets":[{"name":"GRS questions"}]}
+{% endschema %}

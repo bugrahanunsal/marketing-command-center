@@ -1,0 +1,24 @@
+{%- comment -%}
+  The building codes of the other states or provinces under a building code page (prototype S.codes). Nothing on
+  other pages, so it can sit in the shared page template. List: snippets/grs-pg-codelist (building codes menu).
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_codes), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.pg_codes.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading_us = 'grs.sd.pg_codes.heading_us_html' | t
+  assign sd_heading_us = section.settings.heading_us | default: sd_heading_us
+  assign sd_heading_ca = 'grs.sd.pg_codes.heading_ca_html' | t
+  assign sd_heading_ca = section.settings.heading_ca | default: sd_heading_ca
+-%}
+{%- capture loc -%}{% render 'grs-pg-loc' %}{%- endcapture -%}
+{%- assign L = loc | split: '␟' -%}
+{%- if L[0] == 'code' -%}
+{%- if L[1] == 'CA' -%}{%- assign heading = sd_heading_ca -%}{%- else -%}{%- assign heading = sd_heading_us -%}{%- endif -%}
+<div{% render 'grs-vars', s: section.settings %}>{% render 'grs-pg-codelist', L: L, heading: heading, eyebrow: sd_eyebrow, mode: 'other', ncol: section.settings.list_cols, ncol_m: section.settings.list_cols_m %}</div>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS building codes list","tag":"div","settings":[{"type":"paragraph","content":"Under a state or province building code page: the building codes of the other states or provinces, from the building codes menu (Theme settings > GRS location pages). Other pages: nothing."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Building codes","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading_us","label":"Heading (U.S. state pages)","placeholder":"Building codes in other states","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading_ca","label":"Heading (province pages)","placeholder":"Building codes in other provinces","info":"Empty: the standard text, in the visitor's language."},{"type":"range","id":"list_cols","label":"Columns on computers","min":2,"max":6,"step":1,"default":4},{"type":"range","id":"list_cols_m","label":"Columns on phones","min":1,"max":3,"step":1,"default":2},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]}],"presets":[{"name":"GRS building codes list"}]}
+{% endschema %}

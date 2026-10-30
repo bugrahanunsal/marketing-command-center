@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/What_Types_of_Glass_Are_Commonly_Used_For_Railing_Systems.png",
+        "heading": "Glass Railing Quispamsis",
+        "text": "Quispamsis homes and businesses can enjoy open, bright, and secure spaces with glass railings. Ideal for decks, balconies, patios, staircases, and terraces, these systems provide safety while keeping sightlines clear. At The Glass Railing Store, tempered and laminated panels are designed for strength, durability, and long-lasting performance in <a href=\"/pages/glass-railings-new-brunswick\">New Brunswick</a>.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefit of Glass Railings</strong>",
+        "description": "<ul><li><strong>Durable Panels:</strong> Tempered and laminated glass ensure long-lasting safety and clarity.</li><li><strong>Clear Sightlines:</strong> Frameless and semi-frameless designs allow unobstructed views of surroundings.</li><li><strong>Light & Space:</strong> Natural light flows through interiors and exteriors, creating brighter, more open areas.</li><li><strong>Versatile Applications:</strong> Suitable for residential, commercial, and office projects.</li><li><strong>Low Maintenance:</strong> Panels resist rust, corrosion, and fading.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Quispamsis, NB, Canada"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Create Safe and Stylish Spaces</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings add safety, style, and openness to decks, balconies, staircases, and commercial terraces. Browse panels and hardware online, or contact our team today to design a functional, visually appealing railing system for your Quispamsis property in New Brunswick.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

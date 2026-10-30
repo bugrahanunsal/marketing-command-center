@@ -1,0 +1,321 @@
+{%- liquid
+  assign sd_search_placeholder = 'grs.sd.header.search_placeholder_html' | t
+  assign sd_search_placeholder = section.settings.search_placeholder | default: sd_search_placeholder
+  assign sd_support_label = 'grs.sd.header.support_label_html' | t
+  assign sd_support_label = section.settings.support_label | default: sd_support_label
+  assign sd_dark_label = 'grs.sd.header.dark_label_html' | t
+  assign sd_dark_label = section.settings.dark_label | default: sd_dark_label
+  assign sd_rail_title = 'grs.sd.header.rail_title_html' | t
+  assign sd_rail_title = section.settings.rail_title | default: sd_rail_title
+  assign sd_shop_all_label = 'grs.sd.header.shop_all_label_html' | t
+  assign sd_shop_all_label = section.settings.shop_all_label | default: sd_shop_all_label
+  assign sd_view_all_label = 'grs.sd.header.view_all_label_html' | t
+  assign sd_view_all_label = section.settings.view_all_label | default: sd_view_all_label
+  assign sd_products_word = 'grs.sd.header.products_word_html' | t
+  assign sd_products_word = section.settings.products_word | default: sd_products_word
+  assign sd_shop_now_label = 'grs.sd.header.shop_now_label_html' | t
+  assign sd_shop_now_label = section.settings.shop_now_label | default: sd_shop_now_label
+-%}
+{%- liquid
+  if routes.root_url == '/'
+    assign r = ''
+  else
+    assign r = routes.root_url
+  endif
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+-%}
+{%- comment -%} Logo sizes: drawn 34px high on phones and tablets, 44px on computers (x Logo size), so the browser takes the 268px file wherever that is sharp enough (before: sizes 268px, the 536px file on most phones). {%- endcomment -%}
+{%- liquid
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+  assign nav = settings.grs_menu | default: ''
+  if nav == ''
+    assign nav = linklists['grs-main-menu'] | default: linklists['main-menu']
+  endif
+  if grs_us
+    assign nav_us = settings.grs_menu_us | default: ''
+    if nav_us == ''
+      assign nav_us = linklists['grs-main-menu-usa'] | default: nav
+    endif
+    assign nav = nav_us
+  endif
+  assign nav_links = settings.grs_menu_links | default: ''
+  if nav_links == ''
+    assign nav_links = linklists['grs-header-links']
+  endif
+  assign grs_logo = settings.grs_logo | default: images['the-glass-railing-store-logo.png'] | default: settings.logo
+  assign grs_logo_h = 120
+  assign grs_logo_sz = '268px'
+  if grs_logo.aspect_ratio > 0
+    assign grs_logo_h = 536 | divided_by: grs_logo.aspect_ratio | round
+    assign ls = section.settings.logo_size | default: 100
+    assign lw_m = 34 | times: ls | times: grs_logo.aspect_ratio | divided_by: 100.0 | ceil
+    assign lw_d = 44 | times: ls | times: grs_logo.aspect_ratio | divided_by: 100.0 | ceil
+    assign grs_logo_sz = '(max-width:1099px) ' | append: lw_m | append: 'px, ' | append: lw_d | append: 'px'
+  endif
+-%}
+<header class="hd2" id="hd"{% render 'grs-vars', s: section.settings %}>
+<div class="hd2-main"><button class="icon-btn hd2-burger" id="burger" type="button" aria-label="{{ 'grs.a11y.open_menu' | t }}" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M0.65 5.85h16.7M0.65 11.85h16.7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path></svg></button>
+<a class="logo" href="{{ routes.root_url }}" aria-label="{{ 'grs.a11y.home_link' | t: shop: shop.name }}"><img src="{{ grs_logo | image_url: width: 536 }}" alt="{{ shop.name | escape }}" width="536" height="{{ grs_logo_h }}" srcset="{{ grs_logo | image_url: width: 268 }} 268w, {{ grs_logo | image_url: width: 536 }} 536w" sizes="{{ grs_logo_sz }}"></a>
+<form class="hd2-search" id="hsearch" role="search" action="{{ routes.search_url }}" method="get"><label for="hq" class="sr">{{ 'grs.general.search' | t }}</label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><input type="hidden" name="options[prefix]" value="last"><input id="hq" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ sd_search_placeholder | escape }}" autocomplete="off"><button type="reset" class="hs-clear">{{ 'grs.general.clear' | t }}</button></form>
+<div class="hd2-r"><div class="hd2-sup"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span><em>{{ sd_support_label }}</em><a href="tel:{{ grs_phone_tel }}"><b>{{ grs_phone }}</b></a></span></div>
+<a class="icon-btn hd2-sicon" href="{{ routes.search_url }}" aria-label="{{ 'grs.a11y.search' | t }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></a>
+<a class="icon-btn hd2-user" href="{{ routes.account_url }}" aria-label="{{ 'grs.a11y.account' | t }}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7.8" r="4.3"></circle><path d="M4.2 21.2a7.8 7.8 0 0 1 15.6 0"></path></svg></a>
+<button class="icon-btn cartbtn hd2-cart" id="cartbtn" type="button" aria-label="{{ 'grs.a11y.open_cart' | t }}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.3 8h11.4a1 1 0 0 1 1 .92l.95 10.9A1.6 1.6 0 0 1 18.060 21.5H5.94a1.6 1.6 0 0 1-1.6-1.68l.95-10.9A1 1 0 0 1 6.3 8z"></path><path d="M8.8 8V6.7a3.2 3.2 0 0 1 6.4 0V8"></path></svg><span class="cc{% if cart.item_count == 0 %} zero{% endif %}">{{ cart.item_count }}</span></button></div></div>
+<nav class="hd2-nav" aria-label="{{ 'grs.a11y.main' | t }}"><div class="hd2-nav-in"><div class="hd2-links">{%- for link in nav.links -%}
+  {%- if link.links.size == 0 -%}
+    <a class="nl" href="{{ link.url }}">{{ link.title | escape }}</a>
+  {%- else -%}
+    {%- assign is_prod = true -%}
+    {%- for c in link.links -%}{%- if c.type != 'collection_link' -%}{%- assign is_prod = false -%}{%- endif -%}{%- endfor -%}
+    {%- if is_prod -%}
+      {%- comment -%} One pass over the menu's collections: each collection's link object, product count and
+        photo are read once, and the three parts (category list, product panes, photos) are output after. {%- endcomment -%}
+      {%- liquid
+        assign h_rail = ''
+        assign h_pane = ''
+        assign h_promo = ''
+      -%}
+      {%- for c in link.links -%}
+        {%- liquid
+          assign col = c.object
+          assign ch = col.handle
+          assign cn = col.products_count
+          assign ct = c.title | escape
+          assign ph = nil
+          for b in section.blocks
+            if b.type == 'category' and b.settings.collection.handle == ch
+              assign ph = b.settings.image
+            endif
+          endfor
+          if ph == blank
+            assign ph = col.image | default: col.products.first.featured_image
+          endif
+        -%}
+        {%- capture h_rail -%}{{ h_rail }}<li class="ndp-gli" style="--i:{{ forloop.index0 }}"><a class="ndp-g{% if forloop.first %} on{% endif %}" href="{{ c.url }}" data-ndg="{{ ch }}" data-n="{{ cn }}"><span class="ndp-gi">{% render 'grs-nav-icon', kind: 'cat', key: ch %}</span><span class="ndp-gt">{{ ct }}</span></a></li>{%- endcapture -%}
+        {%- capture h_pane -%}{{ h_pane }}<div class="ndp-pane{% if forloop.first %} on{% endif %}" data-ndp="{{ ch }}"><div class="ndp-ph"><b class="ndp-pt">{{ ct }}</b><a class="ndp-va" href="{{ c.url }}">{{ sd_view_all_label }} {{ cn }} <svg class="ndp-arr" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><ul class="ndp-grid" role="list">{%- for p in col.products limit: 8 -%}<li style="--i:{{ forloop.index0 }}"><a class="ndp-pc" href="{{ p.url }}" data-th="{{ p.handle }}">{%- liquid
+  assign pty = p.type | downcase
+  assign p_st = true
+  assign p_ph = false
+  if pty contains 'panel' or pty contains 'custom glass'
+    assign p_st = false
+  else
+    comment
+      Main photo that is not one of the product's finish (variant) photos, on a product that has finish photos: a
+      room photo (6ft / 19ft Square Caprail), drawn filling the box instead of small on the grey background.
+    endcomment
+    assign v_img = false
+    assign f_v = false
+    for v in p.variants
+      if v.featured_image
+        assign v_img = true
+        if v.featured_image.id == p.featured_image.id
+          assign f_v = true
+          break
+        endif
+      endif
+    endfor
+    if v_img and f_v == false
+      assign p_st = false
+      assign p_ph = true
+    endif
+  endif
+-%}<span class="ndp-im{% if p_st %} st{% endif %}" aria-hidden="true"{% if p.featured_image %} data-src="{% if p_st %}{{ p.featured_image | image_url: width: 320 }}{% elsif p_ph %}{{ p.featured_image | image_url: width: 400 }}{% else %}{{ p.featured_image | image_url: width: 160, height: 160, crop: 'center' }}{% endif %}"{% endif %}></span><span class="ndp-pn">{{ p.title | escape }}</span></a></li>{%- endfor -%}</ul></div>{%- endcapture -%}
+        {%- capture h_promo -%}{{ h_promo }}<div class="ndp-promo{% if forloop.first %} on{% endif %}" data-ndpr="{{ ch }}"><span class="ndp-fim" data-ck="{{ ch }}"{% if ph %} data-src="{{ ph | image_url: width: 520 }}"{% endif %}></span><span class="ndp-ft"><em>{{ cn }} {{ sd_products_word }}</em><b>{{ ct }}</b>{%- if sd_shop_now_label != blank -%}<a class="ndp-btn" href="{{ c.url }}">{{ sd_shop_now_label }} <svg class="ndp-arr" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</span></div>{%- endcapture -%}
+      {%- endfor -%}
+      <div class="mm-dd nd-dd nd-prod"><a class="nl" href="{{ link.url }}" aria-haspopup="true">{{ link.title | escape }} <svg width="10" height="6" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><div class="ndp ndp-prod"><div class="ndp-in"><div class="ndp-rail">
+      {%- if sd_rail_title != blank -%}<span class="ndp-eb">{{ sd_rail_title }}</span>{%- endif -%}<ul class="ndp-gl" role="list">{{ h_rail }}</ul>{%- if sd_shop_all_label != blank -%}<a class="ndp-all" href="{{ link.url }}">{{ sd_shop_all_label }} <svg class="ndp-arr" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</div><div class="ndp-main">{{ h_pane }}</div><div class="ndp-side">{{ h_promo }}</div></div></div></div>
+    {%- else -%}
+      {%- liquid
+        assign dd = nil
+        assign lt = link.title | strip | downcase
+        for b in section.blocks
+          if b.type == 'dropdown'
+            assign bt = b.settings.menu_title | strip | downcase
+            if bt == lt
+              assign dd = b
+            endif
+          endif
+        endfor
+        assign descs = dd.settings.descriptions | newline_to_br | split: '<br />'
+      -%}
+      <div class="mm-dd nd-dd">{%- if link.url == '#' or link.url == blank -%}<button class="nl" type="button" aria-haspopup="true">{{ link.title | escape }} <svg width="10" height="6" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>{%- else -%}<a class="nl" href="{{ link.url }}" aria-haspopup="true">{{ link.title | escape }} <svg width="10" height="6" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+      <div class="ndp ndp-s"><div class="ndp-in"><div class="ndp-intro"><b class="ndp-it"><span>{{ link.title | escape }}</span></b>{%- if dd.settings.intro != blank -%}<p>{{ dd.settings.intro }}</p>{%- endif -%}</div><ul class="ndp-list" role="list">
+      {%- for c in link.links -%}{%- assign d = descs[forloop.index0] | strip -%}<li class="ndp-li" style="--i:{{ forloop.index0 }}"><span class="ndp-ic">{% render 'grs-nav-icon', url: c.url %}</span><span class="ndp-lt"><a href="{{ c.url }}">{{ c.title | escape }}</a>{%- if d != blank -%}<em>{{ d }}</em>{%- endif -%}</span><svg class="ndp-arr" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>{%- endfor -%}
+      </ul>{%- if dd.settings.image -%}<div class="ndp-feat"><span class="ndp-fim" data-src="{{ dd.settings.image | image_url: width: 520 }}"></span><span class="ndp-ft"><em>{%- assign t_l = dd.settings.feature_label -%}{%- if t_l == blank or t_l == 'Featured' -%}{%- assign t_l = 'grs.sd.header.feature_label_html' | t -%}{%- endif -%}{{ t_l }}</em><b>{{ dd.settings.feature_title }}</b><span class="ndp-fd">{{ dd.settings.feature_text }}</span>{%- if dd.settings.button_label != blank -%}<a class="ndp-btn" href="{% render 'grs-url', url: dd.settings.button_link %}">{%- assign t_l = dd.settings.button_label -%}{%- if t_l == blank or t_l == 'Read more' -%}{%- assign t_l = 'grs.sd.header.read_more_html' | t -%}{%- endif -%}{{ t_l }} <svg class="ndp-arr" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>{%- if dd.settings.feature_title != blank -%}<span class="vh">: {{ dd.settings.feature_title }}</span>{%- endif -%}</a>{%- endif -%}</span></div>{%- endif -%}
+      </div></div></div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}</div><div class="hd2-rt"><button class="hd2-theme themebtn" type="button" role="switch" aria-checked="false" aria-label="{{ sd_dark_label | escape }}"><span class="ht-sw" aria-hidden="true"><i></i></span><span class="ht-l" aria-hidden="true">{{ sd_dark_label }}</span></button><div class="hd2-util">{%- for l in nav_links.links -%}<a href="{{ l.url }}">{% render 'grs-nav-icon', kind: 'util', url: l.url %}{{ l.title | escape }}</a>{%- endfor -%}</div></div></div></nav>
+</header>
+
+{% schema %}
+{
+  "name": "GRS header",
+  "class": "grs-hd-sec",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Menu links: Online Store > Navigation > \"GRS New Design\" menus. Logo, phone, email and which menus are used: Theme settings > GRS store info and menus."
+    },
+    {
+      "type": "range",
+      "id": "logo_size",
+      "label": "Logo size",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search box text",
+      "placeholder": "Search panels, spigots, guides, cities...",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "support_label",
+      "label": "Text above the phone number",
+      "placeholder": "Call or text us",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "dark_label",
+      "label": "Dark mode switch label",
+      "placeholder": "Dark mode",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "header",
+      "content": "Products menu",
+      "info": "Used for a menu item whose links are all collections."
+    },
+    {
+      "type": "text",
+      "id": "rail_title",
+      "label": "Title above the categories",
+      "placeholder": "Shop by category",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "shop_all_label",
+      "label": "Link under the categories",
+      "placeholder": "Shop all products",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "\"View all\" label",
+      "placeholder": "View all",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "products_word",
+      "label": "Word after the product count",
+      "placeholder": "products",
+      "info": "Empty: the standard text, in the visitor's language."
+    },
+    {
+      "type": "text",
+      "id": "shop_now_label",
+      "label": "Button on the category photo",
+      "placeholder": "Shop now",
+      "info": "Empty: the standard text, in the visitor's language."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "dropdown",
+      "name": "Menu dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu item",
+          "info": "The item's title in the menu, for example Building Code."
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Text under the title"
+        },
+        {
+          "type": "textarea",
+          "id": "descriptions",
+          "label": "Link descriptions",
+          "info": "One line per link, in the menu's order."
+        },
+        {
+          "type": "header",
+          "content": "Featured card"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "feature_label",
+          "label": "Small label",
+          "default": "Featured"
+        },
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Read more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Category photo",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection",
+          "info": "A collection in the Products menu."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "groups": [
+      "header"
+    ]
+  }
+}
+{% endschema %}

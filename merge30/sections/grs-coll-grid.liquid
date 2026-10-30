@@ -1,0 +1,191 @@
+{%- comment -%}
+  Products of the collection (prototype .coll2): sorting (the collection's sort options), filters (the storefront filters
+  set in the Search & Discovery app: lists, availability, price), product cards and pages. A change reloads only this
+  section (assets/grs-collection.js); without script the form still works with its "Show products" button.
+  On phones the filters open as a panel ("Filter and sort"). With only Matte Black picked in a finish filter, the
+  cards start on their Matte Black photos.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.coll_grid), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_panel_title = 'grs.sd.coll_grid.panel_title_html' | t
+  assign sd_panel_title = section.settings.panel_title | default: sd_panel_title
+  assign sd_sort_label = 'grs.sd.coll_grid.sort_label_html' | t
+  assign sd_sort_label = section.settings.sort_label | default: sd_sort_label
+  assign sd_sort_featured_label = 'grs.sd.coll_grid.sort_featured_label_html' | t
+  assign sd_sort_featured_label = section.settings.sort_featured_label | default: sd_sort_featured_label
+  assign sd_sort_reviews_label = 'grs.sd.coll_grid.sort_reviews_label_html' | t
+  assign sd_sort_reviews_label = section.settings.sort_reviews_label | default: sd_sort_reviews_label
+  assign sd_filter_title = 'grs.sd.coll_grid.filter_title_html' | t
+  assign sd_filter_title = section.settings.filter_title | default: sd_filter_title
+  assign sd_clear_label = 'grs.sd.coll_grid.clear_label_html' | t
+  assign sd_clear_label = section.settings.clear_label | default: sd_clear_label
+  assign sd_show_label = 'grs.sd.coll_grid.show_label_html' | t
+  assign sd_show_label = section.settings.show_label | default: sd_show_label
+  assign sd_count_one = 'grs.sd.coll_grid.count_one_html' | t
+  assign sd_count_one = section.settings.count_one | default: sd_count_one
+  assign sd_count_other = 'grs.sd.coll_grid.count_other_html' | t
+  assign sd_count_other = section.settings.count_other | default: sd_count_other
+  assign sd_price_from = 'grs.sd.coll_grid.price_from_html' | t
+  assign sd_price_from = section.settings.price_from | default: sd_price_from
+  assign sd_price_to = 'grs.sd.coll_grid.price_to_html' | t
+  assign sd_price_to = section.settings.price_to | default: sd_price_to
+  assign sd_pages_label = 'grs.sd.coll_grid.pages_label_html' | t
+  assign sd_pages_label = section.settings.pages_label | default: sd_pages_label
+  assign sd_empty_title = 'grs.sd.coll_grid.empty_title_html' | t
+  assign sd_empty_title = section.settings.empty_title | default: sd_empty_title
+  assign sd_empty_text = 'grs.sd.coll_grid.empty_text_html' | t
+  assign sd_empty_text = section.settings.empty_text | default: sd_empty_text
+  assign sd_empty_filtered = 'grs.sd.coll_grid.empty_filtered_html' | t
+  assign sd_empty_filtered = section.settings.empty_filtered | default: sd_empty_filtered
+  assign sd_empty_filtered_text = 'grs.sd.coll_grid.empty_filtered_text_html' | t
+  assign sd_empty_filtered_text = section.settings.empty_filtered_text | default: sd_empty_filtered_text
+-%}
+{%- liquid
+  assign c = collection
+  assign per = section.settings.per_page | default: 24
+  assign sort = c.sort_by | default: c.default_sort_by
+  assign n_active = 0
+  for f in c.filters
+    if f.type == 'price_range'
+      if f.min_value.value != nil or f.max_value.value != nil
+        assign n_active = n_active | plus: 1
+      endif
+    else
+      assign n_active = n_active | plus: f.active_values.size
+    endif
+  endfor
+  assign f_bl = false
+  assign f_ss = false
+  for f in c.filters
+    for v in f.active_values
+      assign vl = v.label | downcase
+      if vl contains 'black' or vl contains 'noir' or vl contains 'negro'
+        assign f_bl = true
+      elsif vl contains 'stainless' or vl contains 'brushed' or vl contains 'inox' or vl contains 'acero'
+        assign f_ss = true
+      endif
+    endfor
+  endfor
+  assign only_bl = false
+  if f_bl and f_ss == false
+    assign only_bl = true
+  endif
+  assign clear_url = c.url
+  if c.sort_by != blank and c.sort_by != c.default_sort_by
+    assign clear_url = c.url | append: '?sort_by=' | append: c.sort_by
+  endif
+-%}
+{%- paginate collection.products by section.settings.per_page -%}
+{%- liquid
+  if c.products_count == 1
+    assign count_txt = sd_count_one | replace: '[count]', c.products_count
+  else
+    assign count_txt = sd_count_other | replace: '[count]', c.products_count
+  endif
+  assign show_txt = sd_show_label | replace: '[count]', '<b id="fcount2">[n]</b>' | replace: '[n]', c.products_count
+  assign pcols = section.settings.columns | default: 3
+-%}
+{%- comment -%}
+  Image sizes of the product cards = the width of a grid cell (grs-collection.css): below 990px two columns of the
+  page width (at most 46vw); from 990px the filter column (300px) + the gap before the products (28-48px) + the
+  section's side spacing (4.2vw each side) come off, then "Products per row" columns with 20px gaps; above the
+  content width (default 1440px) the cells stop growing; from 1680px the grid has 4 columns (or "Products per row"
+  when it is not 3). Finish photos (studio) are drawn at 74% of the cell. The values are never below the cell
+  width, so every photo stays as sharp as before; the browser just stops taking files larger than the cell.
+{%- endcomment -%}
+{%- liquid
+  assign g_max = section.settings.content_width | default: 1440
+  assign g_m = 4
+  if pcols != 3
+    assign g_m = pcols
+  endif
+  assign g_x = pcols | minus: 1 | times: 20 | plus: 328
+  assign g_cap = g_max | times: 0.916 | minus: g_x | divided_by: pcols | ceil
+  assign g_xl_w = g_max | times: 0.916
+  assign g_xl_w2 = g_max | minus: 141.12
+  if g_xl_w2 < g_xl_w
+    assign g_xl_w = g_xl_w2
+  endif
+  assign g_xl = g_m | minus: 1 | times: 20 | plus: 348
+  assign g_xl = g_xl_w | minus: g_xl | divided_by: g_m | ceil
+  assign g_k = 1.0 | divided_by: pcols | times: 10000 | ceil | divided_by: 10000.0
+  assign g_ks = 0.74 | divided_by: pcols | times: 10000 | ceil | divided_by: 10000.0
+  assign g_max1 = g_max | plus: 1
+  assign g_cap_s = g_cap | times: 0.74 | ceil
+  assign g_xl_s = g_xl | times: 0.74 | ceil
+  assign g_sz = '(max-width:989px) 46vw, (min-width:1680px) ' | append: g_xl | append: 'px, (min-width:' | append: g_max1 | append: 'px) ' | append: g_cap | append: 'px, calc((91.6vw - ' | append: g_x | append: 'px) * ' | append: g_k | append: ')'
+  assign g_szs = '(max-width:989px) 34.1vw, (min-width:1680px) ' | append: g_xl_s | append: 'px, (min-width:' | append: g_max1 | append: 'px) ' | append: g_cap_s | append: 'px, calc((91.6vw - ' | append: g_x | append: 'px) * ' | append: g_ks | append: ')'
+-%}
+{%- capture page_t -%}{%- if page_title != blank -%}{{ page_title }}{%- if current_tags %}{% assign grs_tags = current_tags | join: ', ' %} – {{ 'grs.general.tagged' | t: tags: grs_tags }}{% endif -%}{%- if paginate.current_page != 1 %} – {{ 'general.pagination.page' | t: number: paginate.current_page }}{% endif -%}{%- unless page_title contains shop.name %} – {{ shop.name }}{% endunless -%}{%- endif -%}{%- endcapture -%}
+<section class="coll2-sec"{% render 'grs-vars', s: section.settings %} data-coll data-section="{{ section.id }}"{% if page_t != blank %} data-title="{{ page_t | escape }}"{% endif %}><div class="wrap coll2">
+<aside class="fl2" id="filters" aria-label="{{ sd_panel_title | escape }}"><form class="fl2-form" id="grs-cf" action="{{ c.url }}" method="get" data-sort0="{{ c.default_sort_by | escape }}">
+<div class="fl2-mhead"><b>{{ sd_panel_title }}</b><button class="x" id="fclose" type="button" aria-label="{{ 'grs.a11y.close_filters' | t }}"><svg width="18" height="17" viewBox="0 0 18 17" fill="none"><path d="M1.2 0.8l15.6 15.4M16.8 0.8L1.2 16.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path></svg></button></div>
+<div class="fl2-body">
+{%- comment -%} Sort list: only Featured, Best selling and Most reviewed (as in the prototype). Featured is the collection's own default order (or the manual order when the default is Best selling); Most reviewed is ordered in the browser by the Judge.me review count (assets/grs-collection.js) {%- endcomment -%}{%- liquid
+  assign s_feat = c.default_sort_by
+  if s_feat == 'best-selling'
+    assign s_feat = 'manual'
+  endif
+  assign s_feat_name = ''
+  for o in c.sort_options
+    if o.value == 'manual'
+      assign s_feat_name = o.name
+    endif
+  endfor
+  if s_feat_name == blank
+    assign s_feat_name = sd_sort_featured_label | default: 'Featured'
+  endif
+  assign s_best_name = 'Best selling'
+  for o in c.sort_options
+    if o.value == 'best-selling'
+      assign s_best_name = o.name
+    endif
+  endfor
+-%}
+{%- if section.settings.show_sort -%}<div class="fl2-sort"><label class="fl2-lab" for="csort">{{ sd_sort_label }}</label><div class="fl2-sel"><select id="csort" name="sort_by"><option value="{{ s_feat | escape }}"{% unless sort == 'best-selling' %} selected{% endunless %}>{{ s_feat_name | escape }}</option><option value="best-selling"{% if sort == 'best-selling' %} selected{% endif %}>{{ s_best_name | escape }}</option><option value="most-reviewed">{{ sd_sort_reviews_label | default: 'Most reviewed' | escape }}</option></select><svg width="10" height="6" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>{%- endif -%}
+{%- if section.settings.show_filters and c.filters.size > 0 -%}
+<div class="fl2-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg><span>{{ sd_filter_title }}</span>{%- if n_active > 0 -%}<a class="fl2-clear" id="fclear" href="{{ clear_url }}">{{ sd_clear_label }}</a>{%- endif -%}</div>
+{%- for f in c.filters -%}
+<div class="fl2-g open" data-fk="{{ f.param_name | escape }}"><button class="fl2-q" type="button" aria-expanded="true">{{ f.label | escape }}<span class="fl2-c"><svg width="10" height="6" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="fl2-a"><div><div class="fl2-opts">
+{%- if f.type == 'price_range' -%}
+<div class="fl2-price"><label><span class="sr">{{ sd_price_from }}</span><input type="number" inputmode="decimal" step="any" name="{{ f.min_value.param_name }}" value="{% if f.min_value.value != nil %}{{ f.min_value.value | money_without_currency | remove: ',' }}{% endif %}" placeholder="0" min="0" aria-label="{{ sd_price_from | escape }}"></label><span class="fl2-dash" aria-hidden="true">–</span><label><span class="sr">{{ sd_price_to }}</span><input type="number" inputmode="decimal" step="any" name="{{ f.max_value.param_name }}" value="{% if f.max_value.value != nil %}{{ f.max_value.value | money_without_currency | remove: ',' }}{% endif %}" placeholder="{{ f.range_max | money_without_currency | remove: ',' }}" min="0" aria-label="{{ sd_price_to | escape }}"></label><span class="fl2-cur">{{ cart.currency.iso_code }}</span></div>
+{%- else -%}
+{%- for v in f.values -%}{%- liquid
+    assign off = false
+    if v.count == 0 and v.active == false
+      assign off = true
+    endif
+    assign vl = v.label | downcase
+    assign sw = ''
+    if vl contains 'black' or vl contains 'noir' or vl contains 'negro'
+      assign sw = 'sw-bl'
+    elsif vl contains 'stainless' or vl contains 'brushed' or vl contains 'inox' or vl contains 'acero'
+      assign sw = 'sw-ss'
+    endif
+  -%}<label class="fl2-o{% if off %} off{% endif %}"><input type="checkbox" name="{{ v.param_name }}" value="{{ v.value | escape }}"{% if v.active %} checked{% endif %}{% if off %} disabled{% endif %}>{% if sw != '' %}<span class="fl2-sw {{ sw }}"></span>{% else %}<span class="fl2-box"></span>{% endif %}<span class="fl2-t">{{ v.label | escape }}</span><em>({{ v.count }})</em></label>{%- endfor -%}
+{%- endif -%}
+</div></div></div></div>
+{%- endfor -%}
+{%- endif -%}
+</div>
+<div class="fl2-mfoot"><a class="btn-o" id="fclear2" href="{{ clear_url }}">{{ sd_clear_label }}</a><button class="btn" id="fapply" type="submit"><span class="dot"></span><span>{{ show_txt }}</span></button></div>
+</form></aside>
+<div class="coll2-main"><div class="coll2-bar"><span class="coll2-count" id="ccount" aria-live="polite">{{ count_txt }}</span><div class="fchips" id="fchips">
+{%- for f in c.filters -%}{%- if f.type == 'price_range' -%}{%- if f.min_value.value != nil or f.max_value.value != nil -%}<a class="fchip" href="{{ f.url_to_remove }}" aria-label="{{ 'grs.a11y.remove_filter' | t: label: f.label }}">{% if f.min_value.value != nil %}{{ f.min_value.value | money }}{% else %}{{ 0 | money }}{% endif %} – {% if f.max_value.value != nil %}{{ f.max_value.value | money }}{% else %}{{ f.range_max | money }}{% endif %}<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 1l8 8M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>{%- endif -%}{%- else -%}{%- for v in f.active_values -%}<a class="fchip" href="{{ v.url_to_remove }}" aria-label="{{ 'grs.a11y.remove_filter' | t: label: v.label }}">{{ v.label | escape }}<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M1 1l8 8M9 1L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>{%- endfor -%}{%- endif -%}{%- endfor -%}
+{%- if n_active > 1 -%}<a class="fchip-clear" href="{{ clear_url }}">{{ sd_clear_label }}</a>{%- endif -%}
+</div>{%- if section.settings.show_filters or section.settings.show_sort -%}<button class="fopen2" id="fopen" type="button" aria-controls="filters" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"></path><circle cx="16" cy="6" r="2"></circle><circle cx="10" cy="12" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg>{{ sd_panel_title }}</button>{%- endif -%}</div>
+<div class="grid4 cgrid2" id="cgrid"{% if pcols != 3 %} style="--grs-cxl:{{ pcols }}"{% endif %}>
+{%- for p in collection.products -%}{% render 'grs-card', product: p, bl: only_bl, sizes: g_sz, sizes_studio: g_szs %}{%- else -%}
+<div class="cempty"><b>{% if n_active > 0 %}{{ sd_empty_filtered }}{% else %}{{ sd_empty_title }}{% endif %}</b><span>{% if n_active > 0 %}{{ sd_empty_filtered_text }}{% else %}{{ sd_empty_text }}{% endif %}</span></div>
+{%- endfor -%}
+{%- if collection.products.size > 0 -%}<script type="application/json" class="crc">{ {%- for p in collection.products -%}{{ p.handle | json }}:{{ p.metafields.reviews.rating_count.value | default: 0 }}{% unless forloop.last %},{% endunless %}{%- endfor -%} }</script>{%- endif -%}
+</div>
+<nav class="pager" id="pager" aria-label="{{ sd_pages_label | escape }}">{%- if paginate.pages > 1 -%}{%- for part in paginate.parts -%}{%- if part.is_link -%}<a href="{{ part.url }}" aria-label="{{ 'grs.a11y.page_n' | t: n: part.title }}">{{ part.title }}</a>{%- elsif part.title == paginate.current_page -%}<span class="on" aria-current="page">{{ part.title }}</span>{%- else -%}<span class="gap">{{ part.title }}</span>{%- endif -%}{%- endfor -%}{%- endif -%}</nav>
+</div></div></section><div class="fl2-veil" id="fveil"></div>
+<noscript><style>.fl2-mfoot{display:flex!important;margin-top:24px}</style></noscript>
+{%- endpaginate -%}
+
+{% schema %}
+{"name":"GRS collection products","tag":"div","class":"grs-coll-grid-sec","settings":[{"type":"paragraph","content":"Filters come from the Search & Discovery app (Apps > Search & Discovery > Filters). Sorting offers Featured, Best selling and Most reviewed."},{"type":"range","id":"per_page","label":"Products per page","min":8,"max":48,"step":4,"default":24},{"type":"checkbox","id":"show_sort","label":"Show sorting","default":true},{"type":"checkbox","id":"show_filters","label":"Show filters","default":true},{"type":"header","content":"Labels"},{"type":"text","id":"panel_title","label":"Filter panel title","placeholder":"Filter and sort","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"sort_label","label":"Sort label","placeholder":"Sort by","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"sort_featured_label","label":"Sort: Featured label","info":"Used when the collection has no Featured (manual) order of its own.","placeholder":"Featured"},{"type":"text","id":"sort_reviews_label","label":"Sort: Most reviewed label","placeholder":"Most reviewed","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"filter_title","label":"Filter title","placeholder":"Filter by","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"clear_label","label":"Clear button","placeholder":"Clear all","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"show_label","label":"Phone panel button","info":"[count] is the number of products.","placeholder":"Show [count] products"},{"type":"text","id":"count_one","label":"Count, one product","placeholder":"[count] product","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"count_other","label":"Count, more products","placeholder":"[count] products","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"price_from","label":"Price from label","placeholder":"From","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"price_to","label":"Price to label","placeholder":"To","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"pages_label","label":"Page links label (screen readers)","placeholder":"Pages","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"empty_title","label":"Empty collection title","placeholder":"No products found","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"empty_text","label":"Empty collection text","placeholder":"This collection has no products yet.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"empty_filtered","label":"No match title","placeholder":"No products match these filters.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"empty_filtered_text","label":"No match text","placeholder":"Try removing a filter, or ask us for a free quote.","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"columns","label":"Products per row on computer","min":2,"max":5,"step":1,"default":3,"info":"Phones and tablets keep their own layout."},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Product name size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Product name size (phone)"}]}
+{% endschema %}

@@ -1,0 +1,379 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-coll-hero",
+      "blocks": {
+        "photo1": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing",
+            "image": "shopify://shop_images/frameless-glass-pool-fence-backyard.webp"
+          }
+        },
+        "photo2": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-panel-railing",
+            "image": "shopify://shop_images/glass-pool-fence-brushed-stainless-spigots.webp"
+          }
+        },
+        "photo3": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-hardware",
+            "image": "shopify://shop_images/matte-black-180-glass-connector-pool-fence.webp"
+          }
+        },
+        "photo4": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-gate-hardware",
+            "image": "shopify://shop_images/glass-pool-gate-hinge-brushed-stainless.webp"
+          }
+        },
+        "photo5": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-caprail",
+            "image": "shopify://shop_images/frameless-glass-railing-garden-wall.webp"
+          }
+        },
+        "photo6": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-deck-railing",
+            "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+          }
+        },
+        "photo7": {
+          "type": "photo",
+          "settings": {
+            "collection": "interior-glass-railing-systems",
+            "image": "shopify://shop_images/glass-stair-railing-deck-black-spigots.webp"
+          }
+        },
+        "photo8": {
+          "type": "photo",
+          "settings": {
+            "collection": "exterior-glass-railings",
+            "image": "shopify://shop_images/glass-pool-fence-black-spigots-aerial.webp"
+          }
+        },
+        "photo9": {
+          "type": "photo",
+          "settings": {
+            "collection": "frameless-glass-railing",
+            "image": "shopify://shop_images/frameless-glass-railing-curved-balcony.webp"
+          }
+        },
+        "photo10": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-kits",
+            "image": "shopify://shop_images/glass-railing-spigot-installation-kit.webp"
+          }
+        }
+      },
+      "block_order": [
+        "photo1",
+        "photo2",
+        "photo3",
+        "photo4",
+        "photo5",
+        "photo6",
+        "photo7",
+        "photo8",
+        "photo9",
+        "photo10"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/frameless-glass-pool-fence-backyard.webp"
+      }
+    },
+    "grid": {
+      "type": "grs-coll-grid",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "grs-coll-reviews",
+      "settings": {}
+    },
+    "svc": {
+      "type": "grs-svc",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "icon": "support",
+            "title": "Customer support",
+            "text": "Have questions about glass railings? Contact us for product guidance, installation support and project assistance.",
+            "link_label": "Contact us",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "icon": "quote",
+            "title": "Free quote",
+            "text": "Submit a plan request and we will send you a detailed quote on the materials your project needs, priced in [currency].",
+            "link_label": "Get a quote",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "icon": "shipping",
+            "title": "Free shipping over $3,000",
+            "text": "Orders are processed in 2–3 business days, then delivered in 5–10 business days. The price at checkout is final, with no hidden fees, tariffs or duties.",
+            "text_us": "U.S. orders are processed in 2–3 business days, then delivered in 5–10 business days. The price at checkout is final, with no hidden fees, tariffs or duties.",
+            "link_label": "Shipping details",
+            "link": "shopify://pages/free-shipping-information"
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+      }
+    },
+    "desc": {
+      "type": "grs-coll-desc",
+      "settings": {}
+    },
+    "faq": {
+      "type": "grs-coll-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which glass railing heights are available?",
+            "answer": "<p>Our 12mm tempered glass panels come in four heights: 33.6\", 39.6\", 46\" and 57.7\", for a total railing height of 36\", 42\", 48\" or 60\" once the panel sits in the spigot. The 33.6\", 39.6\" and 46\" panels come in 36 widths starting at 7.9\". The 57.7\" panels come in 33.6\", 39.6\" and 46\" widths.</p>",
+            "collections": [
+              "glass-railing"
+            ]
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I install the glass railing myself?",
+            "answer": "<p>Yes. Installation is easy and customer friendly: the spigots fix to wood or concrete and the 12mm tempered glass panels set into them. Follow our <a href=\"/pages/glass-railing-installation-guide\">glass railing installation guide</a> and installation video before you start.</p>",
+            "collections": [
+              "glass-railing"
+            ]
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Is shipping free?",
+            "answer": "<p>Free shipping for glass railing orders over $3,000.</p>",
+            "collections": [
+              "glass-railing"
+            ]
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How do I get a quote?",
+            "answer": "<p>Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+            "collections": [
+              "glass-railing"
+            ]
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "What do I need for a glass gate?",
+            "answer": "<p>A <a href=\"/products/glass-railing-hinge\">Hinge Kit (2 units)</a>, a gate latch, and <a href=\"/products/gate-panels-holed-for-the-hinges-latch-and-floor-lock\">gate glass panels holed for the hinges, latch and floor lock</a>. The <a href=\"/products/glass-railing-floor-lock\">Glass Railing Floor Lock</a> is optional.</p>",
+            "collections": [
+              "glass-railing-gate-hardware"
+            ]
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "Which glass do the hinges fit?",
+            "answer": "<p>The Hinge Kit is designed for use with 12mm glass panels.</p>",
+            "collections": [
+              "glass-railing-gate-hardware"
+            ]
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "question": "Which finishes are available?",
+            "answer": "<p>Brushed Stainless and Matte Black.</p>",
+            "collections": [
+              "glass-railing-gate-hardware"
+            ]
+          }
+        },
+        "q8": {
+          "type": "question",
+          "settings": {
+            "question": "Which caprail sizes are available?",
+            "answer": "<p>Two sizes: the small cap rail with a 25mm width and the large cap rail with a 40mm width, in 6ft and 19ft lengths.</p>",
+            "collections": [
+              "glass-railing-caprail"
+            ]
+          }
+        },
+        "q9": {
+          "type": "question",
+          "settings": {
+            "question": "Is the rubber insert included?",
+            "answer": "<p>Included with each 6ft cap rail is a 6ft rubber insert. Rubber is also sold separately in 6FT and 19FT lengths.</p>",
+            "collections": [
+              "glass-railing-caprail"
+            ]
+          }
+        },
+        "q10": {
+          "type": "question",
+          "settings": {
+            "question": "Which connectors do I need?",
+            "answer": "<p>Select the appropriate cap rail connectors to complete the installation: <a href=\"/products/square-caprail-straight-connector\">straight connectors</a>, <a href=\"/products/square-caprail-corner-connector\">corner connectors</a> and <a href=\"/products/square-caprail-end-cap\">end caps</a>.</p>",
+            "collections": [
+              "glass-railing-caprail"
+            ]
+          }
+        },
+        "q11": {
+          "type": "question",
+          "settings": {
+            "question": "Which glass railing heights are available?",
+            "answer": "<p>Our 12mm tempered glass panels come in four heights: 33.6\", 39.6\", 46\" and 57.7\", for a total railing height of 36\", 42\", 48\" or 60\" once the panel sits in the spigot.</p>",
+            "collections": [],
+            "on_all": true
+          }
+        },
+        "q12": {
+          "type": "question",
+          "settings": {
+            "question": "What is the hardware made of?",
+            "answer": "<p>Our hardware is made from 2205 marine grade stainless steel and comes in Brushed Stainless or powder-coated Matte Black. The panels are 12mm tempered glass.</p>",
+            "collections": [],
+            "on_all": true
+          }
+        },
+        "q13": {
+          "type": "question",
+          "settings": {
+            "question": "Is shipping free?",
+            "answer": "<p>Free shipping for glass railing orders over $3,000.</p>",
+            "collections": [],
+            "on_all": true
+          }
+        },
+        "q14": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days. Free shipping for glass railing orders over $3,000. The price displayed at checkout is the final price with no hidden fees, tariffs, or duties.</p>",
+            "answer_us": "<p>U.S. orders are processed in 2–3 business days, then delivered in 5–10 business days. Free shipping for glass railing orders over $3,000. The price displayed at checkout is the final price with no hidden fees, tariffs, or duties.</p>",
+            "collections": [
+              "glass-railing",
+              "glass-railing-gate-hardware",
+              "glass-railing-caprail"
+            ],
+            "on_all": true
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ],
+      "settings": {
+        "text": "Can’t find your answer? Send us your question and a glass railing specialist replies.",
+        "button_label": "Ask a question",
+        "button_link": "shopify://pages/contact",
+        "button2_label": "All FAQs",
+        "button2_link": "shopify://pages/faq"
+      }
+    },
+    "info3": {
+      "type": "grs-info3",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "icon": "list",
+            "title": "Not sure what you need?",
+            "text": "Send your measurements and we build the parts list.",
+            "link_label": "Get a free quote",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "icon": "ruler",
+            "title": "Custom sizes",
+            "text": "Glass cut to your measurements, processed in 2–3 business days and shipped in 2–3 weeks.",
+            "link_label": "Custom glass",
+            "link": "shopify://products/custom-glass-railing"
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "icon": "layers",
+            "title": "Try it first",
+            "text": "See the glass and both hardware finishes before you order.",
+            "link_label": "Sample kit",
+            "link": "shopify://products/glass-hardware-sample-kit"
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "grid",
+    "reviews",
+    "svc",
+    "desc",
+    "faq",
+    "info3"
+  ]
+}

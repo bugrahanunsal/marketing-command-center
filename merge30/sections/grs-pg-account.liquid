@@ -1,0 +1,351 @@
+{%- comment -%}
+  My Account (/pages/my-account, hidden from search engines like the live page).
+  Signed out: the prototype's account page: photo header with Sign in, what the account offers (blocks "What the
+  account offers"), the install checklist (saved on this device), help and refer cards, video guides.
+  Signed in: the homeowner dashboard of the live page in the new design: greeting and order news, tabs Overview,
+  Orders (#orders), Installation (#install) and Profile & addresses (#profile). Live data: orders and tracking, saved
+  addresses, the building code page of the customer's province or state. The checklist, the tools and "Mark as
+  installed" are saved in the browser (assets/grs-page.js); profile and address changes are made on Shopify's account
+  page (Edit buttons). Words of the dashboard: locales (grs.account.*); texts of the page: the settings below.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_account), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.pg_account.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading = 'grs.sd.pg_account.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_text = 'grs.sd.pg_account.text_html' | t
+  assign sd_text = section.settings.text | default: sd_text
+  assign sd_signin_label = 'grs.sd.pg_account.signin_label_html' | t
+  assign sd_signin_label = section.settings.signin_label | default: sd_signin_label
+  assign sd_steps_eyebrow = 'grs.sd.pg_account.steps_eyebrow_html' | t
+  assign sd_steps_eyebrow = section.settings.steps_eyebrow | default: sd_steps_eyebrow
+  assign sd_steps_heading = 'grs.sd.pg_account.steps_heading_html' | t
+  assign sd_steps_heading = section.settings.steps_heading | default: sd_steps_heading
+  assign sd_steps = 'grs.sd.pg_account.steps1_html' | t
+  assign sd_steps2 = 'grs.sd.pg_account.steps2_html' | t
+  assign sd_steps = sd_steps | append: '<br />' | append: sd_steps2
+  assign sd_steps = section.settings.steps | default: sd_steps
+  assign sd_tools = 'grs.sd.pg_account.tools_html' | t
+  assign sd_tools = section.settings.tools | default: sd_tools
+  assign sd_care = 'grs.sd.pg_account.care_html' | t
+  assign sd_care = section.settings.care | default: sd_care
+  assign sd_refer_title = 'grs.sd.pg_account.refer_title_html' | t
+  assign sd_refer_title = section.settings.refer_title | default: sd_refer_title
+  assign sd_refer_text = 'grs.sd.pg_account.refer_text_html' | t
+  assign sd_refer_text = section.settings.refer_text | default: sd_refer_text
+  assign sd_refer_button = 'grs.sd.pg_account.refer_button_html' | t
+  assign sd_refer_button = section.settings.refer_button | default: sd_refer_button
+  assign sd_videos_heading = 'grs.sd.pg_account.videos_heading_html' | t
+  assign sd_videos_heading = section.settings.videos_heading | default: sd_videos_heading
+  assign sd_recommend_heading = 'grs.sd.pg_account.recommend_heading_html' | t
+  assign sd_recommend_heading = section.settings.recommend_heading | default: sd_recommend_heading
+-%}
+{%- liquid
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+  assign grs_email = settings.grs_email | default: 'info@glassrailingstore.com'
+  assign claims = section.settings.claims_email | default: 'claims@glassrailingstore.com'
+  assign years = section.settings.warranty_years | default: 10
+  assign contact_u = pages['contact'].url | default: '/pages/contact'
+  assign guide_u = pages['glass-railing-installation-guide'].url | default: '/pages/glass-railing-installation-guide'
+  assign docs_u = pages['glass-railing-engineering-testing'].url | default: '/pages/glass-railing-engineering-testing'
+  assign warranty_u = pages['glass-railing-warranty'].url | default: '/pages/glass-railing-warranty'
+  assign codes_u = pages['building-codes-glass-railing'].url | default: '/pages/building-codes-glass-railing'
+  assign installers_u = pages['glass-railing-installers'].url | default: '/pages/glass-railing-installers'
+  assign gallery_u = pages['gallery'].url | default: '/pages/gallery'
+  assign shop_u = collections['glass-railing'].url | default: routes.all_products_collection_url
+  assign refer_u = section.settings.refer_link | default: 'https://glassrailingstore.goaffpro.com'
+  assign channel_u = section.settings.channel_url | default: 'https://www.youtube.com/@GlassRailingStore/videos'
+  assign yt_latest = section.settings.youtube_channel_id | default: 'UCCZBekKEU_CNWp0nK7ZNDvA' | strip | replace_first: 'UC', 'UULF'
+  assign hero_img = section.settings.image | default: images['glass-railing-spigot-installation-level.webp']
+  assign step_rows = sd_steps | newline_to_br | split: '<br />'
+  assign n_steps = 0
+  for r in step_rows
+    assign r2 = r | strip
+    if r2 != ''
+      assign n_steps = n_steps | plus: 1
+    endif
+  endfor
+  assign rec = section.settings.recommend_collection | default: collections['glass-railing-hardware']
+-%}
+{%- capture vids -%}{%- for block in section.blocks -%}{%- if block.type == 'video' and block.settings.video.id != blank -%}<li {{ block.shopify_attributes }}><a href="https://www.youtube.com/watch?v={{ block.settings.video.id | escape }}" target="_blank" rel="noopener"><span class="acct-vm"><img class="ph yt-th" src="https://i.ytimg.com/vi/{{ block.settings.video.id | escape }}/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="acct-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"></path></svg></span>{%- if block.settings.duration != blank -%}<span class="acct-dur">{{ block.settings.duration | escape }}</span>{%- endif -%}</span><span class="acct-vt">{{ block.settings.title | escape }}</span></a></li>{%- endif -%}{%- endfor -%}<li><a class="acct-ch" href="{{ channel_u | escape }}" target="_blank" rel="noopener"><span class="acct-vm"><span class="acct-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"></path></svg></span><b>{{ 'grs.account.other_videos' | t }}</b><small>{{ 'grs.account.on_channel' | t }}</small></span><span class="acct-vt">{{ 'grs.account.on_youtube' | t: shop: shop.name }}</span></a></li>{%- endcapture -%}
+{%- capture videos -%}<div class="acct-vh"><h2 class="mh2">{{ sd_videos_heading | escape }}</h2><a class="arrow-link" href="{{ channel_u | escape }}" target="_blank" rel="noopener">{{ 'grs.account.channel' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><ul class="acct-vids" role="list">{{ vids }}</ul>{%- endcapture -%}
+{%- capture checklist -%}<div class="ip-card acct-steps" data-acct-steps><div class="acct-sh"><span class="dot-eyebrow">{{ sd_steps_eyebrow | escape }}</span><span class="acct-prog" aria-live="polite"><b data-acct-done>0</b> {{ 'grs.account.of_done' | t: total: n_steps }}</span></div><b class="acct-h">{{ sd_steps_heading | escape }}</b><div class="acct-bar" aria-hidden="true"><i data-acct-bar></i></div><ol class="acct-list">
+{%- assign k = 0 -%}{%- for r in step_rows -%}{%- assign r2 = r | strip -%}{%- if r2 != '' -%}{%- assign k = k | plus: 1 -%}{%- assign sp = r2 | split: '|' -%}<li><label><input type="checkbox" value="{{ k }}" data-step="{{ k | minus: 1 }}" data-title="{{ sp[0] | strip | escape }}"><span class="acct-box"><em>{{ k }}</em></span><span><span class="acct-st">{{ sp[0] | strip }}</span>{%- if sp[1] != blank -%}<span class="acct-tip">{{ sp[1] | strip }}</span>{%- endif -%}</span></label></li>{%- endif -%}{%- endfor -%}
+</ol></div>{%- endcapture -%}
+{%- capture refer -%}{%- if sd_refer_title != blank -%}<div class="ip-card acct-refer"><b>{{ sd_refer_title | escape }}</b><p>{{ sd_refer_text | escape }}</p><a class="btn sm dark" href="{{ refer_u | escape }}" target="_blank" rel="noopener"><span class="dot"></span>{{ sd_refer_button | escape }}</a></div>{%- endif -%}{%- endcapture -%}
+<div class="acct-w"{% render 'grs-vars', s: section.settings %}>
+{%- if customer == blank -%}
+{%- liquid
+  assign login = routes.storefront_login_url | default: '/customer_authentication/login'
+  assign sep = '?'
+  if login contains '?'
+    assign sep = '&'
+  endif
+  assign back = request.path | url_encode
+  assign login = login | append: sep | append: 'return_to=' | append: back
+-%}
+<section class="acct-hero"><span class="acct-hero-im" aria-hidden="true">{% render 'grs-img', image: hero_img, class: 'ph', sizes: '(min-width: 768px) 48vw, 1px', widths: '600,900,1200,1400', eager: true, alt: '' %}</span><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: page.title, lt: true %}{%- endif -%}<span class="dot-eyebrow">{{ sd_eyebrow | escape }}</span><h1>{{ sd_heading | escape }}</h1><p>{{ sd_text | escape }}</p><div class="acct-btns"><a class="btn lg white" href="{{ login }}"><span class="dot"></span>{{ sd_signin_label | escape }}</a></div></div></section>
+<section class="sec acct-sec"><div class="wrap"><ul class="acct-feat" role="list">
+{%- for block in section.blocks -%}{%- if block.type == 'feature' -%}<li {{ block.shopify_attributes }}><span class="acct-k">{{ block.settings.kicker | escape }}</span><b>{{ block.settings.title | escape }}</b><p>{{ block.settings.text | escape }}</p>{%- if block.settings.link_label != blank -%}<a class="arrow-link" href="{% render 'grs-url', url: block.settings.link %}">{{ block.settings.link_label | escape }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</li>{%- endif -%}{%- endfor -%}
+</ul><div class="acct-cols">{{ checklist }}<div class="acct-side"><div class="ip-card ip-help"><b>{{ 'grs.account.need_hand' | t }}</b><p>{{ 'grs.account.need_hand_text' | t }}</p><a class="ip-phone" href="tel:{{ grs_phone_tel }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{{ grs_phone }}</a><a class="ip-phone pol-mail" href="mailto:{{ grs_email }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>{{ grs_email }}</a><a class="arrow-link" href="{{ installers_u }}">{{ 'grs.account.installer' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="btn" href="{{ contact_u }}"><span class="dot"></span>{{ 'grs.account.quote' | t }}</a></div>{{ refer }}</div></div>
+{{ videos }}</div></section>
+{%- else -%}
+{%- paginate customer.orders by 20 -%}
+{%- liquid
+  assign latest = customer.orders.first
+  assign greet = customer.first_name | default: customer.name
+  assign ship_state = 'none'
+  assign track_u = ''
+  assign track_co = ''
+  assign shipped_at = ''
+  if latest
+    if latest.cancelled
+      assign ship_state = 'cancelled'
+    elsif latest.fulfillment_status == 'fulfilled'
+      assign ship_state = 'shipped'
+    elsif latest.fulfillment_status == 'partial'
+      assign ship_state = 'partial'
+    elsif latest.financial_status == 'pending' or latest.financial_status == 'unpaid' or latest.financial_status == 'partially_paid'
+      assign ship_state = 'awaiting'
+    else
+      assign ship_state = 'preparing'
+    endif
+    for li in latest.line_items
+      if li.fulfillment
+        if shipped_at == blank
+          assign shipped_at = li.fulfillment.created_at
+        endif
+        if track_u == blank and li.fulfillment.tracking_url != blank
+          assign track_u = li.fulfillment.tracking_url
+          assign track_co = li.fulfillment.tracking_company
+        endif
+      endif
+    endfor
+  endif
+  case ship_state
+    when 'shipped'
+      assign st_label = 'grs.account.st_shipped' | t
+      assign st_tone = 'ok'
+      assign bar_on = 3
+    when 'partial'
+      assign st_label = 'grs.account.st_partial' | t
+      assign st_tone = 'info'
+      assign bar_on = 2
+    when 'preparing'
+      assign st_label = 'grs.account.st_preparing' | t
+      assign st_tone = 'info'
+      assign bar_on = 1
+    when 'awaiting'
+      assign st_label = 'grs.account.st_awaiting' | t
+      assign st_tone = 'warn'
+      assign bar_on = 1
+    when 'cancelled'
+      assign st_label = 'grs.account.st_cancelled' | t
+      assign st_tone = 'off'
+      assign bar_on = 0
+    else
+      assign st_label = ''
+      assign st_tone = 'off'
+      assign bar_on = 0
+  endcase
+  assign addr = customer.default_address
+  if addr == blank and latest
+    assign addr = latest.shipping_address
+  endif
+  assign code_handle = ''
+  assign region_name = ''
+  if addr
+    assign region_key = addr.country_code | append: '-' | append: addr.province_code
+    assign region_name = addr.province
+    capture code_map
+      echo 'CA-ON:ontario-building-code-for-glass-railings,CA-QC:quebec-construction-code-for-glass-railings,CA-AB:alberta-building-code-for-glass-railings,CA-BC:british-columbia-building-code-for-glass-railings,CA-MB:manitoba-building-code-for-glass-railings,CA-NB:new-brunswick-building-code-for-glass-railings,CA-NS:nova-scotia-building-code-for-glass-railings,CA-NL:newfoundland-labrador-building-code-for-glass-railings,CA-PE:pei-building-code-for-glass-railings,CA-SK:saskatchewan-building-code-for-glass-railings,CA-YT:yukon-building-code-for-glass-railings,'
+      echo 'US-AL:alabama-building-code-for-glass-railings,US-AK:alaska-building-code-for-glass-railing,US-AZ:arizona-building-code-for-glass-railings,US-AR:arkansas-building-code-for-glass-railing,US-CA:california-building-standards-code-for-glass-railings,US-CO:colorado-building-code-for-glass-railing,US-CT:connecticut-building-code-for-glass-railing,US-DE:delaware-building-code-for-glass-railing,US-FL:florida-building-code-for-glass-railings,US-GA:georgia-building-code-for-glass-railing,US-HI:hawaii-building-code-for-glass-railing,US-ID:idaho-building-code-for-glass-railing,US-IL:illinois-building-code-for-glass-railing,US-IN:indiana-building-code-for-glass-railing,US-IA:iowa-building-code-for-glass-railing,US-KS:kansas-building-code-for-glass-railing,US-KY:kentucky-building-code-for-glass-railing,US-LA:louisiana-building-code-for-glass-railing,US-ME:maine-building-code-for-glass-railing,US-MD:maryland-building-code-for-glass-railing,US-MA:massachusetts-building-code-for-glass-railing,US-MI:michigan-building-code-for-glass-railing,US-MN:minnesota-building-code-for-glass-railing,US-MS:mississippi-building-code-for-glass-railing,US-MO:missouri-building-code-for-glass-railings,US-MT:montana-building-code-for-glass-railings,'
+      echo 'US-NE:nebraska-glass-railing-codes,US-NV:nevada-glass-railing-building-codes,US-NH:new-hampshire-glass-railing-building-codes,US-NJ:new-jersey-glass-railing-codes,US-NM:new-mexico-glass-railing-building-codes,US-NY:new-york-building-code-for-glass-railings,US-NC:north-carolina-building-code-for-glass-railings,US-ND:north-dakota-glass-railing-code,US-OH:ohio-glass-railing-code,US-OK:oklahoma-glass-railing-code,US-OR:oregon-glass-railing-building-codes-guide,US-PA:pennsylvania-glass-railing-building-code-guide,US-RI:rhode-island-building-code-for-glass-railing,US-SC:south-carolina-building-code-for-glass-railings,US-SD:south-dakota-building-code-for-glass-railings,US-TN:tennessee-building-code-for-glass-railings,US-TX:texas-building-code-for-glass-railings,US-UT:utah-building-code-for-glass-railings,US-VT:vermont-building-code-for-glass-railings,US-VA:virginia-glass-railing-building-code,US-WA:washington-building-code-for-glass-railings,US-WV:west-virginia-building-code-for-glass-railings,US-WI:wisconsin-building-code-for-glass-railings,US-WY:wyoming-building-code-for-glass-railings'
+    endcapture
+    assign pairs = code_map | split: ','
+    for pair in pairs
+      assign kv = pair | split: ':'
+      if kv[0] == region_key
+        assign code_handle = kv[1] | strip
+        break
+      endif
+    endfor
+  endif
+  assign code_page = nil
+  assign region_found = false
+  if code_handle != blank
+    assign rp = pages[code_handle]
+    if rp.title != blank
+      assign code_page = rp
+      assign region_found = true
+    endif
+  endif
+  if region_found == false and addr
+    if addr.country_code == 'CA'
+      assign code_page = pages['canadian-building-code-glass-railing']
+    elsif addr.country_code == 'US'
+      assign code_page = pages['american-building-code-glass-railing']
+    endif
+    if code_page.title == blank
+      assign code_page = nil
+    endif
+  endif
+  assign code_u = codes_u
+  if code_page
+    assign code_u = code_page.url
+  endif
+  assign profile_u = routes.account_url | split: '?' | first | append: '/profile'
+  assign ap = routes.account_url | split: '?'
+  if ap.size > 1
+    assign profile_u = profile_u | append: '?' | append: ap.last
+  endif
+  assign subj = 'grs.account.photo_subject' | t | url_encode | replace: '+', '%20'
+-%}
+<section class="acct-hero acct-hero-in"><span class="acct-hero-im" aria-hidden="true">{% render 'grs-img', image: hero_img, class: 'ph', sizes: '(min-width: 768px) 48vw, 1px', widths: '600,900,1200,1400', eager: true, alt: '' %}</span><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: page.title, lt: true %}{%- endif -%}<span class="dot-eyebrow">{{ sd_eyebrow | escape }}</span><h1>{%- if greet != blank -%}{{ 'grs.account.welcome' | t: name: greet }}{%- else -%}{{ 'grs.account.welcome_anon' | t }}{%- endif -%}</h1><p>
+{%- case ship_state -%}
+{%- when 'preparing' -%}{{ 'grs.account.lead_preparing' | t: order: latest.name }}
+{%- when 'awaiting' -%}{{ 'grs.account.lead_awaiting' | t: order: latest.name }}
+{%- when 'partial' -%}{{ 'grs.account.lead_partial' | t: order: latest.name }}
+{%- when 'shipped' -%}{%- if track_co != blank -%}{{ 'grs.account.lead_shipped_with' | t: order: latest.name, carrier: track_co }}{%- else -%}{{ 'grs.account.lead_shipped' | t: order: latest.name }}{%- endif -%}
+{%- when 'cancelled' -%}{{ 'grs.account.lead_cancelled' | t: order: latest.name }}
+{%- else -%}{{ 'grs.account.lead_none' | t }}
+{%- endcase -%}</p><div class="acct-btns">{%- if track_u != blank -%}<a class="btn lg white" href="{{ track_u }}" target="_blank" rel="noopener"><span class="dot"></span>{{ 'grs.account.track_package' | t }}</a>{%- else -%}<a class="btn lg white" href="{{ shop_u }}"><span class="dot"></span>{{ 'grs.account.shop_railings' | t }}</a>{%- endif -%}<a class="btn lg acct-ghost" href="{{ contact_u }}"><span class="dot"></span>{{ 'grs.account.quote' | t }}</a></div>
+<div class="acct-tabbar"><nav class="acct-tabs" aria-label="{{ 'grs.a11y.account' | t }}"><a href="#overview" data-acct-tab="overview" aria-current="page">{{ 'grs.account.tab_overview' | t }}</a><a href="#orders" data-acct-tab="orders">{{ 'grs.account.tab_orders' | t }}{% if customer.orders_count > 0 %} ({{ customer.orders_count }}){% endif %}</a><a href="#install" data-acct-tab="install">{{ 'grs.account.tab_install' | t }}</a><a href="#profile" data-acct-tab="profile">{{ 'grs.account.tab_profile' | t }}</a></nav><div class="acct-session"><span class="acct-who" title="{{ 'grs.account.signed_in_as' | t: email: customer.email }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>{{ customer.email | escape }}</span></span><a class="acct-out" href="{{ routes.account_logout_url }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>{{ 'grs.account.sign_out' | t }}</a></div></div></div></section>
+<section class="sec acct-sec acct-dash" data-acct-dash data-acct-key="{{ customer.id }}" data-done-text="{{ 'grs.account.all_done_next' | t | escape }}" data-installed-text="{{ 'grs.account.step_installed' | t | escape }}"><script>(function(d){var t=(location.hash||'').slice(1);if(['orders','install','profile'].indexOf(t)>=0)d.setAttribute('data-tab',t);})(document.currentScript.parentNode);</script><div class="wrap">
+<div class="acct-pane" data-acct-pane="overview"><div class="acct-cols"><div class="acct-main">
+{%- if latest -%}
+<section class="ip-card acct-card acct-tracker" data-acct-tracker data-order="{{ latest.id }}"><div class="acct-ch2"><div><span class="acct-k">{{ 'grs.account.tracker' | t }}</span><h2 class="acct-h">{{ 'grs.account.order_n' | t: order: latest.name }}</h2></div>{%- if st_label != blank -%}<span class="acct-pill is-{{ st_tone }}">{{ st_label }}</span>{%- endif -%}</div>
+{%- if ship_state != 'cancelled' -%}<ol class="acct-track">
+<li class="is-done"><span class="acct-tdot"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span><b>{{ 'grs.account.step_ordered' | t }}</b><span>{{ latest.created_at | date: format: 'date' }}</span></li>
+<li class="{% if bar_on >= 2 %}is-done{% else %}is-cur{% endif %}"><span class="acct-tdot">{% if bar_on >= 2 %}<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>{% else %}2{% endif %}</span><b>{{ 'grs.account.st_preparing' | t }}</b><span>{% if bar_on >= 2 %}{{ 'grs.account.packed' | t }}{% elsif ship_state == 'awaiting' %}{{ 'grs.account.after_payment' | t }}{% else %}{{ 'grs.account.packing' | t }}{% endif %}</span></li>
+<li class="{% if bar_on >= 3 %}is-done{% elsif bar_on == 2 %}is-cur{% endif %}"><span class="acct-tdot">{% if bar_on >= 3 %}<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>{% else %}3{% endif %}</span><b>{{ 'grs.account.st_shipped' | t }}</b><span>{% if shipped_at != blank %}{{ shipped_at | date: format: 'date' }}{% if track_co != blank %} · {{ track_co }}{% endif %}{% else %}{{ 'grs.account.email_tracking' | t }}{% endif %}</span></li>
+<li class="{% if bar_on >= 3 %}is-cur{% endif %}" data-acct-istep><span class="acct-tdot" data-acct-idot>4</span><b>{{ 'grs.account.step_installed' | t }}</b><span data-acct-ilabel>{{ 'grs.account.big_day' | t }}</span></li>
+</ol>{%- endif -%}
+<ul class="acct-items" role="list">{%- for li in latest.line_items limit: 4 -%}<li><span class="acct-thumb">{%- if li.image -%}<img src="{{ li.image | image_url: width: 160 }}" alt="" width="56" height="56" loading="lazy">{%- endif -%}</span><span><b>{{ li.title | escape }}</b><small>{{ 'grs.account.qty' | t: n: li.quantity }}</small></span></li>{%- endfor -%}{%- if latest.line_items.size > 4 -%}{%- assign more_n = latest.line_items.size | minus: 4 -%}<li class="acct-more">{{ 'grs.account.more' | t: n: more_n }}</li>{%- endif -%}</ul>
+<div class="acct-acts">{%- if track_u != blank -%}<a class="btn sm" href="{{ track_u }}" target="_blank" rel="noopener"><span class="dot"></span>{{ 'grs.account.track_package' | t }}</a>{%- endif -%}<a class="btn-o sm" href="{{ latest.customer_order_url | default: latest.customer_url }}"><span class="dot"></span>{{ 'grs.account.view_order' | t }}</a>{%- if bar_on >= 3 -%}<button type="button" class="btn-o sm" data-acct-mark><span class="dot"></span>{{ 'grs.account.mark_installed' | t }}</button>{%- endif -%}</div>
+<div class="acct-installed"><b>{{ 'grs.account.congrats' | t }}</b><p>{{ 'grs.account.congrats_text' | t }} <a href="{{ gallery_u }}">{{ 'grs.account.gallery' | t }}</a>.</p><a class="btn sm" href="mailto:{{ grs_email }}?subject={{ subj }}"><span class="dot"></span>{{ 'grs.account.share_photos' | t }}</a></div></section>
+{%- else -%}
+<section class="ip-card acct-card acct-start"><div class="acct-ch2"><span class="acct-k">{{ 'grs.account.start' | t }}</span><span class="acct-pill is-info">{{ 'grs.account.three_steps' | t }}</span></div><ol class="acct-start-l"><li><a href="{{ guide_u }}"><span><b>{{ 'grs.account.s1' | t }}</b><small>{{ 'grs.account.s1t' | t }}</small></span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li><a href="{{ code_u }}"><span><b>{{ 'grs.account.s2' | t }}</b><small>{{ 'grs.account.s2t' | t }}</small></span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li><a href="{{ contact_u }}"><span><b>{{ 'grs.account.quote' | t }}</b><small>{{ 'grs.account.s3t' | t }}</small></span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li></ol></section>
+{%- endif -%}
+<section class="ip-card acct-card acct-progress"><div class="acct-ch2"><div><span class="acct-k">{{ 'grs.account.checklist_k' | t }}</span><h2 class="acct-h">{{ 'grs.account.progress' | t }}</h2></div><a class="arrow-link" href="#install" data-acct-show="install">{{ 'grs.account.open_checklist' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><p class="acct-prog2"><b data-acct-done>0</b> {{ 'grs.account.of_steps' | t: total: n_steps }}<span data-acct-pct>0%</span></p><div class="acct-bar" aria-hidden="true"><i data-acct-bar></i></div><div class="acct-next"><span class="acct-next-n" data-acct-next-n>1</span><span><small>{{ 'grs.account.next_step' | t }}</small><b data-acct-next-t></b></span></div></section>
+{%- assign bl = section.settings.blog | default: blogs['news'] -%}
+{%- if bl and bl.articles.size > 0 -%}<section class="acct-ideas"><div class="acct-ch2"><h2 class="acct-h">{{ 'grs.account.ideas' | t }}</h2><a class="arrow-link" href="{{ bl.url }}">{{ 'grs.account.all_articles' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="bgrid2 acct-posts">{%- for a in bl.articles limit: 3 -%}{% render 'grs-post-card', a: a %}{%- endfor -%}</div></section>{%- endif -%}
+</div><div class="acct-side">
+<section class="ip-card acct-card acct-warranty"><div class="acct-badge"><div class="acct-seal"><b>{{ years }}</b><small>{{ 'grs.account.years' | t }}</small></div><div><h2 class="acct-h">{{ 'grs.account.no_rust' | t }}</h2><p>{{ 'grs.account.no_rust_text' | t }}</p></div></div>
+{%- if latest and ship_state != 'cancelled' -%}{%- assign until_y = latest.created_at | date: '%Y' | plus: years -%}{%- capture until_d -%}{{ latest.created_at | date: '%B' }} {{ until_y }}{%- endcapture -%}<p class="acct-until">{{ 'grs.account.covered_until' | t: order: latest.name, date: until_d }}</p>{%- else -%}<p class="acct-until">{{ 'grs.account.every_order' | t: years: years }}</p>{%- endif -%}
+<p class="acct-claim">{{ 'grs.account.claim' | t }} <a href="mailto:{{ claims }}">{{ claims }}</a></p><a class="arrow-link" href="{{ warranty_u }}">{{ 'grs.account.warranty_details' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></section>
+<section class="ip-card acct-card acct-code"><span class="acct-k"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> {{ 'grs.account.local_code' | t }}</span>
+{%- if region_found -%}<h2 class="acct-h">{{ region_name | escape }}</h2><p>{{ 'grs.account.code_text' | t }}</p><a class="arrow-link" href="{{ code_u }}">{{ 'grs.account.read_guide_for' | t: region: region_name }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+{%- elsif code_page -%}<h2 class="acct-h">{{ code_page.title | escape }}</h2><p>{{ 'grs.account.code_text2' | t }}</p><a class="arrow-link" href="{{ code_u }}">{{ 'grs.account.read_guide' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+{%- else -%}<h2 class="acct-h">{{ 'grs.account.find_code' | t }}</h2><p>{{ 'grs.account.find_code_text' | t }}</p><a class="arrow-link" href="{{ codes_u }}">{{ 'grs.account.browse_codes' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}</section>
+<div class="ip-card ip-help"><b>{{ 'grs.account.need_hand' | t }}</b><p>{{ 'grs.account.need_hand_text' | t }}</p><a class="ip-phone" href="tel:{{ grs_phone_tel }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{{ grs_phone }}</a><a class="ip-phone pol-mail" href="mailto:{{ grs_email }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>{{ grs_email }}</a><a class="arrow-link" href="{{ installers_u }}">{{ 'grs.account.installer' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+{{ refer }}
+</div></div>
+{{ videos }}
+{%- if rec and rec.products.size > 0 and sd_recommend_heading != blank -%}<div class="acct-rec"><div class="ps-head"><h2 class="h2">{{ sd_recommend_heading | escape }}</h2><a class="arrow-link" href="{{ rec.url }}">{{ 'grs.account.shop_title' | t: title: rec.title }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div><div class="ps"><div class="ps-track" role="list" aria-label="{{ sd_recommend_heading | escape }}">{%- for p in rec.products limit: 8 -%}{% render 'grs-card', product: p, li: true %}{%- endfor -%}</div><button class="ps-btn prev" type="button" aria-label="{{ 'grs.a11y.prev_products' | t }}" disabled=""><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button class="ps-btn next" type="button" aria-label="{{ 'grs.a11y.next_products' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div>{%- endif -%}
+</div>
+<div class="acct-pane" data-acct-pane="orders">
+{%- if customer.orders.size == 0 -%}<div class="ip-card acct-card acct-empty"><h2 class="acct-h">{{ 'grs.account.orders_empty' | t }}</h2><p>{{ 'grs.account.orders_empty_text' | t }}</p><div class="acct-acts"><a class="btn" href="{{ shop_u }}"><span class="dot"></span>{{ 'grs.account.shop_railings' | t }}</a><a class="btn-o" href="{{ contact_u }}"><span class="dot"></span>{{ 'grs.account.quote' | t }}</a></div></div>
+{%- else -%}<div class="acct-orders">
+{%- for order in customer.orders -%}{%- liquid
+  case order.financial_status
+    when 'paid'
+      assign pay_l = 'grs.account.st_paid' | t
+      assign pay_t = 'ok'
+    when 'pending', 'unpaid', 'partially_paid', 'expired'
+      assign pay_l = 'grs.account.st_awaiting' | t
+      assign pay_t = 'warn'
+    when 'refunded'
+      assign pay_l = 'grs.account.st_refunded' | t
+      assign pay_t = 'off'
+    when 'partially_refunded'
+      assign pay_l = 'grs.account.st_part_refunded' | t
+      assign pay_t = 'off'
+    when 'authorized'
+      assign pay_l = 'grs.account.st_authorized' | t
+      assign pay_t = 'info'
+    else
+      assign pay_l = order.financial_status_label
+      assign pay_t = 'off'
+  endcase
+  if order.cancelled
+    assign ful_l = 'grs.account.st_cancelled' | t
+    assign ful_t = 'off'
+  elsif order.fulfillment_status == 'fulfilled'
+    assign ful_l = 'grs.account.st_shipped' | t
+    assign ful_t = 'ok'
+  elsif order.fulfillment_status == 'partial'
+    assign ful_l = 'grs.account.st_partial' | t
+    assign ful_t = 'info'
+  else
+    assign ful_l = 'grs.account.st_preparing' | t
+    assign ful_t = 'info'
+  endif
+  assign o_track = ''
+  assign re_ok = true
+  assign re_parts = ''
+  for li in order.line_items
+    if o_track == blank and li.fulfillment and li.fulfillment.tracking_url != blank
+      assign o_track = li.fulfillment.tracking_url
+    endif
+    if li.variant_id
+      assign re_parts = re_parts | append: li.variant_id | append: ':' | append: li.quantity | append: ','
+    else
+      assign re_ok = false
+    endif
+  endfor
+  if re_parts == blank
+    assign re_ok = false
+  endif
+  assign re_parts = re_parts | remove_last: ','
+-%}<article class="ip-card acct-card acct-order" aria-label="{{ 'grs.account.order_n' | t: order: order.name }}"><div class="acct-ohead"><div><b class="acct-oname">{{ 'grs.account.order_n' | t: order: order.name }}</b>{%- assign o_date = order.created_at | date: format: 'date' -%}<small>{{ 'grs.account.placed' | t: date: o_date }}</small></div><div class="acct-pills"><span class="acct-pill is-{{ pay_t }}">{{ pay_l | escape }}</span><span class="acct-pill is-{{ ful_t }}">{{ ful_l }}</span></div></div>
+<ul class="acct-items" role="list">{%- for li in order.line_items limit: 6 -%}<li><span class="acct-thumb">{%- if li.image -%}<img src="{{ li.image | image_url: width: 160 }}" alt="" width="56" height="56" loading="lazy">{%- endif -%}</span><span><b>{{ li.title | escape }}</b><small>{{ 'grs.account.qty' | t: n: li.quantity }}</small></span></li>{%- endfor -%}</ul>
+<div class="acct-ofoot"><b class="acct-total">{{ order.total_price | money }}</b><div class="acct-acts">{%- if o_track != blank -%}<a class="btn sm" href="{{ o_track }}" target="_blank" rel="noopener"><span class="dot"></span>{{ 'grs.account.track_package' | t }}</a>{%- endif -%}<a class="btn-o sm" href="{{ order.customer_order_url | default: order.customer_url }}"><span class="dot"></span>{{ 'grs.account.view_order' | t }}</a>{%- if re_ok -%}<a class="btn-o sm" href="{{ routes.cart_url }}/{{ re_parts }}"><span class="dot"></span>{{ 'grs.account.buy_again' | t }}</a>{%- endif -%}</div></div></article>
+{%- endfor -%}</div>
+{%- if paginate.pages > 1 -%}<div class="acct-acts acct-pager">{%- if paginate.previous -%}<a class="btn-o sm" href="{{ paginate.previous.url }}#orders"><span class="dot"></span>{{ 'grs.account.newer' | t }}</a>{%- endif -%}{%- if paginate.next -%}<a class="btn-o sm" href="{{ paginate.next.url }}#orders"><span class="dot"></span>{{ 'grs.account.older' | t }}</a>{%- endif -%}</div>{%- endif -%}
+{%- endif -%}
+</div>
+<div class="acct-pane" data-acct-pane="install">
+<div class="acct-done" data-acct-alldone><b>{{ 'grs.account.all_steps_done' | t: total: n_steps }}</b><p>{{ 'grs.account.send_photo' | t }} <a href="mailto:{{ grs_email }}?subject={{ subj }}">{{ 'grs.account.share_photos' | t }}</a></p></div>
+<div class="acct-cols"><div class="acct-main">{{ checklist }}<p class="acct-note">{{ 'grs.account.saved_note' | t }} <a href="{{ guide_u }}">{{ 'grs.account.guide' | t }}</a>.</p></div><div class="acct-side">
+<section class="acct-player-w"><h2 class="acct-h">{{ sd_videos_heading | escape }}</h2>
+{%- assign first_v = nil -%}{%- assign first_id = '' -%}{%- for block in section.blocks -%}{%- if first_id == '' and block.type == 'video' and block.settings.video.id != blank -%}{%- assign first_v = block -%}{%- assign first_id = block.id -%}{%- endif -%}{%- endfor -%}
+<div class="acct-player" data-acct-player>{%- if first_id != '' -%}<button type="button" data-acct-play="{{ first_v.settings.video.id | escape }}" data-title="{{ first_v.settings.title | escape }}" aria-label="{{ 'grs.account.play' | t: title: first_v.settings.title }}"><img class="ph" src="https://i.ytimg.com/vi/{{ first_v.settings.video.id | escape }}/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="acct-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"></path></svg></span></button>{%- else -%}<iframe src="https://www.youtube-nocookie.com/embed/videoseries?list={{ yt_latest | escape }}&rel=0" title="{{ 'grs.account.latest_title' | t | escape }}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>{%- endif -%}</div>
+<ul class="acct-vlist" role="list">{%- for block in section.blocks -%}{%- if block.type == 'video' and block.settings.video.id != blank -%}<li><button type="button" class="acct-vl{% if block.id == first_id %} on{% endif %}" data-acct-pick="{{ block.settings.video.id | escape }}" data-title="{{ block.settings.title | escape }}"{% if block.id == first_id %} aria-current="true"{% endif %}><span class="acct-vl-th"><img class="ph" src="https://i.ytimg.com/vi/{{ block.settings.video.id | escape }}/mqdefault.jpg" alt="" loading="lazy" decoding="async">{%- if block.settings.duration != blank -%}<span class="acct-dur">{{ block.settings.duration | escape }}</span>{%- endif -%}</span><span class="acct-vl-t">{{ block.settings.title | escape }}</span></button></li>{%- endif -%}{%- endfor -%}<li><button type="button" class="acct-vl{% if first_id == '' %} on{% endif %}" data-acct-pick="list:{{ yt_latest | escape }}" data-title="{{ 'grs.account.latest_title' | t | escape }}"{% if first_id == '' %} aria-current="true"{% endif %}><span class="acct-vl-th acct-vl-live"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"></path></svg></span><span class="acct-vl-t">{{ 'grs.account.latest_videos' | t }}<small>{{ 'grs.account.latest_auto' | t }}</small></span></button></li></ul>
+<a class="arrow-link" href="{{ channel_u | escape }}" target="_blank" rel="noopener">{{ 'grs.account.other_videos' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></section>
+{%- assign tools = sd_tools | newline_to_br | split: '<br />' -%}
+<section class="ip-card acct-card acct-tools" data-acct-tools><h2 class="acct-h">{{ 'grs.account.tools' | t }}</h2><ul class="acct-list acct-tl" role="list">{%- assign k = 0 -%}{%- for t in tools -%}{%- assign t2 = t | strip -%}{%- if t2 != '' -%}{%- assign k = k | plus: 1 -%}<li><label><input type="checkbox" value="{{ k }}"><span class="acct-box"><em></em></span><span class="acct-st">{{ t2 }}</span></label></li>{%- endif -%}{%- endfor -%}</ul></section>
+{%- assign tips = sd_care | newline_to_br | split: '<br />' -%}
+<section class="ip-card acct-card acct-care"><h2 class="acct-h">{{ 'grs.account.care' | t }}</h2><ul class="acct-tips" role="list">{%- for tp in tips -%}{%- assign tp2 = tp | strip -%}{%- if tp2 != '' -%}{%- assign tq = tp2 | split: ':' -%}<li>{%- if tq.size > 1 -%}<b>{{ tq[0] }}:</b>{{ tp2 | remove_first: tq[0] | remove_first: ':' }}{%- else -%}{{ tp2 }}{%- endif -%}</li>{%- endif -%}{%- endfor -%}</ul></section>
+<section class="ip-card acct-card acct-docs"><h2 class="acct-h">{{ 'grs.account.documents' | t }}</h2><ul class="acct-res" role="list"><li><a href="{{ guide_u }}">{{ 'grs.account.doc_guide' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li><a href="{{ docs_u }}">{{ 'grs.account.doc_eng' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li><a href="{{ code_u }}">{{ 'grs.account.doc_code' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li><a href="{{ warranty_u }}">{{ 'grs.account.doc_warranty' | t }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li></ul></section>
+</div></div></div>
+<div class="acct-pane" data-acct-pane="profile"><div class="acct-cols"><div class="acct-main">
+<section class="ip-card acct-card"><div class="acct-ch2"><h2 class="acct-h">{{ 'grs.account.personal' | t }}</h2><a class="btn-o sm" href="{{ profile_u }}"><span class="dot"></span>{{ 'grs.account.edit' | t }}</a></div><dl class="acct-dl"><div><dt>{{ 'grs.account.name' | t }}</dt><dd>{% if customer.name != blank %}{{ customer.name | escape }}{% else %}<span class="acct-muted">{{ 'grs.account.not_added' | t }}</span>{% endif %}</dd></div><div><dt>{{ 'grs.account.email' | t }}</dt><dd>{{ customer.email | escape }}</dd></div><div><dt>{{ 'grs.account.phone' | t }}</dt><dd>{% if customer.phone != blank %}{{ customer.phone | escape }}{% else %}<span class="acct-muted">{{ 'grs.account.not_added' | t }}</span>{% endif %}</dd></div><div><dt>{{ 'grs.account.email_updates' | t }}</dt><dd>{% if customer.accepts_marketing %}{{ 'grs.account.subscribed' | t }}{% else %}{{ 'grs.account.not_subscribed' | t }}{% endif %}</dd></div></dl></section>
+<section class="ip-card acct-card"><div class="acct-ch2"><h2 class="acct-h">{{ 'grs.account.addresses' | t }}</h2><a class="btn-o sm" href="{{ profile_u }}"><span class="dot"></span>{{ 'grs.account.add_edit' | t }}</a></div>
+{%- if customer.addresses_count > 0 -%}<ul class="acct-addrs" role="list">{%- for address in customer.addresses limit: 20 -%}{%- liquid
+  assign is_def = false
+  if customer.default_address and address.id == customer.default_address.id
+    assign is_def = true
+  endif
+  assign a_city = address.city | default: ''
+  if address.province_code != blank
+    assign a_city = a_city | append: ' ' | append: address.province_code
+  endif
+  if address.zip != blank
+    assign a_city = a_city | append: ' ' | append: address.zip
+  endif
+  assign a_city = a_city | strip
+-%}<li class="acct-addr">{%- if is_def -%}<span class="acct-pill is-info">{{ 'grs.account.default' | t }}</span>{%- endif -%}<address>{%- if address.name != blank -%}<b>{{ address.name | escape }}</b><br>{%- endif -%}{%- if address.address1 != blank -%}{{ address.address1 | escape }}<br>{%- endif -%}{%- if address.address2 != blank -%}{{ address.address2 | escape }}<br>{%- endif -%}{%- if a_city != blank -%}{{ a_city | escape }}<br>{%- endif -%}{{- address.country.name | default: address.country_code | escape -}}{%- if address.phone != blank -%}<br>{{ address.phone | escape }}{%- endif -%}</address></li>{%- endfor -%}</ul>
+{%- else -%}<p class="acct-note">{{ 'grs.account.no_addresses' | t }}</p>{%- endif -%}</section>
+</div><div class="acct-side"><section class="ip-card acct-card"><h2 class="acct-h">{{ 'grs.account.signin_card' | t }}</h2><p class="acct-note">{{ 'grs.account.signed_in_as' | t: email: customer.email }}</p><a class="btn-o sm" href="{{ routes.account_logout_url }}"><span class="dot"></span>{{ 'grs.account.sign_out' | t }}</a></section><div class="ip-card ip-help"><b>{{ 'grs.account.need_hand' | t }}</b><a class="ip-phone" href="tel:{{ grs_phone_tel }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{{ grs_phone }}</a><a class="ip-phone pol-mail" href="mailto:{{ grs_email }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>{{ grs_email }}</a></div></div></div></div>
+</div></section>
+{%- endpaginate -%}
+{%- endif -%}
+</div>
+
+{% schema %}
+{"name":"GRS My Account","tag":"div","settings":[{"type":"paragraph","content":"Signed out: the page that invites to sign in. Signed in: the dashboard (orders, installation, profile), with the store's live data. The dashboard's own words follow the theme language."},{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"image_picker","id":"image","label":"Header photo","info":"Empty: the installation photo."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"My glass railing project","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading","label":"Heading (signed out)","placeholder":"Your glass railing project, all in one place","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"text","label":"Text (signed out)","placeholder":"Sign in to track your order, follow the step-by-step install checklist, find your local building code and keep your warranty handy.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"signin_label","label":"Sign in button","placeholder":"Sign in","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Install checklist"},{"type":"text","id":"steps_eyebrow","label":"Small title","placeholder":"Step by step","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"steps_heading","label":"Heading","placeholder":"Installation checklist","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"steps","label":"Steps","info":"Empty: the standard 13 steps, in the visitor's language. One step per line: title | text."},{"type":"textarea","id":"tools","label":"Tools (signed in)","info":"One per line.","placeholder":"Measuring tape\nLevel (magnetic)\nPencil and chalk line\nPower drill with 1/8\" and 5/16\" bits\nAllen key\nWrench"},{"type":"textarea","id":"care","label":"Care tips (signed in)","info":"One per line; the words before \":\" are bold.","placeholder":"Glass: a soft cloth and a non-abrasive glass cleaner. Skip scouring pads and razor blades.\nHardware: rinse with fresh water a few times a year, more often near pools or salt water.\nEach spring: check the clamps and cap rail and re-tighten anything loose.\nWinter: use a plastic shovel near the glass and rinse off de-icing salt."},{"type":"header","content":"Refer card"},{"type":"text","id":"refer_title","label":"Title","info":"Empty: no refer card.","placeholder":"Love your railing?"},{"type":"textarea","id":"refer_text","label":"Text","placeholder":"Refer friends and neighbours through our affiliate program and earn on every order they place.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"refer_button","label":"Button","placeholder":"Join the program","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"refer_link","label":"Button link","info":"Empty: https://glassrailingstore.goaffpro.com"},{"type":"header","content":"Video guides"},{"type":"text","id":"videos_heading","label":"Heading","placeholder":"Video guides","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"channel_url","label":"YouTube channel link","default":"https://www.youtube.com/@GlassRailingStore/videos"},{"type":"text","id":"youtube_channel_id","label":"YouTube channel ID","default":"UCCZBekKEU_CNWp0nK7ZNDvA","info":"Starts with UC. The \"Latest videos\" player of the dashboard follows the channel (no Shorts)."},{"type":"header","content":"Dashboard"},{"type":"range","id":"warranty_years","label":"Years of No Rust Promise","min":1,"max":30,"step":1,"default":10},{"type":"text","id":"claims_email","label":"Claims email","default":"claims@glassrailingstore.com"},{"type":"blog","id":"blog","label":"Blog for \"Ideas & guides\"","info":"Empty: News."},{"type":"collection","id":"recommend_collection","label":"Products to recommend","info":"Empty: Glass Railing Hardware."},{"type":"text","id":"recommend_heading","label":"Recommendations heading","info":"Empty: hidden.","placeholder":"Complete your railing"},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"feature","name":"What the account offers","settings":[{"type":"text","id":"kicker","label":"Small line"},{"type":"text","id":"title","label":"Title"},{"type":"textarea","id":"text","label":"Text"},{"type":"text","id":"link_label","label":"Link text"},{"type":"url","id":"link","label":"Link"}]},{"type":"video","name":"Video guide","settings":[{"type":"video_url","id":"video","label":"YouTube link","accept":["youtube"]},{"type":"text","id":"title","label":"Title"},{"type":"text","id":"duration","label":"Length","info":"For example 5:19"}]}],"max_blocks":16,"presets":[{"name":"GRS My Account"}]}
+{% endschema %}

@@ -1,0 +1,172 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-main",
+      "settings": {}
+    },
+    "app": {
+      "type": "grs-pg-app",
+      "settings": {
+        "custom_liquid": "<div class=\"robin-pro\" id=\"bff5eaad-14a4-433a-8f03-b27e52e28451\"></div>"
+      }
+    },
+    "reviews": {
+      "type": "grs-reviews",
+      "blocks": {
+        "rv1": {
+          "type": "review",
+          "settings": {
+            "text": "The glass arrived in perfect condition. The hardest part was moving the glass from my driveway to my back deck. I used masking tape to create a line and then did all my markings on the tape. Excellent product, straight forward installation. Thank you",
+            "name": "Steven King",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv2": {
+          "type": "review",
+          "settings": {
+            "text": "We are so pleased with the service of this company! We live 3 provinces away and the ordering and delivery both went smoothly. Everything came in a crate delivered right to our door with free shipping! All intact. Thank you so much. The quality appears great but I guess we will see when the rails are up and in place.🙂",
+            "name": "Robyn Rozee",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "text": "I'm so happy I found you guys because I was getting quotes for like $180 per linear foot which is crazy! I was able to install it with my son for half of that because of glass railing store. Thank you so much for all the help in crafting the project, I will be recommending you guys from now on",
+            "name": "Nathalie Wagner",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "text": "I really like these spigots, very heavy I was a little skeptical at the beginning as I was worried that they may be cheap, but Marine in customer service assured me that they were good. They arrived last week and WOW they weight like 5 pounds each (of stainless steel!!) and come with adjustable screws (didn't even know) The quality is amazing and I highly recommend them for hardware, this is really heavy duty stuff. I also like that they have a 10 year warranty on the rust, that we will have to wait 10 years to comment on but pretty good. Once again, thank you marine for assisting me",
+            "name": "Martine Marchand",
+            "product": "glass-railing-spigot",
+            "product_label": "6\" Engineered Spigot"
+          }
+        },
+        "rv5": {
+          "type": "review",
+          "settings": {
+            "text": "Very satisfied with my order, glass is thick and strong. I love how the corners are a little rounded, I didn't even know that was going to be the case",
+            "name": "Anthony",
+            "product": "glass-railing-46-tempered-glass-panel",
+            "product_label": "46\" glass panels"
+          }
+        },
+        "rv6": {
+          "type": "review",
+          "settings": {
+            "text": "Installation was a breeze. These hinges work perfectly. Just don't forget to follow the instruction thing for the closing speed!",
+            "name": "Lucy Yang",
+            "product": "glass-railing-hinge",
+            "product_label": "Hinge Kit"
+          }
+        },
+        "rv7": {
+          "type": "review",
+          "settings": {
+            "text": "I had some doubts at the beginning as I have no clue how they ship glass, but everything arrives in a crate in great shape! I mean look at that, definitely one of the most affordable options online too, especially compared with invisarail or like the home depot alternative. Got the coupons too for an extra discount",
+            "name": "Audrey Lane",
+            "product": "glass-railing-34-tempered-glass-panel",
+            "product_label": "33.6\" glass panels"
+          }
+        },
+        "rv8": {
+          "type": "review",
+          "settings": {
+            "text": "I was hesitating between the glass railing store and invisirail but ultimately landed here because of better quality. Beautiful product, will buy again for other projects",
+            "name": "Simon Bern",
+            "product": "glass-railing-40-tempered-glass-panel",
+            "product_label": "39.6\" glass panels"
+          }
+        },
+        "rv9": {
+          "type": "review",
+          "settings": {
+            "text": "Thank you so much to the team for delivering my glass railing! I am super grateful that I found you guys it just looks great! My husband installed it last night so I have a beautiful sunset picture for you guys to enjoy! All my neighbours are going to order too, can I have a discount for referring",
+            "name": "Susan Walsh",
+            "product": "glass-railing-side-mount-spigot",
+            "product_label": "Side Mount / Fascia Spigot"
+          }
+        },
+        "rv10": {
+          "type": "review",
+          "settings": {
+            "text": "Just beautiful, will be ordering again for my son's house",
+            "name": "Robert Gignac",
+            "product": "glass-railing-spigot",
+            "product_label": "6\" Engineered Spigot"
+          }
+        }
+      },
+      "block_order": [
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4",
+        "rv5",
+        "rv6",
+        "rv7",
+        "rv8",
+        "rv9",
+        "rv10"
+      ],
+      "settings": {
+        "heading": "What our customers say"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {},
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer design consultations for custom projects?",
+            "answer": "<p>Yes. Our team helps with planning, measurements, and installation advice. Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project. You can also call or text <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I see samples of your glass and hardware finishes before ordering?",
+            "answer": "<p>Yes. Order the <a href=\"/products/glass-hardware-sample-kit\">Glass & Hardware Sample Kit</a> to see the glass and hardware before you order your railing.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Do you provide 3D renderings or mockups of custom designs?",
+            "answer": "<p>Send us your drawings, photos and measurements and our team will review your design and confirm every part you need. Contact us at <a href=\"tel:+18554527715\">(855) 452-7715</a> to discuss your project.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "app",
+    "reviews",
+    "faq"
+  ]
+}

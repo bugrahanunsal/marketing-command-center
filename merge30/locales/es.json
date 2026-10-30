@@ -1,0 +1,1344 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Ingrese a la tienda con la contraseña:",
+      "login_password_button": "Ingresar con contraseña",
+      "login_form_password_label": "Contraseña",
+      "login_form_password_placeholder": "Su contraseña",
+      "login_form_error": "Contraseña incorrecta",
+      "login_form_submit": "Ingresar",
+      "admin_link_html": "¿Es el propietario de la tienda? <a href=\"/admin\" class=\"link underlined-link\">Inicie sesión aquí</a>",
+      "powered_by_shopify_html": "Esta tienda funcionará con {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Compartir en Facebook",
+        "share_on_twitter": "Compartir en X",
+        "share_on_pinterest": "Guardar en Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Seguir comprando",
+    "pagination": {
+      "label": "Paginación",
+      "page": "Página {{ number }}",
+      "next": "Página siguiente",
+      "previous": "Página anterior"
+    },
+    "search": {
+      "search": "Buscar",
+      "reset": "Borrar término de búsqueda"
+    },
+    "cart": {
+      "view": "Ver carrito ({{ count }})",
+      "item_added": "Artículo agregado a su carrito",
+      "view_empty_cart": "Ver carrito"
+    },
+    "share": {
+      "copy_to_clipboard": "Copiar enlace",
+      "share_url": "Enlace",
+      "success_message": "Enlace copiado al portapapeles",
+      "close": "Cerrar opciones para compartir"
+    },
+    "slider": {
+      "of": "de",
+      "next_slide": "Diapositiva a la derecha",
+      "previous_slide": "Diapositiva a la izquierda",
+      "name": "Carrusel"
+    }
+  },
+  "newsletter": {
+    "label": "Correo electrónico",
+    "success": "Gracias por suscribirse",
+    "button_label": "Suscribirse"
+  },
+  "accessibility": {
+    "skip_to_text": "Ir directamente al contenido",
+    "close": "Cerrar",
+    "unit_price_separator": "por",
+    "vendor": "Proveedor:",
+    "error": "Error",
+    "refresh_page": "Al seleccionar una opción, se actualiza toda la página.",
+    "link_messages": {
+      "new_window": "Se abre en una nueva ventana.",
+      "external": "Se abre el sitio web externo."
+    },
+    "loading": "Cargando...",
+    "skip_to_product_info": "Ir directamente a la información del producto",
+    "total_reviews": "reseñas en total",
+    "star_reviews_info": "{{ rating_value }} de {{ rating_max }} estrellas",
+    "collapsible_content_title": "Contenido desplegable",
+    "complementary_products": "Productos complementarios"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Leer más: {{ title }}",
+      "comments": {
+        "one": "{{ count }} comentario",
+        "other": "{{ count }} comentarios",
+        "many": "{{ count }} comentarios"
+      },
+      "moderated": "Tenga en cuenta que los comentarios deben aprobarse antes de publicarse.",
+      "comment_form_title": "Deje un comentario",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Comentario",
+      "post": "Publicar comentario",
+      "back_to_blog": "Regresar al blog",
+      "share": "Compartir este artículo",
+      "success": "Su comentario se publicó correctamente. ¡Gracias!",
+      "success_moderated": "Su comentario se publicó correctamente. Lo publicaremos en breve, ya que nuestro blog es moderado."
+    }
+  },
+  "onboarding": {
+    "product_title": "Ejemplo de nombre del producto",
+    "collection_title": "Nombre de su colección"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Agregar al carrito",
+      "description": "Descripción",
+      "on_sale": "Oferta",
+      "quantity": {
+        "label": "Cantidad",
+        "input_label": "Cantidad para {{ product }}",
+        "increase": "Aumentar cantidad para {{ product }}",
+        "decrease": "Reducir cantidad para {{ product }}",
+        "minimum_of": "Mínimo de {{ quantity }}",
+        "maximum_of": "Máximo de {{ quantity }}",
+        "multiples_of": "Incrementos de {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> en el carrito",
+        "note": "Ver reglas de cantidad",
+        "min_of": "Mín.: {{ quantity }}",
+        "max_of": "Máx.: {{ quantity }}"
+      },
+      "price": {
+        "from_price_html": "A partir de {{ price }}",
+        "regular_price": "Precio habitual",
+        "sale_price": "Precio de oferta",
+        "unit_price": "Precio unitario"
+      },
+      "share": "Compartir este producto",
+      "sold_out": "Agotado",
+      "unavailable": "No disponible",
+      "vendor": "Proveedor",
+      "video_exit_message": "{{ title }} abre el video en pantalla completa en la misma ventana.",
+      "xr_button": "Ver en su espacio",
+      "xr_button_label": "Ver en su espacio: carga el artículo en una ventana de realidad aumentada",
+      "pickup_availability": {
+        "view_store_info": "Ver información de la tienda",
+        "check_other_stores": "Verificar disponibilidad en otras tiendas",
+        "pick_up_available": "Disponible para recoger",
+        "pick_up_available_at_html": "Disponible para recoger en <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Por ahora no está disponible para recoger en <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "No se pudo cargar la disponibilidad para recoger",
+        "refresh": "Actualizar"
+      },
+      "media": {
+        "open_media": "Abrir elemento multimedia {{ index }} en una ventana modal",
+        "play_model": "Reproducir el visor 3D",
+        "play_video": "Reproducir video",
+        "gallery_viewer": "Visor de la galería",
+        "load_image": "Cargar la imagen {{ index }} en la vista de la galería",
+        "load_model": "Cargar el modelo 3D {{ index }} en la vista de la galería",
+        "load_video": "Reproducir el video {{ index }} en la vista de la galería",
+        "image_available": "La imagen {{ index }} ya está disponible en la vista de la galería"
+      },
+      "view_full_details": "Ver todos los detalles",
+      "shipping_policy_html": "El <a href=\"{{ link }}\">envío</a> se calcula al pagar.",
+      "choose_options": "Seleccionar opciones",
+      "choose_product_options": "Elegir opciones para {{ product_name }}",
+      "value_unavailable": "{{ option_value }}: no disponible",
+      "variant_sold_out_or_unavailable": "Variante agotada o no disponible",
+      "inventory_in_stock": "Disponible",
+      "inventory_in_stock_show_count": "{{ quantity }} disponibles",
+      "inventory_low_stock": "Pocas existencias",
+      "inventory_low_stock_show_count": "Pocas existencias: quedan {{ quantity }}",
+      "inventory_out_of_stock": "Agotado",
+      "inventory_out_of_stock_continue_selling": "Disponible",
+      "sku": "SKU",
+      "volume_pricing": {
+        "title": "Precios por volumen",
+        "note": "Precio por volumen disponible",
+        "minimum": "Más de {{ quantity }}",
+        "price_at_each": "a {{ price }} por unidad",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "product_variants": "Variantes de producto",
+      "taxes_included": "Impuestos incluidos.",
+      "duties_included": "Aranceles incluidos.",
+      "duties_and_taxes_included": "Aranceles e impuestos incluidos."
+    },
+    "modal": {
+      "label": "Galería multimedia"
+    },
+    "facets": {
+      "apply": "Aplicar",
+      "clear": "Borrar",
+      "clear_all": "Eliminar todos",
+      "from": "Desde",
+      "filter_and_sort": "Filtrar y ordenar",
+      "filter_by_label": "Filtrar:",
+      "filter_button": "Filtrar",
+      "filters_selected": {
+        "one": "{{ count }} seleccionado",
+        "other": "{{ count }} seleccionados",
+        "many": "{{ count }} seleccionados"
+      },
+      "max_price": "El precio más alto es {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} producto de un total de {{ count }}",
+        "other": "{{ product_count }} productos de un total de {{ count }}",
+        "many": "{{ product_count }} productos de un total de {{ count }}"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} producto",
+        "other": "{{ count }} productos",
+        "many": "{{ count }} productos"
+      },
+      "reset": "Restablecer",
+      "sort_button": "Ordenar",
+      "sort_by_label": "Ordenar por:",
+      "to": "Hasta",
+      "clear_filter": "Eliminar filtro",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filtros seleccionados)",
+      "show_more": "Mostrar más",
+      "show_less": "Mostrar menos",
+      "filter_and_operator_subtitle": "Coincidir con todos"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Página no encontrada",
+      "subtext": "404"
+    },
+    "search": {
+      "no_results": "No se encontraron resultados para “{{ terms }}”. Revise la ortografía o use una palabra o frase diferente.",
+      "results_with_count": {
+        "one": "{{ count }} resultado",
+        "other": "{{ count }} resultados",
+        "many": "{{ count }} resultados"
+      },
+      "title": "Resultados de búsqueda",
+      "page": "Página",
+      "products": "Productos",
+      "search_for": "Buscar “{{ terms }}”",
+      "results_with_count_and_term": {
+        "one": "Se encontró {{ count }} resultado para “{{ terms }}”",
+        "other": "Se encontraron {{ count }} resultados para “{{ terms }}”",
+        "many": "Se han encontrado {{ count }} resultados para \"{{ terms }}\""
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} página",
+        "other": "{{ count }} páginas",
+        "many": "{{ count }} páginas"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} producto",
+        "other": "{{ count }} productos",
+        "many": "{{ count }} productos"
+      },
+      "suggestions": "Sugerencias",
+      "pages": "Páginas",
+      "results_suggestions_with_count": {
+        "one": "{{ count }} sugerencia",
+        "other": "{{ count }} sugerencias",
+        "many": "{{ count }} sugerencias"
+      }
+    },
+    "cart": {
+      "cart": "Carrito"
+    },
+    "contact": {
+      "form": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Número de teléfono",
+        "comment": "Comentario",
+        "send": "Enviar",
+        "post_success": "Gracias por contactarnos. Le responderemos lo antes posible.",
+        "error_heading": "Ajuste lo siguiente:",
+        "title": "Formulario de contacto"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Anuncio",
+      "menu": "Menú",
+      "cart_count": {
+        "one": "{{ count }} artículo",
+        "other": "{{ count }} artículos",
+        "many": "{{ count }} artículos"
+      }
+    },
+    "cart": {
+      "title": "Su carrito",
+      "caption": "Artículos en el carrito",
+      "remove_title": "Eliminar {{ title }}",
+      "note": "Instrucciones especiales del pedido",
+      "checkout": "Pagar pedido",
+      "empty": "Su carrito está vacío",
+      "cart_error": "Hubo un error al actualizar su carrito. Inténtelo de nuevo.",
+      "cart_quantity_error_html": "Solo puede agregar {{ quantity }} de este artículo a su carrito.",
+      "headings": {
+        "product": "Producto",
+        "price": "Precio",
+        "total": "Total",
+        "quantity": "Cantidad",
+        "image": "Imagen del producto"
+      },
+      "update": "Actualizar",
+      "login": {
+        "title": "¿Tiene una cuenta?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicie sesión</a> para pagar más rápido."
+      },
+      "estimated_total": "Total estimado",
+      "new_estimated_total": "Nuevo total estimado",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Aranceles e impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Aranceles e impuestos incluidos. Descuentos y envío calculados en la pantalla de pago.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Impuestos incluidos. Descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
+      "taxes_included_shipping_at_checkout_without_policy": "Impuestos incluidos. Descuentos y envío calculados en la pantalla de pago.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Aranceles incluidos. Impuestos, descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Aranceles incluidos. Impuestos, descuentos y envío calculados en la pantalla de pago.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Impuestos, descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Impuestos, descuentos y envío calculados en la pantalla de pago."
+    },
+    "footer": {
+      "payment": "Formas de pago"
+    },
+    "featured_blog": {
+      "view_all": "Ver todo",
+      "onboarding_title": "Artículo de blog",
+      "onboarding_content": "Ofrezca a sus clientes un resumen de su artículo de blog"
+    },
+    "featured_collection": {
+      "view_all": "Ver todo",
+      "view_all_label": "Ver todos los productos de la colección {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Ver todo"
+    },
+    "collection_template": {
+      "title": "Colección",
+      "empty": "No se encontró ningún producto",
+      "use_fewer_filters_html": "Use menos filtros o <a class=\"{{ class }}\" href=\"{{ link }}\">elimínelos todos</a>"
+    },
+    "video": {
+      "load_video": "Cargar video: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Cargar diapositiva",
+      "previous_slideshow": "Diapositiva anterior",
+      "next_slideshow": "Diapositiva siguiente",
+      "pause_slideshow": "Pausar la presentación",
+      "play_slideshow": "Reproducir la presentación",
+      "carousel": "Carrusel",
+      "slide": "Diapositiva"
+    },
+    "page": {
+      "title": "Título de la página"
+    },
+    "announcements": {
+      "previous_announcement": "Anuncio anterior",
+      "next_announcement": "Anuncio siguiente",
+      "carousel": "Carrusel",
+      "announcement": "Anuncio",
+      "announcement_bar": "Barra de anuncios"
+    },
+    "quick_order_list": {
+      "product_total": "Subtotal de productos",
+      "view_cart": "Ver carrito",
+      "each": "{{ money }}/unidad",
+      "product": "Producto",
+      "variant": "Variante",
+      "variant_total": "Total de variantes",
+      "items_added": {
+        "one": "{{ quantity }} artículo agregado",
+        "other": "{{ quantity }} artículos agregados",
+        "many": "{{ quantity }} artículos agregados"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} artículo eliminado",
+        "other": "{{ quantity }} artículos eliminados",
+        "many": "{{ quantity }} artículos eliminados"
+      },
+      "product_variants": "Variantes de producto",
+      "total_items": "Total de artículos",
+      "remove_all_items_confirmation": "¿Eliminar los {{ quantity }} artículos de su carrito?",
+      "remove_all": "Eliminar todos",
+      "cancel": "Cancelar",
+      "remove_all_single_item_confirmation": "¿Eliminar 1 artículo de su carrito?",
+      "min_error": "Este artículo tiene un mínimo de {{ min }}",
+      "max_error": "Este artículo tiene un máximo de {{ max }}",
+      "step_error": "Solo puede agregar este artículo en incrementos de {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "País/región",
+    "language_label": "Idioma",
+    "update_language": "Actualizar idioma",
+    "update_country": "Actualizar país/región",
+    "search": "Buscar",
+    "popular_countries_regions": "Países o regiones populares",
+    "country_results_count": "{{ count }} países o regiones encontrados"
+  },
+  "customer": {
+    "account": {
+      "title": "Cuenta",
+      "details": "Detalles de la cuenta",
+      "view_addresses": "Ver direcciones",
+      "return": "Regresar a detalles de la cuenta"
+    },
+    "account_fallback": "Cuenta",
+    "activate_account": {
+      "title": "Activar cuenta",
+      "subtext": "Cree su contraseña para activar su cuenta.",
+      "password": "Contraseña",
+      "password_confirm": "Confirmar contraseña",
+      "submit": "Activar cuenta",
+      "cancel": "Rechazar invitación"
+    },
+    "addresses": {
+      "title": "Direcciones",
+      "default": "Predeterminada",
+      "add_new": "Agregar una nueva dirección",
+      "edit_address": "Editar dirección",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "company": "Empresa",
+      "address1": "Dirección 1",
+      "address2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País/región",
+      "province": "Provincia",
+      "zip": "Código postal",
+      "phone": "Teléfono",
+      "set_default": "Establecer como dirección predeterminada",
+      "add": "Agregar dirección",
+      "update": "Actualizar dirección",
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "delete_confirm": "¿Seguro que desea eliminar esta dirección?"
+    },
+    "log_in": "Iniciar sesión",
+    "log_out": "Cerrar sesión",
+    "login_page": {
+      "cancel": "Cancelar",
+      "create_account": "Crear cuenta",
+      "email": "Correo electrónico",
+      "forgot_password": "¿Olvidó su contraseña?",
+      "guest_continue": "Continuar",
+      "guest_title": "Continuar como invitado",
+      "password": "Contraseña",
+      "title": "Inicio de sesión",
+      "sign_in": "Iniciar sesión",
+      "submit": "Enviar",
+      "alternate_provider_separator": "o"
+    },
+    "orders": {
+      "title": "Historial de pedidos",
+      "order_number": "Pedido",
+      "order_number_link": "Número de pedido {{ number }}",
+      "date": "Fecha",
+      "payment_status": "Estado del pago",
+      "fulfillment_status": "Estado de preparación del pedido",
+      "total": "Total",
+      "none": "Aún no ha realizado ningún pedido."
+    },
+    "recover_password": {
+      "title": "Restablezca su contraseña",
+      "subtext": "Le enviaremos un correo electrónico para restablecer su contraseña",
+      "success": "Le enviamos un correo electrónico con un enlace para actualizar su contraseña."
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear"
+    },
+    "reset_password": {
+      "title": "Restablecer contraseña de cuenta",
+      "subtext": "Ingrese una nueva contraseña",
+      "password": "Contraseña",
+      "password_confirm": "Confirmar contraseña",
+      "submit": "Restablecer contraseña"
+    },
+    "order": {
+      "title": "Pedido {{ name }}",
+      "date_html": "Realizado el {{ date }}",
+      "cancelled_html": "Pedido cancelado el {{ date }}",
+      "cancelled_reason": "Motivo: {{ reason }}",
+      "billing_address": "Dirección de facturación",
+      "payment_status": "Estado del pago",
+      "shipping_address": "Dirección de envío",
+      "fulfillment_status": "Estado de preparación del pedido",
+      "discount": "Descuento",
+      "shipping": "Envío",
+      "tax": "Impuesto",
+      "product": "Producto",
+      "sku": "SKU",
+      "price": "Precio",
+      "quantity": "Cantidad",
+      "total": "Total",
+      "fulfilled_at_html": "Preparado el {{ date }}",
+      "track_shipment": "Hacer seguimiento del envío",
+      "tracking_url": "Enlace de seguimiento",
+      "tracking_company": "Empresa de transporte",
+      "tracking_number": "Número de seguimiento",
+      "subtotal": "Subtotal",
+      "total_duties": "Aranceles",
+      "total_refunded": "Reembolsado"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "¡Este es el saldo de {{ value }} de su tarjeta de regalo para {{ shop }}!",
+      "subtext": "Su tarjeta de regalo",
+      "gift_card_code": "Código de tarjeta de regalo",
+      "shop_link": "Visitar la tienda en línea",
+      "add_to_apple_wallet": "Agregar a Apple Wallet",
+      "qr_image_alt": "Código QR: escanéelo para canjear la tarjeta de regalo",
+      "copy_code": "Copiar el código de la tarjeta de regalo",
+      "expired": "Vencido",
+      "copy_code_success": "El código se copió correctamente",
+      "how_to_use_gift_card": "Use el código de la tarjeta de regalo en línea o el código QR en la tienda",
+      "expiration_date": "Vence el {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Quiero enviar esto como regalo",
+      "email_label": "Correo electrónico de la persona destinataria",
+      "email": "Correo electrónico",
+      "name_label": "Nombre de la persona destinataria (opcional)",
+      "name": "Nombre",
+      "message_label": "Mensaje (opcional)",
+      "message": "Mensaje",
+      "max_characters": "{{ max_chars }} caracteres máx.",
+      "email_label_optional_for_no_js_behavior": "Correo electrónico de la persona destinataria (opcional)",
+      "send_on": "AAAA-MM-DD",
+      "send_on_label": "Enviar el (opcional)",
+      "expanded": "Formulario del destinatario de la tarjeta de regalo expandido",
+      "collapsed": "Formulario del destinatario de tarjeta de regalo contraído"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Precio habitual",
+        "sold_out": "Agotado",
+        "unavailable": "No disponible",
+        "on_sale": "Oferta",
+        "quantity": "Cantidad",
+        "add_to_cart": "Agregar al carrito",
+        "back_to_collection": "Volver a {{ title }}",
+        "view_details": "Ver detalles"
+      }
+    },
+    "article": {
+      "tags": "Etiquetas:",
+      "all_topics": "Todos los temas",
+      "by_author": "por {{ author }}",
+      "posted_in": "Publicado en",
+      "read_more": "Leer más",
+      "back_to_blog": "Volver a {{ title }}"
+    },
+    "comments": {
+      "title": "Deje un comentario",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "post": "Publicar comentario",
+      "moderated": "Tenga en cuenta que los comentarios deben aprobarse antes de publicarse",
+      "success_moderated": "Su comentario se publicó correctamente. Lo publicaremos en breve, ya que nuestro blog es moderado.",
+      "success": "Su comentario se publicó correctamente. ¡Gracias!",
+      "comments_with_count": {
+        "one": "{{ count }} comentario",
+        "other": "{{ count }} comentarios"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Ingrese a la tienda con la contraseña:",
+      "login_form_password_label": "Contraseña",
+      "login_form_password_placeholder": "Su contraseña",
+      "login_form_submit": "Ingresar",
+      "signup_form_email_label": "Correo electrónico",
+      "signup_form_success": "¡Le enviaremos un correo justo antes de abrir!",
+      "password_link": "Ingresar con contraseña"
+    }
+  },
+  "grs": {
+    "a11y": {
+      "back_to_top": "Volver arriba",
+      "skip": "Ir directamente al contenido",
+      "menu": "Menú",
+      "main": "Principal",
+      "open_menu": "Abrir menú",
+      "close_menu": "Cerrar menú",
+      "close": "Cerrar",
+      "search": "Buscar",
+      "account": "Cuenta",
+      "open_cart": "Abrir carrito",
+      "cart": "Carrito",
+      "close_cart": "Cerrar carrito",
+      "breadcrumb": "Ruta de navegación",
+      "country": "País/región",
+      "language": "Idioma",
+      "policies": "Políticas",
+      "payments": "Formas de pago",
+      "home_link": "{{ shop }}, inicio",
+      "numbers": "{{ shop }} en cifras",
+      "prev_posts": "Publicaciones anteriores",
+      "next_posts": "Publicaciones siguientes",
+      "prev_products": "Productos anteriores",
+      "next_products": "Productos siguientes",
+      "prev_reviews": "Reseñas anteriores",
+      "next_reviews": "Reseñas siguientes",
+      "prev_review": "Reseña anterior",
+      "next_review": "Reseña siguiente",
+      "prev_photo": "Foto anterior",
+      "next_photo": "Foto siguiente",
+      "prev_image": "Imagen anterior",
+      "next_image": "Imagen siguiente",
+      "prev_thumbs": "Miniaturas anteriores",
+      "more_thumbs": "Más miniaturas",
+      "prev_message": "Mensaje anterior",
+      "next_message": "Mensaje siguiente",
+      "decrease_qty": "Disminuir cantidad",
+      "increase_qty": "Aumentar cantidad",
+      "decrease": "Disminuir",
+      "increase": "Aumentar",
+      "quick_view": "Vista rápida",
+      "products_list": "Productos de barandales de vidrio",
+      "shop_by_category": "Comprar por categoría",
+      "close_filters": "Cerrar filtros",
+      "remove_filter": "Quitar filtro {{ label }}",
+      "page_n": "Página {{ n }}",
+      "image_n": "Imagen {{ n }}",
+      "ig_post": "Publicación de Instagram {{ n }}",
+      "rated": "Calificación de {{ avg }} de 5",
+      "stars": "{{ n }} de 5 estrellas",
+      "rated_from": "Calificación de {{ avg }} de 5 en {{ count }} reseñas",
+      "watch_video": "Ver el video en YouTube",
+      "comparison": "Comparación",
+      "pagination": "Paginación",
+      "prev_page": "Página anterior",
+      "next_page": "Página siguiente",
+      "watch": "Ver {{ title }} en YouTube ({{ duration }})",
+      "compare": "Comparar acabados: deslice a la izquierda para {{ b }}, a la derecha para {{ a }}",
+      "one_finish": "Mostrar un acabado",
+      "show_part": "Mostrar la pieza {{ n }} en esta foto",
+      "part_in_photo": "Pieza en esta foto",
+      "share_facebook": "Compartir en Facebook",
+      "share_x": "Compartir en X",
+      "save_pinterest": "Guardar en Pinterest"
+    },
+    "general": {
+      "home": "Inicio",
+      "search": "Buscar",
+      "clear": "Borrar",
+      "close": "Cerrar",
+      "quick_view": "Vista rápida",
+      "shop_now": "Compre ahora",
+      "from": "Desde",
+      "read_more": "Leer más",
+      "tagged": "etiquetado \"{{ tags }}\"",
+      "price": "Precio",
+      "watch": "Ver",
+      "watch_youtube": "Ver en YouTube"
+    },
+    "reviews": {
+      "from_count": "de {{ count }} reseñas",
+      "see_all": "Ver las {{ count }} reseñas",
+      "word": "reseñas",
+      "this_product": "Este producto",
+      "our_customers": "Nuestros clientes",
+      "heading": "Reseñas de clientes",
+      "based_on": "Basado en",
+      "see_all_label": "Ver las",
+      "all_or_write": "Todas las reseñas de este producto, o escriba una"
+    },
+    "blog": {
+      "min_read": "{{ count }} min de lectura"
+    },
+    "country": {
+      "ca": "Canadá",
+      "us": "Estados Unidos"
+    },
+    "cart": {
+      "title": "Carrito",
+      "ship_over": "Envío gratis en pedidos de barandales de vidrio de más de $3,000.",
+      "ship_left": "Le faltan {{ amount }} para el envío gratis.",
+      "ship_ok": "Su pedido califica para envío gratis.",
+      "remove": "Eliminar",
+      "empty": "Su carrito está vacío.",
+      "subtotal": "Subtotal",
+      "taxes": "Impuestos y envío calculados al finalizar la compra.",
+      "checkout": "Pagar pedido",
+      "view_cart": "Ver carrito",
+      "quote": "¿No está seguro? Solicite una cotización gratis"
+    },
+    "product": {
+      "in_stock": "Disponible",
+      "sold_out": "Agotado",
+      "finish": "Acabado:",
+      "quantity": "Cantidad",
+      "add_to_cart": "Agregar al carrito",
+      "choose_options": "Seleccionar opciones",
+      "view_details": "Ver todos los detalles",
+      "brushed": "Acero inoxidable cepillado",
+      "matte": "Negro mate",
+      "at_a_glance": "De un vistazo",
+      "overview": "Descripción general",
+      "specifications": "Especificaciones",
+      "share": "Compartir",
+      "copy_link": "Copiar enlace",
+      "add_error": "No se pudo agregar al carrito. Inténtelo de nuevo.",
+      "more_label": "¿Necesita una medida que no aparece? Vidrio a medida",
+      "per_screw": "por tornillo",
+      "you_may_like": "También le puede interesar",
+      "shop_collection": "Ver la colección"
+    },
+    "nav": {
+      "cta": "Solicite una cotización gratis",
+      "shop_all": "Ver todos los productos"
+    },
+    "drawer": {
+      "my_account": "Mi cuenta",
+      "account_text": "Siga su pedido, consulte la lista de instalación y tenga su garantía a la mano.",
+      "sign_in": "Iniciar sesión",
+      "create_account": "Crear cuenta",
+      "language": "Idioma",
+      "appearance": "Apariencia",
+      "dark_mode": "Modo oscuro",
+      "call": "Llámenos o envíenos un mensaje"
+    },
+    "footer": {
+      "privacy": "Política de privacidad",
+      "refund": "Política de reembolso",
+      "shipping": "Envío",
+      "terms": "Términos del servicio",
+      "contact": "Contacto",
+      "contact_title": "Contáctenos",
+      "follow_us": "Síganos",
+      "fast_shipping": "Envío rápido a todo Canadá y EE. UU."
+    },
+    "aside": {
+      "products": "Productos",
+      "building_code": "Código de construcción",
+      "resources": "Recursos",
+      "guides": "Guías",
+      "contact": "Contacto",
+      "about": "Acerca de nosotros",
+      "install_guide": "Guía de instalación de barandales de vidrio",
+      "blog": "Blog",
+      "faq": "Preguntas frecuentes",
+      "loc_ca": "Ubicaciones: Canadá",
+      "loc_us": "Ubicaciones: EE. UU.",
+      "spigot": "Spigot de ingeniería de 6\"",
+      "spigot_alt": "Spigot (soporte de piso) negro mate para barandal de vidrio en una terraza",
+      "panels": "Paneles para barandales de vidrio",
+      "panels_alt": "Barandal de vidrio sin marco en una terraza frente a la playa"
+    },
+    "js": {
+      "read_more": "Leer más",
+      "show_less": "Mostrar menos",
+      "quick_view": "Vista rápida",
+      "ship_over": "Envío gratis en pedidos de barandales de vidrio de más de $3,000.",
+      "ship_left": "Le faltan {amount} para el envío gratis.",
+      "ship_ok": "Su pedido califica para envío gratis.",
+      "cart_error": "No se pudo actualizar el carrito",
+      "add_error": "No se pudo agregar al carrito",
+      "in_stock": "Disponible",
+      "sold_out": "Agotado",
+      "image_n": "Imagen {n}",
+      "link_copied": "Enlace copiado",
+      "reviews_n": "{n} reseñas",
+      "from_reviews": "de {n} reseñas",
+      "rated": "Calificación de {avg} de 5",
+      "stars": "{n} de 5 estrellas",
+      "verified": "Comprador verificado",
+      "rv_title": "Reseñas de clientes",
+      "rv_close": "Cerrar reseñas",
+      "rv_filters": "Filtros",
+      "rv_by_star": "Filtrar por estrellas",
+      "rv_product": "Producto",
+      "rv_sort": "Ordenar por",
+      "rv_recent": "Más recientes",
+      "rv_high": "Mejor calificación",
+      "rv_low": "Peor calificación",
+      "rv_view_product": "Ver producto",
+      "rv_all_products": "Todos los productos ({n})",
+      "rv_show_star": "Mostrar reseñas de {n} estrellas ({c})",
+      "rv_none": "Ninguna de las reseñas recientes tiene {n} estrellas.",
+      "rv_none_product": "Ninguna de las reseñas recientes de este producto tiene {n} estrellas.",
+      "rv_latest_of": "Las {a} reseñas más recientes de {b}",
+      "rv_latest_all": "Las reseñas más recientes de cada producto",
+      "rv_stars_only": "Solo {n} estrellas",
+      "rv_more": "Ver más reseñas",
+      "rv_end_product": "Todas las reseñas de este producto están en su página.",
+      "rv_end_all": "Elija un producto para ver sus reseñas y su calificación.",
+      "rv_loading": "Cargando reseñas…",
+      "rv_error": "No se pudieron cargar las reseñas. Inténtelo de nuevo.",
+      "np_chip": "<b>Envío gratis</b> en todos los productos",
+      "np_title": "¡Regístrese y obtenga envío gratis en todos los productos!",
+      "np_text": "¡Aproveche esta oportunidad para obtener envío gratis a todo el país! (Aplica una cantidad mínima de pedido)",
+      "np_first_name": "Nombre",
+      "np_email": "Correo electrónico",
+      "np_country": "País",
+      "np_phone": "Teléfono",
+      "np_error": "Ingrese su nombre y un correo electrónico válido.",
+      "np_submit": "Enviar",
+      "np_legal": "Al registrarse, acepta recibir mensajes de marketing en el teléfono o correo electrónico proporcionado. Pueden aplicarse tarifas de mensajes y datos. Consulte nuestra <a href=\"{privacy}\">política de privacidad</a> y nuestros <a href=\"{terms}\">términos del servicio</a> para más información.",
+      "np_note": "Tenga en cuenta que pueden aplicarse cargos de envío adicionales para entregas en zonas rurales.",
+      "np_thanks": "¡Gracias!",
+      "np_done": "Ya está registrado.",
+      "np_continue": "Seguir comprando",
+      "np_failed": "Algo salió mal. Inténtelo de nuevo.",
+      "np_close": "Cerrar",
+      "remove": "Eliminar",
+      "cart_empty": "Su carrito está vacío.",
+      "decrease": "Disminuir",
+      "increase": "Aumentar",
+      "prev_image": "Imagen anterior",
+      "next_image": "Imagen siguiente",
+      "brushed": "Acero inoxidable cepillado",
+      "matte": "Negro mate"
+    },
+    "policy": {
+      "eyebrow": "Políticas",
+      "toc": "En esta página",
+      "help_title": "¿Preguntas sobre esta política?",
+      "help_text": "Comuníquese con nuestro equipo de atención al cliente.",
+      "contact": "Contáctenos"
+    },
+    "account": {
+      "tab_overview": "Resumen",
+      "tab_orders": "Pedidos",
+      "tab_install": "Instalación",
+      "tab_profile": "Perfil y direcciones",
+      "sign_out": "Cerrar sesión",
+      "signed_in_as": "Sesión iniciada como {{ email }}",
+      "welcome": "Bienvenido de nuevo, {{ name }}",
+      "welcome_anon": "Bienvenido de nuevo",
+      "lead_preparing": "El pedido {{ order }} se está preparando. Le enviaremos el seguimiento por correo en cuanto salga y, mientras tanto, su lista de instalación está lista abajo.",
+      "lead_awaiting": "El pedido {{ order }} está pendiente de pago. En cuanto se pague, comenzaremos a prepararlo.",
+      "lead_partial": "Parte del pedido {{ order }} ya va en camino. El resto llegará pronto.",
+      "lead_shipped": "El pedido {{ order }} ya va en camino. ¡Es hora de prepararse para el día de la instalación!",
+      "lead_shipped_with": "El pedido {{ order }} va en camino con {{ carrier }}. ¡Es hora de prepararse para el día de la instalación!",
+      "lead_cancelled": "El pedido {{ order }} fue cancelado. ¿Necesita ayuda para planear su barandal? Estamos aquí para ayudarle.",
+      "lead_none": "Planee su barandal de vidrio con nuestra guía de instalación, el código de construcción de su zona y una lista paso a paso, todo en un solo lugar.",
+      "track_package": "Rastrear paquete",
+      "shop_railings": "Comprar barandales",
+      "quote": "Solicite una cotización gratis",
+      "st_shipped": "Enviado",
+      "st_partial": "Enviado en parte",
+      "st_preparing": "En preparación",
+      "st_awaiting": "Pendiente de pago",
+      "st_cancelled": "Cancelado",
+      "st_paid": "Pagado",
+      "st_refunded": "Reembolsado",
+      "st_part_refunded": "Reembolsado en parte",
+      "st_authorized": "Pago autorizado",
+      "tracker": "Seguimiento del pedido",
+      "order_n": "Pedido {{ order }}",
+      "step_ordered": "Pedido realizado",
+      "step_installed": "Instalado",
+      "packed": "Empacado",
+      "after_payment": "Después del pago",
+      "packing": "Empacando su pedido",
+      "email_tracking": "Le enviaremos el seguimiento",
+      "big_day": "Su gran día",
+      "qty": "Cant. {{ n }}",
+      "more": "+ {{ n }} más",
+      "view_order": "Ver pedido",
+      "mark_installed": "Marcar como instalado",
+      "congrats": "¡Felicidades por su nuevo barandal!",
+      "congrats_text": "Nos encantaría verlo. Envíenos una foto de su proyecto terminado y podría aparecer en nuestra",
+      "gallery": "galería",
+      "share_photos": "Comparta sus fotos",
+      "photo_subject": "Mi barandal de vidrio terminado",
+      "start": "Comience su proyecto",
+      "three_steps": "3 pasos",
+      "s1": "Mida su espacio",
+      "s1t": "Cómo distribuimos paneles y espacios",
+      "s2": "Revise su código de construcción",
+      "s2t": "Las reglas de su provincia o estado",
+      "s3t": "Calcularemos el vidrio y los herrajes",
+      "checklist_k": "Lista de instalación",
+      "progress": "Su progreso de instalación",
+      "open_checklist": "Abrir la lista",
+      "of_steps": "de {{ total }} pasos listos",
+      "of_done": "de {{ total }} listos",
+      "next_step": "Siguiente paso",
+      "all_done_next": "¡Todo listo! Disfrute su nuevo barandal.",
+      "all_steps_done": "Los {{ total }} pasos están listos. ¡Su barandal está terminado!",
+      "send_photo": "Envíenos una foto de su proyecto, nos encantaría verla.",
+      "saved_note": "Su progreso se guarda en este dispositivo. Encontrará todos los detalles, fotos y diagramas en la",
+      "guide": "guía de instalación",
+      "ideas": "Ideas y guías",
+      "all_articles": "Todos los artículos",
+      "no_rust": "Promesa Antióxido",
+      "no_rust_text": "Herrajes de acero inoxidable de grado marino 2205, garantizados contra el óxido.",
+      "years": "años",
+      "covered_until": "El pedido {{ order }} está cubierto hasta {{ date }}",
+      "every_order": "Cada pedido está cubierto por {{ years }} años.",
+      "claim": "¿Preguntas o un reclamo? Escriba a",
+      "warranty_details": "Detalles de la garantía",
+      "local_code": "El código de construcción de su zona",
+      "code_text": "Alturas, cargas y reglas de puertas para barandales de vidrio donde usted vive.",
+      "code_text2": "Alturas, cargas y reglas de puertas para barandales de vidrio.",
+      "read_guide_for": "Lea la guía de {{ region }}",
+      "read_guide": "Lea la guía",
+      "find_code": "Encuentre su código de construcción",
+      "find_code_text": "Agregue su dirección y le mostraremos la guía de su provincia o estado.",
+      "browse_codes": "Ver los códigos de construcción",
+      "need_hand": "¿Necesita ayuda?",
+      "need_hand_text": "Nuestro equipo ayuda a propietarios todos los días con medidas, instalaciones y pedidos.",
+      "installer": "Encuentre un instalador certificado",
+      "videos": "Videoguías",
+      "channel": "Nuestro canal de YouTube",
+      "other_videos": "Vea los demás videos de instalación",
+      "on_channel": "en nuestro canal de YouTube",
+      "on_youtube": "{{ shop }} en YouTube",
+      "latest_videos": "Videos recientes",
+      "latest_auto": "Se actualiza sola cuando publicamos un video nuevo",
+      "latest_title": "Videos recientes de nuestro canal de YouTube",
+      "play": "Reproducir video: {{ title }}",
+      "shop_title": "Ver {{ title }}",
+      "orders_empty": "Aún no hay pedidos",
+      "orders_empty_text": "Cuando haga un pedido, podrá seguirlo aquí paso a paso.",
+      "placed": "Realizado el {{ date }}",
+      "buy_again": "Comprar de nuevo",
+      "newer": "Pedidos más recientes",
+      "older": "Pedidos anteriores",
+      "tools": "Herramientas que necesitará",
+      "care": "Cuidado de su barandal",
+      "documents": "Documentos",
+      "doc_guide": "Guía de instalación",
+      "doc_eng": "Documentos de ingeniería",
+      "doc_code": "Código de construcción",
+      "doc_warranty": "Garantía / Promesa Antióxido",
+      "personal": "Datos personales",
+      "edit": "Editar",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "not_added": "No agregado",
+      "email_updates": "Novedades por correo",
+      "subscribed": "Suscrito",
+      "not_subscribed": "No suscrito",
+      "addresses": "Direcciones guardadas",
+      "add_edit": "Agregar o editar",
+      "default": "Predeterminada",
+      "no_addresses": "Aún no hay direcciones guardadas. Agregue una para pagar más rápido y ver el código de construcción de su zona.",
+      "signin_card": "Inicio de sesión"
+    },
+    "stl": {
+      "n_products": "{{ count }} productos"
+    },
+    "card": {
+      "widths": "{{ count }} anchos",
+      "made_to_order": "Hecho a pedido",
+      "pre_holed": "Pre-perforado",
+      "holed_hinges": "Perforado para bisagras",
+      "fascia_mount": "Montaje lateral"
+    },
+    "sd": {
+      "account": {
+        "eyebrow_html": "Mi proyecto de barandal de vidrio",
+        "recommend_heading_html": "Complete su barandal"
+      },
+      "coll_faq": {
+        "eyebrow_html": "Preguntas frecuentes",
+        "heading_html": "[title]: preguntas frecuentes"
+      },
+      "coll_grid": {
+        "panel_title_html": "Filtrar y ordenar",
+        "sort_label_html": "Ordenar por",
+        "sort_featured_label_html": "Destacados",
+        "sort_reviews_label_html": "Más reseñados",
+        "filter_title_html": "Filtrar por",
+        "clear_label_html": "Borrar todo",
+        "show_label_html": "Mostrar [count] productos",
+        "count_one_html": "[count] producto",
+        "count_other_html": "[count] productos",
+        "price_from_html": "Desde",
+        "price_to_html": "Hasta",
+        "pages_label_html": "Páginas",
+        "empty_title_html": "No se encontraron productos",
+        "empty_text_html": "Esta colección aún no tiene productos.",
+        "empty_filtered_html": "Ningún producto coincide con estos filtros.",
+        "empty_filtered_text_html": "Quite un filtro o solicítenos una cotización gratis."
+      },
+      "coll_reviews": {
+        "eyebrow_html": "Reseñas de clientes",
+        "heading_html": "Calificación de [rating] de 5",
+        "count_text_html": "de [count] reseñas de [title]",
+        "all_label_html": "Ver todo",
+        "verified_html": "Comprador verificado"
+      },
+      "footer": {
+        "follow_label_html": "Síganos",
+        "contact_title_html": "Contáctenos",
+        "contact_ca_html": "Envío rápido a todo Canadá y EE. UU.",
+        "contact_us_html": "Envío rápido a todo Canadá y EE. UU.",
+        "country_title_html": "País/región",
+        "language_title_html": "Idioma",
+        "dark_label_html": "Modo oscuro"
+      },
+      "header": {
+        "search_placeholder_html": "Buscar paneles, spigots, guías, ciudades...",
+        "support_label_html": "Llámenos o envíenos un mensaje",
+        "dark_label_html": "Modo oscuro",
+        "rail_title_html": "Comprar por categoría",
+        "shop_all_label_html": "Ver todos los productos",
+        "view_all_label_html": "Ver todo",
+        "products_word_html": "productos",
+        "shop_now_label_html": "Comprar ahora",
+        "feature_label_html": "Destacado",
+        "read_more_html": "Leer más"
+      },
+      "how": {
+        "step_word_html": "Paso"
+      },
+      "pg_404": {
+        "heading_html": "Página no encontrada",
+        "text_html": "La página que busca no existe.",
+        "button_label_html": "Seguir comprando"
+      },
+      "pg_account": {
+        "eyebrow_html": "Mi proyecto de barandal de vidrio",
+        "heading_html": "Su proyecto de barandal de vidrio, todo en un solo lugar",
+        "text_html": "Inicie sesión para seguir su pedido, consultar la lista de instalación paso a paso, encontrar el código de construcción de su zona y tener su garantía a la mano.",
+        "signin_label_html": "Iniciar sesión",
+        "steps_eyebrow_html": "Paso a paso",
+        "steps_heading_html": "Lista de instalación",
+        "tools_html": "Cinta métrica\nNivel (magnético)\nLápiz e hilo de tiza\nTaladro con brocas de 1/8\" y 5/16\"\nLlave Allen\nLlave",
+        "care_html": "Vidrio: un paño suave y un limpiador de vidrios no abrasivo. Evite las fibras abrasivas y las navajas.\nHerrajes: enjuáguelos con agua dulce algunas veces al año, más seguido cerca de albercas o agua salada.\nCada primavera: revise las abrazaderas y el pasamanos y vuelva a apretar lo que esté flojo.\nInvierno: use una pala de plástico cerca del vidrio y enjuague la sal descongelante.",
+        "refer_title_html": "¿Le encanta su barandal?",
+        "refer_text_html": "Recomiéndenos a amigos y vecinos con nuestro programa de afiliados y gane en cada pedido que hagan.",
+        "refer_button_html": "Unirse al programa",
+        "videos_heading_html": "Guías en video",
+        "recommend_heading_html": "Complete su barandal",
+        "steps1_html": "Marque la línea del vidrio | Trace una línea con tiza donde irá el vidrio.\nDistribuya los paneles y los espacios | Marque cada panel con un espacio de 1\" entre paneles (de 3/4\" a 2\" funciona).\nMarque la posición de los spigots | Aproximadamente al 25 % del largo del vidrio desde cada borde.\nPerfore los orificios de anclaje | Use el spigot como plantilla y manténgase sobre la línea de tiza.\nFije los spigots | Atorníllelos manteniendo cada uno sobre la línea.\nNivele los spigots | Revise que cada spigot esté derecho con un nivel magnético.\nColoque el vidrio | Un trabajo para dos personas: baje cada panel dentro de sus spigots.",
+        "steps2_html": "Iguale la altura de los paneles | Nivele cada panel con el más alto.\nCuadre los ángulos | Empiece por las esquinas y alinee cada panel.\nColoque las abrazaderas | Normalmente a unas 6\" por debajo del borde superior del vidrio.\nInstale el pasamanos | Limpie el borde, coloque el empaque y presione el pasamanos.\nInstale la puerta | Monte las bisagras y el pestillo.\nAgregue la cerradura de la puerta | Instálela por fuera con la separación recomendada."
+      },
+      "pg_app": {
+        "refer_title_html": "¿Le encanta su barandal?",
+        "refer_text_html": "Recomiéndenos a amigos y vecinos con nuestro programa de afiliados y gane en cada pedido que hagan.",
+        "refer_button_html": "Unirse al programa",
+        "help_title_html": "¿Preguntas sobre su proyecto?",
+        "help_text_html": "Llame o envíe un mensaje a un especialista en barandales, o envíe sus medidas para recibir una cotización detallada.",
+        "button_label_html": "Solicite una cotización gratis"
+      },
+      "pg_article": {
+        "toc_label_html": "En esta página",
+        "share_label_html": "Compartir",
+        "copy_label_html": "Copiar enlace",
+        "copied_label_html": "Enlace copiado",
+        "cta_title_html": "¿Está planeando un barandal de vidrio?",
+        "cta_text_html": "Envíenos sus medidas y le enviaremos una cotización detallada de los materiales que necesita su proyecto.",
+        "cta_button_html": "Solicite una cotización gratis",
+        "help_title_html": "¿Preguntas sobre su proyecto?",
+        "help_text_html": "Llame o envíe un mensaje a un especialista en barandales, o envíe sus medidas para recibir una cotización detallada.",
+        "help_button_html": "Solicite una cotización gratis",
+        "parts_heading_html": "Compre las piezas",
+        "parts_link_label_html": "Todos los productos",
+        "more_heading_html": "Siga leyendo",
+        "more_button_html": "Todas las publicaciones"
+      },
+      "pg_blog": {
+        "eyebrow_html": "Blog",
+        "heading_html": "Publicaciones del blog",
+        "button_label_html": "Ver todo"
+      },
+      "pg_bloglist": {
+        "lead_html": "Guías, listas de verificación del código de construcción e ideas de proyectos para barandales de vidrio, del equipo de The Glass Railing Store.",
+        "page_of_html": "Página [page] de [pages]."
+      },
+      "pg_cart": {
+        "heading_html": "Su carrito",
+        "col_product_html": "Producto",
+        "col_quantity_html": "Cantidad",
+        "col_total_html": "Total",
+        "continue_label_html": "Seguir comprando",
+        "empty_title_html": "Su carrito está vacío",
+        "empty_text_html": "Vea nuestros paneles de vidrio, spigots, conectores, herrajes para puertas y pasamanos.",
+        "cats_heading_html": "Comprar por categoría",
+        "count_one_html": "[count] producto",
+        "count_other_html": "[count] productos",
+        "help_title_html": "¿Preguntas sobre su proyecto?",
+        "help_text_html": "Llame o envíe un mensaje a un especialista en barandales, o envíe sus medidas para recibir una cotización detallada.",
+        "help_button_html": "Solicite una cotización gratis"
+      },
+      "pg_codes": {
+        "eyebrow_html": "Códigos de construcción",
+        "heading_us_html": "Códigos de construcción en otros estados",
+        "heading_ca_html": "Códigos de construcción en otras provincias"
+      },
+      "pg_collist": {
+        "heading_html": "Colecciones",
+        "count_one_html": "[count] producto",
+        "count_other_html": "[count] productos",
+        "count_zero_html": "Ver la colección"
+      },
+      "pg_dir": {
+        "eyebrow_html": "Directorio",
+        "heading_us_html": "Barandales de vidrio por estado",
+        "heading_ca_html": "Barandales de vidrio por provincia",
+        "code_label_html": "Código de construcción de [region]"
+      },
+      "pg_est": {
+        "feet_label_html": "Pies lineales",
+        "field1_html": "Tipo de vidrio",
+        "field2_html": "Estilo de vidrio",
+        "field3_html": "Tipo de instalación",
+        "result_heading_html": "Costo estimado del proyecto",
+        "based_text_html": "Con base en [feet] pies lineales"
+      },
+      "pg_faq": {
+        "heading_html": "Preguntas frecuentes",
+        "eyebrow_html": "Preguntas frecuentes",
+        "text_html": "¿No encuentra su respuesta? Envíenos su pregunta y un especialista en barandales de vidrio le responderá.",
+        "button_label_html": "Hacer una pregunta",
+        "button2_label_html": "Todas las preguntas"
+      },
+      "pg_faqhub": {
+        "intro_html": "Respuestas sobre nuestros paneles de vidrio y herrajes, la instalación, el envío, la garantía y las devoluciones. [count] preguntas.",
+        "search_label_html": "Buscar en las preguntas",
+        "search_placeholder_html": "Buscar en las preguntas…",
+        "topics_label_html": "Temas",
+        "no_results_html": "Ninguna pregunta coincide con su búsqueda.",
+        "no_results_link_html": "Envíenos su pregunta",
+        "help_title_html": "¿Preguntas sobre su proyecto?",
+        "help_text_html": "Llame o envíe un mensaje a un especialista en barandales, o envíe sus medidas para recibir una cotización detallada.",
+        "button_label_html": "Solicite una cotización gratis"
+      },
+      "pg_feat": {
+        "view_all_label_html": "Ver todo"
+      },
+      "pg_form": {
+        "contact_eyebrow_html": "Contáctenos",
+        "eyebrow_html": "Cotización gratis",
+        "heading_html": "Solicite una cotización gratis",
+        "text_html": "Envíenos una solicitud de plano con sus medidas, fotos o dibujos y le enviaremos una cotización detallada de los materiales necesarios para su proyecto.",
+        "point1_html": "Una lista detallada de los materiales que necesita su proyecto",
+        "point2_html": "Precios en [currency]",
+        "point3_html": "Asesoría experta, medidas y apoyo con la instalación",
+        "phone_label_html": "Llame o envíe un mensaje",
+        "email_label_html": "Correo electrónico",
+        "hours_label_html": "Horario",
+        "hours_html": "Lun–vie, 8 AM – 5 PM (hora del Este)",
+        "name_label_html": "Nombre",
+        "email_field_html": "Correo electrónico",
+        "phone_field_html": "Teléfono",
+        "optional_html": "(opcional)",
+        "zip_label_ca_html": "Código postal",
+        "zip_label_us_html": "Código ZIP",
+        "types_label_html": "Tipo de balcón",
+        "types_html": "Balcón residencial\nBalcón de condominio o departamento\nBalcón comercial\nOtro",
+        "systems_label_html": "Sistema preferido",
+        "systems_html": "Sin marco\nSemi-enmarcado\nAún no lo sé",
+        "details_label_html": "Detalles del proyecto",
+        "details_placeholder_html": "Largo de cada tramo, altura del barandal, esquinas, puertas, escaleras",
+        "button_label_html": "Enviar mi proyecto",
+        "note_html": "Gratis y sin compromiso.",
+        "error_text_html": "Agregue su nombre y un correo electrónico válido para que podamos enviarle la cotización.",
+        "ok_title_html": "Gracias, los detalles de su proyecto fueron enviados.",
+        "ok_text_html": "Le responderemos lo antes posible."
+      },
+      "pg_hero": {
+        "loc_label_html": "Ubicaciones"
+      },
+      "pg_main": {
+        "toc_label_html": "En esta página",
+        "help_title_html": "¿Preguntas sobre su proyecto?",
+        "help_text_html": "Llame o envíe un mensaje a un especialista en barandales, o envíe sus medidas para recibir una cotización detallada.",
+        "button_label_html": "Solicite una cotización gratis",
+        "codes_eyebrow_html": "Códigos de construcción",
+        "codes_heading_us_html": "Seleccione su estado",
+        "codes_heading_ca_html": "Seleccione su provincia o territorio"
+      },
+      "pg_map": {
+        "eyebrow_html": "Zona de servicio",
+        "text_html": "Sistemas de barandales de vidrio entregados hasta su puerta.",
+        "link_label_html": "Abrir en Google Maps"
+      },
+      "pg_near": {
+        "cta_eyebrow_html": "Cotización gratis",
+        "cta_heading_html": "Cotización gratis para su proyecto de barandal de vidrio en [place]",
+        "cta_text_html": "Envíenos una solicitud de plano y le enviaremos una cotización detallada de los materiales que necesita su proyecto.",
+        "cta_button_html": "Solicite una cotización gratis",
+        "cta_phone_label_html": "Llámenos o envíenos un mensaje",
+        "eyebrow_html": "Ubicaciones",
+        "h_city_html": "Más ciudades donde damos servicio en [region]",
+        "h_hub_us_html": "Otros estados donde damos servicio",
+        "h_hub_ca_html": "Otras provincias donde damos servicio",
+        "h_code_html": "Barandales de vidrio en [region]",
+        "cities_h_html": "Ciudades donde damos servicio en [region]",
+        "hub_link_text_html": "Barandales de vidrio en [region]",
+        "res_eyebrow_html": "Recursos",
+        "res_heading_html": "Recursos útiles"
+      },
+      "pg_search": {
+        "title_html": "Búsqueda",
+        "results_title_html": "Resultados de búsqueda",
+        "placeholder_html": "Buscar paneles, spigots, guías, ciudades",
+        "button_label_html": "Buscar",
+        "count_one_html": "[count] resultado para “[terms]”",
+        "count_other_html": "[count] resultados para “[terms]”",
+        "none_text_html": "No se encontraron resultados para “[terms]”. Revise la ortografía o use otra palabra o frase.",
+        "products_heading_html": "Productos",
+        "collections_heading_html": "Colecciones",
+        "pages_heading_html": "Páginas",
+        "articles_heading_html": "Artículos",
+        "res_eyebrow_html": "Recursos",
+        "res_heading_html": "Recursos útiles"
+      },
+      "pg_video": {
+        "label_html": "Ver en YouTube"
+      },
+      "product_related": {
+        "heading_html": "También le puede interesar",
+        "link_label_html": "Comprar la colección"
+      },
+      "product_reviews": {
+        "eyebrow_html": "Este producto",
+        "eyebrow_store_html": "Nuestros clientes",
+        "heading_html": "Reseñas de clientes",
+        "based_on_html": "Con base en",
+        "all_label_html": "Ver todo",
+        "verified_html": "Comprador verificado",
+        "apps_label_html": "Todas las reseñas de este producto, o escriba una"
+      },
+      "product": {
+        "in_stock_html": "Disponible",
+        "sold_out_html": "Agotado",
+        "qty_label_html": "Cantidad",
+        "add_label_html": "Agregar al carrito",
+        "error_text_html": "No se pudo agregar al carrito. Inténtelo de nuevo.",
+        "price_unit_html": "glass-railing-screws = / tornillo",
+        "more_label_html": "¿Necesita una medida que no aparece? Vidrio a la medida",
+        "share_label_html": "Compartir",
+        "copy_label_html": "Copiar enlace",
+        "copied_label_html": "Enlace copiado",
+        "facts_title_html": "De un vistazo",
+        "tab_overview_html": "Descripción general",
+        "tab_specs_html": "Especificaciones"
+      },
+      "quote_band": {
+        "phone_label_html": "Llámenos o envíenos un mensaje"
+      },
+      "svc": {
+        "label_html": "Soporte, cotización gratis y envío"
+      },
+      "videos": {
+        "watch_label_html": "Ver",
+        "link_label_html": "Ver en YouTube"
+      },
+      "s": {
+        "grs_ship_ca_html": "Los pedidos de barandales de vidrio se procesan en 2 a 3 días hábiles y se entregan en 5 a 10 días hábiles.",
+        "grs_ship_us_html": "Los pedidos en EE. UU. se procesan en 2 a 3 días hábiles y se entregan en 5 a 10 días hábiles.",
+        "grs_name_ca_html": "Canadá",
+        "grs_name_us_html": "Estados Unidos",
+        "grs_hub_link_text_html": "barandales de vidrio en [region]",
+        "grs_faq_city_h_html": "Barandales de vidrio en [city]: preguntas frecuentes",
+        "grs_faq_city_q1_html": "¿Envían barandales de vidrio a [city]?",
+        "grs_faq_city_a1_html": "<p>Sí. Enviamos sistemas de barandales de vidrio a [city] y a todo [country]. [shipping] El precio que aparece al finalizar la compra es el precio final, sin cargos ocultos, aranceles ni impuestos de importación, aunque el pedido cruce la frontera entre EE. UU. y Canadá.</p>",
+        "grs_faq_city_q2_html": "¿Qué código de construcción aplica a los barandales de vidrio en [city]?",
+        "grs_faq_city_a2_html": "<p>Los barandales de vidrio en [city] deben cumplir con el código de construcción vigente en [region], además de los requisitos locales de su ciudad o condado. Nuestra guía [code_link] explica las reglas para barandales y protecciones. Asegúrese de cumplir con el código de construcción local antes de hacer su pedido e instalar.</p>",
+        "grs_faq_city_a2_ca_html": "<p>Los barandales de vidrio en [city] deben cumplir con el código de construcción que [region] adopta del Código Nacional de Construcción de Canadá, además de los requisitos municipales. Nuestra guía [code_link] explica las reglas para barandales y protecciones. Asegúrese de cumplir con el código de construcción local antes de hacer su pedido e instalar.</p>",
+        "grs_faq_city_q3_html": "¿Qué alturas de barandal de vidrio hay disponibles en [city]?",
+        "grs_faq_city_a3_html": "<p>Nuestros paneles de vidrio templado de 12 mm vienen en cuatro alturas: 33.6\", 39.6\", 46\" y 57.7\", para una altura total del barandal de 36\", 42\", 48\" o 60\" una vez que el panel se coloca en el spigot. Los paneles de 33.6\", 39.6\" y 46\" vienen en 36 anchos desde 7.9\". Los paneles de 57.7\" vienen en anchos de 33.6\", 39.6\" y 46\".</p>",
+        "grs_faq_city_q4_html": "¿Puedo instalar el barandal de vidrio yo mismo?",
+        "grs_faq_city_a4_html": "<p>Sí. La instalación es sencilla y fácil para cualquier persona: los spigots se fijan a madera o concreto y los paneles de vidrio templado de 12 mm se colocan en ellos. Siga nuestra <a href=\"/es-us/pages/guia-de-instalacion-de-barandal-de-vidrio\">guía de instalación de barandales de vidrio</a> y el video de instalación antes de empezar.</p>",
+        "grs_faq_city_q5_html": "¿Cómo obtengo una cotización para un barandal de vidrio en [city]?",
+        "grs_faq_city_a5_html": "<p>Envíenos una solicitud de plano con sus medidas, fotos o dibujos y le enviaremos una cotización detallada de los materiales necesarios para su proyecto. También puede llamarnos o enviarnos un mensaje al <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_hub_h_html": "Barandales de vidrio en [region]: preguntas frecuentes",
+        "grs_faq_hub_q1_html": "¿Entregan barandales de vidrio en todo [region]?",
+        "grs_faq_hub_a1_html": "<p>Sí. Enviamos sistemas de barandales de vidrio a hogares y negocios en todo [region]. [shipping] Envío gratis en pedidos de barandales de vidrio de más de $3,000.</p>",
+        "grs_faq_hub_q2_html": "¿Dónde encuentro el código de construcción de [region] para barandales de vidrio?",
+        "grs_faq_hub_a2_html": "<p>Nuestra guía [code_link] explica los requisitos para barandales y protecciones en [region]. Asegúrese de cumplir con el código de construcción local antes de hacer su pedido e instalar.</p>",
+        "grs_faq_hub_q3_html": "¿Qué incluye un sistema de barandal de vidrio sin marco?",
+        "grs_faq_hub_a3_html": "<p>Un sistema sin marco usa paneles de vidrio templado de 12 mm sostenidos por spigots de acero inoxidable 2205 de grado marino, con conectores entre paneles, pasamanos opcional y herrajes para puertas. <a href=\"/es-us/collections/barandal-de-vidrio\">Ver todos los productos</a>.</p>",
+        "grs_faq_hub_q4_html": "¿El barandal de vidrio resiste vientos fuertes?",
+        "grs_faq_hub_a4_html": "<p>Sí. Nuestros barandales de vidrio están diseñados para resistir vientos muy fuertes y condiciones climáticas adversas, con un desempeño comprobado incluso en entornos extremos.</p>",
+        "grs_faq_hub_q5_html": "¿Cómo obtengo una cotización para mi proyecto en [region]?",
+        "grs_faq_hub_a5_html": "<p>Envíenos una solicitud de plano con sus medidas, fotos o dibujos y le enviaremos una cotización detallada de los materiales necesarios para su proyecto. También puede llamarnos o enviarnos un mensaje al <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_code_h_html": "Código de barandales de vidrio en [region]: preguntas frecuentes",
+        "grs_faq_code_q1_html": "¿Necesito un permiso para un barandal de vidrio en [region]?",
+        "grs_faq_code_a1_html": "<p>Los requisitos de permiso dependen de su municipio y del alcance del proyecto. Consulte con el departamento de construcción de su localidad antes de hacer su pedido. Asegúrese de cumplir con el código de construcción local antes de hacer su pedido e instalar.</p>",
+        "grs_faq_code_q2_html": "¿Tienen documentos de ingeniería para los inspectores?",
+        "grs_faq_code_a2_html": "<p>Sí. Nuestros <a href=\"/es-us/pages/pruebas-de-ingenieria-en-barandal-de-vidrio\">documentos de ingeniería</a> cubren spigots de montaje superior y lateral sobre concreto y madera, con dibujos, aplicaciones de carga y detalles de refuerzo.</p>",
+        "grs_faq_code_q3_html": "¿Qué alturas de barandal de vidrio venden?",
+        "grs_faq_code_a3_html": "<p>Nuestros paneles de vidrio templado de 12 mm vienen en cuatro alturas: 33.6\", 39.6\", 46\" y 57.7\", para una altura total del barandal de 36\", 42\", 48\" o 60\" una vez que el panel se coloca en el spigot.</p>",
+        "grs_faq_code_q4_html": "¿Envían barandales de vidrio a [region]?",
+        "grs_faq_code_a4_html": "<p>Sí. [shipping] Consulte nuestra página de [hub_link] para ver las ciudades donde damos servicio.</p>",
+        "grs_faq_us_h_html": "Preguntas frecuentes",
+        "grs_faq_us_q1_html": "¿Envían barandales de vidrio a cualquier parte de Estados Unidos?",
+        "grs_faq_us_a1_html": "<p>Sí. Enviamos sistemas de barandales de vidrio a todo [country]. [shipping] El precio que aparece al finalizar la compra es el precio final, sin cargos ocultos, aranceles ni impuestos de importación, aunque el pedido cruce la frontera entre EE. UU. y Canadá.</p>",
+        "grs_faq_us_q2_html": "¿Hay cargos ocultos, aranceles o impuestos de importación en los pedidos de EE. UU.?",
+        "grs_faq_us_a2_html": "<p>No. El precio que aparece al finalizar la compra es el precio final, sin cargos ocultos, aranceles ni impuestos de importación, aunque el pedido cruce la frontera entre EE. UU. y Canadá.</p>",
+        "grs_faq_us_q3_html": "¿Qué hago si mi vidrio llega dañado?",
+        "grs_faq_us_a3_html": "<p>Si un producto llega dañado, debe reportarse dentro de los 3 días posteriores a la entrega y antes de la instalación. Una vez confirmado el daño, The Glass Railing Store reemplazará o reembolsará el artículo dañado sin costo adicional.</p>",
+        "grs_faq_us_q4_html": "¿Cómo obtengo una cotización?",
+        "grs_faq_us_a4_html": "<p>Envíenos una solicitud de plano con sus medidas, fotos o dibujos y le enviaremos una cotización detallada de los materiales necesarios para su proyecto. También puede llamarnos o enviarnos un mensaje al <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_ca_h_html": "Preguntas frecuentes",
+        "grs_faq_ca_q1_html": "¿Envían barandales de vidrio a todo Canadá?",
+        "grs_faq_ca_a1_html": "<p>Sí. [shipping] Envío gratis en pedidos de barandales de vidrio de más de $3,000.</p>",
+        "grs_faq_ca_q2_html": "¿Ofrecen instalación?",
+        "grs_faq_ca_a2_html": "<p>Actualmente ofrecemos servicios de instalación solo en Ontario. En cualquier otro lugar, nuestros sistemas están diseñados para que usted mismo los instale con nuestra <a href=\"/es-us/pages/guia-de-instalacion-de-barandal-de-vidrio\">guía de instalación</a> y nuestros videos.</p>",
+        "grs_faq_ca_q3_html": "¿Qué hago si mi vidrio llega dañado?",
+        "grs_faq_ca_a3_html": "<p>Si un producto llega dañado, debe reportarse dentro de los 3 días posteriores a la entrega y antes de la instalación. Una vez confirmado el daño, The Glass Railing Store reemplazará o reembolsará el artículo dañado sin costo adicional.</p>",
+        "grs_faq_ca_q4_html": "¿Cómo obtengo una cotización?",
+        "grs_faq_ca_a4_html": "<p>Envíenos una solicitud de plano con sus medidas, fotos o dibujos y le enviaremos una cotización detallada de los materiales necesarios para su proyecto. También puede llamarnos o enviarnos un mensaje al <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_res1_title_html": "Preguntas frecuentes",
+        "grs_res1_text_html": "Respuestas sobre productos, instalación, entrega, garantía y pago.",
+        "grs_res2_title_html": "Guía de instalación de barandales de vidrio",
+        "grs_res2_text_html": "Instrucciones paso a paso, consejos de expertos y buenas prácticas.",
+        "grs_res3_title_html": "Códigos de construcción para barandales de vidrio",
+        "grs_res3_text_html": "Los principales códigos de construcción y consejos de cumplimiento.",
+        "grs_res4_title_html": "Información de envío",
+        "grs_res4_text_html": "Nuestro proceso de envío, hasta su puerta.",
+        "grs_res5_title_html": "Garantía / Promesa Antióxido",
+        "grs_res5_text_html": "Una promesa antióxido de 10 años en nuestros herrajes.",
+        "grs_res6_title_html": "Documentos de ingeniería",
+        "grs_res6_text_html": "Especificaciones, desempeño de carga y guías de instalación.",
+        "grs_res7_title_html": "Ver todos los productos",
+        "grs_res7_text_html": "Paneles de vidrio, spigots, conectores, herrajes para puertas y pasamanos."
+      }
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "payment_errors": {
+        "amount_too_small": "El monto mínimo de pago debe ser superior a USD 0.50. Inténtalo de nuevo con un monto superior."
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-collist",
+      "blocks": {
+        "photo1": {
+          "type": "photo",
+          "settings": {
+            "collection": "exterior-glass-railings",
+            "image": "shopify://shop_images/glass-pool-fence-black-spigots-aerial.webp"
+          }
+        },
+        "photo2": {
+          "type": "photo",
+          "settings": {
+            "collection": "frameless-glass-railing",
+            "image": "shopify://shop_images/frameless-glass-railing-curved-balcony.webp"
+          }
+        },
+        "photo3": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-deck-railing",
+            "image": "shopify://shop_images/glass-deck-railing-ocean-view.webp"
+          }
+        },
+        "photo4": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-panel-railing",
+            "image": "shopify://shop_images/glass-pool-fence-brushed-stainless-spigots.webp"
+          }
+        },
+        "photo5": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing",
+            "image": "shopify://shop_images/installing-glass-railing-spigot-deck.webp"
+          }
+        },
+        "photo6": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-caprail",
+            "image": "shopify://shop_images/frameless-glass-railing-garden-wall.webp"
+          }
+        },
+        "photo7": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-gate-hardware",
+            "image": "shopify://shop_images/glass-pool-gate-hinge-brushed-stainless.webp"
+          }
+        },
+        "photo8": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-hardware",
+            "image": "shopify://shop_images/matte-black-180-glass-connector-pool-fence.webp"
+          }
+        },
+        "photo9": {
+          "type": "photo",
+          "settings": {
+            "collection": "glass-railing-kits",
+            "image": "shopify://shop_images/glass-railing-spigot-installation-kit.webp"
+          }
+        },
+        "photo10": {
+          "type": "photo",
+          "settings": {
+            "collection": "interior-glass-railing-systems",
+            "image": "shopify://shop_images/glass-stair-railing-deck-black-spigots.webp"
+          }
+        }
+      },
+      "block_order": [
+        "photo1",
+        "photo2",
+        "photo3",
+        "photo4",
+        "photo5",
+        "photo6",
+        "photo7",
+        "photo8",
+        "photo9",
+        "photo10"
+      ],
+      "settings": {
+        "wide": "glass-railing",
+        "hide": "orderly-emails-recommended-products,for-shopify-performance-tracking"
+      }
+    },
+    "qband": {
+      "type": "grs-quote-band",
+      "settings": {
+        "eyebrow": "Free quote",
+        "heading": "Free quote for your glass railing project",
+        "text": "Submit a plan request and we will send you a detailed quote on the materials your project needs.",
+        "button_label": "Get a free quote",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "qband"
+  ]
+}

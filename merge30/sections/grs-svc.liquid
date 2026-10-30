@@ -1,0 +1,32 @@
+{%- comment -%}
+  Service band (prototype .svc-sec): three cards over a photo (support, free quote, shipping). [currency] in a text shows
+  the visitor's currency; "Text in the U.S." replaces the text in the U.S. market.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.svc), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_label = 'grs.sd.svc.label_html' | t
+  assign sd_label = section.settings.label | default: sd_label
+-%}
+{%- liquid
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+  assign cur = '<span class="cur">' | append: cart.currency.iso_code | append: '</span>'
+-%}
+{%- if section.blocks.size > 0 -%}
+<section class="sec svc-sec" aria-label="{{ sd_label | escape }}"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="svc">{%- if section.settings.image -%}<img class="ph svc-bg" src="{{ section.settings.image | image_url: width: 1600 }}" srcset="{{ section.settings.image | image_url: width: 800 }} 800w, {{ section.settings.image | image_url: width: 1200 }} 1200w, {{ section.settings.image | image_url: width: 1600 }} 1600w, {{ section.settings.image | image_url: width: 2200 }} 2200w" sizes="100vw" alt="" loading="lazy" decoding="async">{%- endif -%}<ul class="svc-in" role="list">
+{%- for block in section.blocks -%}{%- liquid
+    assign tx = block.settings.text
+    if grs_us and block.settings.text_us != blank
+      assign tx = block.settings.text_us
+    endif
+  -%}<li class="svc-c" {{ block.shopify_attributes }}><span class="svc-ic">{%- case block.settings.icon -%}{%- when 'support' -%}<svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>{%- when 'quote' -%}<svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path><path d="M13 6h8"></path><path d="M13 12h8"></path><path d="M13 18h8"></path></svg>{%- when 'shipping' -%}<svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>{%- endcase -%}</span><h3>{{ block.settings.title }}</h3>{%- if tx != blank -%}<p>{{ tx | replace: '[currency]', cur }}</p>{%- endif -%}{%- if block.settings.link_label != blank -%}<a class="va-btn svc-a" href="{% render 'grs-url', url: block.settings.link %}"><span>{{ block.settings.link_label }}</span><i aria-hidden="true"><svg width="14" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13.5M9.5 1l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></i></a>{%- endif -%}</li>
+{%- endfor -%}
+</ul></div></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS service band","tag":"div","settings":[{"type":"text","id":"label","label":"Name for screen readers","placeholder":"Support, free quote and shipping","info":"Empty: the standard text, in the visitor's language."},{"type":"image_picker","id":"image","label":"Photo"},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Card title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Card title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"card","name":"Card","settings":[{"type":"select","id":"icon","label":"Icon","default":"support","options":[{"value":"support","label":"Headset (support)"},{"value":"quote","label":"List (quote)"},{"value":"shipping","label":"Truck (shipping)"},{"value":"none","label":"None"}]},{"type":"text","id":"title","label":"Title"},{"type":"textarea","id":"text","label":"Text","info":"[currency] shows the visitor's currency (CAD or USD)."},{"type":"textarea","id":"text_us","label":"Text in the U.S. (optional)"},{"type":"text","id":"link_label","label":"Link label"},{"type":"url","id":"link","label":"Link"}]}],"max_blocks":3,"presets":[{"name":"GRS service band"}]}
+{% endschema %}

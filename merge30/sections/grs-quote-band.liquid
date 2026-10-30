@@ -1,0 +1,29 @@
+{%- comment -%}
+  Free quote band (prototype .qband-sec). [currency] in the text shows the visitor's currency (CAD or USD).
+  Phone number: Theme settings > GRS store info and menus.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.quote_band), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_phone_label = 'grs.sd.quote_band.phone_label_html' | t
+  assign sd_phone_label = section.settings.phone_label | default: sd_phone_label
+-%}
+{%- liquid
+  comment
+    Labels left at their English default show the visitor's language (locale files).
+  endcomment
+  assign t_phone_label = sd_phone_label
+  if t_phone_label == 'Call or text us'
+    assign t_phone_label = 'grs.drawer.call' | t
+  endif
+-%}
+{%- liquid
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+  assign cur = '<span class="cur">' | append: cart.currency.iso_code | append: '</span>'
+-%}
+<section class="sec qband-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="qband"><div class="qband-t">{%- if section.settings.eyebrow != blank -%}<span class="dot-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}<h2 class="mh2">{{ section.settings.heading }}</h2>{%- if section.settings.text != blank -%}<p>{{ section.settings.text | replace: '[currency]', cur }}</p>{%- endif -%}</div><div class="qband-b">{%- if section.settings.button_label != blank -%}<a class="btn " href="{% render 'grs-url', url: section.settings.button_link %}"><span class="dot"></span>{{ section.settings.button_label }}</a>{%- endif -%}{%- if sd_phone_label != blank -%}<a class="qband-ph" href="tel:{{ grs_phone_tel }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span><em>{{ t_phone_label }}</em><b>{{ grs_phone }}</b></span></a>{%- endif -%}</div></div></div></section>
+
+{% schema %}
+{"name":"GRS quote band","tag":"div","settings":[{"type":"text","id":"eyebrow","label":"Small title"},{"type":"text","id":"heading","label":"Heading"},{"type":"textarea","id":"text","label":"Text","info":"[currency] shows the visitor's currency (CAD or USD)."},{"type":"text","id":"button_label","label":"Button label"},{"type":"url","id":"button_link","label":"Button link"},{"type":"text","id":"phone_label","label":"Text above the phone number","placeholder":"Call or text us","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS quote band"}]}
+{% endschema %}

@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "main": {
+      "type": "grs-pg-cart",
+      "settings": {},
+      "blocks": {
+        "cat1": {
+          "type": "category",
+          "settings": {
+            "collection": "glass-panel-railing",
+            "image": "shopify://shop_images/glass-pool-fence-brushed-stainless-spigots.webp"
+          }
+        },
+        "cat2": {
+          "type": "category",
+          "settings": {
+            "collection": "glass-railing-hardware",
+            "image": "shopify://shop_images/matte-black-180-glass-connector-pool-fence.webp"
+          }
+        },
+        "cat3": {
+          "type": "category",
+          "settings": {
+            "collection": "glass-railing-gate-hardware",
+            "image": "shopify://shop_images/glass-pool-gate-hinge-brushed-stainless.webp"
+          }
+        },
+        "cat4": {
+          "type": "category",
+          "settings": {
+            "collection": "glass-railing-caprail",
+            "image": "shopify://shop_images/frameless-glass-railing-garden-wall.webp"
+          }
+        }
+      },
+      "block_order": [
+        "cat1",
+        "cat2",
+        "cat3",
+        "cat4"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

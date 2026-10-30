@@ -1,0 +1,116 @@
+{%- comment -%}
+  Reviews of the collection's products (prototype .crv-sec): the average and number of Judge.me reviews of the products
+  in this collection, and recent 4 and 5 star reviews taken in turn from each product (product metafield
+  judgeme.widget, the reviews Judge.me publishes). "See all" opens the store's reviews panel (assets/grs.js).
+  Hidden when no product of the collection has reviews.
+  Speed: the cards are taken in turn, one per product first, so only the first "Number of reviews" products with a
+  usable review can ever show; the review HTML of later products is not loaded or read (their counts and ratings
+  still go into the average).
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.coll_reviews), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.coll_reviews.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading = 'grs.sd.coll_reviews.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_count_text = 'grs.sd.coll_reviews.count_text_html' | t
+  assign sd_count_text = section.settings.count_text | default: sd_count_text
+  assign sd_all_label = 'grs.sd.coll_reviews.all_label_html' | t
+  assign sd_all_label = section.settings.all_label | default: sd_all_label
+  assign sd_verified = 'grs.sd.coll_reviews.verified_html' | t
+  assign sd_verified = section.settings.verified | default: sd_verified
+-%}
+{%- liquid
+  assign c = collection
+  assign t_n = shop.metafields.judgeme.all_reviews_count.value | default: shop.metafields.judgeme.all_reviews_count | default: 0
+  assign n = 0
+  assign sum = 0
+  assign pool = ''
+  assign minlen = section.settings.min_length | default: 30
+  assign mx_pool = section.settings.max_reviews | default: 10
+  assign n_pool = 0
+  for p in c.products limit: 50
+    assign rc = p.metafields.reviews.rating_count.value | plus: 0
+    if rc < 1
+      continue
+    endif
+    assign avg = p.metafields.reviews.rating.value.rating | plus: 0
+    assign n = n | plus: rc
+    assign sum = avg | times: rc | plus: sum
+    if n_pool >= mx_pool
+      continue
+    endif
+    assign w = p.metafields.judgeme.widget.value
+    if w == blank
+      assign w = p.metafields.judgeme.widget | append: ''
+    endif
+    assign revs = w | split: "<div class='jdgm-rev jdgm-divider-top'"
+    assign im_obj = p.featured_image
+    assign studio = ''
+    for v in p.variants
+      if v.featured_image and v.options contains 'Brushed Stainless' or v.options contains 'Inox brossé' or v.options contains 'Acero inoxidable cepillado'
+        assign im_obj = v.featured_image
+        assign studio = 'studio'
+        break
+      endif
+    endfor
+    assign im = ''
+    if im_obj
+      assign im = im_obj | image_url: width: 120
+    endif
+    assign chunk = p.url | append: '␟' | append: p.title | append: '␟' | append: im | append: '␟' | append: studio
+    assign k = 0
+    for rv in revs offset: 1
+      assign a = rv | split: "jdgm-rev__rating' data-score='"
+      assign st = a[1] | split: "'" | first | plus: 0
+      assign a = rv | split: "jdgm-rev__timestamp"
+      assign a = a[1] | split: "data-content='"
+      assign dt = a[1] | split: "'" | first | append: '' | slice: 0, 10
+      assign a = rv | split: "<span class='jdgm-rev__author'>"
+      assign au = a[1] | split: '</span>' | first | strip
+      assign a = rv | split: "<div class='jdgm-rev__body'>"
+      assign bd = a[1] | split: '</div>' | first | replace: '</p>', ' ' | strip_html | strip_newlines | strip
+      assign vb = 0
+      if rv contains "data-verified-buyer='true'"
+        assign vb = 1
+      endif
+      if st >= 4 and bd.size >= minlen and dt.size == 10
+        assign chunk = chunk | append: '␞' | append: st | append: '␟' | append: dt | append: '␟' | append: au | append: '␟' | append: bd | append: '␟' | append: vb
+        assign k = k | plus: 1
+      endif
+    endfor
+    if k > 0
+      assign pool = pool | append: chunk | append: '␝'
+      assign n_pool = n_pool | plus: 1
+    endif
+  endfor
+-%}
+{%- if n > 0 -%}{%- liquid
+  assign avg_all = sum | times: 1.0 | divided_by: n | round: 2
+  assign pct = avg_all | times: 20
+  assign prods = pool | split: '␝'
+  assign mx = section.settings.max_reviews | default: 10
+  assign shown = 0
+-%}
+{%- capture n_fmt -%}{% render 'grs-num', n: n %}{%- endcapture -%}
+<section class="sec crv-sec" id="crv" aria-labelledby="crv-h"{% render 'grs-vars', s: section.settings %}><div class="wrap crv2" id="crvin"><div class="crv2-head"><div>{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}<h2 class="mh2" id="crv-h">{{ sd_heading | replace: '[rating]', avg_all }}</h2><p class="crv-cnt"><span class="rate" role="img" aria-label="{{ 'grs.a11y.rated' | t: avg: avg_all }}"><span class="rate-s" aria-hidden="true"><span class="rate-bg">{% render 'grs-stars' %}</span><span class="rate-fg" style="width:{{ pct }}%">{% render 'grs-stars' %}</span></span></span>{{ sd_count_text | replace: '[count]', n_fmt | replace: '[title]', c.title }}</p></div><div class="crv2-act">{%- if sd_all_label != blank -%}<button type="button" class="btn btn-o rv-all" data-rvall=""><span class="dot"></span>{{ sd_all_label }} {% render 'grs-num', n: t_n %} {{ 'grs.reviews.word' | t }}</button>{%- endif -%}<div class="crv2-nav"><button type="button" class="crv2-b" data-cr="-1" aria-label="{{ 'grs.a11y.prev_reviews' | t }}" disabled><svg width="15" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H1.5M6.5 1l-5 5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button type="button" class="crv2-b" data-cr="1" aria-label="{{ 'grs.a11y.next_reviews' | t }}"><svg width="15" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13.5M9.5 1l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div></div>
+<ul class="crv2-track" role="list">
+{%- for k in (1..5) -%}{%- for chunk in prods -%}{%- liquid
+    assign rs = chunk | split: '␞'
+    assign use = true
+    if rs.size <= k or shown >= mx
+      assign use = false
+    endif
+  -%}{%- if use -%}{%- liquid
+    assign pi = rs[0] | split: '␟'
+    assign r = rs[k] | split: '␟'
+    assign rst = r[0] | plus: 0
+    assign shown = shown | plus: 1
+  -%}<li class="crv2-c"><div class="crv2-top"><span class="crv-st" role="img" aria-label="{{ 'grs.a11y.stars' | t: n: rst }}">{%- for i in (1..rst) -%}<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>{%- endfor -%}</span><time datetime="{{ r[1] }}">{{ r[1] | date: format: 'date' }}</time></div><p class="crv2-t">{{ r[3] | escape }}</p><div class="crv2-who"><a class="crv-pth" href="{{ pi[0] }}" tabindex="-1" aria-hidden="true">{%- if pi[2] != blank -%}<img class="ph {{ pi[3] }}" src="{{ pi[2] }}" alt="" width="60" height="60" loading="lazy" decoding="async">{%- endif -%}</a><span><b>{{ r[2] | escape }}{%- if r[4] == '1' %} <em class="crv2-v" title="{{ sd_verified | escape }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></em>{%- endif -%}</b><a href="{{ pi[0] }}">{{ pi[1] | escape }}</a></span></div></li>{%- endif -%}{%- endfor -%}{%- endfor -%}
+</ul></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS collection reviews","tag":"div","settings":[{"type":"paragraph","content":"Average, count and reviews come from Judge.me, for the products of the collection. Hidden when none of them has reviews."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Customer reviews","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading","label":"Heading","info":"[rating] is the average.","placeholder":"Rated [rating] out of 5"},{"type":"text","id":"count_text","label":"Text under the heading","info":"[count] is the number of reviews, [title] the collection.","placeholder":"from [count] reviews of [title]"},{"type":"text","id":"all_label","label":"Button text before the store count","placeholder":"See all","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"verified","label":"Verified label","placeholder":"Verified buyer","info":"Empty: the standard text, in the visitor's language."},{"type":"range","id":"max_reviews","label":"Number of reviews","min":4,"max":20,"step":1,"default":10},{"type":"range","id":"min_length","label":"Shortest review shown (characters)","min":0,"max":100,"step":5,"default":30},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Review text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Review text size (phone)"}]}
+{% endschema %}

@@ -1,0 +1,45 @@
+{%- comment -%}
+  All collections (prototype /collections view): breadcrumb, title (H1) and a card per collection published to the
+  Online Store, A to Z (except the hidden ones): photo, title, the start of its description and its number of products.
+  One collection can take the full width. Photos: a "Photo for a collection" block, else the collection's own image.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_collist), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_heading = 'grs.sd.pg_collist.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_count_one = 'grs.sd.pg_collist.count_one_html' | t
+  assign sd_count_one = section.settings.count_one | default: sd_count_one
+  assign sd_count_other = 'grs.sd.pg_collist.count_other_html' | t
+  assign sd_count_other = section.settings.count_other | default: sd_count_other
+  assign sd_count_zero = 'grs.sd.pg_collist.count_zero_html' | t
+  assign sd_count_zero = section.settings.count_zero | default: sd_count_zero
+-%}
+{%- assign list = collections | sort: 'title' -%}{%- assign hide = section.settings.hide | remove: ' ' | split: ',' -%}
+<section class="pg-top"{% render 'grs-vars', s: section.settings %}><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: sd_heading %}{%- endif -%}<h1 class="pg-title">{{ sd_heading | escape }}</h1></div></section>
+<section class="sec cl-sec"><div class="wrap"><ul class="cl-grid" role="list">
+{%- for c in list -%}{%- unless hide contains c.handle -%}{%- liquid
+  assign wide = false
+  if c.handle == section.settings.wide
+    assign wide = true
+  endif
+  assign im = c.image
+  for block in section.blocks
+    if block.settings.collection.handle == c.handle and block.settings.image != blank
+      assign im = block.settings.image
+    endif
+  endfor
+  assign desc = c.description | strip_html | strip_newlines | truncatewords: 12, '...'
+  if c.products_count == 0
+    assign cnt = sd_count_zero
+  elsif c.products_count == 1
+    assign cnt = sd_count_one | replace: '[count]', c.products_count
+  else
+    assign cnt = sd_count_other | replace: '[count]', c.products_count
+  endif
+-%}<li{% if wide %} class="cl-wide"{% endif %}><a class="cl-card" href="{{ c.url }}"><span class="cl-im">{% render 'grs-img', image: im, class: 'ph', sizes: '(min-width: 990px) 33vw, 50vw', widths: '400,600,900,1200', alt: '' %}</span><span class="cl-t"><b>{{ c.title | escape }}</b>{%- if desc != blank and wide == false -%}<em>{{ desc | escape }}</em>{%- endif -%}<i>{{ cnt | escape }} <svg width="13" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5h12M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></i></span></a></li>{%- endunless -%}{%- endfor -%}
+</ul></div></section>
+
+{% schema %}
+{"name":"GRS all collections","tag":"div","settings":[{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"text","id":"heading","label":"Title","placeholder":"Collections","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"wide","label":"Full-width collection (handle)","default":"glass-railing"},{"type":"text","id":"hide","label":"Hidden collections (handles)","default":"orderly-emails-recommended-products,for-shopify-performance-tracking","info":"Separated by commas."},{"type":"text","id":"count_one","label":"One product","placeholder":"[count] product","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"count_other","label":"Several products","placeholder":"[count] products","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"count_zero","label":"No product yet","placeholder":"View collection","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"Card title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"Card title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"photo","name":"Photo for a collection","settings":[{"type":"collection","id":"collection","label":"Collection"},{"type":"image_picker","id":"image","label":"Photo"}]}],"max_blocks":30,"presets":[{"name":"GRS all collections"}]}
+{% endschema %}

@@ -1,0 +1,1337 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Accéder à la boutique à l'aide d'un mot de passe :",
+      "login_password_button": "Saisir avec un mot de passe",
+      "login_form_password_label": "Mot de passe",
+      "login_form_password_placeholder": "Votre mot de passe",
+      "login_form_error": "Mot de passe incorrect !",
+      "login_form_submit": "Saisir",
+      "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
+      "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Partager sur Facebook",
+        "share_on_twitter": "Partager sur X",
+        "share_on_pinterest": "Épingler sur Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continuer les achats",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Page suivante",
+      "previous": "Page précédente"
+    },
+    "search": {
+      "search": "Recherche",
+      "reset": "Effacer le terme de recherche"
+    },
+    "cart": {
+      "view": "Voir le panier ({{ count }})",
+      "item_added": "Article ajouté au panier",
+      "view_empty_cart": "Voir le panier"
+    },
+    "share": {
+      "copy_to_clipboard": "Copier le lien",
+      "share_url": "Lien",
+      "success_message": "Lien copié dans le presse-papiers",
+      "close": "Fermer le partage"
+    },
+    "slider": {
+      "of": "de",
+      "next_slide": "Faire glisser vers la droite",
+      "previous_slide": "Faire glisser vers la gauche",
+      "name": "Carrousel"
+    }
+  },
+  "newsletter": {
+    "label": "E-mail",
+    "success": "Merci de votre inscription",
+    "button_label": "S'inscrire"
+  },
+  "accessibility": {
+    "skip_to_text": "Ignorer et passer au contenu",
+    "close": "Fermer",
+    "unit_price_separator": "par",
+    "vendor": "Fournisseur :",
+    "error": "Erreur",
+    "refresh_page": "Le choix d'une sélection entraîne l'actualisation de la page entière.",
+    "link_messages": {
+      "new_window": "S'ouvre dans une nouvelle fenêtre.",
+      "external": "Ouvre un site web externe."
+    },
+    "loading": "Chargement en cours...",
+    "skip_to_product_info": "Passer aux informations produits",
+    "total_reviews": "total des critiques",
+    "star_reviews_info": "{{ rating_value }} sur {{ rating_max }} étoiles",
+    "collapsible_content_title": "Contenu réductible",
+    "complementary_products": "Produits complémentaires"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Lire la suite : {{ title }}",
+      "comments": {
+        "one": "{{ count }} commentaire",
+        "other": "{{ count }} commentaires",
+        "many": "{{ count }} commentaires"
+      },
+      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être publiés.",
+      "comment_form_title": "Laisser un commentaire",
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Commentaire",
+      "post": "Publier le commentaire",
+      "back_to_blog": "Retour au blog",
+      "share": "Partager cet article",
+      "success": "Votre commentaire a bien été publié ! Merci !",
+      "success_moderated": "Votre commentaire a bien été publié. Nous le publierons sous peu, conformément au processus de modération de notre blog."
+    }
+  },
+  "onboarding": {
+    "product_title": "Titre du produit",
+    "collection_title": "Le nom de votre collection"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Ajouter au panier",
+      "description": "Description",
+      "on_sale": "En vente",
+      "product_variants": "Variantes de produits",
+      "quantity": {
+        "label": "Quantité",
+        "input_label": "Quantité pour {{ product }}",
+        "increase": "Augmenter la quantité de {{ product }}",
+        "decrease": "Réduire la quantité de {{ product }}",
+        "minimum_of": "Minimum de {{ quantity }}",
+        "maximum_of": "Maximum de {{ quantity }}",
+        "multiples_of": "Incréments de {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> dans le panier",
+        "note": "Voir les règles de quantité",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}"
+      },
+      "price": {
+        "from_price_html": "Du {{ price }}",
+        "regular_price": "Prix habituel",
+        "sale_price": "Prix promotionnel",
+        "unit_price": "Prix unitaire"
+      },
+      "share": "Partager ce produit",
+      "sold_out": "Épuisé",
+      "unavailable": "Non disponible(s)",
+      "vendor": "Fournisseur",
+      "video_exit_message": "{{ title }} ouvre la vidéo en plein écran dans la même fenêtre.",
+      "xr_button": "Afficher dans son espace",
+      "xr_button_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "pickup_availability": {
+        "view_store_info": "Afficher les informations de la boutique",
+        "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
+        "pick_up_available": "Service de retrait disponible",
+        "pick_up_available_at_html": "Service de retrait disponible à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Service de retrait non disponible actuellement à <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Impossible de charger la disponibilité du service de retrait",
+        "refresh": "Actualiser"
+      },
+      "media": {
+        "open_media": "Ouvrir le média {{ index }} dans une fenêtre modale",
+        "play_model": "Lire la visionneuse 3D",
+        "play_video": "Lire la vidéo",
+        "gallery_viewer": "Visionneuse de la galerie",
+        "load_image": "Charger l'image {{ index }} dans la galerie",
+        "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
+        "load_video": "Lire la vidéo {{ index }} dans la galerie",
+        "image_available": "L'image {{ index }} est maintenant disponible dans la galerie"
+      },
+      "view_full_details": "Afficher tous les détails",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition</a> calculés à l'étape de paiement.",
+      "choose_options": "Choisir des options",
+      "choose_product_options": "Choisir des options pour {{ product_name }}",
+      "value_unavailable": "{{ option_value }} – indisponible",
+      "variant_sold_out_or_unavailable": "Variante épuisée ou indisponible",
+      "inventory_in_stock": "En stock",
+      "inventory_in_stock_show_count": "{{ quantity }} en stock",
+      "inventory_low_stock": "Stock bas",
+      "inventory_low_stock_show_count": "Stock bas : {{ quantity }} restant(s)",
+      "sku": "SKU",
+      "inventory_out_of_stock": "En rupture de stock",
+      "inventory_out_of_stock_continue_selling": "En stock",
+      "volume_pricing": {
+        "title": "Tarification basée sur le volume",
+        "note": "La tarification basée sur le volume est disponible",
+        "minimum": "{{ quantity }} ou plus",
+        "price_at_each": "à {{ price }}/pièce",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "taxes_included": "Taxes incluses.",
+      "duties_included": "Frais de douane inclus.",
+      "duties_and_taxes_included": "Frais de douane et taxes inclus."
+    },
+    "modal": {
+      "label": "Galerie de supports multimédias"
+    },
+    "facets": {
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "clear_all": "Tout supprimer",
+      "from": "De",
+      "filter_and_sort": "Filtrer et trier",
+      "filter_by_label": "Filtre :",
+      "filter_button": "Filtrer",
+      "filters_selected": {
+        "one": "{{ count }} sélectionné",
+        "other": "{{ count }} sélectionnés",
+        "many": "{{ count }} sélectionnés"
+      },
+      "max_price": "Le prix le plus élevé est de {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} produit sur {{ count }}",
+        "other": "{{ product_count }} produits sur {{ count }}",
+        "many": "{{ product_count }} produits sur {{ count }}"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} produit",
+        "other": "{{ count }} produits",
+        "many": "{{ count }} produits"
+      },
+      "reset": "Réinitialiser",
+      "sort_button": "Trier",
+      "sort_by_label": "Trier par :",
+      "to": "Destination",
+      "clear_filter": "Supprimer le filtre",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
+      "show_more": "Afficher plus",
+      "show_less": "Afficher moins",
+      "filter_and_operator_subtitle": "Tout associer"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Page non trouvée",
+      "subtext": "404"
+    },
+    "search": {
+      "no_results": "Aucun résultat trouvé pour « {{ terms }} ». Vérifiez l'orthographe ou utilisez un autre mot ou une autre expression.",
+      "results_with_count": {
+        "one": "{{ count }} résultat",
+        "other": "{{ count }} résultats",
+        "many": "{{ count }} résultats"
+      },
+      "title": "Résultats de la recherche",
+      "page": "Page",
+      "products": "Produits",
+      "search_for": "Rechercher « {{ terms }} »",
+      "results_with_count_and_term": {
+        "one": "{{ count }} résultat trouvé pour « {{ terms }} »",
+        "other": "{{ count }} résultats trouvés pour « {{ terms }} »",
+        "many": "{{ count }} résultats trouvés pour « {{ terms }} »"
+      },
+      "results_pages_with_count": {
+        "one": "Page {{ count }}",
+        "other": "Pages {{ count }}",
+        "many": "Pages {{ count }}"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestion",
+        "other": "{{ count }} suggestions",
+        "many": "{{ count }} suggestions"
+      },
+      "results_products_with_count": {
+        "one": "Produit {{ count }}",
+        "other": "Produits {{ count }}",
+        "many": "Produits {{ count }}"
+      },
+      "suggestions": "Suggestions",
+      "pages": "Pages"
+    },
+    "cart": {
+      "cart": "Panier"
+    },
+    "contact": {
+      "form": {
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Numéro de téléphone",
+        "comment": "Commentaire",
+        "send": "Envoyer",
+        "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
+        "error_heading": "Veuillez ajuster les éléments suivants :",
+        "title": "Formulaire de contact"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Annonce",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles",
+        "many": "{{ count }} articles"
+      }
+    },
+    "cart": {
+      "title": "Votre panier",
+      "caption": "Articles du panier",
+      "remove_title": "Supprimer {{ title }}",
+      "note": "Instructions spéciales concernant la commande",
+      "checkout": "Procéder au paiement",
+      "empty": "Votre panier est vide",
+      "cart_error": "Une erreur est survenue lors de l’actualisation de votre panier. Veuillez réessayer.",
+      "cart_quantity_error_html": "Vous ne pouvez pas ajouter plus de {{ quantity }} de ce produit à votre panier.",
+      "headings": {
+        "product": "Produit",
+        "price": "Prix",
+        "total": "Total",
+        "quantity": "Quantité",
+        "image": "Image de produit"
+      },
+      "update": "Mise à jour",
+      "login": {
+        "title": "Vous possédez un compte ?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
+      },
+      "estimated_total": "Total estimé",
+      "new_estimated_total": "Nouveau total estimé",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Frais de douane et taxes inclus. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Frais de douane et taxes inclus. Réductions et frais d’expédition calculés à l’étape du paiement.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Réductions et frais d’expédition calculés à l’étape du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Frais de douane inclus. Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Frais de douane inclus. Taxes, réductions et frais d’expédition calculés à l’étape du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement."
+    },
+    "footer": {
+      "payment": "Moyens de paiement"
+    },
+    "featured_blog": {
+      "view_all": "Tout afficher",
+      "onboarding_title": "Article de blog",
+      "onboarding_content": "Donnez à vos clients un résumé de votre article de blog"
+    },
+    "featured_collection": {
+      "view_all": "Tout afficher",
+      "view_all_label": "Afficher tous les produits de la collection {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Tout afficher"
+    },
+    "collection_template": {
+      "title": "Collection",
+      "empty": "Aucun produit trouvé",
+      "use_fewer_filters_html": "Utiliser moins de filtres ou <a class=\"{{ class }}\" href=\"{{ link }}\">tout supprimer</a>"
+    },
+    "video": {
+      "load_video": "Charger la vidéo : {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Charger la diapositive",
+      "previous_slideshow": "Diapositive précédente",
+      "next_slideshow": "Diapositive suivante",
+      "pause_slideshow": "Interrompre le diaporama",
+      "play_slideshow": "Lire le diaporama",
+      "carousel": "Carrousel",
+      "slide": "Diapositive"
+    },
+    "page": {
+      "title": "Titre de la page"
+    },
+    "announcements": {
+      "previous_announcement": "Annonce précédente",
+      "next_announcement": "Annonce suivante",
+      "carousel": "Carrousel",
+      "announcement": "Annonce",
+      "announcement_bar": "Barre d’annonces"
+    },
+    "quick_order_list": {
+      "product_total": "Sous-total des produits",
+      "view_cart": "Voir le panier",
+      "each": "{{ money }}/pièce",
+      "product": "Produit",
+      "variant": "Variante",
+      "variant_total": "Total des variantes",
+      "items_added": {
+        "one": "{{ quantity }} article ajouté",
+        "other": "{{ quantity }} articles ajoutés",
+        "many": "{{ quantity }} articles ajoutés"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} article retiré",
+        "other": "{{ quantity }} articles retirés",
+        "many": "{{ quantity }} articles retirés"
+      },
+      "product_variants": "Variantes de produits",
+      "total_items": "Total des articles",
+      "remove_all_items_confirmation": "Retirer les {{ quantity }} articles de votre panier ?",
+      "remove_all": "Tout retirer",
+      "cancel": "Annuler",
+      "remove_all_single_item_confirmation": "Supprimer 1 article de votre panier ?",
+      "min_error": "Cet article a un minimum de {{ min }}",
+      "max_error": "Cet article a un maximum de {{ max }}",
+      "step_error": "Vous pouvez ajouter cet article uniquement par incréments de {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Pays/région",
+    "language_label": "Langue",
+    "update_language": "Mettre à jour la langue",
+    "update_country": "Mettre à jour le pays/la région",
+    "search": "Rechercher",
+    "popular_countries_regions": "Pays/régions populaires",
+    "country_results_count": "{{ count }} pays/régions trouvés"
+  },
+  "customer": {
+    "account": {
+      "title": "Compte",
+      "details": "Détails du compte",
+      "view_addresses": "Voir les adresses",
+      "return": "Retour aux détails du compte"
+    },
+    "account_fallback": "Compte",
+    "activate_account": {
+      "title": "Activer le compte",
+      "subtext": "Créez votre mot de passe pour activer le compte.",
+      "password": "Mot de passe",
+      "password_confirm": "Confirmer le mot de passe",
+      "submit": "Activer le compte",
+      "cancel": "Décliner l'invitation"
+    },
+    "addresses": {
+      "title": "Adresses",
+      "default": "Par défaut",
+      "add_new": "Ajouter une nouvelle adresse",
+      "edit_address": "Modifier l'adresse",
+      "first_name": "Prénom",
+      "last_name": "Nom de famille",
+      "company": "Entreprise",
+      "address1": "Adresse 1",
+      "address2": "Adresse 2",
+      "city": "Ville",
+      "country": "Pays/région",
+      "province": "Province",
+      "zip": "Code postal",
+      "phone": "Téléphone",
+      "set_default": "Définir comme adresse par défaut",
+      "add": "Ajouter l'adresse",
+      "update": "Mettre à jour l'adresse",
+      "cancel": "Annuler",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "delete_confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse ?"
+    },
+    "log_in": "Connexion",
+    "log_out": "Déconnexion",
+    "login_page": {
+      "cancel": "Annuler",
+      "create_account": "Créer un compte",
+      "email": "E-mail",
+      "forgot_password": "Mot de passe oublié ?",
+      "guest_continue": "Continuer",
+      "guest_title": "Continuer en tant qu'invité(e)",
+      "password": "Mot de passe",
+      "title": "Connexion",
+      "sign_in": "Connexion",
+      "submit": "Envoyer",
+      "alternate_provider_separator": "ou"
+    },
+    "orders": {
+      "title": "Historique des commandes",
+      "order_number": "Commande",
+      "order_number_link": "Numéro de commande {{ number }}",
+      "date": "Date",
+      "payment_status": "Statut des paiements",
+      "fulfillment_status": "Statut des commandes",
+      "total": "Total",
+      "none": "Vous n'avez encore passé aucune commande."
+    },
+    "recover_password": {
+      "title": "Réinitialiser son mot de passe",
+      "subtext": "Nous vous ferons parvenir un e-mail pour réinitialiser votre mot de passe",
+      "success": "Nous vous avons envoyé un e-mail contenant un lien pour mettre à jour votre mot de passe."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "first_name": "Prénom",
+      "last_name": "Nom de famille",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "submit": "Créer"
+    },
+    "reset_password": {
+      "title": "Réinitialiser le mot de passe du compte",
+      "subtext": "Saisissez un nouveau mot de passe",
+      "password": "Mot de passe",
+      "password_confirm": "Confirmer le mot de passe",
+      "submit": "Réinitialiser le mot de passe"
+    },
+    "order": {
+      "title": "Commande {{ name }}",
+      "date_html": "Passée le {{ date }}",
+      "cancelled_html": "Commande annulée le {{ date }}",
+      "cancelled_reason": "Motif : {{ reason }}",
+      "billing_address": "Adresse de facturation",
+      "payment_status": "Statut de paiement",
+      "shipping_address": "Adresse d'expédition",
+      "fulfillment_status": "Statut des commandes",
+      "discount": "Réduction",
+      "shipping": "Expédition",
+      "tax": "Taxes",
+      "product": "Produit",
+      "sku": "SKU",
+      "price": "Prix",
+      "quantity": "Quantité",
+      "total": "Total",
+      "fulfilled_at_html": "Traitée le {{ date }}",
+      "track_shipment": "Suivre l'envoi",
+      "tracking_url": "Lien de suivi",
+      "tracking_company": "Transporteur",
+      "tracking_number": "Numéro de suivi",
+      "subtotal": "Sous-total",
+      "total_duties": "Frais de douane",
+      "total_refunded": "Remboursé"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Voici le solde de votre carte‑cadeau {{ shop }} d'une valeur de {{ value }} !",
+      "subtext": "Votre carte-cadeau",
+      "gift_card_code": "Code de la carte-cadeau",
+      "shop_link": "Visiter la boutique en ligne",
+      "add_to_apple_wallet": "Ajouter à Apple Wallet",
+      "qr_image_alt": "Code QR : scannez-le pour utiliser votre carte-cadeau",
+      "copy_code": "Copier le code de la carte‑cadeau",
+      "expired": "Expiré",
+      "copy_code_success": "Le code a bien été copié",
+      "how_to_use_gift_card": "Utiliser le code de la carte‑cadeau en ligne ou le code QR en boutique",
+      "expiration_date": "Expire le {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Je veux envoyer ce produit comme cadeau",
+      "email_label": "E‑mail du destinataire",
+      "email": "E‑mail",
+      "name_label": "Nom du destinataire (facultatif)",
+      "name": "Nom",
+      "message_label": "Message (facultatif)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} caractères au maximum",
+      "email_label_optional_for_no_js_behavior": "E‑mail du destinataire (facultatif)",
+      "send_on": "AAAA-MM-JJ",
+      "send_on_label": "Envoyer le (facultatif)",
+      "expanded": "Formulaire de destinataire de carte-cadeau agrandi",
+      "collapsed": "Formulaire de destinataire de carte-cadeau réduit"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  },
+  "grs": {
+    "a11y": {
+      "back_to_top": "Retour en haut",
+      "skip": "Passer au contenu",
+      "menu": "Menu",
+      "main": "Principal",
+      "open_menu": "Ouvrir le menu",
+      "close_menu": "Fermer le menu",
+      "close": "Fermer",
+      "search": "Rechercher",
+      "account": "Compte",
+      "open_cart": "Ouvrir le panier",
+      "cart": "Panier",
+      "close_cart": "Fermer le panier",
+      "breadcrumb": "Fil d'Ariane",
+      "country": "Pays/région",
+      "language": "Langue",
+      "policies": "Politiques",
+      "payments": "Modes de paiement",
+      "home_link": "{{ shop }}, accueil",
+      "numbers": "{{ shop }} en chiffres",
+      "prev_posts": "Articles précédents",
+      "next_posts": "Articles suivants",
+      "prev_products": "Produits précédents",
+      "next_products": "Produits suivants",
+      "prev_reviews": "Avis précédents",
+      "next_reviews": "Avis suivants",
+      "prev_review": "Avis précédent",
+      "next_review": "Avis suivant",
+      "prev_photo": "Photo précédente",
+      "next_photo": "Photo suivante",
+      "prev_image": "Image précédente",
+      "next_image": "Image suivante",
+      "prev_thumbs": "Miniatures précédentes",
+      "more_thumbs": "Plus de miniatures",
+      "prev_message": "Message précédent",
+      "next_message": "Message suivant",
+      "decrease_qty": "Diminuer la quantité",
+      "increase_qty": "Augmenter la quantité",
+      "decrease": "Diminuer",
+      "increase": "Augmenter",
+      "quick_view": "Aperçu rapide",
+      "products_list": "Produits de garde-corps en verre",
+      "shop_by_category": "Magasiner par catégorie",
+      "close_filters": "Fermer les filtres",
+      "remove_filter": "Retirer le filtre {{ label }}",
+      "page_n": "Page {{ n }}",
+      "image_n": "Image {{ n }}",
+      "ig_post": "Publication Instagram {{ n }}",
+      "rated": "Note de {{ avg }} sur 5",
+      "stars": "{{ n }} étoiles sur 5",
+      "rated_from": "Note de {{ avg }} sur 5 selon {{ count }} avis",
+      "watch_video": "Regarder la vidéo sur YouTube",
+      "comparison": "Comparaison",
+      "pagination": "Pagination",
+      "prev_page": "Page précédente",
+      "next_page": "Page suivante",
+      "watch": "Regarder {{ title }} sur YouTube ({{ duration }})",
+      "compare": "Comparer les finis : glissez à gauche pour {{ b }}, à droite pour {{ a }}",
+      "one_finish": "Afficher un seul fini",
+      "show_part": "Afficher la pièce {{ n }} sur cette photo",
+      "part_in_photo": "Pièce sur cette photo",
+      "share_facebook": "Partager sur Facebook",
+      "share_x": "Partager sur X",
+      "save_pinterest": "Enregistrer sur Pinterest"
+    },
+    "general": {
+      "home": "Accueil",
+      "search": "Rechercher",
+      "clear": "Effacer",
+      "close": "Fermer",
+      "quick_view": "Aperçu rapide",
+      "shop_now": "Magasiner",
+      "from": "À partir de",
+      "read_more": "Lire la suite",
+      "tagged": "étiqueté « {{ tags }} »",
+      "price": "Prix",
+      "watch": "Regarder",
+      "watch_youtube": "Regarder sur YouTube"
+    },
+    "reviews": {
+      "from_count": "selon {{ count }} avis",
+      "see_all": "Voir les {{ count }} avis",
+      "word": "avis",
+      "this_product": "Ce produit",
+      "our_customers": "Nos clients",
+      "heading": "Avis clients",
+      "based_on": "Selon",
+      "see_all_label": "Voir les",
+      "all_or_write": "Tous les avis sur ce produit ou rédiger un avis"
+    },
+    "blog": {
+      "min_read": "{{ count }} min de lecture"
+    },
+    "country": {
+      "ca": "Canada",
+      "us": "États-Unis"
+    },
+    "cart": {
+      "title": "Panier",
+      "ship_over": "Livraison gratuite sur les commandes de garde-corps en verre de plus de 3 000 $.",
+      "ship_left": "Plus que {{ amount }} pour obtenir la livraison gratuite.",
+      "ship_ok": "Votre commande est admissible à la livraison gratuite.",
+      "remove": "Retirer",
+      "empty": "Votre panier est vide.",
+      "subtotal": "Sous-total",
+      "taxes": "Taxes et livraison calculées au moment du paiement.",
+      "checkout": "Passer à la caisse",
+      "view_cart": "Voir le panier",
+      "quote": "Vous hésitez? Obtenez une soumission gratuite"
+    },
+    "product": {
+      "in_stock": "En stock",
+      "sold_out": "Épuisé",
+      "finish": "Fini :",
+      "quantity": "Quantité",
+      "add_to_cart": "Ajouter au panier",
+      "choose_options": "Choisir des options",
+      "view_details": "Voir tous les détails",
+      "brushed": "Inox brossé",
+      "matte": "Noir mat",
+      "at_a_glance": "En bref",
+      "overview": "Présentation",
+      "specifications": "Caractéristiques techniques",
+      "share": "Partager",
+      "copy_link": "Copier le lien",
+      "add_error": "Impossible d’ajouter au panier. Veuillez réessayer.",
+      "more_label": "Besoin d’une dimension qui n’est pas offerte? Verre sur mesure",
+      "per_screw": "par vis",
+      "you_may_like": "Vous aimerez aussi",
+      "shop_collection": "Voir la collection"
+    },
+    "nav": {
+      "cta": "Obtenez une soumission gratuite",
+      "shop_all": "Voir tous les produits"
+    },
+    "drawer": {
+      "my_account": "Mon compte",
+      "account_text": "Suivez votre commande, consultez la liste d'installation et gardez votre garantie à portée de main.",
+      "sign_in": "Se connecter",
+      "create_account": "Créer un compte",
+      "language": "Langue",
+      "appearance": "Apparence",
+      "dark_mode": "Mode sombre",
+      "call": "Appelez-nous ou textez-nous"
+    },
+    "footer": {
+      "privacy": "Politique de confidentialité",
+      "refund": "Politique de remboursement",
+      "shipping": "Livraison",
+      "terms": "Conditions d'utilisation",
+      "contact": "Contact",
+      "contact_title": "Nous joindre",
+      "follow_us": "Suivez-nous",
+      "fast_shipping": "Livraison rapide partout au Canada et aux États-Unis"
+    },
+    "aside": {
+      "products": "Produits",
+      "building_code": "Code du bâtiment",
+      "resources": "Ressources",
+      "guides": "Guides",
+      "contact": "Contact",
+      "about": "À propos",
+      "install_guide": "Guide d'installation de garde-corps en verre",
+      "blog": "Blogue",
+      "faq": "FAQ",
+      "loc_ca": "Emplacements : Canada",
+      "loc_us": "Emplacements : États-Unis",
+      "spigot": "Spigot 6\"",
+      "spigot_alt": "Spigot noir mat pour garde-corps en verre sur une terrasse",
+      "panels": "Panneaux de garde-corps en verre",
+      "panels_alt": "Garde-corps en verre sans cadre sur une terrasse en bord de plage"
+    },
+    "js": {
+      "read_more": "Lire la suite",
+      "show_less": "Voir moins",
+      "quick_view": "Aperçu rapide",
+      "ship_over": "Livraison gratuite sur les commandes de garde-corps en verre de plus de 3 000 $.",
+      "ship_left": "Plus que {amount} pour obtenir la livraison gratuite.",
+      "ship_ok": "Votre commande est admissible à la livraison gratuite.",
+      "cart_error": "Le panier n'a pas pu être mis à jour",
+      "add_error": "Impossible d'ajouter au panier",
+      "in_stock": "En stock",
+      "sold_out": "Épuisé",
+      "image_n": "Image {n}",
+      "link_copied": "Lien copié",
+      "reviews_n": "{n} avis",
+      "from_reviews": "selon {n} avis",
+      "rated": "Note de {avg} sur 5",
+      "stars": "{n} étoiles sur 5",
+      "verified": "Acheteur vérifié",
+      "rv_title": "Avis des clients",
+      "rv_close": "Fermer les avis",
+      "rv_filters": "Filtres",
+      "rv_by_star": "Filtrer par nombre d’étoiles",
+      "rv_product": "Produit",
+      "rv_sort": "Trier par",
+      "rv_recent": "Plus récents",
+      "rv_high": "Meilleure note",
+      "rv_low": "Note la plus basse",
+      "rv_view_product": "Voir le produit",
+      "rv_all_products": "Tous les produits ({n})",
+      "rv_show_star": "Afficher les avis {n} étoiles ({c})",
+      "rv_none": "Aucun des avis récents n'a {n} étoiles.",
+      "rv_none_product": "Aucun des avis récents de ce produit n'a {n} étoiles.",
+      "rv_latest_of": "Les {a} avis les plus récents sur {b}",
+      "rv_latest_all": "Les avis les plus récents de chaque produit",
+      "rv_stars_only": "{n} étoiles seulement",
+      "rv_more": "Voir plus d'avis",
+      "rv_end_product": "Tous les avis de ce produit sont sur sa page.",
+      "rv_end_all": "Choisissez un produit pour voir ses avis et sa note.",
+      "rv_loading": "Chargement des avis…",
+      "rv_error": "Les avis n’ont pas pu être chargés. Veuillez réessayer.",
+      "np_chip": "<b>Livraison gratuite</b> sur tous les produits",
+      "np_title": "Inscrivez-vous pour obtenir la livraison gratuite sur tous les produits!!",
+      "np_text": "Profitez de cette occasion pour obtenir la livraison gratuite partout au pays! (Quantité minimale de commande requise)",
+      "np_first_name": "Prénom",
+      "np_email": "Courriel",
+      "np_country": "Pays",
+      "np_phone": "Téléphone",
+      "np_error": "Veuillez entrer votre prénom et un courriel valide.",
+      "np_submit": "Envoyer",
+      "np_legal": "En vous inscrivant, vous acceptez de recevoir des messages marketing au numéro de téléphone ou au courriel fourni. Des frais de messagerie et de données peuvent s'appliquer. Consultez notre <a href=\"{privacy}\">politique de confidentialité</a> et nos <a href=\"{terms}\">conditions d'utilisation</a> pour en savoir plus.",
+      "np_note": "Veuillez noter que des frais de livraison supplémentaires peuvent s'appliquer pour les livraisons en région rurale.",
+      "np_thanks": "Merci!",
+      "np_done": "Vous êtes inscrit.",
+      "np_continue": "Continuer vos achats",
+      "np_failed": "Une erreur s'est produite. Veuillez réessayer.",
+      "np_close": "Fermer",
+      "remove": "Retirer",
+      "cart_empty": "Votre panier est vide.",
+      "decrease": "Diminuer",
+      "increase": "Augmenter",
+      "prev_image": "Image précédente",
+      "next_image": "Image suivante",
+      "brushed": "Inox brossé",
+      "matte": "Noir mat"
+    },
+    "policy": {
+      "eyebrow": "Politiques",
+      "toc": "Sur cette page",
+      "help_title": "Des questions sur cette politique?",
+      "help_text": "Communiquez avec notre équipe du service à la clientèle.",
+      "contact": "Contactez-nous"
+    },
+    "account": {
+      "tab_overview": "Aperçu",
+      "tab_orders": "Commandes",
+      "tab_install": "Installation",
+      "tab_profile": "Profil et adresses",
+      "sign_out": "Se déconnecter",
+      "signed_in_as": "Connecté en tant que {{ email }}",
+      "welcome": "Bon retour, {{ name }}",
+      "welcome_anon": "Bon retour",
+      "lead_preparing": "La commande {{ order }} est en préparation. Nous vous enverrons le suivi par courriel dès son expédition; en attendant, votre liste d’installation est prête ci-dessous.",
+      "lead_awaiting": "La commande {{ order }} est en attente de paiement. Dès qu’elle sera payée, nous commencerons à la préparer.",
+      "lead_partial": "Une partie de la commande {{ order }} est en route. Le reste suivra bientôt.",
+      "lead_shipped": "La commande {{ order }} est en route. C’est le moment de vous préparer pour le jour de l’installation!",
+      "lead_shipped_with": "La commande {{ order }} est en route avec {{ carrier }}. C’est le moment de vous préparer pour le jour de l’installation!",
+      "lead_cancelled": "La commande {{ order }} a été annulée. Besoin d’aide pour planifier votre garde-corps? Nous sommes là pour vous aider.",
+      "lead_none": "Planifiez votre garde-corps en verre avec notre guide d’installation, le code du bâtiment de votre région et une liste étape par étape, au même endroit.",
+      "track_package": "Suivre le colis",
+      "shop_railings": "Magasiner les garde-corps",
+      "quote": "Obtenez une soumission gratuite",
+      "st_shipped": "Expédiée",
+      "st_partial": "Expédiée en partie",
+      "st_preparing": "En préparation",
+      "st_awaiting": "En attente de paiement",
+      "st_cancelled": "Annulée",
+      "st_paid": "Payée",
+      "st_refunded": "Remboursée",
+      "st_part_refunded": "Remboursée en partie",
+      "st_authorized": "Paiement autorisé",
+      "tracker": "Suivi de commande",
+      "order_n": "Commande {{ order }}",
+      "step_ordered": "Commandée",
+      "step_installed": "Installée",
+      "packed": "Emballée",
+      "after_payment": "Après le paiement",
+      "packing": "Emballage de votre commande",
+      "email_tracking": "Suivi envoyé par courriel",
+      "big_day": "Votre grand jour",
+      "qty": "Qté {{ n }}",
+      "more": "+ {{ n }} de plus",
+      "view_order": "Voir la commande",
+      "mark_installed": "Marquer comme installée",
+      "congrats": "Félicitations pour votre nouveau garde-corps!",
+      "congrats_text": "Nous aimerions le voir. Envoyez-nous une photo de votre projet terminé; elle pourrait paraître dans notre",
+      "gallery": "galerie",
+      "share_photos": "Partagez vos photos",
+      "photo_subject": "Mon garde-corps en verre terminé",
+      "start": "Commencez votre projet",
+      "three_steps": "3 étapes",
+      "s1": "Mesurez votre espace",
+      "s1t": "Comment nous disposons les panneaux et les espaces",
+      "s2": "Vérifiez votre code du bâtiment",
+      "s2t": "Les règles de votre province ou État",
+      "s3t": "Nous dimensionnerons le verre et la quincaillerie",
+      "checklist_k": "Liste d’installation",
+      "progress": "Votre progression d’installation",
+      "open_checklist": "Ouvrir la liste",
+      "of_steps": "étapes sur {{ total }} terminées",
+      "of_done": "sur {{ total }} terminées",
+      "next_step": "Prochaine étape",
+      "all_done_next": "Tout est fait. Profitez de votre nouveau garde-corps!",
+      "all_steps_done": "Les {{ total }} étapes sont terminées. Votre garde-corps est fini!",
+      "send_photo": "Envoyez-nous une photo de votre projet, nous aimerions la voir.",
+      "saved_note": "Votre progression est enregistrée sur cet appareil. Tous les détails, photos et schémas sont dans le",
+      "guide": "guide d’installation",
+      "ideas": "Idées et guides",
+      "all_articles": "Tous les articles",
+      "no_rust": "Promesse antirouille",
+      "no_rust_text": "Quincaillerie en acier inoxydable de qualité marine 2205, garantie contre la rouille.",
+      "years": "ans",
+      "covered_until": "La commande {{ order }} est couverte jusqu’en {{ date }}",
+      "every_order": "Chaque commande est couverte pendant {{ years }} ans.",
+      "claim": "Questions ou réclamation? Écrivez à",
+      "warranty_details": "Détails de la garantie",
+      "local_code": "Le code du bâtiment de votre région",
+      "code_text": "Hauteurs, charges et règles des portes pour les garde-corps en verre là où vous habitez.",
+      "code_text2": "Hauteurs, charges et règles des portes pour les garde-corps en verre.",
+      "read_guide_for": "Lire le guide de {{ region }}",
+      "read_guide": "Lire le guide",
+      "find_code": "Trouvez votre code du bâtiment",
+      "find_code_text": "Ajoutez votre adresse et nous afficherons le guide de votre province ou État.",
+      "browse_codes": "Parcourir les codes du bâtiment",
+      "need_hand": "Besoin d’un coup de main?",
+      "need_hand_text": "Notre équipe aide chaque jour les propriétaires avec les mesures, les installations et les commandes.",
+      "installer": "Trouvez un installateur certifié",
+      "videos": "Guides vidéo",
+      "channel": "Notre chaîne YouTube",
+      "other_videos": "Regardez les autres vidéos d’installation",
+      "on_channel": "sur notre chaîne YouTube",
+      "on_youtube": "{{ shop }} sur YouTube",
+      "latest_videos": "Dernières vidéos",
+      "latest_auto": "Se met à jour à chaque nouvelle vidéo",
+      "latest_title": "Dernières vidéos de notre chaîne YouTube",
+      "play": "Lire la vidéo : {{ title }}",
+      "shop_title": "Magasiner : {{ title }}",
+      "orders_empty": "Aucune commande pour l’instant",
+      "orders_empty_text": "Quand vous passerez une commande, vous pourrez la suivre ici étape par étape.",
+      "placed": "Passée le {{ date }}",
+      "buy_again": "Racheter",
+      "newer": "Commandes plus récentes",
+      "older": "Commandes plus anciennes",
+      "tools": "Outils nécessaires",
+      "care": "Entretien de votre garde-corps",
+      "documents": "Documents",
+      "doc_guide": "Guide d’installation",
+      "doc_eng": "Documents d’ingénierie",
+      "doc_code": "Code du bâtiment",
+      "doc_warranty": "Garantie / Promesse antirouille",
+      "personal": "Renseignements personnels",
+      "edit": "Modifier",
+      "name": "Nom",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "not_added": "Non ajouté",
+      "email_updates": "Nouvelles par courriel",
+      "subscribed": "Abonné",
+      "not_subscribed": "Non abonné",
+      "addresses": "Adresses enregistrées",
+      "add_edit": "Ajouter ou modifier",
+      "default": "Par défaut",
+      "no_addresses": "Aucune adresse enregistrée. Ajoutez-en une pour payer plus vite et voir le code du bâtiment de votre région.",
+      "signin_card": "Connexion"
+    },
+    "stl": {
+      "n_products": "{{ count }} produits"
+    },
+    "card": {
+      "widths": "{{ count }} largeurs",
+      "made_to_order": "Fabriqué sur commande",
+      "pre_holed": "Pré-percé",
+      "holed_hinges": "Percé pour les charnières",
+      "fascia_mount": "Montage latéral"
+    },
+    "sd": {
+      "account": {
+        "eyebrow_html": "Mon projet de garde-corps en verre",
+        "recommend_heading_html": "Complétez votre garde-corps"
+      },
+      "coll_faq": {
+        "eyebrow_html": "FAQ",
+        "heading_html": "[title] : questions fréquentes"
+      },
+      "coll_grid": {
+        "panel_title_html": "Filtrer et trier",
+        "sort_label_html": "Trier par",
+        "sort_featured_label_html": "En vedette",
+        "sort_reviews_label_html": "Les plus évalués",
+        "filter_title_html": "Filtrer par",
+        "clear_label_html": "Tout effacer",
+        "show_label_html": "Afficher [count] produits",
+        "count_one_html": "[count] produit",
+        "count_other_html": "[count] produits",
+        "price_from_html": "De",
+        "price_to_html": "À",
+        "pages_label_html": "Pages",
+        "empty_title_html": "Aucun produit trouvé",
+        "empty_text_html": "Cette collection n’a pas encore de produits.",
+        "empty_filtered_html": "Aucun produit ne correspond à ces filtres.",
+        "empty_filtered_text_html": "Retirez un filtre ou demandez-nous une soumission gratuite."
+      },
+      "coll_reviews": {
+        "eyebrow_html": "Avis clients",
+        "heading_html": "Note de [rating] sur 5",
+        "count_text_html": "selon [count] avis sur [title]",
+        "all_label_html": "Tout voir",
+        "verified_html": "Acheteur vérifié"
+      },
+      "footer": {
+        "follow_label_html": "Suivez-nous",
+        "contact_title_html": "Nous joindre",
+        "contact_ca_html": "Livraison rapide partout au Canada et aux États-Unis",
+        "contact_us_html": "Livraison rapide partout au Canada et aux États-Unis",
+        "country_title_html": "Pays/région",
+        "language_title_html": "Langue",
+        "dark_label_html": "Mode sombre"
+      },
+      "header": {
+        "search_placeholder_html": "Rechercher panneaux, spigots, guides, villes...",
+        "support_label_html": "Appelez-nous ou textez-nous",
+        "dark_label_html": "Mode sombre",
+        "rail_title_html": "Magasiner par catégorie",
+        "shop_all_label_html": "Voir tous les produits",
+        "view_all_label_html": "Tout voir",
+        "products_word_html": "produits",
+        "shop_now_label_html": "Magasiner",
+        "feature_label_html": "En vedette",
+        "read_more_html": "En savoir plus"
+      },
+      "how": {
+        "step_word_html": "Étape"
+      },
+      "pg_404": {
+        "heading_html": "Page introuvable",
+        "text_html": "La page que vous cherchez n’existe pas.",
+        "button_label_html": "Continuer à magasiner"
+      },
+      "pg_account": {
+        "eyebrow_html": "Mon projet de garde-corps en verre",
+        "heading_html": "Votre projet de garde-corps en verre, au même endroit",
+        "text_html": "Connectez-vous pour suivre votre commande, consulter la liste d’installation étape par étape, trouver le code du bâtiment de votre région et garder votre garantie à portée de main.",
+        "signin_label_html": "Se connecter",
+        "steps_eyebrow_html": "Étape par étape",
+        "steps_heading_html": "Liste d’installation",
+        "tools_html": "Ruban à mesurer\nNiveau (magnétique)\nCrayon et cordeau à craie\nPerceuse avec mèches de 1/8\" et 5/16\"\nClé Allen\nClé",
+        "care_html": "Verre : un chiffon doux et un nettoyant à vitres non abrasif. Évitez les tampons à récurer et les lames de rasoir.\nQuincaillerie : rincez à l’eau douce quelques fois par année, plus souvent près d’une piscine ou de l’eau salée.\nChaque printemps : vérifiez les pinces et la main courante et resserrez ce qui a du jeu.\nHiver : utilisez une pelle en plastique près du verre et rincez le sel de déglaçage.",
+        "refer_title_html": "Vous aimez votre garde-corps?",
+        "refer_text_html": "Recommandez-nous à vos amis et voisins grâce à notre programme d’affiliation et gagnez sur chacune de leurs commandes.",
+        "refer_button_html": "Rejoindre le programme",
+        "videos_heading_html": "Guides vidéo",
+        "recommend_heading_html": "Complétez votre garde-corps",
+        "steps1_html": "Tracez la ligne du verre | Tracez une ligne à la craie là où le verre sera installé.\nDisposez les panneaux et les espaces | Marquez chaque panneau avec un espace de 1\" entre les panneaux (de 3/4\" à 2\" fonctionne).\nMarquez la position des spigots | Environ 25 % de la longueur du verre à partir de chaque bord.\nPercez les trous d’ancrage | Utilisez le spigot comme gabarit et restez sur la ligne de craie.\nFixez les spigots | Vissez-les en gardant chacun sur la ligne.\nMettez les spigots de niveau | Vérifiez que chaque spigot est droit avec un niveau magnétique.\nInstallez le verre | Un travail à deux : descendez chaque panneau dans ses spigots.",
+        "steps2_html": "Égalisez la hauteur des panneaux | Alignez chaque panneau sur le plus haut.\nAjustez les angles | Commencez par les coins et alignez chaque panneau.\nPosez les pinces | Habituellement à environ 6\" sous le haut du verre.\nInstallez la main courante | Nettoyez le bord, placez le joint et enfoncez la main courante.\nInstallez la porte | Fixez les charnières et le loquet.\nAjoutez le verrou de porte | Installez-le à l’extérieur avec l’espacement recommandé."
+      },
+      "pg_app": {
+        "refer_title_html": "Vous aimez votre garde-corps?",
+        "refer_text_html": "Recommandez-nous à vos amis et voisins grâce à notre programme d’affiliation et gagnez sur chacune de leurs commandes.",
+        "refer_button_html": "Rejoindre le programme",
+        "help_title_html": "Des questions sur votre projet?",
+        "help_text_html": "Appelez ou textez un spécialiste des garde-corps, ou envoyez vos mesures pour obtenir une soumission détaillée.",
+        "button_label_html": "Obtenez une soumission gratuite"
+      },
+      "pg_article": {
+        "toc_label_html": "Sur cette page",
+        "share_label_html": "Partager",
+        "copy_label_html": "Copier le lien",
+        "copied_label_html": "Lien copié",
+        "cta_title_html": "Vous planifiez un garde-corps en verre?",
+        "cta_text_html": "Envoyez-nous vos mesures et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet.",
+        "cta_button_html": "Obtenez une soumission gratuite",
+        "help_title_html": "Des questions sur votre projet?",
+        "help_text_html": "Appelez ou textez un spécialiste des garde-corps, ou envoyez vos mesures pour obtenir une soumission détaillée.",
+        "help_button_html": "Obtenez une soumission gratuite",
+        "parts_heading_html": "Magasiner les pièces",
+        "parts_link_label_html": "Tous les produits",
+        "more_heading_html": "À lire aussi",
+        "more_button_html": "Tous les articles"
+      },
+      "pg_blog": {
+        "eyebrow_html": "Blogue",
+        "heading_html": "Articles de blogue",
+        "button_label_html": "Tout voir"
+      },
+      "pg_bloglist": {
+        "lead_html": "Guides, listes de vérification du code du bâtiment et idées de projets pour les garde-corps en verre, par l’équipe de The Glass Railing Store.",
+        "page_of_html": "Page [page] sur [pages]."
+      },
+      "pg_cart": {
+        "heading_html": "Votre panier",
+        "col_product_html": "Produit",
+        "col_quantity_html": "Quantité",
+        "col_total_html": "Total",
+        "continue_label_html": "Continuer à magasiner",
+        "empty_title_html": "Votre panier est vide",
+        "empty_text_html": "Découvrez nos panneaux de verre, spigots, connecteurs, quincaillerie de porte et mains courantes.",
+        "cats_heading_html": "Magasiner par catégorie",
+        "count_one_html": "[count] produit",
+        "count_other_html": "[count] produits",
+        "help_title_html": "Des questions sur votre projet?",
+        "help_text_html": "Appelez ou textez un spécialiste des garde-corps, ou envoyez vos mesures pour obtenir une soumission détaillée.",
+        "help_button_html": "Obtenez une soumission gratuite"
+      },
+      "pg_codes": {
+        "eyebrow_html": "Codes du bâtiment",
+        "heading_us_html": "Codes du bâtiment dans les autres États",
+        "heading_ca_html": "Codes du bâtiment dans les autres provinces"
+      },
+      "pg_collist": {
+        "heading_html": "Collections",
+        "count_one_html": "[count] produit",
+        "count_other_html": "[count] produits",
+        "count_zero_html": "Voir la collection"
+      },
+      "pg_dir": {
+        "eyebrow_html": "Répertoire",
+        "heading_us_html": "Garde-corps en verre par État",
+        "heading_ca_html": "Garde-corps en verre par province",
+        "code_label_html": "Code du bâtiment : [region]"
+      },
+      "pg_est": {
+        "feet_label_html": "Pieds linéaires",
+        "field1_html": "Type de verre",
+        "field2_html": "Style de verre",
+        "field3_html": "Type d’installation",
+        "result_heading_html": "Coût estimé du projet",
+        "based_text_html": "Selon [feet] pieds linéaires"
+      },
+      "pg_faq": {
+        "heading_html": "Questions fréquentes",
+        "eyebrow_html": "FAQ",
+        "text_html": "Vous ne trouvez pas votre réponse? Envoyez-nous votre question et un spécialiste des garde-corps en verre vous répondra.",
+        "button_label_html": "Poser une question",
+        "button2_label_html": "Toutes les FAQ"
+      },
+      "pg_faqhub": {
+        "intro_html": "Réponses sur nos panneaux de verre et notre quincaillerie, l’installation, la livraison, la garantie et les retours. [count] questions.",
+        "search_label_html": "Rechercher dans les questions",
+        "search_placeholder_html": "Rechercher dans les questions…",
+        "topics_label_html": "Sujets",
+        "no_results_html": "Aucune question ne correspond à votre recherche.",
+        "no_results_link_html": "Posez-nous votre question",
+        "help_title_html": "Des questions sur votre projet?",
+        "help_text_html": "Appelez ou textez un spécialiste des garde-corps, ou envoyez vos mesures pour obtenir une soumission détaillée.",
+        "button_label_html": "Obtenez une soumission gratuite"
+      },
+      "pg_feat": {
+        "view_all_label_html": "Tout voir"
+      },
+      "pg_form": {
+        "contact_eyebrow_html": "Nous joindre",
+        "eyebrow_html": "Soumission gratuite",
+        "heading_html": "Demandez une soumission gratuite",
+        "text_html": "Envoyez-nous une demande de plan avec vos mesures, photos ou dessins et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet.",
+        "point1_html": "La liste détaillée des matériaux dont votre projet a besoin",
+        "point2_html": "Prix en [currency]",
+        "point3_html": "Conseils d’experts, mesures et soutien à l’installation",
+        "phone_label_html": "Appelez ou textez",
+        "email_label_html": "Courriel",
+        "hours_label_html": "Heures",
+        "hours_html": "Lun–ven, 8 h – 17 h (HE)",
+        "name_label_html": "Nom",
+        "email_field_html": "Courriel",
+        "phone_field_html": "Téléphone",
+        "optional_html": "(facultatif)",
+        "zip_label_ca_html": "Code postal",
+        "zip_label_us_html": "Code ZIP",
+        "types_label_html": "Type de balcon",
+        "types_html": "Balcon résidentiel\nBalcon de condo ou d’appartement\nBalcon commercial\nAutre",
+        "systems_label_html": "Système préféré",
+        "systems_html": "Sans cadre\nSemi-encadré\nJe ne sais pas encore",
+        "details_label_html": "Détails du projet",
+        "details_placeholder_html": "Longueur de chaque section, hauteur du garde-corps, coins, portes, escaliers",
+        "button_label_html": "Envoyer mon projet",
+        "note_html": "Gratuit et sans engagement.",
+        "error_text_html": "Ajoutez votre nom et un courriel valide pour que nous puissions vous envoyer la soumission.",
+        "ok_title_html": "Merci, les détails de votre projet ont été envoyés.",
+        "ok_text_html": "Nous vous répondrons le plus tôt possible."
+      },
+      "pg_hero": {
+        "loc_label_html": "Emplacements"
+      },
+      "pg_main": {
+        "toc_label_html": "Sur cette page",
+        "help_title_html": "Des questions sur votre projet?",
+        "help_text_html": "Appelez ou textez un spécialiste des garde-corps, ou envoyez vos mesures pour obtenir une soumission détaillée.",
+        "button_label_html": "Obtenez une soumission gratuite",
+        "codes_eyebrow_html": "Codes du bâtiment",
+        "codes_heading_us_html": "Choisissez votre État",
+        "codes_heading_ca_html": "Choisissez votre province ou territoire"
+      },
+      "pg_map": {
+        "eyebrow_html": "Zone desservie",
+        "text_html": "Des systèmes de garde-corps en verre livrés directement chez vous.",
+        "link_label_html": "Ouvrir dans Google Maps"
+      },
+      "pg_near": {
+        "cta_eyebrow_html": "Soumission gratuite",
+        "cta_heading_html": "Soumission gratuite pour votre projet de garde-corps en verre à [place]",
+        "cta_text_html": "Envoyez-nous une demande de plan et nous vous enverrons une soumission détaillée des matériaux dont votre projet a besoin.",
+        "cta_button_html": "Obtenez une soumission gratuite",
+        "cta_phone_label_html": "Appelez-nous ou textez-nous",
+        "eyebrow_html": "Emplacements",
+        "h_city_html": "Autres villes desservies : [region]",
+        "h_hub_us_html": "Autres États desservis",
+        "h_hub_ca_html": "Autres provinces desservies",
+        "h_code_html": "Garde-corps en verre : [region]",
+        "cities_h_html": "Villes desservies : [region]",
+        "hub_link_text_html": "Garde-corps en verre : [region]",
+        "res_eyebrow_html": "Ressources",
+        "res_heading_html": "Ressources utiles"
+      },
+      "pg_search": {
+        "title_html": "Recherche",
+        "results_title_html": "Résultats de recherche",
+        "placeholder_html": "Rechercher panneaux, spigots, guides, villes",
+        "button_label_html": "Rechercher",
+        "count_one_html": "[count] résultat pour « [terms] »",
+        "count_other_html": "[count] résultats pour « [terms] »",
+        "none_text_html": "Aucun résultat pour « [terms] ». Vérifiez l’orthographe ou essayez un autre mot ou une autre expression.",
+        "products_heading_html": "Produits",
+        "collections_heading_html": "Collections",
+        "pages_heading_html": "Pages",
+        "articles_heading_html": "Articles",
+        "res_eyebrow_html": "Ressources",
+        "res_heading_html": "Ressources utiles"
+      },
+      "pg_video": {
+        "label_html": "Regarder sur YouTube"
+      },
+      "product_related": {
+        "heading_html": "Vous aimerez aussi",
+        "link_label_html": "Magasiner la collection"
+      },
+      "product_reviews": {
+        "eyebrow_html": "Ce produit",
+        "eyebrow_store_html": "Nos clients",
+        "heading_html": "Avis clients",
+        "based_on_html": "Selon",
+        "all_label_html": "Tout voir",
+        "verified_html": "Acheteur vérifié",
+        "apps_label_html": "Tous les avis sur ce produit ou rédiger un avis"
+      },
+      "product": {
+        "in_stock_html": "En stock",
+        "sold_out_html": "Épuisé",
+        "qty_label_html": "Quantité",
+        "add_label_html": "Ajouter au panier",
+        "error_text_html": "Impossible d’ajouter au panier. Veuillez réessayer.",
+        "price_unit_html": "glass-railing-screws = / vis",
+        "more_label_html": "Besoin d’une dimension qui n’est pas offerte? Verre sur mesure",
+        "share_label_html": "Partager",
+        "copy_label_html": "Copier le lien",
+        "copied_label_html": "Lien copié",
+        "facts_title_html": "En bref",
+        "tab_overview_html": "Aperçu",
+        "tab_specs_html": "Caractéristiques"
+      },
+      "quote_band": {
+        "phone_label_html": "Appelez-nous ou textez-nous"
+      },
+      "svc": {
+        "label_html": "Soutien, soumission gratuite et livraison"
+      },
+      "videos": {
+        "watch_label_html": "Regarder",
+        "link_label_html": "Regarder sur YouTube"
+      },
+      "s": {
+        "grs_ship_ca_html": "Les commandes de garde-corps en verre sont traitées en 2 à 3 jours ouvrables, puis livrées en 5 à 10 jours ouvrables.",
+        "grs_ship_us_html": "Les commandes aux États-Unis sont traitées en 2 à 3 jours ouvrables, puis livrées en 5 à 10 jours ouvrables.",
+        "grs_name_ca_html": "au Canada",
+        "grs_name_us_html": "aux États-Unis",
+        "grs_hub_link_text_html": "garde-corps en verre – [region]",
+        "grs_faq_city_h_html": "Garde-corps en verre à [city] : questions fréquentes",
+        "grs_faq_city_q1_html": "Livrez-vous des garde-corps en verre à [city]?",
+        "grs_faq_city_a1_html": "<p>Oui. Nous expédions des systèmes de garde-corps en verre à [city] et partout [country]. [shipping] Le prix affiché au moment du paiement est le prix final, sans frais cachés, tarifs ni droits de douane, même si la commande traverse la frontière entre les États-Unis et le Canada.</p>",
+        "grs_faq_city_q2_html": "Quel code du bâtiment s’applique aux garde-corps en verre à [city]?",
+        "grs_faq_city_a2_html": "<p>Les garde-corps en verre à [city] doivent respecter le code du bâtiment en vigueur ([region]), ainsi que les exigences locales de votre ville ou de votre comté. Notre guide [code_link] présente les règles pour les garde-corps. Assurez-vous de respecter le code du bâtiment local avant de commander et d’installer.</p>",
+        "grs_faq_city_a2_ca_html": "<p>Les garde-corps en verre à [city] doivent respecter le code du bâtiment que la province ([region]) adopte à partir du Code national du bâtiment du Canada, ainsi que les exigences municipales. Notre guide [code_link] présente les règles pour les garde-corps. Assurez-vous de respecter le code du bâtiment local avant de commander et d’installer.</p>",
+        "grs_faq_city_q3_html": "Quelles hauteurs de garde-corps en verre sont offertes à [city]?",
+        "grs_faq_city_a3_html": "<p>Nos panneaux de verre trempé de 12 mm sont offerts en quatre hauteurs : 33,6\", 39,6\", 46\" et 57,7\", pour une hauteur totale de garde-corps de 36\", 42\", 48\" ou 60\" une fois le panneau inséré dans le spigot. Les panneaux de 33,6\", 39,6\" et 46\" sont offerts en 36 largeurs à partir de 7,9\". Les panneaux de 57,7\" sont offerts en largeurs de 33,6\", 39,6\" et 46\".</p>",
+        "grs_faq_city_q4_html": "Puis-je installer le garde-corps en verre moi-même?",
+        "grs_faq_city_a4_html": "<p>Oui. L’installation est simple et à la portée de tous : les spigots se fixent au bois ou au béton et les panneaux de verre trempé de 12 mm s’y insèrent. Suivez notre <a href=\"/fr/pages/guide-installation-cloture-verre\">guide d’installation de garde-corps en verre</a> et notre vidéo d’installation avant de commencer.</p>",
+        "grs_faq_city_q5_html": "Comment obtenir une soumission pour un garde-corps en verre à [city]?",
+        "grs_faq_city_a5_html": "<p>Envoyez-nous une demande de plan avec vos mesures, photos ou dessins et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet. Vous pouvez aussi nous appeler ou nous texter au <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_hub_h_html": "Garde-corps en verre, [region] : questions fréquentes",
+        "grs_faq_hub_q1_html": "Livrez-vous des garde-corps en verre partout sur le territoire ([region])?",
+        "grs_faq_hub_a1_html": "<p>Oui. Nous expédions des systèmes de garde-corps en verre aux maisons et aux entreprises partout sur le territoire ([region]). [shipping] Livraison gratuite pour les commandes de garde-corps en verre de plus de 3 000 $.</p>",
+        "grs_faq_hub_q2_html": "Où trouver le code du bâtiment pour les garde-corps en verre ([region])?",
+        "grs_faq_hub_a2_html": "<p>Notre guide [code_link] explique les exigences pour les garde-corps ([region]). Assurez-vous de respecter le code du bâtiment local avant de commander et d’installer.</p>",
+        "grs_faq_hub_q3_html": "Que comprend un système de garde-corps en verre sans cadre?",
+        "grs_faq_hub_a3_html": "<p>Un système sans cadre utilise des panneaux de verre trempé de 12 mm maintenus par des spigots en acier inoxydable 2205 de qualité marine, avec des connecteurs entre les panneaux, une main courante en option et de la quincaillerie de porte pour les portes. <a href=\"/fr/collections/rampe-verre\">Voir tous les produits</a>.</p>",
+        "grs_faq_hub_q4_html": "Le garde-corps en verre résiste-t-il aux vents forts?",
+        "grs_faq_hub_a4_html": "<p>Oui. Nos garde-corps en verre sont conçus pour résister à des vents très forts et aux intempéries, avec un rendement éprouvé même dans des conditions extrêmes.</p>",
+        "grs_faq_hub_q5_html": "Comment obtenir une soumission pour mon projet ([region])?",
+        "grs_faq_hub_a5_html": "<p>Envoyez-nous une demande de plan avec vos mesures, photos ou dessins et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet. Vous pouvez aussi nous appeler ou nous texter au <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_code_h_html": "Code des garde-corps en verre, [region] : questions fréquentes",
+        "grs_faq_code_q1_html": "Faut-il un permis pour un garde-corps en verre ([region])?",
+        "grs_faq_code_a1_html": "<p>Les exigences de permis dépendent de votre municipalité et de l’ampleur du projet. Renseignez-vous auprès du service du bâtiment de votre municipalité avant de commander. Assurez-vous de respecter le code du bâtiment local avant de commander et d’installer.</p>",
+        "grs_faq_code_q2_html": "Avez-vous des documents d’ingénierie pour les inspecteurs?",
+        "grs_faq_code_a2_html": "<p>Oui. Nos <a href=\"/fr/pages/essais-techniques-garde-corps-en-verre\">documents d’ingénierie</a> couvrent les spigots à montage sur le dessus et à montage latéral, sur béton et sur bois, avec dessins, charges d’application et détails de renfort.</p>",
+        "grs_faq_code_q3_html": "Quelles hauteurs de garde-corps en verre vendez-vous?",
+        "grs_faq_code_a3_html": "<p>Nos panneaux de verre trempé de 12 mm sont offerts en quatre hauteurs : 33,6\", 39,6\", 46\" et 57,7\", pour une hauteur totale de garde-corps de 36\", 42\", 48\" ou 60\" une fois le panneau inséré dans le spigot.</p>",
+        "grs_faq_code_q4_html": "Livrez-vous des garde-corps en verre sur le territoire ([region])?",
+        "grs_faq_code_a4_html": "<p>Oui. [shipping] Consultez notre page [hub_link] pour voir les villes desservies.</p>",
+        "grs_faq_us_h_html": "Questions fréquentes",
+        "grs_faq_us_q1_html": "Livrez-vous des garde-corps en verre partout aux États-Unis?",
+        "grs_faq_us_a1_html": "<p>Oui. Nous expédions des systèmes de garde-corps en verre partout [country]. [shipping] Le prix affiché au moment du paiement est le prix final, sans frais cachés, tarifs ni droits de douane, même si la commande traverse la frontière entre les États-Unis et le Canada.</p>",
+        "grs_faq_us_q2_html": "Y a-t-il des frais cachés, des tarifs ou des droits de douane sur les commandes aux États-Unis?",
+        "grs_faq_us_a2_html": "<p>Non. Le prix affiché au moment du paiement est le prix final, sans frais cachés, tarifs ni droits de douane, même si la commande traverse la frontière entre les États-Unis et le Canada.</p>",
+        "grs_faq_us_q3_html": "Que faire si mon verre arrive endommagé?",
+        "grs_faq_us_a3_html": "<p>Si un produit arrive endommagé, il doit être signalé dans les 3 jours suivant la livraison et avant l’installation. Une fois le dommage confirmé, The Glass Railing Store remplacera ou remboursera l’article endommagé sans frais supplémentaires.</p>",
+        "grs_faq_us_q4_html": "Comment obtenir une soumission?",
+        "grs_faq_us_a4_html": "<p>Envoyez-nous une demande de plan avec vos mesures, photos ou dessins et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet. Vous pouvez aussi nous appeler ou nous texter au <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_faq_ca_h_html": "Questions fréquentes",
+        "grs_faq_ca_q1_html": "Livrez-vous des garde-corps en verre partout au Canada?",
+        "grs_faq_ca_a1_html": "<p>Oui. [shipping] Livraison gratuite pour les commandes de garde-corps en verre de plus de 3 000 $.</p>",
+        "grs_faq_ca_q2_html": "Offrez-vous l’installation?",
+        "grs_faq_ca_a2_html": "<p>Nous offrons actuellement des services d’installation uniquement en Ontario. Partout ailleurs, nos systèmes sont conçus pour être installés soi-même grâce à notre <a href=\"/fr/pages/guide-installation-cloture-verre\">guide d’installation</a> et à nos vidéos.</p>",
+        "grs_faq_ca_q3_html": "Que faire si mon verre arrive endommagé?",
+        "grs_faq_ca_a3_html": "<p>Si un produit arrive endommagé, il doit être signalé dans les 3 jours suivant la livraison et avant l’installation. Une fois le dommage confirmé, The Glass Railing Store remplacera ou remboursera l’article endommagé sans frais supplémentaires.</p>",
+        "grs_faq_ca_q4_html": "Comment obtenir une soumission?",
+        "grs_faq_ca_a4_html": "<p>Envoyez-nous une demande de plan avec vos mesures, photos ou dessins et nous vous enverrons une soumission détaillée des matériaux nécessaires à votre projet. Vous pouvez aussi nous appeler ou nous texter au <a href=\"tel:+18554527715\">(855) 452-7715</a>.</p>",
+        "grs_res1_title_html": "FAQ",
+        "grs_res1_text_html": "Réponses sur les produits, l’installation, la livraison, la garantie et le paiement.",
+        "grs_res2_title_html": "Guide d’installation de garde-corps en verre",
+        "grs_res2_text_html": "Instructions étape par étape, conseils d’experts et bonnes pratiques.",
+        "grs_res3_title_html": "Codes du bâtiment pour garde-corps en verre",
+        "grs_res3_text_html": "Les principaux codes du bâtiment et conseils de conformité.",
+        "grs_res4_title_html": "Information sur la livraison",
+        "grs_res4_text_html": "Notre processus de livraison, directement chez vous.",
+        "grs_res5_title_html": "Garantie / Promesse antirouille",
+        "grs_res5_text_html": "Une promesse antirouille de 10 ans sur notre quincaillerie.",
+        "grs_res6_title_html": "Documents d’ingénierie",
+        "grs_res6_text_html": "Caractéristiques, résistance aux charges et directives d’installation.",
+        "grs_res7_title_html": "Voir tous les produits",
+        "grs_res7_text_html": "Panneaux de verre, spigots, connecteurs, quincaillerie de porte et mains courantes."
+      }
+    }
+  }
+}

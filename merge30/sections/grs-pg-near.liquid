@@ -1,0 +1,130 @@
+{%- comment -%}
+  The end of a location page, in this order:
+  1. a free quote band (prototype .qband): [place] in the heading is the city (city pages) or the state or province;
+     the button goes to the page's quote form (#quote-form) unless another link is set;
+  2. links to the places around this page (prototype .pg-near-sec), from the location menus (snippets/grs-pg-loc):
+     city page: the other cities of its state or province, with links to the state page and its building code page;
+     state or province page: the other states (or provinces) and, when "Also list its cities" is on, its own cities;
+     building code page: the cities of that state or province and its page. Other pages: nothing.
+     The quote band shows with these links, on pages that have a place (city, state or province, building code
+     page).
+     [region] in a heading is the state or province;
+  3. "Helpful resources" cards (snippets/grs-pg-res, Theme settings > GRS helpful resources); with "Only with the
+     places nearby" on, only on pages that list places (the shared page template: the prototype shows them there only).
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_near), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_cta_eyebrow = 'grs.sd.pg_near.cta_eyebrow_html' | t
+  assign sd_cta_eyebrow = section.settings.cta_eyebrow | default: sd_cta_eyebrow
+  assign sd_cta_heading = 'grs.sd.pg_near.cta_heading_html' | t
+  assign sd_cta_heading = section.settings.cta_heading | default: sd_cta_heading
+  assign sd_cta_text = 'grs.sd.pg_near.cta_text_html' | t
+  assign sd_cta_text = section.settings.cta_text | default: sd_cta_text
+  assign sd_cta_button = 'grs.sd.pg_near.cta_button_html' | t
+  assign sd_cta_button = section.settings.cta_button | default: sd_cta_button
+  assign sd_cta_phone_label = 'grs.sd.pg_near.cta_phone_label_html' | t
+  assign sd_cta_phone_label = section.settings.cta_phone_label | default: sd_cta_phone_label
+  assign sd_eyebrow = 'grs.sd.pg_near.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_h_city = 'grs.sd.pg_near.h_city_html' | t
+  assign sd_h_city = section.settings.h_city | default: sd_h_city
+  assign sd_h_hub_us = 'grs.sd.pg_near.h_hub_us_html' | t
+  assign sd_h_hub_us = section.settings.h_hub_us | default: sd_h_hub_us
+  assign sd_h_hub_ca = 'grs.sd.pg_near.h_hub_ca_html' | t
+  assign sd_h_hub_ca = section.settings.h_hub_ca | default: sd_h_hub_ca
+  assign sd_h_code = 'grs.sd.pg_near.h_code_html' | t
+  assign sd_h_code = section.settings.h_code | default: sd_h_code
+  assign sd_cities_h = 'grs.sd.pg_near.cities_h_html' | t
+  assign sd_cities_h = section.settings.cities_h | default: sd_cities_h
+  assign sd_hub_link_text = 'grs.sd.pg_near.hub_link_text_html' | t
+  assign sd_hub_link_text = section.settings.hub_link_text | default: sd_hub_link_text
+  assign sd_res_eyebrow = 'grs.sd.pg_near.res_eyebrow_html' | t
+  assign sd_res_eyebrow = section.settings.res_eyebrow | default: sd_res_eyebrow
+  assign sd_res_heading = 'grs.sd.pg_near.res_heading_html' | t
+  assign sd_res_heading = section.settings.res_heading | default: sd_res_heading
+-%}
+{%- capture loc -%}{% render 'grs-pg-loc' %}{%- endcapture -%}
+{%- liquid
+  assign L = loc | split: '␟'
+  assign kind = L[0]
+  assign region = L[3]
+  assign lm = settings.grs_loc_menu | default: linklists['grs-locations']
+  assign heading = ''
+  case kind
+    when 'city'
+      assign heading = sd_h_city
+    when 'hub'
+      if L[1] == 'CA'
+        assign heading = sd_h_hub_ca
+      else
+        assign heading = sd_h_hub_us
+      endif
+    when 'code'
+      assign heading = sd_h_code
+  endcase
+  assign heading = heading | replace: '[region]', region
+  assign place = ''
+  case kind
+    when 'city'
+      assign place = L[2]
+    when 'hub', 'code'
+      assign place = region
+  endcase
+  assign cta_h = sd_cta_heading | default: ''
+  if place == ''
+    assign cta_h = cta_h | replace: ' in [place]', '' | replace: '[place]', ''
+  else
+    assign cta_h = cta_h | replace: '[place]', place
+  endif
+  assign cta_l = section.settings.cta_link | default: '#quote-form'
+  assign grs_phone = settings.grs_phone | default: '(855) 452-7715'
+  assign grs_phone_tel = grs_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.' | prepend: '+1'
+-%}
+{%- capture chips -%}{%- for c in lm.links -%}{%- for r in c.links -%}
+{%- if kind == 'city' and r.title == region -%}{%- for x in r.links -%}{%- unless x.object.id == page.id -%}<a class="pg-chip" href="{% render 'grs-url', url: x.url %}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>{{ x.title | escape }}</span></a>{%- endunless -%}{%- endfor -%}{%- endif -%}
+{%- if kind == 'code' and r.title == region -%}{%- for x in r.links -%}<a class="pg-chip" href="{% render 'grs-url', url: x.url %}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>{{ x.title | escape }}</span></a>{%- endfor -%}{%- endif -%}
+{%- endfor -%}
+{%- if kind == 'hub' -%}{%- assign mine = false -%}{%- for r in c.links -%}{%- if r.title == region -%}{%- assign mine = true -%}{%- endif -%}{%- endfor -%}
+{%- if mine -%}{%- for r in c.links -%}{%- unless r.title == region -%}<a class="pg-chip" href="{% render 'grs-url', url: r.url %}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>{{ r.title | escape }}</span></a>{%- endunless -%}{%- endfor -%}{%- endif -%}{%- endif -%}
+{%- endfor -%}{%- endcapture -%}
+{%- capture cities -%}{%- if kind == 'hub' and section.settings.show_cities -%}{%- for c in lm.links -%}{%- for r in c.links -%}{%- if r.title == region -%}{%- for x in r.links -%}<a class="pg-chip" href="{% render 'grs-url', url: x.url %}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>{{ x.title | escape }}</span></a>{%- endfor -%}{%- endif -%}{%- endfor -%}{%- endfor -%}{%- endif -%}{%- endcapture -%}
+{%- capture foot -%}
+{%- if kind == 'city' or kind == 'code' -%}{%- if L[4] != blank and sd_hub_link_text != blank -%}<a class="arrow-link" href="{% render 'grs-url', url: L[4] %}">{{ sd_hub_link_text | replace: '[region]', region | escape }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}{%- endif -%}
+{%- if kind == 'city' or kind == 'hub' -%}{%- if L[6] != blank -%}<a class="arrow-link" href="{% render 'grs-url', url: L[6] %}">{{ L[7] | default: region | escape }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}{%- endif -%}
+{%- endcapture -%}
+{%- liquid
+  assign has = chips | strip
+  assign has_c = cities | strip
+  assign fs = foot | strip
+  assign show = false
+  if has != '' or has_c != '' or fs != ''
+    assign show = true
+  endif
+  if heading == ''
+    assign show = false
+  endif
+-%}
+{%- if section.settings.show_cta and cta_h != blank and place != '' and show -%}
+<section class="sec qband-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="qband"><div class="qband-t">{%- if sd_cta_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_cta_eyebrow }}</span>{%- endif -%}<h2 class="mh2">{{ cta_h | escape }}</h2>{%- if sd_cta_text != blank -%}<p>{{ sd_cta_text }}</p>{%- endif -%}</div><div class="qband-b">{%- if sd_cta_button != blank -%}<a class="btn" href="{% render 'grs-url', url: cta_l %}"><span class="dot"></span>{{ sd_cta_button }}</a>{%- endif -%}{%- if sd_cta_phone_label != blank -%}<a class="qband-ph" href="tel:{{ grs_phone_tel }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span><em>{{ sd_cta_phone_label }}</em><b>{{ grs_phone }}</b></span></a>{%- endif -%}</div></div></div></section>
+{%- endif -%}
+{%- if show -%}
+<section class="sec pg-near-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-near"><div class="pg-near-h">{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}<h2 class="mh2">{{ heading | escape }}</h2></div>
+{%- if has != '' -%}<div class="pg-chips">{{ chips }}</div>{%- endif -%}
+{%- if has_c != '' -%}<h3 class="pg-near-h3">{{ sd_cities_h | replace: '[region]', region | escape }}</h3><div class="pg-chips">{{ cities }}</div>{%- endif -%}
+{%- if fs != '' -%}<div class="pg-near-f">{{ foot }}</div>{%- endif -%}
+</div></div></section>
+{%- endif -%}
+{%- liquid
+  assign show_res = section.settings.show_res
+  if section.settings.res_with_near and show == false
+    assign show_res = false
+  endif
+-%}
+{%- if show_res -%}{%- capture res -%}{% render 'grs-pg-res', cur: page.handle %}{%- endcapture -%}{%- assign res_s = res | strip -%}{%- if res_s != '' -%}
+<section class="sec more-res"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="mr-head">{%- if sd_res_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_res_eyebrow }}</span>{%- endif -%}{%- if sd_res_heading != blank -%}<h2 class="mh2">{{ sd_res_heading }}</h2>{%- endif -%}</div><ul class="mr-grid" role="list">{{ res }}</ul></div></section>
+{%- endif -%}{%- endif -%}
+
+{% schema %}
+{"name":"GRS nearby places","tag":"div","class":"grs-pg-near-wrap","settings":[{"type":"paragraph","content":"The end of a location page: a free quote band, the places nearby (from the location menus) and the helpful resources cards."},{"type":"header","content":"Free quote band"},{"type":"checkbox","id":"show_cta","label":"Show the free quote band","default":true},{"type":"text","id":"cta_eyebrow","label":"Small title","placeholder":"Free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"cta_heading","label":"Heading","info":"[place] is the city, or the state or province on their pages.","placeholder":"Free quote for your glass railing project in [place]"},{"type":"textarea","id":"cta_text","label":"Text","placeholder":"Submit a plan request and we will send you a detailed quote on the materials your project needs.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"cta_button","label":"Button","placeholder":"Get a free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"url","id":"cta_link","label":"Button link","info":"Empty: the page's quote form."},{"type":"text","id":"cta_phone_label","label":"Phone label","info":"Phone: Theme settings > GRS store info and menus. Empty: no phone.","placeholder":"Call or text us"},{"type":"header","content":"Places nearby"},{"type":"paragraph","content":"From the location menus (Theme settings > GRS location pages). City pages: the other cities of the state or province. State pages: the other states or provinces. Building code pages: the cities of that state. [region] is the state or province."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Locations","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"h_city","label":"Heading on city pages","placeholder":"More cities we serve in [region]","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"h_hub_us","label":"Heading on U.S. state pages","placeholder":"Other states we serve","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"h_hub_ca","label":"Heading on province pages","placeholder":"Other provinces we serve","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"h_code","label":"Heading on building code pages","placeholder":"Glass railings in [region]","info":"Empty: the standard text, in the visitor's language."},{"type":"checkbox","id":"show_cities","label":"State pages: also list its cities","default":false},{"type":"text","id":"cities_h","label":"Heading of that list","placeholder":"Cities we serve in [region]","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"hub_link_text","label":"Link to the state page","placeholder":"Glass railings in [region]","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Helpful resources"},{"type":"checkbox","id":"show_res","label":"Show the helpful resources cards","default":true},{"type":"checkbox","id":"res_with_near","label":"Only with the places nearby","default":false,"info":"On: the cards show only on pages that list places nearby (the free quote band too)."},{"type":"text","id":"res_eyebrow","label":"Small title","placeholder":"Resources","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"res_heading","label":"Heading","placeholder":"Helpful resources","info":"Empty: the standard text, in the visitor's language."},{"type":"paragraph","content":"The cards: Theme settings > GRS helpful resources."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Link size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Link size (phone)"}],"presets":[{"name":"GRS nearby places"}]}
+{% endschema %}

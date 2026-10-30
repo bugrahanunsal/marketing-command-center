@@ -1,0 +1,55 @@
+{%- comment -%}
+  Directory of a country page (prototype S.dir): every state or province of the locations menu with its cities and
+  its building code page (matched by title in the building codes menu). Shows on the country pages (Locations USA,
+  Locations Canada); nothing on other pages. Menus: Theme settings > GRS location pages.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_dir), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.pg_dir.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading_us = 'grs.sd.pg_dir.heading_us_html' | t
+  assign sd_heading_us = section.settings.heading_us | default: sd_heading_us
+  assign sd_heading_ca = 'grs.sd.pg_dir.heading_ca_html' | t
+  assign sd_heading_ca = section.settings.heading_ca | default: sd_heading_ca
+  assign sd_code_label = 'grs.sd.pg_dir.code_label_html' | t
+  assign sd_code_label = section.settings.code_label | default: sd_code_label
+-%}
+{%- capture loc -%}{% render 'grs-pg-loc' %}{%- endcapture -%}
+{%- liquid
+  assign L = loc | split: '␟'
+  assign lm = settings.grs_loc_menu | default: linklists['grs-locations']
+  assign cm = settings.grs_codes_menu | default: linklists['grs-building-codes']
+  assign node = nil
+  if L[0] == 'lochub'
+    for c in lm.links
+      if c.url == L[5]
+        assign node = c
+      endif
+    endfor
+  endif
+  if L[1] == 'CA'
+    assign heading = sd_heading_ca
+  else
+    assign heading = sd_heading_us
+  endif
+-%}
+{%- if node and node.links.size > 0 -%}
+<section class="sec pg-dir-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-sh">{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow | escape }}</span>{%- endif -%}<h2 class="mh2">{{ heading | escape }}</h2></div><div class="pg-dir">{%- for r in node.links -%}{%- liquid
+  assign code_u = ''
+  for t in cm.links
+    for n in t.links
+      for x in n.links
+        if x.title == r.title
+          assign code_u = x.url
+          break
+        endif
+      endfor
+    endfor
+  endfor
+-%}<div class="pg-dir-r"><h3><a href="{{ r.url }}">{{ r.title | escape }}</a></h3>{%- if r.links.size > 0 -%}<p>{%- for x in r.links -%}<a href="{{ x.url }}">{{ x.title | escape }}</a>{%- endfor -%}</p>{%- endif -%}{%- if code_u != '' and sd_code_label != blank -%}<a class="pg-dir-code" href="{{ code_u }}">{{ sd_code_label | replace: '[region]', r.title | escape }}</a>{%- endif -%}</div>{%- endfor -%}</div></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS locations directory","tag":"div","settings":[{"type":"paragraph","content":"On the country pages (Locations USA, Locations Canada): every state or province with its cities and its building code page, from the location menus (Theme settings > GRS location pages). Other pages: nothing."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Directory","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading_us","label":"Heading (USA page)","placeholder":"Glass railings by state","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading_ca","label":"Heading (Canada page)","placeholder":"Glass railings by province","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"code_label","label":"Building code link","info":"[region] is the state or province. Empty: no link.","placeholder":"[region] building code"},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size","label":"State title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"title_size_mobile","label":"State title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Link size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Link size (phone)"}],"presets":[{"name":"GRS locations directory"}]}
+{% endschema %}

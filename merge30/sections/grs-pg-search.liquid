@@ -1,0 +1,76 @@
+{%- comment -%}
+  Search page (prototype search view): the search box, the number of results, then the results by kind: products
+  (cards), collections whose title has every word (chips), pages (chips) and posts (cards). With no search or no
+  results: the helpful resources (Theme settings > GRS helpful resources). [count] and [terms] fill the result lines.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_search), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_title = 'grs.sd.pg_search.title_html' | t
+  assign sd_title = section.settings.title | default: sd_title
+  assign sd_results_title = 'grs.sd.pg_search.results_title_html' | t
+  assign sd_results_title = section.settings.results_title | default: sd_results_title
+  assign sd_placeholder = 'grs.sd.pg_search.placeholder_html' | t
+  assign sd_placeholder = section.settings.placeholder | default: sd_placeholder
+  assign sd_button_label = 'grs.sd.pg_search.button_label_html' | t
+  assign sd_button_label = section.settings.button_label | default: sd_button_label
+  assign sd_count_one = 'grs.sd.pg_search.count_one_html' | t
+  assign sd_count_one = section.settings.count_one | default: sd_count_one
+  assign sd_count_other = 'grs.sd.pg_search.count_other_html' | t
+  assign sd_count_other = section.settings.count_other | default: sd_count_other
+  assign sd_none_text = 'grs.sd.pg_search.none_text_html' | t
+  assign sd_none_text = section.settings.none_text | default: sd_none_text
+  assign sd_products_heading = 'grs.sd.pg_search.products_heading_html' | t
+  assign sd_products_heading = section.settings.products_heading | default: sd_products_heading
+  assign sd_collections_heading = 'grs.sd.pg_search.collections_heading_html' | t
+  assign sd_collections_heading = section.settings.collections_heading | default: sd_collections_heading
+  assign sd_pages_heading = 'grs.sd.pg_search.pages_heading_html' | t
+  assign sd_pages_heading = section.settings.pages_heading | default: sd_pages_heading
+  assign sd_articles_heading = 'grs.sd.pg_search.articles_heading_html' | t
+  assign sd_articles_heading = section.settings.articles_heading | default: sd_articles_heading
+  assign sd_res_eyebrow = 'grs.sd.pg_search.res_eyebrow_html' | t
+  assign sd_res_eyebrow = section.settings.res_eyebrow | default: sd_res_eyebrow
+  assign sd_res_heading = 'grs.sd.pg_search.res_heading_html' | t
+  assign sd_res_heading = section.settings.res_heading | default: sd_res_heading
+-%}
+{%- liquid
+  assign terms = search.terms | default: ''
+  assign q = terms | strip | downcase
+  assign n = search.results_count | default: 0
+-%}
+{%- paginate search.results by 48, window_size: 1 -%}
+{%- capture prods -%}{%- for it in search.results -%}{%- if it.object_type == 'product' -%}{% render 'grs-card', product: it %}{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- capture pgs -%}{%- for it in search.results -%}{%- if it.object_type == 'page' -%}<a class="pg-chip" href="{{ it.url }}">{{ it.title | escape }}</a>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- capture arts -%}{%- for it in search.results -%}{%- if it.object_type == 'article' -%}{% render 'grs-post-card', a: it %}{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- capture colhits -%}{%- if q != '' and paginate.current_page == 1 -%}{%- assign words = q | split: ' ' -%}{%- for c in collections -%}{%- liquid
+    assign t = c.title | downcase
+    assign all = true
+    for w in words
+      unless t contains w
+        assign all = false
+      endunless
+    endfor
+  -%}{%- if all -%}<a class="pg-chip" href="{{ c.url }}">{{ c.title | escape }}</a>{%- endif -%}{%- endfor -%}{%- endif -%}{%- endcapture -%}
+{%- assign n_cols = colhits | split: 'class="pg-chip"' | size | minus: 1 | at_least: 0 -%}
+{%- assign total = n | plus: n_cols -%}
+<section class="pg-top"{% render 'grs-vars', s: section.settings %}><div class="wrap">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: sd_title %}{%- endif -%}<h1 class="pg-title">{% if q != '' %}{{ sd_results_title | escape }}{% else %}{{ sd_title | escape }}{% endif %}</h1>
+<form class="srch" role="search" action="{{ routes.search_url }}" method="get"><label class="sr" for="srq-{{ section.id }}">{{ sd_title | escape }}</label><input id="srq-{{ section.id }}" class="inp" type="search" name="q" value="{{ terms | escape }}" placeholder="{{ sd_placeholder | escape }}" autocomplete="off"><button class="btn" type="submit"><span class="dot"></span>{{ sd_button_label | escape }}</button></form>
+{%- if q != '' -%}{%- if total == 1 -%}{%- assign line = sd_count_one -%}{%- else -%}{%- assign line = sd_count_other -%}{%- endif -%}<p class="pg-lead">{{ line | replace: '[count]', total | replace: '[terms]', terms | escape }}</p>{%- endif -%}</div></section>
+{%- if prods != blank -%}<section class="sec tight"><div class="wrap"><h2 class="mh2">{{ sd_products_heading | escape }}</h2><div class="grid4 cgrid2">{{ prods }}</div></div></section>{%- endif -%}
+{%- if colhits != blank -%}<section class="sec tight"><div class="wrap"><h2 class="mh2">{{ sd_collections_heading | escape }}</h2><div class="pg-chips">{{ colhits }}</div></div></section>{%- endif -%}
+{%- if pgs != blank -%}<section class="sec tight"><div class="wrap"><h2 class="mh2">{{ sd_pages_heading | escape }}</h2><div class="pg-chips">{{ pgs }}</div></div></section>{%- endif -%}
+{%- if arts != blank -%}<section class="sec tight"><div class="wrap"><h2 class="mh2">{{ sd_articles_heading | escape }}</h2><div class="bgrid2">{{ arts }}</div></div></section>{%- endif -%}
+{%- if paginate.pages > 1 -%}<section class="sec tight"><div class="wrap"><nav class="pager pg-pager" aria-label="{{ 'grs.a11y.pagination' | t }}">
+{%- if paginate.previous -%}<a class="pg-pp" href="{{ paginate.previous.url }}" aria-label="{{ 'grs.a11y.prev_page' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+{%- for part in paginate.parts -%}{%- if part.is_link -%}<a href="{{ part.url }}" aria-label="{{ 'grs.a11y.page_n' | t: n: part.title }}">{{ part.title }}</a>{%- elsif part.title == paginate.current_page -%}<span class="on" aria-current="page">{{ part.title }}</span>{%- else -%}<span class="gap">{{ part.title }}</span>{%- endif -%}{%- endfor -%}
+{%- if paginate.next -%}<a class="pg-pp" href="{{ paginate.next.url }}" aria-label="{{ 'grs.a11y.next_page' | t }}"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+</nav></div></section>{%- endif -%}
+{%- endpaginate -%}
+{%- if q != '' and total == 0 -%}<section class="sec tight"><div class="wrap"><p class="pg-lead">{{ sd_none_text | replace: '[terms]', terms | escape }}</p></div></section>{%- endif -%}
+{%- if q == '' or total == 0 -%}{%- capture res -%}{% render 'grs-pg-res', cur: 'search' %}{%- endcapture -%}{%- assign res_s = res | strip -%}{%- if res_s != '' -%}
+<section class="sec more-res"><div class="wrap"><div class="mr-head">{%- if sd_res_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_res_eyebrow | escape }}</span>{%- endif -%}{%- if sd_res_heading != blank -%}<h2 class="mh2">{{ sd_res_heading | escape }}</h2>{%- endif -%}</div><ul class="mr-grid" role="list">{{ res }}</ul></div></section>
+{%- endif -%}{%- endif -%}
+
+{% schema %}
+{"name":"GRS search","tag":"div","settings":[{"type":"checkbox","id":"show_crumb","label":"Show the breadcrumb","default":true},{"type":"text","id":"title","label":"Title","placeholder":"Search","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"results_title","label":"Title with results","placeholder":"Search results","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"placeholder","label":"Search box hint","placeholder":"Search panels, spigots, guides, cities","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"button_label","label":"Button","placeholder":"Search","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"count_one","label":"One result","placeholder":"[count] result for “[terms]”","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"count_other","label":"Several results","placeholder":"[count] results for “[terms]”","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"none_text","label":"No results","placeholder":"No results found for “[terms]”. Check the spelling or use a different word or phrase.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"products_heading","label":"Products heading","placeholder":"Products","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"collections_heading","label":"Collections heading","placeholder":"Collections","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"pages_heading","label":"Pages heading","placeholder":"Pages","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"articles_heading","label":"Posts heading","placeholder":"Articles","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"res_eyebrow","label":"Resources: small title","placeholder":"Resources","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"res_heading","label":"Resources: heading","placeholder":"Helpful resources","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS search"}]}
+{% endschema %}

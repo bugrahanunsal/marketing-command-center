@@ -1,0 +1,644 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero2": {
+      "type": "grs-pg-hero2",
+      "settings": {
+        "badge": "Premium Balcony Glass Systems",
+        "heading": "Glass Balcony Railing",
+        "text": "<p>Upgrade your balcony with a modern glass railing that delivers unobstructed views, premium safety, and lasting durability. At The Glass Railing Store, our glass balcony railing systems are built to meet Canadian building codes — engineered to handle wind, weather, and everyday use.</p>",
+        "button_label": "Get Free Quote",
+        "button_link": "shopify://pages/contact",
+        "button2_label": "Shop Products",
+        "button2_link": "shopify://collections/glass-railing",
+        "image": "shopify://shop_images/frameless-glass-railing-garden-wall.webp"
+      },
+      "blocks": {
+        "feature_NwdQnt": {
+          "type": "feature",
+          "settings": {
+            "title": "Built for Canadian Weather"
+          }
+        },
+        "feature_BTLxqi": {
+          "type": "feature",
+          "settings": {
+            "title": "Code-Compliant Systems"
+          }
+        },
+        "feature_CArmGy": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium Tempered Glass"
+          }
+        },
+        "feature_kHBJke": {
+          "type": "feature",
+          "settings": {
+            "title": "Free Quote in 24 Hours"
+          }
+        }
+      },
+      "block_order": [
+        "feature_NwdQnt",
+        "feature_BTLxqi",
+        "feature_CArmGy",
+        "feature_kHBJke"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "settings": {},
+      "blocks": {
+        "icon_L3WXHd": {
+          "type": "item",
+          "settings": {
+            "title": "Wholesale Pricing",
+            "text": "Direct-to-consumer savings on every order"
+          }
+        },
+        "icon_44JYAD": {
+          "type": "item",
+          "settings": {
+            "title": "Free Shipping $3,000+",
+            "text": "Fast delivery across Canada & the US"
+          }
+        },
+        "icon_EQt6eb": {
+          "type": "item",
+          "settings": {
+            "title": "Expert Support",
+            "text": "Mon–Fri 8 AM – 5 PM ET | +1-855-452-7715"
+          }
+        },
+        "icon_WYi3CA": {
+          "type": "item",
+          "settings": {
+            "title": "Hardware Exchanges",
+            "text": "Unused hardware in original packaging: store credit within 30 days"
+          }
+        }
+      },
+      "block_order": [
+        "icon_L3WXHd",
+        "icon_44JYAD",
+        "icon_EQt6eb",
+        "icon_WYi3CA"
+      ]
+    },
+    "cards": {
+      "type": "grs-pg-cards",
+      "settings": {
+        "heading": "Types of Glass Balcony Railings",
+        "text": "Choose the perfect glass railing system for your balcony"
+      },
+      "blocks": {
+        "railing_card_QyT4Bg": {
+          "type": "card",
+          "settings": {
+            "title": "Frameless Glass Balcony Railing",
+            "text": "Seamless post-free 12mm tempered glass ideal for modern condos and luxury homes. Maximum views with minimal hardware.",
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false,
+            "badge": "Premium"
+          }
+        },
+        "railing_card_FHNXC7": {
+          "type": "card",
+          "settings": {
+            "title": "Semi-Frameless Balcony Glass Railing",
+            "text": "Slim posts with modern styling. Perfect blend of structural support and contemporary design for mid-rise buildings.",
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_YjXiBG": {
+          "type": "card",
+          "settings": {
+            "title": "Framed Glass Railing for Balcony",
+            "text": "Aluminum rails with tempered glass infill for affordable, code-compliant safety. Durable and budget-friendly option.",
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        },
+        "railing_card_CLnYcR": {
+          "type": "card",
+          "settings": {
+            "title": "Glass Balcony Fence",
+            "text": "For rooftop terraces, privacy screens, and ground-floor balconies. Available in clear, frosted, or tinted glass.",
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/glass-railing",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "railing_card_QyT4Bg",
+        "railing_card_FHNXC7",
+        "railing_card_YjXiBG",
+        "railing_card_CLnYcR"
+      ]
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "settings": {
+        "heading": "Why Glass Railings Are Perfect for Balconies",
+        "text": "<p>Transform your balcony into a modern outdoor living space</p>"
+      },
+      "blocks": {
+        "column_AdjPJt": {
+          "type": "column",
+          "settings": {
+            "title": "Unobstructed Views",
+            "text": "<p>Crystal-clear glass panels preserve your panoramic city views, lake vistas, or mountain landscapes without visual barriers.</p>"
+          }
+        },
+        "column_t4HjF9": {
+          "type": "column",
+          "settings": {
+            "title": "North America Weather Resistance",
+            "text": "<p>Engineered to withstand extreme cold, snow loads, ice, and UV exposure. Tested for harsh Canadian climates.</p>"
+          }
+        },
+        "column_aMmQya": {
+          "type": "column",
+          "settings": {
+            "title": "Code-Compliant Safety Glass",
+            "text": "<p>All systems meet NBC (National Building Code) requirements. Tempered safety glass with proper height and strength ratings.</p>"
+          }
+        },
+        "column_M4y4MB": {
+          "type": "column",
+          "settings": {
+            "title": "Low Maintenance",
+            "text": "<p>No painting, staining, or sealing required. Simple cleaning with glass cleaner keeps your railing looking new for decades.</p>"
+          }
+        },
+        "column_mETXkm": {
+          "type": "column",
+          "settings": {
+            "title": "Increased Resale Value",
+            "text": "<p>Premium glass railings boost property value by 5-10% and appeal to modern buyers seeking contemporary aesthetics.</p>"
+          }
+        },
+        "column_eRUWLG": {
+          "type": "column",
+          "settings": {
+            "title": "Durable Construction",
+            "text": "<p>12mm tempered glass with stainless steel or aluminum hardware. Built to last 20-30 years with minimal wear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_AdjPJt",
+        "column_t4HjF9",
+        "column_aMmQya",
+        "column_M4y4MB",
+        "column_mETXkm",
+        "column_eRUWLG"
+      ]
+    },
+    "compare": {
+      "type": "grs-pg-compare",
+      "settings": {
+        "heading": "Compare Balcony Glass Railing Systems"
+      },
+      "blocks": {
+        "comparison_card_8JGRTi": {
+          "type": "column",
+          "settings": {
+            "title": "Frameless",
+            "row1_label": "Appearance",
+            "row1_text": "Seamless modern luxury",
+            "row2_label": "Maintenance",
+            "row2_text": "Very low - minimal hardware",
+            "row3_label": "Weather Resistance",
+            "row3_text": "Excellent",
+            "row4_label": "Safety",
+            "row4_text": "12mm tempered glass",
+            "row5_label": "Best Use Case",
+            "row5_text": "High-rise condos, luxury homes"
+          }
+        },
+        "comparison_card_ApR4AR": {
+          "type": "column",
+          "settings": {
+            "title": "Semi-Frameless",
+            "row1_label": "Appearance",
+            "row1_text": "Contemporary with slim posts",
+            "row2_label": "Maintenance",
+            "row2_text": "Low - easy cleaning",
+            "row3_label": "Weather Resistance",
+            "row3_text": "Excellent",
+            "row4_label": "Safety",
+            "row4_text": "10-12mm tempered glass",
+            "row5_label": "Best Use Case",
+            "row5_text": "Mid-rise buildings, modern homes"
+          }
+        },
+        "comparison_card_DxBCmM": {
+          "type": "column",
+          "settings": {
+            "title": "Framed",
+            "row1_label": "Appearance",
+            "row1_text": "Traditional with visible frame",
+            "row2_label": "Maintenance",
+            "row2_text": "Low - durable aluminum",
+            "row3_label": "Weather Resistance",
+            "row3_text": "Very good",
+            "row4_label": "Safety",
+            "row4_text": "6-8mm tempered glass",
+            "row5_label": "Best Use Case",
+            "row5_text": "Budget-conscious projects"
+          }
+        },
+        "comparison_card_cQcETk": {
+          "type": "column",
+          "settings": {
+            "title": "Privacy Glass",
+            "row1_label": "Appearance",
+            "row1_text": "Frosted or tinted modern",
+            "row2_label": "Maintenance",
+            "row2_text": "Low - hides water spots",
+            "row3_label": "Weather Resistance",
+            "row3_text": "Excellent",
+            "row4_label": "Safety",
+            "row4_text": "10-12mm tempered glass",
+            "row5_label": "Best Use Case",
+            "row5_text": "Ground floor, urban balconies"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_card_8JGRTi",
+        "comparison_card_ApR4AR",
+        "comparison_card_DxBCmM",
+        "comparison_card_cQcETk"
+      ]
+    },
+    "gallery": {
+      "type": "grs-pg-gallery",
+      "settings": {
+        "heading": "Real Balcony Glass Installations",
+        "text": "See our premium installations across Canada"
+      },
+      "blocks": {
+        "image_Ke4x3K": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Image_Balcony_glass_railing_project_1.png"
+          }
+        },
+        "image_me76XN": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Image_Balcony_glass_railing_project_2.png"
+          }
+        },
+        "image_zGkWPQ": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_2.png"
+          }
+        },
+        "image_ED9TC7": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_3.png"
+          }
+        },
+        "image_WTxC6A": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_4.png"
+          }
+        },
+        "image_rb4hWK": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_5.png"
+          }
+        },
+        "image_EeYzER": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_6.png"
+          }
+        },
+        "image_97qCpp": {
+          "type": "photo",
+          "settings": {
+            "image": "shopify://shop_images/Container_7.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ke4x3K",
+        "image_me76XN",
+        "image_zGkWPQ",
+        "image_ED9TC7",
+        "image_WTxC6A",
+        "image_rb4hWK",
+        "image_EeYzER",
+        "image_97qCpp"
+      ]
+    },
+    "stats": {
+      "type": "grs-pg-stats",
+      "settings": {
+        "heading": "Why Canadians Trust Us"
+      },
+      "blocks": {
+        "stat_Rnq7yC": {
+          "type": "stat",
+          "settings": {
+            "number": "14+",
+            "text": "Years Experience"
+          }
+        },
+        "stat_iUCNyY": {
+          "type": "stat",
+          "settings": {
+            "number": "120+",
+            "text": "Projects Delivered"
+          }
+        },
+        "stat_NFcejD": {
+          "type": "stat",
+          "settings": {
+            "number": "10K+",
+            "text": "Happy Customers"
+          }
+        },
+        "stat_MqTpaj": {
+          "type": "stat",
+          "settings": {
+            "number": "100%",
+            "text": "Canada Wide Shipping"
+          }
+        }
+      },
+      "block_order": [
+        "stat_Rnq7yC",
+        "stat_iUCNyY",
+        "stat_NFcejD",
+        "stat_MqTpaj"
+      ]
+    },
+    "options": {
+      "type": "grs-pg-options",
+      "settings": {
+        "heading": "Choose Your Balcony Style & Finish",
+        "text": "Customize your glass railing with premium options"
+      },
+      "blocks": {
+        "option_column_9WPGCD": {
+          "type": "column",
+          "settings": {
+            "title": "Glass Options",
+            "option_1_title": "Clear Glass",
+            "option_1_text": "Maximum transparency",
+            "option_2_title": "Frosted Glass",
+            "option_2_text": "Privacy + light",
+            "option_3_title": "Tinted Glass",
+            "option_3_text": "UV protection",
+            "option_4_title": "Laminated Safety Glass",
+            "option_4_text": "Extra security"
+          }
+        },
+        "option_column_xyJpNA": {
+          "type": "column",
+          "settings": {
+            "title": "Hardware Finishes",
+            "option_1_title": "Matte Black",
+            "option_1_text": "Modern & sleek",
+            "option_2_title": "Brushed Stainless Steel",
+            "option_2_text": "Contemporary classic",
+            "option_3_title": "Polished Chrome",
+            "option_3_text": "Luxury shine",
+            "option_4_title": "Bronze Finish",
+            "option_4_text": "Warm elegance"
+          }
+        }
+      },
+      "block_order": [
+        "option_column_9WPGCD",
+        "option_column_xyJpNA"
+      ]
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {
+        "variant": "balcony",
+        "heading": "Get Your Free Balcony Glass Quote",
+        "text": "Every balcony is different. Share your measurements and we'll send back a precise quote within 24 hours. Shop complete kits, panels, and hardware shipped across Canada and the USA.",
+        "types_label": "Balcony Type",
+        "types": "Standard\nJuliet\nCorner\nWrap-around\nRooftop",
+        "systems_label": "Preferred System",
+        "systems": "Frameless Glass\nSemi-Frameless\nAluminum Framed\nTempered Glass Panels",
+        "details_label": "Project Details",
+        "details_placeholder": "Tell us about your balcony dimensions, building codes, and timeline...",
+        "button_label": "Get a Free Quote"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "heading": "Balcony Glass Railing FAQs"
+      },
+      "blocks": {
+        "faq_E4mGCB": {
+          "type": "question",
+          "settings": {
+            "question": "Is glass balcony railing safe for high-rise buildings?",
+            "answer": "<p>Yes. Glass balcony railings are made from tempered or laminated safety glass engineered to withstand high wind loads and daily use. When professionally installed, they meet Canadian building codes and provide long-lasting safety and durability.</p>"
+          }
+        },
+        "faq_fBKAcR": {
+          "type": "question",
+          "settings": {
+            "question": "What type of glass is best for balcony railings?",
+            "answer": "<p>Tempered glass is the most popular choice for balcony railings because of its strength and safety. For added security, many homeowners and commercial projects choose laminated tempered glass, which remains intact even if damaged.</p>"
+          }
+        },
+        "faq_rVrymQ": {
+          "type": "question",
+          "settings": {
+            "question": "Do glass balcony railings require frequent cleaning?",
+            "answer": "<p>No. Glass railings require only occasional cleaning with mild soap, water, or a quality glass cleaner to maintain their clarity. Applying a protective glass coating can also help reduce water spots, fingerprints, and dirt buildup.</p>"
+          }
+        },
+        "faq_WLCTJk": {
+          "type": "question",
+          "settings": {
+            "question": "Can glass balcony railings handle extreme weather in Canada?",
+            "answer": "<p>Yes. High-quality tempered glass and corrosion-resistant aluminum or stainless steel hardware are designed to withstand snow, ice, rain, UV exposure, and strong winds. Proper installation ensures reliable performance in Canada's harsh climate.</p>"
+          }
+        },
+        "faq_VPce4K": {
+          "type": "question",
+          "settings": {
+            "question": "Do glass balcony railings provide privacy?",
+            "answer": "<p>Clear glass maximizes views but offers limited privacy. If privacy is important, you can choose frosted, tinted, or decorative glass panels while still maintaining a modern appearance and allowing natural light through.</p>"
+          }
+        },
+        "faq_TKKG43": {
+          "type": "question",
+          "settings": {
+            "question": "Are permits required for glass balcony railings?",
+            "answer": "<p>Permit requirements vary depending on your municipality and the scope of the project. It's best to check with your local building authority or contractor to ensure your glass railing installation complies with all applicable codes and regulations.</p>"
+          }
+        },
+        "faq_3DVwjA": {
+          "type": "question",
+          "settings": {
+            "question": "How long do glass balcony railings last?",
+            "answer": "<p>With quality materials and proper installation, glass balcony railings typically last 20–30 years or more. They resist rust, rot, and corrosion, requiring very little maintenance over their lifespan.</p>"
+          }
+        },
+        "faq_JUQPkN": {
+          "type": "question",
+          "settings": {
+            "question": "Can I customize the design of my balcony glass railing?",
+            "answer": "<p>Yes. Glass balcony railings are available in frameless, semi-frameless, and framed designs, with options for clear, frosted, tinted, or custom glass. You can also choose from various hardware finishes to match your home's architectural style.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_E4mGCB",
+        "faq_fBKAcR",
+        "faq_rVrymQ",
+        "faq_WLCTJk",
+        "faq_VPce4K",
+        "faq_TKKG43",
+        "faq_3DVwjA",
+        "faq_JUQPkN"
+      ]
+    },
+    "blog": {
+      "type": "grs-pg-blog",
+      "settings": {
+        "heading": "Balcony Glass Railing Guides",
+        "blog": "news",
+        "posts": 12
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Serving Major Canadian Cities",
+        "text": "Expanding our presence in these locations. Physical offices coming soon."
+      },
+      "blocks": {
+        "city_qMRfg4": {
+          "type": "location",
+          "settings": {
+            "title": "Toronto",
+            "link": "shopify://pages/ontario-glass-railing-toronto"
+          }
+        },
+        "city_V7wgw4": {
+          "type": "location",
+          "settings": {
+            "title": "Montreal",
+            "link": "shopify://pages/quebec-glass-railings-montreal"
+          }
+        },
+        "city_VeyUjP": {
+          "type": "location",
+          "settings": {
+            "title": "Edmonton",
+            "link": "shopify://pages/alberta-glass-railings-edmonton"
+          }
+        },
+        "city_iDp8UN": {
+          "type": "location",
+          "settings": {
+            "title": "Winnipeg",
+            "link": "shopify://pages/manitoba-glass-railings-winnipeg"
+          }
+        },
+        "city_NVk7kp": {
+          "type": "location",
+          "settings": {
+            "title": "Columbia",
+            "link": "shopify://pages/glass-railings-british-columbia"
+          }
+        },
+        "city_iwTGe7": {
+          "type": "location",
+          "settings": {
+            "title": "Saskatchewan",
+            "link": "shopify://pages/glass-railings-saskatchewan"
+          }
+        },
+        "city_dE6dM3": {
+          "type": "location",
+          "settings": {
+            "title": "Vancouver",
+            "link": "shopify://pages/british-columbia-glass-railings-vancouver"
+          }
+        },
+        "city_hT3NTX": {
+          "type": "location",
+          "settings": {
+            "title": "Calgary",
+            "link": "shopify://pages/alberta-glass-railings-calgary"
+          }
+        },
+        "city_pLUdpe": {
+          "type": "location",
+          "settings": {
+            "title": "Ottawa",
+            "link": "shopify://pages/ontario-glass-railing-ottawa"
+          }
+        },
+        "city_AApEaC": {
+          "type": "location",
+          "settings": {
+            "title": "Quebec City",
+            "link": "shopify://pages/glass-railings-quebec"
+          }
+        }
+      },
+      "block_order": [
+        "city_qMRfg4",
+        "city_V7wgw4",
+        "city_VeyUjP",
+        "city_iDp8UN",
+        "city_NVk7kp",
+        "city_iwTGe7",
+        "city_dE6dM3",
+        "city_hT3NTX",
+        "city_pLUdpe",
+        "city_AApEaC"
+      ]
+    }
+  },
+  "order": [
+    "hero2",
+    "icons",
+    "cards",
+    "cols",
+    "compare",
+    "gallery",
+    "stats",
+    "options",
+    "form",
+    "faq",
+    "blog",
+    "links"
+  ]
+}

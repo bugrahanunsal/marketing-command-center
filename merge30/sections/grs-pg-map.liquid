@@ -1,0 +1,48 @@
+{%- comment -%}
+  Service area card (prototype .pg-mapsec): the place the page is about, the delivery line of the page's country and a
+  link that opens the place in Google Maps. The country comes from the location menus (state or province of the page),
+  otherwise from the visitor's market. No map embed: nothing loads from Google until the visitor opens the link.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_map), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.pg_map.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_text = 'grs.sd.pg_map.text_html' | t
+  assign sd_text = section.settings.text | default: sd_text
+  assign sd_link_label = 'grs.sd.pg_map.link_label_html' | t
+  assign sd_link_label = section.settings.link_label | default: sd_link_label
+-%}
+{%- capture loc -%}{% render 'grs-pg-loc' %}{%- endcapture -%}
+{%- liquid
+  assign L = loc | split: '␟'
+  assign country = L[1]
+  if country == blank
+    if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+      assign country = 'US'
+    else
+      assign country = 'CA'
+    endif
+  endif
+  if country == 'US'
+    capture ship
+      render 'grs-ts', k: 'grs_ship_us'
+    endcapture
+  else
+    capture ship
+      render 'grs-ts', k: 'grs_ship_ca'
+    endcapture
+  endif
+  assign q = section.settings.location | strip
+-%}
+{%- if q != '' -%}
+<section class="sec pg-mapsec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-map"><div class="pg-map-art" aria-hidden="true"><i></i><i></i><i></i><span class="pg-pin"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span></div><div class="pg-map-t">
+{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}
+<p class="pg-map-q">{{ q | escape }}</p><p>{{ sd_text }}{% if ship != blank %} {{ ship }}{% endif %}</p>
+{%- if sd_link_label != blank -%}<a class="arrow-link" href="https://www.google.com/maps/search/?api=1&amp;query={{ q | url_encode }}" target="_blank" rel="noopener">{{ sd_link_label }} <svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>{%- endif -%}
+</div></div></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS service area","tag":"div","settings":[{"type":"paragraph","content":"The delivery line is the Canada or U.S. text of Theme settings > GRS location pages, for the country of the page (from the location menus), otherwise the visitor's market."},{"type":"text","id":"location","label":"Place","info":"Shown as the title and opened in Google Maps. Empty: the section is hidden."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Service area","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"text","label":"Text before the delivery line","placeholder":"Glass railing systems delivered right to your door.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"link_label","label":"Google Maps link","placeholder":"Open in Google Maps","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Place size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Place size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS service area"}]}
+{% endschema %}

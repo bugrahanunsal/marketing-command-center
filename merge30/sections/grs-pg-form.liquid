@@ -1,0 +1,128 @@
+{%- comment -%}
+  Quote request (prototype .pg-formsec): texts and contact details on the left, the form on the right.
+  The form is Shopify's contact form: messages go to the store's email (Settings > Notifications > Staff), with the
+  page they were sent from. An app form block added to this section (Globo Form Builder, Shopify Forms, Hulk ...)
+  takes the form's place. "Balcony" shows two extra lists (balcony type, preferred system).
+  [currency] in a point is the visitor's currency (CAD or USD).
+  Layout "Contact page" (prototype contact page): breadcrumb, small title, the page title (H1), the page text and the
+  phone and email cards on the left, the form on the right. Layout "Form only": the form (or the app's form) alone in
+  a centered card, for forms that are not quote requests (sign-up, consent ...).
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_form), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_contact_eyebrow = 'grs.sd.pg_form.contact_eyebrow_html' | t
+  assign sd_contact_eyebrow = section.settings.contact_eyebrow | default: sd_contact_eyebrow
+  assign sd_eyebrow = 'grs.sd.pg_form.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_heading = 'grs.sd.pg_form.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_text = 'grs.sd.pg_form.text_html' | t
+  assign sd_text = section.settings.text | default: sd_text
+  assign sd_point1 = 'grs.sd.pg_form.point1_html' | t
+  assign sd_point1 = section.settings.point1 | default: sd_point1
+  assign sd_point2 = 'grs.sd.pg_form.point2_html' | t
+  assign sd_point2 = section.settings.point2 | default: sd_point2
+  assign sd_point3 = 'grs.sd.pg_form.point3_html' | t
+  assign sd_point3 = section.settings.point3 | default: sd_point3
+  assign sd_phone_label = 'grs.sd.pg_form.phone_label_html' | t
+  assign sd_phone_label = section.settings.phone_label | default: sd_phone_label
+  assign sd_email_label = 'grs.sd.pg_form.email_label_html' | t
+  assign sd_email_label = section.settings.email_label | default: sd_email_label
+  assign sd_hours_label = 'grs.sd.pg_form.hours_label_html' | t
+  assign sd_hours_label = section.settings.hours_label | default: sd_hours_label
+  assign sd_hours = 'grs.sd.pg_form.hours_html' | t
+  assign sd_hours = section.settings.hours | default: sd_hours
+  assign sd_name_label = 'grs.sd.pg_form.name_label_html' | t
+  assign sd_name_label = section.settings.name_label | default: sd_name_label
+  assign sd_email_field = 'grs.sd.pg_form.email_field_html' | t
+  assign sd_email_field = section.settings.email_field | default: sd_email_field
+  assign sd_phone_field = 'grs.sd.pg_form.phone_field_html' | t
+  assign sd_phone_field = section.settings.phone_field | default: sd_phone_field
+  assign sd_optional = 'grs.sd.pg_form.optional_html' | t
+  assign sd_optional = section.settings.optional | default: sd_optional
+  assign sd_zip_label_ca = 'grs.sd.pg_form.zip_label_ca_html' | t
+  assign sd_zip_label_ca = section.settings.zip_label_ca | default: sd_zip_label_ca
+  assign sd_zip_label_us = 'grs.sd.pg_form.zip_label_us_html' | t
+  assign sd_zip_label_us = section.settings.zip_label_us | default: sd_zip_label_us
+  assign sd_types_label = 'grs.sd.pg_form.types_label_html' | t
+  assign sd_types_label = section.settings.types_label | default: sd_types_label
+  assign sd_types = 'grs.sd.pg_form.types_html' | t
+  assign sd_types = section.settings.types | default: sd_types
+  assign sd_systems_label = 'grs.sd.pg_form.systems_label_html' | t
+  assign sd_systems_label = section.settings.systems_label | default: sd_systems_label
+  assign sd_systems = 'grs.sd.pg_form.systems_html' | t
+  assign sd_systems = section.settings.systems | default: sd_systems
+  assign sd_details_label = 'grs.sd.pg_form.details_label_html' | t
+  assign sd_details_label = section.settings.details_label | default: sd_details_label
+  assign sd_details_placeholder = 'grs.sd.pg_form.details_placeholder_html' | t
+  assign sd_details_placeholder = section.settings.details_placeholder | default: sd_details_placeholder
+  assign sd_button_label = 'grs.sd.pg_form.button_label_html' | t
+  assign sd_button_label = section.settings.button_label | default: sd_button_label
+  assign sd_note = 'grs.sd.pg_form.note_html' | t
+  assign sd_note = section.settings.note | default: sd_note
+  assign sd_error_text = 'grs.sd.pg_form.error_text_html' | t
+  assign sd_error_text = section.settings.error_text | default: sd_error_text
+  assign sd_ok_title = 'grs.sd.pg_form.ok_title_html' | t
+  assign sd_ok_title = section.settings.ok_title | default: sd_ok_title
+  assign sd_ok_text = 'grs.sd.pg_form.ok_text_html' | t
+  assign sd_ok_text = section.settings.ok_text | default: sd_ok_text
+-%}
+{%- liquid
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+  assign cur = localization.country.currency.iso_code | default: cart.currency.iso_code | default: 'CAD'
+  assign cur_html = '<span class="cur">' | append: cur | append: '</span>'
+  assign fid = 'pf-' | append: section.id
+  assign phone = settings.grs_phone | default: '(855) 452-7715'
+  assign tel = phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | remove: '.'
+  assign email = settings.grs_email | default: 'info@glassrailingstore.com'
+  if grs_us
+    assign zip = sd_zip_label_us
+  else
+    assign zip = sd_zip_label_ca
+  endif
+  assign from = page.title | default: request.path
+-%}
+{%- capture form_html -%}
+{%- if section.blocks.size > 0 -%}<div class="pg-form-app">{%- for block in section.blocks -%}{% render block %}{%- endfor -%}</div>
+{%- else -%}
+{%- form 'contact', id: fid, class: 'qform pg-qform' -%}
+{%- if form.posted_successfully? -%}<div class="fok" role="status"><b>{{ sd_ok_title }}</b><span>{{ sd_ok_text }}</span></div>{%- endif -%}
+<input type="hidden" name="contact[Page]" value="{{ from | escape }} ({{ request.path | escape }})">
+<div class="f2"><div class="fld"><label for="{{ fid }}n">{{ sd_name_label }}</label><input class="inp" id="{{ fid }}n" type="text" name="contact[name]" autocomplete="name" data-req="name" required></div><div class="fld"><label for="{{ fid }}e">{{ sd_email_field }}</label><input class="inp" id="{{ fid }}e" type="email" name="contact[email]" autocomplete="email" data-req="email" required></div></div>
+<div class="f2"><div class="fld"><label for="{{ fid }}p">{{ sd_phone_field }} <em>{{ sd_optional }}</em></label><input class="inp" id="{{ fid }}p" type="tel" name="contact[phone]" autocomplete="tel"></div><div class="fld"><label for="{{ fid }}z">{{ zip }} <em>{{ sd_optional }}</em></label><input class="inp" id="{{ fid }}z" type="text" name="contact[{{ zip | escape }}]" autocomplete="postal-code"></div></div>
+{%- if section.settings.variant == 'balcony' -%}{%- assign t_opts = sd_types | newline_to_br | split: '<br />' -%}{%- assign s_opts = sd_systems | newline_to_br | split: '<br />' -%}
+<div class="f2"><div class="fld"><label for="{{ fid }}t">{{ sd_types_label }}</label><div class="pg-sel"><select class="sel" id="{{ fid }}t" name="contact[{{ sd_types_label | escape }}]">{%- for o in t_opts -%}{%- assign o = o | strip -%}{%- if o != '' -%}<option>{{ o | escape }}</option>{%- endif -%}{%- endfor -%}</select><svg width="12" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="fld"><label for="{{ fid }}s">{{ sd_systems_label }}</label><div class="pg-sel"><select class="sel" id="{{ fid }}s" name="contact[{{ sd_systems_label | escape }}]">{%- for o in s_opts -%}{%- assign o = o | strip -%}{%- if o != '' -%}<option>{{ o | escape }}</option>{%- endif -%}{%- endfor -%}</select><svg width="12" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div>
+{%- endif -%}
+<div class="fld"><label for="{{ fid }}m">{{ sd_details_label }}</label><textarea class="inp" id="{{ fid }}m" name="contact[body]" rows="4" placeholder="{{ sd_details_placeholder | escape }}"></textarea></div>
+<p class="ferr"{% if form.errors == blank %} hidden{% endif %} role="alert">{%- if form.errors != blank -%}{{ form.errors | default_errors }}{%- else -%}{{ sd_error_text }}{%- endif -%}</p>
+<div class="qsub"><button class="btn" type="submit"><span class="dot"></span>{{ sd_button_label }}</button>{%- if sd_note != blank -%}<span>{{ sd_note }}</span>{%- endif -%}</div>
+{%- endform -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- if section.settings.layout == 'contact' -%}
+<section class="pg-contact" id="quote-form"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="qgrid"><div class="qintro">{%- if section.settings.show_crumb -%}{% render 'grs-pg-crumb', cur: page.title %}{%- endif -%}{%- if sd_contact_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_contact_eyebrow }}</span>{%- endif -%}<h1 class="h1">{{ page.title | escape }}</h1>{%- if page.content != blank -%}<div class="rte">{% render 'grs-rte', html: page.content %}</div>{%- endif -%}
+<div class="ccards"><a class="ccard" href="tel:+1{{ tel | remove: '+1' }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg><span><em>{{ sd_phone_label }}</em><b>{{ phone }}</b></span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="ccard" href="mailto:{{ email }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span><em>{{ sd_email_label }}</em><b>{{ email }}</b></span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" aria-hidden="true"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div></div>
+<div class="pg-contact-f"><div class="sec pg-formsec"><div class="wrap"><div class="pg-form">{{ form_html }}</div></div></div></div></div></div></section>
+{%- elsif section.settings.layout == 'solo' -%}
+<section class="sec pg-formsec pg-form-solo" id="form-{{ section.id }}"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-form">{{ form_html }}</div></div></section>
+{%- else -%}
+<section class="sec pg-formsec" id="quote-form"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-form"><div class="pg-form-l">
+{%- if sd_eyebrow != blank -%}<span class="dot-eyebrow">{{ sd_eyebrow }}</span>{%- endif -%}
+{%- if sd_heading != blank -%}<h2 class="mh2">{{ sd_heading }}</h2>{%- endif -%}
+{%- if sd_text != blank -%}<p>{{ sd_text }}</p>{%- endif -%}
+{%- if sd_point1 != blank or sd_point2 != blank or sd_point3 != blank -%}<ul class="pg-form-pts">
+{%- for i in (1..3) -%}{%- case i -%}{%- when 1 -%}{%- assign pt = sd_point1 -%}{%- when 2 -%}{%- assign pt = sd_point2 -%}{%- else -%}{%- assign pt = sd_point3 -%}{%- endcase -%}{%- if pt != blank -%}<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg><span>{{ pt | escape | replace: '[currency]', cur_html }}</span></li>{%- endif -%}{%- endfor -%}
+</ul>{%- endif -%}
+<div class="pg-form-c"><a href="tel:+1{{ tel | remove: '+1' }}"><em>{{ sd_phone_label }}</em><b>{{ phone }}</b></a><a href="mailto:{{ email }}"><em>{{ sd_email_label }}</em><b>{{ email }}</b></a>
+{%- if sd_hours != blank -%}<span><em>{{ sd_hours_label }}</em><b>{{ sd_hours }}</b></span>{%- endif -%}</div></div>
+{{ form_html }}
+</div></div></section>
+{%- endif -%}
+
+{% schema %}
+{"name":"GRS quote form","tag":"div","settings":[{"type":"paragraph","content":"Shopify's contact form: messages go to the store's email with the page they were sent from. Add an app form block (Globo, Shopify Forms ...) to show that form instead."},{"type":"select","id":"layout","label":"Layout","default":"quote","options":[{"value":"quote","label":"Quote request (texts on the left)"},{"value":"contact","label":"Contact page (title, text and contact cards)"},{"value":"solo","label":"Form only (centered card)"}]},{"type":"checkbox","id":"show_crumb","label":"Contact page: show the breadcrumb","default":true},{"type":"text","id":"contact_eyebrow","label":"Contact page: small title","placeholder":"Contact us","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Quote request texts"},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"Free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading","label":"Heading","placeholder":"Request a free quote","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"text","label":"Text","placeholder":"Submit a plan request with your measurements, photos or drawings and we will send you a detailed quote on the materials necessary for your project.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"point1","label":"Point 1","placeholder":"A detailed list of the materials your project needs","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"point2","label":"Point 2","info":"[currency] is the visitor's currency (CAD or USD).","placeholder":"Prices in [currency]"},{"type":"text","id":"point3","label":"Point 3","placeholder":"Expert guidance, measurements and installation support","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Contact details"},{"type":"paragraph","content":"Phone and email come from Theme settings > GRS store info and menus."},{"type":"text","id":"phone_label","label":"Phone label","placeholder":"Call or text","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"email_label","label":"Email label","placeholder":"Email","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"hours_label","label":"Hours label","placeholder":"Hours","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"hours","label":"Hours","placeholder":"Mon–Fri, 8 AM – 5 PM ET","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Form"},{"type":"select","id":"variant","label":"Fields","default":"standard","options":[{"value":"standard","label":"Standard"},{"value":"balcony","label":"Balcony (balcony type and system lists)"}]},{"type":"text","id":"name_label","label":"Name","placeholder":"Name","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"email_field","label":"Email","placeholder":"Email","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"phone_field","label":"Phone","placeholder":"Phone","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"optional","label":"Optional field note","placeholder":"(optional)","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"zip_label_ca","label":"Postal code (Canada)","placeholder":"Postal code","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"zip_label_us","label":"ZIP code (U.S.)","placeholder":"ZIP code","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"types_label","label":"Balcony type label","placeholder":"Balcony type","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"types","label":"Balcony types","info":"One per line.","placeholder":"Residential balcony\nCondo or apartment balcony\nCommercial balcony\nOther"},{"type":"text","id":"systems_label","label":"System label","placeholder":"Preferred system","info":"Empty: the standard text, in the visitor's language."},{"type":"textarea","id":"systems","label":"Systems","info":"One per line.","placeholder":"Frameless\nSemi-frameless\nNot sure yet"},{"type":"text","id":"details_label","label":"Project details","placeholder":"Project details","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"details_placeholder","label":"Project details hint","placeholder":"Length of each run, railing height, corners, gates, stairs","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"button_label","label":"Button","placeholder":"Send my project","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"note","label":"Note next to the button","placeholder":"Free, with no obligation.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"error_text","label":"Message when name or email is missing","placeholder":"Add your name and a valid email so we can send the quote.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"ok_title","label":"Sent: title","placeholder":"Thanks, your project details were sent.","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"ok_text","label":"Sent: text","placeholder":"We will get back to you as soon as possible.","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"blocks":[{"type":"@app"}],"presets":[{"name":"GRS quote form"}]}
+{% endschema %}

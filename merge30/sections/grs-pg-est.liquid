@@ -1,0 +1,42 @@
+{%- comment -%}
+  Cost estimator (prototype .pg-est; the live "Glass cost estimator"): linear feet times the low and high price per
+  foot, updated as the visitor types (assets/grs-page.js). The button goes to the page's quote form unless a link is set.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.pg_est), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_feet_label = 'grs.sd.pg_est.feet_label_html' | t
+  assign sd_feet_label = section.settings.feet_label | default: sd_feet_label
+  assign sd_field1 = 'grs.sd.pg_est.field1_html' | t
+  assign sd_field1 = section.settings.field1 | default: sd_field1
+  assign sd_field2 = 'grs.sd.pg_est.field2_html' | t
+  assign sd_field2 = section.settings.field2 | default: sd_field2
+  assign sd_field3 = 'grs.sd.pg_est.field3_html' | t
+  assign sd_field3 = section.settings.field3 | default: sd_field3
+  assign sd_result_heading = 'grs.sd.pg_est.result_heading_html' | t
+  assign sd_result_heading = section.settings.result_heading | default: sd_result_heading
+  assign sd_based_text = 'grs.sd.pg_est.based_text_html' | t
+  assign sd_based_text = section.settings.based_text | default: sd_based_text
+-%}
+{%- liquid
+  assign fid = 'est-' | append: section.id
+  assign ft = section.settings.default_feet | default: 50
+  assign lo = section.settings.min_price | default: 0
+  assign hi = section.settings.max_price | default: 0
+  assign lo_c = ft | times: lo | times: 100
+  assign hi_c = ft | times: hi | times: 100
+  assign based = sd_based_text | default: 'Based on [feet] linear feet'
+-%}
+<section class="sec pg-est-sec"{% render 'grs-vars', s: section.settings %}><div class="wrap"><div class="pg-sh pg-center">{%- if section.settings.heading != blank -%}<h2 class="mh2">{{ section.settings.heading }}</h2>{%- endif -%}{%- if section.settings.text != blank -%}<p>{{ section.settings.text | escape }}</p>{%- endif -%}</div>
+<div class="pg-est" data-min="{{ lo }}" data-max="{{ hi }}" data-based="{{ based | escape }}"><form class="pg-est-f" onsubmit="return false">
+<div class="fld"><label for="{{ fid }}">{{ sd_feet_label | escape }}</label><input class="inp est-in" id="{{ fid }}" type="number" min="1" value="{{ ft }}" inputmode="numeric"></div>
+<input class="est-range" type="range" min="1" max="300" value="{{ ft | at_most: 300 }}" aria-label="{{ sd_feet_label | escape }}">
+{%- for i in (1..3) -%}{%- case i -%}{%- when 1 -%}{%- assign fl = sd_field1 -%}{%- when 2 -%}{%- assign fl = sd_field2 -%}{%- else -%}{%- assign fl = sd_field3 -%}{%- endcase -%}{%- if fl != blank -%}<div class="fld"><label for="{{ fid }}-{{ i }}">{{ fl | escape }}</label><input class="inp" id="{{ fid }}-{{ i }}" type="text"></div>{%- endif -%}{%- endfor -%}
+</form>
+<div class="pg-est-r">{%- if sd_result_heading != blank -%}<p class="mono">{{ sd_result_heading | escape }}</p>{%- endif -%}<h3 class="est-out">{{ lo_c | money_without_trailing_zeros }} – {{ hi_c | money_without_trailing_zeros }}</h3><p class="est-based">{{ based | replace: '[feet]', ft | escape }}</p>
+{%- if section.settings.button_label != blank -%}<a class="btn" href="{%- if section.settings.button_link != blank -%}{% render 'grs-url', url: section.settings.button_link %}{%- else -%}#quote-form{%- endif -%}"><span class="dot"></span>{{ section.settings.button_label | escape }}</a>{%- endif -%}
+{%- if section.settings.note != blank -%}<span class="pg-est-note">{{ section.settings.note | escape }}</span>{%- endif -%}</div></div></div></section>
+
+{% schema %}
+{"name":"GRS cost estimator","tag":"div","settings":[{"type":"inline_richtext","id":"heading","label":"Heading"},{"type":"textarea","id":"text","label":"Text"},{"type":"range","id":"min_price","label":"Low price per linear foot","min":10,"max":1000,"step":10,"default":100},{"type":"range","id":"max_price","label":"High price per linear foot","min":10,"max":1000,"step":10,"default":150},{"type":"range","id":"default_feet","label":"Linear feet at the start","min":5,"max":300,"step":5,"default":50},{"type":"text","id":"feet_label","label":"Linear feet label","placeholder":"Linear Feet","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"field1","label":"Extra field 1","info":"Empty: field hidden.","placeholder":"Glass Type"},{"type":"text","id":"field2","label":"Extra field 2","placeholder":"Glass Style","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"field3","label":"Extra field 3","placeholder":"Installation Type","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"result_heading","label":"Result title","placeholder":"Estimated Project Cost","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"based_text","label":"Result note","info":"[feet] is the number of linear feet.","placeholder":"Based on [feet] linear feet"},{"type":"text","id":"button_label","label":"Button"},{"type":"url","id":"button_link","label":"Button link","info":"Empty: the page's quote form."},{"type":"text","id":"note","label":"Small text under the button"},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"}],"presets":[{"name":"GRS cost estimator"}]}
+{% endschema %}

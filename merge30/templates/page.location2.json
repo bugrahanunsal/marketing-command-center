@@ -1,0 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/DSC00862-pre.jpg",
+        "heading": "Service Locations In Canada",
+        "text": "The Glass Railing Store supplies glass railing systems to residential and commercial projects across Canada. Our products are designed for outdoor and indoor use, handling changing weather conditions, moisture, and temperature shifts. From decks and balconies to staircases and terraces, our railings provide safety while keeping views open and uncluttered.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/Ste-julie_25be39f3-f8ae-4075-8038-3f50c3aa2a41.jpg"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Canadian Operations"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Glass Railing Store is a Canadian-based company shipping glass railing systems to projects across Canada and the U.S. Our facility is located in Sainte-Julie, Quebec, while our team actively serves projects across Quebec and Ontario.</p><p><strong>1805 Rue Nobel, Sainte-Julie, QC/Canada J3E 1Y6</strong></p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Other Locations We serve"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing British Columbia",
+            "link": "shopify://pages/glass-railings-british-columbia"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Ontario",
+            "link": "shopify://pages/glass-railings-ontario"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Alberta",
+            "link": "shopify://pages/glass-railings-alberta"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Saskatchewan",
+            "link": "shopify://pages/glass-railings-saskatchewan"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Manitoba",
+            "link": "shopify://pages/glass-railings-manitoba"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Quebec",
+            "link": "shopify://pages/glass-railings-quebec"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Nova Scotia",
+            "link": "shopify://pages/glass-railings-nova-scotia"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing New Brunswick",
+            "link": "shopify://pages/glass-railings-new-brunswick"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Newfoundland and Labrador",
+            "link": "shopify://pages/glass-railings-newfoundland-and-labrador"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place7",
+        "place8",
+        "place9"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Canada"
+      }
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "settings": {
+        "heading": "<strong>How It Works</strong>"
+      },
+      "blocks": {
+        "col1": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Select Your Location</strong>",
+            "text": "<p>Choose your state or region to view available options.</p>"
+          }
+        },
+        "col2": {
+          "type": "column",
+          "settings": {
+            "title": "Browse Products",
+            "text": "<p>Explore tempered and laminated glass panels, spigots, clamps, and cap rails.</p>"
+          }
+        },
+        "col3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Pick Up or Delivery</strong>",
+            "text": "<p>Collect your order from a nearby location or have it shipped safely to your door.</p>"
+          }
+        },
+        "col4": {
+          "type": "column",
+          "settings": {
+            "title": "Install with Ease",
+            "text": "<p>Follow our step-by-step guides or watch our instructional videos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "col1",
+        "col2",
+        "col3",
+        "col4"
+      ]
+    },
+    "dir": {
+      "type": "grs-pg-dir",
+      "settings": {}
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "split2": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/C1688.00_00_01_49.Still011.png"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings offer a practical way to create safe, open spaces without visual barriers. Whether for a home or commercial property, our systems provide lasting performance with minimal upkeep. Contact The Glass Railing Store to request pricing and plan your glass railing project in Canada.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/location-usa"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "split",
+    "links",
+    "map",
+    "cols",
+    "dir",
+    "faq",
+    "form",
+    "split2"
+  ]
+}
