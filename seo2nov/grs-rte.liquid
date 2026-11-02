@@ -1,0 +1,39 @@
+{%- comment -%}
+  Rich text (theme editor settings, page, article and collection texts, product descriptions) with its store links
+  kept in the visitor's market and language folder (/en-us, /es-us, /fr ...). Full links to this store are made into
+  paths first, and a folder written into a link (/en-us/... in an English page) is replaced by the visitor's own.
+  SEO audit, 2 Nov 2026:
+  - links to old addresses that only redirect point straight at the live page;
+  - list items that link to the removed Alaska pages are left out.
+  render 'grs-rte', html: section.settings.text
+{%- endcomment -%}
+{%- liquid
+  assign h = html | append: ''
+  assign d1 = 'href="https://' | append: shop.domain
+  assign d2 = 'href="https://www.' | append: shop.domain
+  assign h = h | replace: d2, d1 | append: ''
+  assign e1 = d1 | append: '"'
+  assign h = h | replace: e1, 'href="/"' | replace: d1, 'href="'
+  assign h = h | replace: 'href="//', 'href="@@grs@@' | replace: 'href="/en-us"', 'href="/"' | replace: 'href="/es-us"', 'href="/"' | replace: 'href="/fr"', 'href="/"' | replace: 'href="/en-us/', 'href="/' | replace: 'href="/es-us/', 'href="/' | replace: 'href="/fr/', 'href="/'
+  assign h = h | replace: 'href="/collections/glass-railing-systems"', 'href="/collections/glass-railing"' | replace: 'href="/collections/installation-kits"', 'href="/collections/glass-railing"' | replace: 'href="/collections/glass-panels-railing"', 'href="/collections/glass-panel-railing"' | replace: 'href="/pages/americain-building-code-glass-railing"', 'href="/pages/american-building-code-glass-railing"' | replace: 'href="/pages/newfoundland-and-labrador-building-code-for-glass-railings"', 'href="/pages/newfoundland-labrador-building-code-for-glass-railings"' | replace: 'href="/pages/rhode-island-glass-railing-building-code"', 'href="/pages/rhode-island-building-code-for-glass-railing"' | replace: 'href="/blogs/news/marine-grade-stainless-steel-explained-for-builders"', 'href="/blogs/news/marine-grade-stainless-steel-explained"'
+  if h contains 'href="/pages/alaska-' or h contains 'href="/pages/glass-railing-alaska"'
+    assign parts = h | split: '<li'
+    assign out = parts.first
+    for part in parts offset: 1
+      if part contains 'href="/pages/alaska-' or part contains 'href="/pages/glass-railing-alaska"'
+        assign seg = part | split: '</li>' | first
+        assign tail = part | remove_first: seg | remove_first: '</li>'
+        assign out = out | append: tail
+      else
+        assign out = out | append: '<li' | append: part
+      endif
+    endfor
+    assign h = out
+  endif
+  if routes.root_url != '/'
+    assign pre = 'href="' | append: routes.root_url | append: '/'
+    assign h = h | replace: 'href="/', pre
+  endif
+  assign h = h | replace: 'href="@@grs@@', 'href="//'
+  echo h
+-%}
