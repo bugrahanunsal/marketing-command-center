@@ -33,14 +33,6 @@
         "description": "<p>At <a href=\"/\"><strong>the Glass Railing Store</strong></a>, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across West Virginia.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
       }
     },
-    "links": {
-      "type": "grs-pg-links",
-      "settings": {
-        "heading": "Cities We Serve In West Virginia"
-      },
-      "blocks": {},
-      "block_order": []
-    },
     "map": {
       "type": "grs-pg-map",
       "settings": {
@@ -116,7 +108,6 @@
     "hero",
     "form",
     "feat",
-    "links",
     "map",
     "split",
     "faq",

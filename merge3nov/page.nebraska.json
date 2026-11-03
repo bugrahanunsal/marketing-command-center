@@ -24,14 +24,6 @@
         "description": "<p>At The Glass Railing Store, we deliver complete glass railing systems that <a href=\"/pages/glass-railing-installation-guide\"><strong>make installation easy</strong></a> and results long-lasting.</p><ul><li>Tempered and laminated glass panels built for strength and safety<br/></li><li>Frameless and semi-framed options that create open, modern spaces<br/></li><li>Stainless steel and black hardware choices to fit any design<br/></li><li>Step-by-step installation guides<br/></li><li>Options for residential, commercial, and outdoor projects</li></ul>"
       }
     },
-    "links": {
-      "type": "grs-pg-links",
-      "settings": {
-        "heading": "Cities We Serve In Nebraska"
-      },
-      "blocks": {},
-      "block_order": []
-    },
     "map": {
       "type": "grs-pg-map",
       "settings": {
@@ -107,7 +99,6 @@
     "hero",
     "form",
     "feat",
-    "links",
     "map",
     "split",
     "faq",

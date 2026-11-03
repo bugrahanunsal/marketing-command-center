@@ -33,14 +33,6 @@
         "description": "<p>At The Glass Railing Store, we don’t just provide glass railings in South Dakota. We offer durable, elegant, and secure railing systems that enhance both the appearance and functionality of any space. Our team is dedicated to making your project smooth and stress-free, offering expert support from design to installation.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>tempered and laminated glass</strong></a> built for safety, clarity, and long-term performance.<br/></li><li><strong>Modern Designs:</strong> Frameless and semi-frameless options with sleek hardware to achieve a clean, contemporary look.<br/></li><li><strong>Professional Support:</strong> Expert guidance and detailed installation assistance whenever you need it.<br/></li><li><strong>Safety & Compliance:</strong> Products engineered to meet South Dakota’s residential and commercial safety standards.<br/></li><li><strong>Easy Ordering & Delivery:</strong> Convenient online shopping and reliable delivery across South Dakota.<br/></li></ul><p>With a focus on quality, craftsmanship, and service, your glass railing project will be stylish, secure, and simple. Homeowners and professionals across South Dakota trust The Glass Railing Store for reliable products and lasting value.</p>"
       }
     },
-    "links": {
-      "type": "grs-pg-links",
-      "settings": {
-        "heading": "Cities We Serve In South Dakota"
-      },
-      "blocks": {},
-      "block_order": []
-    },
     "map": {
       "type": "grs-pg-map",
       "settings": {
@@ -116,7 +108,6 @@
     "hero",
     "form",
     "feat",
-    "links",
     "map",
     "split",
     "faq",
