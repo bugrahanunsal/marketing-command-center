@@ -73,7 +73,9 @@
       {{ page_title }}
       {%- if current_tags %}{% assign grs_tags = current_tags | join: ', ' %} &ndash; {{ 'grs.general.tagged' | t: tags: grs_tags }}{% endif -%}
       {%- if current_page != 1 %} &ndash; {{ 'general.pagination.page' | t: number: current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- comment -%} The store name is added only while the whole title stays within 60 characters (SEO audit tab 3, 3 Nov 2026:
+        51 code pages had titles of 62 to 96 characters because of the suffix). {%- endcomment -%}
+      {%- unless page_title contains shop.name -%}{%- assign grs_tl = page_title.size | plus: 26 -%}{%- if grs_tl <= 60 %} &ndash; {{ shop.name }}{% endif -%}{%- endunless -%}
     </title>
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
