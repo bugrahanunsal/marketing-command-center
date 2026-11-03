@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Newport Beach, CA</strong>",
+        "text": "We ship frameless glass railing systems to Newport Beach addresses from the Balboa Peninsula to Newport Coast. Each order is 12 mm tempered glass on 2205 marine-grade stainless spigots, crated and delivered to you. Owners, architects and builders use them for bayfront decks, bluff terraces, roof decks and pool enclosures.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Newport Beach projects</strong>",
+        "description": "<p>Bayfront and rooftop decks in Newport Beach take the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46\" panel</a> for a 48\" railing. It sits on 6\" top-mount spigots, or on side-mount spigots where the deck is tight. Pool yards in Newport Coast take the 57.7\" panel for the 60\" enclosure. Add 90°, 180° or adjustable connectors to turn corners, and a wall connector where the run meets stucco. Order the <a href=\"/products/glass-hardware-sample-kit\">sample kit</a> to compare Brushed Stainless and Matte Black in your light.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Newport Beach, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Can a rooftop deck on the Balboa Peninsula use a glass railing?",
+            "answer": "<p>Yes. A roof deck needs the same 42\" minimum guard the California code sets for any deck on a house. The 46\" panel gives 48\". The 6\" top-mount spigot bolts to the slab or to blocked framing; the engineering documents show the blocking details for wood and concrete. Check the roof deck permit with the City of Newport Beach before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Which finish lasts better on a Balboa Island bayfront, Brushed Stainless or Matte Black?",
+            "answer": "<p>Both finishes are on the same 2205 marine-grade stainless steel, so both carry the 10-year no-rust promise. Pick by look: Brushed Stainless disappears against the water, and Matte Black reads as a thin dark line against white trim. Rinse either one with fresh water when you wash the windows. The sample kit lets you see both next to your siding.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does the coastal zone affect a railing replacement in Corona del Mar?",
+            "answer": "<p>Much of Newport Beach, including Corona del Mar, the Peninsula and the islands, is inside the coastal zone. The City of Newport Beach Community Development Department can tell you whether a railing replacement on your lot needs a coastal review. That is separate from the building permit. Ask before you order glass, since panels are made to order. We supply the product details and engineering documents for the file.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How does freight delivery work on Balboa Island or Lido Isle?",
+            "answer": "<p>The glass arrives crated on a freight truck with a liftgate, and the driver lowers it to the curb. The island streets and alleys are narrow, so tell us about access when you order and have someone home to receive the crate. Open it, check each panel and report any damage within 3 days, before installation, for a free replacement or refund.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in Newport Beach? Send measurements, photos or drawings through the quote form. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Glass is made to order and final sale, so measure twice before you confirm. Then visit the <a href=\"/pages/glass-railing-california\">California glass railing hub</a>, and our <a href=\"/pages/california-glass-railing-carlsbad\">Carlsbad</a> page for North County San Diego.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Marine-Grade 2205 Steel",
+            "text": "Every spigot, connector and latch is 2205 stainless with a 10-year no-rust promise."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42\" Minimum Guards",
+            "text": "California sets 42\" minimum guards for houses; the 46\" panel gives 48\"."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate Freight Delivery",
+            "text": "Crated glass arrives by freight carrier in 5–10 business days after 2–3 days of processing."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Custom Panel Sizes",
+            "text": "Panels in many widths and four heights; custom sizes and stair glass available."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Newport Beach"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for bayfront, bluff and rooftop decks in Newport Beach"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Newport Beach projects: harbor, bluffs and rooftops</strong></p><p>Newport Beach is built around its harbor. Balboa Island, Lido Isle, Linda Isle and the bay side of the Balboa Peninsula have homes with decks a few feet above the water. There the deck railing is the only thing between the living room and the boats. On the ocean side of the Peninsula, three-story homes end in a rooftop deck that needs a 42\" guard around its edge. Corona del Mar and Newport Coast sit on bluffs above the beach and Crystal Cove, where terraces face south and west.</p><p>A frameless glass railing, each panel held by two spigots with no posts, suits all three settings. We ship 48\" deck and rooftop railings, and 60\" pool enclosures for Newport Coast and Big Canyon backyards. Interior remodels in Dover Shores and Newport Heights order custom stair glass.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Salt air every day: why the hardware matters here</strong></p><p>Salt air is constant in Newport Beach, not just on windy days, and it is hard on plated and painted steel. Our spigots, connectors, hinges, latches and caprail are 2205 marine-grade stainless steel with a 10-year no-rust promise, in Brushed Stainless or Matte Black. The 12 mm tempered panels carry a lifetime warranty against manufacturing defects. A fresh-water rinse when you wash the windows keeps the salt film off.</p><p>The California code sets 42\" as the minimum guard height even for a house, and 60\" for a pool enclosure. The City of Newport Beach Community Development Department applies the 2022 Title 24 codes. Much of the city lies in the coastal zone, so ask them what review your address needs. The <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> has the full summary.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Newport Beach and installing it yourself</strong></p><p>Orders are processed in 2–3 business days, then delivered in 5–10 business days by freight carrier with liftgate delivery. On Balboa Island and the Peninsula the streets and alleys are narrow. Tell us how a truck can reach you when you order; the driver lowers the crate at the curb. The price at checkout is final, with no duties, tariffs or hidden fees, and orders over 3,000 USD ship free. Report any damage within 3 days of delivery and before installation for a free replacement or refund.</p><p>The system is designed for DIY installation. Most standard installations take about 4 hours with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos. Top-mount spigots bolt to a concrete slab or wood deck; side-mount spigots bolt to the fascia and keep a narrow bayfront deck clear. Engineering documents cover both.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Bayfront decks on Balboa Island and Lido Isle",
+            "text": "<p>Decks on the bay side sit low over the water, and the guard faces a boardwalk or a dock. The 46\" panel on side-mount spigots gives 48\" without posts and without spigots on the deck boards. Custom widths fill runs between a wall and a gate.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Rooftop decks on the Peninsula",
+            "text": "<p>Many ocean-front homes on the Balboa Peninsula and in West Newport end in a roof deck. The California code asks for a 42\" guard there like any other deck. Top-mount spigots on the slab or on blocked wood framing carry 48\" panels; the engineering documents show the blocking.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Bluff terraces in Corona del Mar and Newport Coast",
+            "text": "<p>Terraces on Ocean Boulevard and above Crystal Cove look down the coast. A frameless glass railing keeps the sightline from a seated position; a square caprail adds a hand line if you want one. The hardware is 2205 stainless with a 10-year no-rust promise.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Newport Beach",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Newport Beach?",
+        "text": "<p>We may have an installer in your area: contact us with your project address and we will check. Otherwise the system is designed for DIY: most standard installations take about 4 hours with the guide and videos.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

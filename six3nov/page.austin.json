@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Austin, TX</strong>",
+        "text": "We ship frameless glass railings to Austin, from Tarrytown and Westlake Hills to East Austin, Lakeway and the Hill Country around Dripping Springs. The crate holds 12 mm tempered glass and 2205 stainless spigots, sized for hillside view decks, downtown rooftop decks, lake-house balconies and pool decks.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Austin projects</strong>",
+        "description": "<p>Austin decks mostly call for the 33.6\" panel, which gives the 36\" glass deck railing the code sets for a house. On a hillside deck, pair it with the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> on the fascia. Downtown and Rainey Street balconies use the 39.6\" panel for 42\". For a pool deck in Steiner Ranch or Lakeway, the 46\" panel gives the 48\" barrier height. Open stairs in East Austin builds take <a href=\"/products/custom-stair-glass\">custom stair glass</a>, cut to your stringer angle.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Austin, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How does a glass railing attach to a hillside deck in Westlake Hills?",
+            "answer": "<p>Westlake Hills decks are usually wood-framed on posts, and the railing attaches to that framing, not the slope. On a wood deck, the side-mount spigot fixes to the fascia or rim joist. That keeps the full deck width and suits a deck that overhangs the hill. Our engineering documents cover both spigots on wood and concrete. Send photos of the deck edge with your quote request.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit for a rooftop deck railing in East Austin?",
+            "answer": "<p>A new rooftop deck is new construction, so expect a City of Austin building permit and an inspection. The code sets a 36\" minimum guard height for a single-family house; the 33.6\" panel gives 36\". Replacing an existing roof-deck railing may be handled differently, so ask first. On a roof, the attachment must work with the membrane; plan it with your roofer and send photos of the roof edge.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Which permit office covers Lakeway, Bee Cave or Steiner Ranch?",
+            "answer": "<p>Lakeway and Bee Cave are separate cities with their own building departments and amendments. A permit there does not come from Austin. Steiner Ranch and many Lake Travis communities sit outside city limits, where the county and HOA set the process. Most of the area applies the IRC 36\" house guard height and the 48\" pool barrier. The office covering your address makes the call, so ask before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What should I know about freight delivery to a Hill Country or lake house?",
+            "answer": "<p>The crate arrives on a freight truck with a tailgate lift, 5 to 10 business days after processing. It comes down at your driveway or the road. Long gravel driveways, low oak branches and steep grades around Lake Travis can stop a large truck. Describe the access when you order and plan a spot at the road. Check the glass within 3 days, before installation; damage is replaced or refunded.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Give Your Austin Property a Modern Design</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Want a price for a glass railing in Austin? Send measurements, photos or a drawing of your deck, roof or pool through the quote form, and we will reply with a detailed quote. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Down I-35 in San Antonio? The <a href=\"/pages/texas-glass-railing-san-antonio\">San Antonio page</a> covers limestone patios and the small cities inside the loop.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to Travis County",
+            "text": "Liftgate freight delivery to Austin, Lakeway and the Hill Country in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Side-Mount for Hillside Decks",
+            "text": "Fascia-mounted spigots keep the full deck width; engineering documents cover wood and concrete."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Half-Inch Tempered Glass",
+            "text": "12 mm (1/2\") tempered safety glass with a lifetime warranty against manufacturing defects."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Custom Stair Glass",
+            "text": "Panels cut to your stair angle for open stair guards in modern builds."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Austin"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass deck railings for Austin hillsides, lake houses and rooftop decks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>West of MoPac, east of I-35: Austin's deck geography</strong></p><p>Austin sits on the Balcones Escarpment, and the line runs roughly along MoPac. West of it, Westlake Hills, Rollingwood, Barton Hills and Tarrytown are built on limestone hills. The back of the house is often a deck hanging over the slope, with a view of downtown or the Hill Country. Further west, Lakeway, Bee Cave, Steiner Ranch and the Lake Travis shore add waterfront decks and pool decks with a lake view. East of I-35, East Austin and Mueller are full of modern builds with flat roofs, rooftop decks and open interior stairs. Downtown and Rainey Street condo towers have balconies that face the river. Dripping Springs and the Hill Country beyond Bee Cave are large lots with view patios. In every one of these settings, a frameless glass deck railing is chosen for the same reason: it keeps the view.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Austin building code and who issues the permit</strong></p><p>The City of Austin applies the 2021 International Residential Code with local amendments, and residential permits go through the Development Services Department. The code sets a 36\" minimum guard height for houses, including a rooftop deck on a single-family build. It sets 42\" for commercial and multifamily buildings, which covers the downtown condo towers. For pool barriers, most cities in Central Texas apply the 48\" rule from the IRC and ISPSC. Westlake Hills, Rollingwood, Lakeway, Bee Cave and Dripping Springs are separate cities with their own building departments and their own amendments. Outside any city limits, around Lake Travis, the rules can be different again, and many communities add HOA review. Ask the office that covers your address before you order. Our <a href=\"/pages/texas-building-code-for-glass-railings\">Texas building code page</a> keeps the statewide summary current, and the <a href=\"/pages/glass-railing-texas\">Texas hub</a> links Dallas, Houston and San Antonio.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hillside decks, limestone and delivery up a steep driveway</strong></p><p>A hillside deck in Westlake Hills or Barton Hills is usually a wood-framed deck on posts. The railing goes on the deck framing, not into the rock. The side-mount spigot fixes to the fascia or rim joist, keeps the full deck width and suits a deck that overhangs the slope. The top-mount spigot fixes to deck boards over blocking, or straight to a concrete pool deck. Our engineering documents cover both spigots on wood and concrete; screws are sold separately. For the sun, the materials are 12 mm tempered safety glass and 2205 marine-grade stainless steel hardware with a 10-year no-rust promise. Delivery is by freight carrier with a tailgate lift, processed in 2 to 3 business days and delivered in 5 to 10 business days. A long or steep Hill Country driveway can stop a freight truck, so tell us about access when you order.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Hillside view decks",
+            "text": "<p>Westlake Hills, Rollingwood and Barton Hills homes sit on limestone slopes. The deck off the main floor can be a full story above the ground. A frameless glass deck railing keeps the downtown skyline or the greenbelt in view. Side-mount spigots on the rim joist keep the deck width.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Lake Travis and Lake Austin decks",
+            "text": "<p>Lakeway, Steiner Ranch, Hudson Bend and Tarrytown's Lake Austin shore are about the water view. A glass deck railing keeps it open, and the 2205 marine-grade hardware carries a 10-year no-rust promise. On a pool deck above the lake, the 46\" panel gives the 48\" barrier height.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Rooftop decks and open stairs",
+            "text": "<p>East Austin, Mueller and the blocks around South Congress are full of modern builds with flat roofs and rooftop decks. The code sets 36\" for a house, so the 33.6\" panel is the usual pick up top. Inside, the same builds favor an open stair with custom stair glass.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Austin",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for a glass railing installer in Austin?",
+        "text": "<p>Designed for DIY, the system goes in with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos; a standard deck takes about 4 hours. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Beverly Hills, CA</strong>",
+        "text": "We ship frameless glass railing systems to Beverly Hills: 12 mm tempered glass panels on 2205 stainless spigots, crated and delivered to the site. Architects, contractors and owners use them for pool decks in the Flats and view terraces in Trousdale Estates. Remodels add interior stair guards and balconies.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Beverly Hills projects</strong>",
+        "description": "<p>Pool yards in the Flats take the <a href=\"/products/60-high-tempered-glass-panels\">57.7\" panel</a> for the 60\" enclosure, with hinges and a latch from the gate hardware collection. Terraces in Trousdale use the 46\" panel on 6\" top-mount spigots for a 48\" railing. For stairs, <a href=\"/products/custom-stair-glass\">custom stair glass</a> is cut to your run and landing. Hardware comes in Brushed Stainless or Matte Black, and the sample kit shows both against your stone or plaster.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Beverly Hills, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Do fire-zone rules in the Beverly Hills canyons affect a glass railing?",
+            "answer": "<p>Glass and stainless steel do not burn, so the railing itself is not the issue. Parts of Benedict and Coldwater canyons are mapped fire hazard zones. The rules there cover exterior building elements such as the deck the railing sits on. Ask the Beverly Hills fire authority what applies to the deck before you order. If your address is in Los Angeles, ask the LA authority instead.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Are Benedict and Coldwater canyon homes permitted by Beverly Hills or Los Angeles?",
+            "answer": "<p>It depends on the lot. The city limit runs through both canyons. Many homes with a Beverly Hills mailing address are in the City of Los Angeles, where permits go through LADBS. Homes inside the city line go through the Beverly Hills Community Development Department. Both apply the California code with its 42\" guard minimum. Check the jurisdiction of your parcel before you submit drawings.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "What is the lead time for custom stair glass on a Beverly Hills remodel?",
+            "answer": "<p>Custom glass, including stair panels cut to your stringer angle, is processed in 2–3 business days and then ships in 2–3 weeks. Standard panels ship faster: 2–3 business days of processing, then 5–10 business days by freight. Glass is made to order and final sale, so confirm the stair dimensions after framing and order before the finish schedule tightens.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Does a hillside terrace in Trousdale Estates need extra engineering for the railing?",
+            "answer": "<p>The deck or terrace structure is your engineer's work, and hillside lots north of Sunset carry their own review. The railing attachment is covered by our engineering documents. They give testing and blocking details for the top-mount and side-mount spigots on concrete and on wood. Add them to your permit set and ask the Beverly Hills Community Development Department whether the hillside review asks for anything else.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in Beverly Hills? Send measurements, photos or the architect's drawings through the quote form. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Order the sample kit to check both finishes against your stone. Then see the <a href=\"/pages/glass-railing-california\">California glass railing hub</a>, and our <a href=\"/pages/california-glass-railing-newport-beach\">Newport Beach</a> page for Orange County.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42\" Guards, Even for Houses",
+            "text": "The California code sets 42\" minimum guards; the 46\" panel gives 48\"."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "60\" Pool Enclosures",
+            "text": "Pool enclosures must be 60\" with gaps under 4\"; the 57.7\" panel gives 60\"."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Engineering Documents",
+            "text": "Testing and blocking details for top-mount and side-mount spigots on concrete and wood."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Two Hardware Finishes",
+            "text": "Brushed Stainless or Matte Black on 2205 stainless, with a 10-year no-rust promise."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Beverly Hills"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Beverly Hills pool decks, terraces and stairs"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Beverly Hills projects: the Flats, Trousdale and the canyons</strong></p><p>Beverly Hills divides at Sunset Boulevard. South of it, the Flats are level lots with deep backyards. The typical project there is a 60\" glass pool enclosure and a 48\" railing for a raised patio or a second-floor balcony. North of Sunset, Trousdale Estates and the streets off Benedict and Coldwater canyons climb the hills. Houses there are built around a view terrace, and a frameless glass railing is what keeps that view open.</p><p>Inside the house, remodels led by architects often replace a solid stair wall or wood balusters with custom stair glass in spigots. The hardware comes in Brushed Stainless or Matte Black. We ship all of it crated to the site: 12 mm tempered panels, 2205 stainless hardware, connectors for corners and a wall connector where a run meets plaster.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hillside lots, fire zones and the 42\" rule</strong></p><p>The California code sets 42\" as the minimum guard height even for a single-family house. A pool enclosure must be 60\", with gaps under 4\" and a latch at least 60\" above ground. The City of Beverly Hills Community Development Department applies the 2022 Title 24 codes, and hillside lots north of Sunset have their own review. Parts of the canyons are mapped fire hazard zones. Glass and stainless steel do not burn, but ask the fire authority about the rules for the deck itself. Many Benedict and Coldwater canyon homes with a Beverly Hills mailing address sit in the City of Los Angeles, where permits go through LADBS. The <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> has the summary.</p><p>Earthquake rules do not add railing requirements. What a plan checker looks at is the attachment, and our engineering documents cover the spigots on concrete and wood.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Beverly Hills and installation</strong></p><p>Orders are processed in 2–3 business days, then delivered in 5–10 business days by freight carrier with liftgate delivery. Custom sizes, including stair glass, take 2–3 business days to process and 2–3 weeks to ship. Order that glass early on a remodel schedule. The driver lowers the crate at the curb or in the driveway; on a narrow canyon road, tell us about truck access when you order. The price at checkout is final, with no duties, tariffs or hidden fees, and orders over 3,000 USD ship free. Report any damage within 3 days, before installation, for a free replacement or refund.</p><p>The system is designed for DIY installation. Most standard installations take about 4 hours with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos, and a contractor on site can follow the same guide. Spigots fix to concrete or wood with screws sold separately.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks in the Flats",
+            "text": "<p>Backyard pools between Santa Monica Boulevard and Sunset need a 60\" enclosure under California law. Gaps stay under 4\", with the latch 60\" above ground. The 57.7\" panel, two spigots per panel, gives that height while the yard stays open from the pool house to the kitchen.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "View terraces in Trousdale Estates",
+            "text": "<p>Many mid-century houses in Trousdale and the hills off Benedict Canyon are built around a terrace facing the city. A frameless glass railing on top-mount spigots gives a 48\" guard with no posts in the sightline. Side-mount spigots work on a cantilevered wood deck edge.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Interior glass stair guards",
+            "text": "<p>Architect-led remodels replace wood balusters with custom stair glass held in spigots at the stringer. Send the rise, run, landing sizes and photos for a quote. Custom glass is processed in 2–3 business days and ships in 2–3 weeks, so order it before the finish schedule tightens.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Beverly Hills",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Beverly Hills?",
+        "text": "<p>We may have an installer in your area: contact us with your project address and we will check. Your contractor can also follow the installation guide and videos; most standard installations take about 4 hours.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in San Francisco, CA</strong>",
+        "text": "San Francisco decks are built for the view, from Noe Valley roof decks to Bernal Heights rear decks. We ship frameless glass railing systems to the city, Marin and the Peninsula: 12 mm tempered panels and 2205 stainless spigots, delivered by freight. You install them with our guide and videos.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for San Francisco projects</strong>",
+        "description": "<p>On a San Francisco roof deck, the 6-inch top-mount spigot fixes to the deck framing. Use the 46-inch panel for a 48-inch railing, or the 39.6-inch panel for the 42-inch minimum. On a rear deck over a slope, the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> keeps the floor clear. For an interior stair in a Victorian remodel, <a href=\"/products/custom-stair-glass\">custom stair glass</a> is cut to your rise and run. All hardware is 2205 stainless.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "San Francisco, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit for a glass railing on a San Francisco roof deck?",
+            "answer": "<p>A new roof deck needs a building permit from DBI and usually a Planning Department review. It changes the building and can affect neighbors. Replacing the guard on an existing permitted deck is usually a smaller matter, but ask DBI first. Bring the railing height, the spigot drawings and our engineering documents to the counter.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Will the glass hold up in the wind on Twin Peaks or in the Sunset?",
+            "answer": "<p>The panels are 12 mm tempered safety glass, each held in two spigots. The spigot attachments were tested, and the report and blocking details are on our <a href=\"/pages/glass-railing-engineering-testing\">engineering page</a>. Wind is a design-load question for the deck as a whole, so your engineer or DBI may ask for those documents. If you want a continuous top edge, the square caprail is available.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can a freight truck deliver to a steep street in Bernal Heights or Russian Hill?",
+            "answer": "<p>Freight carriers deliver with a liftgate to the curb, and a full-size truck will not fit every San Francisco block. When you order, tell us the street and whether it is steep, narrow or one-way, so the carrier can plan the stop. Sometimes the nearest flat cross street is the practical spot. Have a second person ready to carry the panels up the stairs or through the garage.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can I use glass on the rear stair of a Noe Valley Victorian?",
+            "answer": "<p>Yes. Custom stair glass is cut to follow your stair pitch, and each panel sits in two spigots, top-mount or side-mount. Send a drawing with the rise, run and total length and we will quote it. Custom glass takes 2–3 business days of processing plus 2–3 weeks of shipping. Ask DBI which guard height applies on the stair before ordering.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send photos of the deck or roof, the measurements and a note about the street. We will prepare a detailed quote with the panel widths worked out. Standard panels and hardware ship in 2–3 business days; custom sizes are available. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. To check the finish against your trim, start with the <a href=\"/products/glass-hardware-sample-kit\">glass and hardware sample kit</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "12 mm tempered glass",
+            "text": "Half-inch tempered safety glass panels for roof decks and rear decks, with a lifetime defect warranty."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 stainless hardware",
+            "text": "Marine-grade spigots and connectors with a 10-year no-rust promise for the Sunset and Sea Cliff."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42 inches, no posts",
+            "text": "The California code sets 42-inch guards; each panel sits in two spigots, with no posts."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight with liftgate",
+            "text": "Processed in 2–3 business days, delivered in 5–10 business days, no duties or hidden fees."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in San Francisco"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for San Francisco roof decks and steep-lot rear decks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Roof decks, rear decks and 25-foot lots</strong></p><p>Most San Francisco houses sit on narrow lots, attached to the neighbors, with the outdoor space on the roof or behind the house. Roof decks in Noe Valley, the Mission, Potrero Hill and Bernal Heights look across the city and the bay. Rear decks in Glen Park, Twin Peaks, Diamond Heights and Russian Hill hang over steep slopes, with a long stair down to the yard. A frameless glass railing keeps those views open instead of boxing them in with posts and pickets.</p><p>Pacific Heights, Sea Cliff and the Marina have larger homes with bay-view terraces and balconies. Sea Cliff, the Richmond and the Sunset face the ocean through fog. Across the Golden Gate, Sausalito, Mill Valley and Tiburon hillside homes follow the same deck-and-view pattern. So do Pacifica and Hillsborough down the Peninsula. Inside, open stairs in remodeled Victorians and Edwardians take custom stair glass.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits: DBI, Planning and the 42-inch guard</strong></p><p>San Francisco permits go through the Department of Building Inspection (DBI). A new roof deck or an enlarged rear deck usually involves the Planning Department as well, and neighbors may be notified. A railing swap on an existing deck is simpler, but ask DBI before you order; the answer depends on the building and the block.</p><p>The California code sets a 42-inch minimum guard height, including single-family houses (CRC R312.1). That is the height to plan for on a deck or roof deck. Our 39.6-inch panel gives 42 inches; the 46-inch panel gives 48 inches, a sensible choice on a windy roof. The city is seismic, but earthquake rules do not add railing requirements. What matters is the attachment, and our engineering documents cover the spigots on wood and on concrete. Read the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> and the <a href=\"/pages/glass-railing-california\">California hub</a>, then confirm with DBI.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Fog, wind, salt and getting a crate up a hill</strong></p><p>Summer in San Francisco means fog and a steady afternoon wind off the ocean, strongest in the Sunset, the Richmond and Sea Cliff. The fog carries salt, and ordinary steel rusts. Every spigot, connector and hinge we sell is 2205 marine-grade stainless steel with a 10-year no-rust promise, in Brushed Stainless or Matte Black. The 12 mm tempered glass is one solid panel with nothing to rattle. A square caprail is available if you want a continuous top rail on an exposed roof deck.</p><p>Delivery is by freight carrier with liftgate service, 5–10 business days after 2–3 business days of processing. Trucks do not fit every San Francisco street, so tell us if yours is steep or narrow when you order. Plan two people to carry panels up the stairs. Report any damage within 3 days of delivery and before installation for a free replacement or refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Roof decks in Noe Valley and Potrero Hill",
+            "text": "<p>Roof decks are the prize on a narrow lot. A 42-inch or 48-inch frameless glass railing lets you see downtown and the bay from a chair. Top-mount spigots need solid blocking under the deck surface; plan it with your roofer or contractor before the spigots go down.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Rear decks on Bernal Heights and Glen Park slopes",
+            "text": "<p>Rear decks on the east and south slopes hang well above the yard, with a long stair down. A glass deck railing on side-mount spigots keeps the deck boards clear. For the stair, a glass stair railing follows the pitch; send a drawing with the rise and run.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Bay-view terraces and interior stairs",
+            "text": "<p>Pacific Heights, Russian Hill and Sea Cliff homes have terraces and balconies facing the Golden Gate. A 48-inch glass balcony railing on top-mount spigots keeps the view. Choose Brushed Stainless for a classic facade or Matte Black for a modern one. Inside, open stairs take the same 12 mm glass.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in San Francisco",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in San Francisco?",
+        "text": "<p>Most standard installations take about 4 hours with our installation guide and videos, and the spigots fix to wood or concrete. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in San Jose, CA</strong>",
+        "text": "We ship frameless glass railing systems to San Jose and the South Bay. Each order is 12 mm tempered panels with 2205 stainless spigots, crated and delivered to your door. Homeowners and contractors use them for balconies, pool decks, hillside decks and stair guards in Willow Glen, Almaden and Evergreen.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for San Jose projects</strong>",
+        "description": "<p>For San Jose houses the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46\" tempered panel</a> on 6\" top-mount spigots is a common choice for decks and balconies. It gives a 48\" railing, above the state minimum. Narrow balconies keep their floor space with side-mount spigots on the fascia. Indoor stairs use custom stair glass cut to your run. Hardware comes in Brushed Stainless or Matte Black, and a square caprail is optional if you want a top rail.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "San Jose, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Does a balcony on a San Jose ADU or second-floor addition need a 42\" glass railing?",
+            "answer": "<p>Yes. The California code sets 42\" as the minimum guard height for houses, and the City of San Jose applies the 2022 edition. The 39.6\" panel gives exactly 42\"; the 46\" panel gives 48\" and a margin above the minimum. Custom widths let you fill a short balcony run without a cut-down panel. Confirm the details with the city before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I replace the wood stair guard in a Willow Glen remodel with glass?",
+            "answer": "<p>Yes. Custom stair glass is cut to your stair angle and landing dimensions. Send photos and measurements of the rise, run and landing, and we will quote panels and spigots. Custom glass is processed in 2–3 business days, then ships in 2–3 weeks. Guard height along a stair is measured differently from a deck, so ask the city building division what applies to your stair.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "What arrives in the crate for a San Jose balcony order?",
+            "answer": "<p>The crate holds your 12 mm tempered panels, cut to the widths on your quote. It also holds the spigots, glass-to-glass connectors and any wall connector, gate hardware or square caprail you ordered. Screws for wood or concrete are sold separately, so buy them locally before delivery day. The installation guide and videos cover the layout, and the sample kit lets you check the finish first.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do earthquake rules in San Jose add requirements for glass railings?",
+            "answer": "<p>No. California earthquake rules do not add railing requirements. What a plan reviewer usually looks at is how the guard attaches to the structure. Our engineering documents, with testing and blocking details, cover the top-mount and side-mount spigots on concrete and on wood. Include them with your permit drawings, and confirm any local amendments with the San Jose building division before you order.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your  Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in San Jose? Send measurements, photos or a drawing through the quote form. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Order the Glass &amp; Hardware Sample Kit to see the panel and both finishes first. Also see the <a href=\"/pages/glass-railing-california\">California glass railing hub</a> and our <a href=\"/pages/california-glass-railing-livermore\">Livermore</a> page for the East Bay.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42\" Guards in California",
+            "text": "The California code sets 42\" minimum guards even for houses; a 46\" panel makes 48\"."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 Marine-Grade Hardware",
+            "text": "Spigots, connectors and gate hardware in 2205 stainless steel with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to Your Door",
+            "text": "Processed in 2–3 business days, then 5–10 business days by freight with liftgate delivery."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Built for DIY",
+            "text": "Installation guide and videos included; most standard installations take about 4 hours."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in San Jose"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for Silicon Valley homes, balconies and stairs"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where San Jose homeowners put glass railings</strong></p><p>San Jose spreads across the Santa Clara Valley, with the Diablo Range to the east and the Santa Cruz Mountains to the west. That geography shapes the projects we ship. In Willow Glen and the Rose Garden, older homes get second-floor additions with a balcony that needs a guard. Almaden Valley and Evergreen sit against the hills, so decks there often step out over a slope and face a view. A frameless glass deck railing keeps that view open where a picket guard would cut it into strips.</p><p>Closer to downtown, newer townhomes with roof decks use glass for the parapet guard. Modern remodels in Cambrian Park and Los Gatos often replace a wood stair guard with glass. We also ship panels for the balconies and exterior stairs of ADUs, a common addition on San Jose lots.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The 42\" rule and what it means for your order</strong></p><p>The California Residential Code sets a 42\" minimum guard height, even for a single-family house. It applies where a deck or balcony floor is more than 30\" above grade. The City of San Jose applies the 2022 edition of Title 24, and permits for new decks and balconies go through its building division. Check with them before you order, and read the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> for the full summary.</p><p>For most San Jose houses the choice is between the 39.6\" panel, which gives a 42\" railing, and the 46\" panel, which gives 48\". The taller panel adds a margin above the minimum and reads as a cleaner line on a view deck. Each panel sits in two spigots, so there are no posts. The spigots bolt to the joists or the slab, and the <a href=\"/pages/glass-railing-engineering-testing\">engineering documents</a> cover both wood and concrete.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery and installation in San Jose</strong></p><p>Orders are processed in 2–3 business days. The crate then travels 5–10 business days by freight carrier to San Jose, with liftgate delivery at the curb. The price you see at checkout is final: no duties, tariffs or hidden fees, even though the order crosses from Canada. Orders over 3,000 USD ship free. Check the crate on arrival and report any damage within 3 days, before installation, and we replace or refund the item at no cost.</p><p>The system is designed for DIY installation. Most standard installations take about 4 hours with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos. Spigots fix to wood or concrete with screws sold separately. San Jose summers are warm and dry, so the outdoor work season is long; pick a day when the deck surface is clear and someone can help you lift the panels.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Hillside view decks",
+            "text": "<p>Lots in Evergreen, Almaden Valley and the Alum Rock foothills slope toward valley views. A frameless glass deck railing on top-mount spigots keeps the view open from a seated position. Side-mount spigots on the fascia work where the joists are accessible and the deck surface is tight.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Second-floor balconies and ADUs",
+            "text": "<p>Additions in Willow Glen and the Rose Garden, and new ADUs across the city, often add a small balcony or an exterior stair. The California code asks for 42\" guards here too. The 46\" panel on spigots gives 48\" and fits short runs with custom panel widths.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Interior stair guards",
+            "text": "<p>Modern remodels in Cambrian Park, Campbell and Los Gatos replace wood balusters with glass along the stair. Custom stair glass is cut to your stringer angle and landing. Send a sketch with the rise, run and landing sizes and we will quote the panels and spigots.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in San Jose",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in San Jose?",
+        "text": "<p>We may have an installer in your area: contact us with your project address and we will check. The system is designed for DIY installation with the guide and videos; most standard installations take about 4 hours.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Fort Lauderdale, FL</strong>",
+        "text": "Fort Lauderdale is the Venice of America: canal homes with docks, beachfront condos on A1A and townhomes with rooftop decks. We ship frameless glass railing systems for pool decks, condo balconies and terraces across Broward County. Each order is 12 mm tempered glass with 2205 stainless hardware, crated to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Fort Lauderdale projects</strong>",
+        "description": "<p>Canal-lot pool decks use the 46-inch panel for a 48-inch glass pool fence, with gate hinges, a latch and a floor lock. A1A condo balconies use the 39.6-inch panel for 42 inches, on top-mount spigots into the slab or <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigots</a> on the edge. Ask the building department whether your building wants a top rail; our <a href=\"/collections/glass-railing-caprail\">square caprail</a> fits the panels. Rooftop decks on townhomes use the 33.6-inch panel for 36 inches. All hardware is 2205 stainless.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Fort Lauderdale, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Can the glass railing on my canal-lot pool deck serve as the pool barrier?",
+            "answer": "<p>The Residential Swimming Pool Safety Act sets the barrier at least 48 inches high on the outside, with gates that close on their own and open away from the pool. A 48-inch glass fence on 46-inch panels, with gate hinges, a latch and a floor lock, is built to those heights. Whether it counts as the barrier for your lot, including the seawall side, is the building department's call, so ask before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Which documents does a Broward building department want for a glass railing permit?",
+            "answer": "<p>Expect to show where the railing goes, the height, and how the spigots attach, because the HVHZ review focuses on attachment. Our engineering and testing page has the documents for top-mount and side-mount spigots on concrete and on wood, with blocking details. Product pages give the panel and spigot dimensions. Each city in Broward runs its own permit office under the county's Board of Rules and Appeals, so call yours first.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Do A1A condo balconies need a top rail on the glass?",
+            "answer": "<p>Ask the building department and the association before you order. Condos fall under the building volume of the Florida Building Code, where guards are 42 inches, and a reviewer may ask for a top rail on glass guards in a multifamily building. Our square caprail is made for the 12 mm panels and comes in both finishes. Without it, the frameless look stays as it is: panels in spigots, no posts.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What arrives in the crate for a canal-home pool deck?",
+            "answer": "<p>The tempered glass panels arrive crated from our warehouse, and the spigots, connectors, gate hinges, latch and floor lock you ordered ship with them. Screws and anchors are not included, since they depend on whether you fix to concrete or wood. Count the panels and check each one for shipping damage within 3 days of delivery and before installation; damaged items are replaced or refunded at no cost.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Create Your Modern Space?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to open up the canal view or update a beachfront balcony? Send measurements and photos through the quote form and we will send a detailed quote. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the rest of the state, and the <a href=\"/pages/florida-glass-railing-miami\">Miami page</a> covers the other half of the HVHZ. Orders over 3,000 dollars ship free, with no duties or hidden fees.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Broward HVHZ documents",
+            "text": "Engineering with testing and blocking details for spigots on concrete and wood."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Canal-ready stainless",
+            "text": "2205 marine-grade hardware with a 10-year no-rust promise, Brushed or Matte Black."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Condo balcony height",
+            "text": "The 39.6-inch panel gives the 42-inch guard multifamily buildings need."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered in Broward",
+            "text": "Liftgate freight in 5 to 10 business days. Free shipping over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Fort Lauderdale"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Fort Lauderdale canal homes and A1A condo balconies"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Canals, the beach and the neighborhoods in between</strong></p><p>Fort Lauderdale earned the Venice of America name from its canals. Las Olas Isles, Rio Vista, Harbor Beach and Coral Ridge are finger-island streets. The lots end at a seawall, often with a dock, and the pool deck sits in between. Those decks are where a frameless glass railing earns its keep: it closes off the pool without hiding the water. Along A1A, from Fort Lauderdale Beach to the Galt Ocean Mile, condo towers face the Atlantic with concrete balconies on every floor.</p><p>Victoria Park and Flagler Village add townhomes with rooftop decks near downtown and the New River. Wilton Manors sits on the Middle River. Lauderdale-by-the-Sea and Pompano Beach continue the beach to the north, Hollywood and Dania Beach to the south. Plantation, Davie and Weston are the inland suburbs, with pool homes and far less salt in the air.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Broward County is in the HVHZ</strong></p><p>Broward County, with Miami-Dade, makes up the High-Velocity Hurricane Zone of the Florida Building Code, 8th edition (2023). The HVHZ carries stricter wind-load rules than the rest of Florida, and Broward's building departments review railing attachments. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering documents</a> give the testing and blocking details for top-mount and side-mount spigots on concrete and on wood. Fort Lauderdale, Pompano Beach, Hollywood and Wilton Manors each run their own permit office under the county's Board of Rules and Appeals.</p><p>Heights follow the state code. A house deck or balcony more than 30 inches above grade needs 36 inches; condos and other multifamily buildings need 42. A pool barrier under the Residential Swimming Pool Safety Act is at least 48 inches on the outside. Gates close on their own and open away from the pool. See our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a>, then confirm with your building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery and installation in Fort Lauderdale</strong></p><p>Standard orders are processed in 2 to 3 business days and arrive in 5 to 10 business days by freight carrier with a liftgate. On the isles, the truck lowers the crate to the driveway. For a Galt Ocean Mile or beachfront tower, book the loading dock and freight elevator with management and tell us the address type. Custom sizes take 2 to 3 weeks in transit after processing. Orders over 3,000 dollars ship free, and the checkout price is final: no duties, tariffs or hidden fees.</p><p>Installation is DIY with the installation guide and videos, and a standard railing takes about 4 hours. Each panel sits in two spigots, fixed to the concrete pool deck, the balcony slab or wood framing, with screws sold separately. Check the crate within 3 days of delivery; damage reported before installation is replaced or refunded at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks on the canals",
+            "text": "<p>The finger-island lots in Las Olas Isles and Rio Vista are narrow and deep, and the pool sits between the house and the dock. A 48-inch glass pool fence on 46-inch panels closes the pool without a wall of pickets across the canal view. The 2205 spigots handle the daily salt.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Condo balconies on A1A",
+            "text": "<p>Towers between Fort Lauderdale Beach and the Galt Ocean Mile take the full Atlantic wind. The 39.6-inch panel in two spigots gives the 42-inch height multifamily buildings need, and the HVHZ review looks at the spigot anchors in the slab. Send the association the engineering documents and a sample before it votes.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Balconies and stairs in the suburbs",
+            "text": "<p>Plantation, Davie and Weston pool homes sit well inland, with far less salt but the same HVHZ review. Second-floor balconies take the 33.6-inch panel for a 36-inch guard, and open stairs inside take custom-cut panels. The pool fence stays at 48 inches on the 46-inch panel.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Fort Lauderdale",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Fort Lauderdale?",
+        "text": "<p>The system is designed for DIY with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

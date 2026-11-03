@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Charlotte, NC</strong>",
+        "text": "Frameless glass railings for Charlotte homes, from Myers Park back decks to Lake Norman waterfront. We ship 12 mm tempered glass panels and 2205 stainless spigots crated to your door in Mecklenburg County and the surrounding towns. Use them on pool decks, second-floor balconies, open stairs and lake-view decks.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Charlotte projects</strong>",
+        "description": "<p>Charlotte houses mostly use the 39.6-inch panel for a 42-inch railing or the 33.6-inch panel for the 36-inch minimum. Lake Norman pool decks take the 46-inch panel for a 48-inch barrier. Open staircases in SouthPark new builds use <a href=\"/products/custom-stair-glass\">custom stair glass</a> cut to the rise. Pair any panel with the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> to keep the full deck width on a fascia board.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Charlotte, NC, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which office issues railing permits in Charlotte?",
+            "answer": "<p>Inside Charlotte and the Mecklenburg towns, Mecklenburg County Code Enforcement handles building permits and inspections. Mooresville goes through Iredell County, and Lake Wylie addresses may fall under Gaston County or York County, South Carolina. Ask them whether your deck or balcony railing needs a permit and what documents they want; our engineering documents are ready to attach.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What glass pool fence height applies to a Charlotte backyard pool?",
+            "answer": "<p>The North Carolina Residential Code, Appendix G, sets pool barriers at 48 inches. Our 46-inch tempered panel installed in spigots gives a 48-inch railing. That is the panel to order for a pool deck in Ballantyne or on Lake Norman. Add gate hinges and a latch for the opening, and confirm the gate details with Mecklenburg County before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Will the hardware hold up on a Lake Norman waterfront deck?",
+            "answer": "<p>Yes. Every spigot, connector and hinge is 2205 marine-grade stainless steel with a 10-year no-rust promise. A deck beside the lake or a pool is not a problem. The glass is 12 mm tempered safety glass with a lifetime warranty against manufacturing defects. Humid summers and the occasional ice storm do not affect either material.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How does freight delivery work at a Charlotte address?",
+            "answer": "<p>The glass arrives in a crate on a freight truck with a liftgate, which lowers it to the driveway or curb. Standard orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. Freight carriers usually call ahead to book a window, so plan to be home. Check the crate and report any damage within 3 days.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Measure your deck, balcony or pool surround and send the lengths with a couple of photos. We will send a detailed quote with panel sizes and hardware for your Charlotte project. You can also order a <a href=\"/products/glass-hardware-sample-kit\">glass and hardware sample kit</a> first to see both finishes. More North Carolina cities are on the <a href=\"/pages/glass-railing-north-carolina\">North Carolina glass railing page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to your driveway",
+            "text": "Liftgate delivery in Charlotte, Lake Norman and Union County, 5 to 10 business days after processing."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Lifetime glass warranty",
+            "text": "12 mm tempered panels are covered for life against manufacturing defects."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Matte Black or Brushed Stainless",
+            "text": "Two finishes on 2205 stainless hardware, with a 10-year no-rust promise."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 hours to install",
+            "text": "Most standard installations take about 4 hours with the guide and videos."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Charlotte"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass deck and stair railing for Charlotte and Lake Norman homes"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Charlotte projects, neighborhood by neighborhood</strong></p><p>Charlotte's older neighborhoods and its lakes ask for different things. In Myers Park, Dilworth and Eastover, the usual project is a rear deck or a porch opening onto a pool. A glass deck railing there keeps the backyard in view. SouthPark and Ballantyne add newer two-story homes with upper balconies and open staircases that take a glass stair railing in place of wood balusters.</p><p>North of the city, Lake Norman is the big draw. Waterfront homes in Cornelius, Davidson, Huntersville and Mooresville have multi-level decks facing the water, and a frameless glass railing keeps the lake view clear. Lake Wylie, southwest on the Catawba River, is similar on a smaller scale. Across the state line, Fort Mill and Indian Land are full of new builds. Those addresses fall under South Carolina's 2021 code rather than the North Carolina code.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits and the code in Mecklenburg County</strong></p><p>Charlotte and the Mecklenburg towns, including Cornelius, Davidson, Huntersville, Matthews and Mint Hill, get their building permits through Mecklenburg County Code Enforcement. Mooresville is in Iredell County. Lake Wylie addresses fall under Mecklenburg, Gaston or York County, South Carolina, depending on the shore. The 2018 North Carolina Residential and Building Codes apply. The North Carolina code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings.</p><p>For a pool deck, the residential code's Appendix G sets a 48-inch barrier, which our 46-inch panel in spigots gives you. Our engineering documents, with testing and blocking details for wood and concrete, are available for the permit file. Check with your local building department about whether your deck or railing needs a permit; a new deck usually does. Read the summary on our <a href=\"/pages/north-carolina-building-code-for-glass-railings\">North Carolina building code for glass railings</a> page before you finalize sizes.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Charlotte's climate and a railing that keeps up</strong></p><p>Charlotte sits in the Piedmont, with humid summers around 90 degrees, mild winters and the occasional ice storm. Wood railings here need staining every couple of years and still gray out. Tempered 12 mm glass does not care about humidity. 2205 marine-grade stainless steel will not rust on a lakefront deck or a pool surround with chlorine splash. The hardware carries a 10-year no-rust promise, and the glass a lifetime warranty against manufacturing defects.</p><p>Pollen season in April leaves a yellow film on everything in Charlotte, glass included. It rinses off with a hose, which is easier than cleaning between pickets. Afternoon thunderstorms in July and August bring gusty wind; the spigots are bolted to the deck framing or slab, and the engineering documents show the blocking that holds them.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Lake Norman and Lake Wylie decks",
+            "text": "<p>Waterfront homes from Cornelius to Mooresville stack decks and covered porches toward the water. Glass balcony railing on the upper level and glass deck railing below keep the lake in sight from every room. Side-mount spigots on the fascia free up the deck boards for furniture.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks in south Charlotte",
+            "text": "<p>Ballantyne, Piper Glen and Weddington backyards pair a pool with a raised deck or patio. The 46-inch panel in top-mount spigots gives a 48-inch glass pool fence, with gate hinges and a latch for the opening. Matte Black hardware suits the darker trim common on newer homes here.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Stair guards and lofts in new builds",
+            "text": "<p>Builders in Huntersville, Fort Mill and Waxhaw are putting glass stair railing on open staircases and second-floor landings. Custom stair glass is cut to your drawing, and the wall connector finishes the run where the glass meets drywall. A square caprail adds a top rail in the same finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Charlotte",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for an installer in Charlotte?",
+        "text": "<p>The system is designed for DIY, and most Charlotte decks take about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

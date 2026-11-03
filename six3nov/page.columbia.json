@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Columbia, SC</strong>",
+        "text": "Frameless glass railings for Columbia homes, from Shandon bungalows to Lake Murray waterfront. We ship 12 mm tempered glass panels and 2205 stainless spigots crated to Richland and Lexington County addresses. Use them on lake decks, pool decks, second-floor balconies and open staircases in Lake Carolina or Blythewood new builds.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Columbia projects</strong>",
+        "description": "<p>Columbia houses mostly use the 33.6-inch panel for a 36-inch railing on decks and porches. Owners who want a taller guard choose the 39.6-inch panel for 42 inches. Lake Murray pool decks take the 46-inch panel for a 48-inch barrier. Mount the panels in <a href=\"/products/glass-railing-spigot\">6-inch engineered spigots</a> on the deck boards, or in side-mount spigots on the fascia. Finish an open staircase with <a href=\"/products/custom-stair-glass\">custom stair glass</a> cut to your rise.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Columbia, SC, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which office issues railing permits for a Columbia address?",
+            "answer": "<p>Inside the city limits, the City of Columbia issues building permits. Unincorporated addresses go through Richland County or Lexington County. Towns such as Lexington, Irmo, Chapin and Forest Acres have their own offices. Ask the office for your address whether a railing replacement needs a permit; a new deck usually does. Our engineering documents are ready to attach to the application.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What height do I need for a glass pool fence on Lake Murray?",
+            "answer": "<p>South Carolina applies the International Swimming Pool and Spa Code, and section 305 sets a 48-inch barrier. Our 46-inch tempered panel installed in spigots gives a 48-inch railing, so that is the panel for a pool deck in Chapin or Lexington. Add gate hinges and a latch, and confirm the gate details with Lexington County or Richland County before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does Columbia's heat affect tempered glass or the hardware?",
+            "answer": "<p>No. Tempered 12 mm safety glass is made for direct sun and summer highs in the mid-90s. The spigots and connectors are 2205 marine-grade stainless steel with a 10-year no-rust promise. Humidity, pool water and lake spray are not a problem. Matte Black hardware warms up in afternoon sun, as any dark metal does, and both finishes share the same 2205 stainless base.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How does freight delivery work at a Lake Murray address?",
+            "answer": "<p>The glass arrives crated on a freight truck with a liftgate, which lowers the crate to your driveway. Standard orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. Freight carriers usually call ahead to set a window, so plan to be home. Check the crate on arrival and report any damage within 3 days, before installation.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Measure your deck, balcony, stairs or pool surround and send the lengths with a few photos. We will send a detailed quote with panel sizes and hardware for your Columbia project. Not sure about the finish? Order the <a href=\"/products/glass-hardware-sample-kit\">glass and hardware sample kit</a> first. Other South Carolina cities and the statewide summary are on the <a href=\"/pages/glass-railing-south-carolina\">South Carolina glass railing page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate delivery in Columbia",
+            "text": "Freight delivery with liftgate to Columbia, Lexington, Chapin and Irmo in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Hardware for lake and pool",
+            "text": "2205 marine-grade stainless spigots and connectors with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Lifetime glass warranty",
+            "text": "12 mm tempered panels covered for life against manufacturing defects."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 hours to install",
+            "text": "Most standard installations take about 4 hours with the guide and videos."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Columbia"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass deck railing for Columbia and Lake Murray homes"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Columbia projects, from Shandon to the lake</strong></p><p>Columbia sits where the Broad and Saluda rivers meet to form the Congaree, on the fall line between the Piedmont and the Sandhills. The city's older neighborhoods, Shandon, Rosewood and Forest Acres, have bungalows and brick ranches with back decks and screened porches. A glass deck railing there opens the view onto a shaded yard or a pool. Near the University of South Carolina, renovated homes add glass stair railing on open staircases.</p><p>The big projects are on Lake Murray. Homes in Lexington, Chapin, Irmo and the coves toward Saluda County have multi-level decks facing the water. A frameless glass railing on each level keeps the lake in view from the house. Northeast of town, Lake Carolina, Blythewood and Elgin are new-build territory. Builders there use glass balcony railing on upper porches and glass guards on interior landings in place of wood balusters.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits and the code around Columbia</strong></p><p>South Carolina adopts its codes statewide, and the 2021 International Residential Code applies to houses in Columbia and its suburbs. The South Carolina code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings. For a pool deck, the International Swimming Pool and Spa Code, section 305, sets a 48-inch barrier. Our 46-inch panel in spigots gives that height.</p><p>Which office issues the permit depends on the address. Inside the city limits it is the City of Columbia. Unincorporated addresses go through Richland County or Lexington County. Check with your local building department about whether a railing swap or a new deck needs a permit. Our engineering documents, with testing and blocking details, are available for the file. Read our <a href=\"/pages/south-carolina-building-code-for-glass-railings\">South Carolina building code for glass railings</a> summary before you set panel heights.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>A railing for Columbia's heat and humidity</strong></p><p>Columbia once marketed itself as Famously Hot, and the summers earn it. Highs in the mid-90s are routine from June through September, with thick humidity and afternoon thunderstorms. Wood railings on a south-facing deck or a Lake Murray dock side gray out, check and need staining every couple of years. Tempered 12 mm glass and 2205 marine-grade stainless steel do not absorb water, rot or rust. Pool chlorine splashing on the spigots is not a problem either.</p><p>The glass takes direct sun all summer, and tempered safety glass does not warp or peel like painted wood. Winters are mild, with rain more than snow, so freeze-thaw is rarely a factor here. Spring brings pine pollen that films every surface in the Midlands. On glass it rinses off with a hose in minutes, with no pickets to scrub between.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Lake Murray decks and docksides",
+            "text": "<p>Waterfront lots in Lexington, Chapin and Irmo stack a main deck, a lower patio and sometimes a roof deck toward the lake. A frameless glass deck railing on each level keeps the water in sight. Top-mount spigots bolt through the deck boards into blocking shown in the guide.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks in Forest Acres and Lake Carolina",
+            "text": "<p>Backyard pools behind brick ranches in Forest Acres and new homes in Lake Carolina need a 48-inch barrier. The 46-inch panel in spigots gives a glass pool fence that does not hide the pool from the porch. Gate hinges, a latch and a floor lock finish the opening.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Stair guards in Blythewood and Elgin new builds",
+            "text": "<p>Two-story homes going up around Blythewood, Elgin and northeast Richland County have open staircases and second-floor landings. Custom stair glass is cut to your drawing, and a wall connector finishes the run where the glass meets drywall. Add a square caprail for a top rail in the same finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Columbia",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for an installer in Columbia?",
+        "text": "<p>Most Columbia decks are a DIY job of about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

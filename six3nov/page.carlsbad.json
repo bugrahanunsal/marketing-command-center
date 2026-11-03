@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Carlsbad, CA</strong>",
+        "text": "We ship frameless glass railing systems to Carlsbad and North County San Diego. Each order is 12 mm tempered glass with 2205 marine-grade stainless spigots, crated and delivered to your door. Owners and builders use them on ocean-view decks, lagoon-front balconies, pool fences and stairs from the Village to Aviara.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Carlsbad projects</strong>",
+        "description": "<p>For a Carlsbad pool yard the <a href=\"/products/60-high-tempered-glass-panels\">57.7\" panel</a> makes the 60\" enclosure the state requires. Gate hinges and latches come from the gate hardware collection. Ocean-view decks and lagoon-front balconies take the 46\" panel on 6\" top-mount spigots, or on side-mount spigots when the deck surface is narrow. All hardware is 2205 stainless in Brushed Stainless or Matte Black. See the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> for bluff decks.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Carlsbad, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which gate hardware do I need for a glass pool fence in La Costa?",
+            "answer": "<p>The gate hardware collection has hinges, latches and a floor lock for a gate in the same 12 mm glass, all in 2205 stainless. California asks for a pool enclosure at least 60\" high, gaps under 4\" and a latch at least 60\" above the ground. Mount the latch at that height on the 57.7\" panel. Have the City of Carlsbad building division confirm the gate details for your pool.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Will the hardware hold up to salt air in Carlsbad Village and Terramar?",
+            "answer": "<p>The spigots, connectors, hinges and latches are 2205 marine-grade stainless steel, which carries a 10-year no-rust promise. Both finishes, Brushed Stainless and Matte Black, sit on that same alloy. The tempered glass does not corrode; it collects a salt film that rinses off with fresh water. Hose the hardware when you wash the windows and it stays bright a block from the beach.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit from the City of Carlsbad to put glass on an existing deck?",
+            "answer": "<p>Ask the City of Carlsbad building division before you order. A new guard on an existing deck and a new deck are reviewed differently. Some addresses near the beach and the lagoons also fall under coastal review. Bring the engineering documents for the spigots on wood and concrete; they show the testing and blocking details a plan checker asks about.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How do I attach a glass railing on a lagoon-front slope deck in Aviara?",
+            "answer": "<p>Most slope decks are wood framed, so the side-mount spigot bolts through the fascia into blocking, leaving the deck boards clear. A concrete terrace takes the 6\" top-mount spigot on the slab. Either way the California code wants 42\" minimum, and the 46\" panel gives 48\". Send photos of the deck edge with your measurements and we will quote the right spigot.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Carlsbad Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in Carlsbad? Send measurements, photos or a sketch through the quote form. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Order the sample kit to check the finish against your stucco or wood. Then see the <a href=\"/pages/glass-railing-california\">California glass railing hub</a>, and our <a href=\"/pages/california-glass-railing-newport-beach\">Newport Beach</a> page for Orange County.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Salt Air Hardware",
+            "text": "2205 marine-grade stainless spigots and connectors, with a 10-year no-rust promise."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "60\" Pool Fence Height",
+            "text": "California pool enclosures must be 60\" high; the 57.7\" panel makes a 60\" fence."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No Duties or Surprises",
+            "text": "The checkout price is final: no duties, tariffs or hidden fees from Canada."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Lifetime Glass Warranty",
+            "text": "12 mm tempered panels carry a lifetime warranty against manufacturing defects."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Carlsbad"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for North County decks, lagoon lots and pool yards"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Carlsbad projects: ocean views, lagoons and pool yards</strong></p><p>Carlsbad runs about seven miles along the coast between Oceanside and Encinitas, and three lagoons cut inland through it: Buena Vista, Agua Hedionda and Batiquitos. Homes in the Village and along Carlsbad Boulevard face the ocean. Homes in Terramar and around the lagoons face the water from a bluff or a slope. On those lots a frameless glass deck railing is chosen for one reason: nothing stands between the sofa and the horizon.</p><p>Inland, La Costa, Aviara, Bressi Ranch and Rancho Carrillo are newer tracts with backyard pools, second-floor balconies and HOA architectural review. There we ship 60\" glass pool fences, 48\" balcony railings and stair glass for interior remodels. Oceanside, Vista and San Marcos customers order the same parts, and the freight carrier delivers to all of them.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Salt air, marine layer and the hardware that handles it</strong></p><p>Salt air reaches well past the beach in Carlsbad, and the marine layer keeps surfaces damp for much of May and June. Salt is hard on plated and painted steel. Every spigot, connector, hinge and latch we sell is 2205 marine-grade stainless steel with a 10-year no-rust promise. The 12 mm tempered panels have a lifetime warranty against manufacturing defects. A rinse with fresh water now and then keeps the finish bright, in Brushed Stainless or Matte Black.</p><p>The California code sets 42\" as the minimum guard height, even for houses. The City of Carlsbad building division applies the 2022 Title 24 codes. The 46\" panel gives a 48\" railing and is the common choice for ocean-view decks. Parts of the city sit in the coastal zone, so ask the building division whether your address needs a coastal review. Details are on the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a>.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Carlsbad and DIY installation</strong></p><p>Orders are processed in 2–3 business days, then delivered in 5–10 business days by freight carrier with liftgate delivery. The driver lowers the crate at the curb. Plan for a clear spot on the street in the Village or on the driveway in La Costa. The price at checkout is final, with no duties or tariffs, and orders over 3,000 USD ship free. Check the glass on arrival and report any damage within 3 days, before installation, for a free replacement or refund.</p><p>The system is designed for DIY installation. Each panel sits in two spigots, with no posts. Most standard installations take about 4 hours with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos. Spigots fix to wood joists or a concrete slab with screws sold separately. Engineering documents for both substrates are available for your permit file.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Ocean-view decks and balconies",
+            "text": "<p>From the Village and Terramar down to the Batiquitos bluffs, decks face west and take the afternoon wind. A frameless glass deck railing keeps the water view clear. Side-mount spigots on the fascia free up the deck boards; top-mount spigots on the slab suit concrete patios.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences in La Costa and Aviara",
+            "text": "<p>Backyard pools in La Costa, Aviara and Bressi Ranch need a 60\" enclosure under California law. Gaps must stay under 4\", with the gate latch 60\" above ground. The 57.7\" panel in spigots gives that height while keeping the yard open to view from the house.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Lagoon-front slopes and HOA tracts",
+            "text": "<p>Homes around Agua Hedionda and Batiquitos lagoons sit on slopes with view decks that take a 48\" glass railing. In HOA neighborhoods, check whether the architectural committee wants a drawing and a finish sample first. The sample kit shows the committee the glass and both hardware finishes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Carlsbad",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Carlsbad?",
+        "text": "<p>We may have an installer in your area: contact us with your project address and we will check. Otherwise the kit is designed for DIY: most standard installations take about 4 hours with the guide and videos, on wood or concrete.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

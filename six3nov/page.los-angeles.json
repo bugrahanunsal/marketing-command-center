@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Los Angeles, CA</strong>",
+        "text": "Los Angeles railings are about the view, from a Hollywood Hills canyon deck to a Venice roof terrace. We ship frameless glass railing systems across the city and county: 12 mm tempered panels and 2205 stainless spigots, delivered by freight. You install them with our guide and videos.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Los Angeles projects</strong>",
+        "description": "<p>For a hillside deck in the Hollywood Hills or Silver Lake, the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> on the fascia keeps the deck clear. Pair it with the 46-inch panel for a 48-inch railing. For a Venice roof terrace or a Marina del Rey balcony, use the 6-inch top-mount spigot on concrete. Around a Valley or Pasadena pool, the <a href=\"/products/60-high-tempered-glass-panels\">57.7-inch panel</a> builds a 60-inch glass pool fence with gate hardware in Matte Black or Brushed Stainless.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Los Angeles, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "My house is in a very high fire hazard severity zone. Can I use glass railing?",
+            "answer": "<p>Much of the Hollywood Hills, Pacific Palisades and the foothills above Pasadena is mapped as a very high fire hazard severity zone. The California code has rules there for exterior building elements. Tempered glass and 2205 stainless steel do not burn, but the deck is usually wood, so check with LADBS and the fire authority. Homes being rebuilt in Pacific Palisades after the 2025 fire go through the same review.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Do rooftop terraces in Venice or Manhattan Beach follow the same 42-inch rule?",
+            "answer": "<p>Yes. The California code sets 42 inches as the minimum guard height, and the rule covers roof decks too. Venice is in the City of Los Angeles, so LADBS issues the permit. Manhattan Beach, Hermosa Beach and Santa Monica have their own building departments, fees and forms. The 46-inch panel, which gives 48 inches, is a common choice on an open roof.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does Valley heat or strong sun affect tempered glass?",
+            "answer": "<p>No. The panels are 12 mm tempered safety glass, the same type used in shower doors. Heat and UV do not cloud or weaken it. In Encino, Woodland Hills or Pasadena the railing sits in full sun all afternoon. The glass stays clear and carries a lifetime warranty against manufacturing defects. The hardware is 2205 stainless steel in Brushed Stainless or Matte Black.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can the system follow angled runs and odd widths on a hillside deck?",
+            "answer": "<p>Yes. Send a sketch with each run length, the angles and photos of the deck edge, and we will prepare a detailed quote. Panels come in many standard widths, and custom widths are made to order. Angled runs use the adjustable glass-to-glass connector, and square corners use the 90-degree connector. Custom glass is processed in 2–3 business days and ships in 2–3 weeks.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send measurements, photos or an architect's drawing through the quote form. We will reply with a detailed quote, from a single balcony to a full pool enclosure. Standard panels and hardware ship in 2–3 business days. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Shipping to Orange County instead? See our <a href=\"/pages/california-glass-railing-orange-county\">Orange County page</a>, or read our <a href=\"/pages/glass-railing-cost\">cost guide</a> first.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Hillside deck hardware",
+            "text": "Top-mount and side-mount 2205 stainless spigots with engineering documents for wood and concrete."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42-inch California minimum",
+            "text": "39.6-inch panels give 42 inches; 46-inch panels give 48 inches for hillside and roof decks."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "60-inch pool fence",
+            "text": "57.7-inch tempered panels for the 60-inch pool enclosure the state pool safety act sets."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight across LA County",
+            "text": "Processed in 2–3 business days, delivered in 5–10 business days with liftgate, no hidden fees."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Los Angeles"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for Los Angeles hillside, beach and pool homes"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hills, beaches and the Valley: where the glass goes</strong></p><p>In the Hollywood Hills, Laurel Canyon, Silver Lake, Mount Washington and Bel Air, homes climb the slope, and the deck is where you live. Those decks face the canyon or the city lights, and a frameless glass deck railing keeps the view clear. On the Westside and in the South Bay, Venice, Marina del Rey and Manhattan Beach have roof terraces and walk-street balconies. Condos on the marina sit in salt air all year.</p><p>Pacific Palisades and the Santa Monica Mountains sit in very high fire hazard severity zones. So do the San Gabriel foothills above Pasadena and La Cañada Flintridge. Inland, the San Fernando Valley, Pasadena and the San Gabriel Valley are pool-deck country, with hot summers and glass pool fences around backyard pools. Downtown, condo balconies and rooftop amenity decks use the same panels at 42 inches.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>LADBS permits, hillside rules and the 42-inch guard</strong></p><p>Inside the City of Los Angeles, permits go through the Los Angeles Department of Building and Safety (LADBS). Hillside lots fall under the city's hillside rules, which add review for a new deck. Santa Monica, Manhattan Beach, Pasadena, Beverly Hills and Glendale are separate cities with their own building departments. Altadena and Marina del Rey are unincorporated and go through Los Angeles County.</p><p>The California code sets a 42-inch minimum guard height, even on a house (CRC R312.1). The state pool safety act sets a 60-inch enclosure for backyard pools. Gaps must be under 4 inches, and the latch at least 60 inches above the ground. In very high fire hazard severity zones, the code has rules for exterior building elements. Glass and stainless steel do not burn, but check with LADBS and the fire authority about the deck itself. See the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> and the <a href=\"/pages/glass-railing-california\">California hub</a>.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sun, salt and canyon roads: materials and delivery</strong></p><p>Los Angeles has two climates. The Westside and the beach cities get a marine layer and salt air. The Valley, Pasadena and the inland basin get long, dry summers and Santa Ana winds in the fall. Our hardware is 2205 marine-grade stainless steel with a 10-year no-rust promise, which matters in Marina del Rey and Manhattan Beach. The 12 mm tempered glass does not fade in Valley heat. Both finishes, Brushed Stainless and Matte Black, are on the same steel.</p><p>Freight delivery takes 5–10 business days after 2–3 business days of processing, with a liftgate at the curb. Canyon roads in Laurel Canyon, Beachwood Canyon and Topanga are narrow and steep, so tell us where a truck can stop when you order. Inspect the crate and report any damage within 3 days, before installation, for a free replacement or refund. Shipping is free on orders over 3,000 USD.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Canyon-view decks in the Hollywood Hills",
+            "text": "<p>Hillside homes above Sunset, in Laurel Canyon, Beachwood Canyon and Silver Lake, have decks cantilevered toward the view. A frameless glass deck railing on side-mount spigots keeps the full deck width and the city lights at night. Angled sections use the adjustable glass-to-glass connector.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks in the Valley and Pasadena",
+            "text": "<p>Encino, Sherman Oaks, Studio City, Pasadena and San Marino have backyard pools behind the house. The state pool safety act asks for a 60-inch enclosure. The 57.7-inch panels, gate hinges, latch and floor lock build a glass pool fence that keeps the pool in sight from the kitchen.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Roof terraces and balconies by the beach",
+            "text": "<p>Venice walk streets, Marina del Rey condos and the Manhattan Beach Strand are built for roof terraces and ocean-view balconies. A 42-inch or 48-inch glass balcony railing on top-mount spigots fits a concrete deck. The 2205 marine-grade hardware is made for daily salt air.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Los Angeles",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Los Angeles?",
+        "text": "<p>The system is designed for do-it-yourself installation. Most standard decks and balconies take about 4 hours with our guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

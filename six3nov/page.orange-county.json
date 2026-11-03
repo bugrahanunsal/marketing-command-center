@@ -1,0 +1,260 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Orange County, CA</strong>",
+        "text": "We ship frameless glass railings to Orange County homes from Seal Beach to San Clemente and inland to Yorba Linda. Crated 12 mm tempered panels and 2205 stainless spigots arrive by freight for ocean-view decks, 60-inch pool fences, balconies and stair guards. Install them yourself with our guide and videos.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Orange County projects</strong>",
+        "description": "<p>For a coastal Orange County deck, the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> gives a 48-inch railing. The side-mount spigot on the fascia keeps the deck surface clear. Inland pool homes take the 57.7-inch panel for a 60-inch pool fence. Add gate hinges, a latch and the floor lock from the <a href=\"/collections/glass-railing-gate-hardware\">gate hardware collection</a>. Matte Black suits the newer Irvine and Rancho Mission Viejo builds; Brushed Stainless suits the beach.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Orange County, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Will my Orange County HOA approve a frameless glass railing?",
+            "answer": "<p>Most master-planned communities in Irvine, Ladera Ranch, Talega and Rancho Mission Viejo have an architectural review committee. They usually want a drawing, the railing height, the finish and sometimes a sample. We can send product drawings and the engineering documents, and the glass and hardware sample kit shows the real spigot and glass. Rules differ by association, so ask before you order custom sizes.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Which building department issues the permit in Orange County?",
+            "answer": "<p>The city where the house sits. Newport Beach, Irvine, Huntington Beach, Anaheim and the other 30 cities each run their own building division. Some apply local amendments to the California code. Unincorporated communities such as Ladera Ranch and Coto de Caza use the County of Orange. The 42-inch guard minimum and the 60-inch pool barrier are statewide; check locally for the permit process and fees.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does salt air at Newport Beach or Dana Point affect the hardware?",
+            "answer": "<p>Ordinary steel rusts fast within a few blocks of the ocean. Our spigots, connectors, hinges and latches are 2205 marine-grade stainless steel with a 10-year no-rust promise. Both finishes, Brushed Stainless and Matte Black, are on the same 2205 steel. The 12 mm tempered glass is unaffected by salt. On the Balboa Peninsula or in Laguna, rinse the hardware with fresh water now and then.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can the glass mount on the outside of the deck to keep the view?",
+            "answer": "<p>Yes. The <a href=\"/products/glass-railing-side-mount-spigot\">side-mount (fascia) spigot</a> bolts to the face of the deck rim. The glass then stands just outside the deck edge, and the floor stays clear. It suits bluff decks in Laguna Beach and Dana Point. The engineering documents include blocking details for the fascia attachment on wood and on concrete; add the blocking before the spigots go on. Screws are sold separately.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a deck in Laguna Niguel or a pool fence in Tustin? Send measurements, photos or a site plan through the quote form and we will reply with a detailed quote, including custom widths. Standard panels and hardware ship in 2–3 business days. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. For North County projects, see our <a href=\"/pages/california-glass-railing-san-diego\">San Diego page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Salt-air hardware",
+            "text": "2205 marine-grade stainless spigots and connectors with a 10-year no-rust promise, for coastal homes."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42-inch and 48-inch heights",
+            "text": "39.6-inch and 46-inch panels give 42-inch and 48-inch railings; California sets 42 inches for houses."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "60-inch pool fence",
+            "text": "57.7-inch panels build the 60-inch pool enclosure the state pool safety act calls for."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate freight delivery",
+            "text": "Delivered in 5–10 business days after 2–3 days of processing; free shipping over 3,000 USD."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Orange County"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Orange County coast, canyons and HOA tracts"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>From the coast to the Santa Ana foothills</strong></p><p>Orange County runs from the beach to the Santa Ana Mountains, and the projects change with the ground. On the coast, Newport Beach, Laguna Beach, Dana Point and San Clemente have bluff and hillside homes with ocean-view decks and balconies. A frameless glass deck railing keeps the horizon in view. The 2205 marine-grade hardware carries a 10-year no-rust promise, which matters in salt air. Huntington Beach and Huntington Harbour add waterfront patios and rooftop decks.</p><p>Inland, Irvine, Mission Viejo, Lake Forest, Anaheim Hills and Yorba Linda are mostly master-planned tracts with backyard pools. There, the typical project is a 60-inch glass pool fence with a gate, plus 48-inch guards on second-floor balconies. Anaheim Hills and the canyon communities toward Silverado and Trabuco Canyon sit in fire hazard zones. Ask the fire authority about deck rules there.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits and heights: one code, 34 cities</strong></p><p>The California code sets a 42-inch minimum guard height on houses (CRC R312.1), and that applies in every Orange County city. Our 39.6-inch panel gives 42 inches; the 46-inch panel gives a 48-inch railing. Pool enclosures follow the state pool safety act: 60 inches high, gaps under 4 inches, latch at least 60 inches up.</p><p>Orange County has 34 cities, and each runs its own building department: Irvine, Newport Beach, Huntington Beach, Mission Viejo and so on. Unincorporated areas such as Ladera Ranch, Coto de Caza and Rancho Mission Viejo go through the County of Orange. Homes in the coastal zone may need an extra review. Most tracts have an HOA architectural committee that wants to see the railing before you build. Read the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a>, then check with your city, and see the <a href=\"/pages/glass-railing-california\">California hub</a> for the rest of the state.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Salt air on the coast, heat inland, and how the crate arrives</strong></p><p>Newport Beach, Laguna Beach and Dana Point get a marine layer many mornings and salt air that attacks ordinary steel. Every spigot, connector, hinge and latch we sell is 2205 marine-grade stainless steel with a 10-year no-rust promise, in Brushed Stainless or Matte Black. The glass is 12 mm tempered safety glass with a lifetime warranty against manufacturing defects. Inland, Yorba Linda and Anaheim Hills see hot, dry summers and Santa Ana winds in the fall. Tempered glass does not fade in the sun.</p><p>Delivery takes 5–10 business days after 2–3 business days of processing, by freight carrier with a liftgate. The driver brings the crate down at your curb or driveway; plan to have a second person to carry panels. Inspect the crate and report any damage within 3 days, before installation, for a free replacement or refund. Custom sizes take 2–3 weeks more.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Ocean-view decks in Laguna and Corona del Mar",
+            "text": "<p>Bluff homes in Laguna Beach, Corona del Mar and San Clemente step down toward the water, and the deck is the main room. A frameless glass deck railing with side-mount spigots keeps the whole deck usable and the view open. Use the engineering documents for the fascia attachment.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences in Irvine and Mission Viejo",
+            "text": "<p>Backyard pools in Irvine, Mission Viejo and Yorba Linda need a 60-inch enclosure under the state pool safety act. Our 57.7-inch panels, gate hinges, latch and floor lock build a glass pool fence that keeps the pool in view. Submit the drawing to your HOA along with the permit.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Balconies and stair guards in new builds",
+            "text": "<p>New homes in the Irvine villages, Great Park and Rancho Mission Viejo come with second-floor balconies and open stairs. A 42-inch or 48-inch glass balcony railing on top-mount spigots fits a stucco or concrete balcony. For the stairs, custom stair glass is cut to your rise and run.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Orange County",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Orange County?",
+        "text": "<p>The system is designed for DIY installation; most standard installations take about 4 hours with our guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

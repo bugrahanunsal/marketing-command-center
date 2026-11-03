@@ -1,0 +1,260 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in San Antonio, TX</strong>",
+        "text": "We ship frameless glass railings to San Antonio, from Alamo Heights and Olmos Park to Stone Oak and the Dominion. Boerne and New Braunfels get the same delivery. Each crate holds 12 mm tempered glass and 2205 stainless spigots for view decks on limestone slopes, pool fences and covered patios.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for San Antonio projects</strong>",
+        "description": "<p>For a Hill Country view deck, the 33.6\" panel gives the 36\" glass deck railing that the code sets for houses. The 39.6\" panel gives 42\" if you want more. The <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> on the fascia keeps the deck boards clear. For a Stone Oak or Alamo Heights pool, the 46\" panel makes a 48\" fence with gate hinges, a latch and a floor lock. A <a href=\"/collections/glass-railing-caprail\">square caprail</a> along the top is an option on long runs.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "San Antonio, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Can the spigots mount on a concrete patio poured over limestone?",
+            "answer": "<p>Yes. The 6\" engineered spigot top-mounts to concrete or wood, and our engineering documents include the testing and blocking details for both. Screws are sold separately; buy the concrete screws locally. Limestone bedrock close to the surface is normal on the north side, but the spigot fixes to the slab, not the rock. Send photos of the slab edge with your quote and we will confirm top-mount or side-mount.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does the Texas HOA pool rule apply to a backyard pool in Stone Oak?",
+            "answer": "<p>Texas Health and Safety Code chapter 757 covers apartment-complex and property owners' association pools, like the community pools in Stone Oak. It sets a 48\" barrier. A backyard pool at a house follows the city's code instead. Most cities in the area apply the 48\" barrier rule from the IRC and ISPSC, so the number is the same. Your HOA may still want to approve the look before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "My address is in Alamo Heights or Terrell Hills, not San Antonio. Who issues the permit?",
+            "answer": "<p>That city does. Alamo Heights, Terrell Hills, Olmos Park, Shavano Park and Hollywood Park are independent cities surrounded by San Antonio. Each has its own building department and its own code edition and amendments. A new deck, balcony or pool barrier normally needs a permit from that city, not from San Antonio Development Services. Check their guard rules before ordering and ask if they want our engineering documents.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Which finish looks right against limestone and stucco in San Antonio?",
+            "answer": "<p>Both finishes are 2205 marine-grade stainless steel; the choice is visual. Brushed Stainless reads as a light, neutral metal that sits quietly against cream limestone, stucco and the white trim common in Alamo Heights. Matte Black outlines each panel and matches the dark window frames on newer Stone Oak and Dominion builds. The <a href=\"/products/glass-hardware-sample-kit\">Glass and Hardware Sample Kit</a> lets you check both finishes against your patio before ordering.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Bring Style and Safety to Your Property Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to quote a glass railing in San Antonio? Send measurements, photos or a drawing of your deck, patio or pool through the quote form. Or call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. The quote is detailed and the checkout price is final, with no duties or hidden fees. Building up the road in the Hill Country? See our <a href=\"/pages/texas-glass-railing-austin\">Austin page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to Bexar County",
+            "text": "Liftgate freight delivery to San Antonio, Boerne and New Braunfels in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Mounts to Concrete or Wood",
+            "text": "Top-mount and side-mount spigots fix to concrete patios or wood decks; screws sold separately."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Two Finishes",
+            "text": "Brushed Stainless or Matte Black on 2205 marine-grade stainless steel, 10-year no-rust promise."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 Hours to Install",
+            "text": "Designed for DIY with the installation guide and videos; most standard installs take about 4 hours."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in San Antonio"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for San Antonio view decks, pools and covered patios"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>North side slopes, old neighborhoods and the suburbs beyond</strong></p><p>San Antonio changes character at the Balcones Escarpment. South of it, Alamo Heights, Terrell Hills, Olmos Park and Monte Vista are established neighborhoods with older homes, mature live oaks and backyard pools. North of it, Stone Oak, the Dominion, Shavano Park and Hollywood Park climb onto limestone ridges. The lots come with slopes and long views toward the Hill Country. That is where a raised view deck or a terraced patio makes sense. A frameless glass deck railing keeps the view instead of fencing it off. Boerne, Fair Oaks Ranch, Bulverde and New Braunfels extend the same Hill Country housing further out. Near downtown, the Pearl and Southtown add condos and townhomes with balconies. Across all of it, the covered patio with an outdoor kitchen is the signature San Antonio project.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>San Antonio permits and the small cities inside the loop</strong></p><p>The City of San Antonio applies the 2021 International Residential Code with local amendments, and permits go through Development Services. The code sets a 36\" minimum guard height for houses and 42\" for commercial and multifamily buildings, which covers the Pearl condos. For a backyard pool, most cities in the area apply the 48\" barrier rule from the IRC and ISPSC. Texas Health and Safety Code chapter 757 sets 48\" for apartment-complex and HOA pools. Alamo Heights, Terrell Hills, Olmos Park, Shavano Park, Hollywood Park and Castle Hills are separate cities with their own building departments. Your permit may not come from San Antonio at all. Stone Oak and the Dominion add HOA architectural review on top. Ask the office that covers your address before ordering. The <a href=\"/pages/texas-building-code-for-glass-railings\">Texas building code page</a> has the statewide summary, and the <a href=\"/pages/glass-railing-texas\">Texas hub</a> covers delivery and the other metros.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Limestone, heat and delivery in San Antonio</strong></p><p>Two local details shape a San Antonio order. First, limestone. On the north side, bedrock sits close to the surface, so patios are usually poured concrete and decks are wood-framed over the slope. The 6\" engineered spigot top-mounts to concrete or wood, and the side-mount spigot fixes to a fascia or stringer. Our engineering documents cover both on each material, with screws sold separately. Second, heat. Summers are long and the sun is strong, so materials matter. The glass is 12 mm tempered safety glass with a lifetime warranty against manufacturing defects. The hardware is 2205 marine-grade stainless steel with a 10-year no-rust promise. Delivery is by freight carrier. Orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. A tailgate lift sets the crate on your driveway. Check the glass within 3 days, before installation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Hill Country view decks",
+            "text": "<p>Lots in Stone Oak, the Dominion and toward Boerne drop away from the house, and the deck holds the view. A frameless glass deck railing on a wood-framed deck keeps the Hill Country in sight from the kitchen. Side-mount spigots on the fascia leave the full deck width usable.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Backyard pool fences",
+            "text": "<p>Alamo Heights, Terrell Hills and the north-side subdivisions are full of backyard pools next to a covered patio. A glass pool fence separates pool from patio and keeps sightlines for anyone watching kids. Most area cities apply the 48\" barrier rule, so the 46\" panel is the usual choice.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Covered patios and outdoor kitchens",
+            "text": "<p>The San Antonio outdoor living space is a covered patio with a kitchen and a step down to the yard. Where the patio sits above grade, a short run of frameless glass railing finishes the edge without posts. Top-mount spigots fix straight to the concrete slab; screws are sold separately.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in San Antonio",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Want an installer in San Antonio?",
+        "text": "<p>Most standard installations take about 4 hours with the installation guide and videos, whether on a concrete patio or a wood deck. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

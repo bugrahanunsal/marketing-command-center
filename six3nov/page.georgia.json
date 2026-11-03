@@ -1,0 +1,360 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Georgia</strong>",
+        "text": "Frameless glass railing systems delivered to any Georgia address, from Buckhead decks to Lake Lanier docksides and Blue Ridge cabins. Every order ships crated with 12 mm tempered glass panels and 2205 stainless spigots. Install it yourself with the guide and videos on decks, balconies, stairs and pool surrounds.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Georgia projects</strong>",
+        "description": "<p>Georgia houses mostly use the 33.6-inch panel for a 36-inch railing. Condo balconies in Atlanta take the 39.6-inch panel for the 42-inch height. Pool decks take the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> for a 48-inch barrier. Lake and coastal homes pair the panels with 2205 stainless spigots in Brushed Stainless or Matte Black. Start with the <a href=\"/collections/glass-railing-kits\">glass railing kits</a> for a straight deck run.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Georgia"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing McDonough",
+            "link": "shopify://pages/georgia-glass-railing-mcdonough"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Smyrna",
+            "link": "shopify://pages/georgia-glass-railing-smyrna"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Canton",
+            "link": "shopify://pages/georgia-glass-railing-canton"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Conyers",
+            "link": "shopify://pages/georgia-glass-railing-conyers"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Atlanta",
+            "link": "shopify://pages/georgia-glass-railing-atlanta"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Woodstock",
+            "link": "shopify://pages/georgia-glass-railing-woodstock"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Sandy Springs",
+            "link": "shopify://pages/georgia-glass-railing-sandy-springs"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Covington",
+            "link": "shopify://pages/georgia-glass-railing-covington"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Clayton",
+            "link": "shopify://pages/georgia-glass-railing-clayton"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Dillard",
+            "link": "shopify://pages/georgia-glass-railing-dillard"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place7",
+        "place8",
+        "place9",
+        "place10"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Georgia, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send us the lengths of your deck, balcony, stairs or pool surround with a few photos. We will send back a detailed quote with panel sizes and hardware. Ready to order? The <a href=\"/collections/glass-railing\">glass railing collection</a> has every panel height and finish. For a Georgia address or permit question, call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What pool fence height does Georgia require?",
+            "answer": "<p>Georgia applies the 2018 International Swimming Pool and Spa Code with its state minimum codes, and section 305 sets a 48-inch barrier. Our 46-inch tempered panel installed in spigots gives a 48-inch railing, so that is the pool panel for Georgia. Add gate hinges and a latch for the opening, and ask your local building department about self-closing gate details before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does Georgia pollen or humidity damage the glass or hardware?",
+            "answer": "<p>No. Spring pollen leaves a yellow film on everything in Georgia, glass included, and it rinses off with a hose in minutes. Humidity does not affect tempered 12 mm glass, and the spigots are 2205 marine-grade stainless steel with a 10-year no-rust promise. There are no pickets to scrub and no wood to stain every couple of years.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can I use the railing on a mountain cabin deck that gets snow?",
+            "answer": "<p>Yes. Tempered glass and stainless spigots do not absorb water, so freeze-thaw in Blue Ridge or Blairsville does not crack or swell them. The deck framing carries any snow load; the railing only needs a sound attachment to the joists with the blocking shown in the installation guide. The side-mount spigot works on a fascia board when the deck boards are too thin.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Will a coastal Georgia building department want engineering documents?",
+            "answer": "<p>It may. Chatham County, Glynn County and the City of Savannah review deck and railing attachments. A plan reviewer can ask how the spigots are fixed. We provide engineering documents with testing results and blocking details for top-mount and side-mount spigots on concrete and on wood. Download them from our engineering page and include them with the permit application.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Georgia"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railing from the mountains to the Golden Isles"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>What Georgia homeowners build with glass</strong></p><p>Metro Atlanta is the center of it. Intown bungalows in Morningside, Virginia-Highland and Decatur sit on sloped lots with tall back decks. A glass deck railing keeps the yard in view. Buckhead and Midtown add condo balconies, while Alpharetta, Roswell and Marietta bring pool decks and open staircases. See the <a href=\"/pages/georgia-glass-railing-atlanta\">glass railings in Atlanta</a> page for that market.</p><p>North of the city, Lake Lanier homes around Cumming, Buford and Gainesville stack decks toward the water. Lake Oconee, between Atlanta and Augusta, has a similar mix of lake houses and golf lots. In the North Georgia mountains, cabins in Blue Ridge, Ellijay, Blairsville and Big Canoe have view decks facing the ridges, where glass beats pickets. On the coast, Savannah, Tybee Island, St. Simons and Sea Island combine salt air with raised houses and porches. Augusta, Athens and Macon round out the state.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Georgia code in short</strong></p><p>Georgia sets its building rules through the Georgia State Minimum Standard Codes. The current editions are the 2018 International Residential Code and International Building Code, with Georgia amendments. The Georgia code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings, including condo balconies. For pools, Georgia applies the 2018 International Swimming Pool and Spa Code, and section 305 sets a 48-inch barrier. Our 46-inch panel in spigots gives that height.</p><p>Permits are issued locally, by a city office such as the City of Atlanta Office of Buildings or by the county. Check with your local building department about whether a railing replacement or a new deck needs a permit. Our engineering documents, with testing results and blocking details for wood and concrete, are available for the permit file. The full summary is on our <a href=\"/pages/georgia-building-code-for-glass-railing\">Georgia building code for glass railing</a> page.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to any Georgia address</strong></p><p>Orders ship from our warehouse in Quebec and cross the border before they reach you. The price at checkout is final, with no duties, tariffs or brokerage charges later. Standard orders are processed in 2 to 3 business days, then delivered by freight carrier in 5 to 10 business days. The truck has a liftgate, so the crate comes down to the driveway. That works on a mountain road in Ellijay or a cul-de-sac in Johns Creek. Custom glass takes 2 to 3 weeks of shipping after processing.</p><p>Orders over 3,000 USD ship free; the <a href=\"/pages/free-shipping-information\">free shipping page</a> has the details. Open the crate on arrival and report any damage within 3 days, before installation. We replace or refund the damaged item at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight anywhere in Georgia",
+            "text": "Liftgate delivery to any Georgia address, 5 to 10 business days after processing."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Hardware that will not rust",
+            "text": "2205 marine-grade stainless spigots and connectors with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Four railing heights",
+            "text": "36, 42, 48 and 60-inch railings from 12 mm tempered glass; custom sizes available."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Final price at checkout",
+            "text": "No duties, tariffs or hidden fees, even though the crate ships from Canada."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Lake Lanier and Lake Oconee decks",
+            "text": "<p>Lake houses around Cumming, Gainesville and Greensboro stack a main deck and a lower patio toward the water. A frameless glass deck railing on each level keeps the lake in sight from inside. Side-mount spigots on the fascia keep the full deck width for furniture.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Mountain cabins with view decks",
+            "text": "<p>Cabins in Blue Ridge, Big Canoe and Blairsville are built for the ridge view, and a picket railing cuts it in half. Glass panels in top-mount spigots keep the view open from a seated position. Winter freeze-thaw does not affect tempered glass or 2205 stainless steel.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Coastal porches and balconies",
+            "text": "<p>Raised houses on Tybee Island, St. Simons and Skidaway Island have upper porches in salt air and humidity. A glass balcony railing there rinses clean with a hose, and the 2205 stainless hardware carries a 10-year no-rust promise. The 39.6-inch panel gives the 42-inch height for condos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Georgia",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need a hand installing in Georgia?",
+        "text": "<p>The system is designed for DIY, and most standard installations take about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

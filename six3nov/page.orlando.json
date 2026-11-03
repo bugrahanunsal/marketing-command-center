@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Orlando, FL</strong>",
+        "text": "Orlando is pool-home country: screened lanais, lakefront lots and new builds from Lake Nona to Horizon West. We ship frameless glass railing systems for pool fences, lake-view balconies and open stairs across Orange, Seminole and Osceola counties. Each order is 12 mm tempered glass and 2205 hardware, crated to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Orlando projects</strong>",
+        "description": "<p>Pool fences come first in Orlando: the 46-inch panel in two spigots for the 48-inch barrier, with gate hinges, a latch and a floor lock on the opening. Browse the <a href=\"/collections/glass-railing-kits\">glass railing kits</a> or send your lanai dimensions for a quote. Lake-view balconies in Windermere and Winter Park use the <a href=\"/products/glass-railing-34-tempered-glass-panel\">33.6-inch panel</a> for a 36-inch guard, and new builds add custom-cut stair glass. Both finishes are 2205 stainless; Matte Black matches bronze screen cages, Brushed Stainless suits white stucco.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Orlando, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Can I put a glass pool fence inside my screened lanai?",
+            "answer": "<p>Yes. The spigots fix to the concrete pool deck, so the fence can run anywhere on the slab, inside the screen enclosure. Measure the run between the screen posts and send a photo; panels come in many widths, and custom widths are available. The 46-inch panel gives the 48-inch barrier height the pool act sets, with gate hardware for the opening. Confirm with the building department which barrier rules apply to your pool.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does the 48-inch barrier rule apply to a new pool in Lake Nona or Horizon West?",
+            "answer": "<p>New residential pools in Florida fall under the Residential Swimming Pool Safety Act. The barrier rule is at least 48 inches high on the outside, with gates that close on their own and open away from the pool. The 46-inch tempered panel in two spigots gives that 48 inches. Lake Nona permits go through the City of Orlando; Horizon West goes through Orange County. Both confirm the barrier details at permit time.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Will the hardware rust in Orlando's humidity without salt air?",
+            "answer": "<p>No. The spigots, connectors, hinges and latches are 2205 marine-grade stainless steel, chosen for salt air on the coasts. Inland humidity and daily summer rain are easy conditions for it. The hardware carries a 10-year no-rust promise in both finishes. Well water from sprinklers can leave iron stains on any surface, so rinse the base of the spigots if your irrigation hits the fence.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Who issues the permit: the City of Orlando or Orange County?",
+            "answer": "<p>It depends on the address. Inside the city limits, including Lake Nona, downtown and College Park, the City of Orlando Permitting Services handles it. Dr. Phillips and Horizon West are unincorporated Orange County, which goes through the county's Division of Building Safety. Winter Park, Windermere, Maitland and Ocoee are separate cities with their own offices. Check your address on the county property appraiser's site, then call that office before you order.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Begin Your Orlando Glass Railing Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to fence the pool or open up the stairs? Send measurements and photos through the quote form and we will send a detailed quote. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the coasts and the code, and the <a href=\"/pages/florida-glass-railing-tampa\">Tampa Bay page</a> is the nearest coastal neighbor. Orders over 3,000 dollars ship free, and the checkout price is final.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Pool fence panel",
+            "text": "The 46-inch tempered panel gives the 48-inch barrier Florida's pool act sets."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No rust in the humidity",
+            "text": "2205 marine-grade stainless hardware with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered to Central Florida",
+            "text": "Liftgate freight in 5 to 10 business days after 2 to 3 days of processing."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 hours to install",
+            "text": "DIY with the installation guide and videos; spigots fix to concrete or wood."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Orlando"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass pool fences and lake-view railings for Orlando's pool homes"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Lanais, lakes and new neighborhoods</strong></p><p>Orlando sits far from both coasts, so there is no salt in the air. There is a pool behind many houses, though, and a screened lanai over it. In Dr. Phillips and Windermere, on the Butler Chain of Lakes, the pool deck looks over the water. A glass pool fence keeps the lake in view from the kitchen. Winter Park's chain of lakes, from Lake Virginia to Lake Maitland, has older homes with second-floor balconies and raised terraces. College Park, Baldwin Park and Thornton Park add bungalows and townhomes close to downtown.</p><p>The growth is in the southeast and southwest. Lake Nona's new neighborhoods and Horizon West's master-planned villages are full of two-story houses with open staircases. A glass stair railing is often part of the plan from day one. Summer brings humidity and an afternoon thunderstorm most days, which matters more for scheduling the install than for the materials.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Orange County rules and the pool act</strong></p><p>Orlando is outside the High-Velocity Hurricane Zone. Orange County is a wind-borne debris region under the Florida Building Code, 8th edition (2023), and the building department reviews how a railing is attached. Inside the city limits, which include Lake Nona, permits go through City of Orlando Permitting Services. Dr. Phillips and Horizon West are unincorporated and go through the Orange County Division of Building Safety. Winter Park and Windermere have their own offices.</p><p>For a house, the residential code sets a 36-inch guard on a balcony, deck or landing more than 30 inches above grade. Apartments and condos need 42 inches. New residential pools fall under the Residential Swimming Pool Safety Act. It sets a barrier at least 48 inches on the outside, with gates that close on their own and open away from the pool. The 46-inch panel gives that height. See our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a>, then confirm with your building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Orlando and the DIY install</strong></p><p>Standard panels are processed in 2 to 3 business days and arrive in 5 to 10 business days by freight carrier with a liftgate. The crate comes down to your driveway, so have a helper ready to carry the panels through the side gate to the lanai. Custom sizes take 2 to 3 weeks in transit after processing. Orders over 3,000 dollars ship free, and the checkout price is final, with no duties, tariffs or hidden fees.</p><p>Installation is DIY. Each panel sits in two spigots fixed to the concrete pool deck or the wood deck, with screws sold separately. The <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos cover every step. Most standard jobs take about 4 hours, so a morning start beats the afternoon storm. Check the glass within 3 days of delivery and before installation; damage reported in that window is replaced or refunded at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences inside the lanai",
+            "text": "<p>Dr. Phillips, Hunter's Creek and Horizon West pool homes have the pool under a screen enclosure. A 48-inch glass pool fence on 46-inch panels separates the water from the seating area without closing in the lanai. Measure around the screen posts and we cut panels to fit.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Lakefront balconies and terraces",
+            "text": "<p>Windermere, Winter Park and the Conway chain of lakes have homes with second-floor balconies and raised terraces over the water. The 33.6-inch panel gives a 36-inch glass balcony railing that keeps the lake in view; the 39.6-inch panel gives 42 inches if you want more. Side-mount spigots fix to the fascia.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Open stairs in new builds",
+            "text": "<p>Two-story houses in Lake Nona, Laureate Park and Horizon West put the staircase in the main living space. A glass stair railing on custom-cut panels and 2205 spigots replaces the builder's spindles and keeps the room open. Send the stair measurements or drawings and we quote the panels.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Orlando",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Orlando?",
+        "text": "<p>The system is designed for DIY with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

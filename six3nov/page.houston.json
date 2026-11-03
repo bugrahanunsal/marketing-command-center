@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Houston, TX</strong>",
+        "text": "We ship frameless glass railings to Houston, from the Heights and Memorial out to The Woodlands, Katy, Sugar Land and the Clear Lake shore. The crate holds 12 mm tempered glass and 2205 marine-grade stainless spigots, ready for pool decks, townhome rooftop decks, covered patios and bay-view balconies.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Houston projects</strong>",
+        "description": "<p>Houston projects are usually one of two things: a pool deck or a raised deck. For a pool, the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46\" panel</a> makes the 48\" barrier height that most area cities apply. Add gate hinges, a latch and a floor lock at the opening. For a townhome rooftop deck or a bay-view balcony, the 33.6\" panel gives a 36\" glass deck railing. The <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> keeps the walking surface clear by mounting on the fascia.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Houston, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit for a glass railing in Houston if there is no zoning?",
+            "answer": "<p>Usually, yes. Zoning controls land use; the building code controls construction. Houston applies the 2021 IRC and IBC with local amendments. A new deck, rooftop deck, balcony or pool barrier normally needs a building permit from the Houston Permitting Center and an inspection. Replacing an existing railing is sometimes treated differently, so ask before you order. West University, Bellaire and the Memorial villages have their own building departments.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "How high does a glass railing need to be on a Houston townhome rooftop deck?",
+            "answer": "<p>For a single-family townhome, the code sets a 36\" minimum guard height, and the 33.6\" panel in a 6\" spigot gives 36\". Some owners prefer the 39.6\" panel, a 42\" railing, three stories up. Spigots top-mount to the framing or side-mount to the fascia; our engineering documents cover both on wood and concrete. Send photos of the roof edge with your quote request; membranes and parapets change the attachment plan.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "What about Houston humidity and hurricane season?",
+            "answer": "<p>For humidity, the answer is 2205 marine-grade stainless steel on every spigot, connector, hinge and latch, with a 10-year no-rust promise. Hurricane season runs June through November. The railing is tempered safety glass, not a storm shutter; treat it like your other exterior glass when a storm is forecast. If your building department asks about attachment, our engineering documents cover top-mount and side-mount spigots on wood and concrete.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What arrives in the crate and how does delivery work on a Heights street?",
+            "answer": "<p>The crate holds your tempered glass panels with the spigots, connectors, gate hardware and caprail you ordered. Screws for wood or concrete are sold separately. A freight carrier delivers in 5 to 10 business days after 2 to 3 business days of processing. Liftgate delivery sets the crate on your driveway or curb; clear a spot on a narrow Heights lot. Report any damage within 3 days, before installation.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start  Your Project for Houston Properties</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing in Houston? Send measurements, photos or a drawing of your deck, roof or pool through the quote form and we will send a detailed quote. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Working in Austin or the Hill Country? Our <a href=\"/pages/texas-glass-railing-austin\">Austin page</a> covers hillside decks and limestone lots.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight Across Greater Houston",
+            "text": "Liftgate freight delivery across Harris, Fort Bend and Montgomery counties in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Marine-Grade Hardware",
+            "text": "2205 marine-grade stainless steel hardware with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Tempered Safety Glass",
+            "text": "12 mm (1/2\") tempered glass panels, lifetime warranty against manufacturing defects."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Final Price at Checkout",
+            "text": "No duties, tariffs or hidden fees; free shipping on orders over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Houston"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Houston pool decks, townhome roofs and bay-view balconies"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>From the Heights to Clear Lake: where glass railings go in Houston</strong></p><p>Houston has no zoning, so a 1920s bungalow in the Heights can sit next to a three-story townhome with a rooftop deck. Those inner-loop townhomes, in Rice Military, Montrose, Midtown and EaDo, are the natural fit for a glass deck railing on a roof. Memorial, River Oaks and West University lean toward larger lots with a pool, a covered patio and sometimes a second-floor balcony over the backyard. The master-planned suburbs follow the same pattern at scale. The Woodlands is to the north, Katy and Cinco Ranch to the west, Sugar Land to the southwest and Pearland to the south. Down on Galveston Bay, Clear Lake, Seabrook, Kemah and League City have raised waterfront homes with balconies facing the water. That is where salt air enters the picture. Wherever the address, the crate, the hardware and the delivery are the same.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Houston building code, permits and the no-zoning question</strong></p><p>No zoning does not mean no code. The City of Houston applies the 2021 International Residential Code and International Building Code with local amendments. Permits go through the Houston Permitting Center. The code sets a 36\" minimum guard height for a house deck, balcony or rooftop deck and 42\" for commercial and multifamily buildings. For pool barriers, most cities in the Houston area apply the 48\" rule from the IRC and ISPSC. Texas Health and Safety Code chapter 757 sets 48\" for apartment and HOA pools too. West University Place, Bellaire, the Memorial villages, Sugar Land and Pearland each have their own building department. Check with the one that covers your lot. The Woodlands adds its own design review under the community covenants. The summary for the whole state is on our <a href=\"/pages/texas-building-code-for-glass-railings\">Texas building code page</a>, and the <a href=\"/pages/glass-railing-texas\">Texas hub</a> links every city we cover.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Humidity, hurricanes and freight delivery in Houston</strong></p><p>Houston weather is wet, hot and occasionally violent. The hardware answer is simple: every spigot, connector, hinge and latch is 2205 marine-grade stainless steel with a 10-year no-rust promise. That is why it suits Clear Lake and Kemah as well as Katy. Hurricane season runs June through November, and a building department may ask how exterior elements are attached. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering and testing documents</a> for top-mount and side-mount spigots on wood and concrete are there for that review. Delivery is by freight carrier with a tailgate lift. Orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. On a narrow Heights or Montrose street, the driver needs room to set the crate at the curb or driveway. Clear a spot before the truck calls. Check the glass within 3 days of delivery and before installation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Townhome rooftop decks",
+            "text": "<p>Three- and four-story townhomes in Rice Military, Montrose and EaDo put the outdoor space on the roof. A frameless glass deck railing keeps the skyline view from downtown to the Galleria open. The code sets 36\" for a house, so the 33.6\" panel is the usual choice.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks and covered patios",
+            "text": "<p>In Memorial, Katy and Sugar Land, the backyard means a pool, a covered patio and an outdoor kitchen. A glass pool fence divides pool from patio without a wall of pickets. Most area cities apply the 48\" barrier rule; the 46\" panel in a 6\" spigot makes a 48\" fence.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Bay-view balconies",
+            "text": "<p>Raised homes in Clear Lake, Seabrook and Kemah face the water from a second-floor porch or balcony. A glass balcony railing keeps the view of Galveston Bay, and the 2205 marine-grade hardware carries a 10-year no-rust promise. Side-mount spigots on the fascia keep a narrow porch floor clear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Houston",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need a glass railing installer in Houston?",
+        "text": "<p>Rooftop deck or pool fence, the installation guide and videos walk you through it, and a standard job takes about 4 hours. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

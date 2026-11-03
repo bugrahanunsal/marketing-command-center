@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Boca Raton, FL</strong>",
+        "text": "Boca Raton means gated communities, HOA review boards and backyard pools. We ship frameless glass railing systems for pool fences, Intracoastal decks and stair guards from Boca West to the beach: 12 mm tempered glass, 2205 stainless spigots and gate hardware, crated and delivered to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Boca Raton projects</strong>",
+        "description": "<p>The <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> is the Boca Raton workhorse: in two spigots it makes a 48-inch glass pool fence, the height the state's pool act sets. Pair it with hinges, a latch and a floor lock from the <a href=\"/collections/glass-railing-gate-hardware\">gate hardware collection</a> for the opening. Intracoastal decks use the 33.6-inch panel for a 36-inch guard, A1A condos the 39.6-inch panel for 42 inches, and open stairs take custom-cut glass. Both finishes are 2205 stainless.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Boca Raton, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What does a Boca Raton HOA architectural committee want to see for a glass railing?",
+            "answer": "<p>Committees usually ask for a site plan or photo showing where the railing goes, the height, the hardware finish and the product specifications. Our product pages give panel heights and spigot dimensions. The engineering and testing page covers attachments on concrete and wood, and the sample kit shows the actual glass and both finishes. Get the committee's approval in writing first, then apply for the city permit.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What does the gate in a glass pool fence need in Boca Raton?",
+            "answer": "<p>Florida's Residential Swimming Pool Safety Act wants the barrier at least 48 inches high on the outside. The gate must close on its own and open away from the pool. Our gate hinges, latch and floor lock are made for 12 mm tempered glass gates, in the same 2205 stainless as the spigots. The City of Boca Raton building division confirms the barrier details at permit time.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "I live across the line in Deerfield Beach. Does the HVHZ apply to me?",
+            "answer": "<p>Yes. Deerfield Beach is in Broward County. Broward and Miami-Dade make up the High-Velocity Hurricane Zone, with stricter wind-load rules than Boca Raton in Palm Beach County. The railing heights are the same. The Deerfield Beach building department looks closely at the spigot attachments, so bring the engineering documents to the permit counter. Delray Beach and Highland Beach stay under Palm Beach County rules.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What if the HOA rejects my finish after I have ordered?",
+            "answer": "<p>Glass panels are made to order and final sale, so get the approval before you buy. Unused hardware in its original packaging can be exchanged for store credit within 30 days. That covers a switch from Matte Black to Brushed Stainless or the reverse. The Glass and Hardware Sample Kit exists for exactly this step: put the sample in front of the committee, get the approval in writing, then order.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Add a Modern Look to Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to fence the pool or open up the stairs? Send measurements and photos through the quote form for a detailed quote, or order the <a href=\"/products/glass-hardware-sample-kit\">sample kit</a> first for the committee. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the rest of the state, and <a href=\"/pages/florida-glass-railing-fort-lauderdale\">Fort Lauderdale</a> has its own page for Broward projects. Orders over 3,000 dollars ship free.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "HOA-ready documents",
+            "text": "Engineering documents, product specs and a sample kit for architectural review committees."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "48-inch pool fence panel",
+            "text": "The 46-inch tempered panel in two spigots gives the 48-inch pool barrier height."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 stainless hardware",
+            "text": "Marine-grade spigots and gate hardware with a 10-year no-rust promise."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivery in 5–10 days",
+            "text": "Liftgate freight after 2 to 3 days of processing. Free shipping over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Boca Raton"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass pool fences and balcony railings for Boca Raton's gated communities"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Boca Raton from the beach to West Boca</strong></p><p>Boca Raton starts at the A1A condos and the beach parks at Red Reef and Spanish River. It runs across the Intracoastal and Lake Boca, past Mizner Park and Florida Atlantic University, to the country-club communities west of I-95. Royal Palm Yacht and Country Club, The Sanctuary and the Lake Boca lots have seawalls and pool decks on the water. Boca West, Broken Sound, Woodfield and Boca Pointe are gated, and their associations review exterior changes before the city does.</p><p>The housing stock runs from Mizner-era Mediterranean homes in Old Floresta to 1980s ranch houses on golf courses and new builds with open stairs. Pools are common, so a glass pool fence is often the first project an owner plans. Delray Beach sits just north, and Deerfield Beach, the first city in Broward, just south.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The rules: Palm Beach County, HOAs and the pool act</strong></p><p>Boca Raton is in Palm Beach County, outside the High-Velocity Hurricane Zone. It is still a high design wind speed area under the Florida Building Code, 8th edition (2023). The City of Boca Raton building division reviews railing attachments on permit applications; West Boca addresses go through Palm Beach County. The residential code sets a 36-inch guard for a house deck or balcony more than 30 inches above grade; condos along A1A need 42 inches.</p><p>The Residential Swimming Pool Safety Act sets the pool barrier at 48 inches on the outside. Gates must close on their own and open away from the pool. Our 46-inch panel reaches that height, and the 57.7-inch panel gives 60 inches when a community wants more. HOA architectural committees usually ask for drawings, finish samples and product data before the permit, so start there. The <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a> has the section references.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Boca Raton and DIY installation</strong></p><p>Standard orders are processed in 2 to 3 business days and arrive in 5 to 10 business days by freight carrier with a liftgate. In a gated community, give the guardhouse the carrier's name so the truck gets through, and have someone home to sign and inspect. Custom sizes take 2 to 3 weeks in transit after processing. Orders over 3,000 dollars ship free, and the checkout price is final, with no duties, tariffs or hidden fees.</p><p>The system is designed for DIY. Each panel sits in two spigots, with no posts, so a pool fence goes up one panel at a time. Follow the installation guide and videos; most standard jobs take about 4 hours. Spigots fix to the concrete pool deck or to wood, with screws sold separately. Report any shipping damage within 3 days of delivery and before installation for a free replacement or refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences in gated communities",
+            "text": "<p>Boca West, Broken Sound and Woodfield lots have the pool a few steps from the lanai. A 48-inch glass pool fence on 46-inch panels keeps the yard open, with gate hinges, a latch and a floor lock on the opening. Bring the drawing to the architectural committee before you order.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Waterfront pool decks",
+            "text": "<p>Seawall lots on Lake Boca, the Intracoastal and the Royal Palm canals carry salt air every day. The 2205 marine-grade spigots and connectors are built for it, with a 10-year no-rust promise. The 33.6-inch panel gives a 36-inch deck guard, and the 46-inch panel handles the pool side.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Open stairs and balconies in remodels",
+            "text": "<p>Mizner-style homes in Old Floresta and the Golden Triangle get opened up in remodels, and the stair is often the centerpiece. A glass stair railing cut to the rise and run keeps the sight line through the house. Second-floor balconies take the 33.6-inch panel for a 36-inch guard.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Boca Raton",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Boca Raton?",
+        "text": "<p>The system is designed for owner installation with the guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

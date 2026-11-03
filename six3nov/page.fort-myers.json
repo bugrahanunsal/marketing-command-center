@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Fort Myers, FL</strong>",
+        "text": "Fort Myers and Cape Coral live on the water: the Caloosahatchee, canals and Gulf beaches. We ship frameless glass railing systems for canal-front pool decks, raised beach-house balconies and lanai pool fences across Lee County. Each order is 12 mm tempered glass and 2205 stainless hardware, crated to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Fort Myers projects</strong>",
+        "description": "<p>Canal-front and beach lots in Lee County put hardware in salt air year-round. Every piece we ship is 2205 marine-grade stainless with a 10-year no-rust promise. Pool decks and lanais use the 46-inch panel for a 48-inch glass pool fence. Raised beach houses use the 33.6-inch panel for 36-inch balcony and stair guards. Mount it on the <a href=\"/products/glass-railing-spigot\">6-inch top-mount spigot</a> or on side-mount spigots at the fascia. Browse the <a href=\"/collections/glass-deck-railing\">glass deck railing collection</a> for panels, spigots and connectors.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Fort Myers, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "We are rebuilding after Ian. What should we know before ordering a railing?",
+            "answer": "<p>Go through the building department first. Homes rebuilt higher have balconies and stairs more than 30 inches above grade, so the 36-inch guard rule applies. The department reviews the spigot attachment. Our engineering documents cover top-mount and side-mount spigots on both concrete and wood framing. Send photos of the deck edge or the fascia with your measurements and we will quote the right spigot and panel sizes.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can the freight truck reach Sanibel, Pine Island or Fort Myers Beach?",
+            "answer": "<p>Yes. All three are connected by road: the Sanibel Causeway, Matlacha and the Matanzas Pass bridge. The carrier delivers the crate to your driveway with the liftgate. Delivery takes 5 to 10 business days after 2 to 3 days of processing. Have someone there to sign, and check the glass within 3 days so any shipping damage is reported before installation.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Which height do I need on a second-floor balcony of a raised home?",
+            "answer": "<p>For a house, the Florida residential code sets a 36-inch minimum guard on any balcony more than 30 inches above grade. A raised beach house is well above that. The 33.6-inch panel in a 6-inch spigot gives 36 inches. You can choose the 39.6-inch panel for 42 inches on a high balcony; both heights use the same spigots. Condos are different: multifamily buildings need 42 inches.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "We are seasonal residents. Can we time the delivery for when we are in Fort Myers?",
+            "answer": "<p>Yes. Order when you are in town, or about two weeks before you arrive. Standard panels ship 2 to 3 business days after the order and arrive 5 to 10 business days later. Someone has to be there for the liftgate delivery, to sign and to inspect the crate. Damage must be reported within 3 days of delivery and before installation to be replaced or refunded at no cost.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether the project is a Cape Coral pool fence or a Sanibel balcony, send measurements and photos through the quote form. We will come back with a detailed quote. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the whole state, and the <a href=\"/pages/florida-glass-railing-tampa\">Tampa Bay page</a> covers the coast to the north. Orders over 3,000 dollars ship free, and the checkout price is final.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Made for salt air",
+            "text": "2205 marine-grade stainless spigots and connectors with a 10-year no-rust promise."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Lee County delivery",
+            "text": "Liftgate freight in 5 to 10 business days after 2 to 3 days of processing."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Pool fence height",
+            "text": "The 46-inch panel in two spigots gives the 48-inch barrier the state sets."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Final price at checkout",
+            "text": "No duties or hidden fees from the border. Free shipping over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Fort Myers"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for canal homes, beach houses and lanais in Lee County"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>From the River District to the islands</strong></p><p>Fort Myers sits on the south bank of the Caloosahatchee, with the River District downtown. McGregor Boulevard's royal palms run past the Edison and Ford winter estates toward the Gulf. Across the river, Cape Coral is a grid of canals, and many lots there have a seawall, a pool and a screened lanai. Sanibel lies over the causeway, Fort Myers Beach on Estero Island, and Pine Island behind Matlacha. Bonita Springs, Estero and Naples continue the pattern to the south.</p><p>Hurricane Ian came ashore in Lee County in September 2022. Since then, many waterfront homes have been repaired or rebuilt higher, which puts balconies and stairs well above grade and under the guard rules. Salt air reaches every one of them, so hardware choice matters. Inland, Gateway, Lehigh Acres and San Carlos Park add pool homes without the salt but with the same summer humidity.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Lee County rules for decks, balconies and pools</strong></p><p>Lee County is not in the High-Velocity Hurricane Zone. It is a coastal county with high design wind speeds under the Florida Building Code, 8th edition (2023). Fort Myers, Cape Coral, Sanibel, Bonita Springs and Fort Myers Beach each have a building department; unincorporated addresses go to Lee County Community Development. Each reviews railing attachments, so have the engineering documents ready.</p><p>The residential code sets a 36-inch guard for a house deck, balcony or stair landing more than 30 inches above grade. Condos on the beach and in the River District need 42 inches. Pool barriers follow the Residential Swimming Pool Safety Act: at least 48 inches on the outside, with gates that close on their own and open away from the pool. The 46-inch panel gives that 48 inches. Our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a> has the references; confirm with your building department before ordering.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Fort Myers and DIY installation</strong></p><p>Standard panels are processed in 2 to 3 business days and arrive in 5 to 10 business days by freight carrier with a liftgate. The trucks reach Cape Coral, Sanibel, Pine Island and Fort Myers Beach by road. The crate comes down to your driveway wherever you are in Lee County. Custom sizes take 2 to 3 weeks in transit after processing. Orders over 3,000 dollars ship free, and the price at checkout is final, with no duties, tariffs or hidden fees from the border crossing.</p><p>The system is designed for DIY. Spigots fix to a concrete pool deck or to the wood framing of a raised house, with screws sold separately. The <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos cover the whole job; a standard railing takes about 4 hours. Report any damage within 3 days of delivery and before installation, and we replace or refund it at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Canal-front pool decks",
+            "text": "<p>Cape Coral and Iona lots run from the lanai to the seawall, with the pool in between. A 48-inch glass pool fence on 46-inch panels keeps the canal in view from the house. Brackish water and salt air sit on the hardware every day; 2205 stainless is made for that.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Raised beach-house balconies",
+            "text": "<p>On Fort Myers Beach, Sanibel and Bonita Beach, houses stand on pilings with the living floor one story up. Balconies and stair landings there take the 33.6-inch panel for a 36-inch guard, or the 39.6-inch panel for 42 inches if you want more. Side-mount spigots fix to the wood fascia.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Lanai pool fences inland",
+            "text": "<p>Gateway, Estero and Bonita Springs pool homes have screened lanais with the pool a step from the sliding doors. A 46-inch panel fence separates the pool from the seating area without blocking the view. Gate hinges, a latch and a floor lock close the opening.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Fort Myers",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Fort Myers?",
+        "text": "<p>The system is built for owner installation with the guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

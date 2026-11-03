@@ -1,0 +1,260 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in West Palm Beach, FL</strong>",
+        "text": "West Palm Beach sits between the Intracoastal and Palm Beach island, so many railings here face water. We ship frameless glass railing systems to Flagler Drive condos, El Cid pool decks and Jupiter new builds: 12 mm tempered panels, 2205 stainless spigots and gate hardware, delivered crated to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for West Palm Beach projects</strong>",
+        "description": "<p>For downtown and Flagler Drive condos, the <a href=\"/products/glass-railing-40-tempered-glass-panel\">39.6-inch panel</a> gives a 42-inch glass balcony railing, usually with top-mount spigots into the slab. For houses in El Cid and SoSo, the 46-inch panel goes around the pool, since the pool barrier rule is 48 inches. The 33.6-inch panel goes on decks and porches. Jupiter and Palm Beach Gardens new builds add <a href=\"/products/custom-stair-glass\">custom stair glass</a> inside. Either finish works: Matte Black reads modern, Brushed Stainless suits Mediterranean stucco.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "West Palm Beach, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What height does a condo balcony railing need in a downtown West Palm Beach tower?",
+            "answer": "<p>Condo towers are multifamily buildings, so the building volume of the Florida Building Code applies. The guard is 42 inches, not the 36 inches a house gets. Our 39.6-inch panel in a 6-inch spigot gives that 42 inches. The condo association has to approve any exterior change. Send it the product page, the engineering documents and a finish sample, and ask whether the building requires a top rail.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does the Town of Palm Beach review railings differently from West Palm Beach?",
+            "answer": "<p>Yes. Palm Beach is a separate town across the bridges, with its own building department and an Architectural Commission that reviews exterior changes to homes. West Palm Beach has its own building division, and unincorporated areas go through Palm Beach County. All three apply the same Florida Building Code, 8th edition, but the review steps and the paperwork differ. Call the office that covers your street before you order glass.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How does freight delivery work at a Flagler Drive condo compared with a house?",
+            "answer": "<p>At a house, the freight truck's liftgate lowers the crate to the driveway. At a tower, the driver needs a loading dock or a curb spot, plus the building's rules on deliveries and freight elevators. Tell us the address type when you order and book the elevator with management. Plan to unpack and inspect the glass within 3 days, so any damage is reported before installation.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "My balcony bays are odd widths. How long do custom panels take?",
+            "answer": "<p>Odd widths are common on older balconies and on the angled bays of newer towers. Measure each opening, send the numbers with photos, and we quote panels cut to fit. Custom glass is processed in 2 to 3 business days and then ships in 2 to 3 weeks. Stock sizes ship in 5 to 10 business days. Custom panels are made to order and final sale, so double-check the measurements.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing in West Palm Beach, Palm Beach Gardens or Jupiter? Send your measurements and a few photos through the quote form, or start with the <a href=\"/pages/glass-railing-florida\">Florida hub page</a> for an overview of the state. Neighbors south in <a href=\"/pages/florida-glass-railing-boca-raton\">Boca Raton</a> have their own page. Orders over 3,000 dollars ship free, and the checkout price is final, with no duties or hidden fees.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate freight delivery",
+            "text": "Crated glass delivered to the driveway or loading dock in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Built for salt air",
+            "text": "2205 marine-grade stainless hardware with a 10-year no-rust promise, in two finishes."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Condo-height panels",
+            "text": "The 39.6-inch panel makes the 42-inch railing multifamily buildings need."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Checkout price is final",
+            "text": "No duties, tariffs or hidden fees. Free shipping on orders over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in West Palm Beach"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Intracoastal views from Flagler Drive to Jupiter"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Waterfront lots, condo towers and the island</strong></p><p>West Palm Beach faces Palm Beach island across the Lake Worth Lagoon, part of the Intracoastal. Flagler Drive follows the seawall. Behind it, El Cid, Prospect Park, Grandview Heights and SoSo hold older homes with pool decks that look east over the water. Downtown, the condo towers around Clematis Street and Okeechobee Boulevard have concrete balconies where owners swap picket rails for a frameless glass balcony railing. Across the Royal Park and Flagler Memorial bridges, the Town of Palm Beach has its own building department. Its architectural commission reviews exterior changes.</p><p>North of the city, Palm Beach Gardens, Jupiter and Singer Island add golf-course lots, inlet-front decks and new builds with interior glass stair railings. Inland, Wellington's equestrian estates add pool fences and raised patios to the mix. The whole county sits in a high design wind speed area, so attachments get a close look at permit time.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>What the code says in Palm Beach County</strong></p><p>Palm Beach County is not in the High-Velocity Hurricane Zone; that zone covers Miami-Dade and Broward. The county does have high design wind speeds under the Florida Building Code, 8th edition (2023). The City of West Palm Beach building division, or the county building department, reviews how a railing attaches. For a house, the residential code sets a 36-inch minimum guard on anything more than 30 inches above grade. Condos and other multifamily buildings need 42 inches, which is the 39.6-inch panel.</p><p>Pools follow the Residential Swimming Pool Safety Act: a 48-inch barrier on the outside, with gates that close on their own and open away from the water. The 46-inch panel makes that height. Our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a> lays out the sections, and the engineering documents cover top-mount and side-mount spigots on concrete and wood. Confirm with the building department before you order.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery and installation in West Palm Beach</strong></p><p>Orders are processed in 2 to 3 business days. They reach West Palm Beach in 5 to 10 business days by freight carrier with a liftgate. For a house in Flamingo Park or Northwood, the driver lowers the crate to the driveway. For a Flagler Drive tower, tell us whether the building has a loading dock and a freight elevator. Clear the delivery with the management office. Custom sizes take 2 to 3 weeks in transit after processing. Free shipping applies to orders over 3,000 dollars, and the price at checkout is final, with no duties or hidden fees.</p><p>Installation is DIY with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos; a standard railing takes about 4 hours. Spigots fix to concrete or wood with screws sold separately. Check the crate within 3 days of delivery; damage reported before installation is replaced or refunded at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Intracoastal pool decks",
+            "text": "<p>Seawall lots along Flagler Drive put the pool between the house and the water. A 48-inch glass pool fence on 46-inch panels keeps the lagoon in view. The 2205 stainless spigots are made for the salt in the air. Gate hinges, a latch and a floor lock complete the barrier.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Downtown condo balconies",
+            "text": "<p>Towers on Flagler Drive and around Okeechobee Boulevard have concrete balconies that face the island. The 39.6-inch panel in two spigots gives the 42-inch height multifamily buildings need. The association can see the finish on a sample kit before approving. Side-mount spigots keep the balcony floor clear.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Stairs and balconies up north",
+            "text": "<p>New builds in Jupiter, Palm Beach Gardens and Abacoa use open floor plans with a staircase in view of the living room. A glass stair railing on custom-cut panels keeps that sight line. Second-floor balconies take the 33.6-inch panel for a 36-inch guard over the pool.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in West Palm Beach",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for an installer in West Palm Beach?",
+        "text": "<p>The system is made for DIY with the guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

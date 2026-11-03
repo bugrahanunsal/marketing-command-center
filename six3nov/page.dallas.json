@@ -1,0 +1,260 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Dallas, TX</strong>",
+        "text": "We ship frameless glass railings to Dallas and the Metroplex, from Highland Park to Frisco and Fort Worth. Each crate holds 12 mm tempered glass panels and 2205 stainless steel spigots. Dallas homeowners use them for pool fences, second-floor balconies and stair guards, delivered by freight to the driveway.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Dallas projects</strong>",
+        "description": "<p>For a Dallas pool, start with the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46\" panel</a>, which gives the 48\" pool fence height. Add gate hinges, a latch and a floor lock for the opening. Second-floor balconies and back decks use the 33.6\" panel for a 36\" railing, or the 39.6\" panel for 42\". Top-mount <a href=\"/products/glass-railing-spigot\">6\" engineered spigots</a> fix to a concrete pool deck or a wood frame; side-mount spigots on the fascia keep a narrow balcony clear.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Dallas, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Will hail storms in Dallas damage a glass railing?",
+            "answer": "<p>The panels are 12 mm (1/2\") tempered safety glass. Tempered glass is heat-treated to be much stronger than regular window glass. If it ever breaks, it crumbles into small granular pieces instead of sharp shards. The lifetime warranty covers manufacturing defects, not storm impact, so ask your insurer how exterior glass is covered. A single panel can be replaced on its own, since each sits in its own two spigots.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Do Plano, Frisco and McKinney use the same pool fence rule as Dallas?",
+            "answer": "<p>Most cities in North Texas apply the 48\" pool barrier rule from the IRC and ISPSC. Dallas, Plano, Frisco and McKinney each adopt the code separately, with their own amendments. The 46\" panel in a 6\" spigot makes a 48\" railing, the usual pool fence height here. Gate rules are part of the barrier, so confirm hinge, latch and swing requirements with the city that issues your permit.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can I put a glass railing on a Turtle Creek or Uptown condo balcony?",
+            "answer": "<p>Yes, with two checks. Condo towers are multifamily buildings, so the code sets a 42\" guard height; the 39.6\" panel gives 42\". Your condo association must approve the change and may have attachment rules, since the balcony slab is often common property. Send them our engineering documents for top-mount and side-mount spigots on concrete. Freight delivery stops at the loading dock, so plan the route up to your unit.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "When should I order a glass pool fence in Dallas to have it before summer?",
+            "answer": "<p>Standard orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. Custom glass sizes take 2 to 3 business days of processing plus 2 to 3 weeks of shipping. Dallas pools open in May, and most standard installations take about 4 hours once the crate is on the driveway. Ordering in March leaves time for a permit and an inspection.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to plan a glass railing in Dallas? Send measurements, photos or a drawing of your pool, balcony or stair through the quote form. We will come back with a detailed quote. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Building in Houston instead? The <a href=\"/pages/texas-glass-railing-houston\">Houston page</a> covers Gulf humidity and the Houston Permitting Center.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to Your Driveway",
+            "text": "Liftgate freight delivery to Dallas and its suburbs in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "12 mm Tempered Glass",
+            "text": "Half-inch tempered safety glass panels with a lifetime warranty against manufacturing defects."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Matte Black or Brushed",
+            "text": "2205 marine-grade stainless spigots in Brushed Stainless or Matte Black, 10-year no-rust promise."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "DIY in About 4 Hours",
+            "text": "Most standard installations take about 4 hours with the installation guide and videos."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Dallas"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass pool fences and balcony railings for Dallas and the Park Cities"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dallas neighborhoods and the projects they build</strong></p><p>Dallas housing runs from 1920s Tudors in Highland Park and University Park to Preston Hollow estates on acre lots. Along Turtle Creek and in Uptown it is glass towers with condo balconies. Lakewood, next to White Rock Lake, mixes older homes with new builds that open onto back decks. Across the Trinity, Kessler Park and Stevens Park in north Oak Cliff sit on some of the few real hills in Dallas. Raised decks with views are common there. North of LBJ Freeway, Plano, Frisco, McKinney and Prosper are mostly two-story homes built since the 1980s. A backyard pool and a covered patio are the standard package. The typical Dallas project follows: a glass pool fence, a glass balcony railing on the second floor, or a stair guard in a new build. Fort Worth, Arlington and Southlake get the same crate and the same delivery.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Dallas building code for guards and pool fences</strong></p><p>The City of Dallas applies the 2021 International Residential Code with local amendments. The code sets 36\" minimum for houses and 42\" for commercial and multifamily buildings, which includes the condo balconies along Turtle Creek. For a backyard pool, most cities in North Texas apply the 48\" barrier rule from the IRC and ISPSC. The 46\" panel in our 6\" spigot makes a 48\" railing. A new deck, balcony or pool barrier in Dallas usually needs a permit and an inspection. Plano, Frisco and McKinney each have their own building department and their own amendments, so check with them before you order. Our <a href=\"/pages/texas-building-code-for-glass-railings\">Texas building code page</a> has the summary, and the <a href=\"/pages/glass-railing-texas\">Texas hub</a> covers the rest of the state.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hail, sun and delivery in North Texas</strong></p><p>Weather is the first question to settle in North Texas. Spring hail storms roll through most years, summer sun is strong, and winter brings the occasional ice storm. The panels are 12 mm (1/2\") tempered safety glass, and the hardware is 2205 marine-grade stainless steel with a 10-year no-rust promise. Matte Black spigots match the black window frames common on new builds in Frisco and Prosper. Delivery works the same anywhere in the Metroplex. Orders are processed in 2 to 3 business days, then a freight carrier delivers in 5 to 10 business days with a tailgate lift. The crate comes down at your driveway, so plan a spot for it and check the glass within 3 days, before installation. Shipping is free over 3,000 dollars and there are no duties or hidden fees at checkout.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Backyard pool fences",
+            "text": "<p>A pool with a patio is the standard backyard in Plano, Frisco and Preston Hollow. A glass pool fence separates the pool from the patio without blocking the view from the kitchen. Most North Texas cities apply the 48\" barrier rule, so the 46\" panel is the usual choice.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Second-floor balconies",
+            "text": "<p>Two-story homes across the northern suburbs often have a balcony over the covered patio. Uptown and Turtle Creek condos have balconies where the code sets 42\". A frameless glass balcony railing keeps the opening clear. Side-mount spigots on the fascia save floor space on a narrow balcony.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Open stair guards",
+            "text": "<p>New builds in Lakewood, Frisco and McKinney favor an open staircase with a glass guard in place of balusters. Custom stair glass is cut to your stringer angle and held in top-mount or side-mount spigots. Send photos and a sketch of the stair for a sized quote.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Dallas",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for a glass railing installer in Dallas?",
+        "text": "<p>The system is built for DIY: with the installation guide and videos, a standard pool fence or balcony takes about 4 hours. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Miami, FL</strong>",
+        "text": "Miami railings face Biscayne Bay, the ocean and the stricter wind-load rules of the HVHZ. We ship frameless glass railing systems for Brickell balconies, Coral Gables pool decks and Wynwood rooftop terraces. Each order is 12 mm tempered glass with 2205 marine-grade stainless spigots, crated and delivered across Miami-Dade.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Miami projects</strong>",
+        "description": "<p>Brickell, Edgewater and Miami Beach balconies take the <a href=\"/products/glass-railing-40-tempered-glass-panel\">39.6-inch panel</a> for the 42-inch guard multifamily buildings need. Use top-mount spigots into the slab or <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigots</a> on the edge. Gables and Grove pools use the 46-inch panel for a 48-inch glass pool fence, and raised terraces use the 33.6-inch panel for 36 inches. Rooftop terraces work with either, depending on the building type. All hardware is 2205 stainless, in Brushed Stainless or Matte Black.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Miami, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What does the HVHZ change when I order a glass railing in Miami?",
+            "answer": "<p>The heights do not change; the review does. Miami-Dade's building departments apply the High-Velocity Hurricane Zone rules of the Florida Building Code. That means stricter wind-load requirements and a close look at how the spigots attach. The department may ask for engineering with the permit. Our engineering documents cover top-mount and side-mount spigots on concrete and on wood. Ask the building department what it wants before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "My Brickell balcony is a concrete slab. Which spigot do I use?",
+            "answer": "<p>Both work on concrete. The 6-inch top-mount spigot bolts down into the slab. The side-mount spigot fixes to the slab edge and keeps the full balcony floor, which matters on a narrow balcony. The engineering documents give the blocking and anchor details for concrete; the fasteners themselves are sold separately. Check the slab edge thickness before choosing side-mount, and send photos if you are unsure.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does Coral Gables review a glass railing differently from the City of Miami?",
+            "answer": "<p>Yes. Coral Gables is its own city with its own building department and a Board of Architects that reviews exterior changes to homes. The City of Miami, Miami Beach and Key Biscayne each run their own permit counters, and unincorporated Miami-Dade goes through the county. All of them apply the same HVHZ code, but the forms and the review steps differ. Check with the office that covers your address first.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do Miami's sun and heat affect tempered glass or the finish?",
+            "answer": "<p>Tempered glass is made for it. It does not yellow or fade in UV, and it is made to take the daily heating and cooling of a south-facing balcony. The glass gets hot to the touch on a July afternoon. The 2205 stainless hardware does not fade either; both finishes sit on the same steel with the 10-year no-rust promise. Hose off salt and dust now and then.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Transform Your Space Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to open up a Brickell balcony or fence a Gables pool? Send measurements and photos through the quote form for a detailed quote. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the rest of the state, and the <a href=\"/pages/florida-glass-railing-fort-lauderdale\">Fort Lauderdale page</a> covers Broward, the other half of the HVHZ. Orders over 3,000 dollars ship free, with no duties or hidden fees at checkout.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "HVHZ paperwork ready",
+            "text": "Engineering documents with testing and blocking details for spigots on concrete and wood."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Salt air hardware",
+            "text": "2205 marine-grade stainless spigots and connectors, with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42-inch condo height",
+            "text": "The 39.6-inch panel gives the 42-inch railing multifamily buildings need."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate delivery in Miami-Dade",
+            "text": "5 to 10 business days after processing. Free shipping over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Miami"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass balcony railings and pool fences for Miami's bay and beach"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Brickell towers, Gables homes and rooftop terraces</strong></p><p>Miami is a city of balconies. Brickell and Edgewater towers line Biscayne Bay with concrete balconies on every floor. A frameless glass balcony railing opens the view when an association updates the facade. Across the causeways, Miami Beach condos face the Atlantic. Key Biscayne sits at the end of the Rickenbacker Causeway, with its own village building department. Coral Gables and Coconut Grove are house country: pool decks under banyan trees, raised terraces on the bay and open stairs in renovated Mediterranean homes.</p><p>Wynwood, Little River and Buena Vista have new townhomes with rooftop terraces, where a glass railing keeps the skyline view. Pinecrest and Palmetto Bay add big lots with pools. Everywhere, the air carries salt, the sun is strong year-round and summer brings daily rain. That is why every spigot and connector we sell is 2205 stainless and every panel is 12 mm tempered glass.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The HVHZ and the Miami-Dade code</strong></p><p>Miami-Dade County is in the High-Velocity Hurricane Zone of the Florida Building Code, 8th edition (2023). The HVHZ has stricter wind-load rules than the rest of the state. The building department reviews how each spigot attaches and may ask for engineering documents. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering documents</a> cover top-mount and side-mount spigots on concrete and on wood, with testing and blocking details. Miami, Miami Beach, Coral Gables and Key Biscayne each have their own building department; unincorporated addresses go through the county.</p><p>A house needs a 36-inch guard on a deck or balcony more than 30 inches above grade; condos and other multifamily buildings need 42 inches. Pool barriers follow the Residential Swimming Pool Safety Act: 48 inches on the outside, with gates that close on their own and open away from the pool. See our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a>, then confirm with the building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery and installation in Miami</strong></p><p>Standard orders are processed in 2 to 3 business days. They reach Miami-Dade in 5 to 10 business days by freight carrier with a liftgate. At a house, the crate comes down to the driveway. At a Brickell or Edgewater tower, the driver needs the loading dock. Book it with building management and tell us the address type when you order. Custom sizes take 2 to 3 weeks in transit. Orders over 3,000 dollars ship free, and the checkout price is final: no duties, tariffs or hidden fees.</p><p>Installation is DIY with the installation guide and videos, and a standard railing takes about 4 hours. On a concrete balcony, top-mount spigots anchor into the slab; side-mount spigots fix to the slab edge when you want the floor clear. Fasteners are sold separately. Report damage within 3 days of delivery and before installation for a free replacement or refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Condo balconies on the bay",
+            "text": "<p>Brickell, Edgewater and Miami Beach towers have concrete balconies with a 42-inch guard rule. The 39.6-inch panel in two spigots gives that height without posts. The association approves the change and the building department reviews the attachment, so share the engineering documents and a finish sample at the start.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Rooftop terraces and townhomes",
+            "text": "<p>New townhomes in Wynwood, Little River and Buena Vista put the living space on the roof. A frameless glass railing around the terrace keeps the skyline and the bay in view. The 2205 spigots stand up to salt and sun, and side-mount spigots on a concrete parapet save floor space.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks in the Gables and the Grove",
+            "text": "<p>Coral Gables and Coconut Grove pools sit on concrete decks under big trees, often with a raised terrace. The 46-inch panel makes a 48-inch glass pool fence, the height the state sets, with hinges, a latch and a floor lock. Coral Gables reviews exterior changes through its Board of Architects.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Miami",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Miami?",
+        "text": "<p>The system is designed for DIY with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

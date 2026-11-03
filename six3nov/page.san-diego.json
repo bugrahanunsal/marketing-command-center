@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in San Diego, CA</strong>",
+        "text": "San Diego is a city of canyons and bluffs, where railings are about the view. We ship frameless glass railing systems to La Jolla, Point Loma, Coronado and North County. Crated 12 mm tempered panels and 2205 stainless spigots arrive by freight; you install them with our guide and videos.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for San Diego projects</strong>",
+        "description": "<p>For a canyon deck in Mission Hills, the <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigot</a> on the rim joist keeps the deck boards clear. Pair it with the 46-inch panel for a 48-inch railing. On a concrete balcony in La Jolla or Coronado, use the 6-inch top-mount spigot with the 39.6-inch or 46-inch panel. For a Poway or Rancho Santa Fe pool, the <a href=\"/products/60-high-tempered-glass-panels\">57.7-inch panel</a> builds a 60-inch glass pool fence. Both finishes are 2205 stainless.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "San Diego, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How do I attach glass railing to a wood deck over a canyon?",
+            "answer": "<p>Two ways. The 6-inch top-mount spigot fixes to the deck surface over solid blocking. The side-mount spigot fixes to the rim joist or fascia, which keeps the deck surface clear on a narrow canyon deck. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering documents</a> show the testing and the blocking details for both spigots on wood and on concrete. Screws and bolts are sold separately.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I put a glass railing on my Coronado or downtown condo balcony?",
+            "answer": "<p>Usually, with two approvals: the building department and your HOA or condo board. The California code sets 42 inches as the minimum guard height; the 39.6-inch panel gives that and the 46-inch panel gives 48 inches. The 6-inch top-mount spigot fits a concrete balcony, and wall connectors finish at the stucco. Freight delivery is to the curb with a liftgate, so plan how to bring the panels up.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Who issues the permit in Rancho Santa Fe or Poway?",
+            "answer": "<p>Poway is its own city and runs its own building division. Rancho Santa Fe is unincorporated, so permits go through the County of San Diego. The Rancho Santa Fe Association also reviews exterior changes inside the Covenant. Inside San Diego city limits, Development Services issues the permit. The 42-inch guard rule and the 60-inch pool enclosure apply in all of them. Ask early what plan check wants.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How long before a summer deck should I order in San Diego?",
+            "answer": "<p>Standard panels and hardware are processed in 2–3 business days and delivered in 5–10 business days by freight. Custom sizes, including stair glass, take 2–3 business days of processing plus 2–3 weeks of shipping. Most standard installations take about 4 hours once the crate is at the house. If you want the deck ready for July, measure and order in May.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your San Diego Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Measure the deck, balcony or pool edge, take a few photos and send them through the quote form. We will reply with a detailed quote, including custom widths and stair glass. Standard panels and hardware ship in 2–3 business days. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Building near Dana Point? See our <a href=\"/pages/california-glass-railing-orange-county\">Orange County page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Canyon and bluff decks",
+            "text": "Top-mount or side-mount spigots on wood or concrete, with engineering documents for both."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Marine-grade 2205 steel",
+            "text": "Spigots and connectors for La Jolla and Point Loma salt air, with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "42, 48 and 60 inches",
+            "text": "Panels for the 42-inch California minimum, 48-inch deck guards and 60-inch pool fences."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight to your door",
+            "text": "2–3 business days of processing, 5–10 business days of delivery, liftgate service, no duties."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in San Diego"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for San Diego canyons, coast and pool decks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Canyon lots, ocean bluffs and bay views</strong></p><p>San Diego sits on mesas cut by canyons, so a flat street often hides a backyard that drops away. Mission Hills, Bankers Hill, Kensington and Talmadge have rear decks on posts over the canyon. A frameless glass deck railing is the way to keep that view. On the coast, La Jolla, Bird Rock, Point Loma and Sunset Cliffs have bluff homes with ocean-view balconies and roof decks. Del Mar, Solana Beach, Encinitas and Carlsbad continue the same pattern up the North County coast.</p><p>Coronado and the downtown towers in Little Italy, the Marina District and East Village face the bay. Their condo balconies take a 42-inch or 48-inch glass balcony railing. Inland, Rancho Santa Fe, Poway, Scripps Ranch and Rancho Bernardo are pool country. There, the glass pool fence and 48-inch guards on raised patios are the usual projects.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits with Development Services, and the county inland</strong></p><p>Inside the city limits, from Point Loma to Rancho Bernardo, permits go through the City of San Diego Development Services Department. Coronado, Del Mar, Encinitas, Carlsbad and Poway each have their own building division. Rancho Santa Fe is unincorporated and goes through the County of San Diego. Homes in the coastal overlay zone may face an extra review step.</p><p>The code is the same everywhere. The California code sets a 42-inch minimum guard height, even on a single-family house (CRC R312.1). The state pool safety act sets pool enclosures at 60 inches high. Gaps must be under 4 inches, and the latch at least 60 inches above the ground. Our 39.6-inch, 46-inch and 57.7-inch panels give 42, 48 and 60 inches. Engineering documents for the spigot attachments are on our site. Start with the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> and our <a href=\"/pages/glass-railing-california\">California hub</a>, then confirm with your building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Marine layer, salt air and delivery to a hillside street</strong></p><p>The marine layer rolls in most mornings from May through June, and salt air reaches a few miles inland. That is why every spigot, connector, hinge and latch is 2205 marine-grade stainless steel with a 10-year no-rust promise. Both finishes, Brushed Stainless and Matte Black, are on the same 2205 steel. The 12 mm tempered glass carries a lifetime warranty against manufacturing defects. Inland in Poway and Escondido the issue is heat, and tempered glass handles the sun without fading.</p><p>Your order ships from our warehouse after 2–3 business days of processing and arrives in 5–10 business days by freight carrier with liftgate service. Tell us if your street is steep or narrow, as in parts of Mission Hills or La Jolla. The carrier can then plan the stop. Report any shipping damage within 3 days, before installation, and we replace or refund the item at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Canyon-lot decks in Mission Hills and Kensington",
+            "text": "<p>Older Spanish and Craftsman homes in Mission Hills, Kensington and Talmadge back onto canyons, with decks built out over the slope. A frameless glass deck railing on side-mount spigots keeps the full deck width and the canyon view. The engineering documents cover the blocking behind the fascia.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Ocean and bay-view balconies",
+            "text": "<p>From La Jolla and Point Loma to Coronado and the downtown towers, balconies face the water. A 42-inch or 48-inch glass balcony railing on top-mount spigots fits concrete balconies, with wall connectors at the stucco returns. Condo owners should bring the drawing to the board before ordering.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks inland from Poway to Rancho Santa Fe",
+            "text": "<p>Backyard pools in Poway, Rancho Bernardo, Scripps Ranch and Rancho Santa Fe need the 60-inch enclosure the state pool safety act sets. The 57.7-inch panels, gate hinges, latch and floor lock build a glass pool fence. You still see the pool from the kitchen and the patio.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in San Diego",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for an installer in San Diego?",
+        "text": "<p>Most standard installations take about 4 hours with our installation guide and videos, on wood or on concrete. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

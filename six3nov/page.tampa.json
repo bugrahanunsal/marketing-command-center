@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Tampa, FL</strong>",
+        "text": "Tampa Bay runs from Bayshore Boulevard to St. Petersburg, Clearwater and the Gulf beaches. We ship frameless glass railing systems for bay-front decks, pool homes and beach condo balconies across Hillsborough, Pinellas and Pasco counties. Each order is 12 mm tempered glass with 2205 stainless hardware, crated to your door.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Tampa projects</strong>",
+        "description": "<p>Bay-front homes in South Tampa and St. Petersburg use the 33.6-inch panel for a 36-inch glass deck railing. The 46-inch panel makes the 48-inch pool fence. Both sit on 2205 stainless spigots that stand up to the salt. Beach condos on Clearwater Beach and St. Pete Beach use the 39.6-inch panel for 42 inches. Pool homes in Westchase and Wesley Chapel pair the pool fence with custom-cut stair glass inside. Browse the <a href=\"/collections/glass-panel-railing\">glass panels</a> in all four heights.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Tampa, FL, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Is Tampa Bay in the HVHZ?",
+            "answer": "<p>No. The High-Velocity Hurricane Zone covers Miami-Dade and Broward counties only. Hillsborough, Pinellas and Pasco are coastal counties with high design wind speeds under the Florida Building Code, so the building department still reviews how the railing attaches to the deck or slab. Our engineering documents cover top-mount and side-mount spigots on concrete and on wood, with testing and blocking details, which is what the attachment review covers.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Our Hyde Park bungalow is in the historic district. Does that affect a railing?",
+            "answer": "<p>It can. The City of Tampa's Architectural Review Commission reviews exterior changes in local historic districts such as Hyde Park; Ybor City has its own Barrio Latino Commission. A front porch railing visible from the street is more likely to need review than a back deck or a pool fence. Check with the city's historic preservation staff before ordering, and bring the product specifications and a finish sample.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can the spigots mount on a paver pool deck?",
+            "answer": "<p>The spigots are designed to fix to wood or concrete, not to loose pavers. On a paver deck, the anchors have to reach a concrete slab or a footing beneath the pavers, and the engineering documents show the blocking details. If your pool deck is pavers over sand with no slab, send photos and measurements before ordering and we will tell you what the spigots need. Screws and anchors are sold separately.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Brushed Stainless or Matte Black for a bay-front deck?",
+            "answer": "<p>Both are the same 2205 marine-grade stainless underneath, with the same 10-year no-rust promise, so the choice is about looks. Brushed Stainless suits a Mediterranean or coastal-white house; Matte Black reads modern and pairs with bronze screen enclosures. On the water, rinse either finish with fresh water now and then. The <a href=\"/products/glass-hardware-sample-kit\">sample kit</a> puts both finishes and the glass in your hand before you decide.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Upgrade?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing in Tampa, St. Petersburg, Clearwater or the suburbs? Send measurements and photos through the quote form for a detailed quote, or read the <a href=\"/pages/glass-railing-cost\">glass railing cost page</a> first. The <a href=\"/pages/glass-railing-florida\">Florida hub</a> covers the state, and <a href=\"/pages/florida-glass-railing-fort-myers\">Fort Myers</a> has its own page for the coast to the south. Orders over 3,000 dollars ship free.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Bay-front stainless",
+            "text": "2205 marine-grade spigots and connectors with a 10-year no-rust promise."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Not in the HVHZ",
+            "text": "Coastal counties still have high design wind speeds; engineering documents cover the spigots."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered across Tampa Bay",
+            "text": "Liftgate freight in 5 to 10 business days after 2 to 3 days of processing."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "48-inch pool barrier",
+            "text": "The 46-inch tempered panel gives the 48-inch height Florida's pool act sets."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Tampa"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Tampa Bay waterfront homes, pool decks and beach condos"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>From Bayshore Boulevard to the Pinellas beaches</strong></p><p>Tampa's waterfront starts on Bayshore Boulevard, where the sidewalk follows Hillsborough Bay past Hyde Park and Palma Ceia. It continues onto Davis Islands and Harbour Island. South Tampa neighborhoods like Beach Park, Sunset Park and Culbreath Isles have canal and bay lots with pools and docks. Downtown, the Channel District and Water Street add condo balconies over the port.</p><p>Across the Howard Frankland and Gandy bridges, St. Petersburg's Old Northeast, Snell Isle and Shore Acres sit on Tampa Bay. Clearwater and Dunedin face the Gulf side of Pinellas, and Safety Harbor sits on Old Tampa Bay. Clearwater Beach, St. Pete Beach and Treasure Island are condo territory on the barrier islands. Inland, Westchase, Carrollwood and New Tampa in Hillsborough and Wesley Chapel in Pasco are the pool-home suburbs. Hurricanes Helene and Milton in 2024 pushed surge into the low bay-front streets, and homeowners there have been repairing and raising homes since.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Code and permits around Tampa Bay</strong></p><p>Tampa Bay is not in the High-Velocity Hurricane Zone; that zone covers Miami-Dade and Broward only. Hillsborough, Pinellas and Pasco are coastal counties with high design wind speeds under the Florida Building Code, 8th edition (2023). Each building department reviews how a railing attaches. Tampa, Hillsborough County, St. Petersburg and Pinellas County each run their own permit office. Tampa's Architectural Review Commission also reviews exterior changes in local historic districts such as Hyde Park.</p><p>For a house, the residential code sets a 36-inch guard on a deck, balcony or landing more than 30 inches above grade. Condos need 42 inches. Pool barriers follow the Residential Swimming Pool Safety Act: at least 48 inches on the outside. Gates close on their own and open away from the pool. The 46-inch panel gives that height. See our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a>, then confirm with your building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery across the bay and the DIY install</strong></p><p>Standard panels are processed in 2 to 3 business days. They arrive in 5 to 10 business days by freight carrier with a liftgate, in South Tampa, St. Petersburg or Wesley Chapel alike. The crate comes down to the driveway; for a beach condo, book the loading dock with management and tell us the address type. Custom sizes take 2 to 3 weeks in transit after processing. Orders over 3,000 dollars ship free, and the checkout price is final, with no duties, tariffs or hidden fees.</p><p>Installation is DIY with the installation guide and videos; a standard railing takes about 4 hours. Spigots fix to concrete or wood with screws sold separately, so a paver deck needs a slab or footing underneath to anchor into. Check the crate within 3 days of delivery; damage reported in that window and before installation is replaced or refunded at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Bay-front decks and pool decks",
+            "text": "<p>Davis Islands, Culbreath Isles and Snell Isle lots have the pool and the dock on the water side. A 36-inch glass deck railing on the 33.6-inch panel and a 48-inch pool fence on the 46-inch panel keep the bay in view. Salt air makes 2205 stainless the right hardware.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Beach condo balconies",
+            "text": "<p>Gulf-front towers on Clearwater Beach, St. Pete Beach and Treasure Island get sunset views and salt spray in equal measure. The 39.6-inch panel gives the 42-inch guard for multifamily buildings, and 2205 stainless spigots take the spray. Clear the project with the association and the Pinellas County or city permit office first.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Pool homes and stairs in the suburbs",
+            "text": "<p>Westchase, New Tampa, Carrollwood and Wesley Chapel houses come with a screened pool and a two-story floor plan. The 46-inch panel fences the pool at 48 inches inside the cage, and custom-cut panels make a glass stair railing in the foyer. No salt here, just humidity and daily summer storms.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Tampa",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Tampa Bay?",
+        "text": "<p>The system is designed for DIY with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

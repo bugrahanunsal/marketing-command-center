@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Livermore, CA</strong>",
+        "text": "We ship frameless glass railing systems to Livermore and the Tri-Valley. Each order is 12 mm tempered panels with 2205 stainless spigots, crated and delivered to your door. Homeowners and builders in Livermore, Pleasanton, Dublin and San Ramon use them for pool fences, vineyard-view decks, two-story balconies and stair guards.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Livermore projects</strong>",
+        "description": "<p>Pool yards in Livermore take the <a href=\"/products/60-high-tempered-glass-panels\">57.7\" panel</a>, which gives the 60\" enclosure California requires. Hinges and a latch come from the <a href=\"/collections/glass-railing-gate-hardware\">gate hardware collection</a>. Decks and balconies use the 46\" panel for a 48\" railing on 6\" top-mount or side-mount spigots. Pick Brushed Stainless or Matte Black hardware, and add the square caprail if you want a top rail. The sample kit lets you compare both finishes at home.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Livermore, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which panel gives the 60\" pool fence height required in Livermore?",
+            "answer": "<p>The 57.7\" tempered panel in 6\" spigots makes a 60\" fence, the minimum California sets for a pool enclosure. Keep gaps under 4\" between and below panels, and mount the gate latch at least 60\" above the ground. Gate hinges, latches and a floor lock are in the gate hardware collection. Ask the City of Livermore building division to confirm the enclosure details with your pool permit.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does Livermore summer heat affect tempered glass or the hardware?",
+            "answer": "<p>No. Tempered safety glass is made for exterior use and does not fade or warp in a hot, dry summer. The 12 mm panels carry a lifetime warranty against manufacturing defects. The hardware is 2205 stainless steel with a 10-year no-rust promise, in Brushed Stainless or Matte Black. Dust is the main upkeep this far inland; a hose and a squeegee handle it.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Will the Altamont wind be a problem for a glass railing on a Livermore deck?",
+            "answer": "<p>The railing is only as strong as its attachment, which is why the spigots are engineered. Our engineering documents include testing and blocking details for the top-mount and side-mount spigots on concrete and on wood. Follow the blocking details on a wood deck. The City of Livermore building division confirms what applies at your address, and the code page summarizes the state rules.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "When should I order a glass pool fence to have it in before Livermore summer?",
+            "answer": "<p>Standard panels are processed in 2–3 business days, then delivered in 5–10 business days by freight. Custom sizes take 2–3 business days to process and 2–3 weeks to ship. Add a day to install: most standard installations take about 4 hours. Glass is made to order and final sale, so send exact measurements with your quote request and order before the pool opens.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in Livermore? Send measurements, photos or a sketch through the quote form. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Glass is made to order, so a quote with your exact widths saves a second round. Then see the <a href=\"/pages/glass-railing-california\">California glass railing hub</a> and our <a href=\"/pages/california-glass-railing-san-jose\">San Jose</a> page for the South Bay.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "60\" Pool Enclosures",
+            "text": "California requires 60\" pool enclosures; the 57.7\" panel gives that height with no posts."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Tempered Safety Glass",
+            "text": "12 mm tempered panels with a lifetime warranty against manufacturing defects."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Free Shipping Over 3,000 USD",
+            "text": "Orders over 3,000 USD ship free; the checkout price is final with no duties."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 Hours to Install",
+            "text": "Designed for DIY: installation guide and videos, spigots fix to wood or concrete."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Livermore"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass railings for Tri-Valley pools, decks and vineyard views"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Livermore projects: pools, vineyard views and new tracts</strong></p><p>Livermore sits at the east end of the Tri-Valley, with the Altamont hills behind it. Vineyards line Tesla Road and Vineyard Avenue in South Livermore. Homes on that side of town look over rows of vines toward the hills. A view deck there is wasted behind a picket guard. A frameless glass deck railing, each panel in two spigots with no posts, keeps the vineyard in sight from the table.</p><p>North and east of downtown, Springtown and the newer subdivisions have backyard pools, two-story homes with balconies and open stairs that need a guard. Pleasanton, Dublin and San Ramon customers order the same parts. Typical Livermore projects are a 60\" glass pool fence with a gate, 48\" balcony and deck railings, and custom stair glass for remodels.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Heat, wind and the California code in Livermore</strong></p><p>Livermore summers are hot and dry, with afternoons often in the 90s and a wind that funnels through the Altamont Pass. Tempered glass does not fade or warp in that heat, and the 2205 stainless hardware carries a 10-year no-rust promise. There is no salt air this far inland, so cleaning is a hose and a squeegee after the dust settles.</p><p>The California code sets 42\" as the minimum guard height even for houses. A pool enclosure must be 60\", with gaps under 4\" and the gate latch at least 60\" above ground. The City of Livermore building division applies the 2022 Title 24 codes; vineyard parcels outside the city limits go through Alameda County instead. Check with the right office before you order, and read the <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> for the summary.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Livermore and installing it yourself</strong></p><p>Orders are processed in 2–3 business days. The crate then travels 5–10 business days by freight carrier to Livermore, with liftgate delivery at the curb or driveway. The price at checkout is final: no duties, tariffs or hidden fees, even though the crate crosses from Canada. Orders over 3,000 USD ship free. Check the crate when it arrives and report any damage within 3 days, before installation; we replace or refund the item at no cost. Custom sizes, including stair glass, take 2–3 business days to process and 2–3 weeks to ship.</p><p>The system is designed for DIY installation, and most standard installations take about 4 hours with the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos. Spigots fix to wood or concrete with screws sold separately. On a pool deck the top-mount spigot bolts to the slab; on a raised wood deck the side-mount spigot bolts to the fascia.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Glass pool fences",
+            "text": "<p>A pool in Springtown or a newer tract north of I-580 needs a 60\" enclosure. Gaps stay under 4\", with the latch at least 60\" above ground. The 57.7\" panel, two spigots per panel, gives that height while the yard stays open to view from the kitchen.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Vineyard-view decks",
+            "text": "<p>Homes in South Livermore along Tesla Road and Vineyard Avenue look over the vines toward the hills. A frameless glass deck railing on side-mount spigots leaves the deck surface clear and the view open. Custom widths fill odd runs, and custom glass ships in 2–3 weeks.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Balconies and stair guards",
+            "text": "<p>Two-story homes in the newer subdivisions and remodels near downtown often add a balcony or an open stair. The 46\" panel gives a 48\" guard on the balcony. Custom stair glass is cut to the stringer angle; send rise, run and landing sizes for a quote.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Livermore",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Livermore?",
+        "text": "<p>We may have an installer in your area: contact us with your project address and we will check. The system is made for DIY: with the installation guide and videos, most standard installations take about 4 hours.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

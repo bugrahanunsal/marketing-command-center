@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Atlanta, GA</strong>",
+        "text": "Frameless glass railings for Atlanta homes, from Morningside back decks to Buckhead condo balconies. We ship 12 mm tempered glass panels and 2205 stainless spigots crated to your door inside the Perimeter and across the northern suburbs. Use them on raised decks over sloped lots, pool decks and open staircases.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Atlanta projects</strong>",
+        "description": "<p>Atlanta houses mostly use the 33.6-inch panel for a 36-inch railing on back decks. Condo balconies in Midtown and Buckhead take the 39.6-inch panel for the 42-inch height. Pool decks in Sandy Springs and Alpharetta take the 46-inch panel for a 48-inch barrier. Mount the panels in <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigots</a> on the fascia to keep the full deck width. Open staircases take <a href=\"/products/custom-stair-glass\">custom stair glass</a> cut to your rise.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Atlanta, GA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which office issues railing permits in Atlanta?",
+            "answer": "<p>Inside the city limits, the City of Atlanta Office of Buildings issues building permits and schedules inspections. Sandy Springs, Brookhaven, Dunwoody, Decatur, Alpharetta and Roswell have their own offices, and unincorporated addresses go through Fulton, DeKalb or Cobb County. Ask them whether a railing replacement needs a permit; a new deck usually does. Our engineering documents are ready to attach.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What height does a Buckhead or Midtown condo balcony need?",
+            "answer": "<p>The Georgia code sets guards at 42 inches for commercial and multifamily buildings, which covers condo towers along Peachtree. Our 39.6-inch panel installed in spigots gives a 42-inch glass balcony railing. Most associations want to approve the look and the slab attachment first. Send them the engineering documents and a photo of the sample kit before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Does Atlanta pollen stain the glass?",
+            "answer": "<p>No. The yellow pine pollen of March and April settles on the glass like it does on a car. It rinses off with a hose or a wet cloth. It does not etch tempered glass or the 2205 stainless spigots. Compared with a wood railing, there are no pickets to wipe one by one, so cleanup after pollen season takes a few minutes.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How does freight delivery work at an Atlanta house or condo?",
+            "answer": "<p>The glass arrives crated on a freight truck with a liftgate, which lowers it to the driveway or curb. Standard orders are processed in 2 to 3 business days and delivered in 5 to 10 business days. For a condo tower, arrange the loading dock or freight elevator with the building first. Freight carriers usually call ahead to set a delivery window, so plan to be there.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Get started on Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Measure your deck, balcony, stairs or pool surround and send the lengths with a few photos. We will send a detailed quote with panel sizes and hardware for your Atlanta project. Want to see both finishes first? Order the <a href=\"/products/glass-hardware-sample-kit\">glass and hardware sample kit</a>. Other Georgia regions and the statewide summary are on the <a href=\"/pages/glass-railing-georgia\">Georgia glass railing page</a>.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Liftgate delivery in Atlanta",
+            "text": "Freight delivery to Atlanta, Sandy Springs, Alpharetta and Decatur in 5 to 10 business days."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Lifetime glass warranty",
+            "text": "12 mm tempered panels covered for life against manufacturing defects."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Matte Black or Brushed Stainless",
+            "text": "Two finishes on 2205 stainless hardware, with a 10-year no-rust promise."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "About 4 hours to install",
+            "text": "Most standard installations take about 4 hours with the guide and videos."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Atlanta"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Glass deck and balcony railing for Atlanta's sloped lots"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Atlanta projects, intown and north</strong></p><p>Atlanta is hilly Piedmont country, and most intown lots slope. Bungalows in Morningside, Virginia-Highland, Candler Park and Decatur have back decks that stand a full story above a walk-out basement. A glass deck railing there keeps the yard and the tree canopy in view instead of a wall of pickets. Along the BeltLine, Inman Park and Old Fourth Ward add rooftop decks on new townhomes.</p><p>Midtown and Buckhead are condo territory, with balconies along Peachtree that need a 42-inch glass balcony railing. Buckhead, Brookhaven and Sandy Springs houses add pool decks and terraces above the Chattahoochee. Farther north, Alpharetta, Roswell, Johns Creek and Milton are full of two-story homes with open staircases. Builders there put glass stair railing on the main stair and a glass guard on the upstairs landing. Marietta and Dunwoody follow the same pattern.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Permits and the code in Atlanta</strong></p><p>Georgia applies the 2018 International Residential Code and International Building Code with Georgia amendments, under the State Minimum Standard Codes. The Georgia code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings, including condo balconies. For a pool deck, the 2018 International Swimming Pool and Spa Code, section 305, sets a 48-inch barrier. Our 46-inch panel in spigots gives that height.</p><p>Inside the city limits, the City of Atlanta Office of Buildings issues the permit. Sandy Springs, Brookhaven, Dunwoody, Decatur, Alpharetta and Roswell each have their own building office. Unincorporated addresses go through Fulton, DeKalb or Cobb County. Check with your local building department about whether a railing replacement or a new deck needs a permit. Our engineering documents are available for the file, and the <a href=\"/pages/georgia-building-code-for-glass-railing\">Georgia building code for glass railing</a> page has the full summary.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Built for Atlanta pollen, heat and storms</strong></p><p>Every March and April, pine pollen turns Atlanta yellow. It settles on decks, cars and railings for weeks. On glass it rinses off with a hose in minutes, with no balusters to scrub between. Summers run humid with highs near 90 degrees and afternoon thunderstorms. Wood railings on a south-facing deck gray out and need staining every couple of years. Tempered 12 mm glass and 2205 marine-grade stainless steel do not rot or rust, and there is nothing to stain.</p><p>Thunderstorms bring gusty wind and falling branches from Atlanta's tree canopy. The spigots are bolted through the deck boards into blocking, as the engineering documents show. The 12 mm panels are tempered safety glass, not window glass. Winters are mild, with an occasional ice storm. Freeze-thaw does not affect either material, so the railing looks the same in February as in July.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Raised decks on sloped intown lots",
+            "text": "<p>Decks in Morningside, Virginia-Highland and Decatur often stand a full story above the yard. A frameless glass deck railing keeps the view of the trees open and makes the deck feel larger. Top-mount spigots bolt through the deck boards into blocking shown in the guide.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Condo balconies in Midtown and Buckhead",
+            "text": "<p>Balconies along Peachtree Street and Peachtree Road need the 42-inch commercial height. The 39.6-inch panel in spigots gives a glass balcony railing that keeps the skyline view. Confirm the attachment with the building's association and the City of Atlanta before ordering, since the slab edge varies by tower.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Pool decks and stairs in the northern suburbs",
+            "text": "<p>Backyard pools in Sandy Springs, Alpharetta, Roswell and Marietta need a 48-inch barrier, which the 46-inch panel provides as a glass pool fence. Inside the same homes, custom stair glass replaces wood balusters on the main staircase. Gate hinges, a latch and a floor lock finish the pool opening.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Atlanta",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Looking for an installer in Atlanta?",
+        "text": "<p>Most Atlanta decks are a DIY job of about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}
