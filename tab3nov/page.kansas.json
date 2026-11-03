@@ -1,0 +1,143 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Kansas",
+        "text": "Glass railings bring a clean, modern touch to Kansas homes and businesses while keeping spaces bright, open, and secure. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we offer durable systems for decks, patios, staircases, and terraces crafted for style, safety, and long-lasting performance.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we don’t just supply glass railings in Kansas. We deliver durable, elegant, and secure railing systems that enhance the beauty and function of any home or business. Our team ensures your project stays smooth and stress-free, offering expert support from planning to installation.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed for safety, clarity, and long-term performance.<br/></li><li><strong>Modern Designs:</strong> Frameless and semi-frameless systems with sleek hardware for a clean, contemporary appearance.<br/></li><li><strong>Expert Guidance:</strong> Professional assistance and detailed installation resources available whenever you need them.<br/></li><li><strong>Safety & Compliance:</strong> <a href=\"/collections/glass-railing\"><strong>All products</strong></a> meet Kansas residential and commercial building and safety standards.<br/></li><li><strong>Easy Ordering & Delivery:</strong> Simple online purchasing and dependable delivery service throughout Kansas.<br/></li></ul><p>With a focus on quality, design, and reliability, your glass railing project will be safe, attractive, and effortless. Homeowners and professionals across Kansas trust The Glass Railing Store for lasting results and exceptional service.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Kansas"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Wichita",
+            "link": "shopify://pages/kansas-glass-railing-wichita"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Olathe",
+            "link": "shopify://pages/kansas-glass-railing-olathe"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Overland Park",
+            "link": "shopify://pages/kansas-glass-railing-overland-park"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Kansas, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Plan Your Kansas Project with Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make your Wichita, Olathe, or Overland Park property stand out with modern glass railings from The Glass Railing Store. Our experts can help you select the right design, materials, and layout for your space — whether residential or commercial.</p><p>Contact us today for expert advice, accurate quotes, and fast shipping anywhere in Kansas. Let’s make your project simple and successful.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and builders throughout Kansas trust our glass railing systems for their quality, durability, and style.</p><ul><li>High-strength <a href=\"/products/glass-railing-40-tempered-glass-panel\"><strong>tempered glass </strong></a>designed to meet building and safety codes<br/></li><li>Weather-resistant materials made for long-term outdoor use<br/></li><li>Free shipping available on qualifying orders<br/></li><li>Full installation guides and hardware included<br/></li><li>Reliable support from design planning to project completion<br/></li></ul><p>With years of trusted service, The Glass Railing Store continues to be a top choice for glass railing systems across the state.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

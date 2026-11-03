@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Terrell Hills</strong>",
+        "text": "Glass railings in Terrell Hills, <a href=\"/pages/glass-railing-texas\">Texas</a>, provide protection, style, and uninterrupted views for homes and commercial spaces. They are ideal for balconies, decks, patios, staircases, and rooftop terraces, letting natural light enhance every area.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Terrell Hills Railing Solutions</strong>",
+        "description": "<ul><li>Premium tempered and laminated panels<br/></li><li>Modern hardware including spigots, clamps, and handrails<br/></li><li>Custom panels for angled sections and staircases<br/></li><li>Step-by-step installation guides and support<br/></li><li>Assistance from planning to delivery</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Terrell Hills, TX 78209, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Terrell Hills Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Install glass railings on decks, balconies, staircases, or commercial areas with expert guidance. Our team can provide advice on panel placement, hardware, and maintenance, ensuring long-lasting protection and clear views.</p><p>Contact us now for a free consultation and let us help you by creating a beautiful space!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

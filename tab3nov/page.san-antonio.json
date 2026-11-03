@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings San Antonio</strong>",
+        "text": "Upgrade your San Antonio home or business with glass railings that combine style, safety, and modern elegance. Perfect for balconies, staircases, decks, and outdoor terraces, these railings provide clear, unobstructed views while keeping your family, guests, or clients secure. They instantly enhance any space with a sleek, contemporary look.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings?</strong>",
+        "description": "<p>Our San Antonio glass railings bring elegance, durability, and long-lasting quality to any property. They are low-maintenance, enhance natural light, and provide wide, clear views without compromising safety.</p><ul><li><strong>Custom Designs</strong> – Tailored to perfectly fit your space.<br/></li><li><strong>Premium Materials</strong> – Durable tempered or laminated glass with corrosion-resistant hardware.<br/></li><li><strong>Simple Installation</strong> – Step-by-step guides and support for precise results.<br/></li><li><strong>Affordable Luxury</strong> – Elegant railing systems without overspending.<br/></li><li><strong>Weather-Resistant</strong> – Built to withstand <a href=\"/pages/glass-railing-texas\">Texas</a> hot summers and occasional storms.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "San Antonio, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Bring Style and Safety to Your Property Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bring style, safety, and sophistication to your San Antonio home or business with our premium glass railings. Ideal for balconies, staircases, decks, and pool areas, they let in natural light while keeping everyone safe. Made from strong tempered or laminated glass with durable hardware, our railings are built to last for years with minimal maintenance.</p><p>Get a quote or start your project with The Glass Railing Store today, and enjoy modern, open, and secure spaces that elevate your San Antonio property.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

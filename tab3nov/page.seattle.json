@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railing in Seattle</strong>",
+        "text": "Glass railings are a safe and stylish option for properties in Seattle. They work well on balconies, staircases, decks, rooftops, and terraces. Our railings give clear city views, let in more natural light. With a clean, modern design, they suit any space.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings?</strong>",
+        "description": "<p>Our Seattle glass railings are strong, safe, and easy to maintain. They bring in more light and provide wide, clear views without blocking the space.</p><ul><li><strong>Custom Designs</strong> – Tailored to fit your property perfectly.<br/></li><li><strong>Premium Materials</strong> – Durable tempered or laminated glass with rust-resistant hardware.<br/></li><li><strong>Simple Installation</strong> – Step-by-step guides and support for a smooth finish.<br/></li><li><strong>Affordable Options</strong> – Modern railing systems at fair prices.<br/></li><li><strong>Weather-Ready</strong> – Built to handle <a href=\"/pages/glass-railing-washington\">Washington's</a> rainy climate and outdoor conditions.<br/><br/></li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Seattle, WA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Add Safety and Style to Your Property</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings are a safe, strong, and modern choice for any Seattle home or business. They are perfect for staircases, balconies, rooftops, and pool areas. Made with durable glass and hardware, they last for years with very little upkeep.</p><p>Contact The Glass Railing Store today for a quote and make your Seattle property safe, open, and stylish.<br/><br/></p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

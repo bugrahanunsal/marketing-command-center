@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in kirkland</strong>",
+        "text": "Kirkland homes and commercial properties gain modern elegance, safety, and open views with glass railings. Perfect for decks, balconies, patios, staircases, and rooftop terraces, these systems allow natural light to flow through your space while maintaining unobstructed sightlines, giving your property a bright and contemporary feel.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Kirkland Railing Solutions</strong>",
+        "description": "<p>We provide everything needed for a complete glass railing project:</p><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated panels for lasting safety<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless systems with minimalist hardware.<br/></li><li><strong>Guided Setup:</strong> Step-by-step instructions and video tutorials for smooth installation.<br/></li><li><strong>Flexible Applications:</strong> Railings suitable for both small residential spaces and larger commercial projects across <a href=\"/pages/glass-railing-washington\">Washington</a>.<br/></li><li><strong>Full Support:</strong> Assistance from design planning to delivery.<br/><br/></li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Kirkland, WA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings enhance balconies, decks, staircases, or commercial terraces while maintaining open, bright spaces. Our team provides expert advice on panel selection, hardware, and ongoing care tips to ensure your Kirkland,  <a href=\"/pages/glass-railing-washington\">Washington</a>, property remains visually appealing, secure, and fully functional for years.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

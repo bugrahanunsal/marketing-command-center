@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Indian Land</strong>",
+        "text": "Add modern design and open views to your Indian Land property with glass railings built for strength, safety, and long-lasting appeal. Ideal for decks, patios, staircases, and balconies, these systems combine simplicity and durability to suit both residential and commercial spaces.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefits of Glass Railings in Indian Land</strong>",
+        "description": "<p>Glass railings do more than provide safety — they improve your property’s look and functionality:</p><ul><li><strong>Bright, Spacious Feel</strong> – Helps small or enclosed areas feel larger and more open.</li><li><strong>Increases Property Value</strong> – Modern style that appeals to buyers and visitors.</li><li><strong>Simple Maintenance</strong> – Easy to clean, and built to resist rust and wear.<br/></li><li><strong>Design Versatility</strong> – Works well with both contemporary and traditional architectural styles.</li><li><strong>Reliable Safety</strong> – Designed to meet <a href=\"/pages/glass-railing-south-carolina\">South Carolina</a> local safety standards and codes.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Indian Land, SC 29707, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Create a safe and sophisticated space with glass railings from The Glass Railing Store. Whether you’re building a new deck, remodeling a balcony, or updating your staircase, our team is ready to help with design, measurements, and installation advice. Contact us today for a quote, expert support, and fast delivery anywhere in Indian Land.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

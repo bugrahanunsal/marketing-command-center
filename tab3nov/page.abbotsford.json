@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/What_Types_of_Glass_Are_Commonly_Used_For_Railing_Systems.png",
+        "heading": "Glass Railing Abbotsford",
+        "text": "Abbotsford properties deserve open, bright, and safe spaces that do not block scenic views. Our glass railing systems provide strong protection while keeping decks, balconies, patios, staircases, and rooftop terraces light-filled and stylish. The Glass Railing Store offers durable, easy-to-install solutions for homes, condos, and commercial properties in Abbotsford, British Columbia. Visit us now!",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefits of Glass Railings in Abbotsford</strong>",
+        "description": "<p>Glass railings are more than decorative—they offer practical advantages for local properties:</p><ul><li><strong>Open & Airy Spaces</strong>: Clear panels let natural light illuminate your areas.<br/></li><li><strong>Durable & Long-Lasting</strong>: Designed to withstand Abbotsford’s rain, sun, and seasonal temperature changes.<br/></li><li><strong>Safety Without Compromise</strong>: Protect family, guests, or clients while keeping sightlines open.<br/></li><li><strong>Flexible Designs</strong>: Frameless or semi-frameless systems suit both modern and traditional buildings.<br/></li><li><strong>Code-Friendly</strong>: Products designed to meet Abbotsford building regulations and safety standards.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Abbotsford, BC, Canada"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings in Abbotsford, <a href=\"/pages/glass-railings-british-columbia\">British Columbia</a>, combine style, safety, and clarity. Our team helps with panel selection, hardware options, and layout planning to ensure your deck, balcony, or terrace is functional, secure, and visually appealing for years to come. Contact us now!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/british-columbia-glass-railing-abbotsford"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

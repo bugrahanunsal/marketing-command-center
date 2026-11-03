@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  Puyallup</strong>",
+        "text": "Glass railings bring a modern and open look to Puyallup homes and businesses. Designed for decks, balconies, patios, and staircases, they keep spaces bright while providing reliable safety. Made from durable materials, our railings combine strength, elegance, and low maintenance—an ideal choice for both residential and commercial properties throughout Puyallup.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings?</strong>",
+        "description": "<p>Our Puyallup glass railings are strong, safe, and low-maintenance. They let in more light and give wide, clear views without blocking the space.</p><ul><li><strong>Custom Designs</strong> – Made to fit your space perfectly.<br/></li><li><strong>Premium Materials</strong> – Tempered or laminated glass with rust-resistant hardware.<br/></li><li><strong>Simple Installation</strong> – Step-by-step guides and support for a smooth finish.<br/></li><li><strong>Affordable Options</strong> – Modern railing systems at a fair price.<br/></li><li><strong>Weather-Ready</strong> – Built to handle <a href=\"/pages/glass-railing-washington\">Washington's</a> changing seasons.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Puyallup, WA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Get Expert Advice Before You Start</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which railing fits your property? Our Puyallup team helps you choose the right design and ensures it meets safety codes. We guide you from start to finish for a smooth, stress-free process.<br/>Glass railings are a safe, strong, and modern choice for any Puyallup home or business. Perfect for staircases, balconies, patios, and pool areas, they last for years with minimal upkeep.</p><p>Contact The Glass Railing Store today!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

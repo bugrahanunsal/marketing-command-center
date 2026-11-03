@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Bellevue</strong>",
+        "text": "Glass railings are a great way to add safety and open up your Bellevue home or business. They let in sunlight, keep your view clear, and give a modern, clean look. Perfect for stairs, balconies, and decks, they make your space safe and stylish.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Us in Bellevue</strong>",
+        "description": "<h2></h2><ul><li>Custom railings designed to match your space perfectly<br/></li><li>Strong tempered glass and hardware built for long-term use<br/></li><li>Step-by-step installation guides for a safe, stylish result<br/></li><li>Options to suit both modern homes and busy commercial spaces<br/></li><li>Weather-resistant solutions made for <a href=\"/pages/glass-railing-washington\">Washington's</a> changing climate</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Bellevue, WA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Your Project Started"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get your Bellevue project started with our expert team. From design to installation, we ensure quality, precision, and a smooth experience at every step. Whether residential or commercial, we turn your vision into reality. Contact us today to start your project with confidence!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Massachusetts",
+        "text": "Add modern design, strength, and clarity to your Massachusetts property with glass railings built for safety and long-term appeal. Suitable for decks, balconies, staircases, patios, and rooftops, these systems open up your view while maintaining durability. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we supply quality glass railing systems that bring style and light to both residential and commercial projects.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, each system is crafted for lasting performance and visual balance. We use tempered and laminated glass paired with <a href=\"/collections/glass-railing-hardware\"><strong>durable hardware</strong></a> to achieve both safety and design consistency. From planning to delivery, our team provides reliable help at every stage of your project.</p><p><strong>Key Features:</strong></p><ul><li><strong>Durable Glass:</strong> Tempered and laminated construction built to withstand daily use.<br/></li><li><strong>Design Variety:</strong> Frameless and semi-frameless choices that fit different property types.<br/></li><li><strong>Easy Setup:</strong> Step-by-step guides and support for smooth installation.<br/></li><li><strong>Safety Compliance:</strong> Products designed to meet Massachusetts residential and commercial codes.<br/></li><li><strong>Statewide Delivery:</strong> Quick and dependable shipping throughout the region.</li></ul><p>Our railing systems combine visibility and security, making them suitable for any home or business environment.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Massachusetts"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Swampscott",
+            "link": "shopify://pages/massachusetts-glass-railing-swampscott"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Westford",
+            "link": "shopify://pages/massachusetts-glass-railing-westford"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Westhampton",
+            "link": "shopify://pages/massachusetts-glass-railing-westhampton"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Mendon",
+            "link": "shopify://pages/massachusetts-glass-railing-mendon"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Norwell",
+            "link": "shopify://pages/massachusetts-glass-railing-norwell"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Salem",
+            "link": "shopify://pages/massachusetts-glass-railing-salem"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Massachusetts, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your  Glass Railing Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Brighten your space and add security with The Glass Railing Store. Whether you’re working on a balcony in Swampscott, a deck in Westford, or a staircase in Mendon, our team provides expert support from start to finish.</p><p>Contact us today to begin your Massachusetts glass railing project and get personalized guidance, accurate measurements, and prompt delivery for your property.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Massachusetts Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customers across Massachusetts trust The Glass Railing Store for dependable products and consistent service:</p><ul><li>High-quality tempered and laminated glass tested for strength<br/></li><li>Hardware options such as clamps, <a href=\"/collections/glass-railing-caprail\"><strong>cap rails</strong></a>, and spigots<br/></li><li>Systems designed to meet local codes<br/></li><li>Clear installation instructions and helpful videos<br/></li><li>Free shipping available on qualifying orders</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

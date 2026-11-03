@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Princeton</strong>",
+        "text": "Glass railings bring a sleek and open look to Princeton, <a href=\"/pages/glass-railing-kentucky\">Kentucky</a> properties while offering lasting safety and durability. Ideal for decks, patios, staircases, and balconies, these systems are crafted with tempered and laminated glass to suit both residential and commercial applications. Each setup from The Glass Railing Store enhances your property with added value, natural light, and timeless modern appeal.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "Why Glass Railings Are a Smart Choice",
+        "description": "<ul><li><strong>Durable Glass Panels:</strong> Tempered and laminated glass built for strength and long life.<br/></li><li><strong>Low Maintenance:</strong> Easy to clean and resistant to corrosion, moisture, and fading.<br/></li><li><strong>Design Flexibility:</strong> Options to match traditional and modern architectural styles.<br/></li><li><strong>Safe and Reliable:</strong> Designed to meet building codes for residential and commercial projects.<br/></li><li><strong>Bright and Airy Spaces:</strong> Keeps views open and sunlight flowing throughout the property.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Princeton, KY 42445, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add a modern touch to your Princeton home or business with high-quality glass railings from The Glass Railing Store. Our team provides expert help with design selection, accurate measurements, and complete installation support.<br/>Get in touch today for a personalized quote and quick delivery across Princeton.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

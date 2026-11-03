@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings Orange County</strong>",
+        "text": "Glass railings are becoming a popular choice across <a href=\"/pages/glass-railing-california\">California</a>, especially in Orange County, where clear views and modern design matter. These railings offer strong safety while keeping your surroundings open and bright. With their clean, sleek look, they let in plenty of natural light and fit perfectly with the warm, coastal style of the region.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings?</strong>",
+        "description": "<p>Our Orange County City glass railings are strong, safe, and easy to care for. They let in more light and give wide, clear views without blocking the space.</p><ul><li><strong>Custom Designs –</strong> Made to fit your space perfectly.<br/></li><li><strong>Premium Materials –</strong> Tempered or laminated glass with rust-resistant hardware.<br/></li><li><strong>Simple Installation –</strong> Step-by-step guides and support for a smooth finish.<br/></li><li><strong>Affordable Options –</strong> Modern railing systems at a fair price.<br/></li><li><strong>Weather-Ready –</strong> Built to handle New York’s changing seasons and outdoor conditions.<br/><br/></li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Orange County, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking to bring safe, modern, and stylish glass railings to your Orange County property? Whether it’s a rooftop deck, balcony, or commercial entrance, we provide everything you need for a smooth installation.</p><p>Browse our selection online or contact our team today for expert guidance on your Orange County railing project.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

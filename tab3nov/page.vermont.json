@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Vermont",
+        "text": "Glass railings add a modern and polished look to properties across Vermont. They keep spaces open and bright while providing strength and safety. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we supply durable railing systems designed to fit every setting from lakefront decks and mountain cabins to city terraces and staircases without blocking your view.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we don’t just supply glass railings in Vermont. We provide durable, elegant, and safe railing systems that enhance the beauty and functionality of any space. Our team is dedicated to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>tempered and laminated glass</strong></a> engineered for long-lasting performance and safety.<br/></li><li><strong>Contemporary Designs:</strong> Frameless and semi-frameless styles with sleek hardware to create a clean, modern look.<br/></li><li><strong>Professional Guidance:</strong> Expert advice and detailed installation support whenever you need it.<br/></li><li><strong>Safety & Compliance:</strong> Products built to meet Vermont’s residential and commercial building standards.<br/></li><li><strong>Easy Access & Delivery:</strong> Convenient online ordering and dependable delivery service across Vermont.<br/></li></ul><p>With a focus on craftsmanship, safety, and design, your glass railing project will be secure, stylish, and hassle-free. Homeowners and professionals across Vermont rely on The Glass Railing Store for quality, reliability, and service that stands the test of time.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Vermont"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Burlington",
+            "link": "shopify://pages/vermont-glass-railing-burlington"
+          }
+        }
+      },
+      "block_order": [
+        "place1"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Vermont, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Burlington Project Now</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make your Burlington property stand out with clear views and modern design using glass railings from The Glass Railing Store. Our experts will help you select the best system for your deck, balcony, or staircase and guide you through each step of your project.</p><p>Contact The Glass Railing Store today to discuss your Burlington project, get a detailed quote, and enjoy fast, reliable delivery anywhere in Vermont.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and professionals across Vermont trust our glass railing systems for their strength, style, and lasting quality.</p><ul><li>High-strength tempered glass that <a href=\"/pages/building-codes-glass-railing\"><strong>designed to meet building standards</strong></a><br/></li><li>Weather-resistant materials suited for Vermont’s changing seasons<br/></li><li>Installation materials and customer support with every order<br/></li><li>Free shipping available on qualifying purchases<br/></li><li>Expert help from design to installation<br/></li></ul><p>Our team makes it simple to achieve the right balance of safety, light, and modern appeal in any space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

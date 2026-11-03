@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/What_Types_of_Glass_Are_Commonly_Used_For_Railing_Systems.png",
+        "heading": "Glass Railing Vancouver",
+        "text": "Vancouver’s stunning skyline, waterfront views, and modern architecture deserve open, bright spaces without bulky barriers. Our glass railing systems provide strong protection while keeping decks, balconies, patios, staircases, and rooftop terraces light-filled and stylish. The Glass Railing Store offers durable, easy-to-install solutions for homes, condos, and commercial properties in Vancouver, British Columbia. Buy now!",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Custmore Choose us</strong>",
+        "description": "<p>Glass railings offer more than aesthetics—they provide lasting safety and functionality:</p><ul><li><strong>Maximize Natural Light</strong>: Clear panels let sunlight illuminate your spaces.<br/></li><li><strong>Durable & Weather-Resistant</strong>: Panels withstand rain, wind, and sun exposure while resisting corrosion.<br/></li><li><strong>Safe & Elegant</strong>: Protect family, guests, or clients while maintaining unobstructed views.<br/></li><li><strong>Flexible Designs</strong>: Frameless or semi-frameless systems suit both modern and classic properties.<br/></li><li><strong>Local Compliance</strong>: Products designed to meet Vancouver building codes and safety standards.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Vancouver, BC, Canada"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Started Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings in Vancouver, <a href=\"/pages/glass-railings-british-columbia\">British Columbia</a>, create open, stylish, and secure spaces. Our team helps with panel selection, hardware choices, and layout planning to ensure your deck, balcony, or terrace is functional, safe, and visually appealing for years. Visit our website for more information!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/british-columbia-glass-railings-vancouver"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

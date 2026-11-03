@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Burlington",
+        "text": "Glass railings offer a clean, open look for Burlington properties while providing lasting safety and strength. Perfect for decks, patios, staircases, and balconies, these systems let natural light flow freely and highlight views of Lake Champlain and <a href=\"/pages/glass-railing-vermont\">Vermont’s</a> scenic landscape. At The Glass Railing Store, we supply durable, easy-to-install systems designed for both residential and commercial use.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Glass Railing Options</strong>",
+        "description": "<p>We provide a wide selection of glass railing systems to fit every style and setting.</p><ul><li><strong>Frameless Glass Railings</strong> – For a clear, modern look with uninterrupted views.<br/></li><li><strong>Semi-Frameless Systems</strong> – Combine sleek design with solid structure for added support.<br/></li><li><strong>Exterior Railings</strong> – Great for decks, porches, and patios, keeping outdoor spaces bright and secure.<br/></li><li><strong>Interior Railings</strong> – Perfect for staircases and lofts, adding light and openness indoors.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Burlington, VT, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Turn your Burlington property into a bright, open space with our premium glass railing systems. We’re here to support your project from planning to installation.</p><p>Reach out today for expert advice, detailed quotes, and fast delivery anywhere in Burlington. Let The Glass Railing Store help you create a safe, stylish space you’ll love for years.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

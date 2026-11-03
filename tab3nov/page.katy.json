@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Katy</strong>",
+        "text": "Katy homes and businesses can enjoy modern glass railings that provide safety and unobstructed views. Suitable for staircases, balconies, decks, patios, and rooftop terraces, these systems allow sunlight to brighten spaces while maintaining open sightlines.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Katy Glass Railing Services</strong>",
+        "description": "<ul><li>High-quality tempered glass panels with modern hardware<br/></li><li>Custom panels to fit unique spaces, including staircases and angled areas<br/></li><li>Step-by-step installation guides and videos<br/></li><li>Support from planning to delivery</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Katy, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Katy Property Now</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Install glass railings for balconies, decks, staircases, or commercial spaces while receiving expert guidance. We help with panel selection, hardware options, and installation strategies, ensuring your project complements your property’s design, providing lasting beauty and functionality for your Katy, <a href=\"/pages/glass-railing-texas\">Texas</a> property.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

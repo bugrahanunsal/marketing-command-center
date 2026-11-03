@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Augusta",
+        "text": "Augusta properties gain a refined and open look with glass railings that balance durability, safety, and modern appeal. Ideal for decks, balconies, patios, staircases, and rooftop spaces, these systems brighten every area while maintaining strong protection. Made with tempered and laminated glass, they’re built to last and complement both residential and commercial properties.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefits of Glass Railings in Augusta</strong>",
+        "description": "<ul><li><strong>Durable Construction:</strong> Tempered and laminated glass panels built to withstand <a href=\"/pages/glass-railing-maine\">Maine’s</a> climate.<br/></li><li><strong>Easy Maintenance:</strong> No rust, corrosion, or fading — simple cleaning keeps them looking new.<br/></li><li><strong>Custom Design Options:</strong> Fits seamlessly with traditional or modern architecture.<br/></li><li><strong>Safe and Reliable:</strong> Designed to meet building standards for both home and business use.<br/></li><li><strong>Bright, Open Feel:</strong> Keeps natural light flowing throughout the property.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Augusta, ME 04330, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking for a way to make your riverside home or commercial property stand out? Our glass railing systems deliver strength, clear views, and modern appeal for any space. Each system is crafted for safety, style, and long-lasting quality.</p><p>Contact us at The Glass Railing Store today for expert assistance, creative design input, and a free quote for your Augusta glass railing installation.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

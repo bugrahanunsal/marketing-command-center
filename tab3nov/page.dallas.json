@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings Dallas</strong>",
+        "text": "Redesign your Dallas home or business with glass railings that offer both elegance and protection. Perfect for balconies, staircases, decks, or patios, these railings provide clear views while keeping your family or guests safe. Modern and stylish, they instantly enhance any space.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Us</strong>",
+        "description": "<p>At The Glass Railing Store, we bring style, safety, and simplicity to every Dallas project. From urban condos to modern businesses, our glass railings are designed to perform beautifully.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Custom Designs:</strong> Tailored to fit your space perfectly.<br/></li><li><strong>Premium Materials:</strong> Durable tempered glass and hardware built to last.<br/></li><li><strong>Simple Installation:</strong> Step-by-step guides and support for precise results.<br/></li><li><strong>Affordable Luxury:</strong> Elegant railing systems without overspending.</li></ul><p>Enjoy railings that are built for Dallas living—strong, stylish, and stress-free.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Dallas, TX, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bring style, safety, and elegance to your Dallas, <a href=\"/pages/glass-railing-texas\">Taxas</a> home or business with our premium glass railings. Ideal for balconies, staircases, decks, and pool areas, they open up spaces, letting in light while keeping your family or guests safe. Made from strong tempered or laminated glass with durable hardware, our railings are built to last for years with minimal maintenance.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

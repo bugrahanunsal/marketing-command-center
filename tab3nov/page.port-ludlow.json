@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Port Ludlow</strong>",
+        "text": "Port Ludlow properties enjoy a combination of safety, elegance, and unobstructed views with glass railings. Ideal for balconies, decks, staircases, patios, and rooftop terraces, these systems allow sunlight to fill your space while keeping sightlines clear. They add a sleek, contemporary look to both residential and commercial areas.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefits of Glass Railings in Port Ludlow</strong>",
+        "description": "<ul><li>Tempered and laminated panels for long-lasting durability<br/></li><li>Frameless or semi-framed designs maintain open views<br/></li><li>Sunlight brightens interiors and outdoor areas<br/></li><li>Flexible for homes, offices, and commercial properties<br/></li><li>Low-maintenance and resistant to rust, corrosion, and fading</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Port Ludlow, WA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which type of glass railing is right for your Port Ludlow, <a href=\"/pages/glass-railing-washington\">Washington</a>, property? Our experts will help you pick a system that fits your design and the safety requirements for your project. We help with everything from product selection to installation planning, so the process is smooth and worry-free.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

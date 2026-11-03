@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Bethel</strong>",
+        "text": "Give your space a bright, open, and refined look with glass railings crafted for lasting strength and style. Perfect for Bethel, <a href=\"/pages/glass-railing-connecticut\">Connecticut</a> properties — from decks and balconies to patios, staircases, and rooftops — these systems let in natural light while keeping every area secure. Made from tempered and laminated glass, they deliver dependable performance and timeless appeal for both homes and businesses.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Benefits of Choosing Glass Railings in Bethel</strong>",
+        "description": "<ul><li><strong>Durable Construction:</strong> Tempered and laminated glass panels designed for everyday use.</li><li><strong>Low Maintenance:</strong> Resistant to corrosion and rust, keeping their clarity and strength over time.</li><li><strong>Modern Design:</strong> Matches both contemporary and classic architecture.</li><li><strong>Clear Views:</strong> Maximizes light and space while keeping safety in focus.</li><li><strong>Simple Installation:</strong> Pre-engineered systems with easy-to-follow guides.</li><li><strong>Reliable Quality:</strong> Built to meet Bethel safety and design standards.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Bethel, CT 06801, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Create open, bright, and secure spaces with glass railing systems from The Glass Railing Store. Our team provides expert guidance, accurate measurements, and full support through every step.</p><p>Contact The Glass Railing Store today to start your Bethel glass railing project and design a space that blends safety, strength, and clear views.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

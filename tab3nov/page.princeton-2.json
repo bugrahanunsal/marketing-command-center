@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Princeton",
+        "text": "Glass railings provide Princeton, <a href=\"/pages/glass-railing-minnesota\">Minnesota</a> properties with a perfect blend of style, security, and functionality. Ideal for balconies, rooftop decks, terraces, and staircases, these railings preserve clear sightlines while allowing abundant natural light to flow through. Their contemporary design enhances both residential and commercial spaces, creating environments that feel open, bright, and welcoming.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What We Offer in Princeton</strong>",
+        "description": "<p>We provide tailored glass railing solutions to meet the specific needs of your property:</p><ul><li><strong>Custom Fit:</strong> Panels designed to match your property’s dimensions and architectural style.<br/></li><li><strong>Durable Materials:</strong> High-strength tempered or laminated glass paired with corrosion-resistant hardware.<br/></li><li><strong>Simple Installation:</strong> Step-by-step guides and support help you get every railing secure and aligned.<br/></li><li><strong>Budget-Friendly Options:</strong> Stylish railing systems available at competitive prices.<br/></li><li><strong>Weather-Ready:</strong> Built to withstand Princeton’s seasonal climate while retaining clarity and durability.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Princeton, MN 55371, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings are perfect for staircases, balconies, terraces, rooftop patios, or pool decks. They offer long-lasting safety, modern elegance, and ease of maintenance, all while preserving unobstructed views. With these railings, your Princeton property can enjoy a clean, open, and stylish look for years to come.<br/>Contact us today to get started with your Princeton glass railing project and receive professional support every step of the way.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

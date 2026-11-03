@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Barrington",
+        "text": "Glass railings bring a blend of safety and sophistication to Barrington properties. At The Glass Railing Store, we offer durable systems designed for decks, staircases, patios, and waterfront homes. Whether overlooking the bay or enhancing an interior space, our glass railings keep your views wide open and your property protected.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we don’t just provide glass railings — we deliver elegant, long-lasting, and secure solutions that complement every type of space. Our experienced team makes your project simple, providing expert support from planning to completion.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials</strong> – Strong tempered and laminated glass for dependable safety and clarity.<br/></li><li><strong>Modern Designs</strong> – Frameless or semi-frameless options with polished hardware for a clean, contemporary finish.<br/></li><li><strong>Expert Guidance</strong> – Installation guides, videos, and one-on-one support whenever needed.<br/></li><li><strong>Safety & Compliance</strong> – Products designed to meet local codes and performance standards.<br/></li><li><strong>Simple Ordering & Reliable Delivery</strong> – Easy online access and fast shipping across Barrington and nearby areas.<br/></li></ul><p>With our focus on quality, design, and customer care, your glass railing project will be seamless, durable, and visually appealing.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Barrington, RI, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a railing upgrade in Barrington? We’re here to help with every step — from design ideas to installation planning. Whether it’s for a home balcony, pool deck, or commercial building, our systems offer strength, beauty, and lasting reliability.<br/>Browse our products online or contact The Glass Railing Store today for a quick quote, expert guidance, and fast delivery anywhere in <a href=\"/pages/glass-railing-rhode-island\">Rhode Island</a>. Let’s build your Barrington project with confidence.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

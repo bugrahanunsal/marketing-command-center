@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Westford</strong>",
+        "text": "Glass railings are a modern solution for homes and businesses in Westford, <a href=\"/pages/glass-railing-massachusetts\">Massachusetts</a>. Ideal for balconies, stairways, patios, rooftops, and terraces, they provide clear views and allow natural light to fill the space. Our clean designs fit perfectly in luxury homes and commercial properties.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Our Glass Railings Stand Out</strong>",
+        "description": "<p>Our Westford glass railings combine durability, safety, and style while being easy to maintain. They improve light flow and provide wide, clear views without compromising space or aesthetics.</p><ul><li><strong>Custom-Made Solutions</strong> – Designed to match your specific space and style.</li><li><strong>High-Quality Materials</strong> – Built with sturdy tempered or laminated glass and corrosion-resistant fittings.</li><li><strong>Skilled Installation</strong> – Our team ensures every railing is installed precisely for lasting stability.</li><li><strong>Competitive Pricing</strong> – High-end designs at reasonable costs.</li><li><strong>Climate-Resistant Build</strong> – Engineered to withstand Westford’ bright sun and occasional weather shifts.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Westford, MA 01886, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which type of glass railing is right for your Westford property? Our experts will help you pick a system that fits your design and the safety requirements for your project. We help with everything from product selection to installation planning, so the process is smooth and worry-free.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Effort</strong>",
+        "text": "Add a modern and refined look to your Effort property with glass railings that offer clear views and dependable safety. Ideal for decks, balconies, staircases, patios, and rooftop spaces, these systems bring in natural light while maintaining security and durability. Whether for a home or a business, glass railings provide a perfect balance of style and strength.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Glass Railings in Effort</strong>",
+        "description": "<ul><li><strong>Clear Views:</strong> Enjoy open, uninterrupted scenery of the Poconos and surrounding landscapes.</li><li><strong>Built to Last:</strong> Tempered and laminated glass engineered to handle changing <a href=\"/pages/glass-railing-pennsylvania\">Pennsylvania</a> weather.</li><li><strong>Safety with Style:</strong> Keep your space protected while adding a modern touch to any property.</li><li><strong>Design Versatility:</strong> Choose from frameless and semi-frameless styles that suit your building’s character.</li><li><strong>Local Expertise:</strong> Our team understands Effort’s building standards for a compliant and smooth installation.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Effort, PA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which type of glass railing is right for your Effort property? Our experts will help you pick a system that fits your design and the safety requirements for your project. We help with everything from product selection to installation planning, so the process is smooth and worry-free.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

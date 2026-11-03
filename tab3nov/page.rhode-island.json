@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Rhode Island",
+        "text": "Glass railings add a clean, modern style to homes and businesses across Rhode Island. They <a href=\"/blogs/news/glass-railings-maximize-natural-light\"><strong>let natural light flow through every space</strong></a> while keeping your property safe and visually open. At The Glass Railing Store, we offer durable railing systems that complement any setting — from coastal decks in Barrington to city terraces and staircases in Providence — giving your property both strength and style without blocking the view.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Railing Solutions</strong>",
+        "description": "<p>At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we provide complete glass railing systems that make installation simple and results long-lasting.</p><ul><li>Tempered and laminated glass panels designed for safety and durability<br/></li><li>Frameless and semi-framed options for bright, modern spaces<br/></li><li>Easy-to-follow installation guide<br/></li><li>Hardware options including clamps, top rails, and spigots<br/></li><li>Custom designs and flexible choices for all property types</li></ul>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Rhode Island"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Barrington",
+            "link": "shopify://pages/rhode-island-glass-railing-barrington"
+          }
+        }
+      },
+      "block_order": [
+        "place1"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Rhode Island, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to add open views and modern design to your Rhode Island property? Whether you’re building a new home, updating a deck, or completing a commercial project, our team can help with design selection, measurements, and setup guidance.</p><p>Start your Rhode Island glass railing project today — contact The Glass Railing Store for expert help, quotes, and fast shipping anywhere in the state.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and professionals across Rhode Island trust The Glass Railing Store for dependable quality and expert service.</p><ul><li>High-strength glass designed to meet safety and building standards<br/></li><li>Corrosion-resistant hardware perfect for coastal weather<br/></li><li>Full <a href=\"/pages/glass-railing-installation-guide\"><strong>installation support, guides</strong></a>, and materials included<br/></li><li>Free shipping available on qualifying orders<br/></li><li>Quick delivery across the state for faster project completion<br/></li></ul><p>With years of trusted service, The Glass Railing Store continues to be a preferred choice for glass railing systems throughout Rhode Island.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

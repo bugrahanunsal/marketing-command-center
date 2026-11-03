@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Urbandale",
+        "text": "Add a clear, open look to your Urbandale property with glass railings that balance safety, style, and strength. Perfect for decks, balconies, staircases, and patios, these systems create bright spaces and modern appeal for homes, offices, and commercial properties.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Urbandale Customers Choose Us</strong>",
+        "description": "<p>Homeowners, builders, and designers in Urbandale trust our products for their reliability, quality, and timeless look.</p><ul><li>Tested glass designed to meet safety and building standards<br/></li><li>Precision-crafted hardware for secure installation<br/></li><li>Help with planning, measurements, and layout selection<br/></li><li>Fast, reliable shipping throughout <a href=\"/pages/glass-railing-iowa\">Iowa</a><br/></li><li>Expert support from start to finish</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Urbandale, IA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Let’s Begin Your Urbandale Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Turn your design ideas into reality with The Glass Railing Store. We’re here to help you plan every step — from choosing the right panels to completing your installation.</p><p>Contact our team today for a free quote, professional advice, and fast delivery across Urbandale. Your glass railing project starts here.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

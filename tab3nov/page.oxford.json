@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Oxford</strong>",
+        "text": "Glass railings are a smart and stylish choice for homes and businesses in Oxford, <a href=\"/pages/glass-railing-michigan\">Michigan</a>. Ideal for balconies, decks, staircases, patios, and rooftop areas, they provide open views, natural light, and a clean modern look while keeping every space safe and secure.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Glass Railings in Oxford?</strong>",
+        "description": "<ul><li><strong>Open and Bright Spaces:</strong> Allows more light and makes areas feel larger.<br/></li><li><strong>Modern Appearance:</strong> Complements both traditional and contemporary designs.<br/></li><li><strong>Simple Care:</strong> Resists rust, fading, and wear.<br/></li><li><strong>Versatile Use:</strong> Works for homes, offices, and outdoor spaces.<br/></li><li><strong>Safety and Reliability:</strong> Designed to meet standard building and safety codes.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Oxford, MI 48371, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings bring clarity, light, and strength to any Oxford property. Perfect for decks, balconies, staircases, and patios, they offer safety without blocking the view. Contact The Glass Railing Store today for design help, fast quotes, and reliable delivery across Oxford.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

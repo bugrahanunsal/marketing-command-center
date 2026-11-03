@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Littleton</strong>",
+        "text": "Glass railings are a modern solution for homes and businesses in Littleton. Ideal for balconies, stairways, patios, rooftops, and terraces, they provide clear views and allow natural light to fill the space. Our clean designs fit perfectly in luxury homes and commercial properties.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings?</strong>",
+        "description": "<p>Our Littleton glass railings are strong, safe, and low-maintenance. They let in more light and give wide, clear views without blocking the space.</p><ul><li><strong>Custom Designs</strong> – Made to fit your space perfectly.</li><li><strong>Premium Materials</strong> – Tempered or laminated glass with rust-resistant hardware.</li><li><strong>Simple Installation</strong> – Step-by-step guides and support for a smooth finish.</li><li><strong>Affordable Options</strong> – Modern railing systems at a fair price.</li><li><strong>Weather-Ready</strong> – Built to handle Littleton’s seasonal weather.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Littleton, CO, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings are a safe, strong, and modern choice for any home or business in <a href=\"/pages/glass-railing-colorado\">Colorado</a>. Perfect for staircases, balconies, patios, and pool areas, they last for years with minimal upkeep.</p><p>Contact The Glass Railing Store today for a quote and make your Littleton space open, safe, and modern.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

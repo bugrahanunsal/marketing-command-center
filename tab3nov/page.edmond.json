@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing edmond",
+        "text": "Glass railings offer a clean, open, and modern look for homes and businesses throughout Edmond. Perfect for patios, decks, staircases, and balconies, they provide safety without blocking your view. Made from strong tempered and laminated glass, these systems allow natural light to flow freely while adding a refined touch to your space.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Glass Railings in Edmond</strong>",
+        "description": "<ul><li><strong>Clear and Open Views:</strong> Enjoy the scenery around your property without bulky frames.<br/></li><li><strong>Built for Safety:</strong> Tempered glass panels designed to meet building standards.<br/></li><li><strong>Fits Any Style:</strong> Frameless and semi-frameless options that suit both classic and modern designs.<br/></li><li><strong>Low Maintenance:</strong> Easy to clean and resistant to moisture, fading, and corrosion.<br/></li><li><strong>Weather Ready:</strong> Strong enough to handle <a href=\"/pages/glass-railing-oklahoma\">Oklahoma’s</a> heat, rain, and changing seasons.<br/></li><li><strong>Indoor or Outdoor Use:</strong> Ideal for homes, offices, hotels, and public spaces.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Edmond, OK, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Designing Your Space</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Adding glass railings to your property is a simple way to create a brighter, more open environment. Whether for a home balcony, outdoor patio, or commercial building, our team is ready to help you plan every step — from choosing the right system to delivery.</p><p>Contact The Glass Railing Store today for a free quote, expert advice, and fast delivery throughout Edmond. Let’s create a clear, safe, and stylish space made to last.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

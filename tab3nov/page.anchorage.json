@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/glass-balcony-railing_a3b2b4dc-8ca9-48f8-88e2-d6619721d792.jpg",
+        "heading": "<strong>Glass Railings  in Anchorage</strong>",
+        "text": "Anchorage properties gain elegance, safety, and open views with glass railings. Ideal for decks, staircases, patios, balconies, and rooftop terraces, these systems allow sunlight to brighten spaces while maintaining clear sightlines.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At the Glass Railing Store, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across Anchorage, <a href=\"/pages/glass-railing-alaska\">Alaska</a>.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Anchorage, AK, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/C1688.00_00_01_49.Still011.png"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which type of glass railing is right for your Anchorage property? Our experts will help you pick a system that fits your design and the safety requirements for your project. We help with everything from product selection to installation planning, so the process is smooth and worry-free.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

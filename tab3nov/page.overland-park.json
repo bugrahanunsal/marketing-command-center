@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Overland Park",
+        "text": "Glass railings add a bright, open, and elegant touch to Overland Park homes and businesses. Perfect for balconies, patios, staircases, and decks, they let sunlight flow through while ensuring safety. Made with durable tempered and laminated glass, these systems stay strong and stylish through every season.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Makes Us Different</strong>",
+        "description": "<p>At The Glass Railing Store, we focus on reliability, style, and customer support. Every order is handled with care, ensuring you receive the right system for your project.</p><ul><li>Durable materials tested for long-term performance<br/></li><li>Guidance from product selection to installation<br/></li><li>Products built to meet local safety regulations<br/></li><li>Ongoing support for replacements, adjustments, and upgrades<br/></li></ul><p>We take pride in helping Overland Park, <a href=\"/pages/glass-railing-kansas\">Kansas</a>, property owners create bright, secure, and visually appealing spaces.</p>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Overland Park, KS, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Plan Your Overland Park Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Adding glass railings to your home or business is a simple way to create a bright, open, and secure space. Our team offers one-on-one support to help you choose the best system, measure accurately, and organize your layout for a smooth installation.</p><p>Contact The Glass Railing Store today for a free quote, helpful advice, and quick delivery anywhere in Overland Park. </p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

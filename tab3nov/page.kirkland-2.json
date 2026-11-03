@@ -1,0 +1,175 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "172498784725b5ec9f": {
+      "type": "apps",
+      "blocks": {
+        "powerful_form_builder_app_block_n6GDc9": {
+          "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "powerful_form_builder_app_block_n6GDc9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "slideshow_rgRAnb": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_qK3b6x": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/glass-balcony-railing_a3b2b4dc-8ca9-48f8-88e2-d6619721d792.jpg",
+            "heading": "<strong>Glass Railings  in kirkland</strong>",
+            "heading_size": "h1",
+            "subheading": "Glass railings are a modern solution for homes and businesses in Kirkland. Ideal for balconies, stairways, patios, rooftops, and terraces, they provide clear views and allow natural light to fill the space. Our clean designs fit perfectly in luxury homes and commercial properties.",
+            "button_label": "Get Quotes",
+            "link": "https://glassrailingstore.com/en-us/pages/contact",
+            "button_label2": "Products",
+            "link2": "https://glassrailingstore.com/en-us/collections/glass-railing",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_qK3b6x"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_8PkRM6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_F7KJet": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Our Glass Railings Stand Out",
+            "heading_size": "h1"
+          }
+        },
+        "text_nUWUxJ": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Statewide Experience -</strong> We know Texas codes, wind requirements, and what works across different regions.</li><li><strong>Weather-Tested -</strong> Our systems handle Texas heat, storms, and everything in between.</li><li><strong>Trusted Locally - </strong>Hundreds of satisfied customers across major Texas cities.</li><li><strong>Complete Service - </strong>We handle permits, engineering, and every installation detail.</li></ul>"
+          }
+        },
+        "button_4K3NNh": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_F7KJet",
+        "text_nUWUxJ",
+        "button_4K3NNh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "location_map_t6NNjV": {
+      "type": "location-map",
+      "name": "Location Map",
+      "settings": {
+        "location": "",
+        "api_key": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85940.02107981249!2d-122.29382015874445!3d47.69168945813076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012c02852ce7b%3A0x7a776aaa70782857!2sKirkland%2C%20WA%2C%20USA!5e0!3m2!1sen!2sin!4v1763555275960!5m2!1sen!2sin\" width=\"1000\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "map_height": 600
+      }
+    },
+    "image_with_text_ryBKwL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GC93ah": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today",
+            "heading_size": "h1"
+          }
+        },
+        "text_RKGj3m": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not sure which type of glass railing is right for your Kirkland property? Our experts will help you pick a system that fits your design and the safety requirements for your project. We help with everything from product selection to installation planning, so the process is smooth and worry-free.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_LdgpaP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GC93ah",
+        "text_RKGj3m",
+        "button_LdgpaP"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/C1688.00_00_01_49.Still011.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 80,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "172498784725b5ec9f",
+    "slideshow_rgRAnb",
+    "rich_text_8PkRM6",
+    "location_map_t6NNjV",
+    "image_with_text_ryBKwL"
+  ]
+}

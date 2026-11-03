@@ -1,0 +1,135 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/glass-balcony-railing_a3b2b4dc-8ca9-48f8-88e2-d6619721d792.jpg",
+        "heading": "Glass Railing Alaska",
+        "text": "Glass railings bring safety, style, and brightness to Alaska homes and businesses. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, our durable systems protect balconies, decks, staircases, and patios while maintaining clear views of mountains, waterways, and surrounding landscapes.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Us</strong>",
+        "description": "<p>Customers trust The Glass Railing Store because we make projects simple, reliable, and safe:</p><ul><li>Tempered and laminated glass panels built for strength<br/></li><li>Sleek hardware options including spigots, clamps, and rails<br/></li><li>Products designed to meet Alaska <a href=\"/pages/building-codes-glass-railing\"><strong>building codes and safety standards</strong></a><br/></li><li>Clear installation guides and video tutorials included<br/></li><li>Reliable delivery for larger projects<br/></li></ul><p>With years of experience and quality you can count on, we are a trusted choice for railing projects across Alaska.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Alaska"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Juneau",
+            "link": "shopify://pages/alaska-glass-railing-juneau"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Anchorage",
+            "link": "shopify://pages/alaska-glass-railing-anchorage"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Alaska, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/C1688.00_00_01_49.Still011.png"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you are planning a railing project in any of these cities, we are ready to help. View our <a href=\"/products/glass-railing-46-tempered-glass-panel\"><strong>tempered glass panels</strong></a> and hardware online, or contact our team for guidance on the best system for your property. From small residential upgrades to larger commercial projects, we provide everything needed for safe, modern, and stylish glass railings in Alaska.<br/>Contact us now!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Alaska Railing Solutions</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We provide everything needed for a complete glass railing project:</p><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated panels for lasting safety.<br/></li><li><strong>Modern Styles:</strong> <a href=\"/blogs/news/semi-framed-vs-frameless-glass-railings-style-and-functionality-comparison\"><strong>Frameless and semi-frameless systems</strong></a> with minimalist hardware.<br/></li><li><strong>Guided Setup:</strong> Step-by-step instructions and video tutorials for smooth installation.<br/></li><li><strong>Flexible Applications:</strong> Railings suitable for both small residential spaces and larger commercial projects.<br/></li><li><strong>Full Support:</strong> Assistance from design planning to delivery.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

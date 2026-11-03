@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Portsmouth",
+        "text": "Glass railings add a clean, modern look to Portsmouth homes and businesses while providing reliable safety and open visibility. At The Glass Railing Store, we offer durable railing systems for decks, patios, balconies, and staircases — perfect for both residential and commercial spaces near the scenic <a href=\"/pages/glass-railing-new-hampshire\">New Hampshire</a> coast.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Our Glass Railings</strong>",
+        "description": "<p>Our products combine strength, beauty, and long-term reliability — making them a top choice for property owners across Portsmouth.</p><ul><li><strong>Tempered and Laminated Glass</strong> – Built to handle daily use and harsh coastal weather.<br/></li><li><strong>Frameless and Semi-Frameless Options</strong> – Designed for unobstructed views and modern appeal.<br/></li><li><strong>Low Maintenance</strong> – Resistant to corrosion, moisture, and discoloration.<br/></li><li><strong>Safe and Code-Compliant</strong> – Designed to meet safety standards for homes and commercial projects.<br/></li><li><strong>Custom Fit</strong> – Available in various sizes and hardware finishes for a perfect match.</li></ul>"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Portsmouth, NH 03801, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Start Your Portsmouth Project?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Turn your vision into reality with The Glass Railing Store. We’re here to guide you through every step — from design ideas to installation support.</p><p>Reach out today for a free quote, friendly advice, and quick delivery of your custom glass railing system anywhere in Portsmouth.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "feat",
+    "form",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Waterbury</strong>",
+        "text": "Waterbury properties gain style, safety, and open visibility with glass railings built for lasting performance. Perfect for decks, balconies, patios, staircases, and terraces, these systems let in natural light while maintaining security. Each design blends modern appeal with practical strength, making them suitable for both homes and commercial buildings.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Waterbury Customers Trust Us</strong>",
+        "description": "<p>The Glass Railing Store provides dependable quality and service across Waterbury:</p><ul><li>Certified tempered and laminated glass panels<br/></li><li>Hardware options such as clamps, cap rails, and spigots<br/></li><li>Products designed to meet local safety and building standards<br/></li><li>Step-by-step installation support and helpful videos<br/></li><li>Reliable delivery across <a href=\"/pages/glass-railing-connecticut\">Connecticut</a><br/></li><li>Free shipping available on larger orders</li></ul><p>Each system is designed for appearance, safety, and lasting value.</p>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Waterbury, CT, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Design Your Perfect Space"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Design a secure and stylish space with glass railing systems from The Glass Railing Store. Our experts offer full assistance, from choosing the right design to final installation.<br/>Contact The Glass Railing Store today to plan your Waterbury glass railing project with trusted materials and professional support.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railing Experts in Malibu</strong>",
+        "text": "Glass railings are a smart way to add both safety and style to homes and businesses in <a href=\"/pages/glass-railing-california\">California</a>, especially in Malibu. They work beautifully on balconies, stairways, rooftop decks, and patios, offering clear views of the ocean while letting in plenty of natural light.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Work With Us?</strong>",
+        "description": "<p>Malibu property owners choose us for glass railings because we make the process simple and reliable:</p><ul><li><strong>Durable Glass</strong> – We use strong tempered and laminated glass designed to last.</li><li><strong>Clean Design Options</strong> – Choose from different hardware styles like spigots and clamps etc.</li><li><strong>Code-Compliant Solutions</strong> – Our products are designed to meet California safety and building regulations.</li><li><strong>Easy Setup</strong> – Clear instructions and support help make installation straightforward.</li><li><strong>Free Shipping on Large Orders</strong> – Helping save time and cost on bigger projects.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Malibu, CA, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Let’s Get Your Project Started</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From small residential upgrades to larger commercial installations, we provide everything you need for durable, easy-to-maintain, and attractive glass railings in Malibu.</p><p>Reach out now for a free consultation and let us help you bring a modern touch to your property.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}
