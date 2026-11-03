@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Quakertown</strong>",
+        "text": "Add modern design, strength, and open views to your Quakertown property with glass railings built for long-lasting quality and safety. Perfect for decks, balconies, staircases, patios, and rooftop areas, these systems allow natural light to flow through while maintaining a clean, stylish appearance. Ideal for both residential and commercial spaces, glass railings create bright and secure environments that fit any architectural style.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Our Glass Railings Stand Out</strong>",
+        "description": "<p>Our Quakertown glass railings combine durability, safety, and style while being easy to maintain. They improve light flow and provide wide, clear views without compromising space or aesthetics.</p><ul><li><strong>Custom-Made Solutions</strong> – Designed to match your specific space and style.</li><li><strong>High-Quality Materials</strong> – Built with sturdy tempered or laminated glass and corrosion-resistant fittings.</li><li><strong>Simple Installation</strong> – Step-by-step guides and support help you install every railing precisely for lasting stability.</li><li><strong>Competitive Pricing</strong> – High-end designs at reasonable costs.</li><li><strong>Climate-Resistant Build</strong> – Engineered to withstand <a href=\"/pages/glass-railing-pennsylvania\">Pennsylvania’s</a> bright sun and occasional weather shifts.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Quakertown, PA 18951, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Your Free Quote Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add beauty, security, and value to your Quakertown property with glass railings designed for both function and style. Our team helps you select the right panels, hardware, and layout for your space—whether it’s a residential balcony, a backyard deck, or a commercial terrace. Get expert advice, accurate measurements, and dependable delivery to make your project smooth from start to finish.<br/>Contact The Glass Railing Store today to begin your Quakertown glass railing project and create spaces that feel bright, open, and secure.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

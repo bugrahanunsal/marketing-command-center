@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Shelby Township</strong>",
+        "text": "At The Glass Railing Store, we provide durable, easy-to-install systems designed for homes, condos, and commercial properties in Shelby Township. Our glass railings keep decks, patios, balconies, staircases, and rooftop terraces open and light-filled while maintaining strong protection and a modern aesthetic.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Choose Glass Railings in Shelby Township?</strong>",
+        "description": "<p>Glass railings are more than just a stylish addition—they offer lasting benefits for local properties:</p><ul><li><strong>Maximize Natural Light:</strong> Clear panels let sunlight illuminate your space.<br/></li><li><strong>Durable & Weather-Resistant:</strong> Panels withstand rain, sun, and seasonal temperature changes while resisting rust and corrosion.<br/></li><li><strong>Safe & Stylish:</strong> Keep your family, guests, or clients secure without blocking views.<br/></li><li><strong>Versatile Designs:</strong> Frameless or semi-frameless systems fit both modern and traditional homes.<br/></li><li><strong>Local Compliance:</strong> Our team helps you plan your project to meet Shelby Township, <a href=\"/pages/glass-railing-michigan\">Michigan</a> building codes and safety standards.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Shelby Township, MI, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Your Project Started"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shelby Township decks, balconies, staircases, and commercial terraces gain safety, elegance, and clear sightlines with our glass railing systems. Connect with our experts to select the right panels, hardware, and care tips to ensure your property stays secure, functional, and visually appealing for years.</p><p>Contact us today for a free consultation!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

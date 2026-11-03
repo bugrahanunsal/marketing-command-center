@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in johns island</strong>",
+        "text": "Add a sleek and refined touch to your Johns Island property with glass railings that showcase every coastal view. Ideal for homes, commercial spaces, and outdoor areas, these systems combine safety with a bright, open layout. Built to handle coastal conditions, they offer lasting durability while preserving the island’s natural beauty and relaxed atmosphere.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Our Glass Railings Stand Out</strong>",
+        "description": "<p>Our Johns Island glass railings combine durability, safety, and style while being easy to maintain. They improve light flow and provide wide, clear views without compromising space or aesthetics.</p><ul><li><strong>Custom-Made Solutions</strong> – Designed to match your specific space and style.</li><li><strong>High-Quality Materials</strong> – Built with sturdy tempered or laminated glass and corrosion-resistant fittings.</li><li><strong>Simple Installation</strong> – Step-by-step guides and support help you install every railing precisely for lasting stability.</li><li><strong>Competitive Pricing</strong> – High-end designs at reasonable costs.</li><li><strong>Climate-Resistant Build</strong> – Engineered to withstand <a href=\"/pages/glass-railing-south-carolina\">South Carolina's</a> bright sun and occasional weather shifts.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Johns Island"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Your Project Started Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add a polished look to your home or business with premium glass railings from The Glass Railing Store. Our team offers expert help with system selection, layout planning, and installation support. Contact us today for a detailed quote and quick delivery anywhere in Johns Island.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

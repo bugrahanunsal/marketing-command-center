@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Oneonta</strong>",
+        "text": "Oneonta properties gain a modern, open, and safe feel with glass railings. Ideal for balconies, decks, patios, staircases, and rooftop terraces, they allow sunlight to flow while keeping sightlines clear.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Our Glass Railings Stand Out</strong>",
+        "description": "<p>Our Oneonta glass railings combine durability, safety, and style while being easy to maintain. They improve light flow and provide wide, clear views without compromising space or aesthetics.</p><ul><li><strong>Custom-Made Solutions</strong> – Designed to match your specific space and style.</li><li><strong>High-Quality Materials</strong> – Built with sturdy tempered or laminated glass and corrosion-resistant fittings.</li><li><strong>Simple Installation</strong> – Step-by-step guides and support help you install every railing precisely for lasting stability.</li><li><strong>Competitive Pricing</strong> – High-end designs at reasonable costs.</li><li><strong>Climate-Resistant Build</strong> – Engineered to withstand <a href=\"/pages/glass-railing-new-york\">New York's</a> bright sun and occasional weather shifts.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Oneonta, NY 13820, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glass railings are an excellent choice for staircases, balconies, decks, terraces, and pool areas in Oneonta. Combining strength, elegance, and minimal upkeep, they provide a long-lasting solution that keeps your property open, light-filled, and modern.</p><p>Contact us today for a free consultation and let us help you design a safe, stylish space that lasts!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}

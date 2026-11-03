@@ -1,0 +1,85 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings  in Paterson</strong>",
+        "text": "Glass railings are a modern solution for homes and businesses in Paterson, <a href=\"/pages/glass-railing-new-jersey\">New Jersey</a>. Ideal for balconies, stairways, patios, rooftops, and terraces, they provide clear views and allow natural light to fill the space. Our clean designs fit perfectly in luxury homes and commercial properties.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Why Our Glass Railings Stand Out</strong>",
+        "description": "<p>Our Paterson glass railings combine durability, safety, and style while being easy to maintain. They improve light flow and provide wide, clear views without compromising space or aesthetics.</p><ul><li><strong>Custom-Made Solutions</strong> – Designed to match your specific space and style.</li><li><strong>High-Quality Materials</strong> – Built with sturdy tempered or laminated glass and corrosion-resistant fittings.</li><li><strong>Simple Installation</strong> – Step-by-step guides and support help you install every railing precisely for lasting stability.</li><li><strong>Competitive Pricing</strong> – High-end designs at reasonable costs.</li><li><strong>Climate-Resistant Build</strong> – Engineered to withstand New Jersey's bright sun and occasional weather shifts.</li></ul>"
+      }
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Paterson, NJ, USA"
+      }
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Project Today"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Create bright, secure, and elegant spaces with glass railings from The Glass Railing Store. Whether for a deck, balcony, or interior staircase, our products add lasting beauty and safety to any setting.<br/>Contact our team today for expert advice, a project estimate, and fast delivery to your Paterson location.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "map",
+    "faq",
+    "near",
+    "split"
+  ]
+}
