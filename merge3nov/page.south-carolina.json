@@ -1,0 +1,288 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in South Carolina</strong>",
+        "text": "Frameless glass railing systems delivered anywhere in South Carolina, from Charleston piazzas to Lake Murray docksides and Greenville view decks. Each order ships crated with 12 mm tempered panels and 2205 stainless spigots. You install it yourself with the guide and videos, on decks, balconies, stairs and pool surrounds.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for South Carolina projects</strong>",
+        "description": "<p>South Carolina houses mostly use the 33.6-inch panel for a 36-inch railing. Condo balconies in Myrtle Beach and Charleston take the 39.6-inch panel for the 42-inch height. Pool surrounds take the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> for a 48-inch barrier. All panels sit in 2205 stainless spigots, Brushed Stainless or Matte Black. The <a href=\"/collections/glass-railing-hardware\">hardware collection</a> has the connectors, hinges and caprail to finish the run.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In South Carolina"
+      },
+      "blocks": {
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Columbia",
+            "link": "shopify://pages/south-carolina-glass-railing-columbia"
+          }
+        }
+      },
+      "block_order": [
+        "place4"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "South Carolina, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send us the lengths of your deck, porch, stairs or pool surround with a few photos. We will send a detailed quote with panel sizes and hardware. Ready now? Order from the <a href=\"/collections/glass-deck-railing\">glass deck railing collection</a> and we will crate it. For a South Carolina address or permit question, call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What pool fence height does South Carolina require?",
+            "answer": "<p>South Carolina applies the International Swimming Pool and Spa Code with its 2021 building codes, and section 305 sets a 48-inch barrier. Our 46-inch tempered panel installed in spigots gives a 48-inch railing, so that is the pool panel for South Carolina. Add gate hinges and a latch for the opening, and ask your local building department about self-closing gate details before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does the hardware hold up on Charleston or Hilton Head salt air?",
+            "answer": "<p>Yes. All spigots, connectors, hinges and latches are 2205 marine-grade stainless steel with a 10-year no-rust promise. Tempered glass is not affected by salt. On an oceanfront porch in Isle of Palms or a marsh-front deck in Bluffton, rinse the hardware with fresh water every few weeks. Both finishes, Brushed Stainless and Matte Black, share the same 2205 base.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Will a coastal building department want engineering documents?",
+            "answer": "<p>Often, yes. The coastal counties sit in hurricane wind zones. Plan reviewers in Charleston County, Horry County or Beaufort County may ask how the railing attaches. We provide engineering documents with testing results and blocking details for top-mount and side-mount spigots on concrete and on wood. Download them from our engineering page and include them with your permit application.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery to South Carolina take in summer?",
+            "answer": "<p>Lead time does not change with the season. Standard orders are processed in 2 to 3 business days and delivered in 5 to 10 business days by freight carrier with a liftgate. Custom glass needs 2 to 3 weeks of shipping after processing. If you want a railing finished before a July rental week, order in May to leave room for the installation.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in South Carolina"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railing for the Lowcountry, Midlands and Upstate"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>What South Carolina homeowners build with glass</strong></p><p>The Lowcountry sets the tone. Charleston, Mount Pleasant, Kiawah, Hilton Head and Bluffton are full of houses raised on pilings, with piazzas and upper porches facing marsh or ocean. A glass balcony railing there keeps the water in view and shrugs off salt air. Up the coast, the Grand Strand around Myrtle Beach, Murrells Inlet and Pawleys Island mixes beach houses with condo balconies.</p><p>Inland, the Midlands are lake country. Homeowners in Lexington, Chapin and Irmo build multi-level decks on Lake Murray. A glass deck railing lets them watch the water from the kitchen. See the <a href=\"/pages/south-carolina-glass-railing-columbia\">glass railings in Columbia</a> page for that market. The Upstate adds Greenville, Spartanburg and Anderson, with Lake Keowee and Lake Hartwell homes and hillside decks looking toward the Blue Ridge foothills. Rock Hill and Fort Mill, near Charlotte, are new-build territory with open staircases and glass stair railing.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>South Carolina code in short</strong></p><p>South Carolina adopts its codes statewide through the South Carolina Building Codes Council. The current editions are the 2021 International Residential Code and International Building Code. The South Carolina code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings, including condo balconies. For pools, South Carolina applies the International Swimming Pool and Spa Code, and section 305 sets a 48-inch barrier. Our 46-inch panel in spigots gives that 48-inch height.</p><p>On the coast, the hurricane wind zones mean the building department may ask how the spigots are attached. Our engineering documents, with testing results and blocking details for wood and concrete, cover top-mount and side-mount spigots. Permits are issued by the city or county, so check with your local building department before you order glass. Read the full summary on our <a href=\"/pages/south-carolina-building-code-for-glass-railings\">South Carolina building code for glass railings</a> page.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to any South Carolina address</strong></p><p>Orders ship from our warehouse in Quebec and clear the border before they reach you. The price at checkout is final, with no duties, tariffs or brokerage charges added later. Standard orders are processed in 2 to 3 business days, then delivered by freight carrier in 5 to 10 business days. The truck has a liftgate, so the crate is lowered to the driveway, whether that is on Sullivan's Island or in Simpsonville. Custom glass takes 2 to 3 weeks of shipping after processing.</p><p>Orders over 3,000 USD ship free; the <a href=\"/pages/free-shipping-information\">free shipping page</a> has the details. Inspect the crate on arrival and report any damage within 3 days and before installation. We replace or refund the damaged item at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight across the state",
+            "text": "Liftgate freight delivery to any South Carolina address, 5 to 10 business days after processing."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Built for salt air",
+            "text": "2205 marine-grade stainless hardware with a 10-year no-rust promise, Lowcountry to Upstate."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Glass for every rule",
+            "text": "36, 42, 48 and 60-inch railing heights from 12 mm tempered glass panels."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Final price at checkout",
+            "text": "No duties, tariffs or hidden fees, even though the crate ships from Canada."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Raised coastal homes and piazzas",
+            "text": "<p>From Charleston to Hilton Head, houses on pilings put the living space a full story above grade. Upper porches, piazzas and roof decks get a frameless glass railing that keeps the marsh and ocean views open. The 2205 stainless hardware is made for salt air and rinses clean.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Lake decks in the Midlands and Upstate",
+            "text": "<p>Lake Murray, Lake Keowee, Lake Hartwell and Lake Wateree homes stack decks toward the water. A glass deck railing on each level replaces pickets that block the view from a seated position. Side-mount spigots on the fascia keep the full deck width for chairs and a grill.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences and balconies on the Grand Strand",
+            "text": "<p>Beach houses in Myrtle Beach, Surfside Beach and Murrells Inlet often have a backyard pool and a second-floor balcony. The 46-inch panel gives a 48-inch glass pool fence with gate hardware for the opening. The 39.6-inch panel gives the 42-inch balcony railing that condos and rentals use.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in South Carolina",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need a hand installing in South Carolina?",
+        "text": "<p>The system is designed for DIY, and most standard installations take about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

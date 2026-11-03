@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Virginia",
+        "text": "Glass railings are a stylish and safe choice for homes and businesses across Virginia. They bring light into every space, open up views, and create a modern, polished look while maintaining strength and stability. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we supply durable glass railing systems that suit decks, patios, staircases, rooftops, and balconies — all built to deliver clarity and long-lasting performance.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At the Glass Railing Store, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to <a href=\"/pages/building-codes-glass-railing\"><strong>meet local building codes and safety regulations</strong></a>.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across Virginia.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Virginia"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Virginia, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Working on a balcony in Daleville or a deck in Linden? The Glass Railing Store has the right system for your space. Browse our selection of railing panels and hardware online or reach out for expert assistance.<br/>Create a bright, secure, and elegant setting with glass railing systems designed to match your vision and last for years.Start Your Virginia Glass Railing Project — Contact Us Today!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Property owners across Virginia choose The Glass Railing Store for <a href=\"/collections/glass-railing\"><strong>reliable products</strong></a> and proven service:</p><ul><li>Certified glass tested for durability and clarity<br/></li><li>Hardware options like clamps, spigots, and cap rails<br/></li><li>Systems compliant with Virginia safety standards<br/></li><li>Installation help and how-to resources included<br/></li><li>Free shipping on larger and commercial orders</li></ul><p>We’re dedicated to providing strong, clear, and stylish railing systems that add both beauty and safety to any Virginia property.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

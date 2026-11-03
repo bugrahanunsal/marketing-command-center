@@ -1,0 +1,151 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Tennessee",
+        "text": "Glass railings are a modern, safe, and stylish choice for homes and businesses across Tennessee. They brighten spaces, open up views, and create a clean, contemporary appearance while keeping every area secure. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we offer durable railing systems that highlight your surroundings — from mountain decks and city rooftops to lakeside patios and staircases — without blocking the view.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Railing Solutions</strong>",
+        "description": "<p>At The Glass Railing Store, we supply everything you need for a smooth, complete <a href=\"/pages/glass-railing-installation-guide\"><strong>glass railing installation</strong></a>:</p><ul><li><strong>Durable Materials:</strong> Tempered and laminated glass built for strength and safety.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless options for a bright, open look.<br/></li><li><strong>Easy Installation:</strong> Step-by-step guides, how-to videos, and expert support for every order.<br/></li><li><strong>Affordable Options:</strong> Designed to fit a wide range of project sizes and budgets.<br/></li><li><strong>Full Project Support:</strong> From design planning to delivery, our team is here every step of the way.</li></ul>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Tennessee"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Gallatin",
+            "link": "shopify://pages/tennessee-glass-railing-gallatin"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Franklin",
+            "link": "shopify://pages/tennessee-glass-railing-franklin"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Chattanooga",
+            "link": "shopify://pages/tennessee-glass-railing-chattanooga"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Nashville",
+            "link": "shopify://pages/tennessee-glass-railing-nashville"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place5"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Tennessee, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing project in Gallatin, Franklin, Chattanooga, Big Sandy, or Nashville? We have everything you need to create a secure, bright, and modern space. Browse our railing panels and hardware online, or reach out to our expert team for guidance on selecting the best system for your home or business.</p><p>From lakeside decks to city rooftops, The Glass Railing Store is here to bring your Tennessee project to life.</p><p>Start Your Tennessee Glass Railing Project — Contact Us Today!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Tennessee Customers Trust Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Property owners across Tennessee choose The Glass Railing Store because we make railing projects simple and dependable:</p><ul><li>High-strength tempered and laminated glass panels.<br/></li><li>Hardware options including spigots, clamps, and cap rails.<br/></li><li>Products designed to meet Tennessee safety codes and building standards.<br/></li><li>Installation guides and videos with every purchase.<br/></li><li>Free shipping available on larger orders.<br/></li></ul><p>With years of proven experience, we’ve become a trusted source for glass railing systems throughout Tennessee.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

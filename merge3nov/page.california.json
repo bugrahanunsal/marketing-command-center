@@ -1,0 +1,616 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in California</strong>",
+        "text": "We ship frameless glass railing systems across California, from San Diego to the Bay Area and the Sierra. Crated 12 mm tempered glass panels and 2205 stainless spigots arrive by freight for ocean-view decks, pool fences, balconies and stairs. You install them with our guide and videos.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for California projects</strong>",
+        "description": "<p>For most California decks and balconies, start with the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> for a 48-inch railing, or the 39.6-inch panel for the 42-inch minimum. Around a pool, the 57.7-inch panel builds a 60-inch fence. Pair the panels with the 6-inch top-mount spigot on concrete or wood, or the side-mount spigot on a deck fascia. Browse the full <a href=\"/collections/glass-railing\">glass railing collection</a>, in Brushed Stainless or Matte Black.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In California"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Los Angeles",
+            "link": "shopify://pages/california-glass-railing-los-angeles"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing San Diego",
+            "link": "shopify://pages/california-glass-railing-san-diego"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing San Francisco",
+            "link": "shopify://pages/california-glass-railing-san-francisco"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Beverly Hills",
+            "link": "shopify://pages/california-glass-railing-beverly-hills"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Santa Monica",
+            "link": "shopify://pages/california-glass-railing-santa-monica"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Malibu",
+            "link": "shopify://pages/california-glass-railing-malibu"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Pasadena",
+            "link": "shopify://pages/california-glass-railing-pasadena"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Long Beach",
+            "link": "shopify://pages/california-glass-railing-long-beach"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing West Hollywood",
+            "link": "shopify://pages/california-glass-railing-west-hollywood"
+          }
+        },
+        "place11": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Orange County",
+            "link": "shopify://pages/california-glass-railing-orange-county"
+          }
+        },
+        "place12": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing El Dorado Hills",
+            "link": "shopify://pages/california-glass-railing-el-dorado-hills"
+          }
+        },
+        "place13": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Lincoln",
+            "link": "shopify://pages/california-glass-railing-lincoln"
+          }
+        },
+        "place14": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Fairfield",
+            "link": "shopify://pages/california-glass-railing-fairfield"
+          }
+        },
+        "place15": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Vallejo",
+            "link": "shopify://pages/california-glass-railing-vallejo"
+          }
+        },
+        "place16": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Sonoma",
+            "link": "shopify://pages/california-glass-railing-sonoma"
+          }
+        },
+        "place18": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Mill Valley",
+            "link": "shopify://pages/california-glass-railing-mill-valley"
+          }
+        },
+        "place20": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Walnut Creek",
+            "link": "shopify://pages/california-glass-railing-walnut-creek"
+          }
+        },
+        "place21": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Oakland",
+            "link": "shopify://pages/california-glass-railing-oakland"
+          }
+        },
+        "place22": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Fresno",
+            "link": "shopify://pages/california-glass-railing-fresno"
+          }
+        },
+        "place23": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Fullerton",
+            "link": "shopify://pages/california-glass-railing-fullerton"
+          }
+        },
+        "place25": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Tulare",
+            "link": "shopify://pages/california-glass-railing-tulare"
+          }
+        },
+        "place27": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Morro Bay",
+            "link": "shopify://pages/california-glass-railing-morro-bay"
+          }
+        },
+        "place28": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Carmel",
+            "link": "shopify://pages/california-glass-railing-carmel"
+          }
+        },
+        "place29": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings San Jose",
+            "link": "shopify://pages/california-glass-railing-san-jose"
+          }
+        },
+        "place30": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings San Carlos",
+            "link": "shopify://pages/california-glass-railing-san-carlos"
+          }
+        },
+        "place31": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings San Mateo",
+            "link": "shopify://pages/california-glass-railing-san-mateo"
+          }
+        },
+        "place32": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Livermore",
+            "link": "shopify://pages/california-glass-railing-livermore"
+          }
+        },
+        "place33": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings West Covina",
+            "link": "shopify://pages/california-glass-railing-west-covina"
+          }
+        },
+        "place34": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Rancho Mirage",
+            "link": "shopify://pages/california-glass-railing-rancho-mirage"
+          }
+        },
+        "place35": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Placentia",
+            "link": "shopify://pages/california-glass-railing-placentia"
+          }
+        },
+        "place36": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Coronado",
+            "link": "shopify://pages/california-glass-railing-coronado"
+          }
+        },
+        "place37": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings La Mesa",
+            "link": "shopify://pages/california-glass-railing-la-mesa"
+          }
+        },
+        "place39": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Carlsbad",
+            "link": "shopify://pages/california-glass-railing-carlsbad"
+          }
+        },
+        "place40": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings San Clemente",
+            "link": "shopify://pages/california-glass-railing-san-clemente"
+          }
+        },
+        "place41": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings San Juan Capistrano",
+            "link": "shopify://pages/california-glass-railing-san-juan-capistrano"
+          }
+        },
+        "place43": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Mission Viejo",
+            "link": "shopify://pages/california-glass-railing-mission-viejo"
+          }
+        },
+        "place44": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Lake Forest",
+            "link": "shopify://pages/california-glass-railing-lake-forest"
+          }
+        },
+        "place45": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Huntington Beach",
+            "link": "shopify://pages/california-glass-railing-huntington-beach"
+          }
+        },
+        "place46": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Rancho Palos Verdes",
+            "link": "shopify://pages/california-glass-railing-rancho-palos-verdes"
+          }
+        },
+        "place47": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Manhattan Beach",
+            "link": "shopify://pages/california-glass-railing-manhattan-beach"
+          }
+        },
+        "place49": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Elk Grove",
+            "link": "shopify://pages/california-glass-railing-elk-grove"
+          }
+        },
+        "place50": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing San Ramon",
+            "link": "shopify://pages/california-glass-railing-san-ramon"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place7",
+        "place9",
+        "place10",
+        "place11",
+        "place12",
+        "place13",
+        "place14",
+        "place15",
+        "place16",
+        "place18",
+        "place20",
+        "place21",
+        "place22",
+        "place23",
+        "place25",
+        "place27",
+        "place28",
+        "place29",
+        "place30",
+        "place31",
+        "place32",
+        "place33",
+        "place34",
+        "place35",
+        "place36",
+        "place37",
+        "place39",
+        "place40",
+        "place41",
+        "place43",
+        "place44",
+        "place45",
+        "place46",
+        "place47",
+        "place49",
+        "place50"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "California, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Get Started on Your Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send us your measurements, photos or drawings and we will prepare a detailed quote for your California project. Order standard panels and hardware online, or ask about custom sizes. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern, or use the <a href=\"/pages/contact\">contact page</a>. Not sure about the finish? Order the glass and hardware sample kit first.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Why is the minimum railing height 42 inches on a California house?",
+            "answer": "<p>The California code sets 42 inches as the minimum guard height for houses (CRC R312.1), where most states use 36 inches. Our 39.6-inch panel gives a 42-inch railing. The 46-inch panel, which gives 48 inches, is the common choice on a deck with a drop. Check with your local building department, and read our code page before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What does a California pool enclosure need, and which panel fits?",
+            "answer": "<p>The Swimming Pool Safety Act (Health and Safety Code 115923) sets a barrier at least 60 inches high. Gaps must be under 4 inches, and the gate latch at least 60 inches above the ground. The 57.7-inch panel builds a 60-inch glass pool fence. Add gate hinges, a latch and the floor lock from our gate hardware. Your city or county confirms the details at permit time.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can I use glass railing in a wildfire (WUI) zone?",
+            "answer": "<p>Many hillside and foothill lots sit in a Wildland-Urban Interface zone, where the state sets rules for exterior building elements. Tempered glass and 2205 stainless steel do not burn, but the deck under them is usually wood. Check with your local fire authority and building department about deck construction and railing materials before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do California earthquake rules change anything for the railing?",
+            "answer": "<p>No. Seismic rules in the California code do not add railing requirements. What matters is the attachment: our engineering documents include testing and blocking details for the top-mount and side-mount spigots on concrete and on wood. Your building department may ask for them with the permit application; download them from the <a href=\"/pages/glass-railing-engineering-testing\">engineering page</a> and send them along.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in California"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for California decks, pools and balconies"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where our California orders go</strong></p><p>Southern California is where the views are. Los Angeles, Orange County and San Diego homeowners put glass on hillside decks, ocean-view balconies and condo terraces. A railing without posts keeps that view open. In the Inland Empire and the Coachella Valley, including Palm Springs and Rancho Mirage, the typical project is a 60-inch glass pool fence. Summers there are hot and dry, and the pool is the yard.</p><p>In the Bay Area, San Francisco, the Peninsula, the East Bay and San Jose have steep lots with roof decks and rear decks. Fog and wind call for the 2205 stainless hardware. Sacramento and the Central Valley are pool-home country, with long, hot summers. Truckee and the Lake Tahoe basin get deep snow; the decks differ, but the railing is the same. The same panels and spigots work everywhere in the state; only the heights and the local permit change.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The California code: 42-inch guards and 60-inch pool fences</strong></p><p>California uses its own code set, Title 24, with the 2022 California Residential Code and California Building Code. The California code sets a 42-inch minimum guard height even for single-family houses (CRC R312.1), where most other states use 36 inches. The 39.6-inch panel gives you exactly 42 inches. The 46-inch panel gives a 48-inch railing and is the common choice where there is a drop.</p><p>Pool enclosures fall under the Swimming Pool Safety Act (Health and Safety Code 115923). The barrier must be at least 60 inches high, with gaps under 4 inches and a latch at least 60 inches above ground. Our 57.7-inch panel makes a 60-inch glass pool fence. Earthquake rules add no railing requirement, and our engineering documents cover the spigot attachments. Read our <a href=\"/pages/california-building-standards-code-for-glass-railings\">California code page</a> and check with your local building department for the edition in force before you order.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to California from our warehouse</strong></p><p>Every order ships from our warehouse in Sainte-Julie, Quebec. Standard panels and hardware are processed in 2–3 business days, then delivered in 5–10 business days anywhere in the continental United States. A freight carrier brings the crate to your address with liftgate service. Shipping is free on orders over 3,000 USD. The price at checkout is final: no duties, tariffs or hidden fees, even though the order crosses the border.</p><p>Custom glass takes 2–3 business days of processing plus 2–3 weeks of shipping, so measure early for a summer deck. When the crate arrives, inspect every panel. Report any damage within 3 days of delivery and before installation, and we replace or refund the item at no cost. Glass is made to order and final sale; unused hardware in its original packaging can be exchanged for store credit within 30 days. See the <a href=\"/pages/free-shipping-information\">shipping details</a> for the fine print.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "12 mm tempered glass",
+            "text": "Half-inch tempered safety glass panels in four heights, with a lifetime warranty against manufacturing defects."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 marine-grade stainless",
+            "text": "Spigots, connectors and gate hardware in 2205 stainless steel with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Freight delivery statewide",
+            "text": "Processed in 2–3 business days, delivered in 5–10 business days with liftgate service."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No duties, no hidden fees",
+            "text": "The checkout price is final, even though your order ships from Canada."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Ocean-view and hillside decks",
+            "text": "<p>From Laguna Beach bluffs to the Berkeley hills, decks are built for the view. A frameless glass deck railing has no posts in the sightline. Each 12 mm panel sits in two spigots, top-mounted on the deck or side-mounted on the fascia. Add the square caprail for a top rail.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Pool fences and pool decks",
+            "text": "<p>From Palm Springs to Sacramento, backyard pools need a 60-inch enclosure under the state pool safety act. The 57.7-inch panel, gate hinges, a latch set high and the floor lock build a glass pool fence. The pool stays in view from the house.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Condo balconies and rooftop terraces",
+            "text": "<p>Condo balconies in San Diego, Los Angeles and San Francisco take 42-inch or 48-inch glass balcony railings. Rooftop terraces use the same panels with wall connectors at the parapet. Ask your HOA or condo board about finish and height before ordering; a sample kit helps with the approval.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in California",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in California?",
+        "text": "<p>The system is designed for do-it-yourself installation with our guide and videos; most standard installations take about 4 hours. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,376 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Texas</strong>",
+        "text": "We ship frameless glass railing systems to every part of Texas. Each order is 12 mm tempered glass with 2205 stainless steel spigots, crated and delivered to your door by freight. Homeowners from Dallas to the Gulf Coast use them for pool fences, balconies, hillside decks and stair guards.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://pages/contact"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Texas projects</strong>",
+        "description": "<p>For most Texas projects the starting point is the <a href=\"/products/glass-railing-46-tempered-glass-panel\">46\" panel</a>: a 48\" railing for pool fences and a tall guard for balconies. The 33.6\" panel makes the 36\" railing that the code sets as the minimum for houses. The 39.6\" panel gives the 42\" height for commercial and multifamily work. Spigots come in Brushed Stainless or Matte Black, all in 2205 marine-grade stainless steel. The sample kit lets you see glass and finishes before you order.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Texas"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Dallas",
+            "link": "shopify://pages/texas-glass-railing-dallas"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Houston",
+            "link": "shopify://pages/texas-glass-railing-houston"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing San Antonio",
+            "link": "shopify://pages/texas-glass-railing-san-antonio"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Austin",
+            "link": "shopify://pages/texas-glass-railing-austin"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Denton",
+            "link": "shopify://pages/texas-glass-railing-denton"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Waxahachie",
+            "link": "shopify://pages/texas-glass-railing-waxahachie"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Coppell",
+            "link": "shopify://pages/texas-glass-railing-coppell"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Dripping Springs",
+            "link": "shopify://pages/texas-glass-railing-dripping-springs"
+          }
+        },
+        "place13": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Katy",
+            "link": "shopify://pages/texas-glass-railing-katy"
+          }
+        },
+        "place14": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Cypress",
+            "link": "shopify://pages/texas-glass-railing-cypress"
+          }
+        },
+        "place15": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing San Marcos",
+            "link": "shopify://pages/texas-glass-railing-san-marcos"
+          }
+        },
+        "place16": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Carrollton",
+            "link": "shopify://pages/texas-glass-railing-carrollton"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place6",
+        "place7",
+        "place8",
+        "place10",
+        "place13",
+        "place14",
+        "place15",
+        "place16"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Texas, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Get Started Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing in Texas? Send your measurements, photos or drawings through the quote form for a detailed quote. You can also call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern. Not sure about finishes? The Glass and Hardware Sample Kit lets you see the glass and both finishes before you commit.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which panel height do I need for a pool fence in Texas?",
+            "answer": "<p>Most cities in Texas apply the 48\" pool barrier rule from the IRC and ISPSC. Texas Health and Safety Code chapter 757 sets 48\" for apartment-complex and HOA pools. The 46\" panel in a 6\" spigot makes a 48\" railing, the usual pool fence height here. If you want more height, the 57.7\" panel makes a 60\" fence. Confirm barrier and gate rules with your city before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Do Texas sun and heat affect the glass or the hardware?",
+            "answer": "<p>The materials handle Texas sun. The panels are 12 mm (1/2\") tempered safety glass with a lifetime warranty against manufacturing defects. Every spigot, connector and hinge is 2205 marine-grade stainless steel with a 10-year no-rust promise. That promise applies in humid Houston and in dry West Texas alike. A practical note: glass in full afternoon sun gets hot to the touch in July, like any metal or glass outdoors.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit for a glass railing in Texas?",
+            "answer": "<p>It depends on your city and the project. Texas has no statewide residential code for cities, so each city runs its own permit process with local amendments. A new deck, balcony or pool barrier typically needs a permit and an inspection. Replacing a railing on an existing deck is sometimes handled differently. Ask your building department before ordering; our engineering documents cover the spigot attachments if they ask.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Will the hardware hold up to salt air in Galveston or Corpus Christi?",
+            "answer": "<p>Every spigot, connector, hinge and latch is 2205 marine-grade stainless steel with a 10-year no-rust promise, and that promise applies on the coast. An occasional fresh-water rinse removes salt film, as on any boat hardware. Coastal cities have their own wind rules for exterior work, so ask your building department. Our engineering documents cover the spigot attachments on wood and concrete.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Texas"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for Texas pools, balconies and Hill Country decks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where Texans install glass railings</strong></p><p>Texas is really four or five markets, and the typical project changes from one to the next. In <a href=\"/pages/texas-glass-railing-dallas\">Dallas</a>, Fort Worth, Plano and Frisco, the usual jobs are glass pool fences and second-floor balcony railings on two-story homes. In <a href=\"/pages/texas-glass-railing-houston\">Houston</a>, The Woodlands, Katy and Sugar Land, think pool decks, covered patios and rooftop decks on inner-loop townhomes. <a href=\"/pages/texas-glass-railing-austin\">Austin</a> and the Hill Country are deck country: view decks over limestone slopes and waterfront decks on Lake Travis. In <a href=\"/pages/texas-glass-railing-san-antonio\">San Antonio</a>, the Alamo Heights, Stone Oak and Dominion areas have the outdoor living spaces and view patios that suit frameless glass. On the coast, in Corpus Christi, Galveston and Port Aransas, salt air and wind make the 2205 marine-grade stainless hardware the sensible choice. Far West Texas and the Panhandle get the same crate, the same hardware and the same freight delivery.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Texas building codes for guards and pool barriers</strong></p><p>Texas has no single statewide residential code for cities. Each city adopts its own edition of the International Residential Code and International Building Code. Houston, Dallas, Austin and San Antonio are on the 2021 editions with local amendments. The code sets a 36\" minimum guard height for houses and 42\" for commercial and multifamily buildings. For pool barriers, most cities in Texas apply the 48\" rule from the IRC and ISPSC. Texas Health and Safety Code chapter 757 sets the same 48\" for apartment-complex and HOA pools. Our 33.6\" panel makes a 36\" railing, the 39.6\" panel a 42\" railing and the 46\" panel a 48\" railing. Smaller towns and counties can differ, so check with your local building department before you order. The full summary is on our <a href=\"/pages/texas-building-code-for-glass-railings\">Texas building code page</a>.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery to Texas from our warehouse</strong></p><p>Every order ships from our warehouse in Sainte-Julie, Quebec, and the process is the same whether you are in El Paso or Beaumont. Orders are processed in 2 to 3 business days while the glass is crated. Delivery by freight carrier then takes 5 to 10 business days anywhere in the continental U.S. The truck has a tailgate lift, so the crate comes down to street level at your driveway or job site. Custom glass takes 2 to 3 business days of processing and then 2 to 3 weeks of shipping. Shipping is free on orders over 3,000 dollars. The price you see at checkout is final: no duties, tariffs or hidden fees, even though the crate crosses the border from Canada. Check the glass within 3 days of delivery and before installation. If anything arrived damaged, we replace or refund it at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered Across Texas",
+            "text": "Freight delivery with liftgate to any address in the continental U.S., Texas included."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 Stainless Hardware",
+            "text": "Marine-grade 2205 stainless steel spigots and connectors with a 10-year no-rust promise."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Four Railing Heights",
+            "text": "Panels for 36\", 42\", 48\" and 60\" railings; custom sizes available."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No Duties or Surprises",
+            "text": "The checkout price is final: no duties, tariffs or hidden fees on Texas orders."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Glass pool fences",
+            "text": "<p>Backyard pools are common across Dallas, Houston and San Antonio subdivisions. A glass pool fence keeps the view across the yard while separating the pool from the patio. Most cities apply the 48\" barrier rule, so the 46\" panel is the usual choice, with gate hardware for the opening.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Balconies and view decks",
+            "text": "<p>Two-story homes in DFW and Houston often have a second-floor balcony over the patio. Hill Country lots around Austin and San Antonio come with raised view decks. A 36\" or 42\" frameless glass deck railing keeps the sightline open. Side-mount spigots on the fascia save floor space on narrow balconies.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Interior stair guards",
+            "text": "<p>New builds in Frisco, Katy and East Austin favor open stairs with a glass guard instead of balusters. Custom stair glass is cut to the angle of your stringer and held by top-mount or side-mount spigots. Send photos or a drawing for a quote.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Texas",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Texas?",
+        "text": "<p>The system is designed for DIY installation with our guide and videos, and most standard installations take about 4 hours. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Pennsylvania",
+        "text": "Add elegance, safety, and clear views to your Philadelphia property with glass railings designed to complement both modern and traditional spaces. Ideal for balconies, staircases, decks, patios, and rooftops, these systems allow natural light to flow freely while maintaining safety and durability.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we focus on reliability, craftsmanship, and design. Each railing system is built with durable materials and tailored to suit your space. From selection to installation, our team provides complete support to make your project efficient and visually appealing.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Durable Materials:</strong> High-strength tempered and laminated glass for lasting safety.<br/></li><li><strong>Stylish Designs:</strong> Frameless and semi-frameless options for clean, open views.<br/></li><li><strong>Expert Assistance:</strong> Step-by-step installation guides and professional support throughout your project.<br/></li><li><strong>Safety Standards:</strong> Systems designed to meet Pennsylvania building codes for residential and commercial use.<br/></li><li><strong>Easy Ordering & Delivery:</strong> Convenient online ordering and dependable delivery across the state.<br/></li></ul><p>Each system combines function and style, making it a strong choice for both homes and businesses across Pennsylvania.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Pennsylvania"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Philadelphia",
+            "link": "shopify://pages/pennsylvania-glass-railing-philadelphia"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Conshohocken",
+            "link": "shopify://pages/pennsylvania-glass-railing-conshohocken"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bethlehem",
+            "link": "shopify://pages/pennsylvania-glass-railing-bethlehem"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Quakertown",
+            "link": "shopify://pages/pennsylvania-glass-railing-quakertown"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place5"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Pennsylvania, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Plan Your Pennsylvania Glass Railing Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing project in Pennsylvania or nearby cities? Our experts provide complete guidance, from <a href=\"/collections/glass-railing\"><strong>product selection</strong></a> to precise installation. Build an open, bright, and secure space that enhances your property’s look and longevity. </p><p>Contact The Glass Railing Store today to start your Pennsylvania glass railing project.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customers across Pennsylvania count on The Glass Railing Store for dependable quality and service:</p><ul><li>Tempered and laminated glass tested for long-lasting strength.<br/></li><li>Hardware options including clamps, cap rails, and spigots.<br/></li><li>Compliance with Pennsylvania safety and building codes.<br/></li><li>Clear, <a href=\"/pages/glass-railing-installation-guide\"><strong>easy-to-follow installation instructions and videos</strong></a>.<br/></li><li>Free shipping on large and commercial orders.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing West Virginia",
+        "text": "Enjoy the open views and natural beauty of West Virginia without bulky barriers. Our glass railing systems combine safety, clarity, and style—perfect for showcasing mountain, valley, or lake scenery while keeping every space secure.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At <a href=\"/\"><strong>the Glass Railing Store</strong></a>, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across West Virginia.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In West Virginia"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "West Virginia, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing project in West Virginia? Our team is here to help with design advice, measurements, and the right materials for your property. <a href=\"/collections/glass-railing\"><strong>Browse our collection</strong></a> online or contact The Glass Railing Store today for expert guidance, quotes, and fast delivery anywhere in West Virginia.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our Railing Solutions</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At The Glass Railing Store, we provide everything you need for a complete glass railing setup—built for durability, safety, and timeless design.</p><ul><li><strong>Durable Materials:</strong> Tempered and laminated glass crafted for strength and reliability.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless systems with clean, simple hardware.<br/></li><li><strong>Easy Installation:</strong> <a href=\"/pages/glass-railing-installation-guide\"><strong>Step-by-step instructions, videos</strong></a>, and expert support.<br/></li><li><strong>Affordable Options:</strong> Quality railings to fit any budget or property size.<br/></li><li><strong>Complete Support:</strong> Assistance with design, planning, and delivery from start to finish.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

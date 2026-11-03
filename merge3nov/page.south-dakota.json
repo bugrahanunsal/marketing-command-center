@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing South Dakota",
+        "text": "Glass railings add a clean, modern style to South Dakota properties while offering safety, durability, and open visibility. They let natural light fill every area, making both indoor and outdoor spaces feel larger and brighter. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we provide durable railing systems that fit homes, offices, decks, and staircases — blending strength with design that lasts.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we don’t just provide glass railings in South Dakota. We offer durable, elegant, and secure railing systems that enhance both the appearance and functionality of any space. Our team is dedicated to making your project smooth and stress-free, offering expert support from design to installation.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>tempered and laminated glass</strong></a> built for safety, clarity, and long-term performance.<br/></li><li><strong>Modern Designs:</strong> Frameless and semi-frameless options with sleek hardware to achieve a clean, contemporary look.<br/></li><li><strong>Professional Support:</strong> Expert guidance and detailed installation assistance whenever you need it.<br/></li><li><strong>Safety & Compliance:</strong> Products engineered to meet South Dakota’s residential and commercial safety standards.<br/></li><li><strong>Easy Ordering & Delivery:</strong> Convenient online shopping and reliable delivery across South Dakota.<br/></li></ul><p>With a focus on quality, craftsmanship, and service, your glass railing project will be stylish, secure, and simple. Homeowners and professionals across South Dakota trust The Glass Railing Store for reliable products and lasting value.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In South Dakota"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "South Dakota, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add modern style and clear views to your Arlington home or business with premium glass railings from The Glass Railing Store. Our team will help you choose the right design, materials, and layout for your space.</p><p>Contact The Glass Railing Store today for expert help, detailed quotes, and fast, reliable delivery anywhere in South Dakota.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and builders across South Dakota trust our products for their quality, durability, and modern design.</p><ul><li>High-strength tempered glass that meets safety standards<br/></li><li>Rust- and weather-resistant materials for long-term reliability<br/></li><li>Products tested to handle outdoor conditions year-round<br/></li><li><a href=\"/pages/free-shipping-information\"><strong>Free shipping available</strong></a> on qualifying purchases<br/></li><li>Dedicated support from selection to setup<br/></li></ul><p>Our goal is to help every customer achieve a safe and attractive result that complements their property perfectly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

@@ -1,0 +1,382 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Florida</strong>",
+        "text": "We ship frameless glass railing systems to every part of Florida. Each order is 12 mm tempered glass with 2205 marine-grade stainless hardware, crated and delivered to your door. Homeowners and builders use them for pool fences, condo balconies, waterfront decks and stair guards, from Pensacola to Key West.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for Florida projects</strong>",
+        "description": "<p>Florida projects use all four heights. The <a href=\"/products/glass-railing-46-tempered-glass-panel\">46-inch panel</a> is the pool fence panel, since it makes the 48-inch barrier height the state sets. Condos use the 39.6-inch panel for 42-inch balcony railings, and houses use the 33.6-inch panel for 36-inch deck guards. Pick top-mount spigots for slabs and wood decks, or <a href=\"/products/glass-railing-side-mount-spigot\">side-mount spigots</a> on the fascia when the deck is narrow. Both finishes are 2205 stainless.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Florida"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Miami",
+            "link": "shopify://pages/florida-glass-railing-miami"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Tampa",
+            "link": "shopify://pages/florida-glass-railing-tampa"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Boca Raton",
+            "link": "shopify://pages/florida-glass-railing-boca-raton"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing West Palm Beach",
+            "link": "shopify://pages/florida-glass-railing-west-palm-beach"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Safety Harbor",
+            "link": "shopify://pages/florida-glass-railing-safety-harbor"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Key West",
+            "link": "shopify://pages/florida-glass-railing-key-west"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Fort Lauderdale",
+            "link": "shopify://pages/florida-glass-railing-fort-lauderdale"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Merritt Island",
+            "link": "shopify://pages/florida-glass-railing-merritt-island"
+          }
+        },
+        "place11": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Fort Pierce",
+            "link": "shopify://pages/florida-glass-railing-fort-pierce"
+          }
+        },
+        "place12": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Fort Myers",
+            "link": "shopify://pages/florida-glass-railing-fort-myers"
+          }
+        },
+        "place13": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Port Charlotte",
+            "link": "shopify://pages/florida-glass-railing-port-charlotte"
+          }
+        },
+        "place14": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Hollywood",
+            "link": "shopify://pages/florida-glass-railing-hollywood"
+          }
+        },
+        "place16": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Orlando",
+            "link": "shopify://pages/florida-glass-railing-orlando"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place8",
+        "place9",
+        "place11",
+        "place12",
+        "place13",
+        "place14",
+        "place16"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Florida, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Transform Your View?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to price a glass railing for your Florida home? Send measurements, photos or a drawing through the quote form and we will come back with a detailed quote. Not sure about the finish yet? Order the <a href=\"/products/glass-hardware-sample-kit\">Glass and Hardware Sample Kit</a> to see the glass and both finishes in your own light. Orders over 3,000 dollars ship free to any Florida address.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Which panel height makes a pool fence in Florida?",
+            "answer": "<p>Florida's Residential Swimming Pool Safety Act sets a barrier at least 48 inches high on the outside. Gates must close on their own and open away from the pool. The 46-inch tempered panel in two spigots gives a 48-inch railing, so it is the panel to order for a pool. The 57.7-inch panel gives 60 inches if you want more. Confirm the details with your local building department before ordering.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need a permit for a glass railing in Florida?",
+            "answer": "<p>Permits are issued by the city or county building department, not by the state, so the answer depends on where you live. A guard on a deck, balcony or pool is life-safety work, so ask the building department before ordering rather than after. Plan reviewers ask how the spigots attach. Our <a href=\"/pages/glass-railing-engineering-testing\">engineering and testing page</a> has the testing and blocking details for both spigots on concrete and on wood.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How does salt air on the Florida coast affect the hardware?",
+            "answer": "<p>Salt air is the reason we use 2205 marine-grade stainless steel for every spigot, connector, hinge and latch. Both finishes, Brushed Stainless and Matte Black, carry a 10-year no-rust promise. On oceanfront and Intracoastal lots, rinse the hardware with fresh water now and then to wash off salt deposits. The tempered glass itself is unaffected by salt, and a regular glass cleaner keeps it clear.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "When should I order to have the railing in before hurricane season?",
+            "answer": "<p>Hurricane season runs from June through November. Standard panels are processed in 2 to 3 business days and delivered in 5 to 10 business days. A standard order placed in April is normally on site in May. Custom sizes add 2 to 3 weeks of shipping. Most standard installations take about 4 hours, which leaves time to finish the job before the summer storms arrive.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in Florida"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railings for Florida pools, balconies and waterfront decks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where Florida installs glass railings</strong></p><p>South Florida is condo country. Balconies in Miami, Fort Lauderdale, Boca Raton and West Palm Beach face the ocean or the Intracoastal. A frameless glass balcony railing keeps that view open. Miami-Dade and Broward sit in the High-Velocity Hurricane Zone, so building departments there look closely at how a railing attaches. The Gulf Coast is different: canal homes in Cape Coral and Fort Myers, pool decks in Naples and Sarasota, bay-front lots in Tampa and St. Petersburg. Salt air is the common factor on both coasts.</p><p>Central Florida is pool-home country. Orlando, Windermere and Lake Nona houses have screened lanais, and a glass pool fence keeps the yard open. Jacksonville and St. Augustine add riverfront decks on the St. Johns and beach houses at Ponte Vedra. In the Panhandle, Destin, 30A and Pensacola Beach homes stand on pilings, with tall stairs and second-floor porches that need a guard.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Florida code in short</strong></p><p>Florida uses one statewide code, the Florida Building Code, 8th edition (2023). For a house, the residential volume sets a 36-inch minimum guard on a deck, balcony or porch more than 30 inches above grade. Commercial and multifamily buildings, which include condos, fall under the building volume and need 42 inches. Our 33.6-inch panel gives a 36-inch railing and the 39.6-inch panel gives 42 inches.</p><p>Pools follow the Residential Swimming Pool Safety Act (F.S. 515.29). The barrier must be at least 48 inches high on the outside. Gates must close on their own and open away from the pool. The 46-inch panel reaches 48 inches, and the 57.7-inch panel makes a 60-inch fence. Miami-Dade and Broward are the HVHZ, and every coastal county has high design wind speeds, so the local building department reviews railing attachments. Read our <a href=\"/pages/florida-building-code-for-glass-railings\">Florida building code page</a>, then confirm with your building department.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery anywhere in Florida</strong></p><p>Every order ships from our warehouse in Sainte-Julie, Quebec. Standard panels are processed in 2 to 3 business days, crated, and delivered in 5 to 10 business days by freight carrier. The truck has a liftgate, so the crate comes down to the driveway or the loading dock. Custom sizes take 2 to 3 business days to process and then 2 to 3 weeks in transit. Orders over 3,000 dollars ship free. The checkout price is final: no duties, tariffs or hidden fees, even though the glass crosses the border.</p><p>Check the crate on arrival. Damage reported within 3 days of delivery, and before installation, is replaced or refunded at no cost. From there, the <a href=\"/pages/glass-railing-installation-guide\">installation guide</a> and videos walk you through a standard job in about 4 hours. Spigots fix to wood or concrete, and the screws are sold separately.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered across Florida",
+            "text": "Processed in 2 to 3 business days, then delivered in 5 to 10 by liftgate freight."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 marine-grade stainless",
+            "text": "Every spigot, connector and hinge carries a 10-year no-rust promise, made for salt air."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Four railing heights",
+            "text": "36, 42, 48 and 60 inch railings from one 12 mm tempered panel system."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No duties or hidden fees",
+            "text": "The checkout price is final. Free shipping on orders over 3,000 dollars."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Glass pool fences",
+            "text": "<p>Florida's pool barrier rule is 48 inches, and the 46-inch panel in two spigots lands right there. Add gate hinges, a latch and a floor lock, and the fence stays clear glass from the lanai to the yard. The 57.7-inch panel gives 60 inches when you want more height.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Condo balcony railings",
+            "text": "<p>From Brickell to Singer Island, condo balconies are concrete slabs with a 42-inch guard rule under the building volume. Top-mount spigots anchor into the slab, or side-mount spigots fix to the edge and keep the floor clear. Associations approve exterior changes, so share the engineering documents first.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Waterfront decks and beach stairs",
+            "text": "<p>Canal homes in Cape Coral, bay lots on Davis Islands and piling houses on 30A all put decks and stairs in salt air. The 2205 stainless spigots carry a 10-year no-rust promise, and 12 mm tempered glass does not block the water view. Stair runs use custom-cut panels.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in Florida",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need an installer in Florida?",
+        "text": "<p>Our systems are designed for DIY installation with the guide and videos. We may have an installer in your area: contact us with your project address and we will check. Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

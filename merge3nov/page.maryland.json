@@ -1,0 +1,136 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Maryland",
+        "text": "Add modern design, safety, and open views to your Maryland property with glass railings that combine durability and elegance. Perfect for balconies, staircases, decks, patios, and rooftop terraces, these systems let natural light flow through while maintaining strength and clarity.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we do more than provide glass railings — we deliver solutions that balance quality, design, and reliability. Our team focuses on making your project simple, smooth, and visually appealing from the first step to installation.</p><p><strong>Key Features:</strong></p><ul><li><strong>Premium Materials:</strong> Tempered and laminated glass panels designed for long-term strength and safety.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless systems with minimal hardware for a clean, polished finish.<br/></li><li><strong>Expert Support:</strong> Professional guidance, detailed setup instructions, and video tutorials for easy installation.<br/></li><li><strong>Code Compliance:</strong> Products designed to meet Maryland building and safety standards.<br/></li><li><strong>Reliable Delivery:</strong> Fast online ordering and dependable statewide shipping.<br/></li></ul><p>Each system is created with precision, ensuring durability and a refined appearance that complements both homes and commercial properties.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Maryland"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bethesda",
+            "link": "shopify://pages/maryland-glass-railing-bethesda"
+          }
+        }
+      },
+      "block_order": [
+        "place1"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Maryland, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Plan Your Maryland Glass Railing Project</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing project in Maryland? Whether it’s a deck in Bethesda, a balcony in Davidsonville, or a staircase in Sykesville, our experts are here to help. We’ll guide you through design options, <a href=\"/collections/glass-panel-railing\"><strong>glass panel choices</strong></a>, and installation planning for a seamless experience. </p><p>Contact The Glass Railing Store today for a free quote and create bright, secure spaces that stay beautiful for years to come.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Maryland Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Property owners throughout Maryland trust The Glass Railing Store for dependable quality and lasting results:</p><ul><li>Tempered and laminated glass tested for safety and performance.<br/></li><li>Stylish hardware options, including spigots, clamps, and <a href=\"/collections/glass-railing-caprail\"><strong>cap rails</strong></a>.<br/></li><li>Systems designed to meet local and state code requirements.<br/></li><li>Step-by-step instructions and visual installation resources.<br/></li><li>Free shipping available on qualifying orders.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

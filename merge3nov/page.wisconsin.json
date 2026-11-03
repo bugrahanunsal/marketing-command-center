@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Wisconsin",
+        "text": "Glass railings provide Wisconsin properties with modern style, safety, and open views. Perfect for balconies, decks, rooftop terraces, staircases, and pools, these railings allow natural light to fill spaces while keeping them secure. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, our durable systems highlight your surroundings without obstructing your view.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At the Glass Railing Store, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><p><strong>Key Features:</strong></p><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and <a href=\"/blogs/news/diy-glass-railing-installation-guide\"><strong>step-by-step installation</strong></a> resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across Wisconsin.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Wisconsin"
+      },
+      "blocks": {
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Madison",
+            "link": "shopify://pages/wisconsin-glass-railing-madison"
+          }
+        }
+      },
+      "block_order": [
+        "place2"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Wisconsin, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a railing project in Nekoosa, Madison, Washburn, or Independence? Our team provides expert guidance for panel selection, hardware, and installation. From residential balconies to commercial terraces, we provide everything you need for safe, modern, and stylish glass railings. Your Wisconsin property will enjoy lasting beauty, clear views, and security for years to come.</p><p>Contact our team today for advice or assistance to get started on your Wisconsin glass railing project.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customers trust the Glass Railing Store because we make projects simple and reliable.</p><ul><li>Tempered and laminated glass panels built for strength</li><li>Sleek hardware options like spigots, clamps, and cap rails</li><li>Products designed to meet Wisconsin building standards</li><li>Easy installation guides and videos included</li><li><a href=\"/pages/free-shipping-information\"><strong>Free shipping available</strong></a> on larger orders</li></ul><p>With years of experience and quality you can count on, we are a trusted choice for railing projects across Wisconsin.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

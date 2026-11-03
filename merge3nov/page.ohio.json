@@ -1,0 +1,144 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Ohio",
+        "text": "Enjoy clear views and modern design with glass railings that fit perfectly into Ohio’s mix of urban skylines and scenic landscapes. From Cleveland rooftops to Cincinnati patios and Columbus staircases, these systems offer open, airy spaces without compromising safety or style.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Railing Solutions</strong>",
+        "description": "<p>At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we provide everything needed for a complete glass railing setup — made for strength, safety, and simplicity.</p><ul><li><strong>Durable Materials:</strong> Tempered and laminated glass crafted for long-lasting performance.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless options that keep sightlines open.<br/></li><li><strong>Easy Installation:</strong> Step-by-step guides and expert support for a smooth experience.<br/></li><li><strong>Budget-Friendly Choices:</strong> Stylish systems available for projects of all sizes.<br/></li><li><strong>Full Project Support:</strong> From design help to final delivery, we’re with you throughout.<br/><br/></li></ul>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Ohio"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Cincinnati",
+            "link": "shopify://pages/ohio-glass-railing-cincinnati"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Newark",
+            "link": "shopify://pages/ohio-glass-railing-newark"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place3"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Ohio, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add safety, clarity, and style to decks, <a href=\"/products/custom-stair-glass\"><strong>staircases</strong></a>, or balconies across your Ohio property. Our team offers expert advice on panels, hardware, and design to match your space perfectly. Contact The Glass Railing Store today for quotes, assistance, and dependable delivery anywhere in Ohio.<br/> Contact us now for more information.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Ohio Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners, builders, and designers across Ohio trust The Glass Railing Store for reliable quality and professional service.</p><ul><li>Safety-rated tempered and laminated glass panels.<br/></li><li>Premium fittings, including spigots, clamps, and cap rails.<br/></li><li>Products tested to meet national building and safety standards.<br/></li><li>Free <a href=\"/pages/glass-railing-installation-guide\"><strong>guidance and installation videos </strong></a>with every order.<br/></li><li>Competitive pricing and free shipping on qualifying orders.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

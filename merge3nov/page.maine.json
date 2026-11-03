@@ -1,0 +1,152 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Maine",
+        "text": "Glass railings are a clear, safe, and stylish option for properties across Maine. They create open views, add brightness, and maintain a clean, modern appearance while keeping every space secure. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we supply durable glass railing systems that fit homes and commercial spaces alike — from oceanfront decks and lakeside patios to staircases and rooftops — all built for strength and long-term use.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Railing Solutions</strong>",
+        "description": "<p>At The Glass Railing Store, we deliver complete systems ready for installation — combining safety, design, and dependability.</p><ul><li><strong>Durable Materials:</strong> <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>Tempered and laminated glass panels</strong></a> for clear views and lasting safety.</li><li><strong>Modern Designs:</strong> Frameless and semi-frameless options that fit every type of property.</li><li><strong>Simple Installation:</strong> Easy-to-follow instructions, video tutorials, and friendly guidance.</li><li><strong>Versatile Options:</strong> Systems built for homes, offices, patios, and decks.</li><li><strong>Project Assistance:</strong> From measuring to final delivery, our team is here to help.</li></ul>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Maine"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Portland",
+            "link": "shopify://pages/maine-glass-railing-portland"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Augusta",
+            "link": "shopify://pages/maine-glass-railing-augusta"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Norwell",
+            "link": "shopify://pages/massachusetts-glass-railing-norwell"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place6",
+        "place7"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Maine, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Working on a project in Portland, Rangeley, South Bristol, or Augusta? The Glass Railing Store has the right system for you. Browse our <a href=\"/collections/glass-panel-railing\"><strong>selection of railing panels</strong></a> and hardware online or contact our experts for personalized help.<br/>Create bright, secure, and modern spaces that highlight your surroundings with glass railing systems designed to last. Start Your Maine Glass Railing Project — Contact Us Today!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Customers Trust Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and contractors across Maine choose The Glass Railing Store for dependable quality and service:</p><ul><li>Certified tempered and laminated glass for proven strength<br/></li><li>Hardware choices <a href=\"/products/glass-railing-spigot\"><strong>including spigots</strong></a>, clamps, and cap rails<br/></li><li>Systems that meet Maine building and safety standards<br/></li><li>Installation guides provided with every order<br/></li><li>Free shipping on larger and commercial purchases</li></ul><p>With consistent service and reliable materials, we’ve become a trusted name for glass railing projects across Maine.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

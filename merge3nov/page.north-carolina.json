@@ -1,0 +1,312 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in North Carolina</strong>",
+        "text": "We ship frameless glass railing systems across North Carolina, from Lake Norman decks to Outer Banks beach houses. Orders are crated in 2 to 3 business days and delivered by freight in 5 to 10 more. Install the 12 mm tempered panels yourself on decks, stairs, balconies and pool surrounds.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Products for North Carolina projects</strong>",
+        "description": "<p>For North Carolina decks and balconies, the 39.6-inch panel gives a 42-inch railing, and the 33.6-inch panel gives the 36-inch minimum for houses. Pool decks use the 46-inch panel for a 48-inch barrier. Coastal and lake homes pair the panels with 2205 stainless <a href=\"/products/glass-railing-spigot\">6-inch engineered spigots</a> in Brushed Stainless or Matte Black. Browse the full range in the <a href=\"/collections/glass-railing\">glass railing collection</a>.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In North Carolina"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Southern Pines",
+            "link": "shopify://pages/north-carolina-glass-railing-southern-pines"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Charlotte",
+            "link": "shopify://pages/north-carolina-glass-railing-charlotte"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Cornelius",
+            "link": "shopify://pages/north-carolina-glass-railing-cornelius"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Mooresville",
+            "link": "shopify://pages/north-carolina-glass-railing-mooresville"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place4",
+        "place6"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "North Carolina, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Send us the length of your deck, balcony or pool surround, with a few photos or a sketch. We will send back a detailed quote with panel sizes and hardware. Or order directly from the <a href=\"/collections/glass-railing-kits\">glass railing kits</a>. Questions about a North Carolina address or permit? Call or text (855) 452-7715, Monday to Friday, 8 AM to 5 PM Eastern.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What height do I need for a pool fence in North Carolina?",
+            "answer": "<p>The North Carolina Residential Code, Appendix G, sets pool barriers at 48 inches. Our 46-inch panel installed in spigots gives a 48-inch railing, so it is the usual choice for North Carolina pool decks. Gates need gate hinges, a latch and, where the inspector asks for it, a self-closing setup. Confirm the details with your county before you order.</p>",
+            "pages": ""
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Does salt air on the Outer Banks or in Wilmington affect the hardware?",
+            "answer": "<p>Salt air is why the hardware is 2205 marine-grade stainless steel, with a 10-year no-rust promise. Tempered glass itself is not affected by salt. On an oceanfront deck in Nags Head or Wrightsville Beach, rinse the spigots and glass with fresh water now and then. Both finishes, Brushed Stainless and Matte Black, use the same 2205 base.</p>",
+            "pages": ""
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Will the glass survive snow and freeze-thaw around Asheville and Boone?",
+            "answer": "<p>Yes. Tempered 12 mm glass and stainless spigots do not absorb water, so freeze-thaw does not crack or swell them like wood pickets. Snow sliding off a roof onto a deck lands on the deck, not on the railing. In the mountains the deck framing carries the snow load; the railing only needs a sound attachment to the joists or a concrete slab.</p>",
+            "pages": ""
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need engineering documents for a coastal county permit?",
+            "answer": "<p>Coastal counties in North Carolina have high design wind speeds, and the plan reviewer may ask how the railing is attached. We provide engineering documents with testing results and blocking details for top-mount and side-mount spigots on concrete and on wood. Download them from our engineering page and hand them to your building department with the permit application.</p>",
+            "pages": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "blocks": {
+        "cap": {
+          "type": "caption",
+          "settings": {
+            "caption": "Glass railing in North Carolina"
+          }
+        },
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frameless glass railing from the Blue Ridge to the Outer Banks"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where North Carolina installs glass railing</strong></p><p>Around Charlotte and Lake Norman, the typical projects are lake-house decks in Cornelius, Davidson and Mooresville. South Charlotte adds pool decks and stair guards in new builds. The Triangle is similar: Raleigh, Durham, Chapel Hill, Cary and Apex keep adding subdivisions where a glass deck railing replaces wood pickets.</p><p>In Asheville and the Blue Ridge, view decks face the ridgelines, and owners choose glass so the railing does not hide the mountains. Snow and freeze-thaw are normal there. Tempered glass and 2205 stainless steel handle both without paint or stain. On the coast, Wilmington, Wrightsville Beach and the Outer Banks combine salt air with tall beach houses on pilings. Greensboro, Winston-Salem and High Point round out the Piedmont with back decks, balconies and interior stair railings. For Mecklenburg County details, see <a href=\"/pages/north-carolina-glass-railing-charlotte\">glass railings in Charlotte</a>.</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>North Carolina code in short</strong></p><p>North Carolina uses the 2018 North Carolina Residential Code and Building Code, based on the 2018 IRC and IBC. Both have been in force since January 1, 2019. The North Carolina code sets guards at 36 inches minimum for houses and 42 inches for commercial and multifamily buildings. For pools, the residential code's Appendix G sets a 48-inch barrier, which matches our 46-inch panel in spigots.</p><p>Coastal counties, including the Outer Banks and the Wilmington area, carry high design wind speeds. The local building department will look at how the spigots attach. Our engineering documents cover top-mount and side-mount spigots on concrete and on wood. Mountain counties add snow load to the deck itself, not to the railing. Every county and city reviews its own permits, so check with your local building department before ordering. The full summary is on our <a href=\"/pages/north-carolina-building-code-for-glass-railings\">North Carolina building code for glass railings</a> page.</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Delivery anywhere in North Carolina</strong></p><p>Every order ships from our warehouse in Quebec and crosses the border before it reaches you. The price you see at checkout is final: no duties, tariffs or brokerage fees. Standard orders are processed in 2 to 3 business days. A freight carrier then delivers in 5 to 10 business days anywhere in the continental U.S. The truck has a liftgate, so the crate comes down to street level. That works at a lake house in Mooresville or a beach house in Nags Head. Custom glass needs 2 to 3 weeks of shipping after processing.</p><p>Orders over 3,000 USD ship free; details are on the <a href=\"/pages/free-shipping-information\">free shipping page</a>. Open the crate on arrival and report any damage within 3 days, before installation, and we replace or refund the item at no cost.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cap",
+        "h",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {}
+    },
+    "icons": {
+      "type": "grs-pg-icons",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Delivered statewide",
+            "text": "Freight delivery with liftgate to any North Carolina address, 5 to 10 business days after processing."
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "2205 marine-grade stainless",
+            "text": "Spigots and connectors in 2205 stainless steel with a 10-year no-rust promise, coast or mountains."
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "Four railing heights",
+            "text": "36, 42, 48 and 60-inch railings from 12 mm tempered glass; custom sizes available."
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "icon": "auto",
+            "title": "No duties or surprises",
+            "text": "The checkout price is final, with no duties, tariffs or hidden fees from Canada."
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4"
+      ],
+      "settings": {}
+    },
+    "cols": {
+      "type": "grs-pg-cols",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "Lake and mountain view decks",
+            "text": "<p>Lake Norman, Lake Wylie, Lake James and the ridges above Asheville all share one request: a railing that does not block the view. Frameless 12 mm panels sit in top-mount spigots on the deck boards. The side-mount spigot moves them to the fascia and keeps the full deck width.</p>"
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "title": "Coastal balconies and beach houses",
+            "text": "<p>From Corolla down to Sunset Beach, houses raised on pilings have long decks and upper balconies in salt air. The 2205 stainless hardware carries a 10-year no-rust promise, and the glass rinses clean with a hose. Wind-zone attachment details come from our engineering documents and your county's plan review.</p>"
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "title": "Stair guards in new builds",
+            "text": "<p>Builders in Cary, Huntersville, Wake Forest and Holly Springs use glass stair railing on open staircases and loft edges. Custom stair glass is cut to your rise and run from your drawing. Panels sit in two spigots each and finish with an optional square caprail in the same finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Typical glass railing projects in North Carolina",
+        "numbers": false
+      }
+    },
+    "cta": {
+      "type": "grs-pg-cta",
+      "settings": {
+        "heading": "Need a hand installing in North Carolina?",
+        "text": "<p>Most owners install the system themselves in about 4 hours with the installation guide and videos. We may have an installer in your area: contact us with your project address and we will check.</p>",
+        "button_label": "Send your project address",
+        "button_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "icons",
+    "rich",
+    "links",
+    "feat",
+    "cols",
+    "form",
+    "map",
+    "faq",
+    "cta",
+    "near",
+    "split"
+  ]
+}

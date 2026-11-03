@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Montana",
+        "text": "Montana’s wide-open landscapes, rugged peaks, and clear skies deserve to be seen without bulky barriers in the way. Our premium <a href=\"/collections/glass-railing-hardware\"><strong>glass railing systems</strong></a> combine lasting strength with clear, open views—perfect for decks, patios, balconies, and staircases across the state.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>Our Railing Solutions</strong>",
+        "description": "<p>At The Glass Railing Store, we offer everything needed to complete your glass railing project:</p><ul><li><strong>Durable Materials:</strong> Tempered and laminated glass built to handle Montana’s changing seasons.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless designs with minimal, sleek hardware.<br/></li><li><strong>Easy Installation:</strong> <a href=\"/blogs/news/diy-glass-railing-installation-guide\"><strong>Step-by-step guides</strong></a>, videos, and expert assistance for a smooth setup.<br/></li><li><strong>Affordable Options:</strong> Solutions for both small residential updates and large commercial builds.<br/></li><li><strong>Complete Support:</strong> From planning and design to delivery, we’re with you throughout.</li></ul>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Montana"
+      },
+      "blocks": {
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Whitefish",
+            "link": "shopify://pages/montana-glass-railing-whitefish"
+          }
+        }
+      },
+      "block_order": [
+        "place2"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Montana, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a railing project in Montana? We handle everything from guidance to delivery and understand local building regulations. Browse our glass panels and hardware online or contact our team for tailored support for your Montana property.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customers trust the Glass Railing Store because we make projects simple and reliable.</p><ul><li>Tempered and laminated glass panels built for strength</li><li>Sleek hardware options like spigots, clamps, and cap rails</li><li>Products designed to meet Montana building standards</li><li>Easy installation guides and videos included</li><li><a href=\"/pages/free-shipping-information\"><strong>Free shipping available</strong></a> on larger orders</li></ul><p>With years of experience and quality you can count on, we are a trusted choice for railing projects across Montana.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

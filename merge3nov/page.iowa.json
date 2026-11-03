@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Iowa",
+        "text": "Glass railings add a modern and open look to homes and businesses across Iowa. They allow light to flow freely, creating bright, inviting spaces while maintaining strength and safety. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we provide durable railing systems that complement any property from suburban decks and patios to commercial staircases and rooftops",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we don’t just offer glass railings in Iowa. We deliver durable, elegant, and secure railing systems that enhance the look and function of any property. Our team is committed to keeping your project smooth and stress-free, providing expert support from planning to installation.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass built for durability, clarity, and lasting safety.<br/></li><li><strong>Modern Designs:</strong> <a href=\"/blogs/news/semi-framed-vs-frameless-glass-railings-style-and-functionality-comparison\"><strong>Frameless and semi-frameless</strong></a> options with stylish hardware for a sleek, contemporary finish.<br/></li><li><strong>Expert Assistance:</strong> Professional guidance and detailed installation resources available whenever you need help.<br/></li><li><strong>Safety & Compliance:</strong> Products designed to meet Iowa’s building codes and safety requirements.<br/></li><li><strong>Easy Ordering & Delivery:</strong> Simple online shopping and reliable delivery throughout Iowa.<br/></li></ul><p>With attention to quality, craftsmanship, and design, your glass railing project will be safe, attractive, and effortless. Homeowners and contractors across Iowa trust The Glass Railing Store for proven performance and dependable service.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Iowa"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Urbandale",
+            "link": "shopify://pages/iowa-glass-railing-urbandale"
+          }
+        }
+      },
+      "block_order": [
+        "place1"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Iowa, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Plan Your Iowa Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add modern design and open views to your Iowa property with premium glass railings from The Glass Railing Store. Whether you’re designing a home, updating a deck, or completing a business renovation, our team can guide you from design selection to installation.</p><p>Reach out today for expert advice, accurate quotes, and fast delivery anywhere in Iowa. Let’s make your Urbandale, Hiawatha, or Dallas Center project simple and successful.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and professionals across Iowa trust our products for quality, durability, and style.</p><ul><li>High-strength glass designed to meet safety and building codes<br/></li><li>Corrosion-resistant hardware ideal for all weather conditions<br/></li><li>Installation support and materials included with every order<br/></li><li><a href=\"/pages/free-shipping-information\"><strong>Free shipping available</strong></a> on qualifying purchases<br/></li><li>Reliable delivery and expert guidance every step of the way<br/></li></ul><p>With years of trusted service, The Glass Railing Store continues to be a preferred choice for glass railing systems across Iowa.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

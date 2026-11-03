@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing New York",
+        "text": "Glass railings bring safety and modern design to New York homes and businesses, brightening spaces while keeping them secure. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, our durable systems highlight city views from balconies, rooftops, pools, and staircases.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At the Glass Railing Store, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><p><strong>Key Features:</strong></p><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, <a href=\"/blogs/news/semi-framed-vs-frameless-glass-railings-style-and-functionality-comparison\"><strong>frameless or semi-frameless systems</strong></a> with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across New York.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In New York"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing New York City",
+            "link": "shopify://pages/new-york-glass-railing-nyc"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Long Island",
+            "link": "shopify://pages/new-york-glass-railing-long-island"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Brooklyn",
+            "link": "shopify://pages/new-york-glass-railing-brooklyn"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bedford",
+            "link": "shopify://pages/new-york-glass-railing-bedford"
+          }
+        },
+        "place12": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bronxville",
+            "link": "shopify://pages/new-york-glass-railing-bronxville"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place7",
+        "place12"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "New York, NY, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Create Safe, Stylish Spaces in New York</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a railing project in New York ? We have everything you need to create a safe, stylish, and modern space. Browse our <a href=\"/collections/glass-panel-railing\"><strong>glass panels</strong></a> and hardware online today, or connect with our expert team for guidance on choosing the right system for your project. From small home upgrades to large commercial designs, The Glass Railing Store is here to bring your New York project to life.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why New York Customers Trust Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our customers choose The Glass Railing Store because we make railing projects reliable and stress-free:</p><ul><li>High-strength <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>tempered and laminated glass panels</strong></a></li><li>Hardware options including spigots, clamps, and cap rails</li><li>Products designed to meet New York building codes and safety standards</li><li>Clear guides and videos included with every order</li><li>Free shipping available on larger orders</li></ul><p>With years of expertise and proven quality, we’re the trusted choice for glass railings across New York.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

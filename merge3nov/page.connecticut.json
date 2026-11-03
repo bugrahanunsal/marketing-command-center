@@ -1,0 +1,143 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Connecticut",
+        "text": "Add light, safety, and refined style to your Connecticut property with glass railings made to suit both modern and traditional designs. Perfect for balconies, patios, decks, staircases, and rooftop spaces, these systems allow open views while maintaining reliable strength. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we provide high-quality glass railing solutions that create clear, spacious areas for homes and businesses across the state.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we focus on quality, reliability, and precision. Each glass railing system is built using durable tempered and laminated glass and <a href=\"/collections/glass-railing-hardware\"><strong>includes hardware</strong></a> designed for a secure fit. From planning to installation, our team provides full guidance to make your project simple and successful.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Durable Glass:</strong> Made from tempered and laminated panels that hold up in all conditions.<br/></li><li><strong>Modern Styles:</strong> Frameless and semi-frameless options that keep spaces open and bright.<br/></li><li><strong>Expert Guidance:</strong> Detailed installation instructions and professional support at every step.<br/></li><li><strong>Safety Compliance:</strong> Systems designed to meet Connecticut building and safety standards.<br/></li><li><strong>Fast Delivery:</strong> Convenient ordering and reliable shipping throughout the state.<br/></li></ul><p>Each system blends safety and appearance, offering a lasting addition to both homes and commercial properties.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Connecticut"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Westport",
+            "link": "shopify://pages/connecticut-glass-railing-westport"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Waterbury",
+            "link": "shopify://pages/connecticut-glass-railing-waterbury"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bethel",
+            "link": "shopify://pages/connecticut-glass-railing-bethel"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place3",
+        "place4"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Connecticut, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a glass railing project in Westport, Bethany, Waterbury, or Bethel? We’re here to help. Browse our <a href=\"/collections/glass-panel-railing\"><strong>selection of glass panels</strong></a> and hardware online, or reach out to our team for guidance on the best setup for your space. From cozy home updates to large commercial builds, we provide everything you need for clear, secure, and stylish glass railings across Connecticut.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Property owners across Connecticut rely on The Glass Railing Store for dependable materials and trusted service:</p><ul><li>Tempered and laminated glass tested for strength and clarity<br/></li><li>Multiple hardware choices, including clamps, spigots, and cap rails<br/></li><li>Compliance with <a href=\"/pages/building-codes-glass-railing\"><strong>local safety and quality standards  building codes<br/></strong></a></li><li>Step-by-step setup expert guidance<br/></li><li>Free shipping available on select orders</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

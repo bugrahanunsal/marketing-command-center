@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing New Jersey",
+        "text": "Add clarity, strength, and timeless design to your New Jersey property with glass railings that blend safety and style. Ideal for decks, balconies, staircases, patios, and rooftops, these systems allow natural light to move freely through your space while maintaining protection. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, our railing systems are crafted to provide lasting quality, elegance, and easy installation for homes and commercial properties alike.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At the Glass Railing Store, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, <a href=\"/blogs/news/semi-framed-vs-frameless-glass-railings-style-and-functionality-comparison\"><strong>frameless or semi-frameless systems</strong></a> with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across New Jersey.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In New Jersey"
+      },
+      "blocks": {
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Jersey City",
+            "link": "shopify://pages/new-jersey-glass-railing-jersey-city"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Ocean City",
+            "link": "shopify://pages/new-jersey-glass-railing-ocean-city"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railling Egg Harbor Township",
+            "link": "shopify://pages/new-jersey-glass-railing-egg-harbor-township"
+          }
+        },
+        "place5": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Sayreville",
+            "link": "shopify://pages/new-jersey-glass-railing-sayreville"
+          }
+        },
+        "place6": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Paterson",
+            "link": "shopify://pages/new-jersey-glass-railing-paterson"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Haddonfield",
+            "link": "shopify://pages/new-jersey-glass-railing-haddonfield"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Lakewood",
+            "link": "shopify://pages/new-jersey-glass-railing-lakewood"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing North Brunswick",
+            "link": "shopify://pages/new-jersey-glass-railing-north-brunswick"
+          }
+        },
+        "place11": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Metuchen",
+            "link": "shopify://pages/new-jersey-glass-railing-metuchen"
+          }
+        },
+        "place12": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Garfield",
+            "link": "shopify://pages/new-jersey-glass-railing-garfield"
+          }
+        }
+      },
+      "block_order": [
+        "place2",
+        "place3",
+        "place4",
+        "place5",
+        "place6",
+        "place7",
+        "place9",
+        "place10",
+        "place11",
+        "place12"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "New Jersey, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designing a balcony in Jersey City, a deck in Ocean City, or a rooftop terrace in Margate? Our team will help you select the right <a href=\"/collections/glass-panel-railing\"><strong>glass railing panels</strong></a>, hardware, and setup for your space. We offer expert guidance and dependable materials to make your project smooth and successful.<br/>Contact The Glass Railing Store today to start your New Jersey glass railing project and create bright, secure, and modern spaces built to last.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why New Jersey Customers Choose Us"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and businesses throughout New Jersey rely on The Glass Railing Store for dependable quality and lasting performance:</p><ul><li>Tempered and laminated glass panels tested for strength and clarity.<br/></li><li>Hardware options including clamps, <a href=\"/collections/glass-railing-caprail\"><strong>cap rails</strong></a>, and spigots.<br/></li><li>Compliance with local and state codes for residential and commercial applications.<br/></li><li>Step-by-step installation support and online tutorials.<br/></li><li>Free shipping available for larger projects.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

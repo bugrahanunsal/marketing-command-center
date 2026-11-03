@@ -1,0 +1,127 @@
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing Delaware",
+        "text": "Bring a sleek, open look to your Delaware property with glass railings that balance safety, style, and light. Perfect for decks, balconies, staircases, rooftop terraces, and pools, these systems brighten your space while maintaining strength and stability.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we create railing systems that combine function, durability, and modern appeal. Each project is supported by clear guidance from selection through installation, helping property owners complete their projects with confidence and ease.</p><p><strong>Key Features:</strong></p><ul><li><strong>Premium Materials:</strong> Tempered and laminated glass built for long-lasting performance.<br/></li><li><strong>Modern Designs:</strong> Frameless and semi-frameless systems that suit any space.<br/></li><li><strong>Expert Support:</strong> Step-by-step installation instructions and helpful customer service.<br/></li><li><strong>Safety Compliance:</strong> Products designed to meet Delaware building and safety standards.<br/></li><li><strong>Smooth Process:</strong> Simple ordering and dependable delivery throughout the state.</li></ul><p>Our commitment to quality and service makes every glass railing system a lasting addition to your Wilmington or Laurel property.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Delaware"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Wilmington",
+            "link": "shopify://pages/delaware-glass-railing-wilmington"
+          }
+        }
+      },
+      "block_order": [
+        "place1"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Delaware, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Get Started?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give your Delaware property a fresh, open look with glass railings designed for modern spaces. Whether for a balcony, patio, or commercial terrace, we provide expert guidance, material advice, and accurate measurements to ensure lasting results.</p><p>Contact The Glass Railing Store today for expert advice and a free quote on your Delaware glass railing project.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Delaware Customers Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and builders across Delaware trust The Glass Railing Store for reliable products and dedicated service:</p><ul><li>Strong tempered and laminated glass panels.<br/></li><li>Multiple hardware options including clamps, <a href=\"/products/glass-railing-spigot\"><strong>spigots</strong></a>, and top rails.<br/></li><li>Designed to meet Delaware codes and standards.<br/></li><li>Clear installation guides and online video assistance.<br/></li><li>Free shipping for larger projects.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

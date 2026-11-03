@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "<strong>Glass Railings in Washington</strong>",
+        "text": "Glass railings are a safe and stylish choice for properties in Washington. They make spaces feel open, keep areas secure, and add a clean, modern look. Our glass railings let you enjoy the view from balconies, rooftops, or staircases while keeping your space protected.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At <a href=\"/\"><strong>the Glass Railing Store</strong></a>, we don’t just provide glass railings. We deliver durable, elegant, and safe railing solutions that enhance the look and function of any space. Our team is committed to making your project smooth and stress-free, offering expert guidance from start to finish.</p><h3><strong>Key Features:</strong></h3><ul><li><strong>Premium Materials:</strong> High-strength tempered and laminated glass designed to last and ensure safety.</li><li><strong>Contemporary Designs:</strong> Modern, frameless or semi-frameless systems with stylish hardware for a clean look.</li><li><strong>Professional Guidance:</strong> Expert support and step-by-step installation resources whenever you need help.</li><li><strong>Safety & Compliance:</strong> Products engineered to meet local building codes and safety regulations.</li><li><strong>Easy Access & Delivery:</strong> Simple online ordering and dependable delivery across Washington.</li></ul><p>With our focus on craftsmanship, style, and support, your glass railing project will be secure, attractive, and hassle-free.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In Washington"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Vancouver",
+            "link": "shopify://pages/washington-glass-railing-vancouver"
+          }
+        },
+        "place2": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing  Seattle",
+            "link": "shopify://pages/washington-glass-railing-seattle"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Bellevue",
+            "link": "shopify://pages/washington-glass-railing-bellevue"
+          }
+        },
+        "place4": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Yakima",
+            "link": "shopify://pages/washington-glass-railing-yakima"
+          }
+        },
+        "place7": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings kirkland",
+            "link": "shopify://pages/washington-glass-railing-kirkland"
+          }
+        },
+        "place8": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Olympia",
+            "link": "shopify://pages/washington-glass-railing-olympia"
+          }
+        },
+        "place9": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Puyallup",
+            "link": "shopify://pages/washington-glass-railing-puyallup"
+          }
+        },
+        "place10": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Tacoma",
+            "link": "shopify://pages/washington-glass-railing-tacoma"
+          }
+        },
+        "place11": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Kent",
+            "link": "shopify://pages/washington-glass-railing-kent"
+          }
+        },
+        "place13": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railings Lake Stevens",
+            "link": "shopify://pages/washington-glass-railing-lake-stevens"
+          }
+        },
+        "place14": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Blaine",
+            "link": "shopify://pages/washington-glass-railing-blaine"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place2",
+        "place3",
+        "place4",
+        "place7",
+        "place8",
+        "place9",
+        "place10",
+        "place11",
+        "place13",
+        "place14"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "Washington, DC, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ready to Transform Your View?</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a railing project in Washington? We have everything you need to create a modern, safe, and stylish space. Browse our glass panels and <a href=\"/collections/glass-railing-hardware\"><strong>hardware</strong></a> online today, or reach out to our expert team for guidance on selecting the right system. From small home projects to large commercial builds, The Glass Railing Store is here to bring your Washington project to life.<br/>Contact us now for more information!</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Washington Customers Trust Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and businesses across Washington choose The Glass Railing Store because we make railing projects simple and reliable:</p><ul><li>High-strength tempered and laminated glass panels.<br/></li><li>Hardware options, including clamps, spigots, and <a href=\"/collections/glass-railing-caprail\"><strong>cap rails</strong></a>.<br/></li><li>Products designed to meet Washington building codes.</li><li>Free shipping available on larger orders.</li></ul><p>With years of experience and proven quality, we’re the trusted choice for glass railings across Washington.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}

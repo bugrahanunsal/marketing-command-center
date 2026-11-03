@@ -1,0 +1,144 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "grs",
+  "sections": {
+    "hero": {
+      "type": "grs-pg-hero",
+      "settings": {
+        "image": "shopify://shop_images/Glass_Railing.jpg",
+        "heading": "Glass Railing New Hampshire",
+        "text": "Glass railings bring a clean and modern style to homes and businesses across New Hampshire. They open up spaces, let in natural light, and maintain safety without blocking scenic views. At <a href=\"/\"><strong>The Glass Railing Store</strong></a>, we offer durable railing systems that fit perfectly in both residential and commercial properties — from mountain homes and lakeside retreats to downtown offices and patios.",
+        "button_label": "Get Quotes",
+        "button2_label": "Products",
+        "button_link": "shopify://pages/contact",
+        "button2_link": "shopify://collections/glass-railing"
+      }
+    },
+    "form": {
+      "type": "grs-pg-form",
+      "settings": {}
+    },
+    "feat": {
+      "type": "grs-pg-feat",
+      "settings": {
+        "title": "<strong>What Sets Us Apart</strong>",
+        "description": "<p>At The Glass Railing Store, we do more than supply glass railings — we provide durable, elegant, and secure railing systems that elevate any space. Whether you’re enhancing a home or a commercial property, our team ensures your project runs smoothly from design to installation.</p><h4><strong>Key Features:</strong></h4><ul><li><strong>Premium Materials:</strong> High-strength <a href=\"/blogs/news/laminated-vs-tempered-glass-railing\"><strong>tempered and laminated glass</strong></a> built for long-term safety and clarity.<br/></li><li><strong>Modern Designs:</strong> Frameless and semi-frameless systems with sleek hardware that complement any architectural style.<br/></li><li><strong>Expert Support:</strong> Professional guidance and step-by-step installation help whenever you need it.<br/></li><li><strong>Safety & Compliance:</strong> Every product meets New Hampshire residential and commercial safety standards.<br/></li><li><strong>Reliable Service:</strong> Easy online ordering, dependable delivery, and free shipping on qualifying orders.<br/></li></ul><p>Homeowners and professionals across New Hampshire trust The Glass Railing Store for corrosion-resistant components, proven strength, and standout aesthetics. With our focus on craftsmanship, compliance, and customer care, your glass railing project will be as secure as it is stunning.</p>"
+      }
+    },
+    "links": {
+      "type": "grs-pg-links",
+      "settings": {
+        "heading": "Cities We Serve In New Hampshire"
+      },
+      "blocks": {
+        "place1": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Portsmouth",
+            "link": "shopify://pages/new-hampshire-glass-railing-portsmouth"
+          }
+        },
+        "place3": {
+          "type": "location",
+          "settings": {
+            "title": "Glass Railing Hampton",
+            "link": "shopify://pages/new-hampshire-glass-railing-hampton"
+          }
+        }
+      },
+      "block_order": [
+        "place1",
+        "place3"
+      ]
+    },
+    "map": {
+      "type": "grs-pg-map",
+      "settings": {
+        "location": "New Hampshire, USA"
+      }
+    },
+    "split": {
+      "type": "grs-pg-split",
+      "settings": {
+        "image": "shopify://shop_images/modern-glass-stair-railing-grs.webp"
+      },
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Start Your New Hampshire Project Today</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add a bright, modern look to your New Hampshire home or business with premium glass railings from The Glass Railing Store. Whether you’re working on a deck, staircase, or balcony, our team will help you choose the right materials and layout.</p><p>Start your New Hampshire glass railing project today — contact The Glass Railing Store for expert help, accurate quotes, and fast delivery anywhere in the state.</p>"
+          }
+        },
+        "button1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Plan",
+            "button_link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1",
+        "button1"
+      ]
+    },
+    "faq": {
+      "type": "grs-pg-faq",
+      "settings": {
+        "loc": true
+      }
+    },
+    "near": {
+      "type": "grs-pg-near",
+      "settings": {}
+    },
+    "rich": {
+      "type": "grs-pg-rich",
+      "settings": {},
+      "blocks": {
+        "heading1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Us</strong>"
+          }
+        },
+        "text1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Homeowners and professionals throughout New Hampshire trust on our products for quality, safety, and appearance.</p><ul><li>High-strength <a href=\"/products/glass-railing-40-tempered-glass-panel\"><strong>tempered glass</strong></a> tested for durability and reliability<br/></li><li>Corrosion-resistant components ideal for all weather conditions<br/></li><li>Products that meet residential and commercial safety codes<br/></li><li>Expert assistance for planning, measurements, and setup<br/></li><li>Free shipping available on qualifying orders<br/></li></ul><p>With trusted service and proven quality, The Glass Railing Store continues to be a leading choice for glass railing systems across New Hampshire.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading1",
+        "text1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "form",
+    "feat",
+    "links",
+    "map",
+    "split",
+    "faq",
+    "near",
+    "rich"
+  ]
+}
