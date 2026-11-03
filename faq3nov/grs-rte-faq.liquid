@@ -1,0 +1,153 @@
+{%- comment -%}
+  The questions of a FAQ written inside rich text (a page, collection or product description), as schema.org Question
+  items separated by commas, for the page's FAQPage script: a heading "FAQs", "FAQ", "Frequently asked questions",
+  "Questions people often ask", "Common questions" or "Questions and answers", then the questions either as smaller
+  headings (or same-level headings ending with "?" or starting with a number), each followed by its answer, until the
+  next heading of the FAQ's level, or as bold paragraphs ending with "?" (<p><strong>Question?</strong><br>answer</p>,
+  or the answer in the paragraphs after it; the way ten state building code pages are written, 3 Nov 2026). A number
+  before a question ("1. ") is left out, and a non-breaking space (U+00A0, nb; the pasted pages have them after the
+  questions) counts as a space. Prints nothing when there is no such FAQ or it has fewer than two answered questions. The page shows the same questions as an accordion (assets/grs-*.js).
+  {% render 'grs-rte-faq', html: collection.description %}
+{%- endcomment -%}
+{%- liquid
+  assign heads = 'faq|frequently asked|questions people often ask|common questions|questions and answers|questions & answers' | split: '|'
+  assign nb = '%C2%A0' | url_decode
+  assign parts = html | split: '<h'
+  assign on = false
+  assign done = false
+  assign lv0 = 0
+  assign q = ''
+  assign a = ''
+  assign qa = ''
+  for part in parts
+    if forloop.first or done
+      continue
+    endif
+    assign c1 = part | slice: 0
+    assign lv = c1 | plus: 0
+    if lv < 2 or lv > 6
+      if q != ''
+        assign a = a | append: '<h' | append: part
+      endif
+      continue
+    endif
+    assign close = '</h' | append: lv | append: '>'
+    assign seg = part | split: close
+    assign open = seg[0] | split: '>' | first | append: '>'
+    assign t = seg[0] | append: '' | remove_first: open | strip_html | replace: '&nbsp;', ' ' | replace: nb, ' ' | replace: '&amp;', '&' | strip
+    assign rest = seg[1] | append: ''
+    if on == false
+      assign tl = t | downcase
+      assign hit = false
+      for pf in heads
+        assign tp = tl | slice: 0, pf.size
+        if tp == pf
+          assign hit = true
+        endif
+      endfor
+      if hit == false
+        continue
+      endif
+      assign on = true
+      assign lv0 = lv
+      if rest contains '<strong' or rest contains '<b>'
+        assign pq = ''
+        assign pa = ''
+        assign rest2 = rest | replace: '<p>', '<p >'
+        assign pps = rest2 | split: '<p '
+        for pp in pps
+          if forloop.first
+            continue
+          endif
+          assign popen = pp | split: '>' | first | append: '>'
+          assign pin = pp | remove_first: popen
+          assign pbody = pin | split: '</p>' | first | strip
+          assign c7 = pbody | slice: 0, 7
+          assign c3 = pbody | slice: 0, 3
+          assign bclose = ''
+          if c7 == '<strong'
+            assign bclose = '</strong>'
+          elsif c3 == '<b>'
+            assign bclose = '</b>'
+          endif
+          if bclose != ''
+            assign lead = pbody | split: bclose | first
+            assign qt = lead | strip_html | replace: '&nbsp;', ' ' | replace: nb, ' ' | replace: '&amp;', '&' | split: ' ' | join: ' ' | strip
+            assign ql = qt | slice: -1
+            if ql == '?'
+              if pq != ''
+                assign qa = qa | append: pq | append: '␞' | append: pa | append: '␟'
+              endif
+              assign pq = qt
+              assign pa = pin | remove_first: lead | remove_first: bclose
+              continue
+            endif
+          endif
+          if pq != ''
+            assign pa = pa | append: ' <p ' | append: pp
+          endif
+        endfor
+        if pq != ''
+          assign qa = qa | append: pq | append: '␞' | append: pa | append: '␟'
+        endif
+        if qa != ''
+          assign done = true
+        endif
+      endif
+      continue
+    endif
+    assign last = t | slice: -1
+    assign ends = false
+    if lv < lv0
+      assign ends = true
+    elsif lv == lv0 and last != '?'
+      assign n1 = t | split: ' ' | first | remove: '.' | remove: ')' | plus: 0
+      if n1 < 1
+        assign ends = true
+      endif
+    endif
+    if q != ''
+      assign qa = qa | append: q | append: '␞' | append: a | append: '␟'
+    endif
+    assign q = ''
+    assign a = ''
+    if ends
+      assign done = true
+    else
+      assign q = t
+      assign a = rest
+    endif
+  endfor
+  if q != ''
+    assign qa = qa | append: q | append: '␞' | append: a | append: '␟'
+  endif
+  assign out = ''
+  assign k = 0
+  if qa != ''
+    assign rows = qa | split: '␟'
+    for row in rows
+      assign cells = row | split: '␞'
+      assign q = cells[0] | append: '' | split: ' ' | join: ' ' | strip
+      assign at = cells[1] | append: '' | replace: '<br', ' <br' | replace: '</p>', ' </p>' | replace: '</li>', ' </li>' | strip_html | replace: '&nbsp;', ' ' | replace: nb, ' ' | replace: '&amp;', '&' | split: ' ' | join: ' ' | strip
+      if q == '' or at == ''
+        continue
+      endif
+      assign w1 = q | split: ' ' | first
+      assign num = w1 | remove: '.' | remove: ')'
+      assign numv = num | plus: 0
+      if numv > 0 and num.size < 4
+        assign q = q | remove_first: w1 | strip
+      endif
+      assign jq = q | json
+      assign ja = at | json
+      if k > 0
+        assign out = out | append: ','
+      endif
+      assign out = out | append: '{"@type":"Question","name":' | append: jq | append: ',"acceptedAnswer":{"@type":"Answer","text":' | append: ja | append: '}}'
+      assign k = k | plus: 1
+    endfor
+  endif
+  if k > 1
+    echo out
+  endif
+-%}
