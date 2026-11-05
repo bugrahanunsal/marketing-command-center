@@ -3,9 +3,9 @@
   the visitor's currency; "Text in the U.S." replaces the text in the U.S. market.
   Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.svc), in the
   visitor's language.
-  The style below gives each glass card its own layer from the start (will-change). Without it, Chrome on Mac drew a
-  light strip on the right edge of the cards before a hovered card: the hover lift (transform) moved that card to its
-  own layer and changed how the other glass (backdrop-filter) cards were drawn.
+  Card shadow (style below): it reaches at most 4 px past a card's side, less than the gap between cards. The shadow
+  in grs-collection.css (0 14px 34px -16px) reached about 35 px, so hovering a card also repainted the right edge of
+  the glass card on its left, and Chrome drew that part of the glass twice: a light strip about 20 px wide.
 {%- endcomment -%}
 {%- liquid
   assign sd_label = 'grs.sd.svc.label_html' | t
@@ -19,7 +19,7 @@
   assign cur = '<span class="cur">' | append: cart.currency.iso_code | append: '</span>'
 -%}
 {%- if section.blocks.size > 0 -%}
-<section class="sec svc-sec" aria-label="{{ sd_label | escape }}"{% render 'grs-vars', s: section.settings %}><style>@media(min-width:750px){.svc-sec .svc-c{will-change:transform}}</style><div class="wrap"><div class="svc">{%- if section.settings.image -%}<img class="ph svc-bg" src="{{ section.settings.image | image_url: width: 1600 }}" srcset="{{ section.settings.image | image_url: width: 800 }} 800w, {{ section.settings.image | image_url: width: 1200 }} 1200w, {{ section.settings.image | image_url: width: 1600 }} 1600w, {{ section.settings.image | image_url: width: 2200 }} 2200w" sizes="100vw" alt="" loading="lazy" decoding="async">{%- endif -%}<ul class="svc-in" role="list">
+<section class="sec svc-sec" aria-label="{{ sd_label | escape }}"{% render 'grs-vars', s: section.settings %}><style>@media(min-width:750px){.svc-sec .svc-c{box-shadow:0 20px 20px -26px rgba(0,0,0,.45)}}</style><div class="wrap"><div class="svc">{%- if section.settings.image -%}<img class="ph svc-bg" src="{{ section.settings.image | image_url: width: 1600 }}" srcset="{{ section.settings.image | image_url: width: 800 }} 800w, {{ section.settings.image | image_url: width: 1200 }} 1200w, {{ section.settings.image | image_url: width: 1600 }} 1600w, {{ section.settings.image | image_url: width: 2200 }} 2200w" sizes="100vw" alt="" loading="lazy" decoding="async">{%- endif -%}<ul class="svc-in" role="list">
 {%- for block in section.blocks -%}{%- liquid
     assign tx = block.settings.text
     if grs_us and block.settings.text_us != blank
