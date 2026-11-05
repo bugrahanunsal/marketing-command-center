@@ -1,0 +1,185 @@
+{%- comment -%}
+  Instagram section (home page).
+  Phones and tablets (under 990 px wide): a profile card (round logo, account name, short text, two buttons) above a
+  3 x 2 grid of posts. Computers: the heading with three points, a QR code that opens the profile on the visitor's
+  phone and a button, next to a phone picture of the profile with the same 3 x 2 grid.
+  Posts: with the Instafeed app block in this section, the script at the end copies the 6 newest posts from the app's
+  hidden feed into both grids once they have loaded. Until then, and if the app loads nothing, the grids show the
+  section's photo blocks (they link to the profile). Without the app block, the photo blocks are the grid.
+  Styles are in this file (prefix igp-), so the shared style files are not needed for it.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign prof = s.profile_url | default: 'https://www.instagram.com/glassrailingstore/'
+  assign hnd = s.handle | strip
+  assign hnd_plain = hnd | remove_first: '@'
+  assign nm = s.name | default: shop.name
+  assign ig_app = false
+  for block in section.blocks
+    if block.type == '@app'
+      assign ig_app = true
+    endif
+  endfor
+-%}
+{%- capture ig_svg -%}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><path d="M17.5 6.5h.01"></path></svg>{%- endcapture -%}
+{%- capture av_logo -%}{%- if s.avatar != blank -%}{% render 'grs-img', image: s.avatar, class: 'igp-logo', sizes: '68px', widths: '140,210', alt: '' %}{%- else -%}<span class="igp-av-ig">{{ ig_svg }}</span>{%- endif -%}{%- endcapture -%}
+{%- capture tiles_m -%}
+  {%- assign n = 0 -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'photo' and block.settings.image != blank and n < 6 -%}
+      {%- assign n = n | plus: 1 -%}
+      <a class="igp-t" href="{{ prof | escape }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.ig_post' | t: n: n | escape }}" {{ block.shopify_attributes }}>{% render 'grs-img', image: block.settings.image, class: 'igp-im', sizes: '(min-width: 990px) 92px, (min-width: 660px) 200px, 31vw', widths: '200,300,400' %}</a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- capture tiles_d -%}
+  {%- assign n = 0 -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'photo' and block.settings.image != blank and n < 6 -%}
+      {%- assign n = n | plus: 1 -%}
+      <a class="igp-t" href="{{ prof | escape }}" target="_blank" rel="noopener" aria-label="{{ 'grs.a11y.ig_post' | t: n: n | escape }}">{% render 'grs-img', image: block.settings.image, class: 'igp-im', sizes: '(min-width: 990px) 92px, (min-width: 660px) 200px, 31vw', widths: '200,300,400' %}</a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+<section class="sec igp" id="igp-{{ section.id }}"{% render 'grs-vars', s: section.settings %}>
+<style>
+.igp{position:relative;isolation:isolate;overflow:hidden;--igp-ink:#1D1D1B;--igp-mut:var(--fg2,#6E6E69);--igp-box:#EEEDE9;--igp-tile:#E4E3DF;--igp-bd:#D3D2CD;--igp-acc:var(--acc,#FFDF5E)}
+.grs-dark .igp{--igp-ink:#EDEDEB;--igp-box:#1F1F1E;--igp-tile:#2A2A29;--igp-bd:#3D3D3B}
+.igp .igp-eb:before{background:var(--igp-acc)}
+.igp .igp-b{display:inline-flex;align-items:center;justify-content:center;gap:10px;box-sizing:border-box;height:52px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-size:15px;font-weight:600;line-height:1;letter-spacing:0;text-transform:none;text-decoration:none;white-space:nowrap;transition:background-color .25s ease,border-color .25s ease,color .25s ease}
+.igp .igp-b svg{flex:none;width:20px;height:20px}
+.igp .igp-b-solid{background:var(--igp-ink);color:#fff}
+.igp .igp-b-solid:hover{background:#000;color:#fff}
+.grs-dark .igp .igp-b-solid{color:#141414}
+.grs-dark .igp .igp-b-solid:hover{background:#fff;color:#141414}
+.igp .igp-b-line{height:50px;border:1px solid var(--igp-bd);background:transparent;color:var(--igp-ink);font-weight:500}
+.igp .igp-b-line svg{width:16px;height:16px}
+.igp .igp-b-line:hover{border-color:var(--igp-ink);color:var(--igp-ink)}
+.igp .igp-av{display:block;flex:none;box-sizing:border-box;width:96px;height:96px;padding:4px;border-radius:50%;background:var(--igp-acc);text-decoration:none}
+.igp .igp-av-in{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;height:100%;border:3px solid var(--bg,#F6F6F3);border-radius:50%;background:#fff;color:#1D1D1B;overflow:hidden}
+.igp .igp-logo{display:block;width:83%;max-width:none;height:auto}
+.igp .igp-av-ig svg{display:block;width:30px;height:30px}
+.igp .igp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;width:100%}
+.igp .igp-t{position:relative;display:block;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--igp-tile)}
+.igp .igp-im{position:absolute;top:0;left:0;display:block;width:100%;max-width:none;height:100%;object-fit:cover;transition:transform .6s var(--ease,ease)}
+@media(hover:hover){.igp .igp-t:hover .igp-im{transform:scale(1.05)}}
+.igp .igp-new{animation:igp-in .5s ease both}
+@keyframes igp-in{0%{opacity:0}to{opacity:1}}
+.igp-feed{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;overflow:hidden;opacity:0;pointer-events:none}
+.igp .igp-d{display:none}
+.igp .igp-m{display:flex;flex-direction:column;align-items:center;gap:24px;max-width:600px;margin:0 auto;text-align:center}
+.igp .igp-m-head{display:flex;flex-direction:column;align-items:center;gap:8px}
+.igp .igp-m-h{margin:0;font-size:calc(26px*var(--grs-hs,1));line-height:1.2;font-weight:600;letter-spacing:-.02em;color:var(--igp-ink);overflow-wrap:anywhere}
+.igp .igp-m-p{margin:0;max-width:calc(34ch*var(--grs-tw,1));font-size:calc(15px*var(--grs-ts,1));line-height:1.55;color:var(--igp-mut);text-wrap:balance}
+.igp .igp-m-btns{display:flex;flex-direction:column;gap:10px;width:100%;max-width:440px}
+.igp .igp-m-btns .igp-b{width:100%}
+.igp .igp-m .igp-grid{margin-top:4px}
+@media(min-width:990px){
+.igp .igp-m{display:none}
+.igp .igp-d{display:flex;align-items:center;gap:clamp(40px,5vw,72px);padding:clamp(40px,4vw,56px) clamp(40px,5.5vw,88px);border-radius:28px;background:var(--igp-box)}
+.igp .igp-d-copy{display:flex;flex:1 1 auto;flex-direction:column;align-items:flex-start;gap:28px;min-width:0}
+.igp .igp-d-h{margin:0;max-width:11.5em;font-size:calc(clamp(36px,3.35vw,48px)*var(--grs-hs,1));line-height:1.1;font-weight:500;letter-spacing:-.02em;color:var(--igp-ink);text-wrap:balance}
+.igp .igp-ticks{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.igp .igp-ticks li{display:flex;align-items:flex-start;gap:12px;margin:0;font-size:calc(16px*var(--grs-ts,1));line-height:1.45;color:var(--fg)}
+.igp .igp-ticks i{display:flex;flex:none;align-items:center;justify-content:center;width:24px;height:24px;margin-top:calc(.725em - 12px);border-radius:50%;background:var(--igp-acc);color:#1D1D1B}
+.igp .igp-ticks i svg{width:12px;height:12px}
+.igp .igp-d-act{display:flex;flex-wrap:wrap;align-items:center;gap:16px 18px;margin-top:8px}
+.igp .igp-qr{display:flex;align-items:center;gap:16px;padding:14px 22px 14px 14px;border-radius:20px;background:#fff;color:#1D1D1B}
+.igp .igp-qr-im{display:block;flex:none;width:112px;max-width:none;height:112px}
+.igp .igp-qr-t{display:flex;flex-direction:column;gap:4px;max-width:160px}
+.igp .igp-qr-t b{font-size:17px;font-weight:600;line-height:1.3}
+.igp .igp-qr-t span{font-size:14px;line-height:1.45;color:#6B6B67}
+.igp .igp-d .igp-b-solid{padding:0 28px}
+.igp .igp-dev{position:relative;display:flex;flex:none;align-items:center;justify-content:center;width:clamp(320px,30vw,460px);min-height:540px}
+.igp .igp-sun{position:absolute;top:50%;left:50%;width:400px;height:400px;margin:-200px 0 0 -200px;border-radius:50%;background:var(--igp-acc);opacity:.55}
+.igp .igp-phone{position:relative;box-sizing:border-box;width:300px;height:540px;padding:11px;border-radius:46px;background:#1D1D1B;box-shadow:0 40px 80px -30px rgba(0,0,0,.45)}
+.igp .igp-scr{display:flex;flex-direction:column;width:100%;height:100%;border-radius:36px;background:#fff;color:#1D1D1B;overflow:hidden;text-align:left}
+.igp .igp-scr-head{display:block;color:inherit;text-decoration:none}
+.igp .igp-scr-head:hover{color:inherit}
+.igp .igp-scr-top{display:block;padding:22px 18px 10px;font-size:14px;font-weight:600;line-height:1.3;text-align:center}
+.igp .igp-scr-prof{display:flex;align-items:center;gap:14px;padding:6px 18px 12px}
+.igp .igp-av-s{width:62px;height:62px;padding:3px}
+.igp .igp-av-s .igp-av-in{border-width:2px;border-color:#fff}
+.igp .igp-av-s .igp-av-ig svg{width:22px;height:22px}
+.igp .igp-scr-who{display:flex;flex-direction:column;gap:3px;min-width:0}
+.igp .igp-scr-who b{font-size:13px;font-weight:600;line-height:1.3}
+.igp .igp-scr-who span{font-size:11.5px;line-height:1.45;color:#6B6B67}
+.igp .igp-scr-follow{display:flex;align-items:center;justify-content:center;height:34px;margin:0 18px 14px;border-radius:999px;background:#1D1D1B;color:#fff;font-size:12.5px;font-weight:600;transition:background-color .25s ease}
+.igp .igp-scr-head:hover .igp-scr-follow{background:#000}
+.igp .igp-grid-s{gap:2px}
+.igp .igp-grid-s .igp-t{border-radius:0}
+.igp .igp-scr-more{display:block;padding:12px 18px;font-size:11.5px;font-weight:500;line-height:1.4;color:#6B6B67;text-align:center;text-decoration:none}
+.igp .igp-scr-more:hover{color:#1D1D1B}
+.grs-dark .igp .igp-sun{opacity:.16}
+.grs-dark .igp .igp-phone{background:#0B0B0B;box-shadow:inset 0 0 0 1px #3A3A38,0 40px 80px -30px rgba(0,0,0,.85)}
+.grs-dark .igp .igp-scr{background:#000;color:#F5F5F5}
+.grs-dark .igp .igp-scr-who span,.grs-dark .igp .igp-scr-more{color:#A8A8A8}
+.grs-dark .igp .igp-scr-more:hover{color:#F5F5F5}
+.grs-dark .igp .igp-scr-follow{background:#F5F5F5;color:#000}
+.grs-dark .igp .igp-scr-head:hover .igp-scr-follow{background:#fff}
+.grs-dark .igp .igp-av-s .igp-av-in{border-color:#000}
+.grs-dark .igp .igp-grid-s .igp-t{background:#262626}
+}
+@media(prefers-reduced-motion:reduce){.igp .igp-im{transition:none}.igp .igp-new{animation:none}}
+</style>
+<div class="wrap">
+  <div class="igp-m">
+    <a class="igp-av" href="{{ prof | escape }}" target="_blank" rel="noopener" aria-label="{{ hnd | default: nm | escape }}"><span class="igp-av-in">{{ av_logo }}</span></a>
+    <div class="igp-m-head">
+      {%- if s.eyebrow != blank -%}<span class="dot-eyebrow igp-eb">{{ s.eyebrow }}</span>{%- endif -%}
+      <h2 class="igp-m-h">{% if hnd != blank %}{{ hnd }}{% else %}{{ s.heading }}{% endif %}</h2>
+      {%- if s.text != blank -%}<p class="igp-m-p">{{ s.text }}</p>{%- endif -%}
+    </div>
+    {%- if s.button_label != blank or s.profile_label != blank -%}
+    <div class="igp-m-btns">
+      {%- if s.button_label != blank -%}<a class="igp-b igp-b-solid" href="{{ prof | escape }}" target="_blank" rel="noopener">{{ ig_svg }}<span>{{ s.button_label }}</span></a>{%- endif -%}
+      {%- if s.profile_label != blank -%}<a class="igp-b igp-b-line" href="{{ prof | escape }}" target="_blank" rel="noopener"><span>{{ s.profile_label }}</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>{%- endif -%}
+    </div>
+    {%- endif -%}
+    {%- if tiles_m != blank or ig_app -%}<div class="igp-grid" data-igp-grid>{{ tiles_m }}</div>{%- endif -%}
+  </div>
+  <div class="igp-d">
+    <div class="igp-d-copy">
+      {%- if s.eyebrow != blank -%}<span class="dot-eyebrow igp-eb">{{ s.eyebrow }}</span>{%- endif -%}
+      {%- if s.heading != blank -%}<h2 class="igp-d-h">{{ s.heading }}</h2>{%- endif -%}
+      {%- if s.bullet_1 != blank or s.bullet_2 != blank or s.bullet_3 != blank -%}
+      <ul class="igp-ticks">
+        {%- for i in (1..3) -%}
+          {%- assign k = 'bullet_' | append: i -%}
+          {%- if s[k] != blank -%}<li><i aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></i><span>{{ s[k] }}</span></li>{%- endif -%}
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+      {%- if s.qr_image != blank or s.open_label != blank -%}
+      <div class="igp-d-act">
+        {%- if s.qr_image != blank -%}<div class="igp-qr">{% render 'grs-img', image: s.qr_image, class: 'igp-qr-im', sizes: '112px', widths: '444' %}<span class="igp-qr-t">{%- if s.scan_title != blank -%}<b>{{ s.scan_title }}</b>{%- endif -%}{%- if s.scan_text != blank -%}<span>{{ s.scan_text }}</span>{%- endif -%}</span></div>{%- endif -%}
+        {%- if s.open_label != blank -%}<a class="igp-b igp-b-solid" href="{{ prof | escape }}" target="_blank" rel="noopener">{{ ig_svg }}<span>{{ s.open_label }}</span></a>{%- endif -%}
+      </div>
+      {%- endif -%}
+    </div>
+    <div class="igp-dev">
+      <span class="igp-sun" aria-hidden="true"></span>
+      <div class="igp-phone">
+        <div class="igp-scr">
+          <a class="igp-scr-head" href="{{ prof | escape }}" target="_blank" rel="noopener">
+            {%- if hnd_plain != blank -%}<span class="igp-scr-top">{{ hnd_plain }}</span>{%- endif -%}
+            <span class="igp-scr-prof"><span class="igp-av igp-av-s"><span class="igp-av-in">{{ av_logo }}</span></span><span class="igp-scr-who"><b>{{ nm }}</b>{%- if s.phone_text != blank -%}<span>{{ s.phone_text }}</span>{%- endif -%}</span></span>
+            {%- if s.follow_label != blank -%}<span class="igp-scr-follow">{{ s.follow_label }}</span>{%- endif -%}
+          </a>
+          <div class="igp-grid igp-grid-s" data-igp-grid>{{ tiles_d }}</div>
+          {%- if s.more_label != blank -%}<a class="igp-scr-more" href="{{ prof | escape }}" target="_blank" rel="noopener">{{ s.more_label }}</a>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%- if ig_app -%}
+  {%- unless request.design_mode -%}<script>window.instafeedStorefrontScheduled=!0</script>{%- endunless -%}
+  {%- for block in section.blocks -%}{%- if block.type == '@app' -%}<div class="igp-feed" aria-hidden="true" inert {{ block.shopify_attributes }}>{% render block %}</div>{%- endif -%}{%- endfor -%}
+  <script>(function(){var sec=document.getElementById({{ 'igp-' | append: section.id | json }});if(!sec||sec._igp)return;sec._igp=1;var feed=sec.querySelector(".igp-feed"),grids=sec.querySelectorAll("[data-igp-grid]"),prof={{ prof | json }},lab={{ 'grs.a11y.ig_post' | t: n: '#' | json }},MAX=6;if(!feed||!grids.length)return;var built=0,t0=Date.now(),tm=0,mo;function lo(){t0=Date.now();later();var u=window.instafeedScriptSrc,b,sc=document.getElementsByTagName("script"),i,n;if(!u)return;b=String(u).split("?")[0];for(i=0;i<sc.length;i++)if(String(sc[i].src).split("?")[0]===b)return;n=document.createElement("script");n.async=!0;n.src=u;document.body.appendChild(n)}if("IntersectionObserver"in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();lo()}},{rootMargin:"800px 0px"});io.observe(sec)}else lo();function urlOf(e){if(e.tagName==="VIDEO")return e.poster||"";if(e.tagName==="IMG"){var l=[e.currentSrc,e.getAttribute("src"),e.getAttribute("data-src"),e.getAttribute("data-lazy"),e.getAttribute("data-original")],j;for(j=0;j<l.length;j++)if(l[j]&&l[j].indexOf("data:")!==0)return l[j];return""}var b=e.style.backgroundImage||"",m=b.match(/url\(["']?([^"')]+)/);return m?m[1]:""}function links(e){var a=e.closest("a[href]");return a&&/instagram\.com\/(p|reel|tv)\//.test(a.href)?a.href:prof}function scan(){if(built)return;var els=feed.querySelectorAll('img,video,[style*="background-image"]'),seen={},c=[],i,u;for(i=0;i<els.length&&c.length<12;i++){u=urlOf(els[i]);if(!u||u.indexOf("data:")===0||/\.svg(\?|#|$)/i.test(u)||seen[u])continue;seen[u]=1;c.push({u:u,h:links(els[i])})}if(c.length<3)return;var left=c.length,ok=[];c.forEach(function(p,k){var im=new Image();im.onload=im.onerror=function(){var w=im.naturalWidth,h=im.naturalHeight;if(w>=150&&h>=150&&w/h>.45&&w/h<1.6)ok[k]=p;if(--left===0)build(ok.filter(Boolean))};im.src=p.u})}function build(ps){if(built||ps.length<3)return;built=1;if(mo)mo.disconnect();ps=ps.slice(0,MAX);Array.prototype.forEach.call(grids,function(g){var old=g.querySelectorAll(".igp-t");ps.forEach(function(p,k){var a=old[k],im=document.createElement("img"),prev;if(!a){a=document.createElement("a");a.className="igp-t";a.target="_blank";a.rel="noopener";g.appendChild(a)}prev=a.querySelectorAll("img");a.href=p.h;a.setAttribute("aria-label",lab.replace("#",k+1));a.classList.add("igp-live");im.className="igp-im igp-new";im.alt="";im.decoding="async";im.draggable=!1;im.src=p.u;a.appendChild(im);setTimeout(function(){Array.prototype.forEach.call(prev,function(x){x.remove()})},700)})});sec.classList.add("is-live")}function later(){clearTimeout(tm);if(!built&&Date.now()-t0<20000)tm=setTimeout(scan,400)}mo=new MutationObserver(later);mo.observe(feed,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["src","data-src","style","poster"]});document.addEventListener("instafeedAppLoaded",later);later()})();</script>
+{%- endif -%}
+</section>
+
+{% schema %}
+{"name":"GRS Instagram","tag":"div","settings":[{"type":"text","id":"eyebrow","label":"Small title","default":"Instagram"},{"type":"text","id":"heading","label":"Heading (computer)","default":"Follow our projects on Instagram","info":"Shown next to the phone picture on computers."},{"type":"text","id":"handle","label":"Account name","default":"@glassrailingstore","info":"The heading on phones and tablets, and the top line of the phone picture."},{"type":"textarea","id":"text","label":"Text (phones and tablets)","default":"Real decks, stairs and balconies from our customers, and new products as they land."},{"type":"text","id":"bullet_1","label":"Point 1 (computer)","default":"Real decks, stairs and balconies from our customers"},{"type":"text","id":"bullet_2","label":"Point 2 (computer)","default":"New products as they land"},{"type":"text","id":"bullet_3","label":"Point 3 (computer)","default":"Brushed stainless and matte black, in real light"},{"type":"url","id":"profile_url","label":"Instagram profile link"},{"type":"header","content":"Buttons"},{"type":"text","id":"button_label","label":"Main button (phones and tablets)","default":"Follow on Instagram"},{"type":"text","id":"profile_label","label":"Second button (phones and tablets)","default":"View profile","info":"Leave empty to show only the main button."},{"type":"text","id":"open_label","label":"Button (computer)","default":"Open Instagram"},{"type":"header","content":"Phone picture (computer)"},{"type":"image_picker","id":"avatar","label":"Profile picture","info":"Shown in a round frame, also on phones and tablets. A logo on a white or transparent background works best."},{"type":"text","id":"name","label":"Name","default":"The Glass Railing Store"},{"type":"text","id":"phone_text","label":"Short text","default":"Real decks, stairs and balconies from our customers."},{"type":"text","id":"follow_label","label":"Follow button","default":"Follow"},{"type":"text","id":"more_label","label":"Link under the posts","default":"More posts on Instagram"},{"type":"header","content":"QR code (computer)"},{"type":"image_picker","id":"qr_image","label":"QR code","info":"A QR code that opens the profile link above. Make a new one if the link changes. Without a QR code, only the button is shown."},{"type":"text","id":"scan_title","label":"QR code title","default":"Scan to follow"},{"type":"text","id":"scan_text","label":"QR code text","default":"Point your phone camera at the code."},{"type":"paragraph","content":"Posts: the Instafeed app block in this section fills the 3 x 2 grid with your 6 newest Instagram posts. The photo blocks are shown until the posts have loaded, and in their place if the app block is removed or loads nothing."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_width","label":"Text width"}],"blocks":[{"type":"@app"},{"type":"photo","name":"Photo","settings":[{"type":"image_picker","id":"image","label":"Photo"}]}],"max_blocks":12,"presets":[{"name":"GRS Instagram"}]}
+{% endschema %}
