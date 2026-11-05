@@ -1,0 +1,99 @@
+{%- liquid
+  if routes.root_url == '/'
+    assign r = ''
+  else
+    assign r = routes.root_url
+  endif
+  assign grs_us = false
+  if localization.market.handle == 'us' or localization.country.iso_code == 'US'
+    assign grs_us = true
+  endif
+-%}
+<section class="sec stl-sec"{% render 'grs-vars', s: section.settings %} id="stl" aria-labelledby="stl-h"><div class="wrap stl-head">{%- if section.settings.eyebrow != blank -%}<span class="dot-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}<h2 class="mh2" id="stl-h">{{ section.settings.heading }}{%- if section.settings.heading_hl != blank %} <span class="hl">{{ section.settings.heading_hl }}<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10C34 3 62 3 96 7s70 6 101-3" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"></path></svg></span>{%- endif -%}</h2>{%- if section.settings.text != blank -%}<p>{{ section.settings.text }}</p>{%- endif -%}</div><div class="stl"><div class="stl-track" id="stltrack">{%- comment -%} Photo sizes: from 768px a slide is 78vw wide (64vw from 1100px, at most 1000px, x Photo width) and its photo is
+  drawn at the slide width (wider photos: slide height x their shape), so these are the widths the browser needs;
+  phones keep their old sizes. {%- endcomment -%}{%- liquid
+  assign st_iw = section.settings.image_width | default: 100 | divided_by: 100.0
+  assign st_ih = section.settings.image_height | default: 100 | divided_by: 100.0
+-%}{%- assign on_i = 0 -%}{%- for block in section.blocks -%}{%- assign im = block.settings.image -%}<figure class="stl-slide{% if forloop.index0 == on_i %} on{% endif %}" data-i="{{ forloop.index0 }}" {{ block.shopify_attributes }}><div class="stl-media"><div class="stl-canvas" style="--ar:{% if im %}{{ im.aspect_ratio | round: 4 }}{% else %}1.7766{% endif %}{% if block.settings.focus_x != 50 or block.settings.focus_y != 50 %};--fx:{{ block.settings.focus_x }}%;--fy:{{ block.settings.focus_y }}%{% endif %}">{%- if im -%}{%- liquid
+  assign st_f = im.aspect_ratio | times: st_ih | divided_by: 1.7778
+  if st_f < 1
+    assign st_f = 1
+  endif
+  assign st_a = 78 | times: st_f | times: 10 | ceil | divided_by: 10.0
+  assign st_b = 64 | times: st_iw | times: st_f | times: 10 | ceil | divided_by: 10.0
+  assign st_c = 1000 | times: st_iw | times: st_f | ceil
+  assign st_sz = '(max-width:749px) 92vw, (max-width:767px) 1100px, (max-width:1099px) ' | append: st_a | append: 'vw, (max-width:1562px) ' | append: st_b | append: 'vw, ' | append: st_c | append: 'px'
+  if st_iw > 1.43
+    assign st_sz = '(max-width:749px) 92vw, 1100px'
+  endif
+-%}{% render 'grs-img', image: im, class: 'ph', sizes: st_sz, widths: '600,900,1200,1600' %}{%- endif -%}{%- assign dn = 0 -%}{%- for i in (1..4) -%}{%- liquid
+    assign kp = 'dot' | append: i | append: '_product'
+    assign kc = 'dot' | append: i | append: '_collection'
+    assign kx = 'dot' | append: i | append: '_x'
+    assign ky = 'dot' | append: i | append: '_y'
+    assign kf = 'dot' | append: i | append: '_finish'
+    assign dp = block.settings[kp]
+    assign dc = block.settings[kc]
+    assign hk = ''
+    assign df = '0'
+    if dp.handle != blank
+      assign hk = dp.handle
+      assign df = block.settings[kf] | default: '0'
+    elsif dc.handle != blank
+      assign hk = 'c:' | append: dc.handle
+    endif
+  -%}{%- if hk != '' -%}{%- assign dn = dn | plus: 1 -%}<button type="button" class="hs" style="left:{{ block.settings[kx] }}%;top:{{ block.settings[ky] }}%" data-hs="{{ hk }}" data-f="{{ df }}" aria-expanded="false" aria-label="{{ 'grs.a11y.show_part' | t: n: dn }}"><span></span></button>{%- endif -%}{%- endfor -%}</div></div>{%- if block.settings.caption != blank -%}<figcaption>{{ block.settings.caption }}</figcaption>{%- endif -%}</figure>{%- endfor -%}</div><button type="button" class="stl-arr stl-prev" aria-label="{{ 'grs.a11y.prev_photo' | t }}"><svg width="9" height="15" viewBox="0 0 8 14" fill="none"><path d="M7 1L1 7l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button type="button" class="stl-arr stl-next" aria-label="{{ 'grs.a11y.next_photo' | t }}"><svg width="9" height="15" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="hs-pop" id="hspop" role="dialog" aria-label="{{ 'grs.a11y.part_in_photo' | t }}" hidden></div><script type="application/json" class="stl-data">{
+{%- assign seen = '|' -%}{%- assign sep = '' -%}
+{%- for block in section.blocks -%}{%- for i in (1..4) -%}
+  {%- liquid
+    assign kp = 'dot' | append: i | append: '_product'
+    assign kc = 'dot' | append: i | append: '_collection'
+    assign p = block.settings[kp]
+    assign c = block.settings[kc]
+    assign key = ''
+    if p.handle != blank
+      assign key = p.handle
+    elsif c.handle != blank
+      assign key = 'c:' | append: c.handle
+    endif
+    assign mark = '|' | append: key | append: '|'
+  -%}
+  {%- if key != '' -%}{%- unless seen contains mark -%}{%- assign seen = seen | append: key | append: '|' -%}
+  {%- if p.handle != blank -%}
+  {%- liquid
+    assign v_ss = nil
+    assign v_bl = nil
+    for v in p.variants
+      if v_ss == nil and v.options contains 'Brushed Stainless' or v.options contains 'Inox brossé' or v.options contains 'Acero inoxidable cepillado'
+        assign v_ss = v
+      endif
+      if v_bl == nil and v.options contains 'Matte Black' or v.options contains 'Noir mat' or v.options contains 'Negro mate'
+        assign v_bl = v
+      endif
+    endfor
+    assign im = p.featured_image
+  -%}
+  {{ sep }}{{ p.handle | json }}:{"n":{{ p.title | json }},"u":{{ p.url | json }},"p":{% capture pr %}{% render 'grs-price', product: p %}{% endcapture %}{{ pr | strip | json }},"im":{{ im | image_url: width: 300 | json }}
+  {%- if v_ss and v_bl -%}
+    {%- assign im_s = v_ss.featured_image | default: im -%}{%- assign im_b = v_bl.featured_image | default: im -%}
+    ,"f":[{"p":{{ v_ss.price | money | json }},"im":{{ im_s | image_url: width: 300 | json }}},{"p":{{ v_bl.price | money | json }},"im":{{ im_b | image_url: width: 300 | json }}}],"one":{% if p.variants.size == 2 %}true{% else %}false{% endif %}
+  {%- endif -%}}
+  {%- else -%}
+  {%- liquid
+    assign cmin = nil
+    for cp in c.products
+      if cmin == nil or cp.price_min < cmin
+        assign cmin = cp.price_min
+      endif
+    endfor
+    assign cim = section.settings.collection_image | default: c.image
+  -%}
+  {{ sep }}{{ key | json }}:{"n":{{ c.title | json }},"u":{{ c.url | json }},"s":{{ 'grs.stl.n_products' | t: count: c.products_count | json }},"p":{%- capture t_from -%}{{ 'grs.general.from' | t }} {{ cmin | money }}{%- endcapture -%}{{ t_from | json }},"im":{{ cim | image_url: width: 300 | json }},"c":1}
+  {%- endif -%}{%- assign sep = ',' -%}
+  {%- endunless -%}{%- endif -%}
+{%- endfor -%}{%- endfor -%}
+}</script></div></section>
+
+{% schema %}
+{"name":"GRS shop the look","tag":"div","settings":[{"type":"text","id":"eyebrow","label":"Small title"},{"type":"text","id":"heading","label":"Heading"},{"type":"text","id":"heading_hl","label":"Highlighted end of the heading"},{"type":"textarea","id":"text","label":"Text"},{"type":"image_picker","id":"collection_image","label":"Photo on collection cards","info":"Shown when a dot points to a collection."},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"image_height","label":"Photo height (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"image_height_mobile","label":"Photo height (phone and tablet)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"image_width","label":"Photo width"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Text size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_width","label":"Text width"}],"blocks":[{"type":"photo","name":"Photo","settings":[{"type":"image_picker","id":"image","label":"Photo"},{"type":"text","id":"caption","label":"Caption"},{"type":"range","id":"focus_x","label":"Crop focus, left to right","min":0,"max":100,"step":1,"unit":"%","default":50,"info":"The part of the photo that stays in view when it is cropped on phones."},{"type":"range","id":"focus_y","label":"Crop focus, top to bottom","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"header","content":"Dot 1"},{"type":"product","id":"dot1_product","label":"Product"},{"type":"collection","id":"dot1_collection","label":"Or a collection"},{"type":"select","id":"dot1_finish","label":"Finish to show","default":"0","options":[{"value":"0","label":"Brushed Stainless"},{"value":"1","label":"Matte Black"}]},{"type":"range","id":"dot1_x","label":"Position, left to right","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"range","id":"dot1_y","label":"Position, top to bottom","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"header","content":"Dot 2"},{"type":"product","id":"dot2_product","label":"Product"},{"type":"collection","id":"dot2_collection","label":"Or a collection"},{"type":"select","id":"dot2_finish","label":"Finish to show","default":"0","options":[{"value":"0","label":"Brushed Stainless"},{"value":"1","label":"Matte Black"}]},{"type":"range","id":"dot2_x","label":"Position, left to right","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"range","id":"dot2_y","label":"Position, top to bottom","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"header","content":"Dot 3"},{"type":"product","id":"dot3_product","label":"Product"},{"type":"collection","id":"dot3_collection","label":"Or a collection"},{"type":"select","id":"dot3_finish","label":"Finish to show","default":"0","options":[{"value":"0","label":"Brushed Stainless"},{"value":"1","label":"Matte Black"}]},{"type":"range","id":"dot3_x","label":"Position, left to right","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"range","id":"dot3_y","label":"Position, top to bottom","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"header","content":"Dot 4"},{"type":"product","id":"dot4_product","label":"Product"},{"type":"collection","id":"dot4_collection","label":"Or a collection"},{"type":"select","id":"dot4_finish","label":"Finish to show","default":"0","options":[{"value":"0","label":"Brushed Stainless"},{"value":"1","label":"Matte Black"}]},{"type":"range","id":"dot4_x","label":"Position, left to right","min":0,"max":100,"step":1,"unit":"%","default":50},{"type":"range","id":"dot4_y","label":"Position, top to bottom","min":0,"max":100,"step":1,"unit":"%","default":50}]}],"max_blocks":8,"presets":[{"name":"GRS shop the look"}]}
+{% endschema %}
