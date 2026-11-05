@@ -1,0 +1,257 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+</div>
+
+
+{%- if page.handle == 'faq' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are glass railings safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, glass railings are very safe when properly designed and installed. They are made from tempered safety glass, which is strong, impact-resistant, and built to meet building code requirements while providing secure protection and clear views."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tools are required to perform a glass railing installation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Installing a glass railing system typically requires basic tools such as a drill, level, measuring tape, wrench set, rubber mallet, and safety equipment. Exact tools may vary depending on the surface and railing system used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does shipping take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Glass railing orders are processed in 2–3 business days, then delivered in 5–10 business days across Canada and the U.S."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the glass railing products come with a warranty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — glass panels are guaranteed to be free of manufacturing defects with a lifetime warranty, and hardware comes with a 10-year no-rust promise utilizing marine-grade stainless steel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there hidden fees, tariffs, or duties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The price displayed at checkout is the final price with no hidden fees, tariffs, or duties, even if the order crosses borders between the US and Canada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can glass railings withstand strong winds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The glass guardrails are engineered to withstand very strong winds and weather conditions, with proven performance even in extreme environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should you do if a product arrives damaged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a product arrives damaged, it must be reported within 3 days of delivery and before installation. Once damage is confirmed, The Glass Railing Store will either replace or reimburse the damaged item at no additional cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much maintenance do glass railings require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Glass railings require very little maintenance. Occasional cleaning with mild soap, water, or standard glass cleaner keeps them clear and looking new. Stainless steel hardware may only need periodic wiping to remove dust or residue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What glass sizes work for residential decks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Residential decks typically use 12mm tempered glass panels, which provide the required strength and safety. Panel width and height depend on deck layout, post spacing, and local building codes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are glass railings environmentally friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Glass railings are environmentally friendly because glass is recyclable, durable, and requires little maintenance. They also increase the circulation of natural light, reducing the need for additional lighting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are glass railings safe for decks and balconies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, glass railings are safe for decks and balconies when installed correctly. They use tempered safety glass and strong mounting hardware designed to meet building codes while providing secure protection without blocking views."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are glass railings suitable for pool and waterfront areas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Glass railings are commonly used around pools and waterfronts because they resist moisture, do not obstruct sightlines, and comply with safety requirements when properly specified."
+      }
+    }
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- if page.handle == 'glass-railing-installation-guide' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Install Frameless Glass Railing",
+  "description": "Step-by-step guide to installing a frameless glass railing system using spigots and 12mm tempered glass panels.",
+  "image": "https://glassrailingstore.com/cdn/shop/files/glass-railings.jpg?v=1720555928",
+  "totalTime": "PT4H",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "CAD",
+    "value": "500"
+  },
+  "tool": [
+    { "@type": "HowToTool", "name": "Drill" },
+    { "@type": "HowToTool", "name": "Level" },
+    { "@type": "HowToTool", "name": "Measuring tape" },
+    { "@type": "HowToTool", "name": "Wrench set" },
+    { "@type": "HowToTool", "name": "Rubber mallet" }
+  ],
+  "supply": [
+    { "@type": "HowToSupply", "name": "12mm tempered glass panels" },
+    { "@type": "HowToSupply", "name": "Engineered spigots" },
+    { "@type": "HowToSupply", "name": "Anchor bolts" },
+    { "@type": "HowToSupply", "name": "Rubber setting blocks" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Plan and measure your railing layout",
+      "text": "Measure the total linear footage of your deck or stair railing. Mark spigot positions at a maximum of 36 inches apart along the top edge of your deck frame or concrete surface.",
+      "url": "https://glassrailingstore.com/pages/glass-railing-installation-guide#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Install the spigots",
+      "text": "Drill holes at the marked positions and secure the engineered spigots using the provided anchor bolts. Use a level to ensure each spigot is perfectly plumb before tightening.",
+      "url": "https://glassrailingstore.com/pages/glass-railing-installation-guide#step2"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Set the glass panels",
+      "text": "Place rubber setting blocks on each spigot jaw. Carefully lower each 12mm tempered glass panel into the spigots, keeping the panel plumb. Do not use excessive force.",
+      "url": "https://glassrailingstore.com/pages/glass-railing-installation-guide#step3"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Connect panels with connectors",
+      "text": "For continuous glass runs, install 180° glass-to-glass connectors between panels. For corners use 90° connectors, and for wall terminations use wall-to-glass connectors.",
+      "url": "https://glassrailingstore.com/pages/glass-railing-installation-guide#step4"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Final tighten and inspection",
+      "text": "Tighten all spigot set screws to the manufacturer's specified torque. Check that each panel is plumb and level. Inspect all connections and verify the railing meets your local building code height requirements.",
+      "url": "https://glassrailingstore.com/pages/glass-railing-installation-guide#step5"
+    }
+  ]
+}
+</script>
+
+{%- endif -%}
+
+
+{%- if page.handle == 'glass-railing-hardware' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Glass Railing Hardware",
+  "description": "Complete selection of glass railing hardware including spigots, connectors, and cap rail systems.",
+  "url": "https://glassrailingstore.com/collections/glass-railing-hardware",
+  "numberOfItems": 20,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://glassrailingstore.com/products/glass-railing-spigot", "name": "6\" Engineered Spigot" },
+    { "@type": "ListItem", "position": 2, "url": "https://glassrailingstore.com/products/glass-railing-180-connector", "name": "180° Glass-to-Glass Connector" },
+    { "@type": "ListItem", "position": 3, "url": "https://glassrailingstore.com/products/glass-railing-90-connector", "name": "90° Corner Connector" },
+    { "@type": "ListItem", "position": 4, "url": "https://glassrailingstore.com/products/glass-railing-wall-connector", "name": "Wall-to-Glass Connector" },
+    { "@type": "ListItem", "position": 5, "url": "https://glassrailingstore.com/products/glass-railing-side-mount-spigot", "name": "Side Mount / Fascia Spigot" }
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
