@@ -1,0 +1,26 @@
+{%- comment -%}
+  Texts for custom (made-to-order) glass, in the visitor's language: k: 'pill' (stock pill on the product page and in
+  the quick view) or 'start' (the button that replaces the quantity and Add to cart). Owner, 9 Nov 2026.
+{%- endcomment -%}
+{%- liquid
+  assign lc = request.locale.iso_code | slice: 0, 2
+  if k == 'start'
+    case lc
+      when 'fr'
+        echo 'Commencer votre projet'
+      when 'es'
+        echo 'Comenzar su proyecto'
+      else
+        echo 'Start your project'
+    endcase
+  else
+    case lc
+      when 'fr'
+        echo 'Verre sur mesure'
+      when 'es'
+        echo 'Vidrio a la medida'
+      else
+        echo 'Custom glass'
+    endcase
+  endif
+-%}
