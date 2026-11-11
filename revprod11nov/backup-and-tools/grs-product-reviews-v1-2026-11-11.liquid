@@ -1,0 +1,175 @@
+{%- comment -%}
+  Customer reviews of the product (prototype .sp-sec): Judge.me average, star split and the latest 4 and 5 star reviews
+  (product metafield judgeme.widget, the first page of reviews Judge.me publishes). With fewer than two of its own,
+  assets/grs-product.js shows the store's recent reviews instead (/?view=grs-reviews), as in the prototype.
+  App blocks (the Judge.me review widget: every review, writing a review, and the review data Google reads) sit under
+  the reviews in a line that opens them.
+  Each review shows the product it was written for (owner, 11 Nov 2026): a small photo and the product name beside the
+  reviewer. The product's own reviews show this product; the store's recent reviews each show their own product, as
+  a link to it.
+  Texts left empty in the theme editor show the standard texts of locales/*.json (grs.sd.product_reviews), in the
+  visitor's language.
+{%- endcomment -%}
+{%- liquid
+  assign sd_eyebrow = 'grs.sd.product_reviews.eyebrow_html' | t
+  assign sd_eyebrow = section.settings.eyebrow | default: sd_eyebrow
+  assign sd_eyebrow_store = 'grs.sd.product_reviews.eyebrow_store_html' | t
+  assign sd_eyebrow_store = section.settings.eyebrow_store | default: sd_eyebrow_store
+  assign sd_heading = 'grs.sd.product_reviews.heading_html' | t
+  assign sd_heading = section.settings.heading | default: sd_heading
+  assign sd_based_on = 'grs.sd.product_reviews.based_on_html' | t
+  assign sd_based_on = section.settings.based_on | default: sd_based_on
+  assign sd_all_label = 'grs.sd.product_reviews.all_label_html' | t
+  assign sd_all_label = section.settings.all_label | default: sd_all_label
+  assign sd_verified = 'grs.sd.product_reviews.verified_html' | t
+  assign sd_verified = section.settings.verified | default: sd_verified
+  assign sd_apps_label = 'grs.sd.product_reviews.apps_label_html' | t
+  assign sd_apps_label = section.settings.apps_label | default: sd_apps_label
+-%}
+{%- liquid
+  comment
+    Labels left at their English default show the visitor's language (locale files).
+  endcomment
+  assign t_eyebrow = sd_eyebrow
+  if t_eyebrow == blank or t_eyebrow == 'This product'
+    assign t_eyebrow = 'grs.reviews.this_product' | t
+  endif
+  assign t_eyebrow_store = sd_eyebrow_store
+  if t_eyebrow_store == blank or t_eyebrow_store == 'Our customers'
+    assign t_eyebrow_store = 'grs.reviews.our_customers' | t
+  endif
+  assign t_heading = sd_heading
+  if t_heading == blank or t_heading == 'Customer reviews'
+    assign t_heading = 'grs.reviews.heading' | t
+  endif
+  assign t_based_on = sd_based_on
+  if t_based_on == blank or t_based_on == 'Based on'
+    assign t_based_on = 'grs.reviews.based_on' | t
+  endif
+  assign t_all_label = sd_all_label
+  if t_all_label == blank or t_all_label == 'See all'
+    assign t_all_label = 'grs.reviews.see_all_label' | t
+  endif
+  assign t_verified = sd_verified
+  if t_verified == blank or t_verified == 'Verified buyer'
+    assign t_verified = 'grs.js.verified' | t
+  endif
+  assign t_apps_label = sd_apps_label
+  if t_apps_label == blank or t_apps_label == 'All reviews of this product, or write one'
+    assign t_apps_label = 'grs.reviews.all_or_write' | t
+  endif
+-%}
+{%- liquid
+  assign p = product
+  assign t_n = shop.metafields.judgeme.all_reviews_count.value | default: shop.metafields.judgeme.all_reviews_count | default: 0
+  assign rc = p.metafields.reviews.rating_count.value | plus: 0
+  assign avg = p.metafields.reviews.rating.value.rating | plus: 0
+  assign w = p.metafields.judgeme.widget.value
+  if w == blank
+    assign w = p.metafields.judgeme.widget | append: ''
+  endif
+  assign hist = ''
+  assign tot = 0
+  assign hs = w | split: "data-frequency='"
+  for x in hs offset: 1 limit: 5
+    assign f = x | split: "'" | first | plus: 0
+    assign tot = tot | plus: f
+    assign hist = hist | append: f | append: ','
+  endfor
+  assign hist = hist | split: ','
+  assign revs = w | split: "<div class='jdgm-rev jdgm-divider-top'"
+-%}
+{%- liquid
+  comment
+    Product shown with each review. Photo: the Brushed Stainless variant's studio photo when the product has one
+    (as in the collection reviews), otherwise the product's first photo. The first review's product is printed
+    below with the review; the script at the end of this file adds it again each time assets/grs-product.js draws
+    another review, so that file stays as it is.
+  endcomment
+  assign pr_im = p.featured_image
+  assign pr_st = 0
+  for v in p.variants
+    if v.featured_image and v.options contains 'Brushed Stainless' or v.options contains 'Inox brossé' or v.options contains 'Acero inoxidable cepillado'
+      assign pr_im = v.featured_image
+      assign pr_st = 1
+      break
+    endif
+  endfor
+  assign pr_src = ''
+  if pr_im
+    assign pr_src = pr_im | image_url: width: 120
+  endif
+  assign t_product = 'grs.js.rv_product' | t
+-%}
+<style>.sp-who{flex-wrap:wrap;row-gap:16px}.sp-who .sp-pr{display:flex;flex-direction:row;align-items:center;gap:12px;min-width:0;max-width:100%;margin-left:10px;padding-left:22px;border-left:1px solid var(--line);font-size:14px;color:var(--fg);text-decoration:none}.sp-pr-im{position:relative;flex:none;width:44px;height:44px;border-radius:10px;overflow:hidden;background:var(--stage)}.sp-pr-im img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}.sp-pr-im img.studio{object-fit:contain;padding:4px}.sp-pr-t{display:flex;flex-direction:column;gap:4px;min-width:0}.sp-pr-l{font-size:11.5px;line-height:1.2;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2)}.sp-pr-n{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-width:38ch;font-size:14.5px;line-height:1.3;font-weight:600;color:var(--fg)}a.sp-pr:hover .sp-pr-n{text-decoration:underline;text-underline-offset:3px}a.sp-pr:focus-visible{outline:2px solid var(--fg);outline-offset:4px;border-radius:4px}.grs-dark .sp-pr-im{background:#ecebe7}@media(max-width:749px){.sp-who .sp-pr{flex:1 0 100%;margin-left:0;padding-left:0;border-left:0}}</style>
+<section class="sec sp-sec" aria-labelledby="sp-h"{% render 'grs-vars', s: section.settings %} data-sp data-h="{{ p.handle }}" data-root="{{ routes.root_url }}" data-store-eb="{{ t_eyebrow_store | escape }}" data-pr-l="{{ t_product | escape }}" data-pr-t="{{ p.title | escape }}" data-pr-i="{{ pr_src | escape }}" data-pr-s="{{ pr_st }}"><div class="wrap sp"><div class="sp-sum"><span class="dot-eyebrow">{{ t_eyebrow }}</span><h2 class="mh2" id="sp-h">{{ t_heading }}</h2>
+{%- if rc > 0 -%}{%- assign pct = avg | times: 20 -%}<div class="sp-avg"><b>{{ avg | round: 2 }}</b><span><span class="sp-stars" role="img" aria-label="{%- assign grs_avg2 = avg | round: 2 -%}{{ 'grs.a11y.rated' | t: avg: grs_avg2 }}"><span class="rate-s" aria-hidden="true"><span class="rate-bg">{% render 'grs-stars' %}</span><span class="rate-fg" style="width:{{ pct }}%">{% render 'grs-stars' %}</span></span></span>{{ t_based_on }} {% render 'grs-num', n: rc %} {{ 'grs.reviews.word' | t }}</span></div>
+<div class="sp-hist">{%- for k in (0..4) -%}{%- liquid
+    assign c = hist[k] | plus: 0
+    if tot > 0
+      assign pc = c | times: 100.0 | divided_by: tot
+      if c > 0 and pc < 1.5
+        assign pc = 1.5
+      endif
+    else
+      assign pc = 0
+    endif
+  -%}<div class="crv-hr"><span>{{ 5 | minus: k }}<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></span><i><b style="width:{{ pc }}%"></b></i><em>{{ c }}</em></div>{%- endfor -%}</div>{%- endif -%}
+<button type="button" class="btn rv-all sp-all" data-rvall=""><span class="dot"></span>{{ t_all_label }} {% render 'grs-num', n: t_n %} {{ 'grs.reviews.word' | t }}</button></div>
+<div class="sp-stage"><span class="sp-mark" aria-hidden="true">“</span><div class="sp-q in" id="spq" aria-live="polite">
+{%- assign shown = 0 -%}
+{%- capture rows -%}{%- for rv in revs offset: 1 -%}{%- liquid
+    assign a = rv | split: "jdgm-rev__rating' data-score='"
+    assign st = a[1] | split: "'" | first | plus: 0
+    assign a = rv | split: "jdgm-rev__timestamp"
+    assign a = a[1] | split: "data-content='"
+    assign dt = a[1] | split: "'" | first | append: '' | slice: 0, 10
+    assign a = rv | split: "<span class='jdgm-rev__author'>"
+    assign au = a[1] | split: '</span>' | first | strip
+    assign a = rv | split: "<div class='jdgm-rev__body'>"
+    assign bd = a[1] | split: '</div>' | first | replace: '</p>', ' ' | strip_html | strip_newlines | strip
+    assign vb = 0
+    if rv contains "data-verified-buyer='true'"
+      assign vb = 1
+    endif
+  -%}{%- if st >= 4 and bd.size >= 20 -%}{%- if shown > 0 %},{% endif %}[{{ st }},{{ dt | json }},{{ au | json }},{{ bd | json }},{{ vb }}]{%- assign shown = shown | plus: 1 -%}{%- if shown == 1 -%}{%- assign f_st = st -%}{%- assign f_dt = dt -%}{%- assign f_au = au -%}{%- assign f_bd = bd -%}{%- assign f_vb = vb -%}{%- endif -%}{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- if shown > 0 -%}<div class="sp-top"><span class="crv-st" role="img" aria-label="{{ 'grs.a11y.stars' | t: n: f_st }}">{%- for i in (1..f_st) -%}<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>{%- endfor -%}</span><time datetime="{{ f_dt }}">{{ f_dt | date: format: 'date' }}</time></div><blockquote class="sp-text{% if f_bd.size > 260 %} sp-long{% endif %}"><p>{{ f_bd | escape }}</p></blockquote><div class="sp-who"><span class="rvm-av" aria-hidden="true">{{ f_au | slice: 0, 1 | upcase }}</span><span><b>{{ f_au }}</b>{%- if f_vb == 1 -%}<em><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>{{ t_verified }}</em>{%- endif -%}</span><span class="sp-pr">{%- if pr_src != '' -%}<span class="sp-pr-im"><img class="ph{% if pr_st == 1 %} studio{% endif %}" src="{{ pr_src | escape }}" alt="" width="60" height="60" loading="lazy" decoding="async"></span>{%- endif -%}<span class="sp-pr-t"><span class="sp-pr-l">{{ t_product }}</span><span class="sp-pr-n">{{ p.title | escape }}</span></span></span></div>{%- endif -%}
+</div><div class="sp-nav"{% if shown < 2 %} hidden{% endif %}><button type="button" class="sp-btn" data-sp="-1" aria-label="{{ 'grs.a11y.prev_review' | t }}"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H1.5M6.5 1l-5 5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><span class="sp-count" id="spcount">1 / {{ shown }}</span><button type="button" class="sp-btn" data-sp="1" aria-label="{{ 'grs.a11y.next_review' | t }}"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13.5M9.5 1l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div></div>
+{%- if section.blocks.size > 0 -%}<div class="wrap sp-apps"><details class="sp-more"{% if section.settings.apps_open %} open{% endif %}><summary>{{ t_apps_label }}<svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="sp-app">{%- for block in section.blocks -%}<div {{ block.shopify_attributes }}>{% render block %}</div>{%- endfor -%}</div></details></div>{%- endif -%}
+{%- if shown < 2 -%}
+{%- comment -%} Photos of the other reviewed products, by product address, for the store's reviews that fill in. {%- endcomment -%}
+<script type="application/json" class="sp-pmap">{
+{%- assign pm_sep = '' -%}
+{%- paginate collections.all.products by 250 -%}
+{%- for q in collections.all.products -%}
+{%- liquid
+  assign q_rc = q.metafields.reviews.rating_count.value | plus: 0
+  if q_rc < 1 or q.handle == p.handle
+    continue
+  endif
+  assign q_im = q.featured_image
+  assign q_st = 0
+  for v in q.variants
+    if v.featured_image and v.options contains 'Brushed Stainless' or v.options contains 'Inox brossé' or v.options contains 'Acero inoxidable cepillado'
+      assign q_im = v.featured_image
+      assign q_st = 1
+      break
+    endif
+  endfor
+  assign q_src = ''
+  if q_im
+    assign q_src = q_im | image_url: width: 120
+  endif
+-%}
+{{ pm_sep }}{{ q.url | json }}:[{{ q_src | json }},{{ q_st }}]
+{%- assign pm_sep = ',' -%}
+{%- endfor -%}
+{%- endpaginate -%}
+}</script>
+{%- endif -%}
+<script type="application/json" class="sp-data">{"own":{{ shown }},"verified":{{ t_verified | json }},"based":{{ t_based_on | json }},"r":[{{ rows }}]}</script>
+<script>(function(){function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}function init(S){if(!S||S._grsPr)return;S._grsPr=1;var Q=S.querySelector("#spq");if(!Q)return;var L=S.getAttribute("data-pr-l")||"Product",M={},C={};try{var m=S.querySelector(".sp-pmap");m&&(M=JSON.parse(m.textContent)||{})}catch(e){}function make(u,t,i,st){var el=document.createElement(u?"a":"span");el.className="sp-pr";u&&el.setAttribute("href",u);el.innerHTML=(i?'<span class="sp-pr-im"><img class="ph'+(st?" studio":"")+'" src="'+esc(i)+'" alt="" width="60" height="60" decoding="async"></span>':"")+'<span class="sp-pr-t"><span class="sp-pr-l">'+esc(L)+'</span><span class="sp-pr-n">'+esc(t)+"</span></span>";return el}function put(){var W=Q.querySelector(".sp-who");if(!W)return;var had=W.querySelector(".sp-pr");if(had){var hk=had.getAttribute("href")||"";C[hk]||(C[hk]=had);return}var a=W.querySelector("a[href]"),u="",t=S.getAttribute("data-pr-t")||"",x=[S.getAttribute("data-pr-i")||"",S.getAttribute("data-pr-s")==="1"];if(a){u=a.getAttribute("href")||"";t=(a.textContent||"").replace(/\s+/g," ").trim();x=M[u]||[];a.parentNode.removeChild(a)}if(!t)return;W.appendChild(C[u]||(C[u]=make(u,t,x[0],x[1])))}put();window.MutationObserver&&new MutationObserver(put).observe(Q,{childList:!0})}function all(r){Array.prototype.forEach.call((r||document).querySelectorAll("section[data-sp]"),init)}all();if(!window.grsSpPr){window.grsSpPr=1;document.addEventListener("shopify:section:load",function(e){all(e.target)})}})();</script></section>
+
+{% schema %}
+{"name":"GRS product reviews","tag":"div","settings":[{"type":"paragraph","content":"Average, star split and the latest reviews come from Judge.me. With fewer than two 4 or 5 star reviews of its own, the store's recent reviews show instead. Each review shows the photo and name of the product it was written for."},{"type":"text","id":"eyebrow","label":"Small title","placeholder":"This product","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"eyebrow_store","label":"Small title when the store's reviews show","placeholder":"Our customers","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"heading","label":"Heading","placeholder":"Customer reviews","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"based_on","label":"Text before the review count","placeholder":"Based on","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"all_label","label":"Button text before the count","placeholder":"See all","info":"Empty: the standard text, in the visitor's language."},{"type":"text","id":"verified","label":"Verified label","placeholder":"Verified buyer","info":"Empty: the standard text, in the visitor's language."},{"type":"header","content":"Review app"},{"type":"paragraph","content":"Add the Judge.me review widget here as an app block: it lists every review of the product, lets customers write one, and adds the review data Google reads for the stars in search results."},{"type":"text","id":"apps_label","label":"Line that opens the app","placeholder":"All reviews of this product, or write one","info":"Empty: the standard text, in the visitor's language."},{"type":"checkbox","id":"apps_open","label":"Open at start","default":false},{"type":"header","content":"Layout and sizes","info":"100% keeps the original design."},{"type":"range","id":"content_width","label":"Content width","min":800,"max":1800,"step":20,"default":1440,"unit":"px"},{"type":"range","id":"space_top","label":"Space above","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"range","id":"space_bottom","label":"Space below","min":0,"max":200,"step":5,"default":100,"unit":"%"},{"type":"header","content":"Text sizes and style","info":"Sizes are set separately for computers and phones. 100% keeps the original design."},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size","label":"Small title size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"eyebrow_size_mobile","label":"Small title size (phone)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size","label":"Heading size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"heading_size_mobile","label":"Heading size (phone)"},{"type":"select","id":"heading_weight","label":"Heading weight","default":"default","options":[{"value":"default","label":"As designed"},{"value":"300","label":"Light"},{"value":"400","label":"Regular"},{"value":"500","label":"Medium"},{"value":"600","label":"Semibold"},{"value":"700","label":"Bold"}]},{"type":"select","id":"heading_case","label":"Heading letters","default":"default","options":[{"value":"default","label":"As written"},{"value":"uppercase","label":"ALL CAPITALS"}]},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size","label":"Review text size (computer)"},{"min":50,"max":200,"step":5,"unit":"%","default":100,"type":"range","id":"text_size_mobile","label":"Review text size (phone)"}],"blocks":[{"type":"@app"}]}
+{% endschema %}
